@@ -125,8 +125,7 @@ export function renderChapterContent(
             <p className="ta-lesson-intro__eyebrow">Глава 01</p>
             <h3 className="ta-lesson-intro__title">Базовые понятия</h3>
             <p className="ta-lesson-intro__lede">
-              1ПМ измеряет план, волна даёт рельеф, RPE — цену подхода. Direct / Fractional и PUOS —
-              в линзах ниже, не второй лекцией.
+              1ПМ задаёт веса плана, волна — ритм нагрузки, RPE показывает, во сколько обошёлся подход.
             </p>
             <ol className="ta-lesson-plan" aria-label="Содержание">
               <li>
@@ -189,7 +188,7 @@ export function renderChapterContent(
               chapterId="specs"
               onSelectChapter={onSelectChapter}
               ariaLabel="Открыть главу 05: полная шкала RPE">
-              05 · Спецификации
+              05 · Интенсивность и RPE
             </ChapterLink>
             <ChapterLink
               chapterId="progression"
@@ -214,8 +213,8 @@ export function renderChapterContent(
             <p className="ta-lesson-intro__eyebrow">Глава 02</p>
             <h3 className="ta-lesson-intro__title">mTOR и анаболический отклик</h3>
             <p className="ta-lesson-intro__lede">
-              Клетка как стройка, mTORC1 как прораб: он не выключатель роста, а сбор заявок с
-              нагрузки, белка и энергии.
+              Как нагрузка, белок и энергия вместе запускают рост мышцы — и почему ни один из них
+              не работает в одиночку.
             </p>
             <ol className="ta-lesson-plan" aria-label="Содержание">
               <li>
@@ -245,7 +244,7 @@ export function renderChapterContent(
               <li>
                 <span className="ta-lesson-plan__step">5</span>
                 <span>
-                  <strong>Границы и контекст</strong> — фарма как оговорка, глава 01
+                  <strong>Границы и контекст</strong> — что меняет фармакология
                 </span>
               </li>
             </ol>
@@ -296,32 +295,32 @@ export function renderChapterContent(
             <p className="ta-lesson-intro__eyebrow">Глава 03</p>
             <h3 className="ta-lesson-intro__title">Tier List добавок</h3>
             <p className="ta-lesson-intro__lede">
-              Пирамида — фильтр, не каталог. Буква S–F говорит, как часто добавка даёт отдачу
-              натуральному. Полки и чипы — ниже, не второй лекцией.
+              Рейтинг помогает отсеять лишнее, а не составить список покупок. Буква от S до F
+              показывает, насколько надёжно добавка работает у натурального атлета.
             </p>
             <ol className="ta-lesson-plan" aria-label="Содержание">
               <li>
                 <span className="ta-lesson-plan__step">1</span>
                 <span>
-                  <strong>Зачем рейтинг</strong> — фильтр, не корзина
+                  <strong>Зачем рейтинг</strong> — отсеять лишнее
                 </span>
               </li>
               <li>
                 <span className="ta-lesson-plan__step">2</span>
                 <span>
-                  <strong>Верх</strong> — S часто, A под сессию
+                  <strong>Верх</strong> — S работает почти у всех, A помогает на тренировке
                 </span>
               </li>
               <li>
                 <span className="ta-lesson-plan__step">3</span>
                 <span>
-                  <strong>Середина</strong> — B уже, C ниша
+                  <strong>Середина</strong> — B слабее, C для отдельных случаев
                 </span>
               </li>
               <li>
                 <span className="ta-lesson-plan__step">4</span>
                 <span>
-                  <strong>Низ</strong> — не спорт, дефицит, маркетинг
+                  <strong>Низ</strong> — не для спорта, только при дефиците или маркетинг
                 </span>
               </li>
             </ol>
@@ -373,32 +372,32 @@ export function renderChapterContent(
             <p className="ta-lesson-intro__eyebrow">Глава 04</p>
             <h3 className="ta-lesson-intro__title">Топ-3 добавки</h3>
             <p className="ta-lesson-intro__lede">
-              Три слота, не аптечка: ежедневно, к сессии, при дефиците. Два из S, один из E. Дозы —
-              на карточках ниже, не второй лекцией механизма.
+              Если брать минимум — три добавки: одна каждый день, одна к тренировке, одна при
+              дефиците. Дозы указаны на карточках ниже.
             </p>
             <ol className="ta-lesson-plan" aria-label="Содержание">
               <li>
                 <span className="ta-lesson-plan__step">1</span>
                 <span>
-                  <strong>Зачем тройка</strong> — короткая полка после фильтра
+                  <strong>Зачем тройка</strong> — минимум после отбора
                 </span>
               </li>
               <li>
                 <span className="ta-lesson-plan__step">2</span>
                 <span>
-                  <strong>Слот ежедневно</strong> — креатин каждый день
+                  <strong>Каждый день</strong> — креатин
                 </span>
               </li>
               <li>
                 <span className="ta-lesson-plan__step">3</span>
                 <span>
-                  <strong>Слот к сессии</strong> — кофеин и сон
+                  <strong>К тренировке</strong> — кофеин, но не вместо сна
                 </span>
               </li>
               <li>
                 <span className="ta-lesson-plan__step">4</span>
                 <span>
-                  <strong>Слот при дефиците</strong> — магний с полки E
+                  <strong>При дефиците</strong> — магний
                 </span>
               </li>
             </ol>
@@ -449,8 +448,7 @@ export function renderChapterContent(
             <p className="ta-lesson-intro__eyebrow">Глава 05</p>
             <h3 className="ta-lesson-intro__title">Интенсивность и RPE</h3>
             <p className="ta-lesson-intro__lede">
-              Две шкалы: % от 1ПМ планирует вес, RPE проверяет цену подхода. Полосы и ступени — в
-              таблицах ниже, не второй лекцией каждой строки.
+              % от 1ПМ задаёт вес заранее, RPE показывает, насколько тяжело он дался на самом деле.
             </p>
             <ol className="ta-lesson-plan" aria-label="Содержание">
               <li>
@@ -506,7 +504,7 @@ export function renderChapterContent(
             <ChapterLink
               chapterId="basics"
               onSelectChapter={onSelectChapter}
-              ariaLabel="Открыть главу 01: метр 1ПМ">
+              ariaLabel="Открыть главу 01: что такое 1ПМ">
               01 · Основы
             </ChapterLink>
           </aside>
@@ -526,8 +524,8 @@ export function renderChapterContent(
             <p className="ta-lesson-intro__eyebrow">Глава 06</p>
             <h3 className="ta-lesson-intro__title">Сухожилия</h3>
             <p className="ta-lesson-intro__lede">
-              Окно деформации: мышца растёт на объёме, сухожилие — в узкой полосе растяжения. Фигура
-              и карточки протокола ниже — доза, не вторая лекция каждой карты.
+              Мышца растёт от объёма, а сухожилие крепнет только в узком диапазоне растяжения. Ниже —
+              как в него попасть и не перегрузить ткань.
             </p>
             <ol className="ta-lesson-plan" aria-label="Содержание">
               <li>
@@ -579,7 +577,7 @@ export function renderChapterContent(
           <PullQuote
             eyebrow="Деформация"
             figure="4.5–6.5%"
-            caption="Рабочая зона для адаптации сухожилия при статической нагрузке. Ниже — слабый стимул, выше — рост риска травмы."
+            caption="Рабочая зона для укрепления сухожилия при статической нагрузке. Меньше — слабый стимул, больше — выше риск травмы."
             color="var(--ta-sec-06)"
             tint="var(--ta-sec-06-tint)"
           />
@@ -723,8 +721,8 @@ export function renderChapterContent(
             <p className="ta-lesson-intro__eyebrow">Глава 08</p>
             <h3 className="ta-lesson-intro__title">Механика нагрузки</h3>
             <p className="ta-lesson-intro__lede">
-              Рычаги, не мотивация: один и тот же вес лёгкий или тяжёлый из‑за позиции и момента.
-              Карты ниже — формула и подъёмы, не вторая лекция каждой строки.
+              Почему один и тот же вес то лёгкий, то тяжёлый: решают рычаги, позиция и пропорции
+              тела, а не старание.
             </p>
             <ol className="ta-lesson-plan" aria-label="Содержание">
               <li>
@@ -777,7 +775,7 @@ export function renderChapterContent(
             items={MECHANICS_NODES}
             asideEyebrow="Механика"
             asideQuote="Механика важнее мотивации."
-            asideNote="Один и тот же вес лёгкий или тяжёлый — из‑за рычагов, позиции и твоей антропометрии."
+            asideNote="Тяжесть веса зависит от рычагов, позиции и твоих пропорций."
           />
 
           <aside className="ta-see-also" aria-label="Связанные разделы">
@@ -805,14 +803,13 @@ export function renderChapterContent(
             <p className="ta-lesson-intro__eyebrow">Глава 09</p>
             <h3 className="ta-lesson-intro__title">Формула силы</h3>
             <p className="ta-lesson-intro__lede">
-              Порядок факторов: сила растёт, когда тяжёлая специфичная практика повторяется чаще,
-              чем копится лишняя усталость. Виджет ниже — формула и полки, не вторая лекция чипов.
+              Из чего складывается сила и в каком порядке над ней работать.
             </p>
             <ol className="ta-lesson-plan" aria-label="Содержание">
               <li>
                 <span className="ta-lesson-plan__step">1</span>
                 <span>
-                  <strong>Система, не куча</strong> — четыре плюса и минус
+                  <strong>Система факторов</strong> — четыре помогают, один мешает
                 </span>
               </li>
               <li>
@@ -882,8 +879,8 @@ export function renderChapterContent(
             <p className="ta-lesson-intro__eyebrow">Глава 10</p>
             <h3 className="ta-lesson-intro__title">Прогрессия 2.0</h3>
             <p className="ta-lesson-intro__lede">
-              Этажи, не куча: год, фаза, неделя, сессия, метод. Пирамида и карточки ниже — каталог,
-              не вторая лекция каждой схемы.
+              Периодизация устроена как этажи: год, фаза, неделя, тренировка, отдельный приём. Ниже —
+              модели и методы для каждого уровня.
             </p>
             <ol className="ta-lesson-plan" aria-label="Содержание">
               <li>
@@ -907,7 +904,7 @@ export function renderChapterContent(
               <li>
                 <span className="ta-lesson-plan__step">4</span>
                 <span>
-                  <strong>Метод — нижний этаж</strong> — приём не заменяет фазу
+                  <strong>Методы</strong> — приём не заменяет фазу
                 </span>
               </li>
             </ol>
@@ -940,7 +937,7 @@ export function renderChapterContent(
             items={SCIENCE_NODES}
             asideEyebrow="5 моделей"
             asideQuote="Форма — это тренированность минус усталость."
-            asideNote="От Fitness–Fatigue до дозы за сессию. Каждая модель объясняет, почему нагрузку меняют, а не просто увеличивают."
+            asideNote="От модели «тренированность — усталость» до дозы за тренировку: почему нагрузку меняют, а не просто наращивают."
           />
 
           <h3 className="ta-subhead">Четыре модели</h3>
@@ -948,7 +945,7 @@ export function renderChapterContent(
             items={MODELS_NODES}
             asideEyebrow="4 схемы"
             asideQuote="Модель — это способ менять вес и объём во времени."
-            asideNote="От линейной до эмерджентной. Каждая схема — конкретный порядок недель, процентов и RPE."
+            asideNote="От линейной до эмерджентной: в каком порядке меняются недели, проценты и RPE."
           />
 
           <h3 className="ta-subhead">Специальные методы</h3>
@@ -956,7 +953,7 @@ export function renderChapterContent(
             items={SPECIAL_METHOD_NODES}
             asideEyebrow="14 приёмов"
             asideQuote="Метод — это нижний этаж периодизации."
-            asideNote="От разгрузки до пика. Каждый метод — конкретная схема веса × повторов × RPE для одной сессии."
+            asideNote="От разгрузки до пика: схема веса, повторов и RPE для одной тренировки."
           />
 
           <aside className="ta-see-also" aria-label="Связанные разделы">
