@@ -40,18 +40,22 @@ export function validatePassword(pw: string): PasswordValidationResult {
     3: 'good',
     4: 'strong',
   };
+  const withinBcryptLimit = pw.length <= 72;
 
   return {
     criteria,
     score,
     label: labels[score] ?? 'weak',
-    isValid: criteria.minLength && score >= 2,
+    isValid: criteria.minLength && withinBcryptLimit && score >= 3,
   };
 }
 
 export function passwordPolicyError(pw: string): string | null {
   const result = validatePassword(pw);
   if (result.isValid) return null;
+  if (pw.length > 72) {
+    return 'Пароль не длиннее 72 символов';
+  }
   if (!result.criteria.minLength) {
     return 'Пароль минимум 8 символов';
   }

@@ -44,8 +44,9 @@ function assertBillingConfig(config) {
 }
 
 /**
- * File workspace is opt-in outside development (shared inbox + path disclosure risk).
+ * File workspace is opt-in outside development.
  * Development defaults to on for local DX; set ENABLE_FILE_WORKSPACE=0 to disable.
+ * API inbox is per authenticated user when enabled. Never enable on public-run.
  */
 function resolveEnableFileWorkspace(env, isDevelopment) {
   const flag = envFlag(env.ENABLE_FILE_WORKSPACE);

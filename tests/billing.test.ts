@@ -11,7 +11,7 @@ import {
   verifyPlategaWebhookHeaders,
 } from '../server/billing.js';
 
-async function createBillingTestContext(envOverrides = {}) {
+async function createBillingTestContext(envOverrides = {}, {fetchImpl} = {}) {
   const db = createDb({dbPath: ':memory:'});
   const env = {
     NODE_ENV: 'test',
@@ -25,7 +25,7 @@ async function createBillingTestContext(envOverrides = {}) {
     ...envOverrides,
   };
 
-  const app = createApp({env, db, enableStatic: false});
+  const app = createApp({env, db, enableStatic: false, ...(fetchImpl ? {fetchImpl} : {})});
   const server = app.listen(0, '127.0.0.1');
   await once(server, 'listening');
   const address = server.address();
@@ -229,6 +229,91 @@ test('webhook CONFIRMED enables premium and CHARGEBACKED revokes when no other p
   assert.equal(db.getUserPremiumFlag('premium-user'), false);
 });
 
+test('webhook CONFIRMED without amount or currency does not grant premium', () => {
+  const db = createDb({dbPath: ':memory:'});
+  db.createUser('amount-user', 'hash');
+  db.createBillingPayment({
+    id: 'pay-amt',
+    userName: 'amount-user',
+    amount: 499,
+    currency: 'RUB',
+    status: 'PENDING',
+    providerTransactionId: 'tx-amt',
+  });
+
+  const missingAmount = applyWebhookToDb(
+    db,
+    parsePlategaWebhookBody({
+      id: 'tx-amt',
+      currency: 'RUB',
+      status: 'CONFIRMED',
+      payload: 'pay-amt',
+    }),
+    {plategaPriceRub: 499},
+  );
+  assert.equal(missingAmount.ok, false);
+  assert.equal(missingAmount.reason, 'amount_mismatch');
+  assert.equal(db.getUserPremiumFlag('amount-user'), false);
+
+  const wrongCurrency = applyWebhookToDb(
+    db,
+    parsePlategaWebhookBody({
+      id: 'tx-amt',
+      amount: 499,
+      currency: 'USD',
+      status: 'CONFIRMED',
+      payload: 'pay-amt',
+    }),
+    {plategaPriceRub: 499},
+  );
+  assert.equal(wrongCurrency.ok, false);
+  assert.equal(wrongCurrency.reason, 'currency_mismatch');
+  assert.equal(db.getUserPremiumFlag('amount-user'), false);
+  db.close();
+});
+
+test('webhook CANCELED revokes premium when it was the confirmed payment', () => {
+  const db = createDb({dbPath: ':memory:'});
+  db.createUser('cancel-user', 'hash');
+  db.createBillingPayment({
+    id: 'pay-cancel',
+    userName: 'cancel-user',
+    amount: 499,
+    currency: 'RUB',
+    status: 'PENDING',
+    providerTransactionId: 'tx-cancel',
+  });
+
+  applyWebhookToDb(
+    db,
+    parsePlategaWebhookBody({
+      id: 'tx-cancel',
+      amount: 499,
+      currency: 'RUB',
+      status: 'CONFIRMED',
+      payload: 'pay-cancel',
+    }),
+    {plategaPriceRub: 499},
+  );
+  assert.equal(db.getUserPremiumFlag('cancel-user'), true);
+
+  const canceled = applyWebhookToDb(
+    db,
+    parsePlategaWebhookBody({
+      id: 'tx-cancel',
+      amount: 499,
+      currency: 'RUB',
+      status: 'CANCELED',
+      payload: 'pay-cancel',
+    }),
+    {plategaPriceRub: 499},
+  );
+  assert.equal(canceled.ok, true);
+  assert.equal(canceled.status, 'CANCELED');
+  assert.equal(db.getUserPremiumFlag('cancel-user'), false);
+  db.close();
+});
+
 test('verifyPlategaWebhookHeaders validates merchant credentials', () => {
   const config = {plategaMerchantId: 'm-1', plategaSecret: 's-1'};
   const ok = verifyPlategaWebhookHeaders(
@@ -239,8 +324,60 @@ test('verifyPlategaWebhookHeaders validates merchant credentials', () => {
     {headers: {'x-merchantid': 'm-1', 'x-secret': 'wrong'}},
     config,
   );
+  const empty = verifyPlategaWebhookHeaders({headers: {}}, config);
   assert.equal(ok, true);
   assert.equal(bad, false);
+  assert.equal(empty, false);
+});
+
+test('webhook payment_not_found does not return ok true', async t => {
+  const ctx = await createBillingTestContext();
+  t.after(() => ctx.close());
+
+  const response = await fetch(`${ctx.baseUrl}/api/billing/webhook`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-MerchantId': 'merchant-test',
+      'X-Secret': 'secret-test',
+    },
+    body: JSON.stringify({
+      id: 'tx-missing',
+      amount: 499,
+      currency: 'RUB',
+      status: 'CONFIRMED',
+      payload: 'no-such-payment',
+    }),
+  });
+  const body = await response.json();
+  assert.equal(response.status, 404);
+  assert.equal(body.ok, undefined);
+  assert.equal(body.error, 'payment_not_found');
+});
+
+test('checkout 502 does not send provider error message', async t => {
+  const ctx = await createBillingTestContext(
+    {},
+    {
+      fetchImpl: async () =>
+        new Response(JSON.stringify({message: 'internal merchant secret xyz'}), {status: 500}),
+    },
+  );
+  t.after(() => ctx.close());
+
+  const {token} = await ctx.register('checkout-user');
+  const response = await fetch(`${ctx.baseUrl}/api/billing/checkout`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+    body: '{}',
+  });
+  const body = await response.json();
+  assert.equal(response.status, 502);
+  assert.equal(body.error, 'Не удалось создать платёж');
+  assert.equal(JSON.stringify(body).includes('merchant secret'), false);
 });
 
 test('successful calculation updates user exercises snapshot', async t => {

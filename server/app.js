@@ -16,11 +16,16 @@ import {applyJournalDemoSeed} from './journalDemoSeed.js';
 import {computeOneRm, mapHistoryRow, validateCalculationBody} from './calculations.js';
 import {
   applyWebhookToDb,
+  CHECKOUT_CLIENT_ERROR,
   createInternalPaymentId,
   createPlategaCheckout,
   parsePlategaWebhookBody,
   verifyPlategaWebhookHeaders,
 } from './billing.js';
+
+const USERNAME_MAX_LENGTH = 32;
+const JWT_SIGN_OPTIONS = {algorithm: 'HS256'};
+const JWT_VERIFY_OPTIONS = {algorithms: ['HS256']};
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, '..', 'dist');
@@ -114,9 +119,11 @@ export function createApp({
   env = process.env,
   db = createDb({env}),
   enableStatic = existsSync(distDir),
+  fetchImpl = fetch,
 } = {}) {
   const config = getServerConfig(env);
   const app = express();
+  app.disable('x-powered-by');
 
   if (env.TRUST_PROXY === '1' || env.TRUST_PROXY === 'true') {
     app.set('trust proxy', true);
@@ -147,10 +154,6 @@ export function createApp({
   app.use(express.json({limit: '256kb'}));
   app.use(securityHeaders(config));
 
-  if (config.enableFileWorkspace) {
-    void fileWorkspace.ensureWorkspace();
-  }
-
   function authAny(req, res, next) {
     const token = req.headers.authorization?.split(' ')[1];
     if (!token) {
@@ -158,7 +161,7 @@ export function createApp({
     }
 
     try {
-      const payload = jwt.verify(token, config.jwtSecret);
+      const payload = jwt.verify(token, config.jwtSecret, JWT_VERIFY_OPTIONS);
       const name = typeof payload?.name === 'string' ? payload.name : '';
       if (!name) return res.status(401).json({error: 'Токен недействителен'});
 
@@ -198,6 +201,7 @@ export function createApp({
 
   function signAccessToken(name, tokenVersion) {
     return jwt.sign({name, tv: tokenVersion}, config.jwtSecret, {
+      ...JWT_SIGN_OPTIONS,
       expiresIn: config.jwtExpiresIn,
     });
   }
@@ -214,17 +218,21 @@ export function createApp({
   app.post('/api/auth/register', registerIpLimiter, registerNameLimiter, async (req, res) => {
     const {name, password} = req.body;
     if (!name?.trim() || !password) return res.status(400).json({error: 'Заполни все поля'});
-    if (name.trim().length < 2) return res.status(400).json({error: 'Имя минимум 2 символа'});
+    const trimmedName = name.trim();
+    if (trimmedName.length < 2) return res.status(400).json({error: 'Имя минимум 2 символа'});
+    if (trimmedName.length > USERNAME_MAX_LENGTH) {
+      return res.status(400).json({error: `Имя не длиннее ${USERNAME_MAX_LENGTH} символов`});
+    }
     const policyError = passwordPolicyError(password);
     if (policyError) return res.status(400).json({error: policyError});
-    if (db.userExists(name.trim()))
+    if (db.userExists(trimmedName))
       return res.status(409).json({error: 'Пользователь уже существует'});
 
     const hash = await bcrypt.hash(password, 10);
-    db.createUser(name.trim(), hash);
+    db.createUser(trimmedName, hash);
     resetLimiters(req, 'register', registerIpLimiter, registerNameLimiter);
-    const token = signAccessToken(name.trim(), 0);
-    res.json({token, name: name.trim()});
+    const token = signAccessToken(trimmedName, 0);
+    res.json({token, name: trimmedName});
   });
 
   // Fixed bcrypt hash for timing parity when user is missing (not a real password).
@@ -302,6 +310,7 @@ export function createApp({
         config,
         userName: req.user.name,
         paymentId,
+        fetchImpl,
       });
 
       db.updateBillingPaymentStatus(paymentId, 'PENDING', checkout.transactionId);
@@ -310,10 +319,8 @@ export function createApp({
         transactionId: checkout.transactionId,
         paymentUrl: checkout.paymentUrl,
       });
-    } catch (error) {
-      res.status(502).json({
-        error: error instanceof Error ? error.message : 'Не удалось создать платёж',
-      });
+    } catch {
+      res.status(502).json({error: CHECKOUT_CLIENT_ERROR});
     }
   });
 
@@ -330,7 +337,11 @@ export function createApp({
       return res.status(400).json({error: parsed.error});
     }
 
-    applyWebhookToDb(db, parsed, config);
+    const result = applyWebhookToDb(db, parsed, config);
+    if (!result.ok) {
+      const status = result.reason === 'payment_not_found' ? 404 : 400;
+      return res.status(status).json({error: result.reason});
+    }
     res.json({ok: true});
   });
 
@@ -381,12 +392,12 @@ export function createApp({
     };
   }
 
-  app.get('/api/files/workspace', authAny, requireFileWorkspace, async (_req, res) => {
-    res.json(await fileWorkspace.listFiles());
+  app.get('/api/files/workspace', authAny, requireFileWorkspace, async (req, res) => {
+    res.json(await fileWorkspace.listFiles(req.user.name));
   });
 
-  app.post('/api/files/workspace/analyze', authAny, requireFileWorkspace, async (_req, res) => {
-    res.json(await fileWorkspace.analyzeAllFiles());
+  app.post('/api/files/workspace/analyze', authAny, requireFileWorkspace, async (req, res) => {
+    res.json(await fileWorkspace.analyzeAllFiles(req.user.name));
   });
 
   app.post(
@@ -395,8 +406,8 @@ export function createApp({
     requireFileWorkspace,
     async (req, res) => {
       try {
-        await fileWorkspace.analyzeFile(req.params.name);
-        res.json(await fileWorkspace.listFiles());
+        await fileWorkspace.analyzeFile(req.params.name, req.user.name);
+        res.json(await fileWorkspace.listFiles(req.user.name));
       } catch (err) {
         if (err instanceof Error && err.message.includes('Access denied')) {
           res.status(400).json({error: err.message});

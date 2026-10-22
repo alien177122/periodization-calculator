@@ -1,3 +1,4 @@
+import {createHash} from 'node:crypto';
 import {mkdir, readdir, readFile, stat, writeFile} from 'node:fs/promises';
 import {dirname, extname, isAbsolute, join, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -33,6 +34,17 @@ function normalizePreview(text, maxLength = 1800) {
 
 function analysisCacheName(fileName) {
   return `${encodeURIComponent(fileName)}.json`;
+}
+
+export function workspaceUserSegment(userName) {
+  const hash = createHash('sha256').update(String(userName)).digest('hex').slice(0, 16);
+  const readable = String(userName)
+    .normalize('NFC')
+    .replace(/[^A-Za-z0-9._-]+/g, '_')
+    .replace(/^\.+/g, '')
+    .slice(0, 40);
+  const base = readable && readable !== '.' && readable !== '..' ? readable : 'user';
+  return `${base}-${hash}`;
 }
 
 function detectKind(fileName) {
@@ -258,16 +270,29 @@ export function createFileWorkspace({
       ? configuredRoot
       : resolve(rootDir, configuredRoot)
     : join(rootDir, 'workspace-files');
-  const inboxDir = join(baseDir, 'inbox');
-  const analysisDir = join(baseDir, 'analysis');
+  function dirsFor(userName) {
+    if (!userName) {
+      return {
+        inboxDir: join(baseDir, 'inbox'),
+        analysisDir: join(baseDir, 'analysis'),
+      };
+    }
+    const userRoot = join(baseDir, 'users', workspaceUserSegment(userName));
+    return {
+      inboxDir: join(userRoot, 'inbox'),
+      analysisDir: join(userRoot, 'analysis'),
+    };
+  }
 
-  async function ensureWorkspace() {
+  async function ensureWorkspace(userName) {
+    const {inboxDir, analysisDir} = dirsFor(userName);
     await mkdir(inboxDir, {recursive: true});
     await mkdir(analysisDir, {recursive: true});
   }
 
-  async function analyzeFile(fileName) {
-    await ensureWorkspace();
+  async function analyzeFile(fileName, userName) {
+    await ensureWorkspace(userName);
+    const {inboxDir, analysisDir} = dirsFor(userName);
     const resolvedInboxDir = resolve(inboxDir);
     const filePath = resolve(inboxDir, fileName);
     if (dirname(filePath) !== resolvedInboxDir) {
@@ -320,8 +345,9 @@ export function createFileWorkspace({
     };
   }
 
-  async function listFiles() {
-    await ensureWorkspace();
+  async function listFiles(userName) {
+    await ensureWorkspace(userName);
+    const {inboxDir, analysisDir} = dirsFor(userName);
     const names = (await readdir(inboxDir))
       .filter(name => !name.startsWith('.'))
       .sort((a, b) => a.localeCompare(b));
@@ -350,17 +376,21 @@ export function createFileWorkspace({
     };
   }
 
-  async function analyzeAllFiles() {
-    await ensureWorkspace();
+  async function analyzeAllFiles(userName) {
+    await ensureWorkspace(userName);
+    const {inboxDir} = dirsFor(userName);
     const names = (await readdir(inboxDir))
       .filter(name => !name.startsWith('.'))
       .sort((a, b) => a.localeCompare(b));
-    await Promise.all(names.map(fileName => analyzeFile(fileName)));
-    return listFiles();
+    await Promise.all(names.map(fileName => analyzeFile(fileName, userName)));
+    return listFiles(userName);
   }
 
   return {
-    getPaths: () => ({baseDir, inboxDir, analysisDir}),
+    getPaths: userName => {
+      const {inboxDir, analysisDir} = dirsFor(userName);
+      return {baseDir, inboxDir, analysisDir};
+    },
     ensureWorkspace,
     listFiles,
     analyzeFile,

@@ -1,4 +1,6 @@
-import {randomUUID} from 'node:crypto';
+import {randomUUID, timingSafeEqual} from 'node:crypto';
+
+export const CHECKOUT_CLIENT_ERROR = 'Не удалось создать платёж';
 
 const PLATEGA_API_URL = 'https://app.platega.io/v2/transaction/process';
 
@@ -58,10 +60,27 @@ export async function createPlategaCheckout({config, userName, paymentId, fetchI
   return {transactionId, paymentUrl};
 }
 
+function headerValue(value) {
+  if (typeof value === 'string') return value;
+  if (Array.isArray(value) && typeof value[0] === 'string') return value[0];
+  return '';
+}
+
+function timingSafeEqualString(left, right) {
+  const a = Buffer.from(String(left), 'utf8');
+  const b = Buffer.from(String(right), 'utf8');
+  if (a.length === 0 || a.length !== b.length) return false;
+  return timingSafeEqual(a, b);
+}
+
 export function verifyPlategaWebhookHeaders(req, config) {
-  const merchantId = req.headers['x-merchantid'];
-  const secret = req.headers['x-secret'];
-  return merchantId === config.plategaMerchantId && secret === config.plategaSecret;
+  if (!config.plategaMerchantId || !config.plategaSecret) return false;
+  const merchantId = headerValue(req.headers['x-merchantid']);
+  const secret = headerValue(req.headers['x-secret']);
+  return (
+    timingSafeEqualString(merchantId, config.plategaMerchantId) &&
+    timingSafeEqualString(secret, config.plategaSecret)
+  );
 }
 
 export function parsePlategaWebhookBody(body) {
@@ -124,19 +143,18 @@ export function applyWebhookToDb(db, parsed, config) {
     return {ok: false, reason: 'payment_not_found'};
   }
 
-  if (
+  const amountOk =
     Number.isFinite(parsed.amount) &&
     parsed.amount > 0 &&
-    Number(payment.amount) !== Math.round(parsed.amount)
-  ) {
-    return {ok: false, reason: 'amount_mismatch'};
-  }
-
-  if (parsed.currency && payment.currency && parsed.currency !== payment.currency) {
-    return {ok: false, reason: 'currency_mismatch'};
-  }
+    Number(payment.amount) === Math.round(parsed.amount);
+  const currencyOk =
+    typeof parsed.currency === 'string' &&
+    parsed.currency.length > 0 &&
+    parsed.currency === payment.currency;
 
   if (parsed.status === 'CONFIRMED') {
+    if (!amountOk) return {ok: false, reason: 'amount_mismatch'};
+    if (!currencyOk) return {ok: false, reason: 'currency_mismatch'};
     db.updateBillingPaymentStatus(payment.id, 'CONFIRMED', parsed.transactionId);
     db.setUserPremium(payment.user_name, true);
     return {ok: true, status: 'CONFIRMED'};
@@ -144,6 +162,7 @@ export function applyWebhookToDb(db, parsed, config) {
 
   if (parsed.status === 'CANCELED' || parsed.status === 'CANCELLED') {
     db.updateBillingPaymentStatus(payment.id, 'CANCELED', parsed.transactionId);
+    db.recalculatePremiumAccess(payment.user_name);
     return {ok: true, status: 'CANCELED'};
   }
 
