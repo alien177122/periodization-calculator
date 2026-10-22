@@ -1,6 +1,6 @@
-# React Project
+# Журнал Сплит (Training Calculator) v0.003
 
-> **Web-only root (2026-08-27).** Active product: Vite + React (`src/`), `packages/`, `server/`, `tests/`. Native / mobile / Capacitor / Electron trees were **moved** (not deleted) to [`_archive-non-web/`](_archive-non-web/README.md). Restore: see that README.
+> **Web-only.** Vite 7 + React 19 (`src/`), `@training/shared` (`packages/shared`), Express 5 + SQLite (`server/`), tests. Native / mobile / Capacitor / Electron trees live in [`_archive-non-web/`](_archive-non-web/README.md) and are not built from the root.
 
 ## Local development
 
@@ -21,13 +21,13 @@ JWT_SECRET='your-secret' npm run server
 
 ```sh
 npm run typecheck   # tsc -b --noEmit, fast gate
-npm run build       # tsc -b && vite build → dist/
+npm run build       # tsc -b && vite build → dist/ (budget ≤ 5 MB)
 npm run preview     # static server over dist/
-npm test            # node --test on the shared utils suite
-npm run lint        # eslint on src/, packages/, root config files
+npm test            # node --test on tests/*.test.ts
+npm run lint        # eslint, --max-warnings 0
 ```
 
-`build` and `lint` cover the web/shared workspace. Archived Expo / Capacitor / Electron trees are under `_archive-non-web/` and are ignored by root ESLint.
+CI (`.github/workflows/ci.yml`) runs typecheck, test, lint, and build on Node 22. Archived Expo / Capacitor / Electron trees are under `_archive-non-web/` and are ignored by root ESLint.
 
 ## Vercel deploy
 
@@ -64,87 +64,9 @@ npm run icons:generate
 
 Offline support / Service Worker is intentionally not included in this iteration. The app needs network connectivity to reach the backend; offline-first caching will be a separate change with explicit invalidation rules so it doesn't break auth tokens.
 
-## Roadmap
+## Native shells (archived)
 
-1. Web deploy → PWA — current step.
-2. User testing on iOS via the home-screen install.
-3. Optional live reload: `CAP_DEV_SERVER_URL=http://<LAN-IP>:5173 npm run cap:sync`
-4. `npm run cap:open:ios` or `cap:open:android`
-
-## Ionic + Capacitor (iOS / Android native shells)
-
-The web app (`src/`) is wrapped by **Capacitor 7** into native iOS/Android projects. **Ionic React** provides iOS-mode bootstrap and optional native UI primitives; existing tab UI is unchanged.
-
-| Script                     | Action                           |
-| -------------------------- | -------------------------------- |
-| `npm run cap:sync`         | `npm run build` + `npx cap sync` |
-| `npm run cap:ios`          | sync + open Xcode                |
-| `npm run cap:android`      | sync + open Android Studio       |
-| `npm run cap:open:ios`     | open Xcode only                  |
-| `npm run cap:open:android` | open Android Studio only         |
-
-**First-time setup:**
-
-```sh
-cp .env.capacitor.example .env.capacitor.local
-# Set VITE_API_URL (required for native — no relative /api)
-# iOS Simulator: http://127.0.0.1:3002/api
-# Android emulator: http://10.0.2.2:3002/api
-# Physical device: http://<your-mac-lan-ip>:3002/api
-
-export $(grep -v '^#' .env.capacitor.local | xargs)
-npm run cap:sync
-npm run cap:open:ios    # or cap:open:android
-```
-
-**Live reload (optional):** with `npm run dev` running, set `CAP_DEV_SERVER_URL=http://<LAN-IP>:5173` before `cap:sync`.
-
-**Prerequisites:** Xcode + CocoaPods (iOS), Android Studio + SDK (Android). Full reference: `memory-bank/reference/ionic-capacitor-standard.md`.
-
-**Expo (`apps/mobile/`, `apps/macos/`)** remains a parallel React Native track (Readiness screen, Android release scripts) — not replaced by Capacitor.
-
-## Roadmap
-
-1. Web deploy → PWA — done.
-2. User testing on iOS via home-screen install or Capacitor shell.
-3. App Store / Play Store via Capacitor when store distribution is needed.
-4. `apps/mobile/` — RN track for native-only features if Capacitor is insufficient.
-
-## macOS desktop
-
-Desktop — Electron shell (`desktop/main.cjs`) над адаптивным веб-клиентом. Native Expo-трек: `apps/mobile/` и `apps/macos/`. Legacy `training-app-mobile/` и `platforms/` удалены (2026-07-15).
-
-Локальный desktop dev:
-
-```sh
-npm install
-npm run desktop
-```
-
-Что делает `npm run desktop`:
-
-- поднимает backend на `http://127.0.0.1:3001`
-- поднимает Vite renderer на `http://127.0.0.1:5173`
-- открывает Electron window для macOS
-
-Сборка desktop-приложения:
-
-```sh
-npm run desktop:pack
-```
-
-Быстрая проверка без финального DMG:
-
-```sh
-npm run desktop:dir
-```
-
-Артефакты появятся в `desktop-dist/`.
-
-Пути данных в packaged desktop:
-
-- SQLite база: `~/Library/Application Support/Training Calculator/data/gym.db`
-- файловое workspace: `~/Library/Application Support/Training Calculator/workspace-files`
+Expo, Capacitor, Ionic, and Electron trees were moved to [`_archive-non-web/`](_archive-non-web/README.md). Root scripts no longer run `cap:*` or `desktop`. iPhone usage is the PWA (Safari → Add to Home Screen) or a separate WKWebView shell outside this repo.
 
 ## Docker
 

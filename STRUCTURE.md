@@ -1,20 +1,21 @@
-# Monorepo Structure (web-first)
+# Monorepo Structure (web-only, v0.003)
 
-Краткая карта после cleanup 2026-07-15 (удалены legacy `platforms/`, `training-app-mobile/`).
+Краткая карта продукта: Vite 7 + React 19 + Express 5 + `@training/shared`. Native-оболочки лежат в `_archive-non-web/`.
 
 ## Web core (корень — primary track)
 
 | Путь                     | Назначение                                                                |
 | ------------------------ | ------------------------------------------------------------------------- |
 | `src/`                   | Vite + React 19 web UI (screens, components, hooks, styles)               |
-| `server/`                | Express + SQLite REST API                                                 |
+| `server/`                | Express 5 + SQLite REST API                                               |
 | `packages/shared/`       | `@training/shared` — hooks, utils, program v3, API client                 |
 | `tests/`                 | Node test runner suite для shared/server logic                            |
 | `scripts/`               | Root dev/infra scripts (PWA icons, public tunnel, files, seed)            |
-| `public/`                | Static assets, PWA manifest                                               |
+| `public/`                | Static assets, PWA manifest, compressed wallpaper WebM/posters            |
 | `memory-bank/`           | Maintainer agent context (reference mirrored in `docs/design-standards/`) |
 | `docs/design-standards/` | Public UI design references for contributors                              |
-| `.cursor/`               | Cursor commands + isolation rules                                         |
+| `.github/workflows/`     | CI: typecheck, test, lint, build                                          |
+| `.cursor/`               | Cursor rules + skills                                                     |
 
 ## Native / desktop shells (archived)
 
@@ -42,7 +43,7 @@
 "workspaces": ["packages/*"]
 ```
 
-Root scripts: `npm run dev`, `npm run server`, `npm run build`, `npm run desktop`, `npm run docker:up` (optional prod).
+Root scripts: `npm run dev`, `npm run server`, `npm run build`, `npm run typecheck`, `npm test`, `npm run lint`, `npm run docker:up` (optional prod).
 
 ## Не трогать без задачи
 
