@@ -12,9 +12,9 @@ dist
 desktop-dist
 dist-ssr
 *.local
-.env.public
-.env.public.local
-.env.docker
+.env
+.env.*
+!.env*.example
 docker-data/
 gym.db
 gym.db.*
