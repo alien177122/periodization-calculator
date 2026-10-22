@@ -81,6 +81,10 @@ mobile_390*.png
 # Wallpaper pipeline intermediates (4× PNG — large; delivery in public/backgrounds/)
 public/backgrounds/intermediate/
 
+# Original wallpaper masters (compressed WebM + posters ship in public/wallpapers/)
+assets/wallpapers-src/
+public/wallpapers/*.mp4
+
 # Agent / browser QA artifacts (local only)
 .logs/
 .codex-tmp/

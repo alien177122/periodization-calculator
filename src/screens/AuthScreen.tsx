@@ -4,7 +4,6 @@ import {Button} from '../components/ui/Button';
 import {PasswordInput} from '../components/auth/PasswordInput';
 import {useKeyboardAvoid} from '../hooks/useKeyboardAvoid';
 import {useReducedMotion} from '../hooks/useReducedMotion';
-import {AuthHeroDecor} from '../components/auth/AuthHeroDecor';
 import {AUTH_CANVAS_COLOR, getStoredTheme, THEME_META_COLORS} from '../theme/theme';
 
 const AUTH_PLAN_WEEKS = Array.from({length: 8}, (_, index) => index + 1);
@@ -58,7 +57,6 @@ export default function AuthScreen({
       className="auth-screen"
       aria-label="Вход в тренировочный калькулятор"
       style={keyboardHeight > 0 ? {paddingBottom: keyboardHeight} : undefined}>
-      <AuthHeroDecor reduced={reduced} />
       <div className="auth-stage">
         <div className={`auth-motion${reduced ? '' : ' auth-motion--enter'}`} aria-hidden="true">
           <div className="auth-motion__brand">Тренировочный калькулятор</div>
@@ -100,6 +98,7 @@ export default function AuthScreen({
               id="auth-name"
               label="Имя пользователя"
               placeholder="Имя пользователя"
+              lang="en"
               autoComplete="username"
               autoCapitalize="none"
               autoCorrect="off"
@@ -118,6 +117,7 @@ export default function AuthScreen({
                 showStrength
                 error={passHint ?? undefined}
                 onBlurValidate={setPassHint}
+                lang="en"
                 autoComplete="new-password"
                 onKeyDown={e => e.key === 'Enter' && handleAuth()}
               />
@@ -127,6 +127,7 @@ export default function AuthScreen({
                 label="Пароль"
                 type="password"
                 placeholder="••••••"
+                lang="en"
                 autoComplete="current-password"
                 autoCapitalize="none"
                 autoCorrect="off"
@@ -143,6 +144,7 @@ export default function AuthScreen({
                 label="Повторить пароль"
                 value={pass2Input}
                 onChange={setPass2Input}
+                lang="en"
                 autoComplete="new-password"
                 onKeyDown={e => e.key === 'Enter' && handleAuth()}
               />

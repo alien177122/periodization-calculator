@@ -1,10 +1,12 @@
 import {lazy, Suspense, useCallback, useMemo, useState, useEffect, type CSSProperties} from 'react';
+import {connectionStatusLabel, type ConnectionPhase} from '@training/shared/utils/offlineOutbox';
 import {resolveProgramSettings} from '@training/shared/program/resolveProgramSettings';
 import {EXERCISES} from '@training/shared/data/exercises';
 import {useKeyboardAvoid} from '../../hooks/useKeyboardAvoid';
 import {HeroSection} from '../ui/HeroSection';
 import {OpenGraph} from '../seo/OpenGraph';
 import {useAuthSession} from '../../hooks/useAuthSession';
+import {useServerConnection} from '../../hooks/useServerConnection';
 import {useCalculatorState} from '../../hooks/useCalculatorState';
 import {useBilling} from '../../hooks/useBilling';
 import {useURLState} from '../../hooks/useURLState';
@@ -17,13 +19,28 @@ import {isAppTab, type AppTab} from './tabs';
 import {usePageMeta} from '../../hooks/usePageMeta';
 import {ThemeToggle} from '../shared/ThemeToggle';
 import {AppAmbientBackground} from './AppAmbientBackground';
+import {AppWallpaperVideo} from './AppWallpaperVideo';
 import '../../styles/animations.css';
 
 const AuthScreen = lazy(() => import('../../screens/AuthScreen'));
 
+function ConnectionStatus({phase, pending}: {phase: ConnectionPhase; pending: boolean}) {
+  if (phase !== 'syncing' && phase !== 'offline') return null;
+
+  const label = connectionStatusLabel(phase, pending);
+  const tone = phase === 'syncing' ? 'syncing' : phase === 'offline' && pending ? 'pending' : phase;
+
+  return (
+    <p className={`connection-status connection-status--${tone}`} role="status" aria-live="polite">
+      {label}
+    </p>
+  );
+}
+
 export function AppShell() {
   const pageMeta = usePageMeta();
   const auth = useAuthSession();
+  const connection = useServerConnection(auth.userName ?? '');
   const [saveToast, setSaveToast] = useState('');
   const {keyboardHeight} = useKeyboardAvoid();
   const tabState = useURLState<AppTab>('tab');
@@ -136,9 +153,16 @@ export function AppShell() {
     changeTab('calculator');
   }
 
+  const connectionStatus = (
+    <ConnectionStatus phase={connection.phase} pending={connection.pending} />
+  );
+  const wallpaperActive = !auth.token || !auth.userName;
+
   if (auth.sessionLoading) {
     return (
       <>
+        <AppWallpaperVideo active={wallpaperActive} />
+        {connectionStatus}
         <AppAmbientBackground activeTab={activeTab} />
         <ThemeToggle />
         <LoadingView message="Восстанавливаем сессию..." />
@@ -149,6 +173,8 @@ export function AppShell() {
   if (!auth.userName || !auth.token) {
     return (
       <>
+        <AppWallpaperVideo active={wallpaperActive} />
+        {connectionStatus}
         <ThemeToggle />
         <OpenGraph {...pageMeta} />
         <Suspense fallback={<LoadingView message="Загрузка формы входа..." />}>
@@ -174,6 +200,8 @@ export function AppShell() {
   if (!auth.userData) {
     return (
       <>
+        <AppWallpaperVideo active={wallpaperActive} />
+        {connectionStatus}
         <AppAmbientBackground activeTab={activeTab} />
         <ThemeToggle />
         <LoadingView message={auth.sessionError || 'Загрузка данных...'} />
@@ -191,6 +219,8 @@ export function AppShell() {
 
   return (
     <div className="app-shell" style={shellStyle}>
+      <AppWallpaperVideo active={wallpaperActive} />
+      {connectionStatus}
       <AppAmbientBackground activeTab={activeTab} />
       <ThemeToggle />
       <OpenGraph {...pageMeta} />
