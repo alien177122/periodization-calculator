@@ -271,49 +271,10 @@ export function createFileWorkspace({
     const resolvedInboxDir = resolve(inboxDir);
     const filePath = resolve(inboxDir, fileName);
     if (dirname(filePath) !== resolvedInboxDir) {
-      // #region agent log
-      fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-        body: JSON.stringify({
-          sessionId: '8ed724',
-          runId: 'initial',
-          hypothesisId: 'H3',
-          location: 'server/file-workspace.js:275',
-          message: 'workspace path rejected',
-          data: {
-            fileNameLength: fileName.length,
-            pathInsideWorkspace: false,
-            hasPathSeparator: fileName.includes('/') || fileName.includes('\\\\'),
-          },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
       throw new Error('Access denied: directory traversal detected');
     }
     const fileStat = await stat(filePath);
     const kind = detectKind(fileName);
-    // #region agent log
-    fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-      body: JSON.stringify({
-        sessionId: '8ed724',
-        runId: 'initial',
-        hypothesisId: 'H3,H4',
-        location: 'server/file-workspace.js:281',
-        message: 'workspace file accepted for analysis',
-        data: {
-          fileNameLength: fileName.length,
-          pathInsideWorkspace: true,
-          kind,
-          sizeBytes: fileStat.size,
-        },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-    // #endregion
     let analysis;
     if (
       TEXT_EXTENSIONS.has(extname(fileName).toLowerCase()) ||

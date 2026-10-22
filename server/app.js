@@ -116,27 +116,6 @@ export function createApp({
   enableStatic = existsSync(distDir),
 } = {}) {
   const config = getServerConfig(env);
-  // #region agent log
-  fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-    body: JSON.stringify({
-      sessionId: '8ed724',
-      runId: 'initial',
-      hypothesisId: 'H2,H4',
-      location: 'server/app.js:113',
-      message: 'server security configuration',
-      data: {
-        isDevelopment: config.isDevelopment,
-        hasExplicitJwtSecret: Boolean(env.JWT_SECRET?.trim()),
-        corsOriginsCount: config.corsOrigins.length,
-        fileWorkspaceEnabled: config.enableFileWorkspace,
-        trustProxyConfigured: env.TRUST_PROXY === '1' || env.TRUST_PROXY === 'true',
-      },
-      timestamp: Date.now(),
-    }),
-  }).catch(() => {});
-  // #endregion
   const app = express();
 
   if (env.TRUST_PROXY === '1' || env.TRUST_PROXY === 'true') {
@@ -175,21 +154,6 @@ export function createApp({
   function authAny(req, res, next) {
     const token = req.headers.authorization?.split(' ')[1];
     if (!token) {
-      // #region agent log
-      fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-        body: JSON.stringify({
-          sessionId: '8ed724',
-          runId: 'initial',
-          hypothesisId: 'H1,H2',
-          location: 'server/app.js:151',
-          message: 'protected request missing bearer token',
-          data: {path: req.path, method: req.method},
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
       return res.status(401).json({error: 'Нет токена'});
     }
 
@@ -203,26 +167,6 @@ export function createApp({
       if (currentVersion === null) {
         return res.status(401).json({error: 'Токен недействителен'});
       }
-      // #region agent log
-      fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-        body: JSON.stringify({
-          sessionId: '8ed724',
-          runId: 'initial',
-          hypothesisId: 'H1,H2',
-          location: 'server/app.js:168',
-          message: 'jwt verified and token version checked',
-          data: {
-            path: req.path,
-            method: req.method,
-            tokenVersionFinite: Number.isFinite(tokenVersion),
-            tokenVersionMatches: tokenVersion === currentVersion,
-          },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
       if (!Number.isFinite(tokenVersion) || tokenVersion !== currentVersion) {
         return res.status(401).json({error: 'Токен недействителен'});
       }
@@ -230,21 +174,6 @@ export function createApp({
       req.user = {name, tv: currentVersion};
       next();
     } catch {
-      // #region agent log
-      fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-        body: JSON.stringify({
-          sessionId: '8ed724',
-          runId: 'initial',
-          hypothesisId: 'H2',
-          location: 'server/app.js:177',
-          message: 'jwt verification rejected token',
-          data: {path: req.path, method: req.method},
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
       res.status(401).json({error: 'Токен недействителен'});
     }
   }
@@ -252,21 +181,6 @@ export function createApp({
   function auth(req, res, next) {
     authAny(req, res, () => {
       if (req.user.name !== req.params.name) {
-        // #region agent log
-        fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-          body: JSON.stringify({
-            sessionId: '8ed724',
-            runId: 'initial',
-            hypothesisId: 'H1',
-            location: 'server/app.js:188',
-            message: 'authorization subject does not match route subject',
-            data: {path: req.path, method: req.method},
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-        // #endregion
         res.status(403).json({error: 'Доступ запрещён'});
         return;
       }
