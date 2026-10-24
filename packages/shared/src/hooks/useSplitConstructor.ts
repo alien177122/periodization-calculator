@@ -1,7 +1,25 @@
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {CATALOG_EXERCISES} from '../data/exercises.ts';
-import type {CustomSplit, SavedExercise, SplitCalculation, UserData} from '../types/index.ts';
+import type {
+  CustomSplit,
+  SavedExercise,
+  SplitCalculation,
+  SplitDayNumber,
+  TrainingProfile,
+  UserData,
+} from '../types/index.ts';
 import type {TrainingDayDef} from '../types/index.ts';
+import {
+  getProfileExercises,
+  upsertProfileExercise,
+  removeProfileExercises,
+} from '../utils/profile-exercises.ts';
+import {
+  areCalculationWeightsReady,
+  copyExercisesForSplitKeys,
+  missingExerciseKeys,
+  splitExerciseKeys,
+} from '../utils/split-weight-readiness.ts';
 
 import {
   buildDayPreview,
@@ -15,6 +33,14 @@ import {
   isWeekEffectivelyDone,
 } from '../utils/split-progress.ts';
 import {resolveSavedSplitSelection} from '../utils/split-selection.ts';
+import {
+  DEFAULT_PROFILE_ID,
+  DEFAULT_PROFILE_NAME,
+  ensureTrainingProfiles,
+  profileNameOrFallback,
+  upsertSplit,
+  withEnsuredProfiles,
+} from '../utils/training-profiles.ts';
 
 export interface UseSplitConstructorOptions {
   userData: UserData;
@@ -47,13 +73,31 @@ export function useSplitConstructor({
     userDataRef.current = userData;
   }, [userData]);
 
-  const savedSplits = useMemo(() => userData.splits ?? [], [userData.splits]);
+  const profileBundle = useMemo(() => ensureTrainingProfiles(userData), [userData]);
+  const virtualProfile = useMemo<TrainingProfile>(
+    () => ({
+      id: DEFAULT_PROFILE_ID,
+      name: DEFAULT_PROFILE_NAME,
+      createdAt: '2026-01-01T00:00:00.000Z',
+      updatedAt: '2026-01-01T00:00:00.000Z',
+    }),
+    [],
+  );
+  const profiles = useMemo(
+    () => (profileBundle.profiles.length > 0 ? profileBundle.profiles : [virtualProfile]),
+    [profileBundle.profiles, virtualProfile],
+  );
+  const activeProfileId = profileBundle.activeProfileId ?? profiles[0]?.id ?? DEFAULT_PROFILE_ID;
+  const allSplits = profileBundle.splits;
   const activeSplitId = userData.activeSplitId ?? null;
-  const calculations = useMemo(() => {
-    const stored = userData.splitCalculations ?? [];
-    if (stored.length > 0) return stored;
+  const savedSplits = useMemo(
+    () => allSplits.filter(split => split.profileId === activeProfileId),
+    [activeProfileId, allSplits],
+  );
+  const allCalculations = useMemo(() => {
+    if (profileBundle.splitCalculations.length > 0) return profileBundle.splitCalculations;
 
-    const legacySplit = savedSplits.find(split => split.id === activeSplitId) ?? savedSplits[0];
+    const legacySplit = allSplits.find(split => split.id === activeSplitId) ?? allSplits[0];
     const hasLegacyProgress =
       (legacySplit?.completedWeeks?.length ?? 0) > 0 ||
       (legacySplit?.completedDays?.length ?? 0) > 0;
@@ -62,17 +106,68 @@ export function useSplitConstructor({
     return [
       {
         id: `legacy-${legacySplit.id}`,
+        splitId: legacySplit.id,
         calculatedAt: legacySplit.updatedAt,
         split: cloneSplit(legacySplit),
-        exercises: userData.exercises.map(exercise => ({...exercise})),
+        exercises: getProfileExercises(userData, activeProfileId).map(exercise => ({...exercise})),
       },
     ];
-  }, [activeSplitId, savedSplits, userData.exercises, userData.splitCalculations]);
+  }, [activeProfileId, activeSplitId, allSplits, profileBundle.splitCalculations, userData]);
+  const calculations = useMemo(
+    () =>
+      allCalculations
+        .filter(entry => entry.split.profileId === activeProfileId)
+        .map(entry => ({...entry, splitId: entry.splitId ?? entry.split.id})),
+    [activeProfileId, allCalculations],
+  );
+  const profileExercises = useMemo(
+    () => getProfileExercises(userData, activeProfileId),
+    [activeProfileId, userData],
+  );
+  const selectedSplitId = useMemo(() => {
+    if (activeSplitId && savedSplits.some(split => split.id === activeSplitId))
+      return activeSplitId;
+    return null;
+  }, [activeSplitId, savedSplits]);
+  const calculationsForSelectedSplit = useMemo(() => {
+    if (!selectedSplitId) return [];
+    return calculations.filter(entry => (entry.splitId ?? entry.split.id) === selectedSplitId);
+  }, [calculations, selectedSplitId]);
+  const activeProfile = profiles.find(profile => profile.id === activeProfileId) ?? profiles[0];
+  const [profileName, setProfileName] = useState(activeProfile?.name ?? DEFAULT_PROFILE_NAME);
+  const [profileFocusKey, setProfileFocusKey] = useState(0);
+  const profileNameDirty = useRef(false);
+  const [prevProfileId, setPrevProfileId] = useState(activeProfileId);
+
+  // Switching profiles resets the name field (adjust-state-during-render pattern).
+  if (prevProfileId !== activeProfileId) {
+    setPrevProfileId(activeProfileId);
+    setProfileName(activeProfile?.name ?? DEFAULT_PROFILE_NAME);
+  }
+
+  useEffect(() => {
+    profileNameDirty.current = false;
+  }, [activeProfileId]);
+
+  useEffect(() => {
+    if (profileNameDirty.current) return;
+    setProfileName(activeProfile?.name ?? DEFAULT_PROFILE_NAME);
+  }, [activeProfile?.name, activeProfileId]);
   const [isDraftingNewSplit, setIsDraftingNewSplit] = useState(false);
+  const [isDraftingNewCalculation, setIsDraftingNewCalculation] = useState(false);
+  const [splitEditorOpen, setSplitEditorOpen] = useState(false);
+  const [weightBaseOpen, setWeightBaseOpen] = useState(false);
+  const [calculationExercises, setCalculationExercises] = useState<SavedExercise[] | null>(null);
+  const autoCalcHashRef = useRef<string>('');
   const activeCalculation = isDraftingNewSplit
     ? undefined
-    : (calculations.find(entry => entry.id === userData.activeSplitCalculationId) ??
-      calculations[0]);
+    : isDraftingNewCalculation
+      ? undefined
+      : (calculationsForSelectedSplit.find(
+          entry => entry.id === userData.activeSplitCalculationId,
+        ) ??
+        calculationsForSelectedSplit[0] ??
+        calculations.find(entry => entry.id === userData.activeSplitCalculationId));
   const isEditingCalculation =
     activeCalculation !== undefined && activeCalculation.id === userData.activeSplitCalculationId;
 
@@ -84,7 +179,10 @@ export function useSplitConstructor({
 
   const [draft, setDraft] = useState<CustomSplit>(() => {
     const existing = resolveSavedSplit(initialSplitId);
-    return existing ? cloneSplit(existing) : migrateToCustomExercises(createDefaultSplit());
+    if (existing) return cloneSplit(existing);
+    const fresh = migrateToCustomExercises(createDefaultSplit());
+    fresh.profileId = activeProfileId;
+    return fresh;
   });
   const [previewWeek, setPreviewWeek] = useState(0);
 
@@ -111,8 +209,23 @@ export function useSplitConstructor({
 
   const validationError = useMemo(() => validateSplit(draft), [draft]);
 
-  const previewSplit = activeCalculation?.split ?? draft;
-  const previewExercises = activeCalculation?.exercises ?? userData.exercises;
+  const previewSplit =
+    isEditingCalculation || isDraftingNewCalculation ? draft : (activeCalculation?.split ?? draft);
+  const previewExercises = calculationExercises ?? activeCalculation?.exercises ?? profileExercises;
+  const weightReadinessKeys = useMemo(() => {
+    const split = selectedSplitId
+      ? (savedSplits.find(entry => entry.id === selectedSplitId) ?? previewSplit)
+      : previewSplit;
+    return splitExerciseKeys(split);
+  }, [previewSplit, savedSplits, selectedSplitId]);
+  const weightsReady = useMemo(
+    () => areCalculationWeightsReady(weightReadinessKeys, previewExercises),
+    [previewExercises, weightReadinessKeys],
+  );
+  const missingWeightKeys = useMemo(
+    () => missingExerciseKeys(weightReadinessKeys, previewExercises),
+    [previewExercises, weightReadinessKeys],
+  );
 
   const dayPreviews = useMemo(() => {
     return previewSplit.days.map(day => {
@@ -135,30 +248,38 @@ export function useSplitConstructor({
     setDraft(current => ({...current, ...patch, updatedAt: new Date().toISOString()}));
   }, []);
 
-  const setDaysPerWeek = useCallback((daysPerWeek: 2 | 3) => {
+  const setDaysPerWeek = useCallback((daysPerWeek: 2 | 3 | 4) => {
     setDraft(current => {
       const customExercises = {...(current.customExercisesByDay ?? {})};
 
       if (daysPerWeek === 2) {
         const day2List = customExercises[2] ?? [];
         const day3List = customExercises[3] ?? [];
+        const day4List = customExercises[4] ?? [];
         const merged = [...day2List];
-        for (const key of day3List) {
-          if (!merged.includes(key)) {
-            merged.push(key);
-          }
+        for (const key of [...day3List, ...day4List]) {
+          if (!merged.includes(key)) merged.push(key);
         }
         customExercises[2] = merged;
         delete customExercises[3];
-      } else {
-        if (!customExercises[3]) {
-          customExercises[3] = [];
+        delete customExercises[4];
+      } else if (daysPerWeek === 3) {
+        if (!customExercises[3]) customExercises[3] = [];
+        const day4List = customExercises[4] ?? [];
+        const day3List = [...(customExercises[3] ?? [])];
+        for (const key of day4List) {
+          if (!day3List.includes(key)) day3List.push(key);
         }
+        customExercises[3] = day3List;
+        delete customExercises[4];
+      } else {
+        if (!customExercises[3]) customExercises[3] = [];
+        if (!customExercises[4]) customExercises[4] = [];
       }
 
       const days = Array.from({length: daysPerWeek}, (_, i) => ({
-        dayNumber: (i + 1) as 1 | 2 | 3,
-        muscles: [],
+        dayNumber: (i + 1) as SplitDayNumber,
+        muscles: [] as CustomSplit['days'][number]['muscles'],
       }));
 
       return {
@@ -171,6 +292,14 @@ export function useSplitConstructor({
     });
   }, []);
 
+  const namedProfiles = useCallback((): TrainingProfile[] => {
+    const name = profileNameOrFallback(profileName, activeProfileId);
+    const now = new Date().toISOString();
+    return profiles.map(profile =>
+      profile.id === activeProfileId ? {...profile, name, updatedAt: now} : profile,
+    );
+  }, [activeProfileId, profileName, profiles]);
+
   const saveSplit = useCallback(async () => {
     const error = validateSplit(draft);
     if (error) {
@@ -178,17 +307,18 @@ export function useSplitConstructor({
       return;
     }
 
-    const nextSplits = [
-      ...savedSplits.filter(split => split.id !== draft.id),
-      {...draft, updatedAt: new Date().toISOString()},
-    ];
-
+    const stamped = {...draft, profileId: activeProfileId, updatedAt: new Date().toISOString()};
+    const nextProfiles = namedProfiles();
     const updated: UserData = {
-      ...userData,
-      splits: nextSplits,
-      activeSplitId: draft.id,
+      ...withEnsuredProfiles(userData),
+      profiles: nextProfiles,
+      activeProfileId,
+      splits: upsertSplit(allSplits, stamped),
+      activeSplitId: stamped.id,
     };
 
+    setIsDraftingNewSplit(false);
+    setSplitEditorOpen(false);
     setUserData(updated);
     onSplitIdChange?.(draft.id);
 
@@ -220,17 +350,33 @@ export function useSplitConstructor({
         console.warn('Network error during saveSplit (changes saved locally):', e);
       }
     }
-  }, [draft, onSaveError, onSplitIdChange, saveUser, savedSplits, setUserData, token, userData]);
+  }, [
+    activeProfileId,
+    allSplits,
+    draft,
+    namedProfiles,
+    onSaveError,
+    onSplitIdChange,
+    saveUser,
+    setUserData,
+    token,
+    userData,
+  ]);
 
   const calculateSplit = useCallback(async (): Promise<string | null> => {
-    const error = validateSplit(draft);
+    const splitSource = draft;
+    const error = validateSplit(splitSource);
     if (error) {
       onSaveError?.(error);
       return null;
     }
 
     const calculatedAt = new Date().toISOString();
-    const savedDraft = cloneSplit({...draft, updatedAt: calculatedAt});
+    const savedDraft = cloneSplit({
+      ...splitSource,
+      profileId: activeProfileId,
+      updatedAt: calculatedAt,
+    });
     const snapshot = cloneSplit({
       ...savedDraft,
       completedWeeks: undefined,
@@ -240,24 +386,32 @@ export function useSplitConstructor({
       !isDraftingNewSplit &&
       activeCalculation !== undefined &&
       activeCalculation.id === userData.activeSplitCalculationId;
+    const exerciseSnapshot = (calculationExercises ?? previewExercises).map(exercise => ({
+      ...exercise,
+    }));
     const calculation: SplitCalculation = {
       id: isUpdatingCalculation ? activeCalculation.id : crypto.randomUUID(),
+      splitId: savedDraft.id,
       calculatedAt,
       split: snapshot,
-      exercises: userData.exercises.map(exercise => ({...exercise})),
+      exercises: exerciseSnapshot,
     };
     const updated: UserData = {
-      ...userData,
-      splits: [...savedSplits.filter(split => split.id !== savedDraft.id), savedDraft],
+      ...withEnsuredProfiles(userData),
+      profiles: namedProfiles(),
+      activeProfileId,
+      splits: upsertSplit(allSplits, savedDraft),
       activeSplitId: savedDraft.id,
       splitCalculations: [
         calculation,
-        ...calculations.filter(entry => entry.id !== calculation.id),
+        ...allCalculations.filter(entry => entry.id !== calculation.id),
       ].slice(0, 50),
       activeSplitCalculationId: calculation.id,
     };
 
     setIsDraftingNewSplit(false);
+    setIsDraftingNewCalculation(false);
+    setCalculationExercises(null);
     setDraft(savedDraft);
     setPreviewWeek(0);
     setUserData(updated);
@@ -281,16 +435,20 @@ export function useSplitConstructor({
     }
   }, [
     activeCalculation,
-    calculations,
+    activeProfileId,
+    allCalculations,
+    allSplits,
     draft,
+    namedProfiles,
     onSaveError,
     onSplitIdChange,
     saveUser,
-    savedSplits,
     setUserData,
     token,
     userData,
     isDraftingNewSplit,
+    calculationExercises,
+    previewExercises,
   ]);
 
   const selectCalculation = useCallback(
@@ -303,19 +461,35 @@ export function useSplitConstructor({
         week => !isWeekEffectivelyDone(calculation.split, week),
       );
       const updated: UserData = {
-        ...userData,
+        ...withEnsuredProfiles(userData),
+        profiles: namedProfiles(),
+        activeProfileId,
+        splits: allSplits,
         activeSplitId: calculation.split.id,
-        splitCalculations: calculations,
+        splitCalculations: allCalculations,
         activeSplitCalculationId: calculation.id,
       };
 
+      setIsDraftingNewCalculation(false);
+      setCalculationExercises(null);
       setDraft(cloneSplit(calculation.split));
       setPreviewWeek(nextWeek ?? 7);
       setUserData(updated);
       onSplitIdChange?.(calculation.split.id);
       void saveUser(updated, token);
     },
-    [calculations, onSplitIdChange, saveUser, setUserData, token, userData],
+    [
+      activeProfileId,
+      allCalculations,
+      allSplits,
+      calculations,
+      namedProfiles,
+      onSplitIdChange,
+      saveUser,
+      setUserData,
+      token,
+      userData,
+    ],
   );
 
   const deleteCalculation = useCallback(
@@ -327,19 +501,20 @@ export function useSplitConstructor({
       const storedCalculations = userData.splitCalculations ?? [];
       const hasStoredCalculations = storedCalculations.length > 0;
 
-      const nextCalculations = hasStoredCalculations
-        ? storedCalculations.filter(entry => entry.id !== id)
-        : [];
+      const nextCalculations = allCalculations.filter(entry => entry.id !== id);
+      const nextInProfile = nextCalculations.find(
+        entry => entry.split.profileId === activeProfileId,
+      );
 
       const wasActive =
         userData.activeSplitCalculationId === id ||
         activeCalculation?.id === id ||
         (!userData.activeSplitCalculationId && calculations[0]?.id === id);
 
-      let nextSplits = savedSplits;
+      let nextSplits = allSplits;
       if (isLegacy || !hasStoredCalculations) {
         const legacySplitId = isLegacy ? id.slice('legacy-'.length) : calculation.split.id;
-        nextSplits = savedSplits.map(split =>
+        nextSplits = allSplits.map(split =>
           split.id === legacySplitId
             ? {
                 ...split,
@@ -355,16 +530,15 @@ export function useSplitConstructor({
       let nextActiveSplitId = userData.activeSplitId;
 
       if (wasActive) {
-        if (nextCalculations.length > 0) {
-          const next = nextCalculations[0];
-          nextActiveCalculationId = next.id;
-          nextActiveSplitId = next.split.id;
-          setDraft(cloneSplit(next.split));
+        if (nextInProfile) {
+          nextActiveCalculationId = nextInProfile.id;
+          nextActiveSplitId = nextInProfile.split.id;
+          setDraft(cloneSplit(nextInProfile.split));
           const nextWeek = Array.from({length: 8}, (_, index) => index).find(
-            week => !isWeekEffectivelyDone(next.split, week),
+            week => !isWeekEffectivelyDone(nextInProfile.split, week),
           );
           setPreviewWeek(nextWeek ?? 7);
-          onSplitIdChange?.(next.split.id);
+          onSplitIdChange?.(nextInProfile.split.id);
         } else {
           nextActiveCalculationId = undefined;
           setPreviewWeek(0);
@@ -372,7 +546,9 @@ export function useSplitConstructor({
       }
 
       const updated: UserData = {
-        ...userData,
+        ...withEnsuredProfiles(userData),
+        profiles: namedProfiles(),
+        activeProfileId,
         splits: nextSplits,
         splitCalculations: nextCalculations,
         activeSplitCalculationId: nextActiveCalculationId,
@@ -398,11 +574,14 @@ export function useSplitConstructor({
     },
     [
       activeCalculation?.id,
+      activeProfileId,
+      allCalculations,
+      allSplits,
       calculations,
+      namedProfiles,
       onSaveError,
       onSplitIdChange,
       saveUser,
-      savedSplits,
       setUserData,
       token,
       userData,
@@ -411,10 +590,14 @@ export function useSplitConstructor({
 
   const createNewSplit = useCallback(() => {
     const split = migrateToCustomExercises(createDefaultSplit(`Сплит ${savedSplits.length + 1}`));
+    split.profileId = activeProfileId;
     setIsDraftingNewSplit(true);
+    setSplitEditorOpen(true);
+    setIsDraftingNewCalculation(false);
+    setCalculationExercises(null);
     setDraft(split);
     onSplitIdChange?.(null);
-  }, [onSplitIdChange, savedSplits.length]);
+  }, [activeProfileId, onSplitIdChange, savedSplits.length]);
 
   const duplicateLast = useCallback(() => {
     const last = savedSplits[0];
@@ -422,6 +605,7 @@ export function useSplitConstructor({
     const copy: CustomSplit = migrateToCustomExercises({
       ...last,
       id: crypto.randomUUID(),
+      profileId: activeProfileId,
       name: `${last.name} (копия)`,
       days: last.days.map(day => ({...day, muscles: []})),
       createdAt: new Date().toISOString(),
@@ -430,47 +614,73 @@ export function useSplitConstructor({
     setIsDraftingNewSplit(true);
     setDraft(copy);
     onSplitIdChange?.(copy.id);
-  }, [onSplitIdChange, savedSplits]);
+  }, [activeProfileId, onSplitIdChange, savedSplits]);
 
   const selectSplit = useCallback(
     (id: string) => {
       const found = savedSplits.find(split => split.id === id);
       if (!found) return;
-      setIsDraftingNewSplit(true);
-      setDraft(
-        migrateToCustomExercises({
-          ...found,
-          days: found.days.map(day => ({...day, muscles: [...day.muscles]})),
-        }),
-      );
+      setIsDraftingNewSplit(false);
+      setSplitEditorOpen(false);
+      setIsDraftingNewCalculation(false);
+      setCalculationExercises(null);
+      setDraft(cloneSplit(found));
+      const forSplit = calculations.filter(entry => (entry.splitId ?? entry.split.id) === id);
+      const nextCalcId = forSplit[0]?.id;
+      const updated: UserData = {
+        ...withEnsuredProfiles(userData),
+        profiles: namedProfiles(),
+        activeProfileId,
+        splits: allSplits,
+        activeSplitId: id,
+        splitCalculations: allCalculations,
+        activeSplitCalculationId: nextCalcId,
+      };
+      setUserData(updated);
       onSplitIdChange?.(id);
+      void saveUser(updated, token);
     },
-    [onSplitIdChange, savedSplits],
+    [
+      activeProfileId,
+      allCalculations,
+      allSplits,
+      calculations,
+      namedProfiles,
+      onSplitIdChange,
+      savedSplits,
+      saveUser,
+      setUserData,
+      token,
+      userData,
+    ],
   );
 
-  const moveExercise = useCallback((exerciseKey: string, fromDay: 1 | 2 | 3, toDay: 1 | 2 | 3) => {
-    if (!CATALOG_EXERCISES[exerciseKey]) return;
-    setDraft(current => {
-      const customExercises = {...(current.customExercisesByDay ?? {})};
+  const moveExercise = useCallback(
+    (exerciseKey: string, fromDay: SplitDayNumber, toDay: SplitDayNumber) => {
+      if (!CATALOG_EXERCISES[exerciseKey]) return;
+      setDraft(current => {
+        const customExercises = {...(current.customExercisesByDay ?? {})};
 
-      const fromList = customExercises[fromDay] ?? [];
-      customExercises[fromDay] = fromList.filter(key => key !== exerciseKey);
+        const fromList = customExercises[fromDay] ?? [];
+        customExercises[fromDay] = fromList.filter(key => key !== exerciseKey);
 
-      const toList = [...(customExercises[toDay] ?? [])];
-      if (!toList.includes(exerciseKey)) {
-        toList.push(exerciseKey);
-      }
-      customExercises[toDay] = toList;
+        const toList = [...(customExercises[toDay] ?? [])];
+        if (!toList.includes(exerciseKey)) {
+          toList.push(exerciseKey);
+        }
+        customExercises[toDay] = toList;
 
-      return {
-        ...current,
-        customExercisesByDay: customExercises,
-        updatedAt: new Date().toISOString(),
-      };
-    });
-  }, []);
+        return {
+          ...current,
+          customExercisesByDay: customExercises,
+          updatedAt: new Date().toISOString(),
+        };
+      });
+    },
+    [],
+  );
 
-  const addExerciseToDay = useCallback((exerciseKey: string, targetDay: 1 | 2 | 3) => {
+  const addExerciseToDay = useCallback((exerciseKey: string, targetDay: SplitDayNumber) => {
     if (!CATALOG_EXERCISES[exerciseKey]) return;
     setDraft(current => {
       const customExercises = {...(current.customExercisesByDay ?? {})};
@@ -490,13 +700,13 @@ export function useSplitConstructor({
 
   /** Copy exercise to another day without removing it from the source day. */
   const duplicateExerciseToDay = useCallback(
-    (exerciseKey: string, targetDay: 1 | 2 | 3) => {
+    (exerciseKey: string, targetDay: SplitDayNumber) => {
       addExerciseToDay(exerciseKey, targetDay);
     },
     [addExerciseToDay],
   );
 
-  const removeExercise = useCallback((exerciseKey: string, dayNumber: 1 | 2 | 3) => {
+  const removeExercise = useCallback((exerciseKey: string, dayNumber: SplitDayNumber) => {
     setDraft(current => {
       const customExercises = {...(current.customExercisesByDay ?? {})};
       const dayList = customExercises[dayNumber] ?? [];
@@ -519,7 +729,9 @@ export function useSplitConstructor({
     ) => {
       if (!CATALOG_EXERCISES[exerciseKey] || !Number.isFinite(oneRM) || oneRM <= 0) return;
 
-      const existing = userData.exercises.find(exercise => exercise.exerciseKey === exerciseKey);
+      const existing = getProfileExercises(userData, activeProfileId).find(
+        exercise => exercise.exerciseKey === exerciseKey,
+      );
       const saved: SavedExercise = existing
         ? {
             ...existing,
@@ -538,8 +750,10 @@ export function useSplitConstructor({
             date: new Date().toLocaleDateString('ru-RU'),
           };
 
+      const ensured = withEnsuredProfiles(userData);
+      const withProfile = upsertProfileExercise(ensured, activeProfileId, saved);
       const updated: UserData = {
-        ...userData,
+        ...withProfile,
         exercises: [
           ...userData.exercises.filter(exercise => exercise.exerciseKey !== exerciseKey),
           saved,
@@ -570,14 +784,50 @@ export function useSplitConstructor({
           console.error('setExerciseOneRM error:', e);
         });
     },
-    [onSaveError, saveUser, setUserData, token, userData],
+    [activeProfileId, onSaveError, saveUser, setUserData, token, userData],
+  );
+
+  const setCalculationExerciseOneRM = useCallback(
+    (
+      exerciseKey: string,
+      oneRM: number,
+      testWeight?: number,
+      testReps?: number,
+      bodyWeight?: number,
+    ) => {
+      if (!CATALOG_EXERCISES[exerciseKey] || !Number.isFinite(oneRM) || oneRM <= 0) return;
+      setCalculationExercises(current => {
+        const base = current ?? previewExercises;
+        const existing = base.find(exercise => exercise.exerciseKey === exerciseKey);
+        const saved: SavedExercise = existing
+          ? {
+              ...existing,
+              oneRM,
+              testWeight: testWeight ?? existing.testWeight,
+              testReps: testReps ?? existing.testReps,
+              bodyWeight: bodyWeight ?? existing.bodyWeight,
+              date: new Date().toLocaleDateString('ru-RU'),
+            }
+          : {
+              exerciseKey,
+              testWeight: testWeight ?? oneRM,
+              testReps: testReps ?? 1,
+              oneRM,
+              bodyWeight,
+              date: new Date().toLocaleDateString('ru-RU'),
+            };
+        return [...base.filter(exercise => exercise.exerciseKey !== exerciseKey), saved];
+      });
+    },
+    [previewExercises],
   );
 
   const resolveCalculations = useCallback((data: UserData): SplitCalculation[] => {
-    const stored = data.splitCalculations ?? [];
+    const ensured = ensureTrainingProfiles(data);
+    const stored = ensured.splitCalculations;
     if (stored.length > 0) return stored;
 
-    const splits = data.splits ?? [];
+    const splits = ensured.splits;
     const legacySplit =
       splits.find(split => split.id === (data.activeSplitId ?? null)) ?? splits[0];
     const hasLegacyProgress =
@@ -611,8 +861,12 @@ export function useSplitConstructor({
         nextCalculations.unshift({...activeCalculation, split: nextSplit});
       }
 
+      const ensured = withEnsuredProfiles(latest);
       const updated: UserData = {
-        ...latest,
+        ...ensured,
+        profiles: ensured.profiles ?? namedProfiles(),
+        activeProfileId: ensured.activeProfileId ?? activeProfileId,
+        splits: ensured.splits ?? allSplits,
         splitCalculations: nextCalculations.slice(0, 50),
         activeSplitId: nextSplit.id,
         activeSplitCalculationId: calculationId,
@@ -640,6 +894,9 @@ export function useSplitConstructor({
     },
     [
       activeCalculation,
+      activeProfileId,
+      allSplits,
+      namedProfiles,
       onSaveError,
       onSplitIdChange,
       resolveCalculations,
@@ -688,7 +945,7 @@ export function useSplitConstructor({
   );
 
   const toggleCompletedDay = useCallback(
-    (weekIndex: number, day: 1 | 2 | 3) => {
+    (weekIndex: number, day: SplitDayNumber) => {
       if (!activeCalculation || !Number.isInteger(weekIndex) || weekIndex < 0 || weekIndex > 7) {
         return;
       }
@@ -703,17 +960,322 @@ export function useSplitConstructor({
     [activeCalculation, persistCalculationProgress, resolveCalculations],
   );
 
+  const renameProfile = useCallback((name: string) => {
+    profileNameDirty.current = true;
+    setProfileName(name.slice(0, 40));
+  }, []);
+
+  const commitProfileName = useCallback(() => {
+    const nextProfiles = namedProfiles();
+    profileNameDirty.current = false;
+    const committed = nextProfiles.find(profile => profile.id === activeProfileId);
+    if (committed) setProfileName(committed.name);
+    const updated: UserData = {
+      ...withEnsuredProfiles(userData),
+      profiles: nextProfiles,
+      activeProfileId,
+      splits: allSplits,
+    };
+    userDataRef.current = updated;
+    setUserData(updated);
+    void saveUser(updated, token);
+  }, [activeProfileId, allSplits, namedProfiles, saveUser, setUserData, token, userData]);
+
+  const selectProfile = useCallback(
+    (id: string) => {
+      if (!profiles.some(profile => profile.id === id)) return;
+      if (id === activeProfileId) {
+        const nextProfiles = namedProfiles();
+        profileNameDirty.current = false;
+        const committed = nextProfiles.find(profile => profile.id === id);
+        if (committed) setProfileName(committed.name);
+        const updated: UserData = {
+          ...withEnsuredProfiles(userData),
+          profiles: nextProfiles,
+          activeProfileId,
+          splits: allSplits,
+        };
+        userDataRef.current = updated;
+        setUserData(updated);
+        void saveUser(updated, token);
+        return;
+      }
+      const nextProfiles = namedProfiles();
+      profileNameDirty.current = false;
+      const nextName =
+        nextProfiles.find(profile => profile.id === id)?.name ?? DEFAULT_PROFILE_NAME;
+      setProfileName(nextName);
+      const profileSplits = allSplits.filter(split => split.profileId === id);
+      const preferred =
+        profileSplits.find(split => split.id === userData.activeSplitId) ?? profileSplits[0];
+      const updated: UserData = {
+        ...withEnsuredProfiles(userData),
+        profiles: nextProfiles,
+        activeProfileId: id,
+        splits: allSplits,
+        activeSplitId: preferred?.id ?? userData.activeSplitId,
+      };
+      if (preferred) {
+        setIsDraftingNewSplit(false);
+        setDraft(cloneSplit(preferred));
+        onSplitIdChange?.(preferred.id);
+      } else {
+        const fresh = migrateToCustomExercises(createDefaultSplit('Сплит 1'));
+        fresh.profileId = id;
+        setIsDraftingNewSplit(true);
+        setDraft(fresh);
+        onSplitIdChange?.(null);
+      }
+      userDataRef.current = updated;
+      setUserData(updated);
+      void saveUser(updated, token);
+    },
+    [
+      activeProfileId,
+      allSplits,
+      namedProfiles,
+      onSplitIdChange,
+      profiles,
+      saveUser,
+      setUserData,
+      token,
+      userData,
+    ],
+  );
+
+  const createCalculationFromBase = useCallback(() => {
+    if (!selectedSplitId) return;
+    const split = savedSplits.find(entry => entry.id === selectedSplitId);
+    if (!split) return;
+    const keys = splitExerciseKeys(split);
+    setIsDraftingNewCalculation(true);
+    setCalculationExercises(copyExercisesForSplitKeys(keys, profileExercises));
+    const updated: UserData = {
+      ...withEnsuredProfiles(userData),
+      profiles: namedProfiles(),
+      activeProfileId,
+      splits: allSplits,
+      activeSplitId: selectedSplitId,
+      splitCalculations: allCalculations,
+      activeSplitCalculationId: undefined,
+    };
+    setUserData(updated);
+    void saveUser(updated, token);
+  }, [
+    activeProfileId,
+    allCalculations,
+    allSplits,
+    namedProfiles,
+    profileExercises,
+    saveUser,
+    savedSplits,
+    selectedSplitId,
+    setUserData,
+    token,
+    userData,
+  ]);
+
+  const openSplitEditor = useCallback(
+    (id?: string) => {
+      const targetId = id ?? selectedSplitId;
+      if (!targetId) return;
+      const found = savedSplits.find(split => split.id === targetId);
+      if (!found) return;
+      setDraft(cloneSplit(found));
+      setSplitEditorOpen(true);
+    },
+    [savedSplits, selectedSplitId],
+  );
+
+  const closeSplitEditor = useCallback(() => {
+    setSplitEditorOpen(false);
+    if (selectedSplitId) {
+      const found = savedSplits.find(split => split.id === selectedSplitId);
+      if (found) setDraft(cloneSplit(found));
+    }
+  }, [savedSplits, selectedSplitId]);
+
+  const deleteSplitById = useCallback(
+    async (id: string) => {
+      const nextSplits = allSplits.filter(split => split.id !== id);
+      const nextCalculations = allCalculations.filter(
+        entry => (entry.splitId ?? entry.split.id) !== id,
+      );
+      const wasActive = userData.activeSplitId === id;
+      const nextActiveSplitId = wasActive
+        ? (nextSplits.find(split => split.profileId === activeProfileId)?.id ?? null)
+        : userData.activeSplitId;
+      const updated: UserData = {
+        ...withEnsuredProfiles(userData),
+        profiles: namedProfiles(),
+        activeProfileId,
+        splits: nextSplits,
+        splitCalculations: nextCalculations,
+        activeSplitId: nextActiveSplitId ?? undefined,
+        activeSplitCalculationId: wasActive ? undefined : userData.activeSplitCalculationId,
+      };
+      setSplitEditorOpen(false);
+      setIsDraftingNewCalculation(false);
+      setCalculationExercises(null);
+      if (nextActiveSplitId) {
+        const found = nextSplits.find(split => split.id === nextActiveSplitId);
+        if (found) setDraft(cloneSplit(found));
+      }
+      setUserData(updated);
+      onSplitIdChange?.(nextActiveSplitId ?? null);
+      try {
+        await saveUser(updated, token);
+      } catch {
+        onSaveError?.('Не удалось удалить сплит');
+      }
+    },
+    [
+      activeProfileId,
+      allCalculations,
+      allSplits,
+      namedProfiles,
+      onSaveError,
+      onSplitIdChange,
+      saveUser,
+      setUserData,
+      token,
+      userData,
+    ],
+  );
+
+  const deleteProfileById = useCallback(
+    async (id: string) => {
+      if (profiles.length <= 1) {
+        onSaveError?.('Нельзя удалить последний профиль');
+        return;
+      }
+      const nextProfiles = namedProfiles().filter(profile => profile.id !== id);
+      const nextSplits = allSplits.filter(split => split.profileId !== id);
+      const nextCalculations = allCalculations.filter(entry => entry.split.profileId !== id);
+      const nextUser = removeProfileExercises(userData, id);
+      const fallbackProfile = nextProfiles[0]?.id ?? DEFAULT_PROFILE_ID;
+      const updated: UserData = {
+        ...withEnsuredProfiles(nextUser),
+        profiles: nextProfiles,
+        activeProfileId: activeProfileId === id ? fallbackProfile : activeProfileId,
+        splits: nextSplits,
+        splitCalculations: nextCalculations,
+        activeSplitId:
+          activeProfileId === id
+            ? nextSplits.find(split => split.profileId === fallbackProfile)?.id
+            : userData.activeSplitId,
+        activeSplitCalculationId:
+          activeProfileId === id ? undefined : userData.activeSplitCalculationId,
+      };
+      setSplitEditorOpen(false);
+      setWeightBaseOpen(false);
+      setUserData(updated);
+      void saveUser(updated, token);
+    },
+    [
+      activeProfileId,
+      allCalculations,
+      allSplits,
+      namedProfiles,
+      onSaveError,
+      profiles.length,
+      saveUser,
+      setUserData,
+      token,
+      userData,
+    ],
+  );
+
+  useEffect(() => {
+    if (!selectedSplitId || !weightsReady) return;
+    if (!isDraftingNewCalculation && !calculationExercises && !activeCalculation) return;
+    const hash = JSON.stringify({
+      splitId: selectedSplitId,
+      keys: weightReadinessKeys,
+      exercises: previewExercises.map(entry => [
+        entry.exerciseKey,
+        entry.testWeight,
+        entry.testReps,
+        entry.oneRM,
+      ]),
+    });
+    if (hash === autoCalcHashRef.current) return;
+    const timer = window.setTimeout(() => {
+      autoCalcHashRef.current = hash;
+      void calculateSplit();
+    }, 450);
+    return () => window.clearTimeout(timer);
+  }, [
+    activeCalculation,
+    calculateSplit,
+    calculationExercises,
+    isDraftingNewCalculation,
+    previewExercises,
+    selectedSplitId,
+    weightReadinessKeys,
+    weightsReady,
+  ]);
+
+  const createProfile = useCallback(() => {
+    const now = new Date().toISOString();
+    const profile: TrainingProfile = {
+      id: crypto.randomUUID(),
+      name: 'Новый профиль',
+      createdAt: now,
+      updatedAt: now,
+    };
+    const nextProfiles = [...namedProfiles(), profile];
+    profileNameDirty.current = false;
+    setProfileName(profile.name);
+    setProfileFocusKey(key => key + 1);
+    const fresh = migrateToCustomExercises(createDefaultSplit('Сплит 1'));
+    fresh.profileId = profile.id;
+    setIsDraftingNewSplit(true);
+    setDraft(fresh);
+    onSplitIdChange?.(null);
+    const updated: UserData = {
+      ...withEnsuredProfiles(userData),
+      profiles: nextProfiles,
+      activeProfileId: profile.id,
+      splits: allSplits,
+    };
+    userDataRef.current = updated;
+    setUserData(updated);
+    void saveUser(updated, token);
+  }, [allSplits, namedProfiles, onSplitIdChange, saveUser, setUserData, token, userData]);
+
   return {
     draft,
     savedSplits,
+    profiles,
+    activeProfileId,
+    profileName,
+    profileFocusKey,
+    profileExercises,
+    renameProfile,
+    commitProfileName,
+    selectProfile,
+    createProfile,
+    deleteProfileById,
     calculations,
+    calculationsForSelectedSplit,
+    selectedSplitId,
     activeCalculation,
     isEditingCalculation,
+    isDraftingNewCalculation,
+    splitEditorOpen,
+    setSplitEditorOpen,
+    weightBaseOpen,
+    setWeightBaseOpen,
     previewSplit,
+    previewExercises,
     previewWeek,
     setPreviewWeek,
     dayPreviews,
     validationError,
+    weightsReady,
+    missingWeightKeys,
+    weightReadinessKeys,
     updateDraft,
     setDaysPerWeek,
     saveSplit,
@@ -723,12 +1285,17 @@ export function useSplitConstructor({
     createNewSplit,
     duplicateLast,
     selectSplit,
+    createCalculationFromBase,
+    openSplitEditor,
+    closeSplitEditor,
+    deleteSplitById,
     setFixedWeight,
     moveExercise,
     removeExercise,
     addExerciseToDay,
     duplicateExerciseToDay,
     setExerciseOneRM,
+    setCalculationExerciseOneRM,
     toggleCompletedWeek,
     toggleCompletedDay,
   };

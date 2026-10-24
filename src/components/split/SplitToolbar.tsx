@@ -1,4 +1,4 @@
-import type {CustomSplit, SplitWeightMode} from '../../types';
+import type {CustomSplit} from '../../types';
 import {SplitPicker} from './SplitPicker.tsx';
 
 interface SplitToolbarProps {
@@ -8,9 +8,7 @@ interface SplitToolbarProps {
   onSelectSplit: (id: string) => void;
   onCreateNew: () => void;
   onDuplicateLast: () => void;
-  onDaysPerWeek: (days: 2 | 3) => void;
-  onVaryIntensity: (value: boolean) => void;
-  onWeightMode: (mode: SplitWeightMode) => void;
+  onDaysPerWeek: (days: 2 | 3 | 4) => void;
   onSave: () => void;
 }
 
@@ -23,7 +21,7 @@ export function SplitToolbar({
   onDuplicateLast,
   onDaysPerWeek,
   onSave,
-}: Omit<SplitToolbarProps, 'onVaryIntensity' | 'onWeightMode'>) {
+}: SplitToolbarProps) {
   return (
     <header className="app-tab-section split-toolbar">
       <div className="split-toolbar__layout">
@@ -33,8 +31,7 @@ export function SplitToolbar({
               Название сплита
             </label>
             <p className="split-toolbar__help" id="split-name-help">
-              Можно использовать фамилию: «Иванов». Для одного человека можно сохранить несколько
-              расчётов.
+              Программа внутри активного профиля. Сплиты других профилей здесь не показываются.
             </p>
             <input
               id="split-name"
@@ -51,7 +48,7 @@ export function SplitToolbar({
           <div className="split-toolbar__field">
             <span className="split-toolbar__label">Дней в неделю</span>
             <div className="split-segment" role="radiogroup" aria-label="Дней в неделю">
-              {([2, 3] as const).map(days => (
+              {([2, 3, 4] as const).map(days => (
                 <button
                   key={days}
                   type="button"
@@ -71,7 +68,7 @@ export function SplitToolbar({
             {savedSplits.length > 0 ? (
               <div className="split-toolbar__field">
                 <label className="split-toolbar__label" htmlFor="split-picker">
-                  Сохранённые сплиты
+                  Сплиты профиля
                 </label>
                 <SplitPicker
                   triggerId="split-picker"
@@ -79,8 +76,8 @@ export function SplitToolbar({
                   splits={savedSplits}
                   onChange={onSelectSplit}
                   placeholder="Выбрать..."
-                  menuTitle="Сохранённые сплиты"
-                  searchPlaceholder="Поиск по имени или фамилии"
+                  menuTitle="Сплиты профиля"
+                  searchPlaceholder="Поиск по названию"
                 />
               </div>
             ) : null}
