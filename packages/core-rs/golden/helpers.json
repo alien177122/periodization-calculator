@@ -1,0 +1,19 @@
+{
+  "ceilToStep": [
+    {"value": 81.1, "step": 2.5, "expected": 82.5},
+    {"value": 23.9, "step": 2, "expected": 24},
+    {"value": 10, "step": 0, "expected": 10}
+  ],
+  "roundWeight": [
+    {"value": 81.1, "step": 2.5, "type": "A", "expected": 82.5},
+    {"value": 23.9, "step": 2, "type": "C", "expected": 22},
+    {"value": 100.01, "step": 2.5, "type": "A", "expected": 102.5}
+  ],
+  "volumeClass": [
+    {"t": 28, "expected": "v-hi"},
+    {"t": 20, "expected": "v-md"},
+    {"t": 16, "expected": "v-lo"},
+    {"t": 0, "expected": "v-lo"},
+    {"t": 40, "expected": "v-hi"}
+  ]
+}

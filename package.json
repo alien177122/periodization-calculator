@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "dev": "node scripts/dev-all.mjs",
-    "server": "node server/index.js",
+    "server": "node --experimental-strip-types server/index.js",
     "build": "tsc -b && vite build",
     "typecheck": "tsc -b --noEmit",
     "icons:generate": "node scripts/generate-pwa-icons.mjs",
@@ -19,7 +19,7 @@
     "lint:fix": "eslint . --fix",
     "prepare": "husky",
     "preview": "vite preview",
-    "start": "node server/index.js",
+    "start": "node --experimental-strip-types server/index.js",
     "public": "node scripts/public-run.mjs",
     "public:quick": "node scripts/public-run.mjs --quick",
     "public:stable": "node scripts/public-run.mjs --stable",
@@ -42,6 +42,8 @@
     "test:e2e": "playwright test",
     "test:acceptance": "node --experimental-strip-types scripts/quality/gherkin-acceptance.mjs",
     "test:crap": "node scripts/quality/crap-check.mjs",
+    "core:test": "cargo test --manifest-path packages/core-rs/Cargo.toml",
+    "core:build": "wasm-pack build packages/core-rs --target web --out-dir ../core/wasm --out-name training_core -- --features wasm",
     "test:mutate": "node --experimental-strip-types scripts/quality/mutate-shared.mjs",
     "quality": "node scripts/quality/quality-gate.mjs --tier=a",
     "quality:quick": "node scripts/quality/quality-gate.mjs",
@@ -56,6 +58,7 @@
     "auth:triptych:sync": "node scripts/sync-auth-triptych-public.mjs"
   },
   "dependencies": {
+    "@training/core": "0.1.0",
     "@training/shared": "0.1.0",
     "bcryptjs": "^3.0.3",
     "better-sqlite3": "^12.6.2",
@@ -94,7 +97,8 @@
     "react-dom": "19.1.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "vite-plugin-wasm": "^3.6.0"
   },
   "overrides": {
     "tar": "^7.5.22"

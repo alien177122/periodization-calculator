@@ -1,0 +1,30 @@
+[package]
+name = "training-core"
+version = "0.1.0"
+edition = "2021"
+license = "UNLICENSED"
+publish = false
+description = "Periodization calc core: 1RM, rounding, volume class"
+
+[lib]
+name = "training_core"
+# Phase 0 default is a plain rlib. cdylib is only needed when building wasm
+# (`--features wasm`); cargo test on the host uses rlib.
+crate-type = ["rlib", "cdylib"]
+
+[features]
+default = []
+wasm = ["dep:wasm-bindgen"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+ts-rs = { version = "10", features = ["serde-compat"] }
+wasm-bindgen = { version = "0.2", optional = true }
+
+[dev-dependencies]
+proptest = "1"
+serde_json = "1"
+
+[profile.release]
+lto = true
+opt-level = "s"

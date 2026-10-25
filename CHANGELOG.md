@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Single TS 1RM source: `server/calc.js` re-exports `packages/shared/src/utils/calc.ts` (R04-2.1)
+- Rust calc crate `packages/core-rs` (Epley/Brzycki) and wasm package `@training/core` with TS fallback for PWA/offline
+
 ## [0.0.2] — 2026-08-04
 
 ### Fixed
