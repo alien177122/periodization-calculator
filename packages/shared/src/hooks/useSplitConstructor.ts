@@ -6,6 +6,7 @@ import type {TrainingDayDef} from '../types/index.ts';
 import {
   buildDayPreview,
   createDefaultSplit,
+  mergeToTwoDays,
   validateSplit,
   migrateToCustomExercises,
 } from '../utils/split-constructor.ts';
@@ -416,6 +417,41 @@ export function useSplitConstructor({
     onSplitIdChange?.(null);
   }, [onSplitIdChange, savedSplits.length]);
 
+  const createSavedSplit = useCallback(
+    (options?: {name?: string; daysPerWeek?: 2 | 3}) => {
+      const explicitName = options?.name?.trim();
+      const splitName =
+        explicitName && explicitName.length > 0
+          ? explicitName
+          : `Сплит ${savedSplits.length + 1}`;
+      const split = migrateToCustomExercises(createDefaultSplit(splitName));
+      if (options?.daysPerWeek && options.daysPerWeek !== split.daysPerWeek) {
+        const customExercises = {...(split.customExercisesByDay ?? {})};
+        if (options.daysPerWeek === 2) {
+          split.days = mergeToTwoDays(split.days);
+        }
+        split.daysPerWeek = options.daysPerWeek;
+        split.customExercisesByDay = customExercises;
+      }
+      const stamped: CustomSplit = {...split, updatedAt: new Date().toISOString()};
+      setIsDraftingNewSplit(false);
+      setDraft(cloneSplit(stamped));
+      const nextSplits = [
+        ...savedSplits.filter(entry => entry.id !== stamped.id),
+        stamped,
+      ];
+      const updated: UserData = {
+        ...userData,
+        splits: nextSplits,
+        activeSplitId: stamped.id,
+      };
+      setUserData(updated);
+      onSplitIdChange?.(stamped.id);
+      void saveUser(updated, token);
+    },
+    [onSplitIdChange, saveUser, savedSplits, setUserData, token, userData],
+  );
+
   const duplicateLast = useCallback(() => {
     const last = savedSplits[0];
     if (!last) return;
@@ -721,6 +757,7 @@ export function useSplitConstructor({
     selectCalculation,
     deleteCalculation,
     createNewSplit,
+    createSavedSplit,
     duplicateLast,
     selectSplit,
     setFixedWeight,
