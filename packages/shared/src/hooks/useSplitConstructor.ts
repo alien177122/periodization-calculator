@@ -24,6 +24,7 @@ import {
 import {
   buildDayPreview,
   createDefaultSplit,
+  mergeToTwoDays,
   validateSplit,
   migrateToCustomExercises,
 } from '../utils/split-constructor.ts';
@@ -598,6 +599,69 @@ export function useSplitConstructor({
     setDraft(split);
     onSplitIdChange?.(null);
   }, [activeProfileId, onSplitIdChange, savedSplits.length]);
+
+  const createSavedSplit = useCallback(
+    (options?: {name?: string; daysPerWeek?: 2 | 3 | 4}) => {
+      const explicitName = options?.name?.trim();
+      const splitName =
+        explicitName && explicitName.length > 0
+          ? explicitName
+          : `Сплит ${savedSplits.length + 1}`;
+      const split = migrateToCustomExercises(createDefaultSplit(splitName));
+      split.profileId = activeProfileId;
+      if (options?.daysPerWeek && options.daysPerWeek !== split.daysPerWeek) {
+        split.daysPerWeek = options.daysPerWeek;
+        const customExercises = {...(split.customExercisesByDay ?? {})};
+        if (options.daysPerWeek === 2) {
+          const merged = [...(customExercises[2] ?? [])];
+          for (const key of [...(customExercises[3] ?? []), ...(customExercises[4] ?? [])]) {
+            if (!merged.includes(key)) merged.push(key);
+          }
+          customExercises[2] = merged;
+          delete customExercises[3];
+          delete customExercises[4];
+          split.days = mergeToTwoDays(split.days);
+        } else {
+          customExercises[3] = customExercises[3] ?? [];
+          customExercises[4] = customExercises[4] ?? [];
+          split.days = [...split.days, {dayNumber: 4, muscles: []}];
+        }
+        split.customExercisesByDay = customExercises;
+      }
+      const stamped: CustomSplit = {
+        ...split,
+        profileId: activeProfileId,
+        updatedAt: new Date().toISOString(),
+      };
+      setIsDraftingNewSplit(false);
+      setSplitEditorOpen(false);
+      setIsDraftingNewCalculation(false);
+      setCalculationExercises(null);
+      setDraft(cloneSplit(stamped));
+      const updated: UserData = {
+        ...withEnsuredProfiles(userData),
+        profiles: namedProfiles(),
+        activeProfileId,
+        splits: upsertSplit(allSplits, stamped),
+        activeSplitId: stamped.id,
+        activeSplitCalculationId: undefined,
+      };
+      setUserData(updated);
+      onSplitIdChange?.(stamped.id);
+      void saveUser(updated, token);
+    },
+    [
+      activeProfileId,
+      allSplits,
+      namedProfiles,
+      onSplitIdChange,
+      saveUser,
+      savedSplits.length,
+      setUserData,
+      token,
+      userData,
+    ],
+  );
 
   const duplicateLast = useCallback(() => {
     const last = savedSplits[0];
@@ -1283,6 +1347,7 @@ export function useSplitConstructor({
     selectCalculation,
     deleteCalculation,
     createNewSplit,
+    createSavedSplit,
     duplicateLast,
     selectSplit,
     createCalculationFromBase,

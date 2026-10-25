@@ -1,9 +1,11 @@
+import {useState} from 'react';
 import {GlobalExerciseAdder} from '../components/split/GlobalExerciseAdder.tsx';
 import '../styles/tabs/split-tab.css';
 import {SplitCalculationHistory} from '../components/split/SplitCalculationHistory.tsx';
 import {SplitPreview} from '../components/split/SplitPreview.tsx';
 import {MuscleDayGrid} from '../components/split/MuscleDayGrid.tsx';
 import {SplitProfilePanel} from '../components/split/SplitProfilePanel.tsx';
+import {SplitCreateDialog} from '../components/split/SplitCreateDialog.tsx';
 import {SplitToolbar} from '../components/split/SplitToolbar.tsx';
 import {useSplitConstructor} from '../hooks/useSplitConstructor.ts';
 import {useURLState} from '../hooks/useURLState.ts';
@@ -51,6 +53,19 @@ export function SplitConstructorTab({
     !calcAnchored &&
     !constructor.isDraftingNewCalculation &&
     !showFirstCalcSetup;
+
+  const [createDialogOpen, setCreateDialogOpen] = useState(false);
+  const [createDialogKey, setCreateDialogKey] = useState(0);
+
+  function handleCreateNew() {
+    setCreateDialogKey(key => key + 1);
+    setCreateDialogOpen(true);
+  }
+
+  function handleCreateDialogSubmit(name: string, daysPerWeek: 2 | 3 | 4) {
+    setCreateDialogOpen(false);
+    constructor.createSavedSplit({name, daysPerWeek});
+  }
 
   const editorExercises = constructor.previewExercises;
 
@@ -100,10 +115,30 @@ export function SplitConstructorTab({
                 savedSplits={constructor.savedSplits}
                 onNameChange={name => constructor.updateDraft({name})}
                 onSelectSplit={constructor.selectSplit}
-                onCreateNew={constructor.createNewSplit}
+                onCreateNew={handleCreateNew}
                 onDuplicateLast={constructor.duplicateLast}
                 onDaysPerWeek={constructor.setDaysPerWeek}
                 onSave={() => void constructor.saveSplit()}
+              />
+              <SplitCreateDialog
+                key={createDialogKey}
+                open={createDialogOpen}
+                profileCalculationCount={constructor.calculations.length}
+                rows={constructor.savedSplits.map(split => ({
+                  id: split.id,
+                  name: split.name,
+                  daysPerWeek: split.daysPerWeek,
+                  calculationCount: constructor.calculations.filter(
+                    entry => (entry.splitId ?? entry.split.id) === split.id,
+                  ).length,
+                  isActive: constructor.selectedSplitId === split.id,
+                }))}
+                onClose={() => setCreateDialogOpen(false)}
+                onSelectSplit={id => {
+                  setCreateDialogOpen(false);
+                  constructor.selectSplit(id);
+                }}
+                onCreate={handleCreateDialogSubmit}
               />
               {constructor.validationError ? (
                 <p className="split-validation" role="alert">

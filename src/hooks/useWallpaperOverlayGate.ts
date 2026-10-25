@@ -4,6 +4,7 @@ import {useEffect, useSyncExternalStore} from 'react';
 const BLOCKING_OVERLAY_SELECTORS = [
   '[role="dialog"]',
   '[aria-modal="true"]',
+  '.app-sheet-backdrop',
   '.split-hub__sheet-backdrop',
   '.progression-dialog-backdrop',
   '.split-calculation-delete-dialog',
