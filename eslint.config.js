@@ -13,10 +13,14 @@ export default defineConfig([
     'dist',
     'desktop-dist',
     '_archive-non-web',
+    'canon/_archive-non-web',
     'public',
     'scripts',
     'workspace-files',
     '.blackbox',
+    'packages/core-rs',
+    'packages/core/wasm',
+    'packages/core/src/generated',
   ]),
   {
     files: ['**/*.{ts,tsx}'],
@@ -29,6 +33,12 @@ export default defineConfig([
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+    },
+  },
+  {
+    files: ['packages/core/src/**/*.ts'],
+    languageOptions: {
+      globals: {...globals.browser, ...globals.node},
     },
   },
   // Uncle Bob CRAP-lite pilot: complexity ceiling on calc/metrics pure modules.

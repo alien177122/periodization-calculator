@@ -1,5 +1,6 @@
 import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react-swc';
+import wasm from 'vite-plugin-wasm';
 import {fileURLToPath, URL} from 'node:url';
 
 const apiProxyTarget =
@@ -9,14 +10,19 @@ const apiProxyTarget =
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [wasm(), react()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       '@shared': fileURLToPath(new URL('./packages/shared/src', import.meta.url)),
+      '@training/core': fileURLToPath(new URL('./packages/core/src/index.ts', import.meta.url)),
       '@training/shared': fileURLToPath(new URL('./packages/shared/src', import.meta.url)),
     },
   },
+  optimizeDeps: {
+    exclude: ['@training/core'],
+  },
+  assetsInclude: ['**/*.wasm'],
   server: {
     host: true,
     allowedHosts: true,

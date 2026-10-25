@@ -173,7 +173,7 @@ async function main() {
   const port = stableMode
     ? (await assertPortAvailable(config.localPort || DEFAULT_PUBLIC_PORT), config.localPort || DEFAULT_PUBLIC_PORT)
     : await findFreePort(config.localPort || DEFAULT_PUBLIC_PORT)
-  const server = spawnManaged('node', ['--input-type=module', '-e', SERVER_BOOTSTRAP], {
+  const server = spawnManaged('node', ['--experimental-strip-types', '--input-type=module', '-e', SERVER_BOOTSTRAP], {
     cwd: config.cwd,
     env: { ...config.env, PORT: String(port) },
   })

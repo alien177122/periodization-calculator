@@ -126,7 +126,7 @@ if (await isPortOpen('3001')) {
 }
 
 console.log(`[dev] Starting API on port ${API_PORT}…`);
-spawnManaged('api', 'node', ['server/index.js'], {
+spawnManaged('api', 'node', ['--experimental-strip-types', 'server/index.js'], {
   PORT: API_PORT,
   JWT_SECRET: process.env.JWT_SECRET?.trim() || 'dev',
   NODE_ENV: 'development',
