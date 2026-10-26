@@ -1,4 +1,0 @@
-interface:
-  display_name: "React Quality Guardian"
-  short_description: "Run checks and fix quality regressions."
-  default_prompt: "Run lint/build checks, diagnose failures, and apply minimal fixes to restore quality gates."

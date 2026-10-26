@@ -1,4 +1,0 @@
-interface:
-  display_name: "React Frontend Implementer"
-  short_description: "Build UI features for this React app."
-  default_prompt: "Implement requested frontend changes in React/TypeScript, update styles, and run relevant checks."

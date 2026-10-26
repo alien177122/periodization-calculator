@@ -112,3 +112,19 @@ data/reading-audio/*.vtt
 # Root audit, _archive-non-web, memory-bank are symlinks. Canon is outside this repo and is not versioned.
 # memory-bank was tracked; do not commit this swap until that is an explicit decision.
 *.secret.md
+
+# — Agent workspaces & local archives (untracked 2026-10-26; files stay on disk and in git history) —
+canon/
+imagePhone/
+_archive-non-web
+audit
+memory-bank
+.claude/
+.cursor/
+.codex/
+.claire/
+.agents/
+.obsidian/
+prompts/
+subagents/
+.mcp.json
