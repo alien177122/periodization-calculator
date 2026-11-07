@@ -2,6 +2,7 @@ import {useState} from 'react';
 import type {TrainingProfile} from '../../types';
 import {Button} from '../ui/Button.tsx';
 import {DeleteIcon} from '../ui/DeleteIcon.tsx';
+import {ProfilesSheet} from './ProfilesSheet.tsx';
 import {ProfileWeightBaseSheet} from './ProfileWeightBaseSheet.tsx';
 import '../../styles/components/split/split-hub.css';
 
@@ -41,6 +42,7 @@ export function SplitProfilePanel({
   setExerciseOneRM,
 }: SplitProfilePanelProps) {
   const [renamingProfileId, setRenamingProfileId] = useState<string | null>(null);
+  const [profilesSheetOpen, setProfilesSheetOpen] = useState(false);
   const activeProfile = profiles.find(profile => profile.id === activeProfileId);
   const profileLabel = activeProfile?.name ?? profileName;
 
@@ -67,7 +69,7 @@ export function SplitProfilePanel({
         onOneRMChange={setExerciseOneRM}
       />
 
-      <div className="split-hub__block">
+      <div className="split-hub__block split-hub__block--profiles">
         <h3 className="split-hub__block-title">Профили</h3>
         <ul className="split-hub__list">
           {profiles.map(profile => {
@@ -94,7 +96,7 @@ export function SplitProfilePanel({
                   <button
                     type="button"
                     className="split-hub__row-main"
-                    onClick={() => selectProfile(profile.id)}>
+                    onClick={() => setProfilesSheetOpen(true)}>
                     <span className="split-hub__row-title">{profile.name}</span>
                   </button>
                 )}
@@ -121,14 +123,25 @@ export function SplitProfilePanel({
               </li>
             );
           })}
+          <li className="split-hub__list-item--add">
+            <button
+              type="button"
+              className="split-toolbar__action split-hub__add"
+              onClick={() => setProfilesSheetOpen(true)}>
+              + Профиль
+            </button>
+          </li>
         </ul>
-        <button
-          type="button"
-          className="split-toolbar__action split-hub__add"
-          onClick={createProfile}>
-          + Профиль
-        </button>
       </div>
+
+      <ProfilesSheet
+        open={profilesSheetOpen}
+        profiles={profiles}
+        activeProfileId={activeProfileId}
+        selectProfile={selectProfile}
+        createProfile={createProfile}
+        onClose={() => setProfilesSheetOpen(false)}
+      />
     </div>
   );
 }

@@ -35,16 +35,28 @@ export interface ExerciseConfig {
   isPullup?: boolean;
 }
 
+export type SplitDayNumber = 1 | 2 | 3 | 4;
+
 export interface SplitDayConfig {
-  dayNumber: 1 | 2 | 3;
+  dayNumber: SplitDayNumber;
   muscles: SplitMuscleId[];
   label?: string;
+}
+
+/** Person who owns a set of splits. Splits from one profile stay hidden in another. */
+export interface TrainingProfile {
+  id: string;
+  name: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface CustomSplit {
   id: string;
   name: string;
-  daysPerWeek: 2 | 3;
+  /** Owner. Missing ids are grouped into the «Основной» profile on load. */
+  profileId?: string;
+  daysPerWeek: 2 | 3 | 4;
   days: SplitDayConfig[];
   varyIntensity: boolean;
   weightMode: SplitWeightMode;
@@ -52,11 +64,11 @@ export interface CustomSplit {
   legExercises?: [string, string];
   fixedWeights?: Record<string, number[]>;
   /** (Deprecated) */
-  exerciseDayOverrides?: Record<string, 1 | 2 | 3>;
+  exerciseDayOverrides?: Record<string, SplitDayNumber>;
   /** Exercise keys hidden from specific training days. (Deprecated) */
-  excludedExercisesByDay?: Partial<Record<1 | 2 | 3, string[]>>;
+  excludedExercisesByDay?: Partial<Record<SplitDayNumber, string[]>>;
   /** Explicit list of exercise keys for each day. If present, it overrides legacy muscle-based population. */
-  customExercisesByDay?: Partial<Record<1 | 2 | 3, string[]>>;
+  customExercisesByDay?: Partial<Record<SplitDayNumber, string[]>>;
   /**
    * 0-based week indices (0–7) the athlete marked as completed in the
    * 8-week progression preview.
@@ -65,7 +77,7 @@ export interface CustomSplit {
   /**
    * Progression days marked done. `week` is 0–7; `day` is the split day number.
    */
-  completedDays?: Array<{week: number; day: 1 | 2 | 3}>;
+  completedDays?: Array<{week: number; day: SplitDayNumber}>;
   createdAt: string;
   updatedAt: string;
 }
@@ -85,6 +97,8 @@ export interface SavedExercise {
  */
 export interface SplitCalculation {
   id: string;
+  /** Denormalized for filtering; defaults to split.id on load. */
+  splitId?: string;
   calculatedAt: string;
   split: CustomSplit;
   exercises: SavedExercise[];
@@ -165,9 +179,13 @@ export interface UserData {
   trainingPreferences?: TrainingPreferences;
   journal?: JournalSession[];
   splits?: CustomSplit[];
+  profiles?: TrainingProfile[];
+  activeProfileId?: string | null;
   activeSplitId?: string | null;
   splitCalculations?: SplitCalculation[];
   activeSplitCalculationId?: string | null;
+  /** Default strength tests per training profile (key = profile id). */
+  exercisesByProfileId?: Record<string, SavedExercise[]>;
   activeProgram?: ActiveProgram;
   testResults?: TestResult[];
   programSettings?: ProgramSettings;
