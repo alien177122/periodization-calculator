@@ -1,30 +1,22 @@
-import {existsSync, readdirSync, rmSync, unlinkSync} from 'node:fs';
+import {existsSync, rmSync} from 'node:fs';
 import {join} from 'node:path';
 import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import {fileURLToPath, URL} from 'node:url';
+import {iphoneHarness} from './dev/iphone-harness/plugin';
 
 const apiProxyTarget =
   process.env.VITE_API_PROXY_TARGET?.trim() ||
   process.env.API_PROXY_TARGET?.trim() ||
   'http://127.0.0.1:3002';
 
-/**
- * Keep dist ≤ 5 MB: never ship mp4 wallpaper masters.
- * Auth triptych (`imagePhone`) is unused while guest wallpaper is the video canvas.
- */
+/** Keep dist ≤ 5 MB: auth triptych (`imagePhone`) is unused on the guest screen. */
 function omitHeavyPublicSources() {
   return {
     name: 'omit-heavy-public-sources',
     apply: 'build' as const,
     closeBundle() {
       const distDir = fileURLToPath(new URL('./dist', import.meta.url));
-      const wallpapers = join(distDir, 'wallpapers');
-      if (existsSync(wallpapers)) {
-        for (const name of readdirSync(wallpapers)) {
-          if (name.endsWith('.mp4')) unlinkSync(join(wallpapers, name));
-        }
-      }
       const triptych = join(distDir, 'imagePhone');
       if (existsSync(triptych)) rmSync(triptych, {recursive: true, force: true});
     },
@@ -55,7 +47,7 @@ function tunnelHmrPortPlugin() {
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tunnelHmrPortPlugin(), omitHeavyPublicSources()],
+  plugins: [react(), tunnelHmrPortPlugin(), omitHeavyPublicSources(), iphoneHarness()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

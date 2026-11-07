@@ -5,7 +5,7 @@
   "type": "module",
   "sideEffects": false,
   "dependencies": {
-    "zod": "^3.25.76"
+    "zod": "^4.6.7"
   },
   "scripts": {
     "typecheck": "tsc --noEmit -p tsconfig.json"
@@ -44,6 +44,7 @@
     "./utils/journalLimits": "./src/utils/journalLimits.ts",
     "./utils/journalMetrics": "./src/utils/journalMetrics.ts",
     "./utils/split-constructor": "./src/utils/split-constructor.ts",
+    "./utils/split-weight-readiness": "./src/utils/split-weight-readiness.ts",
     "./utils/split-progress": "./src/utils/split-progress.ts",
     "./utils/split-selection": "./src/utils/split-selection.ts",
     "./utils/splitLimits": "./src/utils/splitLimits.ts",
@@ -54,6 +55,7 @@
     "./data/exercise-slots": "./src/data/exercise-slots.ts",
     "./hooks/useJournalProgressChart": "./src/hooks/useJournalProgressChart.ts",
     "./utils/journalSession": "./src/utils/journalSession.ts",
+    "./utils/offlineOutbox": "./src/utils/offlineOutbox.ts",
     "./utils/optimisticSave": "./src/utils/optimisticSave.ts"
   }
 }
