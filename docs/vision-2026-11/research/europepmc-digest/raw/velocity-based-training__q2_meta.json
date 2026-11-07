@@ -1,0 +1,540 @@
+{
+ "version": "6.9",
+ "hitCount": 2,
+ "request": {
+  "queryString": "(TITLE:\"barbell velocity\")AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "39977021",
+    "source": "MED",
+    "pmid": "39977021",
+    "doi": "10.1519/jsc.0000000000005050",
+    "title": "A Critical Appraisal of Using Barbell Velocity Data to Regulate Training.",
+    "authorString": "Hirsch SM, Chapman CJ, Singh H, Baker DG, Frost DM.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Hirsch SM",
+       "lastName": "Hirsch",
+       "firstName": "Steven M",
+       "initials": "SM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4394-1922"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Kinesiology and Physical Education, University of Toronto, Toronto, Ontario, Canada."
+         },
+         {
+          "affiliation": "Division of Research and Innovation, Canadian Memorial Chiropractic College, Toronto, Ontario, Canada."
+         },
+         {
+          "affiliation": "Data Science and Artificial Intelligence, Tonal Systems Inc., San Francisco, California."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Chapman CJ",
+       "lastName": "Chapman",
+       "firstName": "Christopher J",
+       "initials": "CJ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Freestyle Canada, Sport Science & Sport Medicine, Vancouver, British Columbia, Canada."
+         },
+         {
+          "affiliation": "Whoop Inc, Data Science & Research, Boston, Massachusetts."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Singh H",
+       "lastName": "Singh",
+       "firstName": "Harjiv",
+       "initials": "H",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Human Performance and Sport Science Center, University of Michigan, Ann Arbor, Michigan."
+         },
+         {
+          "affiliation": "Charlotte Hornets Basketball Club, Charlotte, North Carolina; and."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Baker DG",
+       "lastName": "Baker",
+       "firstName": "Daniel G",
+       "initials": "DG",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Charlotte Hornets Basketball Club, Charlotte, North Carolina; and."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Frost DM",
+       "lastName": "Frost",
+       "firstName": "David M",
+       "initials": "DM",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Kinesiology and Physical Education, University of Toronto, Toronto, Ontario, Canada."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4394-1922"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "39",
+     "journalIssueId": 3903447,
+     "dateOfPublication": "2025 Mar",
+     "monthOfPublication": 3,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "J Strength Cond Res",
+      "title": "Journal of strength and conditioning research",
+      "essn": "1533-4287",
+      "issn": "1064-8011",
+      "nlmid": "9415084",
+      "isoabbreviation": "J Strength Cond Res"
+     },
+     "printPublicationDate": "2025-03-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "360-372",
+    "abstractText": "<h4>Abstract</h4>Hirsch, SM, Chapman, CJ, Singh, H, Baker, DG, and Frost, DM. A critical appraisal of using barbell velocity data to regulate training. J Strength Cond Res 39(3): 360-372, 2025-Practitioners must balance numerous training variables to ensure they do not impose too much nor too little training stress on their athlete. As an athlete's capacity can fluctuate based on their preparedness for training, the intended vs. actual training intensity in a fixed training program may not coincide. Similarly, the training set volume that an athlete should be exposed to may fluctuate depending on their current state. A discrepancy between intended vs. actual training intensity and volume could negatively impact subsequent training adaptations. Thus, researchers and practitioners have advocated for \"autoregulation,\" whereby the volume and intensity of training are automatically adjusted based on the athlete's preparedness. One proposed method of autoregulating resistance training is by using barbell velocity data. However, it is unclear whether, and under which contexts, these data are appropriate for regulating resistance training. Therefore, the purpose of this literature review was to critically examine the current research on using barbell velocity data to regulate resistance training intensity and volume. After examining the relevant literature, it is the authors' belief that the current data do not support using velocity data to precisely regulate resistance training intensity. However, it is the authors' belief that the current literature does suggest that researchers and practitioners can leverage these data to regulate other aspects of resistance training, such as athlete motivation, autonomy, and focus of attention, which could also impact the resulting adaptations from training. Overall, more research is required to better understand how researchers and practitioners should use velocity data to guide training.",
+    "affiliation": "Faculty of Kinesiology and Physical Education, University of Toronto, Toronto, Ontario, Canada.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Motivation"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Personal Autonomy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Attention"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Adaptation, Physiological",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Athletic Performance",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PX",
+          "qualifierName": "psychology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Athletes",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PX",
+          "qualifierName": "psychology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1519/JSC.0000000000005050"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2025-02-27",
+    "dateOfCreation": "2025-02-20",
+    "dateOfRevision": "2025-09-10",
+    "firstPublicationDate": "2025-03-01",
+    "firstIndexDate": "2025-02-21",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "33916801",
+    "source": "MED",
+    "pmid": "33916801",
+    "pmcid": "PMC8038306",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC8038306"
+     ]
+    },
+    "doi": "10.3390/s21072511",
+    "title": "Validity and Reliability of the Inertial Measurement Unit for Barbell Velocity Assessments: A Systematic Review.",
+    "authorString": "Clemente FM, Akyildiz Z, Pino-Ortega J, Rico-González M.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Clemente FM",
+       "lastName": "Clemente",
+       "firstName": "Filipe Manuel",
+       "initials": "FM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9813-2842"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Instituto Politécnico de Viana do Castelo, Escola Superior Desporto e Lazer, Rua Escola Industrial e Comercial de Nun'Álvares, 4900-347 Viana do Castelo, Portugal."
+         },
+         {
+          "affiliation": "Instituto de Telecomunicações, Delegação da Covilhã, 1049-001 Lisboa, Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Akyildiz Z",
+       "lastName": "Akyildiz",
+       "firstName": "Zeki",
+       "initials": "Z",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1743-5989"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sports Science Department, Gazi University, Teknikokullar, Ankara 06500, Turkey."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Pino-Ortega J",
+       "lastName": "Pino-Ortega",
+       "firstName": "José",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9091-0897"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Sports Sciences, University of Murcia, San Javier, 30100 Murcia, Spain."
+         },
+         {
+          "affiliation": "BIOVETMED & SPORTSCI Research Group, Department of Physical Activity and Sport, Faculty of Sport Sciences, University of Murcia, San Javier, 30100 Murcia, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rico-González M",
+       "lastName": "Rico-González",
+       "firstName": "Markel",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9849-0444"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "BIOVETMED & SPORTSCI Research Group, Department of Physical Activity and Sport, Faculty of Sport Sciences, University of Murcia, San Javier, 30100 Murcia, Spain."
+         },
+         {
+          "affiliation": "Department of Physical Education and Sport, University of the Basque Country, UPV-EHU, Lasarte 71, 01007 Vitoria-Gasteiz, Spain."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9813-2842"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1743-5989"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9091-0897"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9849-0444"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "7",
+     "volume": "21",
+     "journalIssueId": 3150724,
+     "dateOfPublication": "2021 Apr",
+     "monthOfPublication": 4,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Sensors (Basel)",
+      "title": "Sensors (Basel, Switzerland)",
+      "essn": "1424-8220",
+      "issn": "1424-8220",
+      "nlmid": "101204366",
+      "isoabbreviation": "Sensors (Basel)"
+     },
+     "printPublicationDate": "2021-04-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "2511",
+    "abstractText": "The use of inertial measurement unit (IMU) has become popular in sports assessment. In the case of velocity-based training (VBT), there is a need to measure barbell velocity in each repetition. The use of IMUs may make the monitoring process easier; however, its validity and reliability should be established. Thus, this systematic review aimed to (1) identify and summarize studies that have examined the validity of wearable wireless IMUs for measuring barbell velocity and (2) identify and summarize studies that have examined the reliability of IMUs for measuring barbell velocity. A systematic review of Cochrane Library, EBSCO, PubMed, Scielo, Scopus, SPORTDiscus, and Web of Science databases was performed according to the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines. From the 161 studies initially identified, 22 were fully reviewed, and their outcome measures were extracted and analyzed. Among the eight different IMU models, seven can be considered valid and reliable for measuring barbell velocity. The great majority of IMUs used for measuring barbell velocity in linear trajectories are valid and reliable, and thus can be used by coaches for external load monitoring.",
+    "affiliation": "Instituto Politécnico de Viana do Castelo, Escola Superior Desporto e Lazer, Rua Escola Industrial e Comercial de Nun'Álvares, 4900-347 Viana do Castelo, Portugal.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Fundação para a Ciência e a Tecnologia",
+       "grantId": "UIDB/50008/2020",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Reproducibility of Results"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Sports"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Biomechanical Phenomena"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Sensors",
+      "Performance",
+      "Precision",
+      "Accuracy",
+      "Sports Technology",
+      "Velocity-based Training"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3390/s21072511"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8038306"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8038306?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 22,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2021-05-03",
+    "dateOfCreation": "2021-04-30",
+    "dateOfRevision": "2024-12-05",
+    "electronicPublicationDate": "2021-04-03",
+    "firstPublicationDate": "2021-04-03",
+    "firstIndexDate": "2021-04-30",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

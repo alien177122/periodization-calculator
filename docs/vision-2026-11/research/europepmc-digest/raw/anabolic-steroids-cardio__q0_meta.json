@@ -1,0 +1,2201 @@
+{
+ "version": "6.9",
+ "hitCount": 8,
+ "request": {
+  "queryString": "(TITLE:(\"anabolic-androgenic steroids\" OR \"anabolic steroids\") AND TITLE:(cardiovascular OR cardiac OR heart))AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "40945618",
+    "source": "MED",
+    "pmid": "40945618",
+    "doi": "10.1016/j.ijcard.2025.133896",
+    "title": "Anabolic-androgenic steroids on cardiac structure and function in resistance-trained athletes: A systematic review and meta-analysis.",
+    "authorString": "Cavalcante DN, Romariz L, Neto A, Fante GE, Júnior SMP, Bacca CF.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Cavalcante DN",
+       "lastName": "Cavalcante",
+       "firstName": "Douglas Nunes",
+       "initials": "DN",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Hospital Israelita Albert Einstein, Goiânia, Brazil. Electronic address: drdouglascavalcante@gmail.com."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Romariz L",
+       "lastName": "Romariz",
+       "firstName": "Livia",
+       "initials": "L",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Estácio de Sá University, Rio de Janeiro, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Neto A",
+       "lastName": "Neto",
+       "firstName": "Altair",
+       "initials": "A",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Federal University of Roraima, Roraima, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Fante GE",
+       "lastName": "Fante",
+       "firstName": "Gustavo Eduardo",
+       "initials": "GE",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1095-8653"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "State University of Ponta Grossa, Paraná, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Júnior SMP",
+       "lastName": "Júnior",
+       "firstName": "Silvio Marques Póvoa",
+       "initials": "SMP",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Dante Pazzanese Institute of Cardiology, São Paulo, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bacca CF",
+       "lastName": "Bacca",
+       "firstName": "Caroline Fischer",
+       "initials": "CF",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "University Center for the Development of the Upper Itajaí Valley, Department of Medicine, Santa Catarina, Brazil."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4298-8649"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1095-8653"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "volume": "442",
+     "journalIssueId": 4033484,
+     "dateOfPublication": "2026 Jan",
+     "monthOfPublication": 1,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Int J Cardiol",
+      "title": "International journal of cardiology",
+      "essn": "1874-1754",
+      "issn": "0167-5273",
+      "nlmid": "8200291",
+      "isoabbreviation": "Int J Cardiol"
+     },
+     "printPublicationDate": "2026-01-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "133896",
+    "abstractText": "<h4>Background</h4>Anabolic-androgenic steroids (AAS) are widely used by resistance-trained athletes, but their effects on cardiac structure and function remain uncertain.<h4>Objective</h4>To assess the impact of AAS on cardiac structure and function using echocardiography.<h4>Methods</h4>We performed a systematic review and meta-analysis to assess the effects of AAS on echocardiographic parameters in athletes, using a random-effects model and Review Manager 5.4.1.<h4>Results</h4>We included 35 studies with 2000 male individuals (834 resistance-trained athletes using AAS vs 754 resistance-trained non-users vs 412 sedentary controls; mean age 32 years). Compared with non-users of AAS, AAS users was associated with a decrease in left ventricular (LV) ejection fraction (MD -2.25 %; 95 % CI -3.41 to -1.09; p < 0.01), and global longitudinal strain (GLS) (MD 3.34 %; 95 % CI 2.93 to 3.76; p < 0.01). Athletes who used AAS also had an increased septal wall thickness (MD 1.24 mm; 95 % CI 0.79 to 1.69; p < 0.01), posterior wall thickness (MD 1.09 mm; 95 % CI 0.70 to 1.48; p < 0.01) and LV mass (MD 13.29 g; 95 % CI 6.25 to 20.33; p < 0.01). LV end-diastolic diameter was also higher among AAS users (MD 1.09 mm; 95 % CI 0.44 to 1.73; p < 0.01).<h4>Conclusion</h4>Among athletes, AAS was associated with a significant decrease in LV ejection fraction and GLS, alongside with increased septal and posterior wall thickness, LV mass, and end-diastolic diameter compared with athletes who do not use AAS. These findings suggest adverse cardiac remodeling in AAS users, highlighting the potential harmful cardiovascular effects of steroid use in athletes.",
+    "affiliation": "Hospital Israelita Albert Einstein, Goiânia, Brazil. Electronic address: drdouglascavalcante@gmail.com.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Heart",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "DE",
+          "qualifierName": "drug effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Testosterone Congeners",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Anabolic Agents",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Androgens",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Echocardiography",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Stroke Volume",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "DE",
+          "qualifierName": "drug effects"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Ventricular Function, Left",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "DE",
+          "qualifierName": "drug effects"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "TD",
+          "qualifierName": "trends"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Athletes"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Athletes",
+      "Echocardiographic",
+      "Anabolic-androgenic Steroids",
+      "Cardiac Structure"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Androgens",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Anabolic Agents",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Testosterone Congeners",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.ijcard.2025.133896"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 2,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2025-10-15",
+    "dateOfCreation": "2025-09-13",
+    "dateOfRevision": "2026-10-19",
+    "electronicPublicationDate": "2025-09-11",
+    "firstPublicationDate": "2025-09-11",
+    "firstIndexDate": "2025-09-14",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "41539555",
+    "source": "MED",
+    "pmid": "41539555",
+    "doi": "10.1016/j.jsbmb.2026.106938",
+    "title": "Anabolic-androgenic steroids at supraphysiological doses: Cardiovascular impacts and pathophysiological mechanisms.",
+    "authorString": "Nascimento HS, Corrêa MG, Lemos OL, Lima HN, Amaral LSB.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Nascimento HS",
+       "lastName": "Nascimento",
+       "firstName": "Higor Souza",
+       "initials": "HS",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Instituto Multidisciplinar em Saúde, Universidade Federal da Bahia, Vitória da Conquista, Bahia 45029-094, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Corrêa MG",
+       "lastName": "Corrêa",
+       "firstName": "Marcella Guerra",
+       "initials": "MG",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Instituto Multidisciplinar em Saúde, Universidade Federal da Bahia, Vitória da Conquista, Bahia 45029-094, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lemos OL",
+       "lastName": "Lemos",
+       "firstName": "Odonilton Lima",
+       "initials": "OL",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Instituto Multidisciplinar em Saúde, Universidade Federal da Bahia, Vitória da Conquista, Bahia 45029-094, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lima HN",
+       "lastName": "Lima",
+       "firstName": "Hernando Nascimento",
+       "initials": "HN",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Independent researcher, São Paulo, SP, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Amaral LSB",
+       "lastName": "Amaral",
+       "firstName": "Liliany Souza de Brito",
+       "initials": "LSB",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8434-0146"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Instituto Multidisciplinar em Saúde, Universidade Federal da Bahia, Vitória da Conquista, Bahia 45029-094, Brazil. Electronic address: liliany.amaral@ufba.br."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8434-0146"
+      }
+     ]
+    },
+    "journalInfo": {
+     "volume": "258",
+     "journalIssueId": 4129045,
+     "dateOfPublication": "2026 Apr",
+     "monthOfPublication": 4,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "J Steroid Biochem Mol Biol",
+      "title": "The Journal of steroid biochemistry and molecular biology",
+      "essn": "1879-1220",
+      "issn": "0960-0760",
+      "nlmid": "9015483",
+      "isoabbreviation": "J Steroid Biochem Mol Biol"
+     },
+     "printPublicationDate": "2026-04-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "106938",
+    "abstractText": "This narrative review explores the cardiovascular risks associated with the non-therapeutic use of anabolic-androgenic steroids (AAS) at supraphysiological doses. Initially indicated for clinical conditions like hypogonadism and anemia, AAS are increasingly misused for aesthetic and performance enhancement, often at doses far exceeding therapeutic recommendations. Through a literature review of 34 studies selected from PubMed (2015-2025), the review analyzes the molecular mechanisms and cardiovascular consequences of high-dose AAS use. Genomic and non-genomic pathways, along with modulation of the IGF-1 axis, underlie alterations in gene expression and cellular metabolism that lead to myocardial remodeling, hypertension, dyslipidemia, thrombosis, endothelial dysfunction, and systemic inflammation. These effects are further intensified by behavioral factors such as polypharmacy and substance abuse. Despite ethical limitations on clinical trials with supraphysiological doses, experimental and epidemiological data consistently suggest that excessive AAS use significantly elevates the risk of adverse cardiovascular events. This work highlights the urgent need for public health policies, educational initiatives, and longitudinal studies to assess real-world use patterns and mitigate harms associated with AAS abuse.",
+    "affiliation": "Instituto Multidisciplinar em Saúde, Universidade Federal da Bahia, Vitória da Conquista, Bahia 45029-094, Brazil.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Animals"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiovascular Diseases",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CI",
+          "qualifierName": "chemically induced"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Substance-Related Disorders"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Anabolic Agents",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Anabolic Androgenic Steroids",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Thrombosis",
+      "hypertrophy",
+      "endothelial dysfunction",
+      "Dyslipidemia",
+      "Cardiovascular Risk",
+      "Anabolic-androgenic Steroids",
+      "Abusive Use"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Anabolic Agents",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Anabolic Androgenic Steroids",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.jsbmb.2026.106938"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 3,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2026-06-26",
+    "dateOfCreation": "2026-01-15",
+    "dateOfRevision": "2026-06-26",
+    "electronicPublicationDate": "2026-01-13",
+    "firstPublicationDate": "2026-01-13",
+    "firstIndexDate": "2026-01-16",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "40401476",
+    "source": "MED",
+    "pmid": "40401476",
+    "pmcid": "PMC12264803",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC12264803"
+     ]
+    },
+    "doi": "10.1097/hco.0000000000001235",
+    "title": "Anabolic-androgenic steroids among recreational athletes and cardiovascular risk.",
+    "authorString": "Meagher S, Irwig MS, Rao P.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Meagher S",
+       "lastName": "Meagher",
+       "firstName": "Sean",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Division of Cardiovascular Medicine."
+         },
+         {
+          "affiliation": "CardioVascular Institute."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Irwig MS",
+       "lastName": "Irwig",
+       "firstName": "Michael S",
+       "initials": "MS",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Division of Endocrinology, Beth Israel Deaconess Medical Center, Boston, Massachusetts, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rao P",
+       "lastName": "Rao",
+       "firstName": "Prashant",
+       "initials": "P",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5396-4677"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Division of Cardiovascular Medicine."
+         },
+         {
+          "affiliation": "CardioVascular Institute."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5396-4677"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "4",
+     "volume": "40",
+     "journalIssueId": 3956145,
+     "dateOfPublication": "2025 Jul",
+     "monthOfPublication": 7,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Curr Opin Cardiol",
+      "title": "Current opinion in cardiology",
+      "essn": "1531-7080",
+      "issn": "0268-4705",
+      "nlmid": "8608087",
+      "isoabbreviation": "Curr Opin Cardiol"
+     },
+     "printPublicationDate": "2025-07-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "221-229",
+    "abstractText": "<h4>Purpose of review</h4>The use of androgenic anabolic steroids (AAS) is rising, particularly among recreational athletes. This review addresses growing concerns about the underrecognized cardiovascular and multiorgan consequences of chronic AAS exposure with a focus on noncompetitive populations.<h4>Recent findings</h4>It is well documented that AAS use enhances muscle mass and strength, but at the cost of multisystem toxicity including endocrine disruption, hepatotoxicity, and mood disorders. Emerging evidence highlights the profound cardiovascular impact of AAS use, including elevated blood pressure, adverse lipid profiles, accelerated atherosclerosis, subclinical cardiomyopathy, and increased risk of myocardial infarction and sudden cardiac death. Structural and functional cardiac abnormalities such as left ventricular hypertrophy, ventricular dysfunction, and arterial stiffness have been reported, with some changes persisting after cessation.<h4>Summary</h4>AAS use carries multisystem risks with evidence for adverse cardiovascular remodeling and atherogenesis. Clinicians caring for athletes using AAS should recognize patterns of AAS use and provide risk stratification, monitoring, and tapering strategies. Future research should prioritize long-term outcomes, sex-specific effects, and multidisciplinary approaches to care.",
+    "affiliation": "Division of Cardiovascular Medicine.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "research-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "NHLBI NIH HHS",
+       "acronym": "HL",
+       "grantId": "K23 HL177335",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiovascular Diseases",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CI",
+          "qualifierName": "chemically induced"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "EP",
+          "qualifierName": "epidemiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Testosterone Congeners",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Anabolic Agents",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Androgens",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Risk Factors"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Athletes"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Heart Disease Risk Factors"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Cardiovascular Risk",
+      "Recreational Athletes",
+      "Anabolic-androgenic Steroids",
+      "Performance-enhancing Drugs",
+      "Androgen Abuse"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Androgens",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Anabolic Agents",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Testosterone Congeners",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1097/HCO.0000000000001235"
+      },
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12264803"
+      },
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12264803?pdf=render"
+      },
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1097/hco.0000000000001235"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 5,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "authMan": "Y",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "Y",
+    "manuscriptId": "NIHMS2077349",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2025-06-05",
+    "dateOfCreation": "2025-05-22",
+    "dateOfRevision": "2026-07-26",
+    "electronicPublicationDate": "2025-05-14",
+    "firstPublicationDate": "2025-05-14",
+    "firstIndexDate": "2025-05-23",
+    "fullTextReceivedDate": "2026-08-19",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "39531029",
+    "source": "MED",
+    "pmid": "39531029",
+    "doi": "10.61409/v04240260",
+    "title": "Anabolic steroids and cardiovascular morbidity.",
+    "authorString": "Windfeld-Mathiasen J, Horwitz H, Biering-Sørensen T, Olsen FJ.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Windfeld-Mathiasen J",
+       "lastName": "Windfeld-Mathiasen",
+       "firstName": "Josefine",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Klinisk Farmakologisk Afdeling, Københavns Universitetshospital - Bispebjerg og Frederiksberg Hospital."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Horwitz H",
+       "lastName": "Horwitz",
+       "firstName": "Henrik",
+       "initials": "H",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Klinisk Farmakologisk Afdeling, Københavns Universitetshospital - Bispebjerg og Frederiksberg Hospital."
+         },
+         {
+          "affiliation": "Institut for Klinisk Medicin, Københavns Universitet."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Biering-Sørensen T",
+       "lastName": "Biering-Sørensen",
+       "firstName": "Tor",
+       "initials": "T",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-4209-2778"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Kardiologisk Afdeling, Københavns Universitetshospital - Herlev og Gentofte Hospital."
+         },
+         {
+          "affiliation": "Biomedicinsk Institut, Københavns Universitet."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Olsen FJ",
+       "lastName": "Olsen",
+       "firstName": "Flemming Javier",
+       "initials": "FJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9511-8375"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Kardiologisk Afdeling, Københavns Universitetshospital - Herlev og Gentofte Hospital."
+         },
+         {
+          "affiliation": "Biomedicinsk Institut, Københavns Universitet."
+         },
+         {
+          "affiliation": "Kardiologisk Afdeling, Københavns Universitetshospital - Bispebjerg og Frederiksberg Hospital."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9511-8375"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-4209-2778"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "42",
+     "volume": "186",
+     "journalIssueId": 3853938,
+     "dateOfPublication": "2024 Oct",
+     "monthOfPublication": 10,
+     "yearOfPublication": 2024,
+     "journal": {
+      "medlineAbbreviation": "Ugeskr Laeger",
+      "title": "Ugeskrift for laeger",
+      "essn": "1603-6824",
+      "issn": "0041-5782",
+      "nlmid": "0141730",
+      "isoabbreviation": "Ugeskr Laeger"
+     },
+     "printPublicationDate": "2024-10-01"
+    },
+    "pubYear": "2024",
+    "pageInfo": "V04240260",
+    "abstractText": "Abuse of androgenic anabolic steroids (AAS) is associated with a range of cardiovascular side effects, summarized in this review. Apart from being linked to cardiovascular risk factors such as hypertension and dyslipidaemia, AAS abuse is associated with coronary atherosclerosis and imparts a pro-coagulative state, predisposing to thromboembolic disease. Finally, AAS abuse leads to left ventricular hypertrophy and dysfunction, which can ultimately result in heart failure. However, evidence is scarce, and further studies are needed to guide the optimal follow-up and treatment for these patients.",
+    "affiliation": "Klinisk Farmakologisk Afdeling, Københavns Universitetshospital - Bispebjerg og Frederiksberg Hospital.",
+    "publicationStatus": "ppublish",
+    "language": "dan",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article",
+      "English Abstract"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiovascular Diseases",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CI",
+          "qualifierName": "chemically induced"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy, Left Ventricular",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CI",
+          "qualifierName": "chemically induced"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Thromboembolism",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CI",
+          "qualifierName": "chemically induced"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Substance-Related Disorders",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CO",
+          "qualifierName": "complications"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "EP",
+          "qualifierName": "epidemiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Testosterone Congeners",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Anabolic Agents",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Risk Factors"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Coronary Artery Disease",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CI",
+          "qualifierName": "chemically induced"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Heart Disease Risk Factors"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Anabolic Androgenic Steroids"
+      }
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Anabolic Agents",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Testosterone Congeners",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Anabolic Androgenic Steroids",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.61409/V04240260"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2024-11-12",
+    "dateOfCreation": "2024-11-12",
+    "dateOfRevision": "2025-09-11",
+    "firstPublicationDate": "2024-10-01",
+    "firstIndexDate": "2024-11-16",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "33671206",
+    "source": "MED",
+    "pmid": "33671206",
+    "pmcid": "PMC7922604",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC7922604"
+     ]
+    },
+    "doi": "10.3390/diagnostics11020324",
+    "title": "The Cardiac Effects of Performance-Enhancing Medications: Caffeine vs. Anabolic Androgenic Steroids.",
+    "authorString": "Sivalokanathan S, Małek ŁA, Malhotra A.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Sivalokanathan S",
+       "lastName": "Sivalokanathan",
+       "firstName": "Sanjay",
+       "initials": "S",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-3227-3295"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Cardiovascular Clinical Academic Group, St. George's University of London and St. George's University Hospitals NHS Foundation Trust, London SW17 0RE, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Małek ŁA",
+       "lastName": "Małek",
+       "firstName": "Łukasz A",
+       "initials": "ŁA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9586-0163"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Epidemiology, Cardiovascular Disease Prevention and Health Promotion, National Institute of Cardiology, 04-628 Warsaw, Poland."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Malhotra A",
+       "lastName": "Malhotra",
+       "firstName": "Aneil",
+       "initials": "A",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Cardiovascular Clinical Academic Group, St. George's University of London and St. George's University Hospitals NHS Foundation Trust, London SW17 0RE, UK."
+         },
+         {
+          "affiliation": "Division of Cardiovascular Sciences, University of Manchester and Manchester University NHS Foundation Trust, Manchester Institute of Health and Performance, Manchester M11 3BS, UK."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-3227-3295"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9586-0163"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "2",
+     "volume": "11",
+     "journalIssueId": 3105590,
+     "dateOfPublication": "2021 Feb",
+     "monthOfPublication": 2,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Diagnostics (Basel)",
+      "title": "Diagnostics (Basel, Switzerland)",
+      "essn": "2075-4418",
+      "issn": "2075-4418",
+      "nlmid": "101658402",
+      "isoabbreviation": "Diagnostics (Basel)"
+     },
+     "printPublicationDate": "2021-02-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "324",
+    "abstractText": "Several performance-enhancing or ergogenic drugs have been linked to both significant adverse cardiovascular effects and increased cardiovascular risk. Even with increased scrutiny on the governance of performance-enhancing drugs (PEDs) in professional sport and heightened awareness of the associated cardiovascular risk, there are some who are prepared to risk their use to gain competitive advantage. Caffeine is the most commonly consumed drug in the world and its ergogenic properties have been reported for decades. Thus, the removal of caffeine from the World Anti-Doping Agency (WADA) list of banned substances, in 2004, has naturally led to an exponential rise in its use amongst athletes. The response to caffeine is complex and influenced by both genetic and environmental factors. Whilst the evidence may be equivocal, the ability of an athlete to train longer or at a greater power output cannot be overlooked. Furthermore, its impact on the myocardium remains unanswered. In contrast, anabolic androgenic steroids are recognised PEDs that improve athletic performance, increase muscle growth and suppress fatigue. Their use, however, comes at a cost, afflicting the individual with several side effects, including those that are detrimental to the cardiovascular system. This review addresses the effects of the two commonest PEDs, one legal, the other prohibited, and their respective effects on the heart, as well as the challenge in defining its long-term implications.",
+    "affiliation": "Cardiovascular Clinical Academic Group, St. George's University of London and St. George's University Hospitals NHS Foundation Trust, London SW17 0RE, UK.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "National Institute for Health Research (NIHR)",
+       "grantId": "ACF-2019-16-004",
+       "orderIn": 0
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Caffeine",
+      "athlete",
+      "Heart Disease",
+      "Cardiac Magnetic Resonance Imaging",
+      "Anabolic Androgenic Steroids",
+      "Sports Cardiology"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3390/diagnostics11020324"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC7922604"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC7922604?pdf=render"
+      }
+     ]
+    },
+    "commentCorrectionList": {
+     "commentCorrection": [
+      {
+       "source": "PPR",
+       "id": "PPR257282",
+       "type": "Preprint in",
+       "note": "CrossRef Pre-print loader",
+       "orderIn": 10002
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 14,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2021-03-06",
+    "dateOfRevision": "2021-03-16",
+    "electronicPublicationDate": "2021-02-17",
+    "firstPublicationDate": "2021-02-17",
+    "firstIndexDate": "2021-03-06",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "31478927",
+    "source": "MED",
+    "pmid": "31478927",
+    "pmcid": "PMC6797160",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC6797160"
+     ]
+    },
+    "doi": "10.1097/cm9.0000000000000407",
+    "title": "Anabolic-androgenic steroids and cardiovascular risk.",
+    "authorString": "Liu JD, Wu YQ.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Liu JD",
+       "lastName": "Liu",
+       "firstName": "Jian-Di",
+       "initials": "JD",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-3457-6513"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Cardiology, The Second Affiliated Hospital of Nanchang University, Nanchang, Jiangxi 330006, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wu YQ",
+       "lastName": "Wu",
+       "firstName": "Yan-Qing",
+       "initials": "YQ"
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-3457-6513"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "18",
+     "volume": "132",
+     "journalIssueId": 2865090,
+     "dateOfPublication": "2019 Sep",
+     "monthOfPublication": 9,
+     "yearOfPublication": 2019,
+     "journal": {
+      "medlineAbbreviation": "Chin Med J (Engl)",
+      "title": "Chinese medical journal",
+      "essn": "2542-5641",
+      "issn": "0366-6999",
+      "nlmid": "7513795",
+      "isoabbreviation": "Chin Med J (Engl)"
+     },
+     "printPublicationDate": "2019-09-01"
+    },
+    "pubYear": "2019",
+    "pageInfo": "2229-2236",
+    "abstractText": "<h4>Objective</h4>Anabolic-androgenic steroids (AAS) represents a group of synthetic testosterone derivatives that play an important role in clinical treatment. These drugs are widely abused among the general public to increase lean weight and improve athletic performance. It has been reported that AAS use can produce many adverse effects, especially the occurrence of cardiovascular risk. Although there are many related studies, there has been no consensus on AAS use and cardiovascular risk. The present study was to review the effect of AAS on the cardiovascular system.<h4>Data sources</h4>The data in this review were obtained from articles included in PubMed and the National Center for Biotechnology Information database.<h4>Study selection</h4>Original articles, case reports, and systematic reviews about AAS were selected for the article.<h4>Results</h4>The use/abuse of AAS is correlated with higher cardiovascular risks, and many AAS users/abusers had cardiovascular diseases. However, there are many confounding factors in the studies that explored the causality between AAS intake and disease development, and additional studies are required to determine AAS toxicity.<h4>Conclusion</h4>AAS produces toxic effects on the cardiovascular system, and it is necessary to ensure that more people know this about AAS, including medical personnel.",
+    "affiliation": "Department of Cardiology, The Second Affiliated Hospital of Nanchang University, Nanchang, Jiangxi 330006, China.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "research-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Cardiovascular System",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "DE",
+          "qualifierName": "drug effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Cardiovascular Diseases"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Thromboembolism",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CI",
+          "qualifierName": "chemically induced"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertension",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CI",
+          "qualifierName": "chemically induced"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Testosterone Congeners",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Risk Factors"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Atherosclerosis",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CI",
+          "qualifierName": "chemically induced"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Testosterone Congeners",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "doi",
+       "site": "Unpaywall",
+       "url": "https://doi.org/10.1097/cm9.0000000000000407"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "doi",
+       "site": "Unpaywall",
+       "url": "https://doi.org/10.1097/cm9.0000000000000407"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "doi",
+       "site": "Unpaywall",
+       "url": "https://doi.org/10.1097/cm9.0000000000000407"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1097/CM9.0000000000000407"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC6797160"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC6797160?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 46,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by-nc-nd",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2020-03-23",
+    "dateOfCreation": "2019-09-04",
+    "dateOfRevision": "2020-03-23",
+    "firstPublicationDate": "2019-09-01",
+    "firstIndexDate": "2019-09-04",
+    "fullTextReceivedDate": "2025-02-03",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "33269425",
+    "source": "MED",
+    "pmid": "33269425",
+    "pmcid": "PMC8087567",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC8087567"
+     ]
+    },
+    "doi": "10.1007/s11154-020-09616-y",
+    "title": "How the love of muscle can break a heart: Impact of anabolic androgenic steroids on skeletal muscle hypertrophy, metabolic and cardiovascular health.",
+    "authorString": "McCullough D, Webb R, Enright KJ, Lane KE, McVeigh J, Stewart CE, Davies IG.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "McCullough D",
+       "lastName": "McCullough",
+       "firstName": "Deaglan",
+       "initials": "D",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9882-9639"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Institute of Sport and Exercise Science, Liverpool John Moores University, Liverpool, UK. d.mccullough@2015.ljmu.ac.uk."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Webb R",
+       "lastName": "Webb",
+       "firstName": "Richard",
+       "initials": "R",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9591-585X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Science, Liverpool Hope University, Liverpool, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Enright KJ",
+       "lastName": "Enright",
+       "firstName": "Kevin J",
+       "initials": "KJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1775-6392"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Institute of Sport and Exercise Science, Liverpool John Moores University, Liverpool, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lane KE",
+       "lastName": "Lane",
+       "firstName": "Katie E",
+       "initials": "KE",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9092-2927"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Institute of Sport and Exercise Science, Liverpool John Moores University, Liverpool, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "McVeigh J",
+       "lastName": "McVeigh",
+       "firstName": "Jim",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-5319-6885"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Substance Use and Associated Behaviours Group, Manchester Metropolitan University, Manchester, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Stewart CE",
+       "lastName": "Stewart",
+       "firstName": "Claire E",
+       "initials": "CE",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8104-4819"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Institute of Sport and Exercise Science, Liverpool John Moores University, Liverpool, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Davies IG",
+       "lastName": "Davies",
+       "firstName": "Ian G",
+       "initials": "IG",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3722-8466"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Institute of Sport and Exercise Science, Liverpool John Moores University, Liverpool, UK. I.G.Davies@ljmu.ac.uk."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-5319-6885"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9591-585X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8104-4819"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9092-2927"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9882-9639"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1775-6392"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3722-8466"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "2",
+     "volume": "22",
+     "journalIssueId": 3161149,
+     "dateOfPublication": "2021 Jun",
+     "monthOfPublication": 6,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Rev Endocr Metab Disord",
+      "title": "Reviews in endocrine & metabolic disorders",
+      "essn": "1573-2606",
+      "issn": "1389-9155",
+      "nlmid": "100940588",
+      "isoabbreviation": "Rev Endocr Metab Disord"
+     },
+     "printPublicationDate": "2021-06-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "389-405",
+    "abstractText": "It is estimated 6.4% of males and 1.6% of females globally use anabolic-androgenic steroids (AAS), mostly for appearance and performance enhancing reasons. In combination with resistance exercise, AAS use increases muscle protein synthesis resulting in skeletal muscle hypertrophy and increased performance. Primarily through binding to the androgen receptor, AAS exert their hypertrophic effects via genomic, non-genomic and anti-catabolic mechanisms. However, chronic AAS use also has a detrimental effect on metabolism ultimately increasing the risk of cardiovascular disease (CVD). Much research has focused on AAS effects on blood lipids and lipoproteins, with abnormal concentrations of these associated with insulin resistance, hypertension and increased visceral adipose tissue (VAT). This clustering of interconnected abnormalities is often referred as metabolic syndrome (MetS). Therefore, the aim of this review is to explore the impact of AAS use on mechanisms of muscle hypertrophy and markers of MetS. AAS use markedly decreases high-density lipoprotein cholesterol (HDL-C) and increases low-density lipoprotein cholesterol (LDL-C). Chronic AAS use also appears to cause higher fasting insulin levels and impaired glucose tolerance and possibly higher levels of VAT; however, research is currently lacking on the effects of AAS use on glucose metabolism. While cessation of AAS use can restore normal lipid levels, it may lead to withdrawal symptoms such as depression and hypogonadism that can increase CVD risk. Research is currently lacking on effective treatments for withdrawal symptoms and further long-term research is warranted on the effects of AAS use on metabolic health in males and females.",
+    "affiliation": "Research Institute of Sport and Exercise Science, Liverpool John Moores University, Liverpool, UK. d.mccullough@2015.ljmu.ac.uk.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Research Support, Non-U.S. Gov't",
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Liverpool John Moores University",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiovascular Diseases",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CI",
+          "qualifierName": "chemically induced"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "EP",
+          "qualifierName": "epidemiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Steroids"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Anabolic Agents",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Insulin resistance",
+      "Cardiovascular disease",
+      "metabolic syndrome",
+      "Low-density Lipoprotein Cholesterol",
+      "High-density Lipoprotein Cholesterol",
+      "Anabolic-androgenic Steroids"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Steroids",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Anabolic Agents",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s11154-020-09616-y"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8087567"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8087567?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 37,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2021-12-10",
+    "dateOfCreation": "2020-12-03",
+    "dateOfRevision": "2021-12-14",
+    "electronicPublicationDate": "2020-12-02",
+    "firstPublicationDate": "2020-12-02",
+    "firstIndexDate": "2020-12-04",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "32850208",
+    "source": "MED",
+    "pmid": "32850208",
+    "pmcid": "PMC7444848",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC7444848"
+     ]
+    },
+    "doi": "10.7759/cureus.9333",
+    "title": "Anabolic Steroids and Cardiovascular Outcomes: The Controversy.",
+    "authorString": "Perry JC, Schuetz TM, Memon MD, Faiz S, Cancarevic I.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Perry JC",
+       "lastName": "Perry",
+       "firstName": "Jamal C",
+       "initials": "JC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Medicine, California Institute of Behavioral Neurosciences & Psychology, Fairfield, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Schuetz TM",
+       "lastName": "Schuetz",
+       "firstName": "Tayná M",
+       "initials": "TM",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Medicine, California Institute of Behavioral Neurosciences & Psychology, Fairfield, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Memon MD",
+       "lastName": "Memon",
+       "firstName": "Mohammad D",
+       "initials": "MD",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Medicine, California Institute of Behavioral Neurosciences & Psychology, Fairfield, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Faiz S",
+       "lastName": "Faiz",
+       "firstName": "Sadaf",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Medicine, California Institute of Behavioral Neurosciences & Psychology, Fairfield, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cancarevic I",
+       "lastName": "Cancarevic",
+       "firstName": "Ivan",
+       "initials": "I",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Internal Medicine, California Institute of Behavioral Neurosciences & Psychology, Fairfield, USA."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "7",
+     "volume": "12",
+     "journalIssueId": 2974920,
+     "dateOfPublication": "2020 Jul",
+     "monthOfPublication": 7,
+     "yearOfPublication": 2020,
+     "journal": {
+      "medlineAbbreviation": "Cureus",
+      "title": "Cureus",
+      "essn": "2168-8184",
+      "issn": "2168-8184",
+      "nlmid": "101596737",
+      "isoabbreviation": "Cureus"
+     },
+     "printPublicationDate": "2020-07-01"
+    },
+    "pubYear": "2020",
+    "pageInfo": "e9333",
+    "abstractText": "Anabolic steroids (AS) are synthetic derivatives of the male sex hormone testosterone. The use of AS is not limited to bodybuilders and athletes, but non-athletes also use them. It is used to enhance athletic performance, induce muscle hypertrophy, and augment male sexual characteristics. AS use is associated with a wide range of side effects and potential cardiovascular complications. In this article, we have searched the available literature to investigate the association between AS use and cardiovascular disease (CVD). The results revealed that AS was linked to lipid metabolism derangements, hypertension, coagulation disorders, and cardiomyopathy. We concluded, based on the relevant data, that there was evidence that suggests an association with CVD, primarily myocardial infarction, fatal arrhythmias, and cardiomyopathy in AS users. The general population should be informed of the risk. Also, methods of primary and secondary prevention should be implemented to mitigate the risk of CVD secondary to AS.",
+    "affiliation": "Medicine, California Institute of Behavioral Neurosciences & Psychology, Fairfield, USA.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Anabolic Steroids",
+      "cardiovascular"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://www.cureus.com/articles/36805-anabolic-steroids-and-cardiovascular-outcomes-the-controversy.pdf"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.7759/cureus.9333"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC7444848"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC7444848?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 19,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2020-08-28",
+    "dateOfRevision": "2020-09-28",
+    "electronicPublicationDate": "2020-07-22",
+    "firstPublicationDate": "2020-07-22",
+    "firstIndexDate": "2020-08-29",
+    "fullTextReceivedDate": "2025-02-03",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

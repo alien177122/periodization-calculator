@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+
+- `zod` 3 → 4 and `body-parser` 2.3 → 2.4; `npm audit --omit=dev` is clean
+- CI now audits production dependencies on every push and pull request
+
+### Changed
+
+- CI runs on every branch, not only `main`/`master`
+- Added Node `engines` (`>=22.6`) and `.nvmrc` (22)
+- Fixed the archived-shells table in `STRUCTURE.md`
+
 ## [0.0.3] — 2026-10-22
 
 ### Removed

@@ -1,0 +1,1772 @@
+{
+ "version": "6.9",
+ "hitCount": 7,
+ "request": {
+  "queryString": "(ABSTRACT:\"dose-response\" AND ABSTRACT:hypertrophy AND ABSTRACT:\"resistance training\")AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "41343037",
+    "source": "MED",
+    "pmid": "41343037",
+    "doi": "10.1007/s40279-025-02344-w",
+    "title": "The Resistance Training Dose Response: Meta-Regressions Exploring the Effects of Weekly Volume and Frequency on Muscle Hypertrophy and Strength Gains.",
+    "authorString": "Pelland JC, Remmert JF, Robinson ZP, Hinson SR, Zourdos MC.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Pelland JC",
+       "lastName": "Pelland",
+       "firstName": "Joshua C",
+       "initials": "JC",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0007-5962-9603"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Muscle Physiology Laboratory, Department of Exercise Science and Health Promotion, Florida Atlantic University, 777 Glades Rd., Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Remmert JF",
+       "lastName": "Remmert",
+       "firstName": "Jacob F",
+       "initials": "JF",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-5227-6541"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Muscle Physiology Laboratory, Department of Exercise Science and Health Promotion, Florida Atlantic University, 777 Glades Rd., Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Robinson ZP",
+       "lastName": "Robinson",
+       "firstName": "Zac P",
+       "initials": "ZP",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0000-1672-2903"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Muscle Physiology Laboratory, Department of Exercise Science and Health Promotion, Florida Atlantic University, 777 Glades Rd., Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hinson SR",
+       "lastName": "Hinson",
+       "firstName": "Seth R",
+       "initials": "SR",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Muscle Physiology Laboratory, Department of Exercise Science and Health Promotion, Florida Atlantic University, 777 Glades Rd., Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zourdos MC",
+       "lastName": "Zourdos",
+       "firstName": "Michael C",
+       "initials": "MC",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3265-7683"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Muscle Physiology Laboratory, Department of Exercise Science and Health Promotion, Florida Atlantic University, 777 Glades Rd., Boca Raton, FL, 33431, USA. mzourdos@fau.edu."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-5227-6541"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3265-7683"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0000-1672-2903"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0007-5962-9603"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "2",
+     "volume": "56",
+     "journalIssueId": 4148858,
+     "dateOfPublication": "2026 Feb",
+     "monthOfPublication": 2,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "nlmid": "8412297",
+      "isoabbreviation": "Sports Med"
+     },
+     "printPublicationDate": "2026-02-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "481-505",
+    "abstractText": "<h4>Background</h4>Weekly set volume and frequency are used to manipulate resistance training dosage. Previous research has identified higher weekly set volume as enhancing muscle hypertrophy and strength gains, but the nature of the dose-response relationship still needs to be investigated. Mixed evidence exists regarding the effects of higher weekly frequency.<h4>Objective</h4>We aimed to explore the dose-response relationships between key resistance training dosage variables (weekly set volume and frequency) and strength and hypertrophy.<h4>Methods</h4>Before meta-analyzing the volume and frequency research, all contributing resistance training sets were classified as direct or indirect, depending on their specificity to the hypertrophy/strength measurement. Then, weekly set volume/frequency for indirect sets was quantified as 1 for 'total,' 0.5 for 'fractional,' and 0 for 'direct.' A series of multi-level meta-regressions were performed for muscle hypertrophy and strength, utilizing 67 total studies of 2058 participants (79.1% male, 20.9% female; average age 25.16 ± 5.22 years). All models were adjusted for the duration of the intervention and training status.<h4>Results</h4>The relative evidence for the 'fractional' quantification method was strongest; therefore, this quantification method was used for the primary meta-regression models. The posterior probability of the marginal slope exceeding zero for the effect of volume on both hypertrophy and strength was 100%, indicating that gains in muscle size and strength increase as volume increases. However, both best-fit models suggest diminishing returns, with the diminishing returns for strength being considerably more pronounced. The posterior probability of the marginal slope exceeding zero for frequency's effect on hypertrophy was less than 100%, indicating compatibility with negligible effects. In contrast, the posterior probability for strength was 100%, suggesting strength gains increase with increasing frequency, albeit with diminishing returns.<h4>Conclusions</h4>Distinguishing between direct and indirect sets appears essential for predicting adaptations to a given resistance training protocol, such as using the 'fractional' quantification method. This method's dose-response models revealed that volume and frequency have unique dose-response relationships with each hypertrophy and strength gains. The dose-response relationship between volume and hypertrophy appears to differ from that with strength, with the latter exhibiting more pronounced diminishing returns. The dose-response relationship between frequency and hypertrophy appears to differ from that with strength, as only the latter exhibits consistently identifiable effects.",
+    "affiliation": "Muscle Physiology Laboratory, Department of Exercise Science and Health Promotion, Florida Atlantic University, 777 Glades Rd., Boca Raton, FL, 33431, USA.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AH",
+          "qualifierName": "anatomy & histology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Regression Analysis"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adult"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-025-02344-w"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 15,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "N",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2026-03-13",
+    "dateOfCreation": "2025-12-04",
+    "dateOfRevision": "2026-11-03",
+    "electronicPublicationDate": "2025-12-04",
+    "firstPublicationDate": "2025-12-04",
+    "firstIndexDate": "2025-12-05",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "40456806",
+    "source": "MED",
+    "pmid": "40456806",
+    "pmcid": "PMC12130258",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC12130258"
+     ]
+    },
+    "doi": "10.1038/s41598-025-03070-z",
+    "title": "Effects of strength training on neuromuscular adaptations in the development of maximal strength: a systematic review and meta-analysis.",
+    "authorString": "Rong W, Geok SK, Samsudin S, Zhao Y, Ma H, Zhang X.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Rong W",
+       "lastName": "Rong",
+       "firstName": "Wenchao",
+       "initials": "W",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Sports Studies, Faculty of Educational Studies, University Putra Malaysia, 43400, Serdang, Selangor, Malaysia. gs64109@student.upm.edu.my."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Geok SK",
+       "lastName": "Geok",
+       "firstName": "Soh Kim",
+       "initials": "SK",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Sports Studies, Faculty of Educational Studies, University Putra Malaysia, 43400, Serdang, Selangor, Malaysia. kims@upm.edu.my."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Samsudin S",
+       "lastName": "Samsudin",
+       "firstName": "Shamsulariffin",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Sports Studies, Faculty of Educational Studies, University Putra Malaysia, 43400, Serdang, Selangor, Malaysia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zhao Y",
+       "lastName": "Zhao",
+       "firstName": "Yue",
+       "initials": "Y",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Sports Studies, Faculty of Educational Studies, University Putra Malaysia, 43400, Serdang, Selangor, Malaysia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ma H",
+       "lastName": "Ma",
+       "firstName": "Hucheng",
+       "initials": "H",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Sports Studies, Faculty of Educational Studies, University Putra Malaysia, 43400, Serdang, Selangor, Malaysia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zhang X",
+       "lastName": "Zhang",
+       "firstName": "Xinrui",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Sports Studies, Faculty of Educational Studies, University Putra Malaysia, 43400, Serdang, Selangor, Malaysia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "15",
+     "journalIssueId": 3953721,
+     "dateOfPublication": "2025 Jun",
+     "monthOfPublication": 6,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Sci Rep",
+      "title": "Scientific reports",
+      "essn": "2045-2322",
+      "issn": "2045-2322",
+      "nlmid": "101563288",
+      "isoabbreviation": "Sci Rep"
+     },
+     "printPublicationDate": "2025-06-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "19315",
+    "abstractText": "A systematic review of the effects of resistance training on neuromuscular adaptations related to maximal strength enhances our understanding of the mechanisms and dose-response relationships involved. This evidence supports the scientific application of maximal strength to improve athletic performance in practice. Methods: We retrieved literature from CNKI, PubMed, and Web of Science databases. We utilised Review Manager 5.4.1 software to construct forest plots and assess methodological quality based on the standards outlined in the Cochrane Handbook for Systematic Reviews of Interventions (version 5.1.0). Review Manager 5.3 was employed to analyse the outcome measures of the included studies. Given that the outcome measures were continuous variables, we chose the standardised mean difference (SMD) as the effect size metric for statistical analysis. We used Stata-SE 18.0 to conduct publication bias analysis. Results: Twenty studies examined the relationship between resistance training and maximal skeletal muscle strength, revealing low heterogeneity (I<sup>2</sup> = 17%, P = 0.24). The results indicated an SMD of 0.77 (95% CI 0.57-0.98, P < 0.05), demonstrating a significant effect. The publication bias test yielded t = 4.12 (P < 0.05). Fifty-four studies examined the relationship between resistance training and peak torque, revealing moderate heterogeneity (I<sup>2</sup> = 48%, P < 0.05). The results indicated an SMD of 0.77 (95% CI 0.62-0.93, P < 0.05), demonstrating a significant difference. The publication bias test yielded t = 6.69 (P < 0.05). Eighteen studies examined the relationship between resistance training and the percentages of Type I, Type IIa, and Type IIx muscle fibres, revealing significant moderate heterogeneity (I<sup>2</sup> = 85%, P < 0.05). The results indicated an SMD of 0.14 (95% CI - 0.45-0.74, P = 0.63). The publication bias test yielded z = 3.62 (P < 0.05). Forty-one studies examined the relationship between resistance training and muscle thickness, revealing no heterogeneity (I<sup>2</sup> = 0%, P = 0.80). The results indicated that resistance training programs significantly increase participants' skeletal muscle thickness (SMD = 0.55, 95% CI 0.41-0.69, P < 0.05). The publication bias test yielded z = 2.09 (P < 0.05). Ten studies examined the relationship between resistance training and pennation angle, revealing moderate heterogeneity (I<sup>2</sup> = 54%, P < 0.05). The results indicated an SMD of 0.36 (95% CI - 0.02-0.74, P = 0.06). The publication bias test yielded z =  - 2.71 (P < 0.05). Twenty-eight studies examined the relationship between resistance training and EMG, revealing moderate heterogeneity (I<sup>2</sup> = 58%, P < 0.05). The results indicated that resistance training programs significantly increase participants' squat strength (SMD = 0.54, 95% CI 0.26-0.81, P < 0.05). The publication bias test yielded z = 5.62 (P < 0.05). Maximal resistance training enhances maximum strength and peak torque in bench presses and squats. Muscle adaptations include increased agonist muscle thickness, a higher proportion of Type I and Type IIa fibres, a reduction in Type IIx fibres, and an increase in pennation angle. Neural adaptations are reflected in heightened EMG amplitude, though the effect size varies with muscle contraction type and training experience. Physiologically, maximal resistance training activates satellite cells and the mTOR signalling pathway, contributing to muscle repair, hypertrophy, and strength improvement.",
+    "affiliation": "Faculty of Sports Studies, Faculty of Educational Studies, University Putra Malaysia, 43400, Serdang, Selangor, Malaysia. gs64109@student.upm.edu.my.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "research-article",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Resistance Training",
+      "Muscle Adaptation",
+      "Neural Adaptation",
+      "Maximal Strength"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1038/s41598-025-03070-z"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12130258"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12130258?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 22,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by-nc-nd",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2025-06-02",
+    "dateOfCreation": "2025-06-02",
+    "dateOfRevision": "2025-06-26",
+    "electronicPublicationDate": "2025-06-02",
+    "firstPublicationDate": "2025-06-02",
+    "firstIndexDate": "2025-06-11",
+    "fullTextReceivedDate": "2025-06-05",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "40883636",
+    "source": "MED",
+    "pmid": "40883636",
+    "doi": "10.1007/s00421-025-05959-z",
+    "title": "Is there a volume saturation point for muscle hypertrophy in resistance-trained individuals? A narrative review.",
+    "authorString": "Camargo JBB, Bittencourt D, Silva DG, Bergamasco JGA, Max Michel J, Roberts MD, Libardi CA.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Camargo JBB",
+       "lastName": "Camargo",
+       "firstName": "Júlio B B",
+       "initials": "JBB",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2927-9928"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "MUSCULAB - Laboratory of Neuromuscular Adaptations to Resistance Training, Department of Physical Education, Federal University of São Carlos (UFSCar), Rod. Washington Luiz, km 235 - SP 310, São Carlos, SP, CEP 13565-905, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bittencourt D",
+       "lastName": "Bittencourt",
+       "firstName": "Diego",
+       "initials": "D",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0003-9953-5872"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "MUSCULAB - Laboratory of Neuromuscular Adaptations to Resistance Training, Department of Physical Education, Federal University of São Carlos (UFSCar), Rod. Washington Luiz, km 235 - SP 310, São Carlos, SP, CEP 13565-905, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Silva DG",
+       "lastName": "Silva",
+       "firstName": "Deivid G",
+       "initials": "DG",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1918-7736"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "MUSCULAB - Laboratory of Neuromuscular Adaptations to Resistance Training, Department of Physical Education, Federal University of São Carlos (UFSCar), Rod. Washington Luiz, km 235 - SP 310, São Carlos, SP, CEP 13565-905, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bergamasco JGA",
+       "lastName": "Bergamasco",
+       "firstName": "João G A",
+       "initials": "JGA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8797-9762"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "MUSCULAB - Laboratory of Neuromuscular Adaptations to Resistance Training, Department of Physical Education, Federal University of São Carlos (UFSCar), Rod. Washington Luiz, km 235 - SP 310, São Carlos, SP, CEP 13565-905, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Max Michel J",
+       "lastName": "Max Michel",
+       "firstName": "J",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9894-3856"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Nutrabolt Applied and Molecular Physiology Laboratory, School of Kinesiology, Auburn University, Auburn, AL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Roberts MD",
+       "lastName": "Roberts",
+       "firstName": "Michael D",
+       "initials": "MD",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-7359-5362"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Nutrabolt Applied and Molecular Physiology Laboratory, School of Kinesiology, Auburn University, Auburn, AL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Libardi CA",
+       "lastName": "Libardi",
+       "firstName": "Cleiton A",
+       "initials": "CA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9003-7610"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "MUSCULAB - Laboratory of Neuromuscular Adaptations to Resistance Training, Department of Physical Education, Federal University of São Carlos (UFSCar), Rod. Washington Luiz, km 235 - SP 310, São Carlos, SP, CEP 13565-905, Brazil. c.libardi@ufscar.br."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9894-3856"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2927-9928"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-7359-5362"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8797-9762"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9003-7610"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1918-7736"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0003-9953-5872"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "11",
+     "volume": "125",
+     "journalIssueId": 4033224,
+     "dateOfPublication": "2025 Nov",
+     "monthOfPublication": 11,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Eur J Appl Physiol",
+      "title": "European journal of applied physiology",
+      "essn": "1439-6327",
+      "issn": "1439-6319",
+      "nlmid": "100954790",
+      "isoabbreviation": "Eur J Appl Physiol"
+     },
+     "printPublicationDate": "2025-11-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "3065-3081",
+    "abstractText": "Resistance training (RT) volume is recognized as a key variable driving skeletal muscle hypertrophy. Meta-analyses have supported a positive dose-response relationship, with greater volumes resulting in more pronounced hypertrophic adaptations. However, more recent studies conducted in trained individuals have reported conflicting findings, raising the question of whether a saturation point, defined here as a theoretical threshold beyond which additional training volume no longer yields benefits, might exist, or whether the inconsistencies are better explained by methodological limitations and individual variability. In this narrative review, we explore physiological and methodological factors that may explain such discrepancies. Mechanistically, higher RT volumes are associated with greater anabolic signaling, myofibrillar protein synthesis, ribosomal biogenesis, and satellite cell activation, although these results are not universal. Moreover, excessive training volumes may elevate muscle protein breakdown via activation of catabolic pathways. Methodological factors such as the muscle group and exercises selected, lack of control for prior training volume, overestimation of effect sizes in power calculations, and between-subject variability challenge the interpretation of dose-response relationships. Collectively, these physiological mechanisms and methodological challenges highlight the complexity of establishing a clear and consistent relationship between RT volume and muscle hypertrophy. Expanding our knowledge of the RT dose-response relationship will require rigorous experimental designs, integration of molecular and morphological outcomes, and a greater focus on inter-individual variability. These elements may help clarify whether a true saturation point in RT volume exists for anabolic signaling and muscle hypertrophy.",
+    "affiliation": "MUSCULAB - Laboratory of Neuromuscular Adaptations to Resistance Training, Department of Physical Education, Federal University of São Carlos (UFSCar), Rod. Washington Luiz, km 235 - SP 310, São Carlos, SP, CEP 13565-905, Brazil.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Conselho Nacional de Desenvolvimento Científico e Tecnológico",
+       "grantId": "311387/2021-7",
+       "orderIn": 0
+      },
+      {
+       "agency": "Conselho Nacional de Desenvolvimento Científico e Tecnológico",
+       "grantId": "140107/2023-1",
+       "orderIn": 0
+      },
+      {
+       "agency": "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior",
+       "grantId": "88887.821210/2023-00",
+       "orderIn": 0
+      },
+      {
+       "agency": "Fundação de Amparo à Pesquisa do Estado de São Paulo",
+       "grantId": "2024/12893-4",
+       "orderIn": 0
+      },
+      {
+       "agency": "Fundação de Amparo à Pesquisa do Estado de São Paulo",
+       "grantId": "2024/14207-0",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Experimental design",
+      "Muscle Mass",
+      "Muscle Protein Synthesis",
+      "Muscle Protein Breakdown",
+      "Dose–response"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s00421-025-05959-z"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2025-10-15",
+    "dateOfCreation": "2025-08-29",
+    "dateOfRevision": "2026-11-05",
+    "electronicPublicationDate": "2025-08-29",
+    "firstPublicationDate": "2025-08-29",
+    "firstIndexDate": "2025-09-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "38970765",
+    "source": "MED",
+    "pmid": "38970765",
+    "doi": "10.1007/s40279-024-02069-2",
+    "title": "Exploring the Dose-Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions.",
+    "authorString": "Robinson ZP, Pelland JC, Remmert JF, Refalo MC, Jukic I, Steele J, Zourdos MC.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Robinson ZP",
+       "lastName": "Robinson",
+       "firstName": "Zac P",
+       "initials": "ZP",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Pelland JC",
+       "lastName": "Pelland",
+       "firstName": "Joshua C",
+       "initials": "JC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Remmert JF",
+       "lastName": "Remmert",
+       "firstName": "Jacob F",
+       "initials": "JF",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Refalo MC",
+       "lastName": "Refalo",
+       "firstName": "Martin C",
+       "initials": "MC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute for Physical Activity and Nutrition (IPAN), School of Exercise and Nutrition Sciences, Deakin University, Geelong, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Jukic I",
+       "lastName": "Jukic",
+       "firstName": "Ivan",
+       "initials": "I",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0900-9410"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport Performance Research Institute New Zealand (SPRINZ), Auckland University of Technology, Auckland, New Zealand."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Steele J",
+       "lastName": "Steele",
+       "firstName": "James",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Sport, Health, and Social Sciences, Solent University, South Hampton, England."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zourdos MC",
+       "lastName": "Zourdos",
+       "firstName": "Michael C",
+       "initials": "MC",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3265-7683"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA. mzourdos@fau.edu."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0900-9410"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3265-7683"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "9",
+     "volume": "54",
+     "journalIssueId": 3828474,
+     "dateOfPublication": "2024 Sep",
+     "monthOfPublication": 9,
+     "yearOfPublication": 2024,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "nlmid": "8412297",
+      "isoabbreviation": "Sports Med"
+     },
+     "printPublicationDate": "2024-09-01"
+    },
+    "pubYear": "2024",
+    "pageInfo": "2209-2231",
+    "abstractText": "<h4>Background</h4>The proximity to failure in which sets are terminated has gained attention in the scientific literature as a potentially key resistance training variable. Multiple meta-analyses have directly (i.e., failure versus not to failure) or indirectly (e.g., velocity loss, alternative set structures) evaluated the effect of proximity to failure on strength and muscle hypertrophy outcomes categorically; however, the dose-response effects of proximity to failure have not been analyzed collectively in a continuous manner.<h4>Objective</h4>To meta-analyze the aforementioned areas of relevant research, proximity to failure was quantified as the number of repetitions in reserve (RIR). Importantly, the RIR associated with each effect in the analysis was estimated on the basis of the available descriptions of the training interventions in each study. Data were extracted and a series of exploratory multilevel meta-regressions were performed for outcomes related to both strength and muscle hypertrophy. A range of sensitivity analyses were also performed. All models were adjusted for the effects of load, method of volume equating, duration of intervention, and training status.<h4>Results</h4>The best fit models for both strength and muscle hypertrophy outcomes demonstrated modest quality of overall fit. In all of the best-fit models for strength, the confidence intervals of the marginal slopes for estimated RIR contained a null point estimate, indicating a negligible relationship with strength gains. However, in all of the best-fit models for muscle hypertrophy, the marginal slopes for estimated RIR were negative and their confidence intervals did not contain a null point estimate, indicating that changes in muscle size increased as sets were terminated closer to failure.<h4>Conclusions</h4>The dose-response relationship between proximity to failure and strength gain appears to differ from the relationship with muscle hypertrophy, with only the latter being meaningfully influenced by RIR. Strength gains were similar across a wide range of RIR, while muscle hypertrophy improves as sets are terminated closer to failure. Considering the RIR estimation procedures used, however, the exact relationship between RIR and muscle hypertrophy and strength remains unclear. Researchers and practitioners should be aware that optimal proximity to failure may differ between strength and muscle hypertrophy outcomes, but caution is warranted when interpreting the present analysis due to its exploratory nature. Future studies deliberately designed to explore the continuous nature of the dose-response effects of proximity to failure in large samples should be considered.",
+    "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PP",
+          "qualifierName": "physiopathology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Regression Analysis"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Skeletal Muscle Enlargement",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-024-02069-2"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 46,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2024-09-13",
+    "dateOfCreation": "2024-07-06",
+    "dateOfRevision": "2026-11-01",
+    "electronicPublicationDate": "2024-07-06",
+    "firstPublicationDate": "2024-07-06",
+    "firstIndexDate": "2024-07-07",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "38637473",
+    "source": "MED",
+    "pmid": "38637473",
+    "pmcid": "PMC11026323",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC11026323"
+     ]
+    },
+    "doi": "10.1186/s40798-024-00706-8",
+    "title": "Effects of Chronic Static Stretching on Maximal Strength and Muscle Hypertrophy: A Systematic Review and Meta-Analysis with Meta-Regression.",
+    "authorString": "Warneke K, Lohmann LH, Behm DG, Wirth K, Keiner M, Schiemann S, Wilke J.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Warneke K",
+       "lastName": "Warneke",
+       "firstName": "Konstantin",
+       "initials": "K",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-4964-2867"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Human Movement Science, Sport and Health, University of Graz, Graz, Austria."
+         },
+         {
+          "affiliation": "Department of Movement Sciences, University of Klagenfurt, Klagenfurt am Wörthersee, Austria."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lohmann LH",
+       "lastName": "Lohmann",
+       "firstName": "Lars Hubertus",
+       "initials": "LH",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Human Motion Science and Exercise Physiology, Friedrich Schiller University, 07743, Jena, Germany. Lars.hubertus.lohmann@uni-jena.de."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Behm DG",
+       "lastName": "Behm",
+       "firstName": "David G",
+       "initials": "DG",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Human Kinetics and Recreation, Newfoundland and Labrador, Memorial University of Newfoundland, St. John's, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wirth K",
+       "lastName": "Wirth",
+       "firstName": "Klaus",
+       "initials": "K",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "University of Applied Sciences Wiener Neustadt, Wiener Neustadt, Austria."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Keiner M",
+       "lastName": "Keiner",
+       "firstName": "Michael",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1817-1743"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Sport Science, German University of Health & Sport, Ismaning, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Schiemann S",
+       "lastName": "Schiemann",
+       "firstName": "Stephan",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Exercise, Sport and Health, Leuphana University, Lüneburg, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wilke J",
+       "lastName": "Wilke",
+       "firstName": "Jan",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9147-2369"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Movement Sciences, University of Klagenfurt, Klagenfurt am Wörthersee, Austria."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9147-2369"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1817-1743"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-4964-2867"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "10",
+     "journalIssueId": 3748652,
+     "dateOfPublication": "2024 Apr",
+     "monthOfPublication": 4,
+     "yearOfPublication": 2024,
+     "journal": {
+      "medlineAbbreviation": "Sports Med Open",
+      "title": "Sports medicine - open",
+      "essn": "2198-9761",
+      "issn": "2199-1170",
+      "nlmid": "101662568",
+      "isoabbreviation": "Sports Med Open"
+     },
+     "printPublicationDate": "2024-04-01"
+    },
+    "pubYear": "2024",
+    "pageInfo": "45",
+    "abstractText": "<h4>Background</h4>Increases in maximal strength and muscle volume represent central aims of training interventions. Recent research suggested that the chronic application of stretch may be effective in inducing hypertrophy. The present systematic review therefore aimed to syntheisize the evidence on changes of strength and muscle volume following chronic static stretching.<h4>Methods</h4>Three data bases were sceened to conduct a systematic review with meta-analysis. Studies using randomized, controlled trials with longitudinal (≥ 2 weeks) design, investigating strength and muscle volume following static stretching in humans, were included. Study quality was rated by two examiners using the PEDro scale.<h4>Results</h4>A total of 42 studies with 1318 cumulative participants were identified. Meta-analyses using robust variance estimation showed small stretch-mediated maximal strength increases (d = 0.30 p < 0.001) with stretching duration and intervention time as significant moderators. Including all studies, stretching induced small magnitude, but significant hypertrophy effects (d = 0.20). Longer stretching durations and intervention periods as well as higher training frequencies revealed small (d = 0.26-0.28), but significant effects (p < 0.001-0.005), while lower dosage did not reach the level of significance (p = 0.13-0.39).<h4>Conclusions</h4>While of minor effectiveness, chronic static stretching represents a possible alternative to resistance training when aiming to improve strength and increase muscle size. As a dose-response relationship may exist, higher stretch durations and frequencies as well as long program durations should be further elaborated.",
+    "affiliation": "Institute of Human Movement Science, Sport and Health, University of Graz, Graz, Austria.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Friedrich-Schiller-Universität Jena",
+       "orderIn": 0
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Exercise",
+      "hypertrophy",
+      "Long-lasting",
+      "Stretching",
+      "Maximum Strength"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Unpaywall",
+       "url": "http://fox.leuphana.de/portal/de/publications/effects-of-chronic-static-stretching-on-maximal-strength-and-muscle-hypertrophy(2174058f-1320-4c50-b5d2-adb78e76865d).html"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1186/s40798-024-00706-8"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11026323"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11026323?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 21,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2024-04-18",
+    "dateOfRevision": "2024-04-26",
+    "electronicPublicationDate": "2024-04-19",
+    "firstPublicationDate": "2024-04-19",
+    "firstIndexDate": "2024-04-19",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "37089606",
+    "source": "MED",
+    "pmid": "37089606",
+    "pmcid": "PMC10115997",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC10115997"
+     ]
+    },
+    "doi": "10.3389/fmed.2023.1049248",
+    "title": "Dose-response relationship of resistance training for muscle morphology and strength in elderly cancer patients: A meta-analysis.",
+    "authorString": "Zhai H, Wei H, Xia J, Wang W.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Zhai H",
+       "lastName": "Zhai",
+       "firstName": "Haiting",
+       "initials": "H",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-6048-6135"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Basic Sciences for Aviation, Naval Aviation University, Yantai, China."
+         },
+         {
+          "affiliation": "School of Strength and Conditioning Training, Beijing Sport University, Beijing, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wei H",
+       "lastName": "Wei",
+       "firstName": "Hongwen",
+       "initials": "H",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Strength and Conditioning Training, Beijing Sport University, Beijing, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Xia J",
+       "lastName": "Xia",
+       "firstName": "Jixiang",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Basic Sciences for Aviation, Naval Aviation University, Yantai, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wang W",
+       "lastName": "Wang",
+       "firstName": "Wei",
+       "initials": "W",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Basic Sciences for Aviation, Naval Aviation University, Yantai, China."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-6048-6135"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "10",
+     "journalIssueId": 3497195,
+     "dateOfPublication": "2023 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2023,
+     "journal": {
+      "medlineAbbreviation": "Front Med (Lausanne)",
+      "title": "Frontiers in medicine",
+      "essn": "2296-858X",
+      "issn": "2296-858X",
+      "nlmid": "101648047",
+      "isoabbreviation": "Front Med (Lausanne)"
+     },
+     "printPublicationDate": "2023-01-01"
+    },
+    "pubYear": "2023",
+    "pageInfo": "1049248",
+    "abstractText": "<h4>Objective</h4>To systematically evaluate the effects of resistance training (RT) on muscle strength and muscle hypertrophy in elderly cancer patients, and to provide dose-response relationships of RT variables that could improve muscle strength and morphology in elderly cancer patients.<h4>Method</h4>The Review Manager 5.3 was applied to analyze the 12 literatures (616 participants) through random or fixed effects model and global effect size to examine upper limb strength, lower extremity strength, and muscle hypertrophy. Sub-group analysis was made on five variables: the total number of repeated training times/week, load intensity, exercise frequency/week, exercise duration and gender. This study also examines the heterogeneity and publication bias.<h4>Results</h4>Twelve literatures (616 participants, 60-80 years) were included in meta-analysis. RT significantly increased the upper limb muscular strength (SMD = 0.51, 95% CI: 0.10-0.93; <i>Z</i> = 2.41; <i>p</i> = 0.02) and lower extremity strength (SMD = 0.48, 95% CI: 0.28-0.67; <i>Z</i> = 4.82; <i>p</i> < 0.00001), but had no significant effect on muscle morphology(SMD = 0.21, 95% CI: 0.01-0.42; <i>Z</i> = 1.88; <i>p</i> = 0.06). In subgroup analysis for lower extremity muscle strength in elderly male cancer patients, it was found that male intensity of 70-90%1RM, volume of 400-500 times per week, frequencies of 3 times per week, and session of 12-24 weeks, revealed the greatest effect. Funnel plot of the three studies shows that the results were reliable, and no publication bias was found.<h4>Conclusion</h4>RT had medium effects on improving muscle strength in elderly cancer patients, but it is not effective in improving muscle hypertrophy. In addition, when RT is performed, different training protocols can have an effect on the growth of muscle strength. Therefore, a lower extremity training protocol with a training intensity of 70-90% 1RM, a total of 400-500 repetitions per week, 3 times per week, and an exercise session of 12-24 weeks is most effective in improving lower extremity strength in elderly male cancer patients.",
+    "affiliation": "School of Basic Sciences for Aviation, Naval Aviation University, Yantai, China.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "systematic-review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Meta-analysis",
+      "Resistance Training",
+      "Lower Limb Strength",
+      "Muscle Morphology",
+      "Elderly Cancer Patients",
+      "Upper Limb Strength"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3389/fmed.2023.1049248"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC10115997"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC10115997?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 3,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2023-04-24",
+    "dateOfRevision": "2023-04-25",
+    "electronicPublicationDate": "2023-04-06",
+    "firstPublicationDate": "2023-04-06",
+    "firstIndexDate": "2023-04-24",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "27433992",
+    "source": "MED",
+    "pmid": "27433992",
+    "doi": "10.1080/02640414.2016.1210197",
+    "title": "Dose-response relationship between weekly resistance training volume and increases in muscle mass: A systematic review and meta-analysis.",
+    "authorString": "Schoenfeld BJ, Ogborn D, Krieger JW.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Schoenfeld BJ",
+       "lastName": "Schoenfeld",
+       "firstName": "Brad J",
+       "initials": "BJ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "a Department of Health Science , Lehman College , Bronx , NY , USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ogborn D",
+       "lastName": "Ogborn",
+       "firstName": "Dan",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "b Total Rehabilitation and Sports Injuries Clinic , Winnipeg , Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Krieger JW",
+       "lastName": "Krieger",
+       "firstName": "James W",
+       "initials": "JW",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "c Weightology, LLC , Issaquah , WA , USA."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "11",
+     "volume": "35",
+     "journalIssueId": 2532522,
+     "dateOfPublication": "2017 Jun",
+     "monthOfPublication": 6,
+     "yearOfPublication": 2017,
+     "journal": {
+      "medlineAbbreviation": "J Sports Sci",
+      "title": "Journal of sports sciences",
+      "essn": "1466-447X",
+      "issn": "0264-0414",
+      "nlmid": "8405364",
+      "isoabbreviation": "J Sports Sci"
+     },
+     "printPublicationDate": "2017-06-01"
+    },
+    "pubYear": "2017",
+    "pageInfo": "1073-1082",
+    "abstractText": "The purpose of this paper was to systematically review the current literature and elucidate the effects of total weekly resistance training (RT) volume on changes in measures of muscle mass via meta-regression. The final analysis comprised 34 treatment groups from 15 studies. Outcomes for weekly sets as a continuous variable showed a significant effect of volume on changes in muscle size (P = 0.002). Each additional set was associated with an increase in effect size (ES) of 0.023 corresponding to an increase in the percentage gain by 0.37%. Outcomes for weekly sets categorised as lower or higher within each study showed a significant effect of volume on changes in muscle size (P = 0.03); the ES difference between higher and lower volumes was 0.241, which equated to a percentage gain difference of 3.9%. Outcomes for weekly sets as a three-level categorical variable (<5, 5-9 and 10+ per muscle) showed a trend for an effect of weekly sets (P = 0.074). The findings indicate a graded dose-response relationship whereby increases in RT volume produce greater gains in muscle hypertrophy.",
+    "affiliation": "a Department of Health Science , Lehman College , Bronx , NY , USA.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "AH",
+          "qualifierName": "anatomy & histology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "GD",
+          "qualifierName": "growth & development"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Time Factors"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Skeletal muscle",
+      "Muscle growth",
+      "hypertrophy",
+      "Cross Sectional Area",
+      "Exercise Volume"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1080/02640414.2016.1210197"
+      }
+     ]
+    },
+    "commentCorrectionList": {
+     "commentCorrection": [
+      {
+       "source": "MED",
+       "id": "27809704",
+       "reference": "J Sports Sci. 2017 Oct;35(20):1982-1984. doi: 10.1080/02640414.2016.1243799.",
+       "type": "Comment in",
+       "orderIn": 1
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 410,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2017-07-26",
+    "dateOfCreation": "2016-07-20",
+    "dateOfRevision": "2025-06-23",
+    "electronicPublicationDate": "2016-07-19",
+    "firstPublicationDate": "2016-07-19",
+    "firstIndexDate": "2016-07-20",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

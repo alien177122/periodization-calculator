@@ -21,13 +21,13 @@
 
 Перенесены 2026-08-27 в [`_archive-non-web/`](_archive-non-web/README.md) (не удалены):
 
-| Путь в архиве                          | Назначение       |
-| -------------------------------------- | ---------------- | ---- |
-| `_archive-non-web/desktop/`            | Electron         |
-| `_archive-non-web/ios/`, `android/`    | Capacitor native |
-| `\_archive-non-web/apps/mobile         | macos`           | Expo |
-| `_archive-non-web/capacitor.config.ts` | Capacitor config |
-| `_archive-non-web/fastlane/`           | Fastlane         |
+| Путь в архиве                              | Назначение       |
+| ------------------------------------------ | ---------------- |
+| `_archive-non-web/desktop/`                | Electron         |
+| `_archive-non-web/ios/`, `android/`        | Capacitor native |
+| `_archive-non-web/apps/mobile/`, `macos/`  | Expo             |
+| `_archive-non-web/capacitor.config.ts`     | Capacitor config |
+| `_archive-non-web/fastlane/`               | Fastlane         |
 
 ## Meta (не продуктовый код)
 

@@ -1,0 +1,2446 @@
+{
+ "version": "6.9",
+ "hitCount": 10,
+ "request": {
+  "queryString": "(TITLE:(\"velocity-based training\" OR \"velocity based training\"))AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "40398842",
+    "source": "MED",
+    "pmid": "40398842",
+    "doi": "10.1055/a-2617-6856",
+    "title": "The Effect of Velocity-Based Training on Inducing Postactivation Performance Enhancement.",
+    "authorString": "Fan Z, Fan Z, Zhao Z, Zou Y, Zhang Q.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Fan Z",
+       "lastName": "Fan",
+       "firstName": "Ziqi",
+       "initials": "Z",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0006-7667-3940"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Physical Education, Shanghai University of Sport, Shanghai, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Fan Z",
+       "lastName": "Fan",
+       "firstName": "Zilin",
+       "initials": "Z",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0003-1497-2206"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Sports Science, Beijing Sport University, Beijing, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zhao Z",
+       "lastName": "Zhao",
+       "firstName": "Zhiwei",
+       "initials": "Z",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Physical Education, Shanghai University of Sport, Shanghai, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zou Y",
+       "lastName": "Zou",
+       "firstName": "Yu",
+       "initials": "Y",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-5699-5869"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Sport and Exercise Science, Zhejiang University, Hangzhou, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zhang Q",
+       "lastName": "Zhang",
+       "firstName": "Qingwen",
+       "initials": "Q",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8885-1066"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Physical Education, Shanghai University of Sport, Shanghai, China."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-5699-5869"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8885-1066"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0003-1497-2206"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0006-7667-3940"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "12",
+     "volume": "46",
+     "journalIssueId": 4033583,
+     "dateOfPublication": "2025 Nov",
+     "monthOfPublication": 11,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Int J Sports Med",
+      "title": "International journal of sports medicine",
+      "essn": "1439-3964",
+      "issn": "0172-4622",
+      "isoabbreviation": "Int J Sports Med",
+      "nlmid": "8008349"
+     },
+     "printPublicationDate": "2025-11-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "885-897",
+    "abstractText": "This systematic review and meta-analysis aimed to evaluate the effect of velocity-based training (VBT) conditioning activities (CA) on subsequent athletic performance and explore how different CA types, velocity loss (VL) thresholds, loads, sets, participants, and rest intervals influence postactivation performance enhancement (PAPE). Six electronic databases were searched. Nine studies were included, reporting 18 effect sizes and comprising 152 participants. We assessed pre- and posttest differences using meta-analysis, conducted subgroup analyses to identify potential moderating factors, and employed nonlinear meta-regression to explore the relationship between rest intervals and the PAPE effect. The results showed that VBT-CA significantly improved athletic performance. Subgroup analyses showed no significant differences; nevertheless, bench press-type CA, CA with VL≤10%, load≥80% one-repetition maximum (1RM), single-set CA, and athlete population exhibited a trend toward larger PAPE effects. Between 5.77 and 12.8 minutes after VBT-CA, a significant PAPE effect was indicated by the meta-regression results, with the optimal time point being 8.96 minutes. Our study suggests that VBT-CA can effectively induce the PAPE effect. Individuals seeking to improve their athletic performance could consider performing a single set of CA with load≥80% 1RM, VL≤10%, 5.8-12.8 minutes before the explosive activity.",
+    "affiliation": "School of Physical Education, Shanghai University of Sport, Shanghai, China.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Rest"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Athletic Performance",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Physical Conditioning, Human",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1055/a-2617-6856"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 1,
+    "hasReferences": "N",
+    "hasTextMinedTerms": "N",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2025-10-15",
+    "dateOfCreation": "2025-05-21",
+    "dateOfRevision": "2025-12-16",
+    "electronicPublicationDate": "2025-05-21",
+    "firstPublicationDate": "2025-05-21",
+    "firstIndexDate": "2025-05-23",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "40566403",
+    "source": "MED",
+    "pmid": "40566403",
+    "pmcid": "PMC12015834",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC12015834"
+     ]
+    },
+    "doi": "10.3390/jfmk10020106",
+    "title": "Velocity-Based Training in Soccer: A Brief Narrative Review with Practical Recommendations.",
+    "authorString": "Rojas Jaramillo A, Kreider RB, Petro JL, Bonilla DA, Gonzalez-Badillo JJ, Rodriguez-Rosell D.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Rojas Jaramillo A",
+       "lastName": "Rojas Jaramillo",
+       "firstName": "Andrés",
+       "initials": "A",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2745-6660"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Educational and Pedagogical Studies and Research Group (GEIEP), Faculty of Education, Department in Physical Education, Corporación Universitaria Minuto de Dios, Bello 050001, Colombia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kreider RB",
+       "lastName": "Kreider",
+       "firstName": "Richard B",
+       "initials": "RB",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-3906-1658"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Exercise & Sport Nutrition Laboratory, Human Clinical Research Facility, Texas A&M University, College Station, TX 77843, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Petro JL",
+       "lastName": "Petro",
+       "firstName": "Jorge L",
+       "initials": "JL",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-5678-1000"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business & Science Society-DBSS International SAS, Bogotá 110311, Colombia."
+         },
+         {
+          "affiliation": "Research Group in Physical Activity, Sports and Health Sciences-GICAFS, Universidad de Córdoba, Montería 230002, Colombia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bonilla DA",
+       "lastName": "Bonilla",
+       "firstName": "Diego A",
+       "initials": "DA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2634-1220"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business & Science Society-DBSS International SAS, Bogotá 110311, Colombia."
+         },
+         {
+          "affiliation": "Research Group in Physical Activity, Sports and Health Sciences-GICAFS, Universidad de Córdoba, Montería 230002, Colombia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Gonzalez-Badillo JJ",
+       "lastName": "Gonzalez-Badillo",
+       "firstName": "Juan José",
+       "initials": "JJ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Physical Performance & Sports Research Center, Universidad Pablo de Olavide, 41013 Seville, Spain."
+         },
+         {
+          "affiliation": "Department of Sport and Informatics, Universidad Pablo de Olavide, 41013 Seville, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rodriguez-Rosell D",
+       "lastName": "Rodriguez-Rosell",
+       "firstName": "David",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Physical Performance & Sports Research Center, Universidad Pablo de Olavide, 41013 Seville, Spain."
+         },
+         {
+          "affiliation": "Department of Sport and Informatics, Universidad Pablo de Olavide, 41013 Seville, Spain."
+         },
+         {
+          "affiliation": "Investigation in Medicine and Sport Department, Research, Development and Innovation (R&D+i) Area, Sevilla Football Club, 41005 Sevilla, Spain."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-5678-1000"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2634-1220"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2745-6660"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-3906-1658"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "2",
+     "volume": "10",
+     "journalIssueId": 3918579,
+     "dateOfPublication": "2025 Mar",
+     "monthOfPublication": 3,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "J Funct Morphol Kinesiol",
+      "title": "Journal of functional morphology and kinesiology",
+      "essn": "2411-5142",
+      "issn": "2411-5142",
+      "isoabbreviation": "J Funct Morphol Kinesiol",
+      "nlmid": "101712257"
+     },
+     "printPublicationDate": "2025-03-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "106",
+    "abstractText": "Soccer is an intermittent sport characterized by periods of high intensity interspersed with varying levels of recovery. During the game, soccer players are required to perform numerous determinant actions, such as accelerations, decelerations, pace and directional changes, jumps, and strikes, which demand high levels of strength, speed, endurance, and mobility. This review aims to examine the current scientific evidence on velocity-based training (VBT) in order to assess its role in optimizing key actions in soccer players and to provide practical applications for its implementation. A narrative review of the scientific literature was conducted, focusing on velocity-based resistance training and its application in soccer, identifying relevant studies on its effectiveness in improving specific physical capacities and sports performance. Velocity-based resistance training is an effective strategy for enhancing key skills such as linear sprints, vertical jumps, and direction changes. Additionally, this methodology allows for the real-time adjustment of training loads, optimizing outcomes and minimizing muscle fatigue. Velocity-based resistance training represents an innovative and practical tool for soccer coaches and strength and conditioning professionals. Its application can contribute to optimizing physical performance, reducing injury risks, and improving sport-specific capabilities.",
+    "affiliation": "Educational and Pedagogical Studies and Research Group (GEIEP), Faculty of Education, Department in Physical Education, Corporación Universitaria Minuto de Dios, Bello 050001, Colombia.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Strength Training",
+      "Soccer Players",
+      "Resistance Exercises",
+      "Determinant Factor",
+      "Physical Improvements"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "doi",
+       "site": "Unpaywall",
+       "url": "https://doi.org/10.3390/jfmk10020106"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3390/jfmk10020106"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12015834"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12015834?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2025-06-26",
+    "dateOfRevision": "2025-06-28",
+    "electronicPublicationDate": "2025-03-26",
+    "firstPublicationDate": "2025-03-26",
+    "firstIndexDate": "2025-06-26",
+    "fullTextReceivedDate": "2025-11-28",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "40297302",
+    "source": "MED",
+    "pmid": "40297302",
+    "pmcid": "PMC12035418",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC12035418"
+     ]
+    },
+    "doi": "10.1136/bmjsem-2025-002503",
+    "title": "Velocity-based training in mid- and late-stage rehabilitation after anterior cruciate ligament reconstruction: a narrative review and practical guidelines.",
+    "authorString": "Forelli F, Marine P, Moiroux-Sahraoui A, Mazeas J, Thoelen M, Swinnen B, Bizzini M, Van Melick N, Rambaud A.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Forelli F",
+       "lastName": "Forelli",
+       "firstName": "Florian",
+       "initials": "F",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8650-2746"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "HE-Arc Santé, HES-SO University of Applied Sciences and Arts Western Switzerland, Delémont, Switzerland."
+         },
+         {
+          "affiliation": "Orthopedic Surgery, Ramsay General Health Group, Domont, France."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Marine P",
+       "lastName": "Marine",
+       "firstName": "Patrice",
+       "initials": "P",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Orthosport Rehab Center, Domont, France."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Moiroux-Sahraoui A",
+       "lastName": "Moiroux-Sahraoui",
+       "firstName": "Ayrton",
+       "initials": "A",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Orthopedic Surgery, Ramsay General Health Group, Domont, France."
+         },
+         {
+          "affiliation": "Orthosport Rehab Center, Domont, France."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Mazeas J",
+       "lastName": "Mazeas",
+       "firstName": "Jean",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Orthopedic Surgery, Ramsay General Health Group, Domont, France."
+         },
+         {
+          "affiliation": "Orthosport Rehab Center, Domont, France."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Thoelen M",
+       "lastName": "Thoelen",
+       "firstName": "Mathias",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Physical Therapy, Anna TopSupport, Eindhoven, The Netherlands."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Swinnen B",
+       "lastName": "Swinnen",
+       "firstName": "Bram",
+       "initials": "B",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Integrated Performance Training, Hasselt, Belgium."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bizzini M",
+       "lastName": "Bizzini",
+       "firstName": "Mario",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Human Performance Lab, Schulthess Clinic, Zürich, Switzerland."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Van Melick N",
+       "lastName": "Van Melick",
+       "firstName": "Nicky",
+       "initials": "N",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0998-1453"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sports and Orthopedics Research Center, Anna Hospital, Geldrop, The Netherlands."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rambaud A",
+       "lastName": "Rambaud",
+       "firstName": "Alexandre",
+       "initials": "A",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-7194-7777"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Inter-University Laboratory of Human Movement Biology, Univ Lyon, University Jean Monnet, Saint-Etienne, France."
+         },
+         {
+          "affiliation": "Physiotherapy Clinic of the Sport Center, La Talaudière, France."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-7194-7777"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8650-2746"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0998-1453"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "2",
+     "volume": "11",
+     "journalIssueId": 3926214,
+     "dateOfPublication": "2025 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "BMJ Open Sport Exerc Med",
+      "title": "BMJ open sport & exercise medicine",
+      "essn": "2055-7647",
+      "issn": "2055-7647",
+      "isoabbreviation": "BMJ Open Sport Exerc Med",
+      "nlmid": "101681007"
+     },
+     "printPublicationDate": "2025-01-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "e002503",
+    "abstractText": "Resistance training is critical for strength development and physical recovery after anterior cruciate ligament reconstruction (ACLR). Traditional percentage-based training (PBT) methods, which often focus on maximal strength and training to failure, are not able to objectify rapid force development. Velocity-based training (VBT), using movement velocity as a metric for training intensity, offers a promising alternative. This article promotes the use of VBT in ACLR rehabilitation, emphasising its potential to enhance neuromuscular recovery and return-to-sport outcomes. A narrative review of current literature focuses on mid- and late-stage rehabilitation to examine how VBT can address PBT limitations and improve functional recovery and sports performance. VBT provides several advantages, including real-time feedback, individualised load adjustments and better alignment with daily physiological variations. It facilitates the accurate training load prescriptions, enhances motivation and reduces unnecessary fatigue. Monitoring load-velocity profiles and velocity-loss thresholds enables more effective strength and hypertrophy adaptations without reaching muscular failure. In midstage rehabilitation, VBT not only helps to restore muscle strength and hypertrophy using submaximal loads and individualised velocity profiles but also addresses unwanted neuroplasticity following ACLR by providing augmented feedback and facilitating an external focus. In late-stage rehabilitation, VBT focuses on improving explosive strength and power, crucial for sports performance. Despite its benefits, VBT application in rehabilitation is limited by a lack of data on injured populations and specific exercises, such as open-chain single-joint movements. Integrating VBT allows practitioners to enhance traditional rehabilitation protocols, potentially leading to better clinical outcomes and providing a more personalised rehabilitation process.",
+    "affiliation": "HE-Arc Santé, HES-SO University of Applied Sciences and Arts Western Switzerland, Delémont, Switzerland.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Rehabilitation",
+      "Knee Injuries",
+      "Anterior Cruciate Ligament"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1136/bmjsem-2025-002503"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12035418"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12035418?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 6,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by-nc",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2025-04-29",
+    "dateOfRevision": "2026-09-24",
+    "electronicPublicationDate": "2025-04-24",
+    "firstPublicationDate": "2025-04-24",
+    "firstIndexDate": "2025-04-29",
+    "fullTextReceivedDate": "2025-11-29",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "37196672",
+    "source": "MED",
+    "pmid": "37196672",
+    "doi": "10.1055/a-2095-8254",
+    "title": "The Effect of Various Training Variables on Developing Muscle Strength in Velocity-based Training: A Systematic Review and Meta-analysis.",
+    "authorString": "Zhang X, Li H, Feng S, Su S.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Zhang X",
+       "lastName": "Zhang",
+       "firstName": "Xing",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Athletic Training, Guangzhou Sport University, Guangzhou, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Li H",
+       "lastName": "Li",
+       "firstName": "Hansen",
+       "initials": "H",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6147-1362"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Sports Science, College of Physical Education, Southwest University, Chongqing, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Feng S",
+       "lastName": "Feng",
+       "firstName": "Siyuan",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Laboratory of Genetics, University of Wisconsin-Madison, Madison, United States."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Su S",
+       "lastName": "Su",
+       "firstName": "Songpeng",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Athletic Training, Guangzhou Sport University, Guangzhou, China."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6147-1362"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "12",
+     "volume": "44",
+     "journalIssueId": 3658008,
+     "dateOfPublication": "2023 Nov",
+     "monthOfPublication": 11,
+     "yearOfPublication": 2023,
+     "journal": {
+      "medlineAbbreviation": "Int J Sports Med",
+      "title": "International journal of sports medicine",
+      "essn": "1439-3964",
+      "issn": "0172-4622",
+      "isoabbreviation": "Int J Sports Med",
+      "nlmid": "8008349"
+     },
+     "printPublicationDate": "2023-11-01"
+    },
+    "pubYear": "2023",
+    "pageInfo": "857-864",
+    "abstractText": "Velocity-based training is an advanced auto-regulation method that uses objective indices to dynamically regulate training loads. However, it is unclear currently how to maximize muscle strength with appropriate velocity-based training settings. To fill this gap, we conducted a series of dose-response and subgroup meta-analyses to check the effects of training variables/parameters, such as intensity, velocity loss, set, inter-set rest intervals, frequency, period, and program, on muscle strength in velocity-based training. A systematic literature search was performed to identify studies via PubMed, Web of Science, Embase, EBSCO, and Cochrane. One repetition maximum was selected as the outcome to indicate muscle strength. Eventually, twenty-seven studies with 693 trained individuals were included in the analysis. We found that the velocity loss of 15 to 30%, the intensity of 70 to 80%1RM, the set of 3 to 5 per session, the inter-set rest interval of 2 to 4 min, and the period of 7 to 12 weeks could be appropriate settings for developing muscle strength. Three periodical programming models in velocity-based training, including linear programming, undulating programming, and constant programming, were effective for developing muscle strength. Besides, changing periodical programming models around every 9 weeks may help to avoid a training plateau in strength adaption.",
+    "affiliation": "School of Athletic Training, Guangzhou Sport University, Guangzhou, China.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Repressor Proteins"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Rest"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Repressor Proteins",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1055/a-2095-8254"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 13,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "N",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2023-11-06",
+    "dateOfCreation": "2023-05-17",
+    "dateOfRevision": "2023-11-06",
+    "electronicPublicationDate": "2023-05-17",
+    "firstPublicationDate": "2023-05-17",
+    "firstIndexDate": "2023-05-18",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "39366003",
+    "source": "MED",
+    "pmid": "39366003",
+    "doi": "10.1139/apnm-2024-0136",
+    "title": "A narrative review of velocity-based training best practice: the importance of contraction intent versus movement speed.",
+    "authorString": "Behm DG, Konrad A, Nakamura M, Alizadeh S, Culleton R, Hadjizadeh Anvar S, Pearson LT, Ramirez-Campillo R, Sale DG.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Behm DG",
+       "lastName": "Behm",
+       "firstName": "David G",
+       "initials": "DG",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9406-6056"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Human Kinetics and Recreation, Memorial University of Newfoundland, St. John's, NL, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Konrad A",
+       "lastName": "Konrad",
+       "firstName": "Andreas",
+       "initials": "A",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5588-1824"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Human Kinetics and Recreation, Memorial University of Newfoundland, St. John's, NL, Canada."
+         },
+         {
+          "affiliation": "Institute of Human Movement Science, Sport and Health, Graz University, Graz, Austria."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Nakamura M",
+       "lastName": "Nakamura",
+       "firstName": "Masatoshi",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8184-1121"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Rehabilitation Sciences, NishiKyushu University, 4490-9 Ozaki, Kanzaki, Saga 842-8585, Japan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Alizadeh S",
+       "lastName": "Alizadeh",
+       "firstName": "Shahab",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Human Kinetics and Recreation, Memorial University of Newfoundland, St. John's, NL, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Culleton R",
+       "lastName": "Culleton",
+       "firstName": "Robyn",
+       "initials": "R",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Human Kinetics and Recreation, Memorial University of Newfoundland, St. John's, NL, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hadjizadeh Anvar S",
+       "lastName": "Hadjizadeh Anvar",
+       "firstName": "Saman",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Human Kinetics and Recreation, Memorial University of Newfoundland, St. John's, NL, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Pearson LT",
+       "lastName": "Pearson",
+       "firstName": "Liam T",
+       "initials": "LT",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Sport, Exercise and Rehabilitation; Northumbria University, Newcastle Upon Tyne, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ramirez-Campillo R",
+       "lastName": "Ramirez-Campillo",
+       "firstName": "Rodrigo",
+       "initials": "R",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-2035-3279"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Exercise and Rehabilitation Sciences Institute, School of Physical Therapy, Faculty of Rehabilitation Sciences, Universidad Andres Bello, Santiago 7591538, Chile."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Sale DG",
+       "lastName": "Sale",
+       "firstName": "Digby G",
+       "initials": "DG",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, McMaster University, Hamilton, ON, Canada."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5588-1824"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8011-8601"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8184-1121"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9406-6056"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-2035-3279"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "volume": "50",
+     "journalIssueId": 3887341,
+     "dateOfPublication": "2025 Jan",
+     "monthOfPublication": 1,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Appl Physiol Nutr Metab",
+      "title": "Applied physiology, nutrition, and metabolism = Physiologie appliquee, nutrition et metabolisme",
+      "essn": "1715-5320",
+      "issn": "1715-5312",
+      "isoabbreviation": "Appl Physiol Nutr Metab",
+      "nlmid": "101264333"
+     },
+     "printPublicationDate": "2025-01-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "1-9",
+    "abstractText": "Explosive movements requiring high force and power outputs are integral to many sports, posing distinct challenges for the neuromuscular system. Traditional resistance training can improve muscle strength, power, endurance, and range of motion; however, evidence regarding its effects on athletic performance, such as sprint speed, agility, and jump height, remains conflicting. The specificity of resistance training movements, including velocity, contraction type, and joint angles affects performance outcomes, demonstrates advantages when matching training modalities with targeted sports activities. However, independent of movement speed, the intent to contract explosively (ballistic) has also demonstrated high velocity-specific training adaptations. The purpose of this narrative review was to assess the impact of explosive or ballistic contraction intent on velocity-specific training adaptations. Such movement intent may predominantly elicit motor efferent neural adaptations, including motor unit recruitment and rate coding enhancements. Plyometrics, which utilize rapid stretch-shortening cycle movements, may augment high-speed movement efficiency and muscle activation, possibly leading to improved motor control through adaptations like faster eccentric force absorption, reduced amortization periods, and quicker transitions to explosive concentric contractions. An optimal training paradigm for power and performance enhancement might involve a combination of maximal explosive intent training with heavier loads and plyometric exercises with lighter loads at high velocities. This narrative review synthesizes key literature to answer whether contraction intent or movement speed is more critical for athletic performance enhancement, ultimately advocating for an integrative approach to resistance training tailored for sports-specific explosive action.",
+    "affiliation": "School of Human Kinetics and Recreation, Memorial University of Newfoundland, St. John's, NL, Canada.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Natural Science and Engineering Research Council of Canada",
+       "grantId": "RGPIN-2023-05861",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Movement"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Contraction",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Athletic Performance",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Power",
+      "Strength",
+      "Resistance Training",
+      "Speed",
+      "Plyometric Exercise",
+      "Stretch-shortening Cycle"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "doi",
+       "site": "Unpaywall",
+       "url": "https://doi.org/10.1139/apnm-2024-0136"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1139/apnm-2024-0136"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 25,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "N",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2025-04-24",
+    "dateOfCreation": "2024-10-04",
+    "dateOfRevision": "2025-05-15",
+    "electronicPublicationDate": "2024-10-04",
+    "firstPublicationDate": "2024-10-04",
+    "firstIndexDate": "2024-10-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "35954603",
+    "source": "MED",
+    "pmid": "35954603",
+    "pmcid": "PMC9368129",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC9368129"
+     ]
+    },
+    "doi": "10.3390/ijerph19159252",
+    "title": "The Role of Velocity-Based Training (VBT) in Enhancing Athletic Performance in Trained Individuals: A Meta-Analysis of Controlled Trials.",
+    "authorString": "Zhang X, Feng S, Peng R, Li H.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Zhang X",
+       "lastName": "Zhang",
+       "firstName": "Xing",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Sports Science, College of Physical Education, Southwest University, Chongqing 400715, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Feng S",
+       "lastName": "Feng",
+       "firstName": "Siyuan",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Laboratory of Genetics, University of Wisconsin-Madison, Madison, WI 53706, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Peng R",
+       "lastName": "Peng",
+       "firstName": "Rui",
+       "initials": "R",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Chemistry, McGill University, Montreal, QC H3A 0B8, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Li H",
+       "lastName": "Li",
+       "firstName": "Hansen",
+       "initials": "H",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6147-1362"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Sports Science, College of Physical Education, Southwest University, Chongqing 400715, China."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6147-1362"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "15",
+     "volume": "19",
+     "journalIssueId": 3397371,
+     "dateOfPublication": "2022 Jul",
+     "monthOfPublication": 7,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Int J Environ Res Public Health",
+      "title": "International journal of environmental research and public health",
+      "essn": "1660-4601",
+      "issn": "1661-7827",
+      "isoabbreviation": "Int J Environ Res Public Health",
+      "nlmid": "101238455"
+     },
+     "printPublicationDate": "2022-07-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "9252",
+    "abstractText": "Velocity-based training (VBT) is a rising auto-regulation method that dynamically regulates training loads to promote resistance training. However, the role of VBT in improving various athletic performances is still unclear. Hence, the presented study aimed to examine the role of VBT in improving lower limbs’ maximum strength, strength endurance, jump, and sprint performance among trained individuals. A systematic literature search was performed to identify studies on VBT for lower limb strength training via databases, including PubMed, Web of Science, Embase, EBSCO, Cochrane, CNKI (in Chinese), and Wanfang Database (in Chinese). Controlled trials that deployed VBT only without extra training content were considered. Eventually, nine studies with a total of 253 trained males (at least one year of training experience) were included in the meta-analysis. The pooled results suggest that VBT may effectively enhance lower limbs’ maximum strength (SMD = 0.76; p < 0.001; I2 = 0%), strength endurance (SMD = 1.19; p < 0.001; I2 = 2%), countermovement jump (SMD = 0.53; p < 0.001; I2 = 0%), and sprint ability (SMD of sprint time = −0.40; p < 0.001; I2 = 0%). These findings indicate the positive role of VBT in serving athletic training. Future research is warranted to focus on the effect of velocity loss of VBT on athletic performance.",
+    "affiliation": "Institute of Sports Science, College of Physical Education, Southwest University, Chongqing 400715, China.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "research-article",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Lower Extremity"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Controlled Clinical Trials as Topic"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Athletic Performance",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Strength Training",
+      "Resistance Training",
+      "Jump",
+      "Sprint",
+      "Auto-regulation",
+      "Vbt",
+      "Strength Endurance"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://www.mdpi.com/1660-4601/19/15/9252/pdf?version=1659081717"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3390/ijerph19159252"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9368129"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9368129?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 30,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2022-08-15",
+    "dateOfCreation": "2022-08-12",
+    "dateOfRevision": "2025-10-31",
+    "electronicPublicationDate": "2022-07-28",
+    "firstPublicationDate": "2022-07-28",
+    "firstIndexDate": "2022-08-12",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "34069249",
+    "source": "MED",
+    "pmid": "34069249",
+    "pmcid": "PMC8156188",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC8156188"
+     ]
+    },
+    "doi": "10.3390/ijerph18105257",
+    "title": "Effects of Velocity-Based Training on Strength and Power in Elite Athletes-A Systematic Review.",
+    "authorString": "Włodarczyk M, Adamus P, Zieliński J, Kantanista A.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Włodarczyk M",
+       "lastName": "Włodarczyk",
+       "firstName": "Michał",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5878-208X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Athletics, Strength and Conditioning, Poznan University of Physical Education, 61-871 Poznań, Poland."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Adamus P",
+       "lastName": "Adamus",
+       "firstName": "Przemysław",
+       "initials": "P",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Independent Researcher, 63-000 Wielkopolska, Poland."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zieliński J",
+       "lastName": "Zieliński",
+       "firstName": "Jacek",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2782-9973"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Athletics, Strength and Conditioning, Poznan University of Physical Education, 61-871 Poznań, Poland."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kantanista A",
+       "lastName": "Kantanista",
+       "firstName": "Adam",
+       "initials": "A",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-6405-521X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Lifelong Sports, Poznan University of Physical Education, 61-871 Poznań, Poland."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-6405-521X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2782-9973"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5878-208X"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "10",
+     "volume": "18",
+     "journalIssueId": 3175919,
+     "dateOfPublication": "2021 May",
+     "monthOfPublication": 5,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Int J Environ Res Public Health",
+      "title": "International journal of environmental research and public health",
+      "essn": "1660-4601",
+      "issn": "1661-7827",
+      "isoabbreviation": "Int J Environ Res Public Health",
+      "nlmid": "101238455"
+     },
+     "printPublicationDate": "2021-05-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "5257",
+    "abstractText": "Due to drawbacks of the percentage-based approach, velocity-based training was proposed as a method to better and more accurately prescribe training loads to increase general and specific performance. The purpose of this study was to perform a systematic review of the studies that show effects of velocity-based resistance training on strength and power performance in elite athletes. Electronic searches of computerized databases were performed according to a protocol that was agreed by all co-authors. Four databases-SportDiscus with Full Text and MEDLINE via EBSCO, SCOPUS, and Web of Science-were searched. Seven studies were found which researched the effects of velocity-based resistance training on athletes after a given training period. The analyzed studies suggest that applying velocity losses of 10-20% can help induce neuromuscular adaptations and reduce neuromuscular fatigue. Using velocity zones as part of a separate or combined (e.g., plyometric) training program can elicit adaptations in body composition and performance parameters. Moreover, velocity zones can be programmed using a periodized or non-periodized fixed velocity zones protocol. Lastly, obtaining instantaneous feedback during training is a more effective tool for increasing performance in sport-specific parameters, and should be used by sport practitioners to help keep athletes accountable for their performance.",
+    "affiliation": "Department of Athletics, Strength and Conditioning, Poznan University of Physical Education, 61-871 Poznań, Poland.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Athletes"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Resistance",
+      "Feedback",
+      "Speed",
+      "Velocity Loss",
+      "Velocity Zones"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://www.mdpi.com/1660-4601/18/10/5257/pdf?version=1621003372"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3390/ijerph18105257"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8156188"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8156188?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 41,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2021-06-24",
+    "dateOfCreation": "2021-06-02",
+    "dateOfRevision": "2025-06-23",
+    "electronicPublicationDate": "2021-05-14",
+    "firstPublicationDate": "2021-05-14",
+    "firstIndexDate": "2021-06-03",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "34793506",
+    "source": "MED",
+    "pmid": "34793506",
+    "pmcid": "PMC8601436",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC8601436"
+     ]
+    },
+    "doi": "10.1371/journal.pone.0259790",
+    "title": "Effects of velocity based training vs. traditional 1RM percentage-based training on improving strength, jump, linear sprint and change of direction speed performance: A Systematic review with meta-analysis.",
+    "authorString": "Liao KF, Wang XX, Han MY, Li LL, Nassis GP, Li YM.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Liao KF",
+       "lastName": "Liao",
+       "firstName": "Kai-Fang",
+       "initials": "KF",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-6893-1491"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Physical Education and Sport Training, Shanghai University of Sport, Shanghai, China."
+         },
+         {
+          "affiliation": "Department of Strength and Conditioning, Guangdong Vocational Institute of Sport, Guangzhou, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wang XX",
+       "lastName": "Wang",
+       "firstName": "Xin-Xin",
+       "initials": "XX",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Physical Education and Sport Training, Shanghai University of Sport, Shanghai, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Han MY",
+       "lastName": "Han",
+       "firstName": "Meng-Yuan",
+       "initials": "MY",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Physical Education and Sport Training, Shanghai University of Sport, Shanghai, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Li LL",
+       "lastName": "Li",
+       "firstName": "Lin-Long",
+       "initials": "LL",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Physical Education and Sport Training, Shanghai University of Sport, Shanghai, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Nassis GP",
+       "lastName": "Nassis",
+       "firstName": "George P",
+       "initials": "GP",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-2953-3911"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Physical Education Department-College of Education (CEDU), United Arab Emirates University, Al Ain, Abu Dhabi, United Arab Emirates."
+         },
+         {
+          "affiliation": "Department of Sports Science and Clinical Biomechanics, SDU Sport and Health Sciences Cluster (SHSC), University of Southern Denmark, Odense, Denmark."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Li YM",
+       "lastName": "Li",
+       "firstName": "Yong-Ming",
+       "initials": "YM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9654-0199"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Physical Education and Sport Training, Shanghai University of Sport, Shanghai, China."
+         },
+         {
+          "affiliation": "China Institute of Sport Science, Beijing, China."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-6893-1491"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9654-0199"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-2953-3911"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "11",
+     "volume": "16",
+     "journalIssueId": 3262968,
+     "dateOfPublication": "2021 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "PLoS One",
+      "title": "PloS one",
+      "essn": "1932-6203",
+      "issn": "1932-6203",
+      "isoabbreviation": "PLoS One",
+      "nlmid": "101285081"
+     },
+     "printPublicationDate": "2021-01-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "e0259790",
+    "abstractText": "<h4>Background</h4>There has been a surge of interest on velocity-based training (VBT) in recent years. However, it remains unclear whether VBT is more effective in improving strength, jump, linear sprint and change of direction speed (CODs) than the traditional 1RM percentage-based training (PBT).<h4>Objectives</h4>To compare the training effects in VBT vs. PBT upon strength, jump, linear sprint and CODs performance.<h4>Data sources</h4>Web of science, PubMed and China National Knowledge Infrastructure (CNKI).<h4>Study eligibility criteria</h4>The qualified studies for inclusion in the meta-analysis must have included a resistance training intervention that compared the effects of VBT and PBT on at least one measure of strength, jump, linear sprint and CODs with participants aged ≥16 yrs. and be written in English or Chinese.<h4>Methods</h4>The modified Pedro Scale was used to assess the risk of bias. Random-effects model was used to calculate the effects via the mean change and pre-SD (standard deviation). Mean difference (MD) or Standardized mean difference (SMD) was presented correspondently with 95% confidence interval (CI).<h4>Results</h4>Six studies met the inclusion criteria including a total of 124 participants aged 16 to 30 yrs. The differences of training effects between VBT and PBT were not significant in back squat 1RM (MD = 3.03kg; 95%CI: -3.55, 9.61; I2 = 0%) and load velocity 60%1RM (MD = 0.02m/s; 95%CI: -0.01,0.06; I2 = 0%), jump (SMD = 0.27; 95%CI: -0.15,0.7; I2 = 0%), linear sprint (MD = 0.01s; 95%CI: -0.06, 0.07; I2 = 0%), and CODs (SMD = 0.49; 95%CI: -0.14, 1.07; I2 = 0%).<h4>Conclusion</h4>Both VBT and PBT can enhance strength, jump, linear sprint and CODs performance effectively without significant group difference.",
+    "affiliation": "School of Physical Education and Sport Training, Shanghai University of Sport, Shanghai, China.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Research Support, Non-U.S. Gov't",
+      "research-article",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Ministry of Science and Technology of the People&apos;s Republic of China",
+       "grantId": "2018YFF0300901",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Data Collection"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "China"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1371/journal.pone.0259790"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8601436"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8601436?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 19,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2022-01-10",
+    "dateOfCreation": "2021-11-18",
+    "dateOfRevision": "2022-01-10",
+    "electronicPublicationDate": "2021-11-18",
+    "firstPublicationDate": "2021-11-18",
+    "firstIndexDate": "2021-11-30",
+    "fullTextReceivedDate": "2025-02-02",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "33808302",
+    "source": "MED",
+    "pmid": "33808302",
+    "pmcid": "PMC8066834",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC8066834"
+     ]
+    },
+    "doi": "10.3390/sports9040047",
+    "title": "The Implementation of Velocity-Based Training Paradigm for Team Sports: Framework, Technologies, Practical Recommendations and Challenges.",
+    "authorString": "Balsalobre-Fernández C, Torres-Ronda L.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Balsalobre-Fernández C",
+       "lastName": "Balsalobre-Fernández",
+       "firstName": "Carlos",
+       "initials": "C",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8329-1581"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Applied Biomechanics and Sports Technology Research Group, Autonomous University of Madrid, 28049 Madrid, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Torres-Ronda L",
+       "lastName": "Torres-Ronda",
+       "firstName": "Lorena",
+       "initials": "L",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute for Health & Sport, Victoria University, Melbourne, VIC 3011, Australia."
+         },
+         {
+          "affiliation": "Spanish National Basketball Federation, 28036 Madrid, Spain."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8329-1581"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "4",
+     "volume": "9",
+     "journalIssueId": 3145524,
+     "dateOfPublication": "2021 Mar",
+     "monthOfPublication": 3,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Sports (Basel)",
+      "title": "Sports (Basel, Switzerland)",
+      "essn": "2075-4663",
+      "issn": "2075-4663",
+      "isoabbreviation": "Sports (Basel)",
+      "nlmid": "101722684"
+     },
+     "printPublicationDate": "2021-03-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "47",
+    "abstractText": "While velocity-based training is currently a very popular paradigm to designing and monitoring resistance training programs, its implementation remains a challenge in team sports, where there are still some confusion and misinterpretations of its applications. In addition, in contexts with large squads, it is paramount to understand how to best use movement velocity in different exercises in a useful and time-efficient way. This manuscript aims to provide clarifications on the velocity-based training paradigm, movement velocity tracking technologies, assessment procedures and practical recommendations for its application during resistance training sessions, with the purpose of increasing performance, managing fatigue and preventing injuries. Guidelines to combine velocity metrics with subjective scales to prescribe training loads are presented, as well as methods to estimate 1-Repetition Maximum (1RM) on a daily basis using individual load-velocity profiles. Additionally, monitoring strategies to detect and evaluate changes in performance over time are discussed. Finally, limitations regarding the use of velocity of execution tracking devices and metrics such as \"muscle power\" are commented upon.",
+    "affiliation": "Applied Biomechanics and Sports Technology Research Group, Autonomous University of Madrid, 28049 Madrid, Spain.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Technology",
+      "Monitoring",
+      "Resistance Training",
+      "Team Sports",
+      "Mean Concentric Velocity"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3390/sports9040047"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8066834"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8066834?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 27,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2021-04-03",
+    "dateOfRevision": "2021-04-28",
+    "electronicPublicationDate": "2021-03-30",
+    "firstPublicationDate": "2021-03-30",
+    "firstIndexDate": "2021-04-06",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "33466983",
+    "source": "MED",
+    "pmid": "33466983",
+    "pmcid": "PMC7739360",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC7739360"
+     ]
+    },
+    "doi": "10.3390/jfmk3040055",
+    "title": "The Role of Velocity Based Training in the Strength Periodization for Modern Athletes.",
+    "authorString": "Guerriero A, Varalda C, Piacentini MF.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Guerriero A",
+       "lastName": "Guerriero",
+       "firstName": "Aristide",
+       "initials": "A",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Human Movement and Sport Sciences, University of Rome \"Foro Italico\", 00135 Rome, Italy."
+         },
+         {
+          "affiliation": "Italian Weight Lifting Federation, 00196 Rome, Italy."
+         },
+         {
+          "affiliation": "Brasil Rugby, Sao Paulo 01407-200, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Varalda C",
+       "lastName": "Varalda",
+       "firstName": "Carlo",
+       "initials": "C",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Italian Weight Lifting Federation, 00196 Rome, Italy."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Piacentini MF",
+       "lastName": "Piacentini",
+       "firstName": "Maria Francesca",
+       "initials": "MF",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1927-7478"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Human Movement and Sport Sciences, University of Rome \"Foro Italico\", 00135 Rome, Italy."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1927-7478"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "4",
+     "volume": "3",
+     "journalIssueId": 3090637,
+     "dateOfPublication": "2018 Nov",
+     "monthOfPublication": 11,
+     "yearOfPublication": 2018,
+     "journal": {
+      "medlineAbbreviation": "J Funct Morphol Kinesiol",
+      "title": "Journal of functional morphology and kinesiology",
+      "essn": "2411-5142",
+      "issn": "2411-5142",
+      "isoabbreviation": "J Funct Morphol Kinesiol",
+      "nlmid": "101712257"
+     },
+     "printPublicationDate": "2018-11-01"
+    },
+    "pubYear": "2018",
+    "pageInfo": "E55",
+    "abstractText": "Resistance training (RT) is considered the most important method to improve the athlete's strength and rate of force development (RFD). In the last decade, the importance of monitoring velocity during RT has drastically grown, because of an increased availability of linear position transducers (LPT) and inertial measurement units (IMU). The purpose of this review is to analyze the existing literature on testing techniques and performance strategies used to enhance strength and power performance of elite athletes, by monitoring the velocity of resistance training. The authors focus in particular on the level of effort of resistance training defined by velocity; how the loss of velocity correlates with the degree of fatigue and how it can be used to enhance the performance of competitive athletes; the use of LPT as part of the daily routine of the strength and conditioning programs in competitive sport. It is therefore critical for the sports scientists to have a correct understanding of the basic concepts of the velocity-based training and their application to elite sports. The ultimate goal is to give some indications on the velocity-based resistance training integration in the programs of different sports in the high performance environment.",
+    "affiliation": "Department of Human Movement and Sport Sciences, University of Rome \"Foro Italico\", 00135 Rome, Italy.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Strength",
+      "Velocity",
+      "Linear Transducer"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3390/jfmk3040055"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC7739360"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC7739360?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 32,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2021-01-20",
+    "dateOfRevision": "2021-01-22",
+    "electronicPublicationDate": "2018-11-16",
+    "firstPublicationDate": "2018-11-16",
+    "firstIndexDate": "2021-01-20",
+    "fullTextReceivedDate": "2025-02-03",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

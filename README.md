@@ -4,6 +4,8 @@
 
 ## Local development
 
+Node 22 LTS is recommended (`nvm use`; see `.nvmrc`).
+
 ```sh
 npm install
 npm run dev
