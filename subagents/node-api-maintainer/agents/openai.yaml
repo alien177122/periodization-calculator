@@ -1,4 +1,0 @@
-interface:
-  display_name: "Node API Maintainer"
-  short_description: "Maintain Express API and SQLite flows."
-  default_prompt: "Implement or refactor backend API routes in server/, preserve DB compatibility, and run checks."
