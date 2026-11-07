@@ -148,7 +148,7 @@ export function useCalculatorState({
       }
 
       setCalculateError(
-        error instanceof Error ? error.message : 'Ошибка расчёта. Попробуйте ещё раз.',
+        error instanceof Error ? error.message : 'Ошибка расчёта. Попробуй снова.',
       );
     } finally {
       setIsCalculating(false);

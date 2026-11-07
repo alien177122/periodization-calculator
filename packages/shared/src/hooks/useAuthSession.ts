@@ -2,6 +2,7 @@ import {useEffect, useMemo, useState} from 'react';
 import type {UserData} from '../types/index.ts';
 import type {TokenStorage} from '../types/auth.ts';
 import {createApiClient} from '../utils/api.ts';
+import {readDeviceSnapshot, readOutbox} from '../utils/offlineOutbox.ts';
 import {passwordPolicyError, validatePassword} from '../utils/passwordValidation.ts';
 
 export interface AuthSessionOptions {
@@ -76,6 +77,15 @@ export function useAuthSession({storage, apiBaseUrl}: AuthSessionOptions) {
       .then(async data => {
         if (cancelled) return;
 
+        if (typeof localStorage !== 'undefined') {
+          const pendingEdit = readOutbox(localStorage, userName);
+          if (pendingEdit) {
+            setSessionError('');
+            setUserData(pendingEdit.data);
+            return;
+          }
+        }
+
         if (data) {
           setSessionError('');
           setUserData(data);
@@ -102,16 +112,15 @@ export function useAuthSession({storage, apiBaseUrl}: AuthSessionOptions) {
 
         if (typeof localStorage !== 'undefined') {
           try {
-            const cached = localStorage.getItem(`gym_user_data_${userName}`);
-            if (cached) {
-              const data = JSON.parse(cached) as UserData;
+            const snapshot = readDeviceSnapshot(localStorage, userName);
+            if (snapshot) {
               setSessionError('');
-              setUserData(data);
-              console.info('Loaded user data from localStorage cache (offline fallback)');
+              setUserData(snapshot);
+              console.info('Loaded user data from local snapshot (offline fallback)');
               return;
             }
           } catch (e) {
-            console.error('Failed to parse cached user data:', e);
+            console.error('Failed to read local user snapshot:', e);
           }
         }
 

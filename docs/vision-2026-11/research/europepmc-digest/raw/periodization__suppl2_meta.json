@@ -1,0 +1,5065 @@
+{
+ "version": "6.9",
+ "hitCount": 22,
+ "request": {
+  "queryString": "(TITLE:(periodized OR periodization) AND ABSTRACT:(strength OR resistance OR \"1RM\"))AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "41869632",
+    "source": "MED",
+    "pmid": "41869632",
+    "pmcid": "PMC12999919",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC12999919"
+     ]
+    },
+    "doi": "10.3389/fpubh.2026.1707627",
+    "title": "Comparison of linear and undulating periodization resistance training on athletic capacities and health promotion: a systematic review and meta-analysis.",
+    "authorString": "Zhang Z, Ya X, Zhao X, Liu Z, Luo J, Liu Y, Bu Y.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Zhang Z",
+       "lastName": "Zhang",
+       "firstName": "ZhiYu",
+       "initials": "Z",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Physical Education, Jiangsu Normal University, Xuzhou, Jiangsu, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ya X",
+       "lastName": "Ya",
+       "firstName": "Xudong",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Vocational and Continuing Education, Ningxia Normal University, Guyuan, Ningxia, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zhao X",
+       "lastName": "Zhao",
+       "firstName": "Xinyi",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Physical Education, Jiangsu Normal University, Xuzhou, Jiangsu, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Liu Z",
+       "lastName": "Liu",
+       "firstName": "Ziyao",
+       "initials": "Z",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Physical Education, Jiangsu Normal University, Xuzhou, Jiangsu, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Luo J",
+       "lastName": "Luo",
+       "firstName": "Jiaxin",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Physical Education, Jiangsu Normal University, Xuzhou, Jiangsu, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Liu Y",
+       "lastName": "Liu",
+       "firstName": "Yujia",
+       "initials": "Y",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Physical Education, Jiangsu Normal University, Xuzhou, Jiangsu, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bu Y",
+       "lastName": "Bu",
+       "firstName": "Yifeng",
+       "initials": "Y",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Physical Education, Jiangsu Normal University, Xuzhou, Jiangsu, China."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "14",
+     "journalIssueId": 4110762,
+     "dateOfPublication": "2026 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Front Public Health",
+      "title": "Frontiers in public health",
+      "essn": "2296-2565",
+      "issn": "2296-2565",
+      "isoabbreviation": "Front Public Health",
+      "nlmid": "101616579"
+     },
+     "printPublicationDate": "2026-01-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "1707627",
+    "abstractText": "<h4>Objective</h4>This study aims to compare the effects of linear periodization (LP) and undulating periodization (UP) resistance training on athletic ability, body composition, blood lipid, and blood glucose.<h4>Methods</h4>We searched PubMed, Embase, Scopus, and Web of Science to collect relevant studies comparing the health-promoting effects of LP and UP up to July 20th, 2025. Two authors independently extracted and coded the data. The TESTEX Scale was employed to assess the quality of included studies. Egger's test and sensitivity analysis were conducted to evaluate the robustness of results. Subsequent subgroup analyses were carried out based on participants' age, sex, training duration, and obesity status.<h4>Results</h4>A total of 29 studies met the inclusion criteria. The results showed that LP and UP had comparable effects on enhancing athletic capacity, improving body composition, and regulating blood glucose and insulin resistance. Further subgroup analysis indicated that UP was superior to LP in increasing lean body mass among obese individuals and achieving short-term weight loss goals. In contrast, LP was more appropriate for long-term weight loss. The sole study involving only males suggested that UP was more effective than LP in reducing insulin resistance in men.<h4>Conclusion</h4>LP and UP demonstrated similar effects on enhancing athletic capacity, improving body composition, and regulating blood glucose and insulin resistance. UP was superior to LP in improving body composition among obese individuals and attaining short-term weight loss goals. Training load regiment can be prescribed according to specific objectives in practical applications.",
+    "affiliation": "Institute of Physical Education, Jiangsu Normal University, Xuzhou, Jiangsu, China.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Comparative Study",
+      "Systematic Review",
+      "systematic-review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Blood Glucose"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Lipids",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "BL",
+          "qualifierName": "blood"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Body Composition",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Health Promotion",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Athletic Performance",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Blood Lipid",
+      "Body composition",
+      "Blood Glucose",
+      "Undulating Periodization",
+      "Linear Periodization",
+      "Athletic Capacity"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Lipids",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Blood Glucose",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3389/fpubh.2026.1707627"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12999919"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12999919?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2026-07-13",
+    "dateOfCreation": "2026-03-23",
+    "dateOfRevision": "2026-08-13",
+    "electronicPublicationDate": "2026-03-05",
+    "firstPublicationDate": "2026-03-05",
+    "firstIndexDate": "2026-03-23",
+    "fullTextReceivedDate": "2026-03-20",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "42931601",
+    "source": "MED",
+    "pmid": "42931601",
+    "pmcid": "PMC13709544",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC13709544"
+     ]
+    },
+    "doi": "10.3390/sports14100464",
+    "title": "Power Training Methods Across the Load-Velocity Continuum: Mechanisms, Applications, and Periodization.",
+    "authorString": "Pinto M, Crisóstomo J, Silva R, Kirk C, Abián-Vicén J, Monteiro L.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Pinto M",
+       "lastName": "Pinto",
+       "firstName": "Manuel",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0009-2384-9350"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "CIDEFES, Faculdade de Educação Física e Desporto, Lusófona University, 1749-024 Lisbon, Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Crisóstomo J",
+       "lastName": "Crisóstomo",
+       "firstName": "João",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "CIDEFES, Faculdade de Educação Física e Desporto, Lusófona University, 1749-024 Lisbon, Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Silva R",
+       "lastName": "Silva",
+       "firstName": "Robson",
+       "initials": "R",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "FADEUP, Faculty of Sport, University of Porto, 4200-450 Porto, Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kirk C",
+       "lastName": "Kirk",
+       "firstName": "Christopher",
+       "initials": "C",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6207-027X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport and Physical Activity Research Centre, Sheffield Hallam University, Collegiate Crescent, Sheffield S10 2BP, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Abián-Vicén J",
+       "lastName": "Abián-Vicén",
+       "firstName": "Javier",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9635-3289"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Performance and Sport Rehabilitation Laboratory, Faculty of Sport Sciences, University of Castilla-La Mancha, Avda. Carlos III s/n, 45071 Toledo, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Monteiro L",
+       "lastName": "Monteiro",
+       "firstName": "Luís",
+       "initials": "L",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8118-5593"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "CIDEFES, Faculdade de Educação Física e Desporto, Lusófona University, 1749-024 Lisbon, Portugal."
+         },
+         {
+          "affiliation": "ICPOL Research Center, Higher Institute of Police Sciences and Internal Security, 1300-352 Lisbon, Portugal."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8118-5593"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9635-3289"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6207-027X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0009-2384-9350"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "10",
+     "volume": "14",
+     "journalIssueId": 4299312,
+     "dateOfPublication": "2026 Oct",
+     "monthOfPublication": 10,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Sports (Basel)",
+      "title": "Sports (Basel, Switzerland)",
+      "essn": "2075-4663",
+      "issn": "2075-4663",
+      "isoabbreviation": "Sports (Basel)",
+      "nlmid": "101722684"
+     },
+     "printPublicationDate": "2026-10-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "464",
+    "abstractText": "Muscular power is a critical determinant of athletic performance. Despite the wide range of resistance training methods proposed to enhance power, uncertainty remains regarding their physiological rationale, practical applications, and optimal integration within long-term training programs. This narrative review synthesizes current evidence on the principal resistance training methods for muscular power development and provides an evidence-informed framework for exercise selection and periodized programming. A structured literature search was conducted using PubMed, SPORTDiscus, and Scopus, complemented by additional sources and reference screening. Seventeen studies were retained for the evidence mapping, while systematic reviews, meta-analyses, position stands, and narrative reviews were used to provide conceptual background and contextual interpretation. No formal study-level methodological quality appraisal was performed; therefore, the findings were interpreted as an evidence-informed narrative synthesis rather than an evidence-graded assessment of training-method effectiveness. Current evidence indicates that different resistance training methods target specific regions of the load-velocity continuum through distinct neuromuscular adaptations. Heavy resistance training primarily enhances maximal force production, whereas ballistic training, Olympic weightlifting derivatives, velocity-based training, optimal power load, cluster sets, variable resistance, isometric training, eccentric overload, complex-contrast training, and triphasic training provide complementary stimuli for optimizing muscular power through different approaches. Overall, the evidence supports integrating complementary resistance training methods within a periodized program tailored to the athlete's training status, sport-specific demands, and competitive calendar to maximize power development.",
+    "affiliation": "CIDEFES, Faculdade de Educação Física e Desporto, Lusófona University, 1749-024 Lisbon, Portugal.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Resistance Training",
+      "Power Training",
+      "Muscular Power",
+      "Strength And Conditioning",
+      "Velocity-based Training"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3390/sports14100464"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC13709544"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC13709544?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2026-10-26",
+    "dateOfCreation": "2026-10-26",
+    "dateOfRevision": "2026-10-28",
+    "electronicPublicationDate": "2026-10-20",
+    "firstPublicationDate": "2026-10-20",
+    "firstIndexDate": "2026-10-27",
+    "fullTextReceivedDate": "2026-10-27",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "40455651",
+    "source": "MED",
+    "pmid": "40455651",
+    "doi": "10.1093/bmb/ldaf006",
+    "title": "Neuroplastic periodization in tendinopathy.",
+    "authorString": "Kakavas G, Forelli F, Korakakis V, Malliaropoulos N, Maffulli N.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Kakavas G",
+       "lastName": "Kakavas",
+       "firstName": "Georgios",
+       "initials": "G",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Fysiotek, Spine and Sports Lab, Fysiotek Spine & Sports Lab, 17562 Athens, Greece."
+         },
+         {
+          "affiliation": "Department of Physical Education and Sport Science, ErgoMech-Lab, University of Thessaly, 38221 Volos, Greece."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Forelli F",
+       "lastName": "Forelli",
+       "firstName": "Florian",
+       "initials": "F",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8650-2746"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Haute-Ecole Arc Santé, HES-SO University of Applied Sciences and Arts Western Switzerland, 2800 Delémont, Switzerland."
+         },
+         {
+          "affiliation": "Orthopaedic Surgery Department, Clinic of Domont, Ramsay Healthcare, OrthoLab, 95330 Domont, France."
+         },
+         {
+          "affiliation": "Société Française des Masseurs-Kinésithérapeutes du Sport Lab, 93380 Pierrefite sur Seine, France."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Korakakis V",
+       "lastName": "Korakakis",
+       "firstName": "Vasileios",
+       "initials": "V",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Health Sciences, School of Life Sciences and Health Sciences, PhD in Physiotherapy Program, University of Nicosia, 2417 Nicosia, Cyprus."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Malliaropoulos N",
+       "lastName": "Malliaropoulos",
+       "firstName": "Nikolaos",
+       "initials": "N",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Center of Orthopaedics and Regenerative Medicine, Aristotle University Thessaloniki, 54124 Hellas, Greece."
+         },
+         {
+          "affiliation": "Centre for Sports and Exercise Medicine, Queen Mary University of London, E1 4RQ London, United Kingdom."
+         },
+         {
+          "affiliation": "Sports Clinic, Mile End Hospital, Barts and the London, E1 4DG London, United Kingdom."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Maffulli N",
+       "lastName": "Maffulli",
+       "firstName": "Nicola",
+       "initials": "N",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5327-3702"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Sports and Exercise Medicine, Queen Mary University of London, E1 4RQ London, United Kingdom."
+         },
+         {
+          "affiliation": "Department of Trauma and Orthopaedic Surgery, Faculty of Medicine and Psychology, Sapienza University, 00185 Roma, Italy."
+         },
+         {
+          "affiliation": "School of Medicine, Institute of Science and Technology in Medicine, Guy Hilton Research Centre, Keele University, Thornburrow Drive, Hartshill, Stoke-on-Trent ST4 7QB, England."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8650-2746"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5327-3702"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "154",
+     "journalIssueId": 3924782,
+     "dateOfPublication": "2025 Apr",
+     "monthOfPublication": 4,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Br Med Bull",
+      "title": "British medical bulletin",
+      "essn": "1471-8391",
+      "issn": "0007-1420",
+      "isoabbreviation": "Br Med Bull",
+      "nlmid": "0376542"
+     },
+     "printPublicationDate": "2025-04-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "ldaf006",
+    "abstractText": "<h4>Introduction</h4>Periodized rehabilitation for tendinopathies integrates principles of athletic training into structured protocols to optimize tendon healing and functional recovery minimizing recurrence. This review explores the role of concurrent and phasic periodization strategies in tendon rehabilitation, focusing on optimizing strength, power, and neuromuscular control.<h4>Areas of agreement</h4>Early phases prioritize pain management and load capacity through prolonged isometric contractions, to improve neuromuscular engagement without exacerbating symptoms. Heavy, slow resistance exercises, central to progressive loading, facilitate tendon remodeling and strength development. Subsequent phases incorporate energy storage and release, sport-specific exercises tailored to individual goals, using externally paced movements to enhance motor control and corticospinal drive. Neuroplastic training is promising, aligning physical rehabilitation with cognitive engagement to optimize motor learning and reduce maladaptive patterns.<h4>Areas of controversy</h4>At present, no randomized controlled trials have tested the periodization concept in the management of tendinopathy conditions.<h4>Growing points</h4>Systematic evaluation, including range of motion, tissue flexibility, and limb biomechanics, is necessary to identify and address kinetic chain dysfunctions in patients with tendon ailments. Reintegration into sport or activity should follow clear benchmarks, such as symmetrical strength, pain-free function, and tolerance for high-intensity loads.<h4>Source of data</h4>Analysis of the current literature, and expert opinion.<h4>Areas timely for developing research</h4>This evidence-based framework offers clinicians a practical roadmap for tendon rehabilitation, combining physiological and biomechanical considerations to support safe return to sport or activity. A structured individualized approach ensures optimal recovery by addressing movement dysfunctions, monitoring load tolerance, and reducing the risk of re-injury.",
+    "affiliation": "Fysiotek, Spine and Sports Lab, Fysiotek Spine & Sports Lab, 17562 Athens, Greece.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Range of Motion, Articular",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Exercise Therapy",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Recovery of Function"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Neuronal Plasticity",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Tendinopathy",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PP",
+          "qualifierName": "physiopathology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "RH",
+          "qualifierName": "rehabilitation"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Neuromuscular Control",
+      "Periodization",
+      "Heavy Slow Resistance",
+      "Tendon Rehabilitation",
+      "Neuroplastic Training"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1093/bmb/ldaf006"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 5,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2025-06-02",
+    "dateOfCreation": "2025-06-02",
+    "dateOfRevision": "2026-09-29",
+    "firstPublicationDate": "2025-04-01",
+    "firstIndexDate": "2025-06-11",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "35044672",
+    "source": "MED",
+    "pmid": "35044672",
+    "doi": "10.1007/s40279-021-01636-1",
+    "title": "Effects of Periodization on Strength and Muscle Hypertrophy in Volume-Equated Resistance Training Programs: A Systematic Review and Meta-analysis.",
+    "authorString": "Moesgaard L, Beck MM, Christiansen L, Aagaard P, Lundbye-Jensen J.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Moesgaard L",
+       "lastName": "Moesgaard",
+       "firstName": "Lukas",
+       "initials": "L",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6501-322X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Nutrition, Exercise and Sports, University of Copenhagen, Noerre Alle 51, 2200, Copenhagen, Denmark."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Beck MM",
+       "lastName": "Beck",
+       "firstName": "Mikkel Malling",
+       "initials": "MM",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Nutrition, Exercise and Sports, University of Copenhagen, Noerre Alle 51, 2200, Copenhagen, Denmark."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Christiansen L",
+       "lastName": "Christiansen",
+       "firstName": "Lasse",
+       "initials": "L",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Danish Research Centre for Magnetic Resonance, Centre for Functional and Diagnostic Imaging and Research, Copenhagen University Hospital, Amager and Hvidovre, Hvidovre, Denmark."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Aagaard P",
+       "lastName": "Aagaard",
+       "firstName": "Per",
+       "initials": "P",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9773-7361"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Sports Science and Clinical Biomechanics, Research Unit for Muscle Physiology and Biomechanics, University of Southern Denmark, Odense M, Denmark."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lundbye-Jensen J",
+       "lastName": "Lundbye-Jensen",
+       "firstName": "Jesper",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3144-861X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Nutrition, Exercise and Sports, University of Copenhagen, Noerre Alle 51, 2200, Copenhagen, Denmark. jlundbye@nexs.ku.dk."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6501-322X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9773-7361"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3144-861X"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "7",
+     "volume": "52",
+     "journalIssueId": 3378091,
+     "dateOfPublication": "2022 Jul",
+     "monthOfPublication": 7,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2022-07-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "1647-1666",
+    "abstractText": "<h4>Background</h4>In resistance training, periodization is often used in an attempt to promote development of strength and muscle hypertrophy. However, it remains unclear how resistance training variables are most effectively periodized to maximize gains in strength and muscle hypertrophy.<h4>Objective</h4>The aims of this study were to examine the current body of literature to determine whether there is an effect of periodization of training volume and intensity on maximal strength and muscle hypertrophy, and, if so, to determine how these variables are more effectively periodized to promote increases in strength and muscle hypertrophy, when volume is equated between conditions from pre to post intervention.<h4>Methods</h4>Systematic searches were conducted in PubMed, Scopus and SPORTDiscus databases. Data from the individual studies were extracted and coded. Meta-analyses using the inverse-variance random effects model were performed to compare 1-repetition maximum (1RM) and muscle hypertrophy outcomes in (a) non-periodized (NP) versus periodized training and (b) in linear periodization (LP) versus undulating periodization (UP). Subgroup analyses examining whether results were affected by training status were performed. Meta-analyses of other periodization model comparisons were not performed, due to a low number of studies.<h4>Results</h4>Thirty-five studies met the inclusion criteria. Results of the meta-analyses comparing NP and periodized training demonstrated an overall effect on 1RM strength favoring periodized training (ES 0.31, 95% confidence interval (CI) [0.04, 0.57]; Z = 2.28, P = 0.02). In contrast, muscle hypertrophy did not differ between NP and periodized training (ES 0.13, 95% CI [-0.10, 0.36]; Z = 1.10, P = 0.27). Results of the meta-analyses comparing LP and UP indicated an overall effect on 1RM favoring UP (ES 0.31, 95% CI [0.02, 0.61]; Z = 2.06, P = 0.04). Subgroup analyses indicated an effect on 1RM favoring UP in trained participants (ES 0.61, 95% CI [0.00, 1.22]; Z = 1.97 (P = 0.05)), whereas changes in 1RM did not differ between LP and UP in untrained participants (ES 0.06, 95% CI [-0.20, 0.31]; Z = 0.43 (P = 0.67)). The meta-analyses showed that muscle hypertrophy did not differ between LP and UP (ES 0.05, 95% CI [-0.20, 0.29]; Z = 0.36 (P = 0.72)).<h4>Conclusion</h4>The results suggest that when volume is equated between conditions, periodized resistance training has a greater effect on 1RM strength compared to NP resistance training. Also, UP resulted in greater increases in 1RM compared to LP. However, subgroup analyses revealed that this was only the case for trained and not previously untrained individuals, indicating that trained individuals benefit from daily or weekly undulations in volume and intensity, when the aim is maximal strength. Periodization of volume and intensity does not seem to affect muscle hypertrophy in volume-equated pre-post designs. Based on this, we propose that the effects of periodization on maximal strength may instead be related to the neurophysiological adaptations accompanying resistance training.",
+    "affiliation": "Department of Nutrition, Exercise and Sports, University of Copenhagen, Noerre Alle 51, 2200, Copenhagen, Denmark.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Lundbeckfonden",
+       "grantId": "R322-2019-2406",
+       "orderIn": 0
+      },
+      {
+       "agency": "Lundbeck Foundation",
+       "grantId": "R322-2019-2406",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-021-01636-1"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 30,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2022-06-23",
+    "dateOfCreation": "2022-01-19",
+    "dateOfRevision": "2026-10-28",
+    "electronicPublicationDate": "2022-01-19",
+    "firstPublicationDate": "2022-01-19",
+    "firstIndexDate": "2022-01-24",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "42451119",
+    "source": "MED",
+    "pmid": "42451119",
+    "pmcid": "PMC13363514",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC13363514"
+     ]
+    },
+    "doi": "10.3390/nu18132115",
+    "title": "Food-Based Antioxidant Nutrition for Exercise Recovery and Training Adaptation: A Narrative Review and Conceptual Framework for Redox Signaling, Dietary Matrices, and Periodized Application.",
+    "authorString": "Yang H, Dong J, Yang J, Wu CC, Su CH.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Yang H",
+       "lastName": "Yang",
+       "firstName": "Hua",
+       "initials": "H",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Physical Education and Health, Gansu Minzu Normal University, Hezuo 747000, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Dong J",
+       "lastName": "Dong",
+       "firstName": "Jingmei",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2012-1593"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education, Tongji University, Shanghai 200092, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Yang J",
+       "lastName": "Yang",
+       "firstName": "Jing",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Physical Education and Health, Gansu Minzu Normal University, Hezuo 747000, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wu CC",
+       "lastName": "Wu",
+       "firstName": "Chieh-Chen",
+       "initials": "CC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "International Center for Health Information Technology (ICHIT), College of Medical Science and Technology, Taipei Medical University, New Taipei 23564, Taiwan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Su CH",
+       "lastName": "Su",
+       "firstName": "Chun-Hsien",
+       "initials": "CH",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-2331-7927"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education, Putian University, Putian 351100, China."
+         },
+         {
+          "affiliation": "Department of Exercise and Health Promotion, Chinese Culture University, Taipei 111369, Taiwan."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2012-1593"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-2331-7927"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "13",
+     "volume": "18",
+     "journalIssueId": 4230364,
+     "dateOfPublication": "2026 Jun",
+     "monthOfPublication": 6,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Nutrients",
+      "title": "Nutrients",
+      "essn": "2072-6643",
+      "issn": "2072-6643",
+      "isoabbreviation": "Nutrients",
+      "nlmid": "101521595"
+     },
+     "printPublicationDate": "2026-06-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "2115",
+    "abstractText": "Exercise-induced reactive oxygen and nitrogen species (RONS) serve as crucial signaling molecules for training adaptation, mitochondrial biogenesis, and inflammatory resolution, rather than being mere markers of oxidative damage. Chronic or excessive high-dose antioxidant supplementation may suppress these vital redox-sensitive pathways. Consequently, this narrative review examines food-based antioxidant strategies as approaches for redox modulation, meaning support for recovery and redox homeostasis without indiscriminately suppressing exercise-induced redox signals that may contribute to training adaptation, while emphasizing the distinction between whole-food matrices and isolated supplements. A structured literature search was conducted across major electronic databases, including PubMed, Web of Science, Scopus, and SPORTDiscus. The search focused on intersecting themes of exercise physiology, redox biology, and sports nutrition. The reviewed evidence includes short-term human intervention studies, systematic reviews, meta-analyses, and mechanistic studies examining tart cherry, berries, pomegranate, cocoa, green tea, beetroot, extra virgin olive oil, and Mediterranean-style dietary patterns. Overall, the evidence suggests that these food-based strategies may influence recovery-related outcomes through mechanisms extending beyond direct radical scavenging, including inflammatory regulation, vascular function, and gut-derived metabolism; however, the strength and consistency of findings vary by food source, outcome, dose, timing, study population, dietary matrix, and bioavailability. Current literature does not support universal, fixed daily antioxidant use. Food-based strategies appear most appropriate during periods of elevated recovery demands, such as heavy training blocks, congested competition, muscle damage, or environmental stress. Food-based antioxidant nutrition should therefore be interpreted as a conceptual, evidence-informed approach to periodized and context-specific recovery support, rather than as a universal or evidence-graded guideline, because much of the available evidence derives from short-term and heterogeneous intervention studies. These strategies should complement foundational sports nutrition practices (energy availability, macronutrient distribution, hydration, and sleep) when balancing the preservation of long-term training adaptations with the need for acute recovery.",
+    "affiliation": "College of Physical Education and Health, Gansu Minzu Normal University, Hezuo 747000, China.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Antioxidants",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AD",
+          "qualifierName": "administration & dosage"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Exercise",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Diet"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Signal Transduction"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Oxidation-Reduction"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Oxidative Stress"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Dietary Supplements"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Sports Nutritional Physiological Phenomena"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Post-Exercise Recovery"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Post-Exercise Recovery Techniques"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Oxidative stress",
+      "Inflammation",
+      "Endothelial function",
+      "Gut Microbiota",
+      "Food Matrix",
+      "Dietary Nitrate",
+      "Beetroot",
+      "Exercise Metabolism",
+      "Tart Cherry",
+      "Polyphenol-rich Foods"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Antioxidants",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3390/nu18132115"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC13363514"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC13363514?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2026-07-15",
+    "dateOfCreation": "2026-07-15",
+    "dateOfRevision": "2026-08-13",
+    "electronicPublicationDate": "2026-06-29",
+    "firstPublicationDate": "2026-06-29",
+    "firstIndexDate": "2026-07-15",
+    "fullTextReceivedDate": "2026-09-03",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "41130458",
+    "source": "MED",
+    "pmid": "41130458",
+    "doi": "10.1123/ijsnem.2025-0073",
+    "title": "UCI Sports Nutrition Project: Nutritional Periodization: Strategies to Enhance Training Adaptation and Recovery.",
+    "authorString": "Morton JP, Hearris M, Fell MJ, Owens DJ, Halson S, Trommelen J.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Morton JP",
+       "lastName": "Morton",
+       "firstName": "James P",
+       "initials": "JP",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-2776-2542"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Institute for Sport and Exercise Sciences (RISES), Liverpool John Moores University, Liverpool, United Kingdom."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hearris M",
+       "lastName": "Hearris",
+       "firstName": "Mark",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-4909-6755"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Sport, Department of Sports and Exercise Science, Manchester Metropolitan University, Manchester, United Kingdom."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Fell MJ",
+       "lastName": "Fell",
+       "firstName": "Marc J",
+       "initials": "MJ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Science in Sport, Blackburn, United Kingdom."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Owens DJ",
+       "lastName": "Owens",
+       "firstName": "Daniel J",
+       "initials": "DJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1908-8677"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Institute for Sport and Exercise Sciences (RISES), Liverpool John Moores University, Liverpool, United Kingdom."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Halson S",
+       "lastName": "Halson",
+       "firstName": "Shona",
+       "initials": "S",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1047-3878"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Behavioural and Health Sciences, Australian Catholic University, Brisbane, QLD, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Trommelen J",
+       "lastName": "Trommelen",
+       "firstName": "Jorn",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-0277-5291"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Human Biology, NUTRIM Institute of Nutrition and Translational Research in Metabolism, Maastricht University Medical Centre+, Maastricht, Netherlands."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1047-3878"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1908-8677"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-0277-5291"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-2776-2542"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-4909-6755"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "36",
+     "journalIssueId": 4179792,
+     "dateOfPublication": "2026 May",
+     "monthOfPublication": 5,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Int J Sport Nutr Exerc Metab",
+      "title": "International journal of sport nutrition and exercise metabolism",
+      "essn": "1543-2742",
+      "issn": "1526-484X",
+      "isoabbreviation": "Int J Sport Nutr Exerc Metab",
+      "nlmid": "100939812"
+     },
+     "printPublicationDate": "2026-05-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "279-304",
+    "abstractText": "The fundamental goal of nutrition for training is to provide the required energy and substrate to sustain the target training volume and intensity that is necessary to induce desired physiological adaptations. However, aside from fueling and recovery, it is now recognized that nutrient availability also modulates the activation of cell signaling pathways that regulate adaptations associated with both endurance and strength training. Such developments are the guiding principles underpinning \"nutritional periodization\" wherein energy, macronutrient, and micronutrient availability are deliberately manipulated across the microcycle, mesocycle, and macrocycle with the strategic goal to promote training adaptations, support recovery, manipulate body composition, and optimize competition performance. In addition to total \"daily\" nutrient intake, the elite athlete must, therefore, adjust their energy and carbohydrate intake in a meal-by-meal and day-by-day manner (i.e., carbohydrate periodization) in accordance with the energetic demands and training objectives of each specific training session. In addition to fueling (and refueling) for the work required, daily protein intake should at least be 1.6-2.1 g·kg-1·day-1 not only to account for amino acid oxidation during exercise but also, importantly, to promote tissue remodeling, notably skeletal muscle. Emerging evidence also supports the rationale for nutraceuticals to promote recovery and sleep, though the potential effect of such compounds in blunting training adaptation should also be considered. Taken together, it is increasingly clear that nutrition is a critical enabler to successful training outcomes, and as such, the sport nutritionist should be considered an integral member of an athlete's coaching and performance support team.",
+    "affiliation": "Research Institute for Sport and Exercise Sciences (RISES), Liverpool John Moores University, Liverpool, United Kingdom.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-Print",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Dietary Carbohydrates",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AD",
+          "qualifierName": "administration & dosage"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Micronutrients",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AD",
+          "qualifierName": "administration & dosage"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Dietary Proteins",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AD",
+          "qualifierName": "administration & dosage"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Body Composition"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Energy Metabolism"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Energy Intake"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Nutritional Requirements"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Dietary Supplements"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Athletic Performance",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Physical Conditioning, Human"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Sports Nutritional Physiological Phenomena"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Protein",
+      "Cycling",
+      "Carbohydrate",
+      "Endurance",
+      "Functional Foods"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Dietary Carbohydrates",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Dietary Proteins",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Micronutrients",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1123/ijsnem.2025-0073"
+      }
+     ]
+    },
+    "commentCorrectionList": {
+     "commentCorrection": [
+      {
+       "source": "MED",
+       "id": "41297534",
+       "reference": "Int J Sport Nutr Exerc Metab. 2025 Nov 26;36(3):392. doi: 10.1123/ijsnem.2025-0234.",
+       "type": "Erratum in",
+       "orderIn": 1
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 7,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2026-04-15",
+    "dateOfCreation": "2025-10-23",
+    "dateOfRevision": "2026-06-10",
+    "electronicPublicationDate": "2025-10-22",
+    "firstPublicationDate": "2025-10-22",
+    "firstIndexDate": "2025-10-24",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "41004274",
+    "source": "MED",
+    "pmid": "41004274",
+    "pmcid": "PMC12629119",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC12629119"
+     ]
+    },
+    "doi": "10.1519/jsc.0000000000005258",
+    "title": "Echoes of the Modern Training Periodization Concepts in Russia Before the October 1917 Revolution.",
+    "authorString": "Bartolomei S, Mammadova G, Manno R, Haff GG, Hoffman JR, Merni F.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Bartolomei S",
+       "lastName": "Bartolomei",
+       "firstName": "Sandro",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department for Life Quality Studies, University of Bologna, Bologna, Italy."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Mammadova G",
+       "lastName": "Mammadova",
+       "firstName": "Gulnara",
+       "initials": "G",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department for Life Quality Studies, University of Bologna, Bologna, Italy."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Manno R",
+       "lastName": "Manno",
+       "firstName": "Renato",
+       "initials": "R",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Italian Olympic Committee (CONI), Rome, Italy."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Haff GG",
+       "lastName": "Haff",
+       "firstName": "Gregory G",
+       "initials": "GG",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Strength and Power Research Group, School of Medical and Health Sciences, Edith Cowan University, Joondalup, Australia."
+         },
+         {
+          "affiliation": "Sport, Exercise, and Physiotherapy, University of Salford, Greater Manchester, United Kingdom; and."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hoffman JR",
+       "lastName": "Hoffman",
+       "firstName": "Jay R",
+       "initials": "JR",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Health Science, Ariel University, Ariel, Israel."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Merni F",
+       "lastName": "Merni",
+       "firstName": "Franco",
+       "initials": "F",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department for Life Quality Studies, University of Bologna, Bologna, Italy."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "12",
+     "volume": "39",
+     "journalIssueId": 4259122,
+     "dateOfPublication": "2025 Dec",
+     "monthOfPublication": 12,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "J Strength Cond Res",
+      "title": "Journal of strength and conditioning research",
+      "essn": "1533-4287",
+      "issn": "1064-8011",
+      "isoabbreviation": "J Strength Cond Res",
+      "nlmid": "9415084"
+     },
+     "printPublicationDate": "2025-12-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "1327-1330",
+    "abstractText": "<h4>Abstract</h4>Bartolomei, S, Mammadova, G, Manno, R, Haff, GG, Hoffman, JR, and Merni, F. Echoes of the modern training periodization concepts in Russia before the October 1917 revolution. J Strength Cond Res 39(12): 1327-1330, 2025-The debate on the origins of the discipline of training periodization is still ongoing. The text \"Olympic Sport,\" published by B. A. Kotov in 1916, was one of the first known books to focus on training methods and strategies for performance development. The book is also considered the first to deal with training organization and periodization. In addition, Kotov was the only author to cover these topics in Russia before the Soviet Bolshevik Revolution of October 1917. Recently, our research group had the opportunity to work on the original text published in 1916 in Russian, and on the article published with the pseudonym of \"Boko\" in 1913 for the journal \"Russky Sport.\" The analysis of Kotov's articles offers an insight into periodization and training at the beginning of the 20th century. The knowledge of the historical events and of the evolution of sport allow this article to be contextualized and to understand the author's attempt to promote a different approach to athletic training. Relevant breakthroughs were included in this article, such as the use of training programs to organize long training periods, the prescription of submaximal training loads based on perceived effort and the use of specific preparation phases. In addition, the text contains one of the first notations of the concept of overtraining. Considering its novelty, \"Olympic Sport\" represents a revolutionary book and the author can be considered as a fundamental contributor to the development of the discipline of the training theory and a starting point of modern periodization.",
+    "affiliation": "Department for Life Quality Studies, University of Bologna, Bologna, Italy.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Historical Article",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Physical Education and Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "HI",
+          "qualifierName": "history"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Sports",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "HI",
+          "qualifierName": "history"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "History, 20th Century"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Russia"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Physical Conditioning, Human",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "HI",
+          "qualifierName": "history"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Training History",
+      "Training Plan",
+      "Soviet Sport"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1519/JSC.0000000000005258"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12629119"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12629119?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2026-09-08",
+    "dateOfCreation": "2025-09-26",
+    "dateOfRevision": "2026-09-08",
+    "electronicPublicationDate": "2025-09-29",
+    "firstPublicationDate": "2025-09-29",
+    "firstIndexDate": "2025-09-27",
+    "fullTextReceivedDate": "2025-12-22",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "40558223",
+    "source": "MED",
+    "pmid": "40558223",
+    "pmcid": "PMC12192029",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC12192029"
+     ]
+    },
+    "doi": "10.3390/clinpract15060105",
+    "title": "Reverse Linear Neuro Periodization Model for Rehabilitation After Arthroscopic Rotator Cuff Repair: A Narrative Review.",
+    "authorString": "Kakavas G, Brilakis E, Papatzikou M, Malliaropoulos N, Mazeas J, Forelli F.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Kakavas G",
+       "lastName": "Kakavas",
+       "firstName": "Georgios",
+       "initials": "G",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9138-6994"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Fysiotek Spine & Sports Lab, 17562 Athens, Greece."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Brilakis E",
+       "lastName": "Brilakis",
+       "firstName": "Emmanouil",
+       "initials": "E",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9798-0938"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Brilakis Orthopaedics, 17561 Palaio Faliro, Greece."
+         },
+         {
+          "affiliation": "Department of HYGEIA General Hospital, 15123 Athens, Greece."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Papatzikou M",
+       "lastName": "Papatzikou",
+       "firstName": "Maria",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Brilakis Orthopaedics, 17561 Palaio Faliro, Greece."
+         },
+         {
+          "affiliation": "Department of HYGEIA General Hospital, 15123 Athens, Greece."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Malliaropoulos N",
+       "lastName": "Malliaropoulos",
+       "firstName": "Nikolaos",
+       "initials": "N",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5220-8992"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Thessaloniki Sports Medicine Clinic, 54622 Thessaloniki, Greece."
+         },
+         {
+          "affiliation": "Sports Clinic, Rheumatology Department, Barts Health NHS Trust, London E1 1BB, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Mazeas J",
+       "lastName": "Mazeas",
+       "firstName": "Jean",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0000-6322-7091"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Orthosport Rehab Center, 95330 Domont, France."
+         },
+         {
+          "affiliation": "Orthopedic and Surgery Department, @OrthoLab, Clinic of Domont, 95330 Domont, France."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Forelli F",
+       "lastName": "Forelli",
+       "firstName": "Florian",
+       "initials": "F",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8650-2746"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Orthopedic and Surgery Department, @OrthoLab, Clinic of Domont, 95330 Domont, France."
+         },
+         {
+          "affiliation": "SFMKS-Lab, Société Française des Masseurs-Kinésithérapeutes du Sport, 93380 Pierrefitte sur Seine, France."
+         },
+         {
+          "affiliation": "Haute-Ecole Arc Santé, HES-SO University of Applied Sciences and Arts Western Switzerland, 2800 Delémont, Switzerland."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8650-2746"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9798-0938"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5220-8992"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9138-6994"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0000-6322-7091"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "6",
+     "volume": "15",
+     "journalIssueId": 3965820,
+     "dateOfPublication": "2025 May",
+     "monthOfPublication": 5,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Clin Pract",
+      "title": "Clinics and practice",
+      "essn": "2039-7283",
+      "issn": "2039-7275",
+      "isoabbreviation": "Clin Pract",
+      "nlmid": "101563282"
+     },
+     "printPublicationDate": "2025-05-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "105",
+    "abstractText": "Periodization is a concept of systematic progression in training and rehabilitation. The rehabilitation literature, however, is scarce, with information about optimally designing resistance training programs based on periodization principles for injured athletes. This periodization model-reverse linear neuro periodization-is a model proposed for the long-term rehabilitation needed after an arthroscopic rotator cuff repair. With recent evidence supporting neural contributions to shoulder injuries and the rate of recovery, rehabilitation protocols may benefit from incorporating approaches that target the sensorimotor system. Integrating motor learning principles (external focus and differential learning) and new technologies (virtual reality, laser pointers, stroboscopic glasses) may bolster current shoulder rehabilitation protocols and improve patient recovery times and outcomes. Such an understanding allows well-informed sport rehabilitation specialists to better bridge the gap between the preparation for competition widely used by coaches and the treatment of injuries that may occur.",
+    "affiliation": "Fysiotek Spine & Sports Lab, 17562 Athens, Greece.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Rehabilitation",
+      "Shoulder",
+      "Rotator Cuff",
+      "Neurocognitive",
+      "Periodization"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3390/clinpract15060105"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12192029"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12192029?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 2,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2025-06-25",
+    "dateOfRevision": "2025-06-27",
+    "electronicPublicationDate": "2025-05-30",
+    "firstPublicationDate": "2025-05-30",
+    "firstIndexDate": "2025-06-26",
+    "fullTextReceivedDate": "2025-11-29",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "28497285",
+    "source": "MED",
+    "pmid": "28497285",
+    "doi": "10.1007/s40279-017-0734-y",
+    "title": "Comparison of Periodized and Non-Periodized Resistance Training on Maximal Strength: A Meta-Analysis.",
+    "authorString": "Williams TD, Tolusso DV, Fedewa MV, Esco MR.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Williams TD",
+       "lastName": "Williams",
+       "firstName": "Tyler D",
+       "initials": "TD",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, The University of Alabama, 1013 Moore Hall, Box 870312, Tuscaloosa, AL, 35487-0231, USA. tdwilliams4@crimson.ua.edu."
+         },
+         {
+          "affiliation": "Department of Kinesiology, Samford University, 800 Lakeshore Drive, Birmingham, AL, 35229, USA. tdwilliams4@crimson.ua.edu."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Tolusso DV",
+       "lastName": "Tolusso",
+       "firstName": "Danilo V",
+       "initials": "DV",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1929-8735"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, The University of Alabama, 1013 Moore Hall, Box 870312, Tuscaloosa, AL, 35487-0231, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Fedewa MV",
+       "lastName": "Fedewa",
+       "firstName": "Michael V",
+       "initials": "MV",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2055-863X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, The University of Alabama, 1013 Moore Hall, Box 870312, Tuscaloosa, AL, 35487-0231, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Esco MR",
+       "lastName": "Esco",
+       "firstName": "Michael R",
+       "initials": "MR",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, The University of Alabama, 1013 Moore Hall, Box 870312, Tuscaloosa, AL, 35487-0231, USA."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2055-863X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1929-8735"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "10",
+     "volume": "47",
+     "journalIssueId": 2623362,
+     "dateOfPublication": "2017 Oct",
+     "monthOfPublication": 10,
+     "yearOfPublication": 2017,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2017-10-01"
+    },
+    "pubYear": "2017",
+    "pageInfo": "2083-2100",
+    "abstractText": "<h4>Background</h4>Periodization is a logical method of organizing training into sequential phases and cyclical time periods in order to increase the potential for achieving specific performance goals while minimizing the potential for overtraining. Periodized resistance training plans are proposed to be superior to non-periodized training plans for enhancing maximal strength.<h4>Objective</h4>The primary aim of this study was to examine the previous literature comparing periodized resistance training plans to non-periodized resistance training plans and determine a quantitative estimate of effect on maximal strength.<h4>Methods</h4>All studies included in the meta-analysis met the following inclusion criteria: (1) peer-reviewed publication; (2) published in English; (3) comparison of a periodized resistance training group to a non-periodized resistance training group; (4) maximal strength measured by 1-repetition maximum (1RM) squat, bench press, or leg press. Data were extracted and independently coded by two authors. Random-effects models were used to aggregate a mean effect size (ES), 95% confidence intervals (CIs) and potential moderators.<h4>Results</h4>The cumulative results of 81 effects gathered from 18 studies published between 1988 and 2015 indicated that the magnitude of improvement in 1RM following periodized resistance training was greater than non-periodized resistance training (ES = 0.43, 95% CI 0.27-0.58; P < 0.001). Periodization model (β = 0.51; P = 0.0010), training status (β = -0.59; P = 0.0305), study length (β = 0.03; P = 0.0067), and training frequency (β = 0.46; P = 0.0123) were associated with a change in 1RM. These results indicate that undulating programs were more favorable for strength gains. Improvements in 1RM were greater among untrained participants. Additionally, higher training frequency and longer study length were associated with larger improvements in 1RM.<h4>Conclusion</h4>These results suggest that periodized resistance training plans have a moderate effect on 1RM compared to non-periodized training plans. Variation in training stimuli appears to be vital for increasing maximal strength, and longer periods of higher training frequency may be preferred.",
+    "affiliation": "Department of Kinesiology, The University of Alabama, 1013 Moore Hall, Box 870312, Tuscaloosa, AL, 35487-0231, USA. tdwilliams4@crimson.ua.edu.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Weight Lifting"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Resistance Training",
+      "Training Volume",
+      "Bench Press",
+      "Maximal Strength",
+      "Untrained Individual"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-017-0734-y"
+      }
+     ]
+    },
+    "commentCorrectionList": {
+     "commentCorrection": [
+      {
+       "source": "MED",
+       "id": "29178085",
+       "reference": "Sports Med. 2018 Feb;48(2):495-496. doi: 10.1007/s40279-017-0822-z",
+       "type": "Comment in",
+       "orderIn": 1
+      },
+      {
+       "source": "MED",
+       "id": "29178086",
+       "reference": "Sports Med. 2018 Feb;48(2):491-494. doi: 10.1007/s40279-017-0824-x",
+       "type": "Comment in",
+       "orderIn": 2
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 94,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "N",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2018-11-12",
+    "dateOfCreation": "2017-05-13",
+    "dateOfRevision": "2018-11-13",
+    "firstPublicationDate": "2017-10-01",
+    "firstIndexDate": "2017-05-12",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "35445953",
+    "source": "MED",
+    "pmid": "35445953",
+    "pmcid": "PMC9023617",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC9023617"
+     ]
+    },
+    "doi": "10.1186/s40798-022-00445-8",
+    "title": "Reverse Periodization for Improving Sports Performance: A Systematic Review.",
+    "authorString": "González-Ravé JM, González-Mohino F, Rodrigo-Carranza V, Pyne DB.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "González-Ravé JM",
+       "lastName": "González-Ravé",
+       "firstName": "José M",
+       "initials": "JM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-5953-4742"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sports Training Laboratory, Faculty of Sports Sciences, University of Castilla-La Mancha, Carlos III Avenue, 45008, Toledo, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "González-Mohino F",
+       "lastName": "González-Mohino",
+       "firstName": "Fernando",
+       "initials": "F",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6327-6958"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sports Training Laboratory, Faculty of Sports Sciences, University of Castilla-La Mancha, Carlos III Avenue, 45008, Toledo, Spain. fernando.GMayoralas@uclm.es."
+         },
+         {
+          "affiliation": "Facultad de Ciencias de la Vida y de la Naturaleza, Universidad Nebrija, Madrid, Spain. fernando.GMayoralas@uclm.es."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rodrigo-Carranza V",
+       "lastName": "Rodrigo-Carranza",
+       "firstName": "Víctor",
+       "initials": "V",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1637-7550"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sports Training Laboratory, Faculty of Sports Sciences, University of Castilla-La Mancha, Carlos III Avenue, 45008, Toledo, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Pyne DB",
+       "lastName": "Pyne",
+       "firstName": "David B",
+       "initials": "DB",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1555-5079"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Health, Research Institute for Sport and Exercise, University of Canberra, Canberra, ACT, Australia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-5953-4742"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6327-6958"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1555-5079"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1637-7550"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "8",
+     "journalIssueId": 3335262,
+     "dateOfPublication": "2022 Apr",
+     "monthOfPublication": 4,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Sports Med Open",
+      "title": "Sports medicine - open",
+      "essn": "2198-9761",
+      "issn": "2199-1170",
+      "isoabbreviation": "Sports Med Open",
+      "nlmid": "101662568"
+     },
+     "printPublicationDate": "2022-04-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "56",
+    "abstractText": "<h4>Background</h4>Reverse periodization is commonly touted as a salient planning strategy to improve sport performance in athletes, but benefits have not been clearly described.<h4>Objectives</h4>We sought to identify the main characteristics of reverse periodization, and the influence of training volume and periodization models on enhancing physiological measures and sports performance.<h4>Design</h4>Systematic review.<h4>Methods</h4>The electronic databases Scopus, PubMed and Web of Science were searched using a comprehensive list of relevant terms.<h4>Results</h4>A total of 925 studies were identified, and after removal of duplicates and studies based on title and abstract screening, 17 studies remained, and 11 finally included in the systematic review. There was a total of 200 athletes in the included studies. Reverse periodization does not provide superior performance improvements in swimming, running, muscular endurance, maximum strength, or maximal oxygen uptake, compared to traditional or block periodization. The quality of evidence levels for the reverse periodization studies was 1b (individual randomized controlled trial) for two investigations, 2b (individual cohort study) for the remaining studies and a mean of 4.9 points in the PEDro scale (range 0-7).<h4>Conclusions</h4>It appears that reverse periodization is no more effective than other forms of periodization in improving sports performance. More comparative studies on this alternative version of periodization are required to verify its effectiveness and utility across a range of endurance sports.",
+    "affiliation": "Sports Training Laboratory, Faculty of Sports Sciences, University of Castilla-La Mancha, Carlos III Avenue, 45008, Toledo, Spain.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Model",
+      "Adaptation",
+      "Training",
+      "Athlete Development"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://sportsmedicine-open.springeropen.com/track/pdf/10.1186/s40798-022-00445-8"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1186/s40798-022-00445-8"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9023617"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9023617?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 11,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2022-04-21",
+    "dateOfRevision": "2022-07-16",
+    "electronicPublicationDate": "2022-04-21",
+    "firstPublicationDate": "2022-04-21",
+    "firstIndexDate": "2022-04-22",
+    "fullTextReceivedDate": "2022-05-10",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "31440169",
+    "source": "MED",
+    "pmid": "31440169",
+    "pmcid": "PMC6692867",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC6692867"
+     ]
+    },
+    "doi": "10.3389/fphys.2019.01023",
+    "title": "A Systematic Review of Meta-Analyses Comparing Periodized and Non-periodized Exercise Programs: Why We Should Go Back to Original Research.",
+    "authorString": "Afonso J, Rocha T, Nikolaidis PT, Clemente FM, Rosemann T, Knechtle B.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Afonso J",
+       "lastName": "Afonso",
+       "firstName": "José",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2038-393X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Sport, Centre for Research, Education, Innovation and Intervention in Sport, University of Porto, Porto, Portugal."
+         },
+         {
+          "affiliation": "Master Science Lab, Vila Nova de Gaia, Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rocha T",
+       "lastName": "Rocha",
+       "firstName": "Tiago",
+       "initials": "T",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-2785-4463"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Master Science Lab, Vila Nova de Gaia, Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Nikolaidis PT",
+       "lastName": "Nikolaidis",
+       "firstName": "Pantelis T",
+       "initials": "PT",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8030-7122"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Exercise Physiology Laboratory, Nikaia, Greece."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Clemente FM",
+       "lastName": "Clemente",
+       "firstName": "Filipe Manuel",
+       "initials": "FM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9813-2842"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Sport and Leisure, Polytechnic Institute of Viana Do Castelo, Melgaço, Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rosemann T",
+       "lastName": "Rosemann",
+       "firstName": "Thomas",
+       "initials": "T",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6436-6306"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Primary Care, University of Zurich, Zurich, Switzerland."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Knechtle B",
+       "lastName": "Knechtle",
+       "firstName": "Beat",
+       "initials": "B",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Primary Care, University of Zurich, Zurich, Switzerland."
+         },
+         {
+          "affiliation": "Medbase St. Gallen Am Vadianplatz, St. Gallen, Switzerland."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8030-7122"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9813-2842"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2038-393X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6436-6306"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-2785-4463"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "10",
+     "journalIssueId": 2777617,
+     "dateOfPublication": "2019 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2019,
+     "journal": {
+      "medlineAbbreviation": "Front Physiol",
+      "title": "Frontiers in physiology",
+      "essn": "1664-042X",
+      "issn": "1664-042X",
+      "isoabbreviation": "Front Physiol",
+      "nlmid": "101549006"
+     },
+     "printPublicationDate": "2019-01-01"
+    },
+    "pubYear": "2019",
+    "pageInfo": "1023",
+    "abstractText": "Periodization schedules training periods according to predicted timings of cumulative adaptations and has been at the foundation of exercise prescription. Recently, a selected body of work has highlighted that original research may be providing support for variation, but not for periodized variation. Furthermore, it has been suggested that the timings of expected adaptations have not been tested. However, it is not clear if these problems are present in meta-analyses on the subject, since they might have selected a distinct body or work. Therefore, our goal was to systematically review meta-analyses on exercise periodization, to verify whether the included periodized programs have been contrasted to two types of non-periodized programs (i.e., constant or varied) and also if the predictions concerning cumulative adaptations were tested. <i>Data sources</i>: Cochrane, EBSCO (Academic Search Complete, CINAHL Plus, MEDLINE, PsycINFO, SportDISCUS), ISI Web of Knowledge, PEDro, PubMed, Scielo, Scopus. <i>Study eligibility criteria</i>: Meta-analyses comparing periodized exercise programs with non-periodized programs. <i>Participants and interventions</i>: Humans following any form of training periodization. <i>Study appraisal and synthesis methods</i>: A checklist was used to verify whether studies included in the meta-analyses compared periodized to constant or varied, non-periodized programs, as well as whether predictions concerning the timing of adaptations were tested. None of the 21 studies included in the two meta-analyses compared periodized programs with varied, non-periodized programs. The accuracy of the predictions concerning the proposed timings of adaptations was not scrutinized by any of the 21 studies. The studies in question have focused only on strength training, meaning they are limited in scope. The limitations found in these meta-analyses suggest that consultation of original research on the subject is advisable. <i>Systematic review registration number (PROSPERO)</i>: CRD42018111338.",
+    "affiliation": "Faculty of Sport, Centre for Research, Education, Innovation and Intervention in Sport, University of Porto, Porto, Portugal.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "systematic-review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Exercise",
+      "Programming",
+      "Systematic review",
+      "Periodization",
+      "Non-periodized Variation"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3389/fphys.2019.01023"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC6692867"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC6692867?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 13,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2019-08-24",
+    "dateOfRevision": "2020-09-29",
+    "electronicPublicationDate": "2019-08-07",
+    "firstPublicationDate": "2019-08-07",
+    "firstIndexDate": "2019-08-24",
+    "fullTextReceivedDate": "2025-02-03",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "34203853",
+    "source": "MED",
+    "pmid": "34203853",
+    "pmcid": "PMC8296310",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC8296310"
+     ]
+    },
+    "doi": "10.3390/ijerph18126474",
+    "title": "Periodization and Programming for Individual 400 m Medley Swimmers.",
+    "authorString": "Hermosilla F, González-Rave JM, Del Castillo JA, Pyne DB.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Hermosilla F",
+       "lastName": "Hermosilla",
+       "firstName": "Francisco",
+       "initials": "F",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-7069-5798"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport Training Lab, University of Castilla-La Mancha, 45008 Toledo, Spain."
+         },
+         {
+          "affiliation": "Facultad de Ciencias de la Vida y la Naturaleza, Universidad Nebrija, 28248 Madrid, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "González-Rave JM",
+       "lastName": "González-Rave",
+       "firstName": "José M",
+       "initials": "JM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-5953-4742"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport Training Lab, University of Castilla-La Mancha, 45008 Toledo, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Del Castillo JA",
+       "lastName": "Del Castillo",
+       "firstName": "José Antonio",
+       "initials": "JA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5102-821X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Catalonian Swimming Federation and High Performance Center, Alcalde Barnils, Av. 3-5, Sant Cugat del Vallès, 08174 Barcelona, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Pyne DB",
+       "lastName": "Pyne",
+       "firstName": "David B",
+       "initials": "DB",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1555-5079"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Institute for Sport and Exercise, Faculty of Health, University of Canberra, Bruce, ACT 261, Australia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-5953-4742"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5102-821X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-7069-5798"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1555-5079"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "12",
+     "volume": "18",
+     "journalIssueId": 3192312,
+     "dateOfPublication": "2021 Jun",
+     "monthOfPublication": 6,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Int J Environ Res Public Health",
+      "title": "International journal of environmental research and public health",
+      "essn": "1660-4601",
+      "issn": "1661-7827",
+      "isoabbreviation": "Int J Environ Res Public Health",
+      "nlmid": "101238455"
+     },
+     "printPublicationDate": "2021-06-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "6474",
+    "abstractText": "Knowledge in the scientific domain of individual medley (IM) swimming training over a competitive season is limited. The purpose of this study was to propose a detailed coaching framework incorporating the key elements of a periodized training regimen for a 400 m IM swimmer. This framework was based on the available coaching and scientific literature and the practical experience and expertise of the collaborating authors. The season has been divided in two or three macrocycles, further divided in three mesocycles each (six or nine mesocycles in total), in alignment with the two or three main competitions in each macrocycle. The principal training contents to develop during the season expressed in blood lactate zones are: aerobic training (~2 mmol·L<sup>-1</sup>), lactate threshold pace (~4 mmol·L<sup>-1</sup>) and VO<sub>2</sub>max (maximum oxygen uptake) (~6 mmol·L<sup>-1</sup>). Strength training should focus on maximum strength, power and speed endurance during the season. Altitude training camps can be placed strategically within the training season to promote physiological adaptation and improvements in performance. A well-constructed technical framework will permit development of training strategies for the 400 m IM swimmer to improve both training and competitive performance.",
+    "affiliation": "Sport Training Lab, University of Castilla-La Mancha, 45008 Toledo, Spain.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Research Support, Non-U.S. Gov't",
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Oxygen"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Lactic Acid"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Altitude"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Oxygen Consumption"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Swimming"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Training",
+      "Swimming",
+      "Season",
+      "Individual Medley"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Oxygen",
+       "registryNumber": "S88TT14065"
+      },
+      {
+       "name": "Lactic Acid",
+       "registryNumber": "33X04XA5AT"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://www.mdpi.com/1660-4601/18/12/6474/pdf?version=1624413326"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3390/ijerph18126474"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8296310"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8296310?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 13,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2021-07-26",
+    "dateOfCreation": "2021-07-02",
+    "dateOfRevision": "2024-04-02",
+    "electronicPublicationDate": "2021-06-15",
+    "firstPublicationDate": "2021-06-15",
+    "firstIndexDate": "2021-07-03",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "33466983",
+    "source": "MED",
+    "pmid": "33466983",
+    "pmcid": "PMC7739360",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC7739360"
+     ]
+    },
+    "doi": "10.3390/jfmk3040055",
+    "title": "The Role of Velocity Based Training in the Strength Periodization for Modern Athletes.",
+    "authorString": "Guerriero A, Varalda C, Piacentini MF.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Guerriero A",
+       "lastName": "Guerriero",
+       "firstName": "Aristide",
+       "initials": "A",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Human Movement and Sport Sciences, University of Rome \"Foro Italico\", 00135 Rome, Italy."
+         },
+         {
+          "affiliation": "Italian Weight Lifting Federation, 00196 Rome, Italy."
+         },
+         {
+          "affiliation": "Brasil Rugby, Sao Paulo 01407-200, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Varalda C",
+       "lastName": "Varalda",
+       "firstName": "Carlo",
+       "initials": "C",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Italian Weight Lifting Federation, 00196 Rome, Italy."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Piacentini MF",
+       "lastName": "Piacentini",
+       "firstName": "Maria Francesca",
+       "initials": "MF",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1927-7478"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Human Movement and Sport Sciences, University of Rome \"Foro Italico\", 00135 Rome, Italy."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1927-7478"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "4",
+     "volume": "3",
+     "journalIssueId": 3090637,
+     "dateOfPublication": "2018 Nov",
+     "monthOfPublication": 11,
+     "yearOfPublication": 2018,
+     "journal": {
+      "medlineAbbreviation": "J Funct Morphol Kinesiol",
+      "title": "Journal of functional morphology and kinesiology",
+      "essn": "2411-5142",
+      "issn": "2411-5142",
+      "isoabbreviation": "J Funct Morphol Kinesiol",
+      "nlmid": "101712257"
+     },
+     "printPublicationDate": "2018-11-01"
+    },
+    "pubYear": "2018",
+    "pageInfo": "E55",
+    "abstractText": "Resistance training (RT) is considered the most important method to improve the athlete's strength and rate of force development (RFD). In the last decade, the importance of monitoring velocity during RT has drastically grown, because of an increased availability of linear position transducers (LPT) and inertial measurement units (IMU). The purpose of this review is to analyze the existing literature on testing techniques and performance strategies used to enhance strength and power performance of elite athletes, by monitoring the velocity of resistance training. The authors focus in particular on the level of effort of resistance training defined by velocity; how the loss of velocity correlates with the degree of fatigue and how it can be used to enhance the performance of competitive athletes; the use of LPT as part of the daily routine of the strength and conditioning programs in competitive sport. It is therefore critical for the sports scientists to have a correct understanding of the basic concepts of the velocity-based training and their application to elite sports. The ultimate goal is to give some indications on the velocity-based resistance training integration in the programs of different sports in the high performance environment.",
+    "affiliation": "Department of Human Movement and Sport Sciences, University of Rome \"Foro Italico\", 00135 Rome, Italy.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Strength",
+      "Velocity",
+      "Linear Transducer"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3390/jfmk3040055"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC7739360"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC7739360?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 32,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2021-01-20",
+    "dateOfRevision": "2021-01-22",
+    "electronicPublicationDate": "2018-11-16",
+    "firstPublicationDate": "2018-11-16",
+    "firstIndexDate": "2021-01-20",
+    "fullTextReceivedDate": "2025-02-03",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "33405190",
+    "source": "MED",
+    "pmid": "33405190",
+    "doi": "10.1007/s40279-020-01414-5",
+    "title": "Periodization: Variation in the Definition and Discrepancies in Study Design.",
+    "authorString": "Kataoka R, Vasenina E, Loenneke J, Buckner SL.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Kataoka R",
+       "lastName": "Kataoka",
+       "firstName": "Ryo",
+       "initials": "R",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "USF Muscle Lab, Exercise Science Program, University of South Florida, Tampa, FL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Vasenina E",
+       "lastName": "Vasenina",
+       "firstName": "Ecaterina",
+       "initials": "E",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "USF Muscle Lab, Exercise Science Program, University of South Florida, Tampa, FL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Loenneke J",
+       "lastName": "Loenneke",
+       "firstName": "Jeremy",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Health, Exercise Science, and Recreation Management, Kevser Ermin Applied Physiology Laboratory, The University of Mississippi, University, MS, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Buckner SL",
+       "lastName": "Buckner",
+       "firstName": "Samuel L",
+       "initials": "SL",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2139-7356"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "USF Muscle Lab, Exercise Science Program, University of South Florida, Tampa, FL, USA. slbuckner@usf.edu."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2139-7356"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "4",
+     "volume": "51",
+     "journalIssueId": 3135859,
+     "dateOfPublication": "2021 Apr",
+     "monthOfPublication": 4,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2021-04-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "625-651",
+    "abstractText": "Over the past several decades, periodization has been widely accepted as the gold standard of training theory. Within the literature, there are numerous definitions for periodization, which makes it difficult to study. When examining the proposed definitions and related studies on periodization, problems arise in the following domains: (1) periodization has been proposed to serve as the macro-management of the training process concerning the annual plan, yet research on long-term effects is scarce; (2) periodization and programming are being used interchangeably in research; and (3) training is not periodized alongside other stressors such as sport (i.e., only resistance training is being performed without the inclusion of sport). Overall, the state of the literature suggests that the inability to define periodization makes the statement of its superiority difficult to experimentally test. This paper discusses the proposed definitions of periodization and the study designs which have been employed to examine the concept.",
+    "affiliation": "USF Muscle Lab, Exercise Science Program, University of South Florida, Tampa, FL, USA.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Sports"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-020-01414-5"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 21,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "N",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2021-05-24",
+    "dateOfCreation": "2021-01-06",
+    "dateOfRevision": "2026-10-10",
+    "electronicPublicationDate": "2021-01-06",
+    "firstPublicationDate": "2021-01-06",
+    "firstIndexDate": "2021-01-07",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "25268290",
+    "source": "MED",
+    "pmid": "25268290",
+    "doi": "10.1519/jsc.0000000000000712",
+    "title": "Systematic review and meta-analysis of linear and undulating periodized resistance training programs on muscular strength.",
+    "authorString": "Harries SK, Lubans DR, Callister R.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Harries SK",
+       "lastName": "Harries",
+       "firstName": "Simon K",
+       "initials": "SK",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "1School of Biomedical Sciences and Pharmacy, Faculty of Health, University of Newcastle, Callaghan, New South Wales, Australia; 2Priority Research Centre in Physical Activity and Nutrition, University of Newcastle, New South Wales, Australia; and 3School of Education, Faculty of Education and Arts, University of Newcastle, New South Wales, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lubans DR",
+       "lastName": "Lubans",
+       "firstName": "David R",
+       "initials": "DR",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0204-8257"
+       }
+      },
+      {
+       "fullName": "Callister R",
+       "lastName": "Callister",
+       "firstName": "Robin",
+       "initials": "R"
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0204-8257"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "4",
+     "volume": "29",
+     "journalIssueId": 2266703,
+     "dateOfPublication": "2015 Apr",
+     "monthOfPublication": 4,
+     "yearOfPublication": 2015,
+     "journal": {
+      "medlineAbbreviation": "J Strength Cond Res",
+      "title": "Journal of strength and conditioning research",
+      "essn": "1533-4287",
+      "issn": "1064-8011",
+      "isoabbreviation": "J Strength Cond Res",
+      "nlmid": "9415084"
+     },
+     "printPublicationDate": "2015-04-01"
+    },
+    "pubYear": "2015",
+    "pageInfo": "1113-1125",
+    "abstractText": "Periodization is known to improve training adaptations but the most effective periodization approach for muscular strength development for a wide variety of populations is yet to be determined. This systematic review and meta-analysis examined all studies directly comparing linear and undulating periodized resistance training programs to determine and compare their effects on muscular strength. A systematic search of the MEDLINE, SCOPUS, and SPORTDiscus databases revealed 17 studies satisfying the inclusion criteria. There were a total of 510 participants in the included studies. Sixteen studies reported significant increases in strength for both periodization approaches. Five studies reported significant differences in improvements between groups. The meta-analyses determined that there were no differences in the effectiveness of linear vs. undulating periodization on upper-body or lower-body strength. The short-term nature of studies and the previous training history of participants were identified as potential confounding factors in the interpretation of findings. The results suggest that novelty or training variety are important for stimulating further strength development. Few studies have examined the effect of periodization approaches in adolescent or athletic populations.",
+    "affiliation": "1School of Biomedical Sciences and Pharmacy, Faculty of Health, University of Newcastle, Callaghan, New South Wales, Australia; 2Priority Research Centre in Physical Activity and Nutrition, University of Newcastle, New South Wales, Australia; and 3School of Education, Faculty of Education and Arts, University of Newcastle, New South Wales, Australia.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Comparative Study",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adolescent"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1519/JSC.0000000000000712"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 81,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "N",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2015-08-31",
+    "dateOfCreation": "2014-10-01",
+    "dateOfRevision": "2025-07-11",
+    "firstPublicationDate": "2015-04-01",
+    "firstIndexDate": "2014-10-01",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "30728780",
+    "source": "MED",
+    "pmid": "30728780",
+    "pmcid": "PMC6351492",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC6351492"
+     ]
+    },
+    "doi": "10.3389/fphys.2019.00013",
+    "title": "Periodized Resistance Training for Enhancing Skeletal Muscle Hypertrophy and Strength: A Mini-Review.",
+    "authorString": "Evans JW.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Evans JW",
+       "lastName": "Evans",
+       "firstName": "Jonathan W",
+       "initials": "JW",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "University of Ottawa, Ottawa, ON, Canada."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "10",
+     "journalIssueId": 2777617,
+     "dateOfPublication": "2019 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2019,
+     "journal": {
+      "medlineAbbreviation": "Front Physiol",
+      "title": "Frontiers in physiology",
+      "essn": "1664-042X",
+      "issn": "1664-042X",
+      "isoabbreviation": "Front Physiol",
+      "nlmid": "101549006"
+     },
+     "printPublicationDate": "2019-01-01"
+    },
+    "pubYear": "2019",
+    "pageInfo": "13",
+    "abstractText": "Prescribing the proper resistance training (RT) program is critical to optimize skeletal muscle hypertrophy and strength. Periodization is a strategy that entails planned manipulations of training variables to maximize fitness adaptations while minimizing the risk of overtraining. Multiple meta-analyses have shown periodized RT to be superior to non-periodized RT for enhancing muscular strength. These findings are consistent irrespective of training status or training volume. Both the linear model and the undulating model are effective for enhancing strength, although a greater benefit might be achieved through the undulating model. Despite the suggested superiority of periodized RT for strength development, some authors suggest that this might be a consequence of the study designs employed rather than the nature of periodized training. In addition, several limitations exist in the periodization literature, making it difficult to accurately assess the efficacy of periodized RT. With regard to enhancing skeletal muscle hypertrophy, both the undulating model and the linear model appear equally effective; however, this conclusion can only be generalized to untrained populations. When comparing periodized RT to non-periodized RT programs, the research is unclear on whether periodized RT is necessary to maximize skeletal muscle hypertrophy.",
+    "affiliation": "University of Ottawa, Ottawa, ON, Canada.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Exercise",
+      "Strength",
+      "Resistance Training",
+      "Muscle Hypertrophy",
+      "Periodization"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://www.frontiersin.org/articles/10.3389/fphys.2019.00013/pdf"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3389/fphys.2019.00013"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC6351492"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC6351492?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 41,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2019-02-08",
+    "dateOfRevision": "2020-09-30",
+    "electronicPublicationDate": "2019-01-23",
+    "firstPublicationDate": "2019-01-23",
+    "firstIndexDate": "2019-02-08",
+    "fullTextReceivedDate": "2025-02-03",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "30411234",
+    "source": "MED",
+    "pmid": "30411234",
+    "doi": "10.1007/s40279-018-1019-9",
+    "title": "Biological Background of Block Periodized Endurance Training: A Review.",
+    "authorString": "Issurin VB.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Issurin VB",
+       "lastName": "Issurin",
+       "firstName": "Vladimir B",
+       "initials": "VB",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Elite Sport Department, Wingate Institute, 42902, Netanya, Israel. Vladi2691@gmail.com."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "49",
+     "journalIssueId": 2774597,
+     "dateOfPublication": "2019 Jan",
+     "monthOfPublication": 1,
+     "yearOfPublication": 2019,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2019-01-01"
+    },
+    "pubYear": "2019",
+    "pageInfo": "31-39",
+    "abstractText": "Block periodized (BP) training is an innovative and prospective approach that is drawing increasing attention from coaching scientists and practitioners. However, its further dissemination and implementation demands serious scientific biological underpinnings. More specifically, the fundamental scientific concepts of homeostatic regulation, stress adaptation and the law of supercompensation determine the biological essence and content of appropriate block mesocycles, i.e., the accumulation, transmutation and realization cycles, respectively. Such a separation is intended to prevent conflicting physiological responses and provide a favorable interaction for training effects. Several studies have evaluated the metabolic effects of various training programs, and the superiority of the BP model has been confirmed in terms of significant gains of maximal oxygen uptake, maximal power output and positive trends in athletic performance. It was found that the endocrine status of athletes is strictly dependent on appropriate blocks such as voluminous extensive workloads combined with resistance training (accumulation), lower-volume intense training (transmutation), and event-specific precompetitive training (realization). Evidence from molecular biology indicates the major regulators that determine meaningful adaptive events within specific block mesocycles. Specifically, voluminous extensive accumulation blocks stimulate mitochondrial biogenesis and protein synthesis in slow-twitch muscle fibres, whereas lower-volume intense workloads of the transmutation blocks evoke adaptive modifications in fast-twitch glycolytic and oxidative-glycolytic muscle fibers. Furthermore, such a training program causes a remarkable elevation of myonuclear content in muscle fibers that enables athletes to regain previously acquired abilities. The precompetitive realization block produces accentuated expression of stress-related and myogenic genes that affect protein synthesis and increase muscle glycogen. In addition, such a program stimulates and increases the size, force and power of fast-twitch fibers.",
+    "affiliation": "Elite Sport Department, Wingate Institute, 42902, Netanya, Israel. Vladi2691@gmail.com.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "No funds has been used",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Mitochondria"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hormones",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Oxygen Consumption"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Homeostasis"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Athletic Performance"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Stress, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Fibers, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Organelle Biogenesis"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Endurance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Hormones",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-018-1019-9"
+      }
+     ]
+    },
+    "commentCorrectionList": {
+     "commentCorrection": [
+      {
+       "source": "MED",
+       "id": "31054093",
+       "reference": "Sports Med. 2019 Sep;49(9):1475-1477. doi: 10.1007/s40279-019-01114-9",
+       "type": "Comment in",
+       "orderIn": 1
+      },
+      {
+       "source": "MED",
+       "id": "31054094",
+       "reference": "Sports Med. 2019 Sep;49(9):1479-1480. doi: 10.1007/s40279-019-01115-8",
+       "type": "Comment in",
+       "orderIn": 2
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 27,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2020-03-26",
+    "dateOfCreation": "2018-11-10",
+    "dateOfRevision": "2021-01-09",
+    "firstPublicationDate": "2019-01-01",
+    "firstIndexDate": "2018-11-10",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "26133514",
+    "source": "MED",
+    "pmid": "26133514",
+    "doi": "10.1007/s40279-015-0355-2",
+    "title": "Short-term Periodization Models: Effects on Strength and Speed-strength Performance.",
+    "authorString": "Hartmann H, Wirth K, Keiner M, Mickel C, Sander A, Szilvas E.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Hartmann H",
+       "lastName": "Hartmann",
+       "firstName": "Hagen",
+       "initials": "H",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Human Movement Science and Athletic Training, Institute of Sports Sciences, Goethe University, Ginnheimer Landstr. 39, Frankfurt am Main, 60487, Germany. Hagen-Hartmann@online.de."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wirth K",
+       "lastName": "Wirth",
+       "firstName": "Klaus",
+       "initials": "K",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Human Movement Science and Athletic Training, Institute of Sports Sciences, Goethe University, Ginnheimer Landstr. 39, Frankfurt am Main, 60487, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Keiner M",
+       "lastName": "Keiner",
+       "firstName": "Michael",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1817-1743"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Swimming Federation of the State Lower Saxony, Hannover, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Mickel C",
+       "lastName": "Mickel",
+       "firstName": "Christoph",
+       "initials": "C",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Human Movement Science and Athletic Training, Institute of Sports Sciences, Goethe University, Ginnheimer Landstr. 39, Frankfurt am Main, 60487, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Sander A",
+       "lastName": "Sander",
+       "firstName": "Andre",
+       "initials": "A",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Bobsleigh and Luge Federation Germany, Berchtesgaden, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Szilvas E",
+       "lastName": "Szilvas",
+       "firstName": "Elena",
+       "initials": "E",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Human Movement Science and Athletic Training, Institute of Sports Sciences, Goethe University, Ginnheimer Landstr. 39, Frankfurt am Main, 60487, Germany."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1817-1743"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "wikipedia"
+     ]
+    },
+    "journalInfo": {
+     "issue": "10",
+     "volume": "45",
+     "journalIssueId": 2326142,
+     "dateOfPublication": "2015 Oct",
+     "monthOfPublication": 10,
+     "yearOfPublication": 2015,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2015-10-01"
+    },
+    "pubYear": "2015",
+    "pageInfo": "1373-1386",
+    "abstractText": "Dividing training objectives into consecutive phases to gain morphological adaptations (hypertrophy phase) and neural adaptations (strength and power phases) is called strength-power periodization (SPP). These phases differ in program variables (volume, intensity, and exercise choice or type) and use stepwise intensity progression and concomitant decreasing volume, converging to peak intensity (peaking phase). Undulating periodization strategies rotate these program variables in a bi-weekly, weekly, or daily fashion. The following review addresses the effects of different short-term periodization models on strength and speed-strength both with subjects of different performance levels and with competitive athletes from different sports who use a particular periodization model during off-season, pre-season, and in-season conditioning. In most periodization studies, it is obvious that the strength endurance sessions are characterized by repetition zones (12-15 repetitions) that induce muscle hypertrophy in persons with a low performance level. Strictly speaking, when examining subjects with a low training level, many periodization studies include mainly hypertrophy sessions interspersed with heavy strength/power sessions. Studies have demonstrated equal or statistically significant higher gains in maximal strength for daily undulating periodization compared with SPP in subjects with a low to moderate performance level. The relatively short intervention period and the lack of concomitant sports conditioning call into question the practical value of these findings for competitive athletes. Possibly owing to differences in mesocycle length, conditioning programs, and program variables, competitive athletes either maintained or improved strength and/or speed-strength performance by integrating daily undulating periodization and SPP during off-season, pre-season and in-season conditioning. In high-performance sports, high-repetition strength training (>15) should be avoided because it does not provide an adequate training stimulus for gains in muscle cross-sectional area and strength performance. High-volume circuit strength training performed over 2 years negatively affected the development of the power output and maximal strength of the upper extremities in professional rugby players. Indeed, meta-analyses and results with weightlifters, American Football players, and throwers confirm the necessity of the habitual use of ≥80% 1 RM: (1) to improve maximal strength during the off-season and in-season in American Football, (2) to reach peak performance in maximal strength and vertical jump power during tapering in track-and-field, and (3) to produce hypertrophy and strength improvements in advanced athletes. The integration and extent of hypertrophy strength training in in-season conditioning depend on the duration of the contest period, the frequency of the contests, and the proportion of the conditioning program. Based on the literature, 72 h between hypertrophy strength training and strength-power training should be provided to allow for adequate regeneration times and therefore maximal stimulus intensities in training. This conclusion is only valid if the muscle is not trained otherwise during this regeneration phase. Thus, rotating hypertrophy and strength-power sessions in a microcycle during the season is a viable option. Comparative studies in competitive athletes who integrated strength training during pre-season conditioning confirm a tendency for gains in explosive strength and statistically significant improvements in medicine ball throw through SPP but not through daily undulating periodization. These findings indicate that to maximize the speed-strength in the short term (peaking), elite athletes should perform strength-power training twice per week. It is possible to perform a single strength-power session with the method of maximum explosive strength actions moving high-weight loads (90% 1 repetition maximum [RM]) at least 1-2 days before competition because of the shorter regeneration times and potentiation effects. Compared with ballistic strength training (30% 1 RM), this method has been shown to provide statistically superior gains in maximal strength, peak power, impulse size, and explosive strength during tapering in track-and-field throwers. The speed-strength performance in drop jumps of strength-trained subjects showed potentiation effects 48-148 h after a single strength-power training session. Regarding neuromuscular performance, plyometric exercises can even be performed after strength-power training on the same day if a minimum rest period of 3 h is provided.",
+    "affiliation": "Department of Human Movement Science and Athletic Training, Institute of Sports Sciences, Goethe University, Ginnheimer Landstr. 39, Frankfurt am Main, 60487, Germany. Hagen-Hartmann@online.de.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Competitive Behavior",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Seasons"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Time Factors"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Physical Education and Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Athletic Performance",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-015-0355-2"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 50,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2016-06-13",
+    "dateOfCreation": "2015-07-03",
+    "dateOfRevision": "2018-11-13",
+    "firstPublicationDate": "2015-10-01",
+    "firstIndexDate": "2015-07-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "28344448",
+    "source": "MED",
+    "pmid": "28344448",
+    "pmcid": "PMC5358028",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC5358028"
+     ]
+    },
+    "title": "Is Empirical Research on Periodization Trustworthy? A Comprehensive Review of Conceptual and Methodological Issues.",
+    "authorString": "Afonso J, Nikolaidis PT, Sousa P, Mesquita I.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Afonso J",
+       "lastName": "Afonso",
+       "firstName": "José",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Research, Formation, Innovation, and Intervention in Sport. Faculty of Sport - University of Porto , Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Nikolaidis PT",
+       "lastName": "Nikolaidis",
+       "firstName": "Pantelis T",
+       "initials": "PT",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical and Cultural Education - Hellenic Army Academy , Athens, Greece."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Sousa P",
+       "lastName": "Sousa",
+       "firstName": "Patrícia",
+       "initials": "P",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Research, Formation, Innovation, and Intervention in Sport. Faculty of Sport - University of Porto , Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Mesquita I",
+       "lastName": "Mesquita",
+       "firstName": "Isabel",
+       "initials": "I",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Research, Formation, Innovation, and Intervention in Sport. Faculty of Sport - University of Porto , Portugal."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "16",
+     "journalIssueId": 2540234,
+     "dateOfPublication": "2017 Mar",
+     "monthOfPublication": 3,
+     "yearOfPublication": 2017,
+     "journal": {
+      "medlineAbbreviation": "J Sports Sci Med",
+      "title": "Journal of sports science & medicine",
+      "essn": "1303-2968",
+      "issn": "1303-2968",
+      "isoabbreviation": "J Sports Sci Med",
+      "nlmid": "101174629"
+     },
+     "printPublicationDate": "2017-03-01"
+    },
+    "pubYear": "2017",
+    "pageInfo": "27-34",
+    "abstractText": "Periodization is a core concept in training. Recently, systematic reviews and meta-analyses have attempted to provide a comprehensive overview of the topic, but theoretical criticisms have arisen with regard to how such research has been conducted. The purpose of the study was to review comprehensively the conceptual and methodological issues surrounding empirical research on periodization in training with human subjects. A search was conducted late in February 2016 on Academic Search Complete, CINAHL Plus, MedicLatina, MEDLINE, PsycINFO, PubMed, Scielo, Scopus, SPORTDiscus and Web of Science. Forty-two randomized or randomized controlled trials were retrieved. Problems emerged in three domains: (a) Conceptually, periodization and variation were applied differently in research, while no empirical research tested predictions concerning direction, timing or magnitude of the adaptations; (b) Study design: More than 95% of papers investigated the 'physical' factor (mainly strength). Research on long-term effects was absent (no study lasted more than nine months). Controlling for confounding factors such as nutrition, supplementation and medication was largely ignored; (c) Data analysis was biased as dispersion in responsiveness was ignored when discussing the findings. Overall, research on periodization fails to analyze the conceptual premises proposed by these approaches.",
+    "affiliation": "Centre for Research, Formation, Innovation, and Intervention in Sport. Faculty of Sport - University of Porto , Portugal.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Randomized Trials",
+      "Periodized Programs",
+      "Research Paradigms"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC5358028"
+      },
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC5358028?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 13,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2017-03-28",
+    "dateOfRevision": "2019-11-20",
+    "electronicPublicationDate": "2017-03-01",
+    "firstPublicationDate": "2017-03-01",
+    "firstIndexDate": "2017-03-27",
+    "fullTextReceivedDate": "2025-02-03",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "26573916",
+    "source": "MED",
+    "pmid": "26573916",
+    "doi": "10.1007/s40279-015-0425-5",
+    "title": "Benefits and Limitations of Block Periodized Training Approaches to Athletes' Preparation: A Review.",
+    "authorString": "Issurin VB.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Issurin VB",
+       "lastName": "Issurin",
+       "firstName": "Vladimir B",
+       "initials": "VB",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Elite Sport Department, Wingate Institute, 42902, Netanya, Israel. v_issurin@hotmail.com."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "46",
+     "journalIssueId": 2379137,
+     "dateOfPublication": "2016 Mar",
+     "monthOfPublication": 3,
+     "yearOfPublication": 2016,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2016-03-01"
+    },
+    "pubYear": "2016",
+    "pageInfo": "329-338",
+    "abstractText": "The present review introduces innovative concepts of training periodization and summarizes a large body of findings characterizing their potential benefits and possible limitations. Evidence-based analysis of the traditional periodization model led to elaboration of alternative versions of athletic preparation. These alternative versions postulated the superiority of training programs with a high concentration of selected workloads compared with traditionally designed plans directed at the concurrent development of many athletic abilities at low/medium workload concentration. The training cycles of highly concentrated specialized workloads were coined \"training blocks\" by experts and practitioners; correspondingly, the alternative versions were termed \"block periodized (BP) preparation systems\" by their presenters. Ultimately, two BP training models were proposed: a concentrated unidirectional training model (CU) and a multi-targeted BP approach to athletes' preparation. The first innovative version postulated administration of highly concentrated training means for enhancement of one leading fitness component, whereas the second version proposed the development of many targeted abilities within sequenced block mesocycles containing a minimal number of compatible training modalities. Both versions differ in their methodological background, duration and content of training blocks, possibilities of providing multi-peak performances, and applicability to various sports. In recent decades, many studies have evaluated the effects of both BP training versions in different sports. Examination of the training effects producing by the CU model in combat and team sports has found significant gains in various fitness estimates but not in sport-specific performances. Similarly, utilization of a CU program by elite swimmers did not lead to substantial enhancement of their peak performances. In contrast, studies of multi-targeted BP training programs have revealed their distinct superiority compared with traditional preparation in endurance, team, and dual sports, and strength/power training and recreational athletes (28 studies). It is suggested that the CU training strategy suits athletic disciplines demanding one fitness component like explosive strength in jumping performances. Unlike this limitation, the multi-targeted BP system prompted a beneficial increase of specific preparedness in sports and disciplines in which peak performances require the application of many targeted athletic abilities.",
+    "affiliation": "Elite Sport Department, Wingate Institute, 42902, Netanya, Israel. v_issurin@hotmail.com.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Sports Medicine",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "TD",
+          "qualifierName": "trends"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Physical Endurance"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Sports"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Workload"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Athletic Performance"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Athletes"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Physical Conditioning, Human",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "TD",
+          "qualifierName": "trends"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-015-0425-5"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 66,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2016-12-13",
+    "dateOfCreation": "2015-11-18",
+    "dateOfRevision": "2022-04-08",
+    "firstPublicationDate": "2016-03-01",
+    "firstIndexDate": "2015-11-18",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "26844095",
+    "source": "MED",
+    "pmid": "26844095",
+    "pmcid": "PMC4721364",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC4721364"
+     ]
+    },
+    "doi": "10.1016/j.pmedr.2015.04.023",
+    "title": "The use of periodization in exercise prescriptions for inactive adults: A systematic review.",
+    "authorString": "Strohacker K, Fazzino D, Breslin WL, Xu X.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Strohacker K",
+       "lastName": "Strohacker",
+       "firstName": "Kelley",
+       "initials": "K",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2067-8439"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, Recreation, and Sports Studies, The University of Tennessee, Knoxville, TN, United States."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Fazzino D",
+       "lastName": "Fazzino",
+       "firstName": "Daniel",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, Recreation, and Sports Studies, The University of Tennessee, Knoxville, TN, United States."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Breslin WL",
+       "lastName": "Breslin",
+       "firstName": "Whitney L",
+       "initials": "WL",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Health and Human Performance, University of Houston, Houston, TX, United States."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Xu X",
+       "lastName": "Xu",
+       "firstName": "Xiaomeng",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Psychology, Idaho State University, Pocatello, ID, United States."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2067-8439"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "2",
+     "journalIssueId": 2372419,
+     "dateOfPublication": "2015 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2015,
+     "journal": {
+      "medlineAbbreviation": "Prev Med Rep",
+      "title": "Preventive medicine reports",
+      "essn": "2211-3355",
+      "issn": "2211-3355",
+      "isoabbreviation": "Prev Med Rep",
+      "nlmid": "101643766"
+     },
+     "printPublicationDate": "2015-01-01"
+    },
+    "pubYear": "2015",
+    "pageInfo": "385-396",
+    "abstractText": "<h4>Background</h4>Periodization of exercise is a method typically used in sports training, but the impact of periodized exercise on health outcomes in untrained adults is unclear.<h4>Purpose</h4>This review aims to summarize existing research wherein aerobic or resistance exercise was prescribed to inactive adults using a recognized periodization method.<h4>Methods</h4>A search of relevant databases, conducted between January and February of 2014, yielded 21 studies published between 2000 and 2013 that assessed the impact of periodized exercise on health outcomes in untrained participants.<h4>Results</h4>Substantial heterogeneity existed between studies, even under the same periodization method. Compared to baseline values or non-training control groups, prescribing periodized resistance or aerobic exercise yielded significant improvements in health outcomes related to traditional and emerging risk factors for cardiovascular disease, low-back and neck/shoulder pain, disease severity, and quality of life, with mixed results for increasing bone mineral density.<h4>Conclusions</h4>Although it is premature to conclude that periodized exercise is superior to non-periodized exercise for improving health outcomes, periodization appears to be a feasible means of prescribing exercise to inactive adults within an intervention setting. Further research is necessary to understand the effectiveness of periodizing aerobic exercise, the psychological effects of periodization, and the feasibility of implementing flexible non-linear methods.",
+    "affiliation": "Department of Kinesiology, Recreation, and Sports Studies, The University of Tennessee, Knoxville, TN, United States.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Health",
+      "intervention",
+      "Resistance Training",
+      "Sedentary",
+      "Aerobic Training",
+      "Periodized Exercise"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.pmedr.2015.04.023"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC4721364"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC4721364?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 41,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by-nc-nd",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2016-02-04",
+    "dateOfCreation": "2016-02-05",
+    "dateOfRevision": "2024-03-24",
+    "electronicPublicationDate": "2015-05-06",
+    "firstPublicationDate": "2015-05-06",
+    "firstIndexDate": "2016-02-05",
+    "fullTextReceivedDate": "2020-07-10",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "26679784",
+    "source": "MED",
+    "pmid": "26679784",
+    "doi": "10.1016/j.ptsp.2015.08.003",
+    "title": "Periodization and physical therapy: Bridging the gap between training and rehabilitation.",
+    "authorString": "Hoover DL, VanWye WR, Judge LW.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Hoover DL",
+       "lastName": "Hoover",
+       "firstName": "Donald L",
+       "initials": "DL",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0886-639X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Western Kentucky University, Bowling Green, KY, USA. Electronic address: Don.Hoover@wku.edu."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "VanWye WR",
+       "lastName": "VanWye",
+       "firstName": "William R",
+       "initials": "WR",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Western Kentucky University, Bowling Green, KY, USA. Electronic address: ray.vanwye@wku.edu."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Judge LW",
+       "lastName": "Judge",
+       "firstName": "Lawrence W",
+       "initials": "LW",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Ball State University, Muncie, IN, USA. Electronic address: lwjudge@bsu.edu."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0886-639X"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "volume": "18",
+     "journalIssueId": 2379395,
+     "dateOfPublication": "2016 Mar",
+     "monthOfPublication": 3,
+     "yearOfPublication": 2016,
+     "journal": {
+      "medlineAbbreviation": "Phys Ther Sport",
+      "title": "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine",
+      "essn": "1873-1600",
+      "issn": "1466-853X",
+      "isoabbreviation": "Phys Ther Sport",
+      "nlmid": "100940513"
+     },
+     "printPublicationDate": "2016-03-01"
+    },
+    "pubYear": "2016",
+    "pageInfo": "1-20",
+    "abstractText": "<h4>Background</h4>Exercise prescription and training progression for competitive athletes has evolved considerably in recent decades, as strength and conditioning coaches increasingly use periodization models to inform the development and implementation of training programs for their athletes. Similarly, exercise prescription and progression is a fundamental skill for sport physical therapists, and is necessary for balancing the physiological stresses of injury with an athlete's capacity for recovery.<h4>Objective</h4>This article will provide the sport physical therapist with an overview of periodization models and their application to rehabilitation.<h4>Summary</h4>In recent decades models for exercise prescription and progression also have evolved in theory and scope, contributing to improved rehabilitation for countless athletes, when compared to care offered to athletes of previous generations. Nonetheless, despite such advances, such models typically fail to fully bridge the gap between such rehabilitation schemes and the corresponding training models that coaches use to help athletes peak for competition. Greater knowledge of periodization models can help sport physical therapists in their evaluation, clinical reasoning skills, exercise progression, and goal setting for the sustained return of athletes to high level competition.",
+    "affiliation": "Western Kentucky University, Bowling Green, KY, USA. Electronic address: Don.Hoover@wku.edu.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Athletic Injuries",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PP",
+          "qualifierName": "physiopathology"
+         },
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "RH",
+          "qualifierName": "rehabilitation"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Exercise Therapy",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Perception"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Time Factors"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Physical Fitness",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Exercise Prescription",
+      "Clinical Reasoning",
+      "Exercise Progression",
+      "Rehabilitation In Sport"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.ptsp.2015.08.003"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 25,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2016-12-20",
+    "dateOfCreation": "2015-12-19",
+    "dateOfRevision": "2018-06-01",
+    "electronicPublicationDate": "2015-09-09",
+    "firstPublicationDate": "2015-09-09",
+    "firstIndexDate": "2015-12-22",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

@@ -24,6 +24,8 @@ import type {
 } from '../types/billing.ts';
 import {CalculatorApiError} from '../types/billing.ts';
 import {JOURNAL_LIMITS} from './journalLimits.ts';
+import {clearOutboxIfNotNewer, isRetryableNetworkError, writeOutbox} from './offlineOutbox.ts';
+import {ensureTrainingProfiles} from './training-profiles.ts';
 
 const AUTH_EXPIRED = 'AUTH_EXPIRED';
 const API_UNAVAILABLE = 'API_UNAVAILABLE';
@@ -250,6 +252,15 @@ export function normalizeLoadedUser(input: unknown, fallbackName: string): UserD
       })
     : [];
 
+  const ensured = ensureTrainingProfiles({
+    profiles: input.profiles,
+    splits,
+    splitCalculations,
+    activeProfileId:
+      typeof input.activeProfileId === 'string' ? input.activeProfileId.trim() : null,
+    activeSplitId,
+  });
+
   const base: UserData = {name, exercises};
   if (completedSessions !== null) base.trainingProgress = {completedSessions};
   if (trainingProgressByProgram && Object.keys(trainingProgressByProgram).length > 0) {
@@ -258,9 +269,11 @@ export function normalizeLoadedUser(input: unknown, fallbackName: string): UserD
   if (activeProgram) base.activeProgram = activeProgram;
   if (testResults.length > 0) base.testResults = testResults;
   if (journal.length > 0) base.journal = journal;
-  if (splits.length > 0) base.splits = splits;
+  if (ensured.splits.length > 0) base.splits = ensured.splits;
+  if (ensured.profiles.length > 0) base.profiles = ensured.profiles;
+  if (ensured.activeProfileId) base.activeProfileId = ensured.activeProfileId;
   if (activeSplitId) base.activeSplitId = activeSplitId;
-  if (splitCalculations.length > 0) base.splitCalculations = splitCalculations;
+  if (ensured.splitCalculations.length > 0) base.splitCalculations = ensured.splitCalculations;
   if (activeSplitCalculationId) base.activeSplitCalculationId = activeSplitCalculationId;
 
   return base;
@@ -323,6 +336,10 @@ function normalizeLoadedSplit(input: unknown): CustomSplit | null {
     createdAt,
     updatedAt,
   };
+
+  if (typeof input.profileId === 'string' && input.profileId.trim()) {
+    split.profileId = input.profileId.trim();
+  }
 
   if (Array.isArray(input.legExercises) && input.legExercises.length === 2) {
     split.legExercises = normalizeLegExercises(input.legExercises);
@@ -491,7 +508,11 @@ export function createApiClient(baseUrl: string) {
     }
   }
 
-  async function saveUser(data: UserData, token: string): Promise<{ok: boolean; error?: string}> {
+  async function saveUser(
+    data: UserData,
+    token: string,
+  ): Promise<{ok: boolean; error?: string; pending?: boolean}> {
+    const startedAt = new Date().toISOString();
     try {
       const response = await fetch(`${baseUrl}/users/${encodeURIComponent(data.name)}`, {
         method: 'PUT',
@@ -514,10 +535,32 @@ export function createApiClient(baseUrl: string) {
         console.error('saveUser failed on API side:', error);
         return {ok: false, error};
       }
+      if (typeof localStorage !== 'undefined') {
+        try {
+          clearOutboxIfNotNewer(localStorage, data.name, startedAt);
+        } catch (storageError) {
+          console.error('Failed to clear offline outbox:', storageError);
+        }
+      }
       return {ok: true};
     } catch (err) {
+      const message = err instanceof Error ? err.message : 'Network error';
+      if (isRetryableNetworkError(message)) {
+        if (typeof localStorage !== 'undefined') {
+          try {
+            writeOutbox(localStorage, {
+              data,
+              token,
+              updatedAt: new Date().toISOString(),
+            });
+          } catch (storageError) {
+            console.error('Failed to queue offline save:', storageError);
+          }
+        }
+        return {ok: true, pending: true};
+      }
       console.error('saveUser network/unknown error:', err);
-      return {ok: false, error: err instanceof Error ? err.message : 'Network error'};
+      return {ok: false, error: message};
     }
   }
 

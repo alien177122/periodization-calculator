@@ -50,7 +50,7 @@ export default function ActiveDayView({
             exercises={currentExercises}
           />
         ) : null}
-        <Button variant="complete" onClick={onComplete}>
+        <Button className="calc-test__submit" onClick={onComplete}>
           Завершить тренировку
         </Button>
       </SectionBlock>

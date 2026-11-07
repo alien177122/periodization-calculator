@@ -1,35 +1,29 @@
 # Architecture
 
-Training Calculator (Periodizatsiya) is a **web-first monorepo**: React PWA frontend, Express API, shared TypeScript package, optional native shells.
+Training Calculator (Periodizatsiya) **v0.003** is a **web-only product**: Vite 7 + React 19 PWA, Express 5 + SQLite API, shared TypeScript package `@training/shared`. Native Expo / Capacitor / Electron trees live in `_archive-non-web/` and are not part of the running app.
 
 ## High-level diagram
 
 ```mermaid
 flowchart TB
   subgraph client [Client]
-    PWA[src/ Vite React PWA]
-    Desktop[desktop/ Electron]
-    Mobile[apps/mobile Expo]
-    Cap[Capacitor ios/android]
+    PWA[src/ Vite 7 + React 19 PWA]
   end
 
   subgraph shared [packages/shared]
     Hooks[hooks + utils]
-    API[@training/shared API client]
+    API["@training/shared API client"]
     Program[program v3 logic]
   end
 
   subgraph backend [server/]
-    Express[Express REST API]
+    Express[Express 5 REST API]
     JWT[JWT auth]
     SQLite[(SQLite gym.db)]
     Files[file workspace]
   end
 
   PWA --> API
-  Desktop --> PWA
-  Cap --> PWA
-  Mobile --> API
   PWA --> Hooks
   API --> Express
   Express --> JWT
@@ -40,15 +34,12 @@ flowchart TB
 
 ## Packages
 
-| Path               | Role                                                                   |
-| ------------------ | ---------------------------------------------------------------------- |
-| `src/`             | Primary UI: calculator, journal, training, theory screens              |
-| `server/`          | Auth, user data persistence, journal API, static `dist/` in production |
-| `packages/shared/` | Shared types, calculations, API client — web + native                  |
-| `desktop/`         | Electron wrapper around dev/prod web URL                               |
-| `apps/mobile/`     | Expo Router mobile client                                              |
-| `apps/macos/`      | Expo / RN macOS–Android release track                                  |
-| `ios/`, `android/` | Capacitor native shells over Vite `dist/`                              |
+| Path                | Role                                                                   |
+| ------------------- | ---------------------------------------------------------------------- |
+| `src/`              | Primary UI: calculator, journal, training, split, theory screens       |
+| `server/`           | Auth, user data persistence, journal API, static `dist/` in production |
+| `packages/shared/`  | `@training/shared` — types, calculations, API client                   |
+| `_archive-non-web/` | Archived Electron / Expo / Capacitor shells (not built by root)        |
 
 ## Authentication
 
@@ -85,10 +76,13 @@ Full route list: `server/app.js`.
 
 ## Testing
 
-| Suite         | Command                                                            |
-| ------------- | ------------------------------------------------------------------ |
-| Unit (Bun)    | `bun run test:unit` — `tests/*.test.ts`                            |
-| Server (Node) | `bun run test:native` — `tests/db.test.ts`, `tests/server.test.ts` |
+| Suite             | Command                                                            |
+| ----------------- | ------------------------------------------------------------------ |
+| Typecheck         | `npm run typecheck`                                                |
+| Unit + API        | `npm test` — `tests/*.test.ts` (Node test runner)                  |
+| Lint              | `npm run lint`                                                     |
+| Production bundle | `npm run build` → `dist/` (budget ≤ 5 MB)                          |
+| CI                | `.github/workflows/ci.yml` (Node 22: typecheck, test, lint, build) |
 
 ## Design standards
 

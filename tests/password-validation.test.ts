@@ -29,3 +29,18 @@ test('validatePassword rejects passwords with only length and no classes', () =>
   assert.equal(weak.isValid, false);
   assert.ok(passwordPolicyError('        '));
 });
+
+test('validatePassword requires at least three character classes', () => {
+  const lettersOnly = validatePassword('abcdefgh');
+  assert.equal(lettersOnly.criteria.minLength, true);
+  assert.equal(lettersOnly.score, 2);
+  assert.equal(lettersOnly.isValid, false);
+  assert.ok(passwordPolicyError('abcdefgh'));
+});
+
+test('validatePassword rejects passwords longer than 72 characters', () => {
+  const tooLong = `Aa1${'x'.repeat(70)}`;
+  assert.equal(tooLong.length, 73);
+  assert.equal(validatePassword(tooLong).isValid, false);
+  assert.equal(passwordPolicyError(tooLong), 'Пароль не длиннее 72 символов');
+});

@@ -1,3 +1,38 @@
+/* CONNECTION */
+.connection-status {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 4px 16px;
+  padding-top: calc(4px + env(safe-area-inset-top, 0px));
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: start;
+}
+
+@supports (padding: env(safe-area-inset-top)) {
+  #root .connection-status {
+    padding-top: 4px;
+  }
+}
+
+.connection-status--online {
+  color: var(--color-success, #3f9d62);
+}
+
+.connection-status--offline {
+  color: var(--text-secondary);
+}
+
+.connection-status--pending,
+.connection-status--syncing {
+  color: var(--color-warning, #d97706);
+}
+
 /* SECTION */
 .section {
   margin-bottom: 56px;
@@ -27,7 +62,10 @@
 .user-bar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: var(--space-2);
+  row-gap: var(--space-2);
   margin-block: 0;
   padding: var(--space-4) var(--space-5);
   background: var(--glass-bg-card);
@@ -79,18 +117,58 @@
   font-size: 12px;
   font-weight: 500;
   color: var(--color-text-secondary);
-  padding: 8px 12px;
-  border-radius: 999px;
   border: 1px solid var(--color-border-subtle);
+}
+/* «Безлимит» (статус) и «Выйти» — один квадрат, не капсула.
+   44px мало для строки «Безлимит» (~57px): сторона 84px, радиус 8px. */
+.user-bar .user-bar-actions > .user-bar__billing-badge,
+.user-bar .user-bar-actions > .btn-sm:last-child {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 84px;
+  height: 84px;
+  min-width: 84px;
+  min-height: 84px;
+  aspect-ratio: 1;
+  padding: 8px;
+  border-radius: var(--radius-sm, 8px);
+  text-align: center;
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
 }
 .user-bar .btn-ghost {
   background: var(--overlay-subtle);
   border-color: var(--border-subtle);
   color: var(--text-soft);
 }
-@media (max-width: 672px) {
+@media (max-width: 480px) {
+  /* Держим шапку в одну строку и разводим элементы по всей ширине:
+     имя слева, действия — по центру и справа. Раньше margin-left: 0
+     сбивал кнопки к имени. */
+  .user-bar {
+    flex-wrap: nowrap;
+  }
+  /* Обёртка не должна собирать кнопки в один блок: её дети становятся
+     прямыми flex-элементами шапки и попадают в общий space-between. */
   .user-bar-actions {
-    margin-left: 0;
+    display: contents;
+  }
+  /* Кнопка без фиксированной ширины забирает остаток строки и переносит текст.
+     Иначе длинное «Открыть безлимитные расчёты» вылезает на соседнюю кнопку. */
+  .user-bar-actions > .btn-sm:not(:last-child) {
+    box-sizing: border-box;
+    flex: 0 1 auto;
+    min-width: 0;
+    height: 84px;
+    min-height: 84px;
+    padding: 8px;
+    line-height: 1.15;
+    white-space: normal;
   }
 }
 @media (hover: hover) and (pointer: fine) {
@@ -665,9 +743,10 @@
     font-size: 12px;
   }
   .btn-complete {
-    padding: 16px 24px;
-    font-size: 20px;
-    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 14px;
+    border-radius: 0.75rem;
+    min-height: 44px;
   }
 
   /* User bar */
@@ -689,6 +768,15 @@
     min-width: 60px;
     padding: 0 10px;
     font-size: 12px;
+  }
+  .user-bar .user-bar-actions > .user-bar__billing-badge,
+  .user-bar .user-bar-actions > .btn-sm:last-child {
+    width: 84px;
+    height: 84px;
+    min-width: 84px;
+    min-height: 84px;
+    padding: 8px;
+    border-radius: var(--radius-sm, 8px);
   }
 
   /* Sections */

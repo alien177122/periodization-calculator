@@ -1,13 +1,13 @@
 import {useMemo, type CSSProperties} from 'react';
 import {CATALOG_EXERCISES} from '@training/shared/data/exercises';
 import {exerciseKeysForDay} from '@training/shared/utils/split-constructor';
-import type {CustomSplit, SavedExercise} from '../../types';
+import type {CustomSplit, SavedExercise, SplitDayNumber} from '../../types';
 
 interface MuscleDayGridProps {
   split: CustomSplit;
   savedExercises: SavedExercise[];
-  onDuplicateExercise: (exerciseKey: string, targetDay: 1 | 2 | 3) => void;
-  onRemoveExercise: (exerciseKey: string, dayNumber: 1 | 2 | 3) => void;
+  onDuplicateExercise: (exerciseKey: string, targetDay: 1 | 2 | 3 | 4) => void;
+  onRemoveExercise: (exerciseKey: string, dayNumber: 1 | 2 | 3 | 4) => void;
 }
 
 function exerciseCountLabel(count: number): string {
@@ -82,7 +82,7 @@ export function MuscleDayGrid({
   );
 
   const keysByDay = useMemo(() => {
-    const map = new Map<1 | 2 | 3, string[]>();
+    const map = new Map<SplitDayNumber, string[]>();
     for (const day of split.days) {
       map.set(day.dayNumber, exerciseKeysForDay(split, day.dayNumber));
     }

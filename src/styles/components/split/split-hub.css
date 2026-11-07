@@ -1,0 +1,339 @@
+.split-hub {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* iOS-шит «Профили» (AppSheet): единая список-панель с хэрплайнами,
+   выбранному профилю — спокойный бейдж «Открыт». */
+.profile-sheet__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-sheet__item {
+  border-bottom: var(--border-width-hairline) solid var(--border);
+}
+
+.profile-sheet__item:last-child {
+  border-bottom: 0;
+}
+
+.profile-sheet__row {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: 48px;
+  margin: 0;
+  padding: var(--space-2) 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: var(--type-16);
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.profile-sheet__row:active {
+  transform: scale(0.995);
+}
+
+.profile-sheet__badge {
+  flex: 0 0 auto;
+  padding: 3px 10px;
+  border: var(--border-width-hairline) solid var(--border);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  font-size: var(--type-12);
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+/* Ряд добавления — тихий, вторичный цвет, курсивный ритм не нужен. */
+.profile-sheet__row--add {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.profile-sheet__row--add span {
+  margin-right: var(--space-1);
+  font-weight: 600;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .profile-sheet__row:hover:not(.profile-sheet__row--add) {
+    background: color-mix(in srgb, var(--text) 4%, transparent);
+  }
+
+  .profile-sheet__row--add:hover {
+    color: var(--text);
+  }
+}
+
+/* Кнопка + подпись — центрблок той же ширины, что и «ПРОФИЛИ» ниже. */
+.split-hub__cta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: min(400px, 100%);
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* Подпись кнопки — собственный центрированный контейнер. */
+.split-hub__cta-hint {
+  width: 100%;
+  margin: 0;
+  font-size: var(--type-12);
+  line-height: 1.4;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.split-hub__block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.split-hub__block-title {
+  margin: 0;
+  font-size: var(--type-12);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* Компактный блок профилей: не на всю ширину секции, по центру,
+   название профиля — в середине строки, действия (✎ / удалить) рядом. */
+.split-hub__block--profiles {
+  width: min(400px, 100%);
+  margin-inline: auto;
+}
+
+.split-hub__block--profiles .split-hub__block-title {
+  text-align: center;
+}
+
+.split-hub__block--profiles .split-hub__row-main {
+  text-align: center;
+  align-items: center;
+}
+
+/* Строка профиля и «+ Профиль» — в одной плоскости; при узком
+   контейнере ряд переносится ниже (два ряда). */
+.split-hub__block--profiles .split-hub__list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.split-hub__block--profiles .split-hub__row {
+  flex: 1 1 auto;
+}
+
+.split-hub__block--profiles .split-hub__list-item--add {
+  display: flex;
+  flex: 0 0 auto;
+}
+
+.split-hub__block--profiles .split-hub__add {
+  align-self: stretch;
+  padding-inline: var(--space-3);
+}
+
+.split-hub__placeholder {
+  margin: 0;
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  border: var(--border-width) dashed var(--border);
+  color: var(--text-secondary);
+  font-size: var(--type-14);
+  text-align: center;
+}
+
+.split-hub__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.split-hub__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  border: var(--border-width) solid var(--border-subtle, var(--border));
+  background: color-mix(in srgb, var(--surface-elevated, var(--surface-raised)) 80%, transparent);
+}
+
+.split-hub__row--selected {
+  border-color: color-mix(
+    in srgb,
+    var(--color-accent, var(--accent)) 40%,
+    var(--border-subtle, var(--border))
+  );
+  background: color-mix(in srgb, var(--surface-elevated, var(--surface-raised)) 92%, transparent);
+}
+
+.split-hub__row-main {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+.split-hub__row-title {
+  font-size: var(--type-14);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.split-hub__row-meta {
+  font-size: var(--type-12);
+  color: var(--text-secondary);
+}
+
+.split-hub__row-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: var(--space-1);
+}
+
+.split-hub__icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  /* Отступы слева/справа есть, но меньше вертикального воздуха
+     от min-height — надпись остаётся по центру. */
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  border: var(--border-width) solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.split-hub__icon-btn:focus-visible {
+  outline: 2px solid var(--color-accent, var(--accent));
+  outline-offset: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .split-hub__icon-btn:hover {
+    color: var(--text-primary, var(--text));
+    border-color: var(--border-subtle, var(--border));
+    background: var(--overlay-subtle, transparent);
+  }
+}
+
+/* Primary CTA — same as Calculator «Рассчитать» (.btn.calc-test__submit), not legacy .btn gradient */
+.split-hub .btn.calc-test__submit.split-hub__add {
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: normal;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.split-hub__add {
+  align-self: stretch;
+  min-height: 2.75rem;
+  justify-content: center;
+}
+
+.split-hub .split-toolbar__action.split-hub__add {
+  font-weight: 500;
+}
+
+.split-hub__rename-input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  border: var(--border-width) solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: var(--type-14);
+}
+
+.split-hub__sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: color-mix(in srgb, var(--surface, #0a0a0b) 40%, transparent);
+}
+
+.split-hub__sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1201;
+  max-height: min(92vh, 720px);
+  overflow: auto;
+  padding: var(--space-4);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  border: var(--border-width) solid var(--border);
+  background: var(--surface-raised);
+}
+
+.split-hub__sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.split-hub__sheet-title {
+  margin: 0;
+  font-size: var(--type-18);
+  font-weight: 600;
+}
+
+.split-editor-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.split-editor-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.split-hub__calc-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+}

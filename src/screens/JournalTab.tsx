@@ -145,7 +145,7 @@ export function JournalTab({userData, setUserData, token, onSaveError}: JournalT
             ) : (
               <div className="journal-history-empty">
                 <p className="journal-history-empty__text">Записей пока нет.</p>
-                <p className="journal-history-empty__sub">Сохраните первый подход.</p>
+                <p className="journal-history-empty__sub">Сохрани первый подход.</p>
               </div>
             )}
           </SectionBlock>
@@ -174,9 +174,9 @@ export function JournalTab({userData, setUserData, token, onSaveError}: JournalT
 
           <NoteBox variant="apple">
             <p className="journal-chart-note">
-              <span className="calc-test__footnote-lead">Факт в зале.</span> Сохраняйте подходы с
-              весом и повторами — тренд строится по вашей реальной истории тренировок, а не по
-              расчетному плану калькулятора.
+              <span className="calc-test__footnote-lead">Факт в зале.</span> Сохрани подходы с
+              весом и повторениями — тренд строится по твоей реальной истории тренировок, а не по
+              расчётному плану калькулятора.
             </p>
           </NoteBox>
         </SectionBlock>

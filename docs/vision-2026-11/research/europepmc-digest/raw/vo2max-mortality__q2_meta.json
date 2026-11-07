@@ -1,0 +1,15 @@
+{
+ "version": "6.9",
+ "hitCount": 0,
+ "request": {
+  "queryString": "(TITLE:\"aerobic fitness\" AND TITLE:(mortality OR \"risk of death\"))AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": []
+ }
+}

@@ -331,6 +331,64 @@ test('normalizeLoadedUser restores split calculation snapshots and active select
   assert.deepEqual(user.splitCalculations?.[0]?.split.completedDays, [{week: 0, day: 1}]);
   assert.equal(user.splitCalculations?.[0]?.exercises.length, 1);
   assert.equal(user.splitCalculations?.[0]?.exercises[0]?.oneRM, 116.7);
+  assert.equal(user.profiles?.[0]?.name, 'Основной');
+  assert.equal(user.splitCalculations?.[0]?.split.profileId, user.profiles?.[0]?.id);
+});
+
+test('normalizeLoadedUser groups a split without profileId into Основной and keeps profileId', () => {
+  const user = normalizeLoadedUser(
+    {
+      name: 'Profiles',
+      exercises: [],
+      profiles: [
+        {
+          id: 'profile-petrov',
+          name: 'Петров',
+          createdAt: '2026-08-02T10:00:00.000Z',
+          updatedAt: '2026-08-02T10:00:00.000Z',
+        },
+      ],
+      activeProfileId: 'profile-petrov',
+      splits: [
+        {
+          id: 'split-old',
+          name: 'Старый',
+          daysPerWeek: 2,
+          varyIntensity: true,
+          weightMode: 'progression',
+          days: [
+            {dayNumber: 1, muscles: ['chest', 'biceps']},
+            {dayNumber: 2, muscles: ['legs', 'back']},
+          ],
+          createdAt: '2026-08-01T10:00:00.000Z',
+          updatedAt: '2026-08-01T10:00:00.000Z',
+        },
+        {
+          id: 'split-petrov',
+          profileId: 'profile-petrov',
+          name: 'Тренажёры',
+          daysPerWeek: 2,
+          varyIntensity: true,
+          weightMode: 'progression',
+          days: [
+            {dayNumber: 1, muscles: ['chest', 'biceps']},
+            {dayNumber: 2, muscles: ['legs', 'back']},
+          ],
+          createdAt: '2026-08-02T10:00:00.000Z',
+          updatedAt: '2026-08-02T10:00:00.000Z',
+        },
+      ],
+    },
+    'fallback',
+  );
+
+  const main = user.profiles?.find(profile => profile.name === 'Основной');
+  assert.ok(main);
+  assert.equal(user.splits?.find(split => split.id === 'split-old')?.profileId, main?.id);
+  assert.equal(user.splits?.find(split => split.id === 'split-petrov')?.profileId, 'profile-petrov');
+  assert.equal(user.profiles?.some(profile => profile.id === 'profile-petrov'), true);
+  assert.equal(user.activeProfileId, 'profile-petrov');
+  assert.equal(user.splits?.length, 2);
 });
 
 test('shared session loadUser does not replace saved data with empty fallback on backend and network failures', async t => {

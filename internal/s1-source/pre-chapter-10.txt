@@ -1,0 +1,31 @@
+=== ASD S1 content validator ===
+sources: 4 · strings: 2299 · prose-sentences: 129 · hero: 49 · zone: 10
+packages/shared/src/data/theory.ts:2777  canon-повтор  Четырнадцать карточек ниже — конкретные схемы веса, повторов и усилия.
+packages/shared/src/data/theory.ts:2881  canon-движение  1ПМ растёт от direct-движений целевого упражнения
+packages/shared/src/data/theory.ts:2962  canon-сет  Если записать им полный сет наравне с грудью, объём на руки будет завышен.
+packages/shared/src/data/theory.ts:2962  typo-десятичная-точка  Fractional честнее отражает вклад: цель 1.0, помощник 0.5.
+packages/shared/src/data/theory.ts:2967  canon-движение  Сила в конкретном движении растёт в первую очередь от практики этого движения.
+packages/shared/src/data/theory.ts:2980  canon-движение  Имеет смысл держать узкий набор тяжёлых базовых упражнений и не размазывать интенсивность по десятку движений за день.
+packages/shared/src/data/theory.ts:2980  typo-тильда-или-ат  Тяжёлых прямых подходов за сессию не нужно много: по данным обзора ориентир PUOS около ~2 direct на сессию.
+packages/shared/src/data/theory.ts:2990  canon-движение  За неделю можно закрыть и навык движения, и объём на мышцы — без гонки «всё и сразу» в каждой сессии.
+packages/shared/src/data/theory.ts:2995  длина>20  26 сл: «В контексте недели тоже не нужно много сверхтяжёлой работы: параллельный анализ недельного объёма указывает на с
+packages/shared/src/data/theory.ts:2995  длина>20  22 сл: «Практически: 2–3 силовые сессии с ~1–2 тяжёлыми top-сетами в движении часто достаточно; лишние «геройские» подхо
+packages/shared/src/data/theory.ts:2995  typo-тильда-или-ат  Практически: 2–3 силовые сессии с ~1–2 тяжёлыми top-сетами в движении часто достаточно; лишние «геройские» подходы за не
+packages/shared/src/data/theory.ts:3001  canon-сет  Целевая мышца — полный сет.
+packages/shared/src/data/theory.ts:3001  canon-движение  Так связывают базовые движения с реальной нагрузкой на помощников.
+packages/shared/src/data/theory.ts:3037  typo-тильда-или-ат  ~11
+packages/shared/src/data/theory.ts:3051  typo-тильда-или-ат  ~31
+packages/shared/src/data/theory.ts:3058  typo-тильда-или-ат  ~4–6
+packages/shared/src/data/theory.ts:3083  canon-раз  Понятно и предсказуемо, один раз доходит до пика и упирается в плато.
+packages/shared/src/data/theory.ts:3134  canon-движение  Не путать с пропуском тренировки — движение должно остаться
+packages/shared/src/data/theory.ts:3155  canon-повтор  Авторегуляция: подход останавливается по достижению целевого RPE, а не на фиксированном числе повторов.
+packages/shared/src/data/theory.ts:3206  canon-повтор  Внутрисессионное чередование веса и повторов волнами.
+packages/shared/src/data/theory.ts:3209  canon-повтор  Психологически легче зайти в высокий вес после серии повторов
+packages/shared/src/data/theory.ts:3245  canon-серия  Серия одиночных повторов на 92–97% — практика локаута и психология стартового веса перед турниром.
+packages/shared/src/data/theory.ts:3245  canon-повтор  Серия одиночных повторов на 92–97% — практика локаута и психология стартового веса перед турниром.
+packages/shared/src/data/theory.ts:3248  canon-движение  Максимальная специфичность к соревновательному движению
+packages/shared/src/data/theory.ts:3258  canon-повтор  Reverse Pyramid Training: 1–2 максимально тяжёлых повтора, затем быстрый сброс веса на 10% и работа в остатках.
+
+полоса (prose): n=129 · медиана 9 · ≤20=98% · 8–20=61% · <8=37% · <4=8% · >20=2
+
+summary: violations=25 · правила: {"canon-повтор":6,"canon-движение":7,"canon-сет":2,"typo-десятичная-точка":1,"typo-тильда-или-ат":5,"длина>20":2,"canon-раз":1,"canon-серия":1}

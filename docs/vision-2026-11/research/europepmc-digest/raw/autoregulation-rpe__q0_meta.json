@@ -1,0 +1,2046 @@
+{
+ "version": "6.9",
+ "hitCount": 8,
+ "request": {
+  "queryString": "(TITLE:(autoregulation OR \"rating of perceived exertion\") AND TITLE:(training OR resistance))AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "41895317",
+    "source": "MED",
+    "pmid": "41895317",
+    "doi": "10.1093/eurheartj/ehag145",
+    "title": "Coronary autoregulation: the complex interplay between epicardial and microvascular resistance.",
+    "authorString": "Mahendiran T, Corradetti S, Perera D, Pijls NHJ, De Bruyne B.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Mahendiran T",
+       "lastName": "Mahendiran",
+       "firstName": "Thabo",
+       "initials": "T",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0025-8162"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Cardiology, Lausanne University Hospital, Rue du Bugnon 46, Lausanne 1005, Switzerland."
+         },
+         {
+          "affiliation": "Cardiovascular Center Aalst, AZORG, Moorselbaan 164, Aalst 9300, Belgium."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Corradetti S",
+       "lastName": "Corradetti",
+       "firstName": "Sara",
+       "initials": "S",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6588-4906"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Cardiovascular Center Aalst, AZORG, Moorselbaan 164, Aalst 9300, Belgium."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Perera D",
+       "lastName": "Perera",
+       "firstName": "Divaka",
+       "initials": "D",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-6362-1291"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "British Heart Foundation Centre of Research Excellence at the School of Cardiovascular and Metabolic Medicine & Sciences, King's College London, London, United Kingdom."
+         },
+         {
+          "affiliation": "Guy's and St Thomas' NHS Foundation Trust, London, United Kingdom."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Pijls NHJ",
+       "lastName": "Pijls",
+       "firstName": "Nico H J",
+       "initials": "NHJ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Cardiology, Catharina Hospital, Eindhoven, The Netherlands."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "De Bruyne B",
+       "lastName": "De Bruyne",
+       "firstName": "Bernard",
+       "initials": "B",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-6567-168X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Cardiology, Lausanne University Hospital, Rue du Bugnon 46, Lausanne 1005, Switzerland."
+         },
+         {
+          "affiliation": "Cardiovascular Center Aalst, AZORG, Moorselbaan 164, Aalst 9300, Belgium."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-6362-1291"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-6567-168X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0025-8162"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6588-4906"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "37",
+     "volume": "47",
+     "journalIssueId": 4277676,
+     "dateOfPublication": "2026 Oct",
+     "monthOfPublication": 10,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Eur Heart J",
+      "title": "European heart journal",
+      "essn": "1522-9645",
+      "issn": "0195-668X",
+      "isoabbreviation": "Eur Heart J",
+      "nlmid": "8006263"
+     },
+     "printPublicationDate": "2026-10-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "5279-5292",
+    "abstractText": "Coronary autoregulation is the intrinsic ability of the coronary circulation to maintain stable blood flow despite fluctuations in myocardial perfusion pressure, provided that metabolic demands remain constant. Central to this process is the dynamic modulation of microvascular resistance within the coronary microcirculation, which acts as the main determinant of coronary blood flow. This regulatory mechanism enables the coronary vasculature to adapt to variations in aortic pressure and epicardial resistance, preserving myocardial perfusion. Historically, the study of coronary autoregulation relied on animal models using implanted flow probes. In humans, modalities such as nuclear imaging and intracoronary Doppler have been employed. Most recently, continuous intracoronary thermodilution has emerged as a robust technique, allowing simultaneous and accurate assessment of absolute coronary blood flow, epicardial resistance, and microvascular resistance. Yet, despite its fundamental role in the understanding of coronary physiology, coronary autoregulation remains complex, often overlooked, and poorly understood. This review focuses on the pivotal role of the coronary microcirculation, specifically microvascular resistance, in maintaining stable resting flow in the context of epicardial coronary artery disease. It provides a theoretical framework, summarizes key animal and human data, and presents an integrative model illustrating the haemodynamic transition from rest to maximal hyperaemia from the perspective of coronary resistance. Finally, it highlights the importance of understanding coronary autoregulation and the interplay between epicardial and microvascular resistance when interpreting not only the clinical presentation of patients with epicardial disease but also the results of the coronary physiological assessment.",
+    "affiliation": "Department of Cardiology, Lausanne University Hospital, Rue du Bugnon 46, Lausanne 1005, Switzerland.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Coronary Vessels",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Microcirculation",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Pericardium",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Animals"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Homeostasis",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Vascular Resistance",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Coronary Circulation",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Coronary Artery Disease",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PP",
+          "qualifierName": "physiopathology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hemodynamics",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Coronary Autoregulation",
+      "Microvascular Resistance",
+      "Epicardial Resistance"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1093/eurheartj/ehag145"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 2,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2026-10-04",
+    "dateOfCreation": "2026-03-27",
+    "dateOfRevision": "2026-10-04",
+    "firstPublicationDate": "2026-10-01",
+    "firstIndexDate": "2026-03-28",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "38910451",
+    "source": "MED",
+    "pmid": "38910451",
+    "pmcid": "PMC11569527",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC11569527"
+     ]
+    },
+    "doi": "10.1177/19417381241260412",
+    "title": "Validity of Rating of Perceived Exertion Scales in Relation to Movement Velocity and Exercise Intensity During Resistance-Exercise: A Systematic Review.",
+    "authorString": "Petro JL, Ferrari G, Cardozo LA, Vargas-Molina S, Carbone L, Kreider RB, Bonilla DA.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Petro JL",
+       "lastName": "Petro",
+       "firstName": "Jorge L",
+       "initials": "JL",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Research Group in Physical Activity, Sports and Health Sciences (GICAFS), Universidad de Córdoba, Montería, Colombia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ferrari G",
+       "lastName": "Ferrari",
+       "firstName": "Guido",
+       "initials": "G",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Grupo LIFT, Buenos Aires, Argentina."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cardozo LA",
+       "lastName": "Cardozo",
+       "firstName": "Luis A",
+       "initials": "LA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8076-3304"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research and Measurement Group in Sports Training (IMED), Faculty of Health Sciences and Sports, Fundación Universitaria del Área Andina, Bogotá, Colombia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Vargas-Molina S",
+       "lastName": "Vargas-Molina",
+       "firstName": "Salvador",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Physical Education and Sports Area, Faculty of Medicine, University of Málaga, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Carbone L",
+       "lastName": "Carbone",
+       "firstName": "Leandro",
+       "initials": "L",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Grupo LIFT, Buenos Aires, Argentina."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kreider RB",
+       "lastName": "Kreider",
+       "firstName": "Richard B",
+       "initials": "RB",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Exercise and Sport Nutrition Laboratory, Human Clinical Research Facility, Texas A&M University, College Station, Texas."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bonilla DA",
+       "lastName": "Bonilla",
+       "firstName": "Diego A",
+       "initials": "DA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2634-1220"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Research Group in Physical Activity, Sports and Health Sciences (GICAFS), Universidad de Córdoba, Montería, Colombia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8076-3304"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2634-1220"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "17",
+     "journalIssueId": 3931128,
+     "dateOfPublication": "2025 May-Jun",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Sports Health",
+      "title": "Sports health",
+      "essn": "1941-0921",
+      "issn": "1941-7381",
+      "isoabbreviation": "Sports Health",
+      "nlmid": "101518422"
+     },
+     "printPublicationDate": "2025-05-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "621-628",
+    "abstractText": "<h4>Context</h4>Movement velocity (MV) may be a valid tool to evaluate and control the load in resistance training (RT). The rating of perceived exertion (RPE) also enables practical load management. The relationship between RPE and MV may be used to monitor RT intensity.<h4>Objective</h4>To evaluate the validity and practicality of RPE scales related to MV and training intensity in resistance exercise. We hypothesize a positive correlation among RPE, MV, and load intensity in RT. Therefore, RPE may serve as a supplementary indicator in monitoring RT load.<h4>Data sources</h4>Boolean algorithms were used to search several databases (SPORTDiscus, EBSCO, PubMed, Scopus, and Google Scholar).<h4>Study selection</h4>Studies published from 2009 to 2023 included clinical trials (randomized or not) in healthy female and male subjects that analyzed the relationship between different RPE scales and MV in basic RT exercises.<h4>Study design</h4>Systematic review.<h4>Level of evidence</h4>Level 3.<h4>Results</h4>A total of 18 studies were selected using different RPE scales with reported MV training loads. Participants included RT and untrained male and female subjects (15-31 years old). Two RPE scales (OMNI-RES and repetitions in reserve) were used. The selected studies showed moderate positive correlations among these RPE scales, MV, and training load (eg, percentage of 1-repetition maximum [%1-RM]). In addition, equations have been developed to estimate %1-RM and MV loss based on the OMNI-RES scale.<h4>Conclusion</h4>Studies show that RPE scales and MV constitute a valid, economic, and practical tool for assessing RT load progression and complementing other training monitoring variables. Exercise professionals should consider familiarizing participants with RPE scales and factors that might influence the perception of exertion (eg, level of training, motivation, and environmental conditions).",
+    "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Reproducibility of Results"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Perception",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Movement",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adolescent"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adult"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Physical Exertion",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Young Adult"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Motion perception",
+      "Fatigue",
+      "Strength Training",
+      "Muscle Strength",
+      "Linear Transducer"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1177/19417381241260412"
+      },
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11569527"
+      },
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11569527?pdf=render"
+      },
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1177/19417381241260412"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 8,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2025-04-18",
+    "dateOfCreation": "2024-06-24",
+    "dateOfRevision": "2025-04-21",
+    "electronicPublicationDate": "2024-06-24",
+    "firstPublicationDate": "2024-06-24",
+    "firstIndexDate": "2024-06-25",
+    "fullTextReceivedDate": "2025-12-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "39864040",
+    "source": "MED",
+    "pmid": "39864040",
+    "doi": "10.1007/s00421-025-05709-1",
+    "title": "Conceptualizing a load and volume autoregulation integrated velocity model to minimize neuromuscular fatigue and maximize neuromuscular adaptations in resistance training.",
+    "authorString": "Hickmott LM, Butcher SJ, Chilibeck PD.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Hickmott LM",
+       "lastName": "Hickmott",
+       "firstName": "Landyn M",
+       "initials": "LM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1545-8909"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Medicine, Health Sciences Program, University of Saskatchewan, Saskatoon, SK, Canada. lmh896@usask.ca."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Butcher SJ",
+       "lastName": "Butcher",
+       "firstName": "Scotty J",
+       "initials": "SJ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Rehabilitation Science, University of Saskatchewan, Saskatoon, SK, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Chilibeck PD",
+       "lastName": "Chilibeck",
+       "firstName": "Philip D",
+       "initials": "PD",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Kinesiology, University of Saskatchewan, Saskatoon, SK, Canada."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1545-8909"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "5",
+     "volume": "125",
+     "journalIssueId": 3938721,
+     "dateOfPublication": "2025 May",
+     "monthOfPublication": 5,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Eur J Appl Physiol",
+      "title": "European journal of applied physiology",
+      "essn": "1439-6327",
+      "issn": "1439-6319",
+      "isoabbreviation": "Eur J Appl Physiol",
+      "nlmid": "100954790"
+     },
+     "printPublicationDate": "2025-05-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "1221-1255",
+    "abstractText": "Resistance training (RT) load and volume are considered crucial variables to appropriately prescribe and manage for eliciting the targeted acute responses (i.e., minimizing neuromuscular fatigue) and chronic adaptations (i.e., maximizing neuromuscular adaptations). In traditional RT contexts, load and volume are generally pre-prescribed; thereby, potentially yielding sub-optimal outcomes. A RT concept that individualizes programming is autoregulation: a systematic two-step feedback process involving, (1) monitoring performance and its constituents (fitness, fatigue, and readiness) across multiple time frames (short-, moderate-, and long-term); and (2) adjusting programming (i.e., load and volume) to elicit the targeted goals (i.e., responses and adaptations). A growing body of load and volume autoregulation research has accelerated recently, with several meta-analyses suggesting that autoregulation may provide a small advantage over traditional RT. Nonetheless, the existing literature has typically conceptualized these current autoregulation methods as standalone practices, which has limited their extensive utility in research and applied settings. The primary purpose of this review was three-fold. Initially, we synthesized the current methods of load and volume autoregulation, while disseminating each method's main advantages and limitations. Second, we conceptualized a theoretical Integrated Velocity Model (IVM) that integrates the current methods for a more holistic perspective of autoregulation that may potentially augment its benefits. Lastly, we illustrated how the IVM may be compared to the current methods for future directions and how it may be implemented for practical applications. We hope that this review assists to contextualize a novel autoregulation framework to help inform future investigations for researchers and practices for RT professionals.",
+    "affiliation": "College of Medicine, Health Sciences Program, University of Saskatchewan, Saskatoon, SK, Canada. lmh896@usask.ca.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Adaptation, Physiological",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Homeostasis"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Fatigue",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Models, Biological"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Velocity-based Training",
+      "Velocity Loss",
+      "Load-velocity Profile",
+      "Repetitions In Reserve",
+      "Last Repetition Velocities",
+      "Rir-velocity Profile"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s00421-025-05709-1"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 4,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "N",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2025-05-06",
+    "dateOfCreation": "2025-01-26",
+    "dateOfRevision": "2026-11-03",
+    "electronicPublicationDate": "2025-01-26",
+    "firstPublicationDate": "2025-01-26",
+    "firstIndexDate": "2025-01-28",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "30569775",
+    "source": "MED",
+    "pmid": "30569775",
+    "doi": "10.1080/14779072.2019.1561278",
+    "title": "Rating of perceived exertion on resistance training in elderly subjects.",
+    "authorString": "Morishita S, Tsubaki A, Nakamura M, Nashimoto S, Fu JB, Onishi H.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Morishita S",
+       "lastName": "Morishita",
+       "firstName": "Shinichiro",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "a Institute for Human Movement and Medical Sciences , Niigata University of Health and Welfare , Niigata , Japan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Tsubaki A",
+       "lastName": "Tsubaki",
+       "firstName": "Atsuhiro",
+       "initials": "A",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-4573-2267"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "a Institute for Human Movement and Medical Sciences , Niigata University of Health and Welfare , Niigata , Japan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Nakamura M",
+       "lastName": "Nakamura",
+       "firstName": "Masatoshi",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "a Institute for Human Movement and Medical Sciences , Niigata University of Health and Welfare , Niigata , Japan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Nashimoto S",
+       "lastName": "Nashimoto",
+       "firstName": "Satoshi",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "b Department of Rehabilitation , Niigata Medical Centre , Niigata , Japan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Fu JB",
+       "lastName": "Fu",
+       "firstName": "Jack B",
+       "initials": "JB",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "c Department of Palliative, Rehabilitation & Integrative Medicine , University of Texas MD Anderson Cancer Center , Houston , TX , USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Onishi H",
+       "lastName": "Onishi",
+       "firstName": "Hideaki",
+       "initials": "H",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "a Institute for Human Movement and Medical Sciences , Niigata University of Health and Welfare , Niigata , Japan."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0003-4573-2267"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "2",
+     "volume": "17",
+     "journalIssueId": 2769598,
+     "dateOfPublication": "2019 Feb",
+     "monthOfPublication": 2,
+     "yearOfPublication": 2019,
+     "journal": {
+      "medlineAbbreviation": "Expert Rev Cardiovasc Ther",
+      "title": "Expert review of cardiovascular therapy",
+      "essn": "1744-8344",
+      "issn": "1477-9072",
+      "isoabbreviation": "Expert Rev Cardiovasc Ther",
+      "nlmid": "101182328"
+     },
+     "printPublicationDate": "2019-02-01"
+    },
+    "pubYear": "2019",
+    "pageInfo": "135-142",
+    "abstractText": "<h4>Introduction</h4>The American College of Sports Medicine and American Heart Association recommends resistance training involving 60-70% of 1-repetition maximum (1RM) for 8-12 repetitions on 2 or 3 nonconsecutive days per week for the elderly. The Borg 6-20 scale, Borg category ratio (CR-10) scale, and OMNI scale are used to determine the rating of perceived exertion (RPE) for resistance training. Areas covered: RPE scales for resistance training performed by elderly individuals are described. The RPE has been related to resistance training intensity, and the RPE scale was used to determine the resistance training intensity of elderly or ill individuals. Expert commentary: RPE scales can determine the resistance training intensity of elderly individuals and may be used at home or in nursing homes, if they do not have specific resistance training machines. RPE is simple and useful, and may improve skeletal muscle strength or other health-related issues.",
+    "affiliation": "a Institute for Human Movement and Medical Sciences , Niigata University of Health and Welfare , Niigata , Japan.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "M.D. Anderson Cancer Center support grant",
+       "grantId": "CA 016672",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Perception"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Aged"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "American Heart Association"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "United States"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Physical Exertion",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Rehabilitation",
+      "Elderly",
+      "Resistance Training",
+      "Borg Scale",
+      "Omni Scale"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1080/14779072.2019.1561278"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 79,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2019-02-12",
+    "dateOfCreation": "2018-12-21",
+    "dateOfRevision": "2019-02-15",
+    "electronicPublicationDate": "2019-01-07",
+    "firstPublicationDate": "2019-01-07",
+    "firstIndexDate": "2018-12-31",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "31663318",
+    "source": "MED",
+    "pmid": "31663318",
+    "doi": "10.23736/s0022-4707.19.10000-x",
+    "title": "Internal training load monitoring in professional football: a systematic review of methods using rating of perceived exertion.",
+    "authorString": "Rago V, Brito J, Figueiredo P, Costa J, Krustrup P, Rebelo A.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Rago V",
+       "lastName": "Rago",
+       "firstName": "Vincenzo",
+       "initials": "V",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Center of Research, Education, Innovation and Intervention in Sport, Faculty of Sports, University of Porto, Porto, Portugal - vincenzo.rago@fpf.pt."
+         },
+         {
+          "affiliation": "Portugal Football School, Portuguese Football Federation, Lisbon, Portugal - vincenzo.rago@fpf.pt."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Brito J",
+       "lastName": "Brito",
+       "firstName": "João",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1301-1078"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Portugal Football School, Portuguese Football Federation, Lisbon, Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Figueiredo P",
+       "lastName": "Figueiredo",
+       "firstName": "Pedro",
+       "initials": "P",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-5515-3694"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Portugal Football School, Portuguese Football Federation, Lisbon, Portugal."
+         },
+         {
+          "affiliation": "Research Center in Sports Sciences, Health Sciences and Human Development, CIDESD, University Institute of Maia, ISMAI, Maia, Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Costa J",
+       "lastName": "Costa",
+       "firstName": "Júlio",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8225-8667"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Center of Research, Education, Innovation and Intervention in Sport, Faculty of Sports, University of Porto, Porto, Portugal."
+         },
+         {
+          "affiliation": "Portugal Football School, Portuguese Football Federation, Lisbon, Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Krustrup P",
+       "lastName": "Krustrup",
+       "firstName": "Peter",
+       "initials": "P",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1461-9838"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Sports Science and Clinical Biomechanics, Faculty of Health Sciences, SDU Sport and Health Sciences Cluster (SHSC), University of Southern Denmark, Odense, Denmark."
+         },
+         {
+          "affiliation": "Shangai University of Sport (SUS), Shangai, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rebelo A",
+       "lastName": "Rebelo",
+       "firstName": "António",
+       "initials": "A",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Center of Research, Education, Innovation and Intervention in Sport, Faculty of Sports, University of Porto, Porto, Portugal."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-5515-3694"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1461-9838"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8225-8667"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1301-1078"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "60",
+     "journalIssueId": 2906689,
+     "dateOfPublication": "2020 Jan",
+     "monthOfPublication": 1,
+     "yearOfPublication": 2020,
+     "journal": {
+      "medlineAbbreviation": "J Sports Med Phys Fitness",
+      "title": "The Journal of sports medicine and physical fitness",
+      "essn": "1827-1928",
+      "issn": "0022-4707",
+      "isoabbreviation": "J Sports Med Phys Fitness",
+      "nlmid": "0376337"
+     },
+     "printPublicationDate": "2020-01-01"
+    },
+    "pubYear": "2020",
+    "pageInfo": "160-171",
+    "abstractText": "<h4>Introduction</h4>The rate of perceived exertion (RPE) is widely adopted to quantify internal training load (ITL) in professional football. The aim of this study was to systematically review the use RPE-based methods in professional football.<h4>Evidence acquisition</h4>Observational studies conducted during training routines of professional football players over a minimum of one-week were selected based on the preferred reporting items for systematic reviews and meta-analyses statement.<h4>Evidence synthesis</h4>Thirty-eight articles met the inclusion criteria (average qualitative score was 6.3 out of 10 [3 to 9]). The main deficiencies identified concerned the poor description of study design (~52% of the studies), and the non-quantification of match load (~44%). Ten studies complemented RPE-based ITL information with time-motion analysis (~26%) and seven studies added HR recordings (~18%). Nine studies collected RPE data after complementary training, separately to field sessions (~3%). Operational questions (e.g. How was your workout? ~71%) were preferred to instructions (e.g. Please rate the intensity of today's session; ~8%). Session-RPE (s-RPE; RPE multiplied by training duration) was more commonly adopted as measure of exercise intensity than isolated RPE (~76 vs. ~8%). RPE-derived variables calculated on weekly values included absolute week-to-week change, acute: chronic workload ratio, monotony and strain and were not frequently used (7 to 15%). Four studies (~11%) divided RPE in two components: respiratory and muscular.<h4>Conclusions</h4>There is a lack of consensus for the use of RPE in professional football and \"good practices\" are warranted. This review might help practitioners regarding procedures to adopt in RPE data collection and interpretation.",
+    "affiliation": "Center of Research, Education, Innovation and Intervention in Sport, Faculty of Sports, University of Porto, Porto, Portugal - vincenzo.rago@fpf.pt.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Soccer",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Physical Exertion",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.23736/S0022-4707.19.10000-X"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 12,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2020-05-07",
+    "dateOfCreation": "2019-10-31",
+    "dateOfRevision": "2020-05-07",
+    "electronicPublicationDate": "2019-10-24",
+    "firstPublicationDate": "2019-10-24",
+    "firstIndexDate": "2019-10-31",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "32813181",
+    "source": "MED",
+    "pmid": "32813181",
+    "pmcid": "PMC7575491",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC7575491"
+     ]
+    },
+    "doi": "10.1007/s40279-020-01330-8",
+    "title": "Autoregulation in Resistance Training: Addressing the Inconsistencies.",
+    "authorString": "Greig L, Stephens Hemingway BH, Aspe RR, Cooper K, Comfort P, Swinton PA.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Greig L",
+       "lastName": "Greig",
+       "firstName": "Leon",
+       "initials": "L",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0332-943X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Health Sciences, Robert Gordon University, Garthdee Road, Aberdeen, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Stephens Hemingway BH",
+       "lastName": "Stephens Hemingway",
+       "firstName": "Ben Hayden",
+       "initials": "BH",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Health Sciences, Robert Gordon University, Garthdee Road, Aberdeen, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Aspe RR",
+       "lastName": "Aspe",
+       "firstName": "Rodrigo R",
+       "initials": "RR",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Health Sciences, Robert Gordon University, Garthdee Road, Aberdeen, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cooper K",
+       "lastName": "Cooper",
+       "firstName": "Kay",
+       "initials": "K",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9958-2511"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Health Sciences, Robert Gordon University, Garthdee Road, Aberdeen, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Comfort P",
+       "lastName": "Comfort",
+       "firstName": "Paul",
+       "initials": "P",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Directorate of Psychology and Sport, University of Salford, Frederick Road, Salford, Greater Manchester, UK."
+         },
+         {
+          "affiliation": "Institute for Sport, Physical Activity and Leisure, Carnegie School of Sport, Leeds Beckett University, Leeds, UK."
+         },
+         {
+          "affiliation": "Centre for Exercise and Sport Science Research, Edith Cowan University, Joondalup, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Swinton PA",
+       "lastName": "Swinton",
+       "firstName": "Paul A",
+       "initials": "PA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9663-0696"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Health Sciences, Robert Gordon University, Garthdee Road, Aberdeen, UK. p.swinton@rgu.ac.uk."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9663-0696"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9958-2511"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0332-943X"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "11",
+     "volume": "50",
+     "journalIssueId": 3040882,
+     "dateOfPublication": "2020 Nov",
+     "monthOfPublication": 11,
+     "yearOfPublication": 2020,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2020-11-01"
+    },
+    "pubYear": "2020",
+    "pageInfo": "1873-1887",
+    "abstractText": "Autoregulation is a process that is used to manipulate training based primarily on the measurement of an individual's performance or their perceived capability to perform. Despite being established as a training framework since the 1940s, there has been limited systematic research investigating its broad utility. Instead, researchers have focused on disparate practices that can be considered specific examples of the broader autoregulation training framework. A primary limitation of previous research includes inconsistent use of key terminology (e.g., adaptation, readiness, fatigue, and response) and associated ambiguity of how to implement different autoregulation strategies. Crucially, this ambiguity in terminology and failure to provide a holistic overview of autoregulation limits the synthesis of existing research findings and their dissemination to practitioners working in both performance and health contexts. Therefore, the purpose of the current review was threefold: first, we provide a broad overview of various autoregulation strategies and their development in both research and practice whilst highlighting the inconsistencies in definitions and terminology that currently exist. Second, we present an overarching conceptual framework that can be used to generate operational definitions and contextualise autoregulation within broader training theory. Finally, we show how previous definitions of autoregulation fit within the proposed framework and provide specific examples of how common practices may be viewed, highlighting their individual subtleties.",
+    "affiliation": "School of Health Sciences, Robert Gordon University, Garthdee Road, Aberdeen, UK.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Homeostasis"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Research Design"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://link.springer.com/content/pdf/10.1007/s40279-020-01330-8.pdf"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-020-01330-8"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC7575491"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC7575491?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 48,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2021-04-05",
+    "dateOfCreation": "2020-08-20",
+    "dateOfRevision": "2023-11-12",
+    "firstPublicationDate": "2020-11-01",
+    "firstIndexDate": "2020-08-20",
+    "fullTextReceivedDate": "2025-02-03",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "34421641",
+    "source": "MED",
+    "pmid": "34421641",
+    "pmcid": "PMC8375597",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC8375597"
+     ]
+    },
+    "doi": "10.3389/fphys.2021.704306",
+    "title": "Autoregulation in Resistance Training for Lower Limb Tendinopathy: A Potential Method for Addressing Individual Factors, Intervention Issues, and Inadequate Outcomes.",
+    "authorString": "Burton I.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Burton I",
+       "lastName": "Burton",
+       "firstName": "Ian",
+       "initials": "I",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6224-4401"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "National Health Service (NHS) Grampian, Aberdeen, United Kingdom."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6224-4401"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "12",
+     "journalIssueId": 3109443,
+     "dateOfPublication": "2021 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Front Physiol",
+      "title": "Frontiers in physiology",
+      "essn": "1664-042X",
+      "issn": "1664-042X",
+      "isoabbreviation": "Front Physiol",
+      "nlmid": "101549006"
+     },
+     "printPublicationDate": "2021-01-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "704306",
+    "abstractText": "Musculoskeletal disorders, such as tendinopathy, are placing an increasing burden on society and health systems. Tendinopathy accounts for up to 30% of musculoskeletal disorders, with a high incidence in athletes and the general population. Although resistance training has shown short-term effectiveness in the treatment of lower limb tendinopathy, more comprehensive exercise protocols and progression methods are required due to poor long-term outcomes. The most common resistance training protocols are predetermined and standardized, which presents significant limitations. Current standardized protocols do not adhere to scientific resistance training principles, consider individual factors, or take the importance of individualized training into account. Resistance training programs in case of tendinopathy are currently not achieving the required intensity and dosage, leading to high recurrence rates. Therefore, better methods for individualizing and progressing resistance training are required to improve outcomes. One potential method is autoregulation, which allows individuals to progress training at their own rate, taking individual factors into account. Despite the finding of their effectiveness in increasing the strength of healthy athletes, autoregulation methods have not been investigated in case of tendinopathy. The purpose of this narrative review was 3-fold: firstly, to give an overview and a critical analysis of the individual factors involved in tendinopathy and current resistance training protocols and their limitations. Secondly, to give an overview of the history, methods, and application of autoregulation strategies both in sports performance and physiotherapy. Finally, a theoretical adaptation of a current tendinopathy resistance training protocol using autoregulation methods is presented, providing an example of how the method could be implemented in clinical practice or future research.",
+    "affiliation": "National Health Service (NHS) Grampian, Aberdeen, United Kingdom.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Exercise",
+      "Resistance Training",
+      "Tendinopathy",
+      "Autoregulation",
+      "Musculoskeletal-Disorders"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://www.frontiersin.org/articles/10.3389/fphys.2021.704306/pdf"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3389/fphys.2021.704306"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8375597"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8375597?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 5,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2021-08-23",
+    "dateOfRevision": "2021-08-24",
+    "electronicPublicationDate": "2021-08-05",
+    "firstPublicationDate": "2021-08-05",
+    "firstIndexDate": "2021-08-24",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "28933715",
+    "source": "MED",
+    "pmid": "28933715",
+    "doi": "10.1519/jsc.0000000000002047",
+    "title": "Rating of Perceived Exertion for Quantification of Training and Combat Loads During Combat Sport-Specific Activities: A Short Review.",
+    "authorString": "Slimani M, Davis P, Franchini E, Moalla W.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Slimani M",
+       "lastName": "Slimani",
+       "firstName": "Maamer",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4346-1750"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "1Research Laboratory \"Sport Performance Optimization\", National Center of Medicine and Science in Sport (CNMSS), El Menzah, Tunisia;2Combat Sports Performance, Braintree, Essex, United Kingdom;3Martial Arts and Combat Sports Research Group, School of Physical Education and Sport, University of São Paulo, São Paulo, Brazil; and4UR15JS01 EM2S: Education, Motricity, Sport and Health, High Institute of Sport and Physical Education, University of Sfax, Sfax, Tunisia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Davis P",
+       "lastName": "Davis",
+       "firstName": "Philip",
+       "initials": "P"
+      },
+      {
+       "fullName": "Franchini E",
+       "lastName": "Franchini",
+       "firstName": "Emerson",
+       "initials": "E",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0769-8398"
+       }
+      },
+      {
+       "fullName": "Moalla W",
+       "lastName": "Moalla",
+       "firstName": "Wassim",
+       "initials": "W"
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0769-8398"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4346-1750"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "10",
+     "volume": "31",
+     "journalIssueId": 2599652,
+     "dateOfPublication": "2017 Oct",
+     "monthOfPublication": 10,
+     "yearOfPublication": 2017,
+     "journal": {
+      "medlineAbbreviation": "J Strength Cond Res",
+      "title": "Journal of strength and conditioning research",
+      "essn": "1533-4287",
+      "issn": "1064-8011",
+      "isoabbreviation": "J Strength Cond Res",
+      "nlmid": "9415084"
+     },
+     "printPublicationDate": "2017-10-01"
+    },
+    "pubYear": "2017",
+    "pageInfo": "2889-2902",
+    "abstractText": "The aim of this short review was to summarize data pertaining to the rating of perceived exertion (RPE) methods (RPE value and session-RPE) during combat sport-specific activities (i.e., competition and training) based on many factors, including contest type (i.e., official vs. simulated vs. training), combat rounds, age of participants and muscle groups, and their correlation with physiological variables (i.e., blood lactate concentration [La] and heart rate [HR]). The current review shows higher RPE in a match of mixed martial arts (MMAs) than Brazilian jiu-jitsu and kickboxing matches and during the competitive period compared with the precompetitive period. This could be explained by the longer duration of bouts, the higher percentage contribution of aerobic metabolism in MMA than other combat sports and contest type differences (simulated vs. official matches). Thus, this review found significant correlations between RPE or session-RPE, [La] and HR. Particularly, there was a stronger correlation between RPE and [La] during official striking (r = 0.81) than grappling combat sports matches (r = 0.53). In addition, a variation of correlation (moderate to large) between session-RPE and HR-based methods has been reported (i.e., Edwards' training load [r ranged between 0.58 and 0.95] and Banister training impulse [r ranged between 0.52 and 0.86]). Specifically, stronger correlation was apparent in combat sport competition that required a much higher percentage contribution of aerobic metabolism (e.g., karate) and in adult athletes than anaerobic-based combat sports (e.g., taekwondo) and young athletes, respectively. Indeed, the current review highlights that the correlations between session-RPE and HR-based methods were higher during official competition than training sessions. Session-RPE was affected by participants' competitive level, the intensity of session (high vs. low), the training modalities (tactical-technical vs. technical-development vs. simulated competition), and the training volume in combat sports athletes. Rating of perceived exertion is a valid tool for quantifying internal training and combat loads during short- and long-term training and simulated and official competitions in novice and elite combat sport athletes. Furthermore, both RPE methods may be a more reliable measure of intensity or effort when both anaerobic and aerobic systems are appreciably activated. Coaches, sports scientists, and athletes can use session-RPE method to quantify short-term training and combat loads in adult athletes during precompetitive period much more than long-term training and in young athletes during the competitive period. They can also use RPE to monitor combat and short- and long-term training loads to better plan and assist training programs and competitions.",
+    "affiliation": "1Research Laboratory \"Sport Performance Optimization\", National Center of Medicine and Science in Sport (CNMSS), El Menzah, Tunisia;2Combat Sports Performance, Braintree, Essex, United Kingdom;3Martial Arts and Combat Sports Research Group, School of Physical Education and Sport, University of São Paulo, São Paulo, Brazil; and4UR15JS01 EM2S: Education, Motricity, Sport and Health, High Institute of Sport and Physical Education, University of Sfax, Sfax, Tunisia.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Lactic Acid",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "BL",
+          "qualifierName": "blood"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Perception"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Heart Rate",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Time Factors"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Martial Arts",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Brazil"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Physical Exertion",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Athletes"
+      }
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Lactic Acid",
+       "registryNumber": "33X04XA5AT"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1519/JSC.0000000000002047"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 32,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2018-04-09",
+    "dateOfCreation": "2017-09-22",
+    "dateOfRevision": "2026-01-27",
+    "firstPublicationDate": "2017-10-01",
+    "firstIndexDate": "2017-09-21",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}
