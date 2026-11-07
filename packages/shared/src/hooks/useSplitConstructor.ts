@@ -33,7 +33,7 @@ import {
   applyToggleCompletedWeek,
   isWeekEffectivelyDone,
 } from '../utils/split-progress.ts';
-import {resolveSavedSplitSelection} from '../utils/split-selection.ts';
+import {resolveDeepLinkSplit, resolveSavedSplitSelection} from '../utils/split-selection.ts';
 import {
   DEFAULT_PROFILE_ID,
   DEFAULT_PROFILE_NAME,
@@ -179,13 +179,18 @@ export function useSplitConstructor({
   );
 
   const [draft, setDraft] = useState<CustomSplit>(() => {
+    const fromUrl = resolveDeepLinkSplit(allSplits, initialSplitId);
+    if (fromUrl) return cloneSplit(fromUrl);
     const existing = resolveSavedSplit(initialSplitId);
     if (existing) return cloneSplit(existing);
+    const fallback = resolveSavedSplitSelection(savedSplits, null, activeSplitId);
+    if (fallback) return cloneSplit(fallback);
     const fresh = migrateToCustomExercises(createDefaultSplit());
     fresh.profileId = activeProfileId;
     return fresh;
   });
   const [previewWeek, setPreviewWeek] = useState(0);
+  const hydratedUrlIdRef = useRef<string | null>(null);
 
   useEffect(() => {
     const found = resolveSavedSplit(initialSplitId);
@@ -207,6 +212,51 @@ export function useSplitConstructor({
       cancelled = true;
     };
   }, [initialSplitId, resolveSavedSplit, savedSplits]);
+
+  useEffect(() => {
+    if (!initialSplitId) {
+      hydratedUrlIdRef.current = null;
+      return;
+    }
+    const found = resolveDeepLinkSplit(allSplits, initialSplitId);
+    if (!found) return;
+    const current = userDataRef.current;
+    const profileId = found.profileId ?? current.activeProfileId ?? activeProfileId;
+    const alreadyActive =
+      current.activeSplitId === found.id &&
+      (current.activeProfileId ?? activeProfileId) === profileId;
+    if (alreadyActive && hydratedUrlIdRef.current === initialSplitId) return;
+    hydratedUrlIdRef.current = initialSplitId;
+    const forSplit = allCalculations.filter(
+      entry => (entry.splitId ?? entry.split.id) === found.id,
+    );
+    setIsDraftingNewSplit(false);
+    setIsDraftingNewCalculation(false);
+    setCalculationExercises(null);
+    setDraft(cloneSplit(found));
+    if (alreadyActive) return;
+    const updated: UserData = {
+      ...withEnsuredProfiles(current),
+      activeProfileId: profileId,
+      splits: allSplits,
+      activeSplitId: found.id,
+      splitCalculations: allCalculations,
+      activeSplitCalculationId: forSplit[0]?.id,
+    };
+    userDataRef.current = updated;
+    setUserData(updated);
+    onSplitIdChange?.(found.id);
+    void saveUser(updated, token);
+  }, [
+    activeProfileId,
+    allCalculations,
+    allSplits,
+    initialSplitId,
+    onSplitIdChange,
+    saveUser,
+    setUserData,
+    token,
+  ]);
 
   const validationError = useMemo(() => validateSplit(draft), [draft]);
 
@@ -590,7 +640,22 @@ export function useSplitConstructor({
   );
 
   const createNewSplit = useCallback(() => {
-    const split = migrateToCustomExercises(createDefaultSplit(`Сплит ${savedSplits.length + 1}`));
+    // «+ Новый» применяется к названию, введённому в тулбаре: имя обязано
+    // сохраниться. Сбрасываем на «Сплит N» только когда драфт зеркалит
+    // сохранённый сплит без правок имени.
+    const selectedSaved = isDraftingNewSplit
+      ? undefined
+      : savedSplits.find(entry => entry.id === draft.id);
+    const typedName = draft.name.trim();
+    const keptName =
+      isDraftingNewSplit || !selectedSaved
+        ? typedName
+        : selectedSaved.name === draft.name
+          ? ''
+          : typedName;
+    const split = migrateToCustomExercises(
+      createDefaultSplit(keptName.length > 0 ? keptName : `Сплит ${savedSplits.length + 1}`),
+    );
     split.profileId = activeProfileId;
     setIsDraftingNewSplit(true);
     setSplitEditorOpen(true);
@@ -598,15 +663,29 @@ export function useSplitConstructor({
     setCalculationExercises(null);
     setDraft(split);
     onSplitIdChange?.(null);
-  }, [activeProfileId, onSplitIdChange, savedSplits.length]);
+  }, [activeProfileId, draft, isDraftingNewSplit, onSplitIdChange, savedSplits]);
 
+  // «+ Новый сплит» из тулбара: создаёт сплит и сразу сохраняет его,
+  // затем сразу открываем его для редактирования как обычный сохранённый сплит.
   const createSavedSplit = useCallback(
     (options?: {name?: string; daysPerWeek?: 2 | 3 | 4}) => {
       const explicitName = options?.name?.trim();
+      const selectedSaved = isDraftingNewSplit
+        ? undefined
+        : savedSplits.find(entry => entry.id === draft.id);
+      const typedName = draft.name.trim();
+      const keptName =
+        isDraftingNewSplit || !selectedSaved
+          ? typedName
+          : selectedSaved.name === draft.name
+            ? ''
+            : typedName;
       const splitName =
         explicitName && explicitName.length > 0
           ? explicitName
-          : `Сплит ${savedSplits.length + 1}`;
+          : keptName.length > 0
+            ? keptName
+            : `Сплит ${savedSplits.length + 1}`;
       const split = migrateToCustomExercises(createDefaultSplit(splitName));
       split.profileId = activeProfileId;
       if (options?.daysPerWeek && options.daysPerWeek !== split.daysPerWeek) {
@@ -633,17 +712,21 @@ export function useSplitConstructor({
         profileId: activeProfileId,
         updatedAt: new Date().toISOString(),
       };
+
       setIsDraftingNewSplit(false);
       setSplitEditorOpen(false);
       setIsDraftingNewCalculation(false);
       setCalculationExercises(null);
       setDraft(cloneSplit(stamped));
+
       const updated: UserData = {
         ...withEnsuredProfiles(userData),
         profiles: namedProfiles(),
         activeProfileId,
         splits: upsertSplit(allSplits, stamped),
         activeSplitId: stamped.id,
+        // У нового сплита расчётов нет — не наследуем расчёт предыдущего
+        // сплита, иначе редактор откроется с чужими упражнениями.
         activeSplitCalculationId: undefined,
       };
       setUserData(updated);
@@ -653,10 +736,12 @@ export function useSplitConstructor({
     [
       activeProfileId,
       allSplits,
+      draft,
+      isDraftingNewSplit,
       namedProfiles,
       onSplitIdChange,
       saveUser,
-      savedSplits.length,
+      savedSplits,
       setUserData,
       token,
       userData,
@@ -1327,6 +1412,7 @@ export function useSplitConstructor({
     activeCalculation,
     isEditingCalculation,
     isDraftingNewCalculation,
+    isDraftingNewSplit,
     splitEditorOpen,
     setSplitEditorOpen,
     weightBaseOpen,

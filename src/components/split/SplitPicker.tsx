@@ -22,8 +22,10 @@ export interface SplitPickerProps {
   ariaLabel?: string;
 }
 
-function daysMeta(daysPerWeek: 2 | 3): string {
-  return daysPerWeek === 2 ? '2 дня в неделю' : '3 дня в неделю';
+function daysMeta(daysPerWeek: 2 | 3 | 4): string {
+  if (daysPerWeek === 2) return '2 дня в неделю';
+  if (daysPerWeek === 4) return '4 дня в неделю';
+  return '3 дня в неделю';
 }
 
 function normalizeQuery(value: string): string {
@@ -34,7 +36,7 @@ export function SplitPicker({
   value,
   splits,
   onChange,
-  placeholder = 'Выбрать...',
+  placeholder = 'Выбрать…',
   menuTitle = 'Сохранённые сплиты',
   searchPlaceholder = 'Поиск по имени или фамилии',
   triggerId,
@@ -195,7 +197,9 @@ export function SplitPicker({
             role="listbox"
             aria-labelledby={titleId}
             aria-activedescendant={
-              filteredSplits[activeIndex] ? `${menuId}-opt-${filteredSplits[activeIndex].id}` : undefined
+              filteredSplits[activeIndex]
+                ? `${menuId}-opt-${filteredSplits[activeIndex].id}`
+                : undefined
             }
             aria-hidden={!open}>
             <div id={titleId} className="ew-menu-title">
@@ -224,7 +228,7 @@ export function SplitPicker({
             <div className="ew-options">
               {filteredSplits.length === 0 ? (
                 <p className="ew-empty" role="status">
-                  Ничего не найдено
+                  Ничего не нашлось. Создай сплит или проверь поиск.
                 </p>
               ) : (
                 filteredSplits.map((split, index) => {

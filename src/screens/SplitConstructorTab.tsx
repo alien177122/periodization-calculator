@@ -43,20 +43,27 @@ export function SplitConstructorTab({
     constructor.activeCalculation.id === userData.activeSplitCalculationId,
   );
   const showFirstCalcSetup =
+    // Редактор открывается, когда у ВЫБРАННОГО сплита нет расчётов — даже если
+    // у других сплитов профиля они есть («создали сплит → сразу редактируем»).
     Boolean(constructor.selectedSplitId) &&
-    constructor.calculations.length === 0 &&
+    constructor.calculationsForSelectedSplit.length === 0 &&
     !constructor.isDraftingNewCalculation;
   const showWorkSections =
-    calcAnchored || constructor.isDraftingNewCalculation || showFirstCalcSetup;
+    calcAnchored ||
+    constructor.isDraftingNewCalculation ||
+    showFirstCalcSetup ||
+    constructor.isDraftingNewSplit;
   const needsCalcPick =
     constructor.calculations.length > 0 &&
     !calcAnchored &&
     !constructor.isDraftingNewCalculation &&
-    !showFirstCalcSetup;
+    !showFirstCalcSetup &&
+    !constructor.isDraftingNewSplit;
 
   const [createDialogOpen, setCreateDialogOpen] = useState(false);
   const [createDialogKey, setCreateDialogKey] = useState(0);
 
+  // «+ Новый сплит»: открываем диалог выбора/создания сплита.
   function handleCreateNew() {
     setCreateDialogKey(key => key + 1);
     setCreateDialogOpen(true);
@@ -65,6 +72,24 @@ export function SplitConstructorTab({
   function handleCreateDialogSubmit(name: string, daysPerWeek: 2 | 3 | 4) {
     setCreateDialogOpen(false);
     constructor.createSavedSplit({name, daysPerWeek});
+  }
+
+  // «Ред.» у выбранного сплита: загружаем его и скроллим к редактору
+  // (первый рабочий раздел с классом calc-test-section).
+  function handleEditSelected() {
+    const id = constructor.selectedSplitId;
+    if (!id) return;
+    constructor.selectSplit(id);
+    window.setTimeout(() => {
+      document
+        .querySelector('.ta-calc-section.calc-test-section')
+        ?.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }, 60);
+  }
+
+  function handleDeleteSelected() {
+    const id = constructor.selectedSplitId;
+    if (id) void constructor.deleteSplitById(id);
   }
 
   const editorExercises = constructor.previewExercises;
@@ -113,11 +138,14 @@ export function SplitConstructorTab({
               <SplitToolbar
                 draft={constructor.draft}
                 savedSplits={constructor.savedSplits}
+                selectedSplitId={constructor.selectedSplitId}
                 onNameChange={name => constructor.updateDraft({name})}
                 onSelectSplit={constructor.selectSplit}
+                onEditSelected={handleEditSelected}
+                onDeleteSelected={handleDeleteSelected}
+                onDaysPerWeek={constructor.setDaysPerWeek}
                 onCreateNew={handleCreateNew}
                 onDuplicateLast={constructor.duplicateLast}
-                onDaysPerWeek={constructor.setDaysPerWeek}
                 onSave={() => void constructor.saveSplit()}
               />
               <SplitCreateDialog
