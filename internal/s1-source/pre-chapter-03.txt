@@ -1,0 +1,10 @@
+=== ASD S1 content validator ===
+sources: 4 · strings: 2298 · prose-sentences: 87 · hero: 49 · zone: 03
+packages/shared/src/data/theory.ts:2084  canon-масса  На верхней полке три класса, которые в этом справочнике дают реальный прирост силы и массы у натуральных чаще остальных.
+packages/shared/src/data/theory.ts:2086  canon-повтор  Их рекомендуют большинству тренирующихся не потому что «модно», а потому что эффект повторяется чаще, чем на нижних полк
+packages/shared/src/data/theory.ts:2090  canon-масса  Реальный прирост силы и мышечной массы у натуральных атлетов.
+packages/shared/src/data/theory.ts:2192  canon-раз  Фильтр как раз для того, чтобы сюда не спускаться первым.
+
+полоса (prose): n=87 · медиана 7 · ≤20=100% · 8–20=48% · <8=52% · <4=15% · >20=0
+
+summary: violations=4 · правила: {"canon-масса":2,"canon-повтор":1,"canon-раз":1}

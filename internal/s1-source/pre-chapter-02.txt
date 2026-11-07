@@ -1,0 +1,16 @@
+=== ASD S1 content validator ===
+sources: 4 · strings: 2299 · prose-sentences: 142 · hero: 49 · zone: 02
+packages/shared/src/data/theory.ts:83  длина>20  24 сл: «Его удобно держать как прораба: он не кладёт кирпичи сам, а даёт бригаде добро, когда на площадке есть и заказ, 
+packages/shared/src/data/theory.ts:146  canon-повтор  Для mTORC1 это повтор той же заявки: прораб не видит новой работы.
+packages/shared/src/data/theory.ts:161  canon-раз  Частота важнее одного огромного приёма: 4–5 раз в день, и каждый раз с порогом лейцина.
+packages/shared/src/data/theory.ts:268  canon-раз  Силовой стимул, белок 2–2.2 г/кг, профицит, сон 7–9 часов, нормальный гормональный фон, мышца 2–3 раза в неделю.
+packages/shared/src/data/theory.ts:268  typo-десятичная-точка  Силовой стимул, белок 2–2.2 г/кг, профицит, сон 7–9 часов, нормальный гормональный фон, мышца 2–3 раза в неделю.
+packages/shared/src/data/theory.ts:274  canon-масса  Белок 2–2.2 г/кг массы тела
+packages/shared/src/data/theory.ts:277  canon-раз  Каждую мышцу 2–3 раза в неделю
+packages/shared/src/data/theory.ts:305  typo-десятичная-точка  Затем в 0–2 часа приём 0.3–0.5 г белка/кг, чтобы набрать лейцин.
+packages/shared/src/data/theory.ts:338  canon-масса  После отмены теряется часть массы, набранной этим путём; ядра обсуждают отдельно.
+packages/shared/src/data/theory.ts:374  canon-масса  Достаточно ли понять mTORC1, чтобы набрать массу без прогрессии?
+
+полоса (prose): n=142 · медиана 8 · ≤20=99% · 8–20=63% · <8=36% · <4=7% · >20=1
+
+summary: violations=10 · правила: {"длина>20":1,"canon-повтор":1,"canon-раз":3,"typo-десятичная-точка":2,"canon-масса":3}

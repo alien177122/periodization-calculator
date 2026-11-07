@@ -34,6 +34,7 @@ import {TierPyramid} from '../TierPyramid';
 import {Top3Podium} from '../Top3Podium';
 import type {ChapterId} from '../../data/theoryChapters';
 import {ChapterLink} from './ChapterLink';
+import {BasicsWaveDiagram, BlockModelFlow, MtorInputsFlow} from './LectureDiagrams';
 import {LectureCheckInBlock, LectureSection} from './LectureSection';
 import {MtorDayTimeline} from './MtorDayTimeline';
 import {ReadingLecturePage} from './ReadingLecturePage';
@@ -70,10 +71,10 @@ const PERCENT_TABLE: PercentRow[] = [
 
 const RPE_TABLE: RpeRow[] = [
   {rpe: '10', reserve: '0', desc: 'Максимальный отказ', color: '#ff4d4d'},
-  {rpe: '9', reserve: '~1', desc: 'Мог сделать ещё 1', color: '#ff4d4d'},
-  {rpe: '8', reserve: '~2', desc: 'Ещё 2 в запасе', color: '#ffc94d'},
-  {rpe: '7', reserve: '~3', desc: 'Ещё 3 в запасе', color: '#ffc94d'},
-  {rpe: '6', reserve: '~4', desc: 'Ещё 4 в запасе', color: '#3affb8'},
+  {rpe: '9', reserve: 'около 1', desc: 'Можно сделать ещё 1', color: '#ff4d4d'},
+  {rpe: '8', reserve: 'около 2', desc: 'Ещё 2 в запасе', color: '#ffc94d'},
+  {rpe: '7', reserve: 'около 3', desc: 'Ещё 3 в запасе', color: '#ffc94d'},
+  {rpe: '6', reserve: 'около 4', desc: 'Ещё 4 в запасе', color: '#3affb8'},
   {rpe: '<6', reserve: '>4', desc: 'Лёгкая нагрузка', color: '#3affb8'},
 ];
 
@@ -125,7 +126,9 @@ export function renderChapterContent(
             <p className="ta-lesson-intro__eyebrow">Глава 01</p>
             <h3 className="ta-lesson-intro__title">Базовые понятия</h3>
             <p className="ta-lesson-intro__lede">
-              1ПМ задаёт веса плана, волна — ритм нагрузки, RPE показывает, во сколько обошёлся подход.
+              В этой главе четыре идеи. 1ПМ — твой максимальный вес, от него считаются все рабочие
+              проценты. Волна — как меняется нагрузка по неделям. Разбор одной недели — как план
+              выглядит в приложении. RPE — насколько тяжело дался подход.
             </p>
             <ol className="ta-lesson-plan" aria-label="Содержание">
               <li>
@@ -149,7 +152,7 @@ export function renderChapterContent(
               <li>
                 <span className="ta-lesson-plan__step">4</span>
                 <span>
-                  <strong>Усилие</strong> — RPE как цена подхода
+                  <strong>Усилие</strong> — RPE, насколько тяжёл был подход
                 </span>
               </li>
             </ol>
@@ -170,6 +173,7 @@ export function renderChapterContent(
               {group.topics.map(topic => (
                 <LectureSection key={topic.id} topic={topic} onSelectChapter={onSelectChapter} />
               ))}
+              {group.id === 'progression' ? <BasicsWaveDiagram /> : null}
               {group.checkIn ? <LectureCheckInBlock checkIn={group.checkIn} /> : null}
             </section>
           ))}
@@ -213,8 +217,8 @@ export function renderChapterContent(
             <p className="ta-lesson-intro__eyebrow">Глава 02</p>
             <h3 className="ta-lesson-intro__title">mTOR и анаболический отклик</h3>
             <p className="ta-lesson-intro__lede">
-              Как нагрузка, белок и энергия вместе запускают рост мышцы — и почему ни один из них
-              не работает в одиночку.
+              Как нагрузка, белок и энергия вместе запускают рост мышцы — и почему ни один из них не
+              работает в одиночку.
             </p>
             <ol className="ta-lesson-plan" aria-label="Содержание">
               <li>
@@ -265,6 +269,7 @@ export function renderChapterContent(
               {group.topics.map(topic => (
                 <LectureSection key={topic.id} topic={topic} onSelectChapter={onSelectChapter} />
               ))}
+              {group.id === 'three-inputs' ? <MtorInputsFlow /> : null}
               {group.id === 'protocol' ? <MtorDayTimeline /> : null}
               {group.checkIn ? <LectureCheckInBlock checkIn={group.checkIn} /> : null}
             </section>
@@ -524,8 +529,8 @@ export function renderChapterContent(
             <p className="ta-lesson-intro__eyebrow">Глава 06</p>
             <h3 className="ta-lesson-intro__title">Сухожилия</h3>
             <p className="ta-lesson-intro__lede">
-              Мышца растёт от объёма, а сухожилие крепнет только в узком диапазоне растяжения. Ниже —
-              как в него попасть и не перегрузить ткань.
+              Мышца растёт от объёма, а сухожилие крепнет только в узком диапазоне растяжения. Ниже
+              — как в него попасть и не перегрузить ткань.
             </p>
             <ol className="ta-lesson-plan" aria-label="Содержание">
               <li>
@@ -815,7 +820,7 @@ export function renderChapterContent(
               <li>
                 <span className="ta-lesson-plan__step">2</span>
                 <span>
-                  <strong>Сначала специфичность</strong> — 1–2 движения, 80–90%
+                  <strong>Сначала специфичность</strong> — 1–2 упражнения, 80–90%
                 </span>
               </li>
               <li>
@@ -879,8 +884,8 @@ export function renderChapterContent(
             <p className="ta-lesson-intro__eyebrow">Глава 10</p>
             <h3 className="ta-lesson-intro__title">Прогрессия 2.0</h3>
             <p className="ta-lesson-intro__lede">
-              Периодизация устроена как этажи: год, фаза, неделя, тренировка, отдельный приём. Ниже —
-              модели и методы для каждого уровня.
+              Периодизация устроена как этажи: год, фаза, неделя, тренировка, отдельный приём. Ниже
+              — модели и методы для каждого уровня.
             </p>
             <ol className="ta-lesson-plan" aria-label="Содержание">
               <li>
@@ -925,6 +930,7 @@ export function renderChapterContent(
               {group.topics.map(topic => (
                 <LectureSection key={topic.id} topic={topic} onSelectChapter={onSelectChapter} />
               ))}
+              {group.id === 'model-not-calendar' ? <BlockModelFlow /> : null}
               {group.checkIn ? <LectureCheckInBlock checkIn={group.checkIn} /> : null}
             </section>
           ))}
@@ -953,7 +959,7 @@ export function renderChapterContent(
             items={SPECIAL_METHOD_NODES}
             asideEyebrow="14 приёмов"
             asideQuote="Метод — это нижний этаж периодизации."
-            asideNote="От разгрузки до пика: схема веса, повторов и RPE для одной тренировки."
+            asideNote="От разгрузки до пика: схема веса, повторений и RPE для одной тренировки."
           />
 
           <aside className="ta-see-also" aria-label="Связанные разделы">

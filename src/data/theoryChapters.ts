@@ -12,7 +12,7 @@ export const THEORY_CHAPTERS = [
     title: 'Основы',
     cardTitle: 'Основы тренировки',
     panelTitle: 'Основы тренировки',
-    summary: '1ПМ, прогрессия, fractional-сеты и как устроен 8-недельный план.',
+    summary: '1ПМ, прогрессия, fractional подходы и как устроен 8-недельный план.',
     accentVar: '--ta-sec-01',
     tintVar: '--ta-sec-01-tint',
   },
