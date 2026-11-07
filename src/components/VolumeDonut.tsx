@@ -135,7 +135,7 @@ function DetailPanel({
         <span className="ta-vol__detail-eyebrow">Источник объёма</span>
         <h3>{muscle.label}</h3>
         <p>
-          {formatNumber(muscle.value)} сет / цикл · {formatPercent(muscle.percent)} общего объёма
+          {formatNumber(muscle.value)} подход / цикл · {formatPercent(muscle.percent)} общего объёма
         </p>
       </div>
 
@@ -259,11 +259,11 @@ export default function VolumeDonut() {
               <div
                 key={catKey}
                 className="ta-vol__summary-card"
-                aria-label={`${CAT_META[catKey].label}: ${formatPercent(category.percent)}, ${formatNumber(category.total)} сетов`}
+                aria-label={`${CAT_META[catKey].label}: ${formatPercent(category.percent)}, ${formatNumber(category.total)} подходов`}
                 style={{'--vol-color': CAT_META[catKey].color} as CSSProperties}>
                 <span>{CAT_META[catKey].label}</span>
                 <strong>{formatPercent(category.percent)}</strong>
-                <em>{formatNumber(category.total)} сет</em>
+                <em>{formatNumber(category.total)} подходов</em>
               </div>
             );
           })}
@@ -352,7 +352,7 @@ export default function VolumeDonut() {
                 y={DONUT_CENTER + 24}
                 textAnchor="middle"
                 className="ta-vol__center-meta">
-                {selectedMuscle ? `${formatPercent(selectedMuscle.percent)} объёма` : 'сет / цикл'}
+                {selectedMuscle ? `${formatPercent(selectedMuscle.percent)} объёма` : 'подход / цикл'}
               </text>
             </g>
           </svg>

@@ -19,7 +19,6 @@ import {isAppTab, type AppTab} from './tabs';
 import {usePageMeta} from '../../hooks/usePageMeta';
 import {ThemeToggle} from '../shared/ThemeToggle';
 import {AppAmbientBackground} from './AppAmbientBackground';
-import {AppWallpaperVideo} from './AppWallpaperVideo';
 import '../../styles/animations.css';
 
 const AuthScreen = lazy(() => import('../../screens/AuthScreen'));
@@ -156,16 +155,13 @@ export function AppShell() {
   const connectionStatus = (
     <ConnectionStatus phase={connection.phase} pending={connection.pending} />
   );
-  const wallpaperActive = !auth.token || !auth.userName;
-
   if (auth.sessionLoading) {
     return (
       <>
-        <AppWallpaperVideo active={wallpaperActive} />
         {connectionStatus}
         <AppAmbientBackground activeTab={activeTab} />
         <ThemeToggle />
-        <LoadingView message="Восстанавливаем сессию..." />
+        <LoadingView message="Восстанавливаем сессию…" />
       </>
     );
   }
@@ -173,11 +169,10 @@ export function AppShell() {
   if (!auth.userName || !auth.token) {
     return (
       <>
-        <AppWallpaperVideo active={wallpaperActive} />
         {connectionStatus}
         <ThemeToggle />
         <OpenGraph {...pageMeta} />
-        <Suspense fallback={<LoadingView message="Загрузка формы входа..." />}>
+        <Suspense fallback={<LoadingView message="Открываем форму входа…" />}>
           <AuthScreen
             authMode={auth.authMode}
             setAuthMode={auth.setAuthMode}
@@ -200,11 +195,10 @@ export function AppShell() {
   if (!auth.userData) {
     return (
       <>
-        <AppWallpaperVideo active={wallpaperActive} />
         {connectionStatus}
         <AppAmbientBackground activeTab={activeTab} />
         <ThemeToggle />
-        <LoadingView message={auth.sessionError || 'Загрузка данных...'} />
+        <LoadingView message={auth.sessionError || 'Загружаем данные…'} />
       </>
     );
   }
@@ -219,7 +213,6 @@ export function AppShell() {
 
   return (
     <div className="app-shell" style={shellStyle}>
-      <AppWallpaperVideo active={wallpaperActive} />
       {connectionStatus}
       <AppAmbientBackground activeTab={activeTab} />
       <ThemeToggle />
