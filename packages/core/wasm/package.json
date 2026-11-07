@@ -1,0 +1,17 @@
+{
+  "name": "training-core",
+  "type": "module",
+  "description": "Periodization calc core: 1RM, rounding, volume class",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "files": [
+    "training_core_bg.wasm",
+    "training_core.js",
+    "training_core.d.ts"
+  ],
+  "main": "training_core.js",
+  "types": "training_core.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

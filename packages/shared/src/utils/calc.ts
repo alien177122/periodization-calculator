@@ -1,9 +1,16 @@
+import {calc1RMFromCore, scheduleTrainingCoreInit} from '@training/core';
 import type {ExerciseConfig, WarmupSet} from '../types/index.ts';
 
 export type OneRMMethod = 'epley' | 'brzycki';
 
-/** Legacy Epley-style estimate (default). Brzycki: (100×W)/(101.3−2.67123×R). */
-export function calc1RM(weight: number, reps: number, method: OneRMMethod = 'epley'): number {
+scheduleTrainingCoreInit();
+
+export function roundOneRm(value: number): number {
+  return Math.round(value * 10) / 10;
+}
+
+/** Pure TS 1RM. Wasm core calls this path's twin; `calc1RM` may prefer wasm. */
+export function calc1RMTs(weight: number, reps: number, method: OneRMMethod = 'epley'): number {
   if (weight <= 0 || reps < 1) return 0;
   if (method === 'brzycki') {
     return (100 * weight) / (101.3 - 2.67123 * reps);
@@ -11,6 +18,11 @@ export function calc1RM(weight: number, reps: number, method: OneRMMethod = 'epl
   if (reps < 5) return weight / (1.0278 - 0.0278 * reps * 1.3);
   if (reps <= 8) return weight / (1.0278 - 0.0278 * reps * 1.2);
   return weight * (1 + 0.0333 * reps * 1.1);
+}
+
+/** Legacy Epley-style estimate (default). Brzycki: (100×W)/(101.3−2.67123×R). */
+export function calc1RM(weight: number, reps: number, method: OneRMMethod = 'epley'): number {
+  return calc1RMFromCore(weight, reps, method) ?? calc1RMTs(weight, reps, method);
 }
 
 export function ceilToStep(value: number, step: number): number {

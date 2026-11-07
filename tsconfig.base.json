@@ -24,6 +24,7 @@
     "paths": {
       "@/*": ["src/*"],
       "@shared/*": ["packages/shared/src/*"],
+      "@training/core": ["packages/core/src/index.ts"],
       "@training/shared": ["packages/shared/src/index.ts"],
       "@training/shared/*": ["packages/shared/src/*"]
     }
