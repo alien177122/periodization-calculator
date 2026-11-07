@@ -1,6 +1,6 @@
 import {randomUUID, timingSafeEqual} from 'node:crypto';
 
-export const CHECKOUT_CLIENT_ERROR = 'Не удалось создать платёж';
+export const CHECKOUT_CLIENT_ERROR = 'Не удалось создать платёж. Попробуй ещё раз.';
 
 const PLATEGA_API_URL = 'https://app.platega.io/v2/transaction/process';
 

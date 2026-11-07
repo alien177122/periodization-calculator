@@ -59,5 +59,5 @@ export function passwordPolicyError(pw: string): string | null {
   if (!result.criteria.minLength) {
     return 'Пароль минимум 8 символов';
   }
-  return 'Пароль слабый: нужны заглавные и строчные буквы, цифра или спецсимвол';
+  return 'Пароль слабый. Добавь заглавную и строчную буквы, цифру или спецсимвол';
 }

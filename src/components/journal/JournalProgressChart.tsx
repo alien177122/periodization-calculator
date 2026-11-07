@@ -79,7 +79,7 @@ export function JournalProgressChart({sessions}: JournalProgressChartProps) {
       <div className="journal-chart-empty">
         <p className="journal-chart-empty__title">Запиши первый подход</p>
         <p className="journal-chart-empty__hint">
-          Сохраните подходы с весом и повторами — тренд построится по факту, не по программе.
+          Сохрани подходы с весом и повторениями — тренд построится по факту, не по программе.
         </p>
       </div>
     );

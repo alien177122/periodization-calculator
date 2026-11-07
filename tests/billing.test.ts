@@ -376,7 +376,7 @@ test('checkout 502 does not send provider error message', async t => {
   });
   const body = await response.json();
   assert.equal(response.status, 502);
-  assert.equal(body.error, 'Не удалось создать платёж');
+  assert.equal(body.error, 'Не удалось создать платёж. Попробуй ещё раз.');
   assert.equal(JSON.stringify(body).includes('merchant secret'), false);
 });
 

@@ -33,7 +33,7 @@ export function BillingPanel({
       <section className="billing-panel billing-panel--error" aria-live="polite">
         <p className="billing-panel__meta">{errorMessage ?? 'Статус оплаты недоступен'}</p>
         <Button size="sm" variant="ghost" type="button" onClick={onRefresh}>
-          Повторить
+          Обновить статус
         </Button>
       </section>
     );

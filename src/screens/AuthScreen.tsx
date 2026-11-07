@@ -2,6 +2,7 @@ import {useEffect, useState} from 'react';
 import {PremiumInput} from '../components/ui/PremiumInput';
 import {Button} from '../components/ui/Button';
 import {PasswordInput} from '../components/auth/PasswordInput';
+import {AuthHeroDecor} from '../components/auth/AuthHeroDecor';
 import {useKeyboardAvoid} from '../hooks/useKeyboardAvoid';
 import {useReducedMotion} from '../hooks/useReducedMotion';
 import {AUTH_CANVAS_COLOR, getStoredTheme, THEME_META_COLORS} from '../theme/theme';
@@ -57,6 +58,7 @@ export default function AuthScreen({
       className="auth-screen"
       aria-label="Вход в тренировочный калькулятор"
       style={keyboardHeight > 0 ? {paddingBottom: keyboardHeight} : undefined}>
+      <AuthHeroDecor reduced={reduced} />
       <div className="auth-stage">
         <div className={`auth-motion${reduced ? '' : ' auth-motion--enter'}`} aria-hidden="true">
           <div className="auth-motion__brand">Тренировочный калькулятор</div>
@@ -141,7 +143,7 @@ export default function AuthScreen({
             {authMode === 'register' && (
               <PasswordInput
                 id="auth-pass2"
-                label="Повторить пароль"
+                label="Повтори пароль"
                 value={pass2Input}
                 onChange={setPass2Input}
                 lang="en"
@@ -160,7 +162,13 @@ export default function AuthScreen({
               className="calc-test__submit auth-submit"
               onClick={handleAuth}
               disabled={authLoading}>
-              {authLoading ? '...' : authMode === 'login' ? 'Войти' : 'Создать аккаунт'}
+              {authLoading
+                ? authMode === 'login'
+                  ? 'Входим…'
+                  : 'Создаём аккаунт…'
+                : authMode === 'login'
+                  ? 'Войти'
+                  : 'Создать аккаунт'}
             </Button>
           </div>
         </div>
