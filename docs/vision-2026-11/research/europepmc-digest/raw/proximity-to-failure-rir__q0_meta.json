@@ -1,0 +1,1479 @@
+{
+ "version": "6.9",
+ "hitCount": 6,
+ "request": {
+  "queryString": "(TITLE:(\"proximity to failure\" OR \"repetitions in reserve\" OR \"training to failure\"))AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "40644670",
+    "source": "MED",
+    "pmid": "40644670",
+    "doi": "10.1519/jsc.0000000000005194",
+    "title": "Influence of Proximity to Failure, Relative Intensity, and Volume on Voluntary Performance and Fatigue Symptoms After Resistance Training: A Systematic Review.",
+    "authorString": "Varela-Olalla D, Del Campo-Vecino J, Balsalobre-Fernández C.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Varela-Olalla D",
+       "lastName": "Varela-Olalla",
+       "firstName": "Daniel",
+       "initials": "D",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9524-7692"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Applied Biomechanics and Sports Technology Research Group, Department of Physical Education, Sport and Human Movement, Universidad Autónoma de Madrid, Madrid, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Del Campo-Vecino J",
+       "lastName": "Del Campo-Vecino",
+       "firstName": "Juan",
+       "initials": "J"
+      },
+      {
+       "fullName": "Balsalobre-Fernández C",
+       "lastName": "Balsalobre-Fernández",
+       "firstName": "Carlos",
+       "initials": "C"
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9524-7692"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "9",
+     "volume": "39",
+     "journalIssueId": 4001381,
+     "dateOfPublication": "2025 Jul",
+     "monthOfPublication": 7,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "J Strength Cond Res",
+      "title": "Journal of strength and conditioning research",
+      "essn": "1533-4287",
+      "issn": "1064-8011",
+      "isoabbreviation": "J Strength Cond Res",
+      "nlmid": "9415084"
+     },
+     "printPublicationDate": "2025-07-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "e1129-e1168",
+    "abstractText": "<h4>Abstract</h4>Varela-Olalla, D, del Campo-Vecino, J, and Balsalobre-Fernández, C. Influence of proximity to failure, relative intensity, and volume on voluntary performance and fatigue symptoms after resistance training: a systematic review. J Strength Cond Res 39(9): e1129-e1168, 2025-Fatigue management is of paramount importance and holistic approaches that include neuromuscular and perceptual factors have been developed in recent years because knowledge of the sites of the neuromuscular system that can be altered, and its perceptual impact, is mandatory for programing adequate stimulus-fatigue ratios. Most of the information in this regard comes from continuous whole-body exercise and isometric training, with less information regarding holistic fatigue analysis during traditional resistance training (RT). This review aims to analyze the influence of RT variables on voluntary performance, neuromuscular and perceived fatigue variables. Search was performed on PubMed and Web of Science following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses, using terms related to resistance training and fatigue. Records were included if they provide comparisons between RT protocols in terms of acute fatigue in healthy humans. Results from fifty-one articles were included which indicate that contractile function, afferent feedback and perceptual responses are more affected during RT than muscle activation parameters being set duration, proximity to failure and total volume the main determinants of the impairments. Higher fatigue is induced as sets approach failure with high training volumes and densities, especially for protocols using light loads.",
+    "affiliation": "Applied Biomechanics and Sports Technology Research Group, Department of Physical Education, Sport and Human Movement, Universidad Autónoma de Madrid, Madrid, Spain.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Fatigue",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Strength Training",
+      "Neuromuscular Performance",
+      "Neuromuscular Function",
+      "Neuromuscular Fatigue",
+      "Perceptual Fatigue"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1519/JSC.0000000000005194"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 1,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2025-08-22",
+    "dateOfCreation": "2025-07-11",
+    "dateOfRevision": "2026-03-11",
+    "electronicPublicationDate": "2025-07-09",
+    "firstPublicationDate": "2025-07-09",
+    "firstIndexDate": "2025-07-12",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "38970765",
+    "source": "MED",
+    "pmid": "38970765",
+    "doi": "10.1007/s40279-024-02069-2",
+    "title": "Exploring the Dose-Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions.",
+    "authorString": "Robinson ZP, Pelland JC, Remmert JF, Refalo MC, Jukic I, Steele J, Zourdos MC.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Robinson ZP",
+       "lastName": "Robinson",
+       "firstName": "Zac P",
+       "initials": "ZP",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Pelland JC",
+       "lastName": "Pelland",
+       "firstName": "Joshua C",
+       "initials": "JC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Remmert JF",
+       "lastName": "Remmert",
+       "firstName": "Jacob F",
+       "initials": "JF",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Refalo MC",
+       "lastName": "Refalo",
+       "firstName": "Martin C",
+       "initials": "MC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute for Physical Activity and Nutrition (IPAN), School of Exercise and Nutrition Sciences, Deakin University, Geelong, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Jukic I",
+       "lastName": "Jukic",
+       "firstName": "Ivan",
+       "initials": "I",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0900-9410"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport Performance Research Institute New Zealand (SPRINZ), Auckland University of Technology, Auckland, New Zealand."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Steele J",
+       "lastName": "Steele",
+       "firstName": "James",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Sport, Health, and Social Sciences, Solent University, South Hampton, England."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zourdos MC",
+       "lastName": "Zourdos",
+       "firstName": "Michael C",
+       "initials": "MC",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3265-7683"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA. mzourdos@fau.edu."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0900-9410"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3265-7683"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "9",
+     "volume": "54",
+     "journalIssueId": 3828474,
+     "dateOfPublication": "2024 Sep",
+     "monthOfPublication": 9,
+     "yearOfPublication": 2024,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2024-09-01"
+    },
+    "pubYear": "2024",
+    "pageInfo": "2209-2231",
+    "abstractText": "<h4>Background</h4>The proximity to failure in which sets are terminated has gained attention in the scientific literature as a potentially key resistance training variable. Multiple meta-analyses have directly (i.e., failure versus not to failure) or indirectly (e.g., velocity loss, alternative set structures) evaluated the effect of proximity to failure on strength and muscle hypertrophy outcomes categorically; however, the dose-response effects of proximity to failure have not been analyzed collectively in a continuous manner.<h4>Objective</h4>To meta-analyze the aforementioned areas of relevant research, proximity to failure was quantified as the number of repetitions in reserve (RIR). Importantly, the RIR associated with each effect in the analysis was estimated on the basis of the available descriptions of the training interventions in each study. Data were extracted and a series of exploratory multilevel meta-regressions were performed for outcomes related to both strength and muscle hypertrophy. A range of sensitivity analyses were also performed. All models were adjusted for the effects of load, method of volume equating, duration of intervention, and training status.<h4>Results</h4>The best fit models for both strength and muscle hypertrophy outcomes demonstrated modest quality of overall fit. In all of the best-fit models for strength, the confidence intervals of the marginal slopes for estimated RIR contained a null point estimate, indicating a negligible relationship with strength gains. However, in all of the best-fit models for muscle hypertrophy, the marginal slopes for estimated RIR were negative and their confidence intervals did not contain a null point estimate, indicating that changes in muscle size increased as sets were terminated closer to failure.<h4>Conclusions</h4>The dose-response relationship between proximity to failure and strength gain appears to differ from the relationship with muscle hypertrophy, with only the latter being meaningfully influenced by RIR. Strength gains were similar across a wide range of RIR, while muscle hypertrophy improves as sets are terminated closer to failure. Considering the RIR estimation procedures used, however, the exact relationship between RIR and muscle hypertrophy and strength remains unclear. Researchers and practitioners should be aware that optimal proximity to failure may differ between strength and muscle hypertrophy outcomes, but caution is warranted when interpreting the present analysis due to its exploratory nature. Future studies deliberately designed to explore the continuous nature of the dose-response effects of proximity to failure in large samples should be considered.",
+    "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PP",
+          "qualifierName": "physiopathology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Regression Analysis"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Skeletal Muscle Enlargement",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-024-02069-2"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 46,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2024-09-13",
+    "dateOfCreation": "2024-07-06",
+    "dateOfRevision": "2026-11-01",
+    "electronicPublicationDate": "2024-07-06",
+    "firstPublicationDate": "2024-07-06",
+    "firstIndexDate": "2024-07-07",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "38563729",
+    "source": "MED",
+    "pmid": "38563729",
+    "pmcid": "PMC11127506",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC11127506"
+     ]
+    },
+    "doi": "10.1177/00315125241241785",
+    "title": "Feasibility and Usefulness of Repetitions-In-Reserve Scales for Selecting Exercise Intensity: A Scoping Review.",
+    "authorString": "Bastos V, Machado S, Teixeira DS.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Bastos V",
+       "lastName": "Bastos",
+       "firstName": "Vasco",
+       "initials": "V",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9227-8522"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Physical Education and Sport (ULHT), Lusófona University, Lisbon, Portugal."
+         },
+         {
+          "affiliation": "Research Center in Sport, Physical Education, and Exercise and Health (CIDEFES), Lisbon, Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Machado S",
+       "lastName": "Machado",
+       "firstName": "Sérgio",
+       "initials": "S",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8946-8467"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Center of Physical Activity Neuroscience, Neurodiversity Institute, Queimados-RJ, Brazil."
+         },
+         {
+          "affiliation": "Laboratory of Panic and Respiration, Institute of Psychiatry, Federal University of Rio de Janeiro, Rio de Janeiro, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Teixeira DS",
+       "lastName": "Teixeira",
+       "firstName": "Diogo S",
+       "initials": "DS",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-4587-5903"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Physical Education and Sport (ULHT), Lusófona University, Lisbon, Portugal."
+         },
+         {
+          "affiliation": "Research Center in Sport, Physical Education, and Exercise and Health (CIDEFES), Lisbon, Portugal."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8946-8467"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9227-8522"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-4587-5903"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "131",
+     "journalIssueId": 3775111,
+     "dateOfPublication": "2024 Jun",
+     "monthOfPublication": 6,
+     "yearOfPublication": 2024,
+     "journal": {
+      "medlineAbbreviation": "Percept Mot Skills",
+      "title": "Perceptual and motor skills",
+      "essn": "1558-688X",
+      "issn": "0031-5125",
+      "isoabbreviation": "Percept Mot Skills",
+      "nlmid": "0401131"
+     },
+     "printPublicationDate": "2024-06-01"
+    },
+    "pubYear": "2024",
+    "pageInfo": "940-970",
+    "abstractText": "The intensity of resistance training (RT) exercise is an important consideration for determining relevant health and performance-related outcomes. Yet, current objective exercise intensity measures present concerns in terms of viability or cost. In response to these concerns, repetition-in-reserve (RIR) scales may represent an adequate method of measuring and regulating intensity. However, no recent review has focused on how RIR scales have been used for this purpose in prior research. We prepared the present scoping review to analyze the feasibility and usefulness of RIR scales in selecting RT intensity. We conducted a systematic search in PubMed, SPORTDiscus, PsycINFO, and ClinicalTrials.gov databases (last search date April 2023) for experimental and non-experimental studies that utilized an RIR scale to measure proximity to failure in RT activities with apparently healthy individuals of any age. We qualitatively analyzed 31 studies (N = 855 mostly male adult participants) published between 2012-2023. RIR scales appeared to be contextually feasible and useful in prescribing and adjusting RT intensity. The most common trend in this research was to prescribe a target RIR and adjust the exercise load for a desired proximity to muscle failure. Additionally, when measuring proximity to failure as an outcome of interest, the literature suggests that the RIR prediction should be made close to task failure to increase its accuracy. Future research should further explore the impact of sex, RT experience, exercise selection, and muscle conditioning on the overall RIR approach.",
+    "affiliation": "Faculty of Physical Education and Sport (ULHT), Lusófona University, Lisbon, Portugal.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Scoping Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Feasibility Studies"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Intensity",
+      "Resistance Training",
+      "Repetitions In Reserve",
+      "Proximity To Failure",
+      "Estimated Repetitions To Failure"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1177/00315125241241785"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11127506"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11127506?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 14,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2024-05-24",
+    "dateOfCreation": "2024-04-02",
+    "dateOfRevision": "2025-01-30",
+    "electronicPublicationDate": "2024-04-02",
+    "firstPublicationDate": "2024-04-02",
+    "firstIndexDate": "2024-04-03",
+    "fullTextReceivedDate": "2026-10-13",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "36334240",
+    "source": "MED",
+    "pmid": "36334240",
+    "pmcid": "PMC9935748",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC9935748"
+     ]
+    },
+    "doi": "10.1007/s40279-022-01784-y",
+    "title": "Influence of Resistance Training Proximity-to-Failure on Skeletal Muscle Hypertrophy: A Systematic Review with Meta-analysis.",
+    "authorString": "Refalo MC, Helms ER, Trexler ET, Hamilton DL, Fyfe JJ.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Refalo MC",
+       "lastName": "Refalo",
+       "firstName": "Martin C",
+       "initials": "MC",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3755-6216"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Sport Research (CSR), School of Exercise and Nutrition Sciences, Deakin University, Geelong, VIC, Australia. mrefalo@deakin.edu.au."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Helms ER",
+       "lastName": "Helms",
+       "firstName": "Eric R",
+       "initials": "ER",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4849-9336"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport Performance Research Institute New Zealand (SPRINZ), Auckland University of Technology, Auckland, New Zealand."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Trexler ET",
+       "lastName": "Trexler",
+       "firstName": "Eric T",
+       "initials": "ET",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Trexler Fitness LLC, Raleigh, NC, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hamilton DL",
+       "lastName": "Hamilton",
+       "firstName": "D Lee",
+       "initials": "DL",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute for Physical Activity and Nutrition (IPAN), School of Exercise and Nutrition Sciences, Deakin University, Geelong, VIC, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Fyfe JJ",
+       "lastName": "Fyfe",
+       "firstName": "Jackson J",
+       "initials": "JJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9541-2336"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute for Physical Activity and Nutrition (IPAN), School of Exercise and Nutrition Sciences, Deakin University, Geelong, VIC, Australia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4849-9336"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9541-2336"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3755-6216"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "53",
+     "journalIssueId": 3508237,
+     "dateOfPublication": "2023 Mar",
+     "monthOfPublication": 3,
+     "yearOfPublication": 2023,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2023-03-01"
+    },
+    "pubYear": "2023",
+    "pageInfo": "649-665",
+    "abstractText": "<h4>Background and objective</h4>This systematic review with meta-analysis investigated the influence of resistance training proximity-to-failure on muscle hypertrophy.<h4>Methods</h4>Literature searches in the PubMed, SCOPUS and SPORTDiscus databases identified a total of 15 studies that measured muscle hypertrophy (in healthy adults of any age and resistance training experience) and compared resistance training performed to: (A) momentary muscular failure versus non-failure; (B) set failure (defined as anything other than momentary muscular failure) versus non-failure; or (C) different velocity loss thresholds.<h4>Results</h4>There was a trivial advantage for resistance training performed to set failure versus non-failure for muscle hypertrophy in studies applying any definition of set failure [effect size=0.19 (95% confidence interval 0.00, 0.37), p=0.045], with no moderating effect of volume load (p=0.884) or relative load (p=0.525). Given the variability in set failure definitions applied across studies, sub-group analyses were conducted and found no advantage for either resistance training performed to momentary muscular failure versus non-failure for muscle hypertrophy [effect size=0.12 (95% confidence interval -0.13, 0.37), p=0.343], or for resistance training performed to high (>25%) versus moderate (20-25%) velocity loss thresholds [effect size=0.08 (95% confidence interval -0.16, 0.32), p=0.529].<h4>Conclusion</h4>Overall, our main findings suggest that (i) there is no evidence to support that resistance training performed to momentary muscular failure is superior to non-failure resistance training for muscle hypertrophy and (ii) higher velocity loss thresholds, and theoretically closer proximities-to-failure do not always elicit greater muscle hypertrophy. As such, these results provide evidence for a potential non-linear relationship between proximity-to-failure and muscle hypertrophy.",
+    "affiliation": "Centre for Sport Research (CSR), School of Exercise and Nutrition Sciences, Deakin University, Geelong, VIC, Australia. mrefalo@deakin.edu.au.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Deakin University",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-022-01784-y"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9935748"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9935748?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 32,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2023-02-22",
+    "dateOfCreation": "2022-11-05",
+    "dateOfRevision": "2023-10-22",
+    "electronicPublicationDate": "2022-11-05",
+    "firstPublicationDate": "2022-11-05",
+    "firstIndexDate": "2022-11-06",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "35247203",
+    "source": "MED",
+    "pmid": "35247203",
+    "doi": "10.1007/s40279-022-01667-2",
+    "title": "Methods for Controlling and Reporting Resistance Training Proximity to Failure: Current Issues and Future Directions.",
+    "authorString": "Pelland JC, Robinson ZP, Remmert JF, Cerminaro RM, Benitez B, John TA, Helms ER, Zourdos MC.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Pelland JC",
+       "lastName": "Pelland",
+       "firstName": "Joshua C",
+       "initials": "JC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Robinson ZP",
+       "lastName": "Robinson",
+       "firstName": "Zac P",
+       "initials": "ZP",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Remmert JF",
+       "lastName": "Remmert",
+       "firstName": "Jacob F",
+       "initials": "JF",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cerminaro RM",
+       "lastName": "Cerminaro",
+       "firstName": "Rebecca M",
+       "initials": "RM",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Benitez B",
+       "lastName": "Benitez",
+       "firstName": "Brian",
+       "initials": "B",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "John TA",
+       "lastName": "John",
+       "firstName": "Thomas A",
+       "initials": "TA",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Helms ER",
+       "lastName": "Helms",
+       "firstName": "Eric R",
+       "initials": "ER",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4849-9336"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         },
+         {
+          "affiliation": "Sports Performance Research Institute New Zealand (SPRINZ), Auckland University of Technology, Auckland, New Zealand."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zourdos MC",
+       "lastName": "Zourdos",
+       "firstName": "Michael C",
+       "initials": "MC",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3265-7683"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA. mzourdos@fau.edu."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4849-9336"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3265-7683"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "7",
+     "volume": "52",
+     "journalIssueId": 3378091,
+     "dateOfPublication": "2022 Jul",
+     "monthOfPublication": 7,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2022-07-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "1461-1472",
+    "abstractText": "Resistance training variables such as volume, load, and frequency are well defined. However, the variable proximity to failure does not have a consistent quantification method, despite being defined as the number of repetitions in reserve (RIR) upon completion of a resistance training set. Further, there is between-study variability in the definition of failure itself. Studies have defined failure as momentary (inability to complete the concentric phase despite maximal effort), volitional (self-termination), or have provided no working definition. Methods to quantify proximity to failure include percentage-based prescription, repetition maximum zone training, velocity loss, and self-reported RIR; each with positives and negatives. Specifically, applying percentage-based prescriptions across a group may lead to a wide range of per-set RIR owing to interindividual differences in repetitions performed at specific percentages of 1 repetition maximum. Velocity loss is an objective method; however, the relationship between velocity loss and RIR varies set-to-set, across loading ranges, and between exercises. Self-reported RIR is inherently individualized; however, its subjectivity can lead to inaccuracy. Further, many studies, regardless of quantification method, do not report RIR. Consequently, it is difficult to make specific recommendations for per-set proximity to failure to maximize hypertrophy and strength. Therefore, this review aims to discuss the strengths and weaknesses of the current proximity to failure quantification methods. Further, we propose future directions for researchers and practitioners to quantify proximity to failure, including implementation of absolute velocity stops using individual average concentric velocity/RIR relationships. Finally, we provide guidance for reporting self-reported RIR regardless of the quantification method.",
+    "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Exercise"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-022-01667-2"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 26,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "N",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2022-06-23",
+    "dateOfCreation": "2022-03-05",
+    "dateOfRevision": "2026-10-28",
+    "electronicPublicationDate": "2022-03-05",
+    "firstPublicationDate": "2022-03-05",
+    "firstIndexDate": "2022-03-05",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "35658845",
+    "source": "MED",
+    "pmid": "35658845",
+    "doi": "10.1080/02640414.2022.2080165",
+    "title": "Towards an improved understanding of proximity-to-failure in resistance training and its influence on skeletal muscle hypertrophy, neuromuscular fatigue, muscle damage, and perceived discomfort: A scoping review.",
+    "authorString": "Refalo MC, Helms ER, Hamilton DL, Fyfe JJ.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Refalo MC",
+       "lastName": "Refalo",
+       "firstName": "Martin C",
+       "initials": "MC",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3755-6216"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Sport Research (CSR), School of Exercise and Nutrition Sciences, Deakin University, Geelong, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Helms ER",
+       "lastName": "Helms",
+       "firstName": "Eric R",
+       "initials": "ER",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4849-9336"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport Performance Research Institute New Zealand (SPRINZ), Auckland University of Technology, Auckland, New Zealand."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hamilton DL",
+       "lastName": "Hamilton",
+       "firstName": "D Lee",
+       "initials": "DL",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5620-4788"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Exercise and Nutrition Sciences, Institute for Physical Activity and Nutrition (IPAN), Deakin University, Geelong, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Fyfe JJ",
+       "lastName": "Fyfe",
+       "firstName": "Jackson J",
+       "initials": "JJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9541-2336"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Exercise and Nutrition Sciences, Institute for Physical Activity and Nutrition (IPAN), Deakin University, Geelong, Australia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4849-9336"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5620-4788"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9541-2336"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3755-6216"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "12",
+     "volume": "40",
+     "journalIssueId": 3408631,
+     "dateOfPublication": "2022 Jun",
+     "monthOfPublication": 6,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "J Sports Sci",
+      "title": "Journal of sports sciences",
+      "essn": "1466-447X",
+      "issn": "0264-0414",
+      "isoabbreviation": "J Sports Sci",
+      "nlmid": "8405364"
+     },
+     "printPublicationDate": "2022-06-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "1369-1391",
+    "abstractText": "While proximity-to-failure is considered an important resistance training (RT) prescription variable, its influence on physiological adaptations and short-term responses to RT is uncertain. Given the ambiguity in the literature, a scoping review was undertaken to summarise evidence for the influence of proximity-to-failure on muscle hypertrophy, neuromuscular fatigue, muscle damage and perceived discomfort. Literature searching was performed according to PRISMA-ScR guidelines and identified three themes of studies comparing either: i) RT performed to momentary muscular failure versus non-failure, ii) RT performed to set failure (defined as anything other than momentary muscular failure) versus non-failure, and iii) RT performed to different velocity loss thresholds. The findings highlight that no consensus definition for \"failure\" exists in the literature, and the proximity-to-failure achieved in \"non-failure\" conditions is often ambiguous and variable across studies. This poses challenges when deriving practical recommendations for manipulating proximity-to-failure in RT to achieve desired outcomes. Based on the limited available evidence, RT to set failure is likely not superior to non-failure RT for inducing muscle hypertrophy, but may exacerbate neuromuscular fatigue, muscle damage, and post-set perceived discomfort versus non-failure RT. Together, these factors may impair post-exercise recovery and subsequent performance, and may also negatively influence long-term adherence to RT.<b>KEY POINTS</b> This scoping review identified three broad themes of studies investigating proximity-to-failure in RT, based on the specific definition of set failure used (and therefore the research question being examined), to improve the validity of study comparisons and interpretations.There is no consensus definition for set failure in RT, and the proximity-to-failure achieved during non-failure RT is often unclear and varies both within and between studies, which together poses challenges when interpreting study findings and deriving practical recommendations regarding the influence of RT proximity-to-failure on muscle hypertrophy and other short-term responses.Based on the limited available evidence, performing RT to set failure is likely not superior to non-failure RT to maximise muscle hypertrophy, but the optimal proximity to failure in RT for muscle hypertrophy is unclear and may be moderated by other RT variables (e.g., load, volume-load). Also, RT performed to set failure likely induces greater neuromuscular fatigue, muscle damage, and perceived discomfort than non-failure RT, which may negatively influence RT performance, post-RT recovery, and long-term adherence.",
+    "affiliation": "Centre for Sport Research (CSR), School of Exercise and Nutrition Sciences, Deakin University, Geelong, Australia.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Scoping Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "The author(s) reported there is no funding associated with the work featured in this article",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Fatigue"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "hypertrophy",
+      "Fatigue",
+      "Failure",
+      "Proximity-to-failure",
+      "Non-failure"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1080/02640414.2022.2080165"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 31,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2022-08-18",
+    "dateOfCreation": "2022-06-06",
+    "dateOfRevision": "2025-07-28",
+    "electronicPublicationDate": "2022-06-05",
+    "firstPublicationDate": "2022-06-05",
+    "firstIndexDate": "2022-06-07",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

@@ -1,0 +1,618 @@
+{
+ "version": "6.9",
+ "hitCount": 2,
+ "request": {
+  "queryString": "(TITLE:(\"sleep restriction\" OR \"sleep deprivation\") AND TITLE:(metabolic OR glucose OR insulin))AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "42637185",
+    "source": "MED",
+    "pmid": "42637185",
+    "doi": "10.1016/j.physbeh.2026.115484",
+    "title": "Connecting the dots between sleep deprivation and obesity: the role of melatonin in appetite regulation and insulin sensitivity from a mechanistic review perspective.",
+    "authorString": "Zolubaite M, Mekouar ZM, Barrow M.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Zolubaite M",
+       "lastName": "Zolubaite",
+       "firstName": "Milda",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "The Centre for Nutritional Education and Lifestyle Management and Middlesex University, United Kingdom. Electronic address: milda.zolubaite@pni.cnelm.ac.uk."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Mekouar ZM",
+       "lastName": "Mekouar",
+       "firstName": "Zoubida Marianne",
+       "initials": "ZM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0000-8153-6760"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "The Centre for Nutritional Education and Lifestyle Management and Middlesex University, United Kingdom. Electronic address: zoubida.mekouar@pni.cnelm.ac.uk."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Barrow M",
+       "lastName": "Barrow",
+       "firstName": "Michelle",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-3925-5823"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "The Centre for Nutritional Education and Lifestyle Management and Middlesex University, United Kingdom. Electronic address: michelle.barrow@pni.cnelm.ac.uk."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-3925-5823"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0000-8153-6760"
+      }
+     ]
+    },
+    "journalInfo": {
+     "volume": "316",
+     "journalIssueId": 4260317,
+     "dateOfPublication": "2026 Nov",
+     "monthOfPublication": 11,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Physiol Behav",
+      "title": "Physiology & behavior",
+      "essn": "1873-507X",
+      "issn": "0031-9384",
+      "isoabbreviation": "Physiol Behav",
+      "nlmid": "0151504"
+     },
+     "printPublicationDate": "2026-11-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "115484",
+    "abstractText": "This review aims to clarify the mechanistic links between sleep deprivation, appetite regulation, and insulin sensitivity, and to explore the role of melatonin in these pathways. A systematic search identified 82 relevant studies, which were critically and thematically analysed. Evidence indicates that sleep deprivation lowers melatonin levels, which impairs insulin sensitivity via disruptions in the IRS/PI3K/AKT and cAMP/PKA/CREB pathways. Melatonin interventions appear to influence these pathways and affect leptin and appetite-regulating neuropeptides such as POMC, AgRP, and NPY, although findings on the direction of these effects remain mixed. Intervention studies using melatonin doses of ≤5 mg/day for at least four weeks show potential for reducing body weight in humans. Overall, this review highlights the complex interactions between sleep deprivation, appetite regulation, insulin sensitivity, and obesity, and suggests that melatonin may offer a promising adjunctive approach, although further research is needed to resolve conflicting results and support evidence based practice.",
+    "affiliation": "The Centre for Nutritional Education and Lifestyle Management and Middlesex University, United Kingdom. Electronic address: milda.zolubaite@pni.cnelm.ac.uk.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Animals"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Sleep Deprivation",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "CO",
+          "qualifierName": "complications"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PC",
+          "qualifierName": "prevention & control"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Insulin Resistance"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Obesity",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ET",
+          "qualifierName": "etiology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PC",
+          "qualifierName": "prevention & control"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Melatonin",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PD",
+          "qualifierName": "pharmacology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "TU",
+          "qualifierName": "therapeutic use"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Leptin",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Glucose",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Central Nervous System Depressants",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PD",
+          "qualifierName": "pharmacology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "TU",
+          "qualifierName": "therapeutic use"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Appetite",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "DE",
+          "qualifierName": "drug effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Signal Transduction",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "DE",
+          "qualifierName": "drug effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Appetite Regulation",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "DE",
+          "qualifierName": "drug effects"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Ghrelin",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Melatonin",
+      "Leptin",
+      "Appetite",
+      "NPY",
+      "GLUT4",
+      "Pomc",
+      "Agrp",
+      "Irs/Pi3k/Akt"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "ghrelin",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Central Nervous System Depressants",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Leptin",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Glucose",
+       "registryNumber": "IY9XDZ35W2"
+      },
+      {
+       "name": "Melatonin",
+       "registryNumber": "JL5DK93RCL"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.physbeh.2026.115484"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2026-09-10",
+    "dateOfCreation": "2026-08-24",
+    "dateOfRevision": "2026-09-10",
+    "electronicPublicationDate": "2026-08-24",
+    "firstPublicationDate": "2026-08-24",
+    "firstIndexDate": "2026-08-25",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "34539357",
+    "source": "MED",
+    "pmid": "34539357",
+    "pmcid": "PMC8447653",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC8447653"
+     ]
+    },
+    "doi": "10.3389/fnint.2021.722523",
+    "title": "Metabolic Disturbances Induced by Sleep Restriction as Potential Triggers for Alzheimer's Disease.",
+    "authorString": "García-Aviles JE, Méndez-Hernández R, Guzmán-Ruiz MA, Cruz M, Guerrero-Vargas NN, Velázquez-Moctezuma J, Hurtado-Alvarado G.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "García-Aviles JE",
+       "lastName": "García-Aviles",
+       "firstName": "Jesús Enrique",
+       "initials": "JE",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1259-5155"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Area of Neurosciences, Biology of Reproduction Department, Ciencias Biológicas y de la Salud, Universidad Autónoma Metropolitana, Unidad Iztapalapa, Mexico City, Mexico."
+         },
+         {
+          "affiliation": "Posgrado en Biología Experimental, Universidad Autónoma Metropolitana, Unidad Iztapalapa, Mexico City, Mexico."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Méndez-Hernández R",
+       "lastName": "Méndez-Hernández",
+       "firstName": "Rebeca",
+       "initials": "R",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-4393-3401"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Instituto de Investigaciones Biomédicas, Universidad Nacional Autónoma de México, Ciudad Universitaria, Mexico City, Mexico."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Guzmán-Ruiz MA",
+       "lastName": "Guzmán-Ruiz",
+       "firstName": "Mara A",
+       "initials": "MA",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Departamento de Fisiología, Facultad de Medicina, Universidad Nacional Autónoma de México, Mexico City, Mexico."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cruz M",
+       "lastName": "Cruz",
+       "firstName": "Miguel",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Instituto Mexicano del Seguro Social, Centro Médico Nacional Siglo XXI, Hospital de Especialidades, Unidad de Investigación Médica en Bioquímica, Mexico City, Mexico."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Guerrero-Vargas NN",
+       "lastName": "Guerrero-Vargas",
+       "firstName": "Natalí N",
+       "initials": "NN",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Departamento de Anatomía, Facultad de Medicina, Universidad Nacional Autónoma de México, México City, Mexico."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Velázquez-Moctezuma J",
+       "lastName": "Velázquez-Moctezuma",
+       "firstName": "Javier",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Area of Neurosciences, Biology of Reproduction Department, Ciencias Biológicas y de la Salud, Universidad Autónoma Metropolitana, Unidad Iztapalapa, Mexico City, Mexico."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hurtado-Alvarado G",
+       "lastName": "Hurtado-Alvarado",
+       "firstName": "Gabriela",
+       "initials": "G",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6137-663X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Instituto de Investigaciones Biomédicas, Universidad Nacional Autónoma de México, Ciudad Universitaria, Mexico City, Mexico."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9985-6172"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6137-663X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1259-5155"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-4393-3401"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "15",
+     "journalIssueId": 3127392,
+     "dateOfPublication": "2021 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Front Integr Neurosci",
+      "title": "Frontiers in integrative neuroscience",
+      "essn": "1662-5145",
+      "issn": "1662-5145",
+      "isoabbreviation": "Front Integr Neurosci",
+      "nlmid": "101477950"
+     },
+     "printPublicationDate": "2021-01-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "722523",
+    "abstractText": "Sleep has a major role in learning, memory consolidation, and metabolic function. Although it is known that sleep restriction increases the accumulation of amyloid β peptide (Aβ) and the risk to develop Alzheimer's disease (AD), the mechanism behind these effects remains unknown. In this review, we discuss how chronic sleep restriction induces metabolic and cognitive impairments that could result in the development of AD in late life. Here, we integrate evidence regarding mechanisms whereby metabolic signaling becomes disturbed after short or chronic sleep restriction in the context of cognitive impairment, particularly in the accumulation of Aβ in the brain. We also discuss the role of the blood-brain barrier in sleep restriction with an emphasis on the transport of metabolic signals into the brain and Aβ clearance. This review presents the unexplored possibility that the alteration of peripheral metabolic signals induced by sleep restriction, especially insulin resistance, is responsible for cognitive deficit and, subsequently, implicated in AD development.",
+    "affiliation": "Area of Neurosciences, Biology of Reproduction Department, Ciencias Biológicas y de la Salud, Universidad Autónoma Metropolitana, Unidad Iztapalapa, Mexico City, Mexico.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Metabolism",
+      "Insulin resistance",
+      "Cognitive function",
+      "Alzheimer’s disease",
+      "Sleep Restriction"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3389/fnint.2021.722523"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8447653"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8447653?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 12,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2021-09-20",
+    "dateOfRevision": "2026-10-01",
+    "electronicPublicationDate": "2021-09-03",
+    "firstPublicationDate": "2021-09-03",
+    "firstIndexDate": "2021-09-21",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

@@ -1,0 +1,4266 @@
+{
+ "version": "6.9",
+ "hitCount": 16,
+ "request": {
+  "queryString": "(TITLE:\"cardiorespiratory fitness\" AND TITLE:(mortality OR survival))AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "39537313",
+    "source": "MED",
+    "pmid": "39537313",
+    "pmcid": "PMC11874340",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC11874340"
+     ]
+    },
+    "doi": "10.1136/bjsports-2024-108748",
+    "title": "Cardiorespiratory fitness, body mass index and mortality: a systematic review and meta-analysis.",
+    "authorString": "Weeldreyer NR, De Guzman JC, Paterson C, Allen JD, Gaesser GA, Angadi SS.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Weeldreyer NR",
+       "lastName": "Weeldreyer",
+       "firstName": "Nathan R",
+       "initials": "NR",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0314-7679"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, School of Education and Human Development, University of Virginia, Charlottesville, Virginia, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "De Guzman JC",
+       "lastName": "De Guzman",
+       "firstName": "Jeison C",
+       "initials": "JC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, School of Education and Human Development, University of Virginia, Charlottesville, Virginia, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Paterson C",
+       "lastName": "Paterson",
+       "firstName": "Craig",
+       "initials": "C",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3125-9712"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Population Health Sciences, Bristol Medical School, University of Bristol, Bristol, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Allen JD",
+       "lastName": "Allen",
+       "firstName": "Jason D",
+       "initials": "JD",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, School of Education and Human Development, University of Virginia, Charlottesville, Virginia, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Gaesser GA",
+       "lastName": "Gaesser",
+       "firstName": "Glenn A",
+       "initials": "GA",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Health Solutions, Arizona State University, Phoenix, Arizona, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Angadi SS",
+       "lastName": "Angadi",
+       "firstName": "Siddhartha S",
+       "initials": "SS",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, School of Education and Human Development, University of Virginia, Charlottesville, Virginia, USA ssa2w@virginia.edu."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0314-7679"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3125-9712"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "5",
+     "volume": "59",
+     "journalIssueId": 3904123,
+     "dateOfPublication": "2025 Feb",
+     "monthOfPublication": 2,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Br J Sports Med",
+      "title": "British journal of sports medicine",
+      "essn": "1473-0480",
+      "issn": "0306-3674",
+      "nlmid": "0432520",
+      "isoabbreviation": "Br J Sports Med"
+     },
+     "printPublicationDate": "2025-02-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "339-346",
+    "abstractText": "<h4>Objective</h4>The purpose of this review was to assess the joint relationship of cardiorespiratory fitness (CRF) and Body Mass Index (BMI) on both cardiovascular disease (CVD) and all-cause mortality risk.<h4>Design</h4>A systematic review and meta-analysis was conducted. Pooled HR and 95% CI were calculated using a three-level restricted maximum likelihood estimation random-effects model with robust variance estimation. The reference group was normal weight-fit and was compared with normal weight-unfit, overweight-unfit and fit, and obese-unfit and fit.<h4>Data sources</h4>Electronic databases (PubMed/MEDLINE, Web of Science and SportDiscus) were searched following registration on PROSPERO.<h4>Eligibility criteria</h4>Articles meeting the following criteria were included: (1) published between January 1980 and February 2023, (2) prospective cohort study, (3) CRF assessed using a maximal or VO<sub>2</sub>peak exercise test, (4) BMI reported and directly measured, (5) joint impact of CRF and BMI on all-cause mortality or CVD mortality were analysed, and (6) the reference group was normal weight, fit individuals.<h4>Results</h4>20 articles were included in the analysis resulting in a total of 398 716 observations. Compared with the reference group, overweight-fit (CVD HR (95% CI): 1.50 (0.82-2.76), all-cause HR: 0.96 (0.61-1.50)) and obese-fit (CVD: 1.62 (0.87-3.01), all-cause: 1.11 (0.88-1.40)) did not have a statistically different risk of mortality. Normal weight-unfit (CVD: 2.04 (1.32-3.14), all-cause: 1.92 (1.43-2.57)), overweight-unfit (CVD: 2.58 (1.48-4.52), all-cause: 1.82 (1.47-2.24)) and obese-unfit (CVD: 3.35 (1.17-9.61), all-cause: 2.04 (1.54-2.71)) demonstrated 2-3-fold greater mortality risks.<h4>Conclusions</h4>CRF is a strong predictor of CVD and all-cause mortality and attenuates risks associated with overweight and obesity. These data have implications for public health and risk mitigation strategies.",
+    "affiliation": "Department of Kinesiology, School of Education and Human Development, University of Virginia, Charlottesville, Virginia, USA.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "research-article",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiovascular Diseases",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MO",
+          "qualifierName": "mortality"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Obesity",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MO",
+          "qualifierName": "mortality"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Exercise Test"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Body Mass Index"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Mortality"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Overweight"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiorespiratory Fitness",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Cardiovascular diseases",
+      "Exercise",
+      "Risk factor",
+      "Health Promotion",
+      "Vo2peak"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1136/bjsports-2024-108748"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11874340"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11874340?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 47,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by-nc",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2025-02-20",
+    "dateOfCreation": "2024-11-13",
+    "dateOfRevision": "2025-05-27",
+    "electronicPublicationDate": "2025-02-20",
+    "firstPublicationDate": "2025-02-20",
+    "firstIndexDate": "2024-11-16",
+    "fullTextReceivedDate": "2025-11-28",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "39837589",
+    "source": "MED",
+    "pmid": "39837589",
+    "doi": "10.1136/bjsports-2024-108671",
+    "title": "Association of muscle strength and cardiorespiratory fitness with all-cause and cancer-specific mortality in patients diagnosed with cancer: a systematic review with meta-analysis.",
+    "authorString": "Bettariga F, Galvao DA, Taaffe DR, Bishop C, Lopez P, Maestroni L, Quinto G, Crainich U, Verdini E, Bandini E, Natalucci V, Newton RU.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Bettariga F",
+       "lastName": "Bettariga",
+       "firstName": "Francesco",
+       "initials": "F",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4977-5494"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Exercise Medicine Research Institute, Edith Cowan University, Joondalup, Western Australia, Australia r.newton@ecu.edu.au francescobettariga@gmail.com."
+         },
+         {
+          "affiliation": "School of Medical and Health Sciences, Edith Cowan University, Joondalup, Western Australia, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Galvao DA",
+       "lastName": "Galvao",
+       "firstName": "Daniel A",
+       "initials": "DA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8209-2281"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Exercise Medicine Research Institute, Edith Cowan University, Joondalup, Western Australia, Australia."
+         },
+         {
+          "affiliation": "School of Medical and Health Sciences, Edith Cowan University, Joondalup, Western Australia, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Taaffe DR",
+       "lastName": "Taaffe",
+       "firstName": "Dennis R",
+       "initials": "DR",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-6381-1597"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Exercise Medicine Research Institute, Edith Cowan University, Joondalup, Western Australia, Australia."
+         },
+         {
+          "affiliation": "School of Medical and Health Sciences, Edith Cowan University, Joondalup, Western Australia, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bishop C",
+       "lastName": "Bishop",
+       "firstName": "Chris",
+       "initials": "C",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "London Sports Institute, Middlesex University, London, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lopez P",
+       "lastName": "Lopez",
+       "firstName": "Pedro",
+       "initials": "P",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Programa de Pós-Graduação em Ciências da Saúde, Universidade de Caxias do Sul, Caxias do Sul, Rio Grande do Sul, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Maestroni L",
+       "lastName": "Maestroni",
+       "firstName": "Luca",
+       "initials": "L",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "London Sports Institute, Middlesex University, London, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Quinto G",
+       "lastName": "Quinto",
+       "firstName": "Giulia",
+       "initials": "G",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Medicine, University of Padua, Padova, Italy."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Crainich U",
+       "lastName": "Crainich",
+       "firstName": "Umberto",
+       "initials": "U",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0001-1097-2183"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "London Sports Institute, Middlesex University, London, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Verdini E",
+       "lastName": "Verdini",
+       "firstName": "Enrico",
+       "initials": "E",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Medicine and Health Science Vincenzo Tiberio, University of Molise, Campobasso, Italy."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bandini E",
+       "lastName": "Bandini",
+       "firstName": "Enrico",
+       "initials": "E",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "London Sports Institute, Middlesex University, London, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Natalucci V",
+       "lastName": "Natalucci",
+       "firstName": "Valentina",
+       "initials": "V",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Pathophysiology and Transplantation, University of Milan, Milan, Italy."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Newton RU",
+       "lastName": "Newton",
+       "firstName": "Robert U",
+       "initials": "RU",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-0302-6129"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Exercise Medicine Research Institute, Edith Cowan University, Joondalup, Western Australia, Australia r.newton@ecu.edu.au francescobettariga@gmail.com."
+         },
+         {
+          "affiliation": "School of Medical and Health Sciences, Edith Cowan University, Joondalup, Western Australia, Australia."
+         },
+         {
+          "affiliation": "School of Human Movement and Nutrition Sciences, The University of Queensland, Brisbane, Queensland, Australia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-6381-1597"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4977-5494"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8209-2281"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-0302-6129"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0001-1097-2183"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "10",
+     "volume": "59",
+     "journalIssueId": 3936683,
+     "dateOfPublication": "2025 May",
+     "monthOfPublication": 5,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Br J Sports Med",
+      "title": "British journal of sports medicine",
+      "essn": "1473-0480",
+      "issn": "0306-3674",
+      "nlmid": "0432520",
+      "isoabbreviation": "Br J Sports Med"
+     },
+     "printPublicationDate": "2025-05-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "722-732",
+    "abstractText": "<h4>Objectives</h4>To examine the association between muscle strength and cardiorespiratory fitness (CRF) with all-cause and cancer-specific mortality in patients diagnosed with cancer, and whether these associations are affected by type and/or stage of cancer.<h4>Method</h4>A systematic review with meta-analysis was carried out. Five bibliographic databases were searched to August 2023.<h4>Results</h4>Forty-two studies were included (n=46 694). Overall, cancer patients with high muscle strength or CRF levels (when dichotomised as high vs low) had a significant reduction in risk of all-cause mortality by 31-46% compared with those with low physical fitness levels. Similarly, a significant 11% reduction was found for change per unit increments in muscle strength. In addition, muscle strength and CRF were associated with an 8-46% reduced risk of all-cause mortality in patients with advanced cancer stages, and a 19-41% reduced risk of all-cause mortality was observed in lung and digestive cancers. Lastly, unit increments in CRF were associated with a significant 18% reduced risk of cancer-specific mortality.<h4>Conclusion</h4>High muscle strength and CRF were significantly associated with a lower risk of all-cause mortality. In addition, increases in CRF were associated with a reduced risk of cancer-specific mortality. These fitness components were especially predictive in patients with advanced cancer stages as well as in lung and digestive cancers. This highlights the importance of assessing fitness measures for predicting mortality in cancer patients. Given these findings, tailored exercise prescriptions to improve muscle strength and CRF in patients with cancer may contribute to reducing cancer-related mortality.",
+    "affiliation": "Exercise Medicine Research Institute, Edith Cowan University, Joondalup, Western Australia, Australia r.newton@ecu.edu.au francescobettariga@gmail.com.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Neoplasms",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MO",
+          "qualifierName": "mortality"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PP",
+          "qualifierName": "physiopathology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Cause of Death"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiorespiratory Fitness",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Survival"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1136/bjsports-2024-108671"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 32,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2025-05-03",
+    "dateOfCreation": "2025-01-21",
+    "dateOfRevision": "2025-05-08",
+    "electronicPublicationDate": "2025-05-02",
+    "firstPublicationDate": "2025-05-02",
+    "firstIndexDate": "2025-01-22",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "39271056",
+    "source": "MED",
+    "pmid": "39271056",
+    "pmcid": "PMC11809197",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC11809197"
+     ]
+    },
+    "doi": "10.1016/j.jshs.2024.100986",
+    "title": "Comparison of objectively measured and estimated cardiorespiratory fitness to predict all-cause and cardiovascular disease mortality in adults: A systematic review and meta-analysis of 42 studies representing 35 cohorts and 3.8 million observations.",
+    "authorString": "Singh B, Cadenas-Sanchez C, da Costa BGG, Castro-Piñero J, Chaput JP, Cuenca-García M, Maher C, Marín-Jiménez N, McGrath R, Molina-García P, Myers J, Gower B, Ortega FB, Lang JJ, Tomkinson GR.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Singh B",
+       "lastName": "Singh",
+       "firstName": "Ben",
+       "initials": "B",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-7227-2406"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Alliance for Research in Exercise, Nutrition and Activity (ARENA), UniSA Allied Health and Human Performance, University of South Australia, Adelaide, SA 5000, Australia. Electronic address: ben.singh@unisa.edu.au."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cadenas-Sanchez C",
+       "lastName": "Cadenas-Sanchez",
+       "firstName": "Cristina",
+       "initials": "C",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sports, Faculty of Sport Sciences, Sport and Health University Research Institute (iMUDS), University of Granada, Granada 18071, Spain; Department of Cardiology, Stanford University, Stanford, CA 94305, USA; Veterans Affairs Palo Alto Health Care System, Palo Alto, CA 94304, USA; Centro de Investigación Biomédica en Red Fisiopatología de la Obesidad y Nutrición (CIBERobn), Instituto de Salud Carlos III, Granada 18071, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "da Costa BGG",
+       "lastName": "da Costa",
+       "firstName": "Bruno G G",
+       "initials": "BGG",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5132-1512"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology and Physical Education, McGill University, Montreal, QC H2W 1S4, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Castro-Piñero J",
+       "lastName": "Castro-Piñero",
+       "firstName": "José",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-7353-0382"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "GALENO Research Group, Department of Physical Education, Faculty of Education Sciences, University of Cadiz, Puerto Real 11519, Spain; Instituto de Investigación e Innovación Biomédica de Cádiz (INiBICA), Cadiz 11009, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Chaput JP",
+       "lastName": "Chaput",
+       "firstName": "Jean-Philippe",
+       "initials": "JP",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Healthy Active Living and Obesity Research Group, Children's Hospital of Eastern Ontario Research Institute, Ottawa, ON K1H 8L1, Canada; Department of Pediatrics, Faculty of Medicine, University of Ottawa, Ottawa, ON K1H 8L1, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cuenca-García M",
+       "lastName": "Cuenca-García",
+       "firstName": "Magdalena",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "GALENO Research Group, Department of Physical Education, Faculty of Education Sciences, University of Cadiz, Puerto Real 11519, Spain; Instituto de Investigación e Innovación Biomédica de Cádiz (INiBICA), Cadiz 11009, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Maher C",
+       "lastName": "Maher",
+       "firstName": "Carol",
+       "initials": "C",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8676-0224"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Alliance for Research in Exercise, Nutrition and Activity (ARENA), UniSA Allied Health and Human Performance, University of South Australia, Adelaide, SA 5000, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Marín-Jiménez N",
+       "lastName": "Marín-Jiménez",
+       "firstName": "Nuria",
+       "initials": "N",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sports, Faculty of Sport Sciences, Sport and Health University Research Institute (iMUDS), University of Granada, Granada 18071, Spain; GALENO Research Group, Department of Physical Education, Faculty of Education Sciences, University of Cadiz, Puerto Real 11519, Spain; Instituto de Investigación e Innovación Biomédica de Cádiz (INiBICA), Cadiz 11009, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "McGrath R",
+       "lastName": "McGrath",
+       "firstName": "Ryan",
+       "initials": "R",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Alliance for Research in Exercise, Nutrition and Activity (ARENA), UniSA Allied Health and Human Performance, University of South Australia, Adelaide, SA 5000, Australia; Healthy Aging North Dakota (HAND), North Dakota State University, Fargo, ND 58102, USA; Department of Health, Nutrition, and Exercise Sciences, North Dakota State University, Fargo, ND 58108, USA; Fargo VA Healthcare System, Fargo, ND 58102, USA; Department of Geriatrics, University of North Dakota, Grand Forks, ND 58202, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Molina-García P",
+       "lastName": "Molina-García",
+       "firstName": "Pablo",
+       "initials": "P",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sports, Faculty of Sport Sciences, Sport and Health University Research Institute (iMUDS), University of Granada, Granada 18071, Spain; Instituto de Investigación Biosanitaria ibs. Granada, Granada 18014, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Myers J",
+       "lastName": "Myers",
+       "firstName": "Jonathan",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Cardiology, Stanford University, Stanford, CA 94305, USA; Veterans Affairs Palo Alto Health Care System, Palo Alto, CA 94304, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Gower B",
+       "lastName": "Gower",
+       "firstName": "Bethany",
+       "initials": "B",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-6969-6913"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Alliance for Research in Exercise, Nutrition and Activity (ARENA), UniSA Allied Health and Human Performance, University of South Australia, Adelaide, SA 5000, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ortega FB",
+       "lastName": "Ortega",
+       "firstName": "Francisco B",
+       "initials": "FB",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sports, Faculty of Sport Sciences, Sport and Health University Research Institute (iMUDS), University of Granada, Granada 18071, Spain; Centro de Investigación Biomédica en Red Fisiopatología de la Obesidad y Nutrición (CIBERobn), Instituto de Salud Carlos III, Granada 18071, Spain; Faculty of Sport and Health Sciences, University of Jyväskylä, Jyväskylä 40014, Finland."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lang JJ",
+       "lastName": "Lang",
+       "firstName": "Justin J",
+       "initials": "JJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1768-319X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Alliance for Research in Exercise, Nutrition and Activity (ARENA), UniSA Allied Health and Human Performance, University of South Australia, Adelaide, SA 5000, Australia; Centre for Surveillance and Applied Research, Public Health Agency of Canada, Ottawa, ON K1A 0K9, Canada; School of Epidemiology and Public Health, Faculty of Medicine, University of Ottawa, Ottawa, ON K1H 8M5, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Tomkinson GR",
+       "lastName": "Tomkinson",
+       "firstName": "Grant R",
+       "initials": "GR",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-7601-9670"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Alliance for Research in Exercise, Nutrition and Activity (ARENA), UniSA Allied Health and Human Performance, University of South Australia, Adelaide, SA 5000, Australia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-6969-6913"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-7601-9670"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1768-319X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5132-1512"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-7227-2406"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-7353-0382"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8676-0224"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "14",
+     "journalIssueId": 4064810,
+     "dateOfPublication": "2025 Dec",
+     "monthOfPublication": 12,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "J Sport Health Sci",
+      "title": "Journal of sport and health science",
+      "essn": "2213-2961",
+      "issn": "2095-2546",
+      "nlmid": "101606001",
+      "isoabbreviation": "J Sport Health Sci"
+     },
+     "printPublicationDate": "2025-12-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "100986",
+    "abstractText": "<h4>Background</h4>Cardiorespiratory fitness (CRF) is a powerful health marker recommended by the American Heart Association as a clinical vital sign. Comparing the predictive validity of objectively measured CRF (the \"gold standard\") and estimated CRF is clinically relevant because estimated CRF is more feasible. Our objective was to meta-analyze cohort studies to compare the associations of objectively measured, exercise-estimated, and non-exercise-estimated CRF with all-cause and cardiovascular disease (CVD) mortality in adults.<h4>Methods</h4>Systematic searches were conducted in 9 databases (MEDLINE, SPORTDiscus, Embase, Scopus, PsycINFO, Web of Science, PubMed, CINAHL, and the Cochrane Library) up to April 11, 2024. We included full-text refereed cohort studies published in English that quantified the association (using risk estimates with 95% confidence intervals (95%CIs)) of objectively measured, exercise-estimated, and non-exercise-estimated CRF with all-cause and CVD mortality in adults. CRF was expressed as metabolic equivalents (METs) of task. Pooled relative risks (RR) for all-cause and CVD mortality per 1-MET (3.5 mL/kg/min) higher level of CRF were quantified using random-effects models.<h4>Results</h4>Forty-two studies representing 35 cohorts and 3,813,484 observations (81% male) (362,771 all-cause and 56,471 CVD deaths) were included. The pooled RRs for all-cause and CVD mortality per higher MET were 0.86 (95%CI: 0.83-0.88) and 0.84 (95%CI: 0.80-0.87), respectively. For both all-cause and CVD mortality, there were no statistically significant differences in RR per higher MET between objectively measured (RR range: 0.86-0.90) and maximal exercise-estimated (RR range: 0.85-0.86), submaximal exercise-estimated (RR range: 0.91-0.94), and non-exercise-estimated CRF (RR range: 0.81-0.85).<h4>Conclusion</h4>Objectively measured and estimated CRF showed similar dose-response associations for all-cause and CVD mortality in adults. Estimated CRF could provide a practical and robust alternative to objectively measured CRF for assessing mortality risk across diverse populations. Our findings underscore the health-related benefits of higher CRF and advocate for its integration into clinical practice to enhance risk stratification.",
+    "affiliation": "Alliance for Research in Exercise, Nutrition and Activity (ARENA), UniSA Allied Health and Human Performance, University of South Australia, Adelaide, SA 5000, Australia. Electronic address: ben.singh@unisa.edu.au.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Comparative Study",
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Horizon 2020",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiovascular Diseases",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MO",
+          "qualifierName": "mortality"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Exercise",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Cause of Death"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Cohort Studies"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adult"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiorespiratory Fitness",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Adult",
+      "Cardiovascular diseases",
+      "Cohort studies",
+      "risk assessment",
+      "Cardiorespiratory Fitness"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.jshs.2024.100986"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11809197"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11809197?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 12,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by-nc-nd",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2025-12-05",
+    "dateOfCreation": "2024-09-13",
+    "dateOfRevision": "2025-12-29",
+    "electronicPublicationDate": "2024-09-11",
+    "firstPublicationDate": "2024-09-11",
+    "firstIndexDate": "2024-09-15",
+    "fullTextReceivedDate": "2025-12-02",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "38599681",
+    "source": "MED",
+    "pmid": "38599681",
+    "pmcid": "PMC11103301",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC11103301"
+     ]
+    },
+    "doi": "10.1136/bjsports-2023-107849",
+    "title": "Cardiorespiratory fitness is a strong and consistent predictor of morbidity and mortality among adults: an overview of meta-analyses representing over 20.9 million observations from 199 unique cohort studies.",
+    "authorString": "Lang JJ, Prince SA, Merucci K, Cadenas-Sanchez C, Chaput JP, Fraser BJ, Manyanga T, McGrath R, Ortega FB, Singh B, Tomkinson GR.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Lang JJ",
+       "lastName": "Lang",
+       "firstName": "Justin J",
+       "initials": "JJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1768-319X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Surveillance and Applied Research, Public Health Agency of Canada, Ottawa, Ontario, Canada justin.lang@phac-aspc.gc.ca."
+         },
+         {
+          "affiliation": "School of Epidemiology and Public Health, Faculty of Medicine, University of Ottawa, Ottawa, Ontario, Canada."
+         },
+         {
+          "affiliation": "Alliance for Research in Exercise, Nutrition and Activity (ARENA), Allied Health and Human Performance, University of South Australia, Adelaide, South Australia, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Prince SA",
+       "lastName": "Prince",
+       "firstName": "Stephanie A",
+       "initials": "SA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-6729-5649"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Surveillance and Applied Research, Public Health Agency of Canada, Ottawa, Ontario, Canada."
+         },
+         {
+          "affiliation": "School of Epidemiology and Public Health, Faculty of Medicine, University of Ottawa, Ottawa, Ontario, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Merucci K",
+       "lastName": "Merucci",
+       "firstName": "Katherine",
+       "initials": "K",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1981-7013"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Health Library, Health Canada, Ottawa, Ontario, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cadenas-Sanchez C",
+       "lastName": "Cadenas-Sanchez",
+       "firstName": "Cristina",
+       "initials": "C",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4513-9108"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sports, Faculty of Sport Sciences, Sport and Health University Research Institute (iMUDS), University of Granada; CIBEROBN, ISCIII, Granada, Andalucía, Spain."
+         },
+         {
+          "affiliation": "Stanford University, Department of Cardiology; and Veterans Affair Palo Alto Health Care System, Palo Alto, California, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Chaput JP",
+       "lastName": "Chaput",
+       "firstName": "Jean-Philippe",
+       "initials": "JP",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5607-5736"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Epidemiology and Public Health, Faculty of Medicine, University of Ottawa, Ottawa, Ontario, Canada."
+         },
+         {
+          "affiliation": "Children's Hospital of Eastern Ontario Research Institute, Ottawa, Ontario, Canada."
+         },
+         {
+          "affiliation": "Department of Pediatrics, Faculty of Medicine, University of Ottawa, Ottawa, Ontario, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Fraser BJ",
+       "lastName": "Fraser",
+       "firstName": "Brooklyn J",
+       "initials": "BJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1752-5431"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Alliance for Research in Exercise, Nutrition and Activity (ARENA), Allied Health and Human Performance, University of South Australia, Adelaide, South Australia, Australia."
+         },
+         {
+          "affiliation": "Menzies Institute for Medical Research, University of Tasmania, Hobart, Tasmania, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Manyanga T",
+       "lastName": "Manyanga",
+       "firstName": "Taru",
+       "initials": "T",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-5461-5981"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Division of Medical Sciences, University of Northern British Columbia, Prince George, British Columbia, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "McGrath R",
+       "lastName": "McGrath",
+       "firstName": "Ryan",
+       "initials": "R",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Alliance for Research in Exercise, Nutrition and Activity (ARENA), Allied Health and Human Performance, University of South Australia, Adelaide, South Australia, Australia."
+         },
+         {
+          "affiliation": "Fargo VA Healthcare System, Fargo, North Dakota, USA."
+         },
+         {
+          "affiliation": "Department of Health, Nutrition, and Exercise Sciences, North Dakota State University, Fargo, North Dakota, USA."
+         },
+         {
+          "affiliation": "Department of Geriatrics, University of North Dakota, Grand Forks, North Dakota, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ortega FB",
+       "lastName": "Ortega",
+       "firstName": "Francisco B",
+       "initials": "FB",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-2001-1121"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sports, Faculty of Sport Sciences, Sport and Health University Research Institute (iMUDS), University of Granada; CIBEROBN, ISCIII, Granada, Andalucía, Spain."
+         },
+         {
+          "affiliation": "Faculty of Sport and Health Sciences, University of Jyväskylä, Jyväskylä, Finland."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Singh B",
+       "lastName": "Singh",
+       "firstName": "Ben",
+       "initials": "B",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-7227-2406"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Alliance for Research in Exercise, Nutrition and Activity (ARENA), Allied Health and Human Performance, University of South Australia, Adelaide, South Australia, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Tomkinson GR",
+       "lastName": "Tomkinson",
+       "firstName": "Grant R",
+       "initials": "GR",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-7601-9670"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Alliance for Research in Exercise, Nutrition and Activity (ARENA), Allied Health and Human Performance, University of South Australia, Adelaide, South Australia, Australia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-5461-5981"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-6729-5649"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-7601-9670"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1752-5431"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1768-319X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4513-9108"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5607-5736"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-7227-2406"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1981-7013"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-2001-1121"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "10",
+     "volume": "58",
+     "journalIssueId": 3764424,
+     "dateOfPublication": "2024 May",
+     "monthOfPublication": 5,
+     "yearOfPublication": 2024,
+     "journal": {
+      "medlineAbbreviation": "Br J Sports Med",
+      "title": "British journal of sports medicine",
+      "essn": "1473-0480",
+      "issn": "0306-3674",
+      "nlmid": "0432520",
+      "isoabbreviation": "Br J Sports Med"
+     },
+     "printPublicationDate": "2024-05-01"
+    },
+    "pubYear": "2024",
+    "pageInfo": "556-566",
+    "abstractText": "<h4>Objective</h4>To examine and summarise evidence from meta-analyses of cohort studies that evaluated the predictive associations between baseline cardiorespiratory fitness (CRF) and health outcomes among adults.<h4>Design</h4>Overview of systematic reviews.<h4>Data source</h4>Five bibliographic databases were searched from January 2002 to March 2024.<h4>Results</h4>From the 9062 papers identified, we included 26 systematic reviews. We found eight meta-analyses that described five unique mortality outcomes among general populations. CRF had the largest risk reduction for all-cause mortality when comparing high versus low CRF (HR=0.47; 95% CI 0.39 to 0.56). A dose-response relationship for every 1-metabolic equivalent of task (MET) higher level of CRF was associated with a 11%-17% reduction in all-cause mortality (HR=0.89; 95% CI 0.86 to 0.92, and HR=0.83; 95% CI 0.78 to 0.88). For incident outcomes, nine meta-analyses described 12 unique outcomes. CRF was associated with the largest risk reduction in incident heart failure when comparing high versus low CRF (HR=0.31; 95% CI 0.19 to 0.49). A dose-response relationship for every 1-MET higher level of CRF was associated with a 18% reduction in heart failure (HR=0.82; 95% CI 0.79 to 0.84). Among those living with chronic conditions, nine meta-analyses described four unique outcomes in nine patient groups. CRF was associated with the largest risk reduction for cardiovascular mortality among those living with cardiovascular disease when comparing high versus low CRF (HR=0.27; 95% CI 0.16 to 0.48). The certainty of the evidence across all studies ranged from very low-to-moderate according to Grading of Recommendations, Assessment, Development and Evaluations.<h4>Conclusion</h4>We found consistent evidence that high CRF is strongly associated with lower risk for a variety of mortality and incident chronic conditions in general and clinical populations.",
+    "affiliation": "Centre for Surveillance and Applied Research, Public Health Agency of Canada, Ottawa, Ontario, Canada justin.lang@phac-aspc.gc.ca.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "research-article",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Cardiovascular Diseases",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MO",
+          "qualifierName": "mortality"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PC",
+          "qualifierName": "prevention & control"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Mortality"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adult"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Heart Failure",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MO",
+          "qualifierName": "mortality"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Meta-Analysis as Topic"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiorespiratory Fitness",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Cardiovascular diseases",
+      "Review",
+      "Physical fitness",
+      "Cohort studies"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1136/bjsports-2023-107849"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11103301"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11103301?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 193,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by-nc",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2024-05-02",
+    "dateOfCreation": "2024-04-10",
+    "dateOfRevision": "2024-05-22",
+    "electronicPublicationDate": "2024-05-02",
+    "firstPublicationDate": "2024-05-02",
+    "firstIndexDate": "2024-04-11",
+    "fullTextReceivedDate": "2026-10-13",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "33909308",
+    "source": "MED",
+    "pmid": "33909308",
+    "doi": "10.1111/sms.13980",
+    "title": "Cardiorespiratory fitness and all-cause mortality in adults diagnosed with cancer systematic review and meta-analysis.",
+    "authorString": "Ezzatvar Y, Ramírez-Vélez R, Sáez de Asteasu ML, Martínez-Velilla N, Zambom-Ferraresi F, Lobelo F, Izquierdo M, García-Hermoso A.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Ezzatvar Y",
+       "lastName": "Ezzatvar",
+       "firstName": "Yasmin",
+       "initials": "Y",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9691-5998"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Exercise Intervention for Health Research Group (EXINH-RG), Department of Physiotherapy, Universitat de València, Valencia, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ramírez-Vélez R",
+       "lastName": "Ramírez-Vélez",
+       "firstName": "Robinson",
+       "initials": "R",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3075-6960"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Navarrabiomed, Complejo Hospitalario de Navarra (CHN), Universidad Pública de Navarra (UPNA), IdiSNA, Pamplona, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Sáez de Asteasu ML",
+       "lastName": "Sáez de Asteasu",
+       "firstName": "Mikel L",
+       "initials": "ML",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4111-5045"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Navarrabiomed, Complejo Hospitalario de Navarra (CHN), Universidad Pública de Navarra (UPNA), IdiSNA, Pamplona, Spain."
+         },
+         {
+          "affiliation": "CIBER of Frailty and Healthy Aging (CIBERFES), Instituto de Salud Carlos III, Madrid, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Martínez-Velilla N",
+       "lastName": "Martínez-Velilla",
+       "firstName": "Nicolás",
+       "initials": "N",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9576-9960"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "CIBER of Frailty and Healthy Aging (CIBERFES), Instituto de Salud Carlos III, Madrid, Spain."
+         },
+         {
+          "affiliation": "Geriatric Department, Complejo Hospitalario de Navarra (CHN), Pamplona, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zambom-Ferraresi F",
+       "lastName": "Zambom-Ferraresi",
+       "firstName": "Fabricio",
+       "initials": "F",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8377-9827"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "CIBER of Frailty and Healthy Aging (CIBERFES), Instituto de Salud Carlos III, Madrid, Spain."
+         },
+         {
+          "affiliation": "Geriatric Department, Complejo Hospitalario de Navarra (CHN), Pamplona, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lobelo F",
+       "lastName": "Lobelo",
+       "firstName": "Felipe",
+       "initials": "F",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-4185-7193"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Hubert Department of Global Health, Rollins School of Public Health, Emory University, Atlanta, GA, USA."
+         },
+         {
+          "affiliation": "Exercise is Medicine Global Research and Collaboration Center, Atlanta, GA, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Izquierdo M",
+       "lastName": "Izquierdo",
+       "firstName": "Mikel",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1506-4272"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Navarrabiomed, Complejo Hospitalario de Navarra (CHN), Universidad Pública de Navarra (UPNA), IdiSNA, Pamplona, Spain."
+         },
+         {
+          "affiliation": "CIBER of Frailty and Healthy Aging (CIBERFES), Instituto de Salud Carlos III, Madrid, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "García-Hermoso A",
+       "lastName": "García-Hermoso",
+       "firstName": "Antonio",
+       "initials": "A",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1397-7182"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Navarrabiomed, Complejo Hospitalario de Navarra (CHN), Universidad Pública de Navarra (UPNA), IdiSNA, Pamplona, Spain."
+         },
+         {
+          "affiliation": "CIBER of Frailty and Healthy Aging (CIBERFES), Instituto de Salud Carlos III, Madrid, Spain."
+         },
+         {
+          "affiliation": "Universidad de Santiago de Chile (USACH), Escuela de Ciencias de la Actividad Física, el Deporte y la Salud, Santiago, Chile."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9576-9960"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1397-7182"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1506-4272"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4111-5045"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8377-9827"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9691-5998"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3075-6960"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-4185-7193"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "9",
+     "volume": "31",
+     "journalIssueId": 3219252,
+     "dateOfPublication": "2021 Sep",
+     "monthOfPublication": 9,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Scand J Med Sci Sports",
+      "title": "Scandinavian journal of medicine & science in sports",
+      "essn": "1600-0838",
+      "issn": "0905-7188",
+      "nlmid": "9111504",
+      "isoabbreviation": "Scand J Med Sci Sports"
+     },
+     "printPublicationDate": "2021-09-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "1745-1752",
+    "abstractText": "<h4>Introduction</h4>The inverse association between cardiorespiratory fitness and all-cause mortality in apparently healthy populations has been previously reported; however, the existence of this association among adults diagnosed with cancer is unclear.<h4>Aim</h4>To determine the association between cardiorespiratory fitness and all-cause mortality in adults diagnosed with cancer.<h4>Methods</h4>Medline, Embase, and SPORTDiscus databases were searched. Eligible prospective cohort studies that examined the association of cardiorespiratory fitness with all-cause mortality in adults diagnosed with cancer were included. Hazard ratios (HRs) with associated 95% confidence intervals (CIs) were extracted from studies for all-cause mortality and pooled HRs were calculated using the random-effects inverse-variance model with the Hartung-Knapp-Sidik-Jonkman adjustment.<h4>Results</h4>Data from 13 studies with 6,486 adults were included. Compared with lower levels of cardiorespiratory fitness, high levels were associated with a reduced risk of all-cause mortality among adults diagnosed with any cancer (HR = 0.52; 95% CI, 0.35-0.77), lung cancer (HR = 0.62; 95% CI, 0.46-0.83), and among those with cardiorespiratory fitness measurement via indirect calorimetry (HR = 0.47; 95% CI, 0.27-0.80). Pooled HRs for the reduction in all-cause mortality risk per 1-MET increase were also statistically significant (HR = 0.82; 95% CI, 0.69-0.99). Neither age at baseline nor the length of follow-up had a significant influence on the HR estimates for all-cause mortality risk.<h4>Conclusion</h4>Cardiorespiratory fitness may confer an independent protective benefit against all-cause mortality in adults diagnosed with cancer. The use of cardiorespiratory fitness as a prognostic parameter might help determine risk for future adverse clinical events and optimize therapeutic management strategies to reduce long-term treatment-related effects in adults diagnosed with cancer.",
+    "affiliation": "Exercise Intervention for Health Research Group (EXINH-RG), Department of Physiotherapy, Universitat de València, Valencia, Spain.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Neoplasms",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MO",
+          "qualifierName": "mortality"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Cause of Death"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Confidence Intervals"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Proportional Hazards Models"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Age Factors"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Publication Bias"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adult"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Cardiorespiratory Fitness",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Bias"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Neoplasms",
+      "Survival",
+      "Prognosis",
+      "Aerobic Capacity"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1111/sms.13980"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 30,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2021-08-24",
+    "dateOfCreation": "2021-04-28",
+    "dateOfRevision": "2021-08-24",
+    "electronicPublicationDate": "2021-05-14",
+    "firstPublicationDate": "2021-05-14",
+    "firstIndexDate": "2021-04-29",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "32590383",
+    "source": "MED",
+    "pmid": "32590383",
+    "doi": "10.1097/ncc.0000000000000847",
+    "title": "Cardiorespiratory Fitness, Physical Activity, Walking Speed, Lack of Participation in Leisure Activities, and Lung Cancer Mortality: A Systematic Review and Meta-Analysis of Prospective Cohort Studies.",
+    "authorString": "Lee J.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Lee J",
+       "lastName": "Lee",
+       "firstName": "Junga",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Author Affiliation: Assistant Professor, Graduate School of Physical Education, Sports Medicine and Science, Kyung Hee University, Republic of Korea."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "6",
+     "volume": "44",
+     "journalIssueId": 3260530,
+     "dateOfPublication": "2021 Nov-Dec 01",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Cancer Nurs",
+      "title": "Cancer nursing",
+      "essn": "1538-9804",
+      "issn": "0162-220X",
+      "nlmid": "7805358",
+      "isoabbreviation": "Cancer Nurs"
+     },
+     "printPublicationDate": "2021-11-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "453-464",
+    "abstractText": "<h4>Background</h4>Lung cancer (LC) is the most common cause of death in cancer patients. The influence of cardiorespiratory fitness (CF) and physical activity (PA) on LC mortality has not previously been investigated.<h4>Objective</h4>The aim of this study was to investigate through a meta-analysis the associations among CF, PA, walking speed, or leisure activity, and LC mortality and all-cause mortality.<h4>Methods</h4>MEDLINE and EMBASE were used to select relevant studies from January 2000 to August 2019. A total of 6 037 058 study subjects from 11 prospective cohort studies were included in this meta-analysis. Pooled relative risks were calculated using fixed and random-effects models to estimate the associations between CF and PA, and LC mortality. In addition, a subgroup analysis was conducted to investigate associations between walking speed and leisure activity, and LC morality.<h4>Results</h4>Greater than 9.45 metabolic equivalents of CF was associated with reduced LC mortality, compared with low-level CF. Participating in more than 150 minutes per week of PA reduced LC mortality. Slower and same walking speed were associated with increased all-cause mortality compared with age-matched individuals. Finally, moderately inactive and inactive levels of leisure activity increased all-cause mortality.<h4>Conclusions</h4>Moderate to high CF and PA were each associated with reduced risks of LC mortality. In addition, slower and same walking speed, and moderately inactive and inactive levels of leisure activity were each associated with increased risks of all-cause mortality.<h4>Implications for practice</h4>Greater than 9.45 metabolic equivalents of CF, more than 150 minutes per week of PA, fast walking speed, and keeping active should be recommended to increase LC patient survivorship.",
+    "affiliation": "Author Affiliation: Assistant Professor, Graduate School of Physical Education, Sports Medicine and Science, Kyung Hee University, Republic of Korea.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Lung Neoplasms"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Exercise"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Walking"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Prospective Studies"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Leisure Activities"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Physical Fitness"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiorespiratory Fitness"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Walking Speed"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1097/NCC.0000000000000847"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 8,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2021-11-25",
+    "dateOfCreation": "2020-06-27",
+    "dateOfRevision": "2021-11-25",
+    "firstPublicationDate": "2021-11-01",
+    "firstIndexDate": "2020-06-27",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "33395631",
+    "source": "MED",
+    "pmid": "33395631",
+    "doi": "10.1123/japa.2019-0493",
+    "title": "Influence of Cardiorespiratory Fitness on Risk of Dementia and Dementia Mortality: A Systematic Review and Meta-Analysis of Prospective Cohort Studies.",
+    "authorString": "Lee J.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Lee J",
+       "lastName": "Lee",
+       "firstName": "Junga",
+       "initials": "J"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "5",
+     "volume": "29",
+     "journalIssueId": 3365320,
+     "dateOfPublication": "2021 Oct",
+     "monthOfPublication": 10,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "J Aging Phys Act",
+      "title": "Journal of aging and physical activity",
+      "essn": "1543-267X",
+      "issn": "1063-8652",
+      "nlmid": "9415639",
+      "isoabbreviation": "J Aging Phys Act"
+     },
+     "printPublicationDate": "2021-10-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "878-885",
+    "abstractText": "The purpose of this meta-analysis was to investigate the influence of cardiorespiratory fitness (CF) levels on dementia risk and dementia mortality. MEDLINE and EMBASE databases were used to search for eligible studies from January 1990 to September 2019. To be included, the study was required to be a prospective cohort study that provided CF measurements and indicated relative risk and confidence intervals for the associations between CF and dementia risk and mortality. A total of six studies were selected for this meta-analysis. Low-level CF was associated with nearly three times greater risk of dementia (2.93, 95% confidence interval [1.31, 6.57]; p < .05) compared with a high-level CF. Enhanced CF levels decreased the risk of dementia, and an increase of one metabolic equivalent of task in the CF level reduced the risk of dementia and dementia mortality. Maintaining more than 12 metabolic equivalents of task of CF level was required to substantially decrease dementia risk and dementia mortality.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Dementia"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Prospective Studies"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiorespiratory Fitness"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Cognition",
+      "Exercise",
+      "Older Adults"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1123/japa.2019-0493"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 13,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2022-05-06",
+    "dateOfCreation": "2021-01-04",
+    "dateOfRevision": "2022-05-31",
+    "electronicPublicationDate": "2021-01-03",
+    "firstPublicationDate": "2021-01-03",
+    "firstIndexDate": "2021-01-05",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "35562197",
+    "source": "MED",
+    "pmid": "35562197",
+    "doi": "10.1016/j.mayocp.2022.02.029",
+    "title": "Objectively Assessed Cardiorespiratory Fitness and All-Cause Mortality Risk: An Updated Meta-analysis of 37 Cohort Studies Involving 2,258,029 Participants.",
+    "authorString": "Laukkanen JA, Isiozor NM, Kunutsor SK.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Laukkanen JA",
+       "lastName": "Laukkanen",
+       "firstName": "Jari A",
+       "initials": "JA",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Central Finland Health Care District Hospital District, Department of Medicine, Jyväskylä, Finland; Institute of Clinical Medicine, Department of Internal Medicine, and the Institute of Public Health and Clinical Nutrition, University of Eastern Finland, Kuopio, Finland. Electronic address: jariantero.laukkanen@uef.fi."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Isiozor NM",
+       "lastName": "Isiozor",
+       "firstName": "Nzechukwu M",
+       "initials": "NM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8699-1025"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Clinical Medicine, Department of Internal Medicine, and the Institute of Public Health and Clinical Nutrition, University of Eastern Finland, Kuopio, Finland."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kunutsor SK",
+       "lastName": "Kunutsor",
+       "firstName": "Setor K",
+       "initials": "SK",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2625-0273"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Central Finland Health Care District Hospital District, Department of Medicine, Jyväskylä, Finland; National Institute for Health Research Bristol Biomedical Research Centre, University Hospitals Bristol NHS Foundation Trust and University of Bristol, Bristol, UK; Musculoskeletal Research Unit, Translational Health Sciences, Bristol Medical School, University of Bristol, Learning & Research Building (Level 1), Southmead Hospital, Bristol, UK."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8699-1025"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2625-0273"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "6",
+     "volume": "97",
+     "journalIssueId": 3369799,
+     "dateOfPublication": "2022 Jun",
+     "monthOfPublication": 6,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Mayo Clin Proc",
+      "title": "Mayo Clinic proceedings",
+      "essn": "1942-5546",
+      "issn": "0025-6196",
+      "nlmid": "0405543",
+      "isoabbreviation": "Mayo Clin Proc"
+     },
+     "printPublicationDate": "2022-06-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "1054-1073",
+    "abstractText": "<h4>Objective</h4>To detail the magnitude and specificity of the association between cardiorespiratory fitness (CRF) and all-cause mortality risk.<h4>Methods</h4>Cohort studies with at least 1 year of follow-up were sought from inception until December 2021 in MEDLINE, Embase, Web of Science, and a manual search of relevant articles. Relative risks (RRs) with 95% CIs were pooled using random-effects models. Quality of the evidence was assessed using the Grading of Recommendations Assessment, Development and Evaluation tool.<h4>Results</h4>A total of 37 unique studies comprising of 2,258,029 participants with 108,613 all-cause mortality events were eligible. The pooled multivariable-adjusted RR for all-cause mortality comparing the top vs bottom tertiles of CRF levels was 0.55 (95% CI, 0.50 to 0.61). When CRF was expressed in metabolic equivalent task (MET) units, the corresponding pooled RR was 0.56 (95% CI, 0.50 to 0.62). For every 1-MET increase in CRF, the RR for all-cause mortality was 0.89 (95% CI, 0.86 to 0.92). Strength of the association did not differ by publication year, age, sex, follow-up duration, CRF assessment method, or risk of bias.<h4>Conclusion</h4>Aggregate analysis of observational cohort studies confirms a strong inverse and independent association between CRF and all-cause mortality risk. The results suggest that guideline bodies should consider the inclusion of CRF in standard risk panels for mortality risk assessment.",
+    "affiliation": "Central Finland Health Care District Hospital District, Department of Medicine, Jyväskylä, Finland; Institute of Clinical Medicine, Department of Internal Medicine, and the Institute of Public Health and Clinical Nutrition, University of Eastern Finland, Kuopio, Finland. Electronic address: jariantero.laukkanen@uef.fi.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Risk Assessment"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Cohort Studies"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiorespiratory Fitness"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Bias"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://research-information.bris.ac.uk/files/314942003/CRF_Mortality_Final.pdf"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.mayocp.2022.02.029"
+      }
+     ]
+    },
+    "commentCorrectionList": {
+     "commentCorrection": [
+      {
+       "source": "MED",
+       "id": "35570068",
+       "reference": "Mayo Clin Proc. 2022 Jun;97(6):1038-1040. doi: 10.1016/j.mayocp.2022.04.011",
+       "type": "Comment in",
+       "orderIn": 1
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 164,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2022-06-08",
+    "dateOfCreation": "2022-05-13",
+    "dateOfRevision": "2022-07-12",
+    "electronicPublicationDate": "2022-05-11",
+    "firstPublicationDate": "2022-05-11",
+    "firstIndexDate": "2022-05-15",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "35022163",
+    "source": "MED",
+    "pmid": "35022163",
+    "doi": "10.1136/bjsports-2021-104876",
+    "title": "Cardiorespiratory fitness and mortality from all causes, cardiovascular disease and cancer: dose-response meta-analysis of cohort studies.",
+    "authorString": "Han M, Han M, Qie R, Shi X, Yang Y, Lu J, Hu F, Zhang M, Zhang Z, Hu D, Zhao Y.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Han M",
+       "lastName": "Han",
+       "firstName": "Minghui",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3105-1081"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Epidemiology and Health Statistics, College of Public Health, Zhengzhou University, Zhengzhou, Henan, People's Republic of China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Han M",
+       "lastName": "Han",
+       "firstName": "Minghui",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8046-0821"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Epidemiology and Health Statistics, College of Public Health, Zhengzhou University, Zhengzhou, Henan, People's Republic of China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Qie R",
+       "lastName": "Qie",
+       "firstName": "Ranran",
+       "initials": "R",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Epidemiology and Health Statistics, College of Public Health, Zhengzhou University, Zhengzhou, Henan, People's Republic of China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Shi X",
+       "lastName": "Shi",
+       "firstName": "Xuezhong",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Epidemiology and Health Statistics, College of Public Health, Zhengzhou University, Zhengzhou, Henan, People's Republic of China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Yang Y",
+       "lastName": "Yang",
+       "firstName": "Yongli",
+       "initials": "Y",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Epidemiology and Health Statistics, College of Public Health, Zhengzhou University, Zhengzhou, Henan, People's Republic of China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lu J",
+       "lastName": "Lu",
+       "firstName": "Jie",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Epidemiology and Health Statistics, College of Public Health, Zhengzhou University, Zhengzhou, Henan, People's Republic of China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hu F",
+       "lastName": "Hu",
+       "firstName": "Fulan",
+       "initials": "F",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Biostatistics and Epidemiology, School of Public Health, Shenzhen University Health Science Center, Shenzhen, Guangdong, People's Republic of China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zhang M",
+       "lastName": "Zhang",
+       "firstName": "Ming",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Biostatistics and Epidemiology, School of Public Health, Shenzhen University Health Science Center, Shenzhen, Guangdong, People's Republic of China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zhang Z",
+       "lastName": "Zhang",
+       "firstName": "Zhenzhong",
+       "initials": "Z",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Pharmaceutical Sciences, Zhengzhou University, Zhengzhou, Henan, People's Republic of China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hu D",
+       "lastName": "Hu",
+       "firstName": "Dongsheng",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Epidemiology and Health Statistics, College of Public Health, Zhengzhou University, Zhengzhou, Henan, People's Republic of China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zhao Y",
+       "lastName": "Zhao",
+       "firstName": "Yang",
+       "initials": "Y",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Epidemiology and Health Statistics, College of Public Health, Zhengzhou University, Zhengzhou, Henan, People's Republic of China yzhao20@zzu.edu.cn."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8046-0821"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3105-1081"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "13",
+     "volume": "56",
+     "journalIssueId": 3376661,
+     "dateOfPublication": "2022 Jul",
+     "monthOfPublication": 7,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Br J Sports Med",
+      "title": "British journal of sports medicine",
+      "essn": "1473-0480",
+      "issn": "0306-3674",
+      "nlmid": "0432520",
+      "isoabbreviation": "Br J Sports Med"
+     },
+     "printPublicationDate": "2022-07-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "733-739",
+    "abstractText": "<h4>Objective</h4>Current evidence of the associations between cardiorespiratory fitness (CRF) and mortality is limited. We performed a meta-analysis to assess the dose-response association of CRF with mortality from all causes, cardiovascular disease (CVD) and cancer in healthy population.<h4>Methods</h4>PubMed, EMBASE and Web of Science were searched up to 26 December 2019 for reports of cohort studies giving risk estimates for all-cause, CVD and cancer mortality by level of CRF. Cohort studies were included if CRF was assessed by an exercise stress test and reported as at least three levels or per incremental increase, and the association of CRF with all-cause, CVD and cancer mortality was evaluated. Generalised least-squares regression models were used to assess the quantitative relation of CRF with all-cause, CVD and cancer mortality.<h4>Results</h4>34 cohort studies were eligible for the meta-analysis. The pooled relative risks (RRs) for all-cause, CVD and cancer mortality per one-metabolic equivalent increase in CRF were 0.88 (95% CI 0.83 to 0.93), 0.87 (95% CI0.83 to 0.91) and 0.93 (95% CI 0.91 to 0.96), respectively. As compared with lowest CRF, with intermediate CRF, the summary RRs for all-cause, CVD and cancer mortality were 0.67 (95% CI 0.61 to 0.74), 0.60 (95% CI 0.51 to 0.69) and 0.76 (95% CI 0.69 to 0.84), respectively, and with highest CRF were 0.47 (95% CI 0.39 to 0.56), 0.49 (95% CI 0.42 to 0.56) and 0.57 (95% CI 0.46 to 0.70), respectively.<h4>Conclusion</h4>Our analysis showed inverse dose-response associations of CRF with all-cause, CVD and cancer mortality, which provides evidence for public health recommendations for preventing all-cause, CVD and cancer mortality.<h4>Prospero registration number</h4>CRD42020208883.",
+    "affiliation": "Department of Epidemiology and Health Statistics, College of Public Health, Zhengzhou University, Zhengzhou, Henan, People's Republic of China.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Natural Science Foundation",
+       "grantId": "2019A1515011183",
+       "orderIn": 0
+      },
+      {
+       "agency": "National Natural Science Foundation of China",
+       "grantId": "82073646",
+       "orderIn": 0
+      },
+      {
+       "agency": "Natural Science Foundation of Shenzhen of",
+       "grantId": "JCYJ20190808145805515",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Neoplasms"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiovascular Diseases"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Risk Factors"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Cohort Studies"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Physical Fitness",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiorespiratory Fitness",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Meta-analysis",
+      "Death"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://bjsm.bmj.com/content/bjsports/56/13/733.full.pdf"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1136/bjsports-2021-104876"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 83,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2022-06-20",
+    "dateOfCreation": "2022-01-13",
+    "dateOfRevision": "2022-06-20",
+    "electronicPublicationDate": "2022-01-12",
+    "firstPublicationDate": "2022-01-12",
+    "firstIndexDate": "2022-01-14",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "34198003",
+    "source": "MED",
+    "pmid": "34198003",
+    "pmcid": "PMC8724619",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC8724619"
+     ]
+    },
+    "doi": "10.1016/j.jshs.2021.06.004",
+    "title": "Cardiorespiratory fitness measured with cardiopulmonary exercise testing and mortality in patients with cardiovascular disease: A systematic review and meta-analysis.",
+    "authorString": "Ezzatvar Y, Izquierdo M, Núñez J, Calatayud J, Ramírez-Vélez R, García-Hermoso A.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Ezzatvar Y",
+       "lastName": "Ezzatvar",
+       "firstName": "Yasmin",
+       "initials": "Y",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9691-5998"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Exercise Intervention for Health Research Group (EXINH-RG), Department of Physiotherapy, Universitat de València, Valencia 46010, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Izquierdo M",
+       "lastName": "Izquierdo",
+       "firstName": "Mikel",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1506-4272"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Navarrabiomed, Navarra Hospital Complex (CHN), Public University of Navarra (UPNA), Navarra Medical Research Institute (IdiSNA), Pamplona 31008, Spain; CIBER of Frailty and Healthy Aging (CIBERFES), Instituto de Salud Carlos III, Madrid 28029, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Núñez J",
+       "lastName": "Núñez",
+       "firstName": "Julio",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Cardiology, Valencia University Hospital, Biomedical Research Institute (INCLIVA), Valencia 46010, Spain; CIBER in Cardiovascular Diseases (CIBERCV), Madrid 28029, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Calatayud J",
+       "lastName": "Calatayud",
+       "firstName": "Joaquín",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8670-8346"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Exercise Intervention for Health Research Group (EXINH-RG), Department of Physiotherapy, Universitat de València, Valencia 46010, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ramírez-Vélez R",
+       "lastName": "Ramírez-Vélez",
+       "firstName": "Robinson",
+       "initials": "R",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3075-6960"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Navarrabiomed, Navarra Hospital Complex (CHN), Public University of Navarra (UPNA), Navarra Medical Research Institute (IdiSNA), Pamplona 31008, Spain; CIBER of Frailty and Healthy Aging (CIBERFES), Instituto de Salud Carlos III, Madrid 28029, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "García-Hermoso A",
+       "lastName": "García-Hermoso",
+       "firstName": "Antonio",
+       "initials": "A",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1397-7182"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Navarrabiomed, Navarra Hospital Complex (CHN), Public University of Navarra (UPNA), Navarra Medical Research Institute (IdiSNA), Pamplona 31008, Spain; CIBER of Frailty and Healthy Aging (CIBERFES), Instituto de Salud Carlos III, Madrid 28029, Spain; Sciences of Physical Activity, Sports and Health School, University of Santiago of Chile (USACH), Santiago 71783-5, Chile. Electronic address: antonio.garciah@unavarra.es."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1397-7182"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1506-4272"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8670-8346"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9691-5998"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3075-6960"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "6",
+     "volume": "10",
+     "journalIssueId": 3283250,
+     "dateOfPublication": "2021 Dec",
+     "monthOfPublication": 12,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "J Sport Health Sci",
+      "title": "Journal of sport and health science",
+      "essn": "2213-2961",
+      "issn": "2095-2546",
+      "nlmid": "101606001",
+      "isoabbreviation": "J Sport Health Sci"
+     },
+     "printPublicationDate": "2021-12-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "609-619",
+    "abstractText": "<h4>Background</h4>Cardiorespiratory fitness (CRF) is inversely associated with mortality in apparently healthy subjects and in some clinical populations, but evidence for the association between CRF and all-cause and/or cardiovascular disease (CVD) mortality in patients with established CVD is lacking. This study aimed to quantify this association.<h4>Methods</h4>We searched for prospective cohort studies that measured CRF with cardiopulmonary exercise testing in patients with CVD and that examined all-cause and CVD mortality with at least 6 months of follow-up. Pooled hazard ratios (HRs) were calculated using random-effect inverse-variance analyses.<h4>Results</h4>Data were obtained from 21 studies and included 159,352 patients diagnosed with CVD (38.1% female). Pooled HRs for all-cause and CVD mortality comparing the highest vs. lowest category of CRF were 0.42 (95% confidence interval (95%CI): 0.28-0.61) and 0.27 (95%CI: 0.16-0.48), respectively. Pooled HRs per 1 metabolic equivalent (1-MET) increment were significant for all-cause mortality (HR = 0.81; 95%CI: 0.74-0.88) but not for CVD mortality (HR = 0.75; 95%CI: 0.48-1.18). Coronary artery disease patients with high CRF had a lower risk of all-cause mortality (HR = 0.32; 95%CI: 0.26-0.41) than did their unfit counterparts. Each 1-MET increase was associated with lower all-cause mortality risk among coronary artery disease patients (HR = 0.83; 95%CI: 0.76-0.91) but not lower among those with heart failure (HR = 0.69; 95%CI: 0.36-1.32).<h4>Conclusion</h4>A better CRF was associated with lower risk of all-cause mortality and CVD. This study supports the use of CRF as a powerful predictor of mortality in this population.",
+    "affiliation": "Exercise Intervention for Health Research Group (EXINH-RG), Department of Physiotherapy, Universitat de València, Valencia 46010, Spain.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Research Support, Non-U.S. Gov't",
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Instituto de Salud Carlos III",
+       "grantId": "420/2019",
+       "orderIn": 0
+      },
+      {
+       "agency": "Universidad Pública de Navarra",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiovascular Diseases"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Exercise Test"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Prospective Studies"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiorespiratory Fitness"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Survival",
+      "Exercise capacity",
+      "Heart Failure",
+      "coronary artery disease",
+      "Cardiopulmonary Fitness"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.jshs.2021.06.004"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8724619"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8724619?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 80,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by-nc-nd",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2022-01-27",
+    "dateOfCreation": "2021-07-01",
+    "dateOfRevision": "2025-06-23",
+    "electronicPublicationDate": "2021-06-29",
+    "firstPublicationDate": "2021-06-29",
+    "firstIndexDate": "2021-07-02",
+    "fullTextReceivedDate": "2025-02-02",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "34225102",
+    "source": "MED",
+    "pmid": "34225102",
+    "doi": "10.1016/j.atherosclerosis.2021.06.904",
+    "title": "Is estimated cardiorespiratory fitness an effective predictor for cardiovascular and all-cause mortality? A meta-analysis.",
+    "authorString": "Qiu S, Cai X, Sun Z, Wu T, Schumann U.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Qiu S",
+       "lastName": "Qiu",
+       "firstName": "Shanhu",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Diabetes, Zhongda Hospital, School of Medicine, Southeast University, Nanjing, China; Department of Endocrinology, Shenzhen People's Hospital (The Second Clinical Medical College of Jinan University; The First Affiliated Hospital of Southern University of Science and Technology), Shenzhen, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cai X",
+       "lastName": "Cai",
+       "firstName": "Xue",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Diabetes, Zhongda Hospital, School of Medicine, Southeast University, Nanjing, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Sun Z",
+       "lastName": "Sun",
+       "firstName": "Zilin",
+       "initials": "Z",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Diabetes, Zhongda Hospital, School of Medicine, Southeast University, Nanjing, China; Department of Endocrinology, Zhongda Hospital, Southeast University, Nanjing, China. Electronic address: sunzilin1963@126.com."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wu T",
+       "lastName": "Wu",
+       "firstName": "Tongzhi",
+       "initials": "T",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1656-9210"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Adelaide Medical School and Centre of Research Excellence (CRE) in Translating Nutritional Science to Good Health, The University of Adelaide, Adelaide, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Schumann U",
+       "lastName": "Schumann",
+       "firstName": "Uwe",
+       "initials": "U",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Ulm University Medical Center, Ulm, Germany."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1656-9210"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "volume": "330",
+     "journalIssueId": 3210213,
+     "dateOfPublication": "2021 Aug",
+     "monthOfPublication": 8,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Atherosclerosis",
+      "title": "Atherosclerosis",
+      "essn": "1879-1484",
+      "issn": "0021-9150",
+      "nlmid": "0242543",
+      "isoabbreviation": "Atherosclerosis"
+     },
+     "printPublicationDate": "2021-08-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "22-28",
+    "abstractText": "<h4>Background and aims</h4>Estimated cardiorespiratory fitness (eCRF) derived from algorithm correlates well with exercise testing-measured CRF, yet its clinical use for mortality risk stratification has not been systematically evaluated. This meta-analysis with dose-response analysis was conducted to quantify its association with risk of cardiovascular and all-cause mortality.<h4>Methods</h4>Electronic databases were searched for prospective cohort studies that investigated the association of eCRF with risk of cardiovascular and all-cause mortality. Study-specific multivariate-adjusted hazard ratios (HRs) and 95% confidence intervals (CIs) per 1-metabolic equivalent (MET) higher of eCRF were pooled using a random-effects model.<h4>Results</h4>Twenty-five datasets from 8 cohort studies that enrolled more than 170,000 participants were included. The summary HR per 1-MET higher of eCRF was 0.83 (95% CI 0.80 to 0.86) for cardiovascular mortality (11 datasets) and 0.83 (95% CI 0.78 to 0.88) for all-cause mortality (14 datasets) in the general population. These associations showed no sex-difference and were all linearly shaped (all p<sub>nonlinearity</sub> ≥ 0.27). The performance of eCRF (assessed by the area under the curve) in discriminating future risk of cardiovascular and all-cause mortality was higher than all its components (such as physical activity, resting heart rate, and body mass index, all p < 0.05), but slightly lower than exercise testing-measured CRF.<h4>Conclusions</h4>Higher eCRF was independently associated with lower risk of cardiovascular and all-cause mortality in the general population, indicating that eCRF might hold the potential as an effective and practical risk prediction tool in epidemiological or population research.",
+    "affiliation": "Institute of Diabetes, Zhongda Hospital, School of Medicine, Southeast University, Nanjing, China; Department of Endocrinology, Shenzhen People's Hospital (The Second Clinical Medical College of Jinan University; The First Affiliated Hospital of Southern University of Science and Technology), Shenzhen, China.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Research Support, Non-U.S. Gov't",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "National Key Research and Development Program of China",
+       "grantId": "2016YFC1305700",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiovascular Diseases",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "DI",
+          "qualifierName": "diagnosis"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Exercise Test"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Body Mass Index"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Exercise"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Mortality"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Risk Factors"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Prospective Studies"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiorespiratory Fitness"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Meta-analysis",
+      "All-cause Mortality",
+      "Cardiovascular Mortality",
+      "Estimated Cardiorespiratory Fitness"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.atherosclerosis.2021.06.904"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 25,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2021-08-16",
+    "dateOfCreation": "2021-07-05",
+    "dateOfRevision": "2021-08-16",
+    "electronicPublicationDate": "2021-06-25",
+    "firstPublicationDate": "2021-06-25",
+    "firstIndexDate": "2021-07-06",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "32088022",
+    "source": "MED",
+    "pmid": "32088022",
+    "doi": "10.1016/j.clinthera.2020.01.014",
+    "title": "Survival of the Fittest: Impact of Cardiorespiratory Fitness on Outcomes in Men and Women with Cardiovascular Disease.",
+    "authorString": "Safdar B, Mangi AA.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Safdar B",
+       "lastName": "Safdar",
+       "firstName": "Basmah",
+       "initials": "B",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Emergency Medicine, Yale School of Medicine, New Haven, CT, USA. Electronic address: Basmah.safdar@yale.edu."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Mangi AA",
+       "lastName": "Mangi",
+       "firstName": "Abeel A",
+       "initials": "AA",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Surgery, Section of Cardiac Surgery, Yale School of Medicine, New Haven, CT, USA."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "42",
+     "journalIssueId": 2946717,
+     "dateOfPublication": "2020 Mar",
+     "monthOfPublication": 3,
+     "yearOfPublication": 2020,
+     "journal": {
+      "medlineAbbreviation": "Clin Ther",
+      "title": "Clinical therapeutics",
+      "essn": "1879-114X",
+      "issn": "0149-2918",
+      "nlmid": "7706726",
+      "isoabbreviation": "Clin Ther"
+     },
+     "printPublicationDate": "2020-03-01"
+    },
+    "pubYear": "2020",
+    "pageInfo": "385-392",
+    "abstractText": "Cardiovascular disease (CVD) in general and myocardial infarction in particular are the leading causes of mortality in men and women globally. Sex differences in CVD recovery exist, with higher rates of mortality, recurrent myocardial infarction, and poor functional outcomes seen in women compared to men with CVD. Physical inactivity has been identified as a crucial modifiable risk factor linked with poor survival and recovery in patients with CVD. Cardiac rehabilitation programs that aim to improve physical inactivity and cardiorespiratory fitness (CRF), a measure of physical fitness in patients with CVD, have gained popularity. The goals of this commentary were to summarize the existing literature on the impact of CRF on survival in patients with CVD, to document the impact of sex on CVD outcomes, and to highlight any gaps in current knowledge. Even minor improvements in CRF have been linked with improved survival, although contemporary data from randomized controlled trials have shown mixed results. Gender differences in cardiac rehabilitation have been well documented, with lower referral, enrollment, and completion rates noted in women compared to men with CVD. However, data on sex differences in CRF with cardiac rehabilitation are scant, mostly indicating lower peak CRF observed in female compared to male patients on completion. It is unclear whether similar thresholds of peak CRF are needed in male and female patients to improve survival after onset of CVD, and whether exercise prescriptions need to be adapted to include additional forms of exercise. CRF is also influenced by age, with a decline in peak exercise capacity with advancing age observed in both sexes, but steeper declines noted in men than women. From this perspective, we review the data intersecting age, sex, and exercise on survival in patients with CVD, as well as the biological mechanisms at play, and we identify areas for future research (Clin Ther. 2020; 42:XXX-XXX) © 2020 Elsevier Inc.",
+    "affiliation": "Department of Emergency Medicine, Yale School of Medicine, New Haven, CT, USA. Electronic address: Basmah.safdar@yale.edu.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiovascular Diseases",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MO",
+          "qualifierName": "mortality"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "EP",
+          "qualifierName": "epidemiology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PP",
+          "qualifierName": "physiopathology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "TH",
+          "qualifierName": "therapy"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Exercise Therapy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Risk Factors"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Sex Factors"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Cardiorespiratory Fitness",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Sex",
+      "Survival",
+      "Fitness",
+      "Gender",
+      "Cardiovascular disease",
+      "Physical Activity"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "http://www.clinicaltherapeutics.com/article/S0149291820300503/pdf"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.clinthera.2020.01.014"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 14,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2020-10-15",
+    "dateOfCreation": "2020-02-24",
+    "dateOfRevision": "2020-10-15",
+    "electronicPublicationDate": "2020-02-20",
+    "firstPublicationDate": "2020-02-20",
+    "firstIndexDate": "2020-02-25",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "25009011",
+    "source": "MED",
+    "pmid": "25009011",
+    "doi": "10.1093/annonc/mdu250",
+    "title": "Cardiorespiratory fitness as predictor of cancer mortality: a systematic review and meta-analysis.",
+    "authorString": "Schmid D, Leitzmann MF.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Schmid D",
+       "lastName": "Schmid",
+       "firstName": "D",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Epidemiology and Preventive Medicine, University of Regensburg, Regensburg, Germany daniela.schmid@klinik.uni-regensburg.de."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Leitzmann MF",
+       "lastName": "Leitzmann",
+       "firstName": "M F",
+       "initials": "MF",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Epidemiology and Preventive Medicine, University of Regensburg, Regensburg, Germany."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "2",
+     "volume": "26",
+     "journalIssueId": 2246066,
+     "dateOfPublication": "2015 Feb",
+     "monthOfPublication": 2,
+     "yearOfPublication": 2015,
+     "journal": {
+      "medlineAbbreviation": "Ann Oncol",
+      "title": "Annals of oncology : official journal of the European Society for Medical Oncology",
+      "essn": "1569-8041",
+      "issn": "0923-7534",
+      "nlmid": "9007735",
+      "isoabbreviation": "Ann Oncol"
+     },
+     "printPublicationDate": "2015-02-01"
+    },
+    "pubYear": "2015",
+    "pageInfo": "272-278",
+    "abstractText": "<h4>Background</h4>Epidemiologic studies have reported that cardiorespiratory fitness is inversely associated with mortality from cancer. However, the evidence relating cardiorespiratory fitness to cancer mortality has not yet been quantitatively summarized.<h4>Methods</h4>Following the preferred reporting items for sytematic reviews and meta-analyses (PRISMA) checklist, we conducted a systematic review and meta-analysis of the association between cardiorespiratory fitness and total cancer mortality. Relevant studies were identified through a literature search in PubMed up to August 2013 and by screening reference lists of qualifying articles. Data extraction was carried out independently by both authors and summary risk estimates were obtained using random-effects models.<h4>Results</h4>Six prospective studies with an overall number of 71 654 individuals and 2002 cases of total cancer mortality were included. The median follow-up time in the studies was 16.4 years. Cardiorespiratory fitness showed a strong, graded, inverse association with total cancer mortality. Using low cardiorespiratory fitness as the reference group, intermediate and high levels of cardiorespiratory fitness were related to statistically significant decreased summary relative risks (RRs) of total cancer mortality of 0.80 [95% confidence interval (CI) 0.67-0.97] and 0.55 (95% CI 0.47-0.65), respectively. Studies that adjusted for adiposity yielded similar results to those that did not adjust for adiposity.<h4>Conclusion</h4>Increased cardiorespiratory fitness represents a strong predictor of decreased total cancer mortality risk, independent of adiposity.",
+    "affiliation": "Department of Epidemiology and Preventive Medicine, University of Regensburg, Regensburg, Germany daniela.schmid@klinik.uni-regensburg.de.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Neoplasms",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MO",
+          "qualifierName": "mortality"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Health Status"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Physical Fitness",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Meta-analysis",
+      "Cardiorespiratory Fitness",
+      "Cancer Mortality"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1093/annonc/mdu250"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 197,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2016-02-24",
+    "dateOfCreation": "2014-07-11",
+    "dateOfRevision": "2025-07-11",
+    "electronicPublicationDate": "2014-07-09",
+    "firstPublicationDate": "2014-07-09",
+    "firstIndexDate": "2014-07-11",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "30622486",
+    "source": "MED",
+    "pmid": "30622486",
+    "pmcid": "PMC6308154",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC6308154"
+     ]
+    },
+    "doi": "10.3389/fpsyt.2018.00690",
+    "title": "Effects of Aerobic Exercise on Metabolic Syndrome, Cardiorespiratory Fitness, and Symptoms in Schizophrenia Include Decreased Mortality.",
+    "authorString": "Schmitt A, Maurus I, Rossner MJ, Röh A, Lembeck M, von Wilmsdorff M, Takahashi S, Rauchmann B, Keeser D, Hasan A, Malchow B, Falkai P.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Schmitt A",
+       "lastName": "Schmitt",
+       "firstName": "Andrea",
+       "initials": "A",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Psychiatry and Psychotherapy, University Hospital, LMU Munich, Munich, Germany."
+         },
+         {
+          "affiliation": "Laboratory of Neuroscience (LIM27), Institute of Psychiatry, University of São Paulo, São Paulo, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Maurus I",
+       "lastName": "Maurus",
+       "firstName": "Isabel",
+       "initials": "I",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Psychiatry and Psychotherapy, University Hospital, LMU Munich, Munich, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rossner MJ",
+       "lastName": "Rossner",
+       "firstName": "Moritz J",
+       "initials": "MJ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Psychiatry and Psychotherapy, University Hospital, LMU Munich, Munich, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Röh A",
+       "lastName": "Röh",
+       "firstName": "Astrid",
+       "initials": "A",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Psychiatry and Psychotherapy, University Hospital, LMU Munich, Munich, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lembeck M",
+       "lastName": "Lembeck",
+       "firstName": "Moritz",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Psychiatry and Psychotherapy, University Hospital, LMU Munich, Munich, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "von Wilmsdorff M",
+       "lastName": "von Wilmsdorff",
+       "firstName": "Martina",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Psychiatry and Psychotherapy, Medical Faculty, Heinrich-Heine-University, Düsseldorf, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Takahashi S",
+       "lastName": "Takahashi",
+       "firstName": "Shun",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Psychiatry and Psychotherapy, University Hospital, LMU Munich, Munich, Germany."
+         },
+         {
+          "affiliation": "Department of Neuropsychiatry, Wakayama Medical University, Wakayama, Japan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rauchmann B",
+       "lastName": "Rauchmann",
+       "firstName": "Boris",
+       "initials": "B",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Radiology, University Hospital, LMU Munich, Munich, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Keeser D",
+       "lastName": "Keeser",
+       "firstName": "Daniel",
+       "initials": "D",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0244-1024"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Radiology, University Hospital, LMU Munich, Munich, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hasan A",
+       "lastName": "Hasan",
+       "firstName": "Alkomiet",
+       "initials": "A",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Psychiatry and Psychotherapy, University Hospital, LMU Munich, Munich, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Malchow B",
+       "lastName": "Malchow",
+       "firstName": "Berend",
+       "initials": "B",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Psychiatry and Psychotherapy, University Hospital Jena, Jena, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Falkai P",
+       "lastName": "Falkai",
+       "firstName": "Peter",
+       "initials": "P",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-2873-8667"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Psychiatry and Psychotherapy, University Hospital, LMU Munich, Munich, Germany."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0244-1024"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-2873-8667"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "9",
+     "journalIssueId": 2648707,
+     "dateOfPublication": "2018 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2018,
+     "journal": {
+      "medlineAbbreviation": "Front Psychiatry",
+      "title": "Frontiers in psychiatry",
+      "essn": "1664-0640",
+      "issn": "1664-0640",
+      "nlmid": "101545006",
+      "isoabbreviation": "Front Psychiatry"
+     },
+     "printPublicationDate": "2018-01-01"
+    },
+    "pubYear": "2018",
+    "pageInfo": "690",
+    "abstractText": "Schizophrenia is a severe psychiatric disorder with a lifetime prevalence of about 1%. People with schizophrenia have a 4-fold higher prevalence of metabolic syndrome than the general population, mainly because of antipsychotic treatment but perhaps also because of decreased physical activity. Metabolic syndrome is a risk factor for cardiovascular diseases, and the risk of these diseases is 2- to 3-fold higher in schizophrenia patients than in the general population. The suicide risk is also higher in schizophrenia, partly as a result of depression, positive, and cognitive symptoms of the disease. The higher suicide rate and higher rate of cardiac mortality, a consequence of the increased prevalance of cardiovascular diseases, contribute to the reduced life expectancy, which is up to 20 years lower than in the general population. Regular physical activity, especially in combination with psychosocial and dietary interventions, can improve parameters of the metabolic syndrome and cardiorespiratory fitness. Furthermore, aerobic exercise has been shown to improve cognitive deficits; total symptom severity, including positive and negative symptoms; depression; quality of life; and global functioning. High-intensity interval endurance training is a feasible and effective way to improve cardiorespiratory fitness and metabolic parameters and has been established as such in somatic disorders. It may have more beneficial effects on the metabolic state than more moderate and continuous endurance training methods, but to date it has not been investigated in schizophrenia patients in controlled, randomized trials. This review discusses physical training methods to improve cardiorespiratory fitness and reduce metabolic syndrome risk factors and symptoms in schizophrenia patients. The results of studies and future high-quality clinical trials are expected to lead to the development of an evidence-based physical training program for patients that includes practical recommendations, such as the optimal length and type of aerobic exercise programs and the ideal combination of exercise, psychoeducation, and individual weight management sessions.",
+    "affiliation": "Department of Psychiatry and Psychotherapy, University Hospital, LMU Munich, Munich, Germany.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Bundesministerium für Bildung und Forschung",
+       "orderIn": 0
+      },
+      {
+       "agency": "Deutsche Forschungsgemeinschaft",
+       "orderIn": 0
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Mortality",
+      "Schizophrenia",
+      "Cognition",
+      "Aerobic exercise",
+      "metabolic syndrome",
+      "Endurance training",
+      "High-intensity Interval Training",
+      "Positive And Negative Symptoms"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://fjfsdata01prod.blob.core.windows.net/articles/files/422348/pubmed-zip/.versions/1/.package-entries/fpsyt-09-00690/fpsyt-09-00690.pdf?sv=2018-03-28&sr=b&sig=EV1N3K6IEUsLMsuUYsvNevAAOtn8yFo7DlIqhxl%2FgUI%3D&se=2021-02-18T19%3A11%3A17Z&sp=r&rscd=attachment%3B%20filename%2A%3DUTF-8%27%27fpsyt-09-00690.pdf"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3389/fpsyt.2018.00690"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC6308154"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC6308154?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 60,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2019-01-10",
+    "dateOfRevision": "2020-10-01",
+    "electronicPublicationDate": "2018-12-21",
+    "firstPublicationDate": "2018-12-21",
+    "firstIndexDate": "2019-01-10",
+    "fullTextReceivedDate": "2025-02-03",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "28274819",
+    "source": "MED",
+    "pmid": "28274819",
+    "doi": "10.1016/j.pcad.2017.02.006",
+    "title": "Impact of Changes in Cardiorespiratory Fitness on Hypertension, Dyslipidemia and Survival: An Overview of the Epidemiological Evidence.",
+    "authorString": "Sui X, Sarzynski MA, Lee DC, Kokkinos PF.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Sui X",
+       "lastName": "Sui",
+       "firstName": "Xuemei",
+       "initials": "X",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-2368-7311"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science, Arnold School of Public Health, University of South Carolina, Columbia, SC. Electronic address: msui@mailbox.sc.edu."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Sarzynski MA",
+       "lastName": "Sarzynski",
+       "firstName": "Mark A",
+       "initials": "MA",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science, Arnold School of Public Health, University of South Carolina, Columbia, SC."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lee DC",
+       "lastName": "Lee",
+       "firstName": "Duck-Chul",
+       "initials": "DC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, College of Human Sciences, Iowa State University, Ames, IA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kokkinos PF",
+       "lastName": "Kokkinos",
+       "firstName": "Peter F",
+       "initials": "PF",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Cardiology Division, Veterans Affairs Medical Center; Georgetown University, School of Medicine, Washington, DC."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0003-2368-7311"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "60",
+     "journalIssueId": 2585944,
+     "dateOfPublication": "2017 Jun - Jul",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2017,
+     "journal": {
+      "medlineAbbreviation": "Prog Cardiovasc Dis",
+      "title": "Progress in cardiovascular diseases",
+      "essn": "1873-1740",
+      "issn": "0033-0620",
+      "nlmid": "0376442",
+      "isoabbreviation": "Prog Cardiovasc Dis"
+     },
+     "printPublicationDate": "2017-06-01"
+    },
+    "pubYear": "2017",
+    "pageInfo": "56-66",
+    "abstractText": "Over the last fifty years, cardiorespiratory fitness (CRF) has been firmly established as an important risk factor for cardiovascular disease (CVD) and all-cause mortality. Mounting evidence supports a strong and inverse association between baseline CRF and the risk of developing hypertension (HTN) and dyslipidemia. Accumulating evidence also suggests that improving or maintaining a certain level of CRF over time leads to lower incidence of HTN and dyslipidemia and improves survival. These findings are promising, with significant public health importance, and warrant further evaluation to elucidate the role of longitudinal changes in CRF during the lifespan on CVD morbidity and mortality, as well as all-cause survival.",
+    "affiliation": "Department of Exercise Science, Arnold School of Public Health, University of South Carolina, Columbia, SC. Electronic address: msui@mailbox.sc.edu.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Hypertension",
+      "Survival",
+      "Dyslipidemia",
+      "Cardiorespiratory Fitness",
+      "Long-term Change"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.pcad.2017.02.006"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 53,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCreation": "2017-03-10",
+    "dateOfRevision": "2019-11-20",
+    "electronicPublicationDate": "2017-03-06",
+    "firstPublicationDate": "2017-03-06",
+    "firstIndexDate": "2017-03-10",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "28286137",
+    "source": "MED",
+    "pmid": "28286137",
+    "doi": "10.1016/j.pcad.2017.03.001",
+    "title": "Impact of Cardiorespiratory Fitness on All-Cause and Disease-Specific Mortality: Advances Since 2009.",
+    "authorString": "Harber MP, Kaminsky LA, Arena R, Blair SN, Franklin BA, Myers J, Ross R.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Harber MP",
+       "lastName": "Harber",
+       "firstName": "Matthew P",
+       "initials": "MP",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Clinical Exercise Physiology Laboratory, Ball State University, Muncie, IN, United States."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kaminsky LA",
+       "lastName": "Kaminsky",
+       "firstName": "Leonard A",
+       "initials": "LA",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Clinical Exercise Physiology Laboratory, Ball State University, Muncie, IN, United States; Fisher Institute of Health and Well-Being, Ball State University, Muncie, IN, United States. Electronic address: kaminskyla@bsu.edu."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Arena R",
+       "lastName": "Arena",
+       "firstName": "Ross",
+       "initials": "R",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6675-1996"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Therapy, College of Applied Health Sciences, University of Illinois at Chicago, Chicago, IL, United States."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Blair SN",
+       "lastName": "Blair",
+       "firstName": "Steven N",
+       "initials": "SN",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Arnold School of Public Health, University of South Carolina, Columbia, SC, United States."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Franklin BA",
+       "lastName": "Franklin",
+       "firstName": "Barry A",
+       "initials": "BA",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Preventive Cardiology/Cardiac Rehab, William Beaumont Hospital, Rochester, MI, United States; Internal Medicine, Oakland University William Beaumont School of Medicine, Rochester, MI, United States."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Myers J",
+       "lastName": "Myers",
+       "firstName": "Jonathan",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Division of Cardiology, Veterans Affairs Palo Alto Health Care System, Palo Alto, CA, United States; Stanford University School of Medicine, Palo Alto, CA, United States."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ross R",
+       "lastName": "Ross",
+       "firstName": "Robert",
+       "initials": "R",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Kinesiology and Health Studies, Queen's University, Ontario, Canada."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6675-1996"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0009-4272-0683"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "60",
+     "journalIssueId": 2585944,
+     "dateOfPublication": "2017 Jun - Jul",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2017,
+     "journal": {
+      "medlineAbbreviation": "Prog Cardiovasc Dis",
+      "title": "Progress in cardiovascular diseases",
+      "essn": "1873-1740",
+      "issn": "0033-0620",
+      "nlmid": "0376442",
+      "isoabbreviation": "Prog Cardiovasc Dis"
+     },
+     "printPublicationDate": "2017-06-01"
+    },
+    "pubYear": "2017",
+    "pageInfo": "11-20",
+    "abstractText": "Cardiorespiratory fitness (CRF) has been one of the most widely examined physiological variables, particularly as it relates to functional capacity and human performance. Over the past three decades, CRF has emerged as a strong, independent predictor of all-cause and disease-specific mortality. The evidence supporting the prognostic use of CRF is so powerful that the American Heart Association recently advocated for the routine assessment of CRF as a clinical vital sign. Interestingly, the continuity of evidence of the inverse relationship between CRF and mortality over the past decade exists despite a wide variation of methods used to assess CRF in these studies, ranging from the gold-standard method of directly measured maximal oxygen uptake (VO<sub>2max</sub>) during cardiopulmonary exercise testing to estimation from exercise tests and non-exercise prediction equations. This review highlights new knowledge and the primary advances since 2009, with specific reference to the impact variations in CRF have on all-cause and disease-specific mortality.",
+    "affiliation": "Clinical Exercise Physiology Laboratory, Ball State University, Muncie, IN, United States.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "RRD VA",
+       "acronym": "RX",
+       "grantId": "IK6 RX002477",
+       "orderIn": 0
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Exercise",
+      "Cardiovascular disease",
+      "Physical Activity",
+      "Aerobic Capacity",
+      "Vo(2max)"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.pcad.2017.03.001"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 346,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCreation": "2017-03-14",
+    "dateOfRevision": "2022-04-08",
+    "electronicPublicationDate": "2017-03-09",
+    "firstPublicationDate": "2017-03-09",
+    "firstIndexDate": "2017-03-13",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

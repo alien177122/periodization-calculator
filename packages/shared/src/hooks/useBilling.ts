@@ -96,7 +96,7 @@ export function useBilling({
       }
       return checkout;
     } catch {
-      setState({status: 'error', message: 'Не удалось создать платёж'});
+      setState({status: 'error', message: 'Не удалось создать платёж. Попробуй ещё раз.'});
       return null;
     }
   }, [createCheckout, redirectToPayment, token]);

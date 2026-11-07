@@ -1,0 +1,3 @@
+- Эталон UI — вкладка «Кalculator» AppShell, `.btn.calc-test__submit`, `.ta-period`. Обновлено: 2026-10-18.
+- Документы и планы — на диске Mac/PC: `Web_Calculator/docs/project/`, не полагаться на Context/облачные ссылки. Обновлено: 2026-10-24.
+- Контур проекта: только **Mac + PC** (self-hosted workers); git — источник правды; cloud VM для кода не использовать. Обновлено: 2026-10-24.

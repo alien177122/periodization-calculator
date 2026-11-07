@@ -19,7 +19,7 @@ services:
       REGISTER_MAX_ATTEMPTS: ${REGISTER_MAX_ATTEMPTS:-5}
       DB_PATH: /app/data/gym.db
       WORKSPACE_FILES_ROOT: /app/workspace-files
-      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      OLLAMA_URL: ${OLLAMA_URL:-http://host.docker.internal:11434}
       OLLAMA_OCR_MODEL: ${OLLAMA_OCR_MODEL:-glm-ocr}
     volumes:
       - app_data:/app/data

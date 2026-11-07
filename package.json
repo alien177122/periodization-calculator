@@ -1,15 +1,20 @@
 {
   "name": "react-project",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.3",
   "packageManager": "npm@11.6.0",
+  "engines": {
+    "node": ">=22.6"
+  },
   "type": "module",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
     "dev": "node scripts/dev-all.mjs",
-    "server": "node --experimental-strip-types server/index.js",
+    "dev:learn": "vite --config vite.learn.config.ts",
+    "dev:previews": "vite --config vite.previews.config.ts",
+    "server": "node server/index.js",
     "build": "tsc -b && vite build",
     "typecheck": "tsc -b --noEmit",
     "icons:generate": "node scripts/generate-pwa-icons.mjs",
@@ -93,15 +98,16 @@
     "postcss-import": "^16.1.1",
     "prettier": "^3.8.3",
     "react": "19.1.0",
-    "react-doctor": "^0.5.8",
+    "react-doctor": "^0.9.22",
     "react-dom": "19.1.0",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.4",
+    "typescript-eslint": "^8.72.1",
     "vite": "^7.2.4",
     "vite-plugin-wasm": "^3.6.0"
   },
   "overrides": {
-    "tar": "^7.5.22"
+    "tar": "^7.5.22",
+    "minimatch": "11.0.1"
   },
   "allowScripts": {
     "better-sqlite3@12.8.0": true,

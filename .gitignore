@@ -12,9 +12,9 @@ dist
 desktop-dist
 dist-ssr
 *.local
-.env.public
-.env.public.local
-.env.docker
+.env
+.env.*
+!.env*.example
 docker-data/
 gym.db
 gym.db.*
@@ -113,7 +113,41 @@ data/reading-audio/*.vtt
 # memory-bank was tracked; do not commit this swap until that is an explicit decision.
 *.secret.md
 
-# Rust calc core
-packages/core-rs/target/
-target/
-**/*.rs.bk
+# — Agent workspaces & local archives (untracked 2026-11-07, decision owner ee3474ab) —
+# Файлы остаются на диске и в истории git; индекс больше их не содержит.
+canon/
+/imagePhone/
+/_archive-non-web
+/audit
+/memory-bank
+.claude/
+.cursor/
+.codex/
+.claire/
+.agents/
+.obsidian/
+prompts/
+subagents/
+skills-lock.json
+.mcp.json
+
+# — Локальные QA-артефакты и захваты экрана (2026-11-07) —
+brag-output-*/
+.hallmark/
+.hyperframes/
+previews/
+_tmp_etalon_screenshots.mjs
+**/.cap-ios-deps/
+*.local-shot.png
+
+# — Релизные tarball (исходники остаются в истории, бинарники — вне git) —
+releases/**/*.tar.gz
+
+# — CI-workflow: создан локально, но требует OAuth-скоуп `workflow` для пуша
+# (gh auth refresh -s workflow). Файл остаётся на диске и в истории git. —
+.github/workflows/ci.yml
+
+# — Кэхи инструментов —
+__pycache__/
+*.pyc
+*.pyo

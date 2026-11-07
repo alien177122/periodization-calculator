@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>iPhone Inspector — Web_Calculator</title>
+    <link rel="stylesheet" href="/__iphone/client.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <div class="brand">
+        <span class="brand-mark"></span>
+        iPhone Inspector
+        <span class="brand-sub">dev only</span>
+      </div>
+      <label class="control">
+        <span>Device</span>
+        <select id="device">
+          <option value="iphone-15">iPhone 15 · 393×852</option>
+          <option value="iphone-15-pro-max">15 Pro Max · 430×932</option>
+          <option value="iphone-14">iPhone 14 · 390×844</option>
+          <option value="iphone-se">iPhone SE · 375×667</option>
+        </select>
+      </label>
+      <button id="use" class="control on" type="button" title="Обычный режим: приложение без перехвата кликов (U)">Use</button>
+      <button id="mode" class="control" type="button" title="Клик по элементу показывает селектор и источник (I)">Inspect</button>
+      <button id="reset" class="control" type="button" disabled>Reset move</button>
+      <button id="reload" class="control" type="button">Reload app</button>
+      <span id="status" class="status">ready</span>
+    </header>
+
+    <main class="stage">
+      <div class="device-wrap" id="device-wrap">
+        <div class="device-scale" id="device-scale">
+          <div class="device" id="device-shell">
+          <div class="bezel">
+            <div class="screen" id="screen">
+              <iframe id="app" src="/" title="Web_Calculator inside an iPhone frame"></iframe>
+              <div class="notch" id="notch"></div>
+              <div class="statusbar" id="statusbar">
+                <span>9:41</span>
+                <span class="status-icons">▮▮▮ ⌁ ▰</span>
+              </div>
+              <div class="home-indicator" id="home-indicator"></div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <div class="panel-head">
+          <div>
+            <div class="panel-kicker">Selection</div>
+            <div class="panel-title" id="panel-title">Nothing selected</div>
+          </div>
+          <button id="copy" class="control" type="button" disabled>Copy JSON</button>
+        </div>
+        <div class="panel-body" id="panel-body">
+          <p class="empty">
+            По умолчанию включён <b>Use</b>: клики и скролл уходят в приложение. Нажми
+            <b>Inspect</b>, затем любой элемент внутри iPhone — панель покажет селектор,
+            компонент, файл и строку. Кнопка <b>Move</b> включает перетаскивание выбранного
+            элемента, <b>U</b> возвращает обычный режим.
+          </p>
+          <p class="hint">
+            Горячие клавиши: <kbd>U</kbd> — use, <kbd>I</kbd> — inspect, <kbd>M</kbd> — move,
+            <kbd>R</kbd> — reset, <kbd>↑↓←→</kbd> — сдвиг на 1px,
+            <kbd>Shift</kbd> + стрелки — 10px.
+          </p>
+        </div>
+        <div class="panel-foot">
+          <button id="move" class="control primary" type="button" disabled>Move selected</button>
+          <button id="copy-css" class="control" type="button" disabled>Copy CSS</button>
+        </div>
+      </aside>
+    </main>
+
+    <script type="module" src="/__iphone/client.js"></script>
+  </body>
+</html>

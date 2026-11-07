@@ -2,6 +2,7 @@ import {useEffect, useId, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 import {isWeekEffectivelyDone} from '@training/shared/utils/split-progress';
 import {Button} from '../ui/Button';
+import {DeleteIcon} from '../ui/DeleteIcon';
 import {useBodyScrollLock} from '../../hooks/useBodyScrollLock';
 import type {SplitCalculation} from '../../types';
 import {CATALOG_EXERCISES} from '@training/shared/data/exercises';
@@ -16,15 +17,16 @@ interface SplitCalculationHistoryProps {
 
 const DATE_FORMAT = new Intl.DateTimeFormat('ru-RU', {
   day: 'numeric',
-  month: 'long',
-  year: 'numeric',
+  month: 'short',
   hour: '2-digit',
   minute: '2-digit',
 });
 
 function formatCalculationDate(value: string): string {
   const date = new Date(value);
-  return Number.isNaN(date.getTime()) ? value : DATE_FORMAT.format(date);
+  if (Number.isNaN(date.getTime())) return value;
+  const base = DATE_FORMAT.format(date);
+  return date.getFullYear() === new Date().getFullYear() ? base : `${base}, ${date.getFullYear()}`;
 }
 
 function getCalculationExerciseKeys(calculation: SplitCalculation, dayNumber: 1 | 2 | 3): string[] {
@@ -37,21 +39,7 @@ function formatExerciseLabel(calculation: SplitCalculation, exerciseKey: string)
   const name = CATALOG_EXERCISES[exerciseKey]?.name ?? exerciseKey;
   const saved = calculation.exercises.find(exercise => exercise.exerciseKey === exerciseKey);
   if (!saved) return name;
-  return `${name} ${saved.testWeight} кг × ${saved.testReps} повт.`;
-}
-
-function DeleteIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-      <path
-        d="M3.5 4.5h9M6.25 4.5V3.25a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 .75.75V4.5m1.5 0V12a1 1 0 0 1-1 1H5.75a1 1 0 0 1-1-1V4.5h7.5Z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
+  return `${name} ${saved.testWeight}×${saved.testReps}`;
 }
 
 interface DeleteConfirmDialogProps {
@@ -129,20 +117,11 @@ export function SplitCalculationHistory({
           ).length;
           const completedDays = calculation.split.completedDays?.length ?? 0;
           const selected = calculation.id === activeId;
-          const programRows = Array.from({length: calculation.split.daysPerWeek}, (_, index) => {
-            const dayNumber = (index + 1) as 1 | 2 | 3;
-            const keys = getCalculationExerciseKeys(calculation, dayNumber);
-            return `День ${dayNumber}: ${
-              keys.length > 0
-                ? keys.map(key => formatExerciseLabel(calculation, key)).join(' · ')
-                : 'упражнения не заданы'
-            }`;
-          });
-          const exerciseCount = new Set(
-            programRows.flatMap((_, index) =>
-              getCalculationExerciseKeys(calculation, (index + 1) as 1 | 2 | 3),
-            ),
-          ).size;
+          const dayKeys = Array.from({length: calculation.split.daysPerWeek}, (_, index) =>
+            getCalculationExerciseKeys(calculation, (index + 1) as 1 | 2 | 3),
+          );
+          const exerciseCount = new Set(dayKeys.flat()).size;
+          const progressPercent = Math.round((completedWeeks / 8) * 100);
 
           return (
             <article
@@ -153,24 +132,57 @@ export function SplitCalculationHistory({
                 className="split-calculation-card"
                 aria-pressed={selected}
                 onClick={() => onSelect(calculation.id)}>
-                <span className="split-calculation-card__copy">
-                  <strong>{calculation.split.name}</strong>
-                  <span>
-                    Расчёт {formatCalculationDate(calculation.calculatedAt)} ·{' '}
-                    {calculation.split.daysPerWeek} дня в неделю · {exerciseCount} упражн.
-                  </span>
-                  <span className="split-calculation-card__program">
-                    {programRows.map(row => (
-                      <span key={row}>{row}</span>
-                    ))}
-                  </span>
-                  <span>
-                    Отмечено: {completedWeeks} из 8 недель · {completedDays} дн.
+                <span className="split-calculation-card__top">
+                  <span className="split-calculation-card__title">{calculation.split.name}</span>
+                  <span className="split-calculation-card__metric">
+                    {completedWeeks}/8
+                    <span className="split-calculation-card__metric-label">нед.</span>
                   </span>
                 </span>
-                <span className="split-calculation-card__action">
-                  <span className="split-calculation-card__metric">{completedWeeks}/8</span>
-                  <span>{selected ? 'Открыт' : 'Открыть'}</span>
+
+                <span className="split-calculation-card__progress" aria-hidden="true">
+                  <span
+                    className="split-calculation-card__progress-fill"
+                    style={{width: `${progressPercent}%`}}
+                  />
+                </span>
+
+                <span className="split-calculation-card__chips">
+                  <span className="split-calculation-card__chip">
+                    {formatCalculationDate(calculation.calculatedAt)}
+                  </span>
+                  <span className="split-calculation-card__chip">
+                    {calculation.split.daysPerWeek} дня
+                  </span>
+                  <span className="split-calculation-card__chip">{exerciseCount} упражн.</span>
+                  {completedDays > 0 ? (
+                    <span className="split-calculation-card__chip">
+                      отмечено {completedDays} дн.
+                    </span>
+                  ) : null}
+                  {selected ? null : (
+                    <span className="split-calculation-card__chip split-calculation-card__chip--state">
+                      Открыть
+                    </span>
+                  )}
+                </span>
+
+                <span className="split-calculation-card__program">
+                  {dayKeys.map((keys, index) => {
+                    const dayNumber = (index + 1) as 1 | 2 | 3;
+                    return (
+                      <span key={dayNumber} className="split-calculation-card__program-row">
+                        <span className="split-calculation-card__program-day" aria-hidden="true">
+                          Д{dayNumber}
+                        </span>
+                        <span className="split-calculation-card__program-copy">
+                          {keys.length > 0
+                            ? keys.map(key => formatExerciseLabel(calculation, key)).join(' · ')
+                            : 'упражнения не заданы'}
+                        </span>
+                      </span>
+                    );
+                  })}
                 </span>
               </button>
               <button

@@ -55,15 +55,15 @@ type WarmupTemplate = {pct: number; reps: number; rest: string; purpose: string}
 
 const WARMUP_TEMPLATES: Record<'A' | 'B' | 'C' | 'D', WarmupTemplate[]> = {
   A: [
-    {pct: 0.27, reps: 10, rest: '1–2 мин', purpose: 'паттерн движения, активация'},
+    {pct: 0.27, reps: 10, rest: '1–2 мин', purpose: 'паттерн упражнения, активация'},
     {pct: 0.44, reps: 8, rest: '2–3 мин', purpose: 'разгрев'},
     {pct: 0.67, reps: 5, rest: '2–3 мин', purpose: 'подготовка к рабочим весам'},
-    {pct: 0.83, reps: 3, rest: '3–4 мин', purpose: 'активация ЦНС (~83%)'},
+    {pct: 0.83, reps: 3, rest: '3–4 мин', purpose: 'активация ЦНС, около 83%'},
   ],
   B: [
-    {pct: 0.37, reps: 10, rest: '1–2 мин', purpose: 'паттерн движения, активация'},
+    {pct: 0.37, reps: 10, rest: '1–2 мин', purpose: 'паттерн упражнения, активация'},
     {pct: 0.62, reps: 6, rest: '2–3 мин', purpose: 'разгрев'},
-    {pct: 0.83, reps: 3, rest: '2–3 мин', purpose: 'активация ЦНС (~83%)'},
+    {pct: 0.83, reps: 3, rest: '2–3 мин', purpose: 'активация ЦНС, около 83%'},
   ],
   C: [
     {pct: 0.55, reps: 10, rest: '1–2 мин', purpose: 'разгрев, активация'},

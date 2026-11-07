@@ -341,7 +341,12 @@ export function createDb({dbPath, env = process.env} = {}) {
     },
     putUser: (name, data) =>
       db.prepare('UPDATE users SET data = ? WHERE name = ?').run(JSON.stringify(data), name),
-    delUser: name => db.prepare('DELETE FROM users WHERE name = ?').run(name),
+    delUser: name =>
+      db.transaction(() => {
+        db.prepare('DELETE FROM calculation_attempts WHERE user_name = ?').run(name);
+        db.prepare('DELETE FROM billing_payments WHERE user_name = ?').run(name);
+        return db.prepare('DELETE FROM users WHERE name = ?').run(name);
+      })(),
     countCalculationAttempts,
     getCalculationAttemptByRequestId,
     listCalculationHistory,

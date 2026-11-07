@@ -1,0 +1,73 @@
+{
+  "version": "0.1.0",
+  "updated": "2026-11-07",
+  "description": "Мышечные карты нагрузки: степень стимула мышц в базовых упражнениях. Шкала 0–100 — степень стимула мышцы в упражнении (100 = целевая мышца получает полный стимул; доли не эксклюзивны и не обязаны суммироваться в 100).",
+  "scale": "stimulus-intensity-0-100",
+  "sourceCodes": {
+    "repo:muscle-contrib": "packages/shared/src/data/muscles.ts → MUSCLE_CONTRIB — доли, уже используемые в расчёте объёма сплита (computeMuscleVolumeBreakdown); здесь нормализованы на целевую мышцу = 100",
+    "estimate": "экспертная оценка по механике движения — в конспектах чисел нет, помечено «оценка»",
+    "conspect:yeti:hExoSvXWi1M": "evolutionyeti-kb-2026-10-29/conspects/hExoSvXWi1M.md — качественный принцип: «какой разгибатель вносит главный вклад — тот и развивается; синергисты растут тоже» (направление, не число)",
+    "conspect:yeti:sq5BHxsS4nc": "evolutionyeti-kb-2026-10-29/conspects/sq5BHxsS4nc.md — качественный ориентир по задней цепи (румынская тяга/становая)"
+  },
+  "anthropometry": {
+    "id": "long-femur",
+    "label": "Длинное бедро",
+    "note": "Антропометрия пользователя — параметр, влияющий на доли: длинное бедро в жиме ногами с высокой постановкой даёт более глубокое растяжение ягодичных в нижней точке — доля ягодичных выше, чем в среднем по механике. Это фича карты: доли пересчитываются от антропометрии, а не константа."
+  },
+  "exercises": [
+    {
+      "id": "trap-bar-deadlift",
+      "name": "Становая с трэп-грифом",
+      "group": "legs",
+      "sources": ["estimate", "repo:muscle-contrib(deadlift)", "conspect:yeti:sq5BHxsS4nc"],
+      "anthropometrySensitive": false,
+      "comment": "Трэп-гриф смещает торс вертикальнее классики: тянущие руки по бокам, осевая на позвоночник ниже, больше работа ног. Ягодичные — главный стимул; хамстринги — высокая доля; квадрицепс подключается умеренно (оценка).",
+      "stimulus": {"glutes": 100, "hamstrings": 70, "traps": 35, "quads": 30, "lats": 20}
+    },
+    {
+      "id": "leg-press-high-foot",
+      "name": "Жим ногами, высокая постановка",
+      "group": "legs",
+      "sources": ["estimate", "repo:muscle-contrib(legPress)", "anthropometry:long-femur"],
+      "anthropometrySensitive": true,
+      "comment": "Высокая постановка + длинное бедро: квадрицепс остаётся главным, но ягодичные получают заметную долю именно в растянутой (нижней) позиции. Доля ягодичных выше реповских 30% и зависит от глубины.",
+      "stimulus": {"quads": 85, "glutes": 65, "hamstrings": 30, "calves": 10}
+    },
+    {
+      "id": "glute-bridge",
+      "name": "Ягодичный мост",
+      "group": "legs",
+      "sources": ["estimate", "repo:muscle-contrib(gluteBridge)"],
+      "anthropometrySensitive": false,
+      "comment": "Ягодичные — полный стимул; квадрицепс ~50% через сгибатели бедра как синергист (оценка). Репо считает вклад {glutes: 0.8, hamstrings: 0.2} — хамстринги здесь вспомогательные.",
+      "stimulus": {"glutes": 100, "quads": 50, "hamstrings": 20}
+    },
+    {
+      "id": "bench-press",
+      "name": "Жим лёжа",
+      "group": "push",
+      "sources": ["repo:muscle-contrib(bench)"],
+      "anthropometrySensitive": false,
+      "comment": "Числа из репо (bench: chest 1.0, triceps 0.4, front_delt 0.2), нормализованы на грудь = 100.",
+      "stimulus": {"chest": 100, "triceps": 40, "front_delt": 20}
+    },
+    {
+      "id": "pull-up",
+      "name": "Подтягивания",
+      "group": "pull",
+      "sources": ["repo:muscle-contrib(pullUp)", "estimate"],
+      "anthropometrySensitive": false,
+      "comment": "Числа из репо (pullUp: lats 0.7, biceps 0.3) нормализованы на широчайшие = 100; трапеции/задняя дельта — оценка по механике виса.",
+      "stimulus": {"lats": 100, "biceps": 45, "traps": 20, "rear_delt": 15}
+    },
+    {
+      "id": "deadlift-classic",
+      "name": "Становая классика",
+      "group": "legs",
+      "sources": ["repo:muscle-contrib(deadlift)", "conspect:yeti:sq5BHxsS4nc"],
+      "anthropometrySensitive": false,
+      "comment": "Числа из репо (deadlift: glutes 0.5, hamstrings 0.4, traps 0.2) нормализованы на ягодичные = 100; квадрицепс/широчайшие — оценка (фиксация грифа, старт).",
+      "stimulus": {"glutes": 100, "hamstrings": 80, "traps": 40, "lats": 25, "quads": 20}
+    }
+  ]
+}

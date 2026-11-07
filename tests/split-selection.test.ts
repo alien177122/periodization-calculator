@@ -1,7 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createDefaultSplit} from '@training/shared/utils/split-constructor';
-import {resolveSavedSplitSelection} from '@training/shared/utils/split-selection';
+import {
+  resolveDeepLinkSplit,
+  resolveSavedSplitSelection,
+} from '@training/shared/utils/split-selection';
 
 test('resolveSavedSplitSelection returns explicit saved split', () => {
   const saved = createDefaultSplit('Saved A');
@@ -33,4 +36,16 @@ test('resolveSavedSplitSelection falls back to first saved split', () => {
 
   const resolved = resolveSavedSplitSelection([first, second], null, null);
   assert.equal(resolved?.id, first.id);
+});
+
+test('resolveDeepLinkSplit finds a split on another profile', () => {
+  const current = {...createDefaultSplit('Current'), profileId: 'profile-a'};
+  const other = {
+    ...createDefaultSplit('Other'),
+    id: crypto.randomUUID(),
+    profileId: 'profile-b',
+  };
+
+  assert.equal(resolveDeepLinkSplit([current, other], other.id)?.id, other.id);
+  assert.equal(resolveDeepLinkSplit([current, other], crypto.randomUUID()), undefined);
 });

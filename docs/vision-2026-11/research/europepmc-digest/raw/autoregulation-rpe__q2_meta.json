@@ -1,0 +1,3813 @@
+{
+ "version": "6.9",
+ "hitCount": 14,
+ "request": {
+  "queryString": "(ABSTRACT:\"rating of perceived exertion\" AND ABSTRACT:\"resistance training\")AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "42454076",
+    "source": "MED",
+    "pmid": "42454076",
+    "pmcid": "PMC13364572",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC13364572"
+     ]
+    },
+    "doi": "10.3389/fphys.2026.1823323",
+    "title": "Relative effectiveness of different resistance training modalities on lower-body strength and explosive power: a systematic review and network meta-analysis.",
+    "authorString": "Bao J, Liu X, Huang Y, Liu X, Wang Z.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Bao J",
+       "lastName": "Bao",
+       "firstName": "Jinxuan",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Strength and Conditioning Training, Beijing Sport University, Beijing, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Liu X",
+       "lastName": "Liu",
+       "firstName": "Xundian",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sports Coaching College, Beijing Sport University, Beijing, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Huang Y",
+       "lastName": "Huang",
+       "firstName": "Yaxuan",
+       "initials": "Y",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0005-0164-5796"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sports Coaching College, Beijing Sport University, Beijing, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Liu X",
+       "lastName": "Liu",
+       "firstName": "Xiaoyu",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Arts and Sciences, Fuyao University of Science and Technology, Fuzhou, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wang Z",
+       "lastName": "Wang",
+       "firstName": "Ziyu",
+       "initials": "Z",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8015-2279"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Health, University of Canterbury, Christchurch, New Zealand."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8015-2279"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0005-0164-5796"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0006-9217-6557"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "17",
+     "journalIssueId": 4103352,
+     "dateOfPublication": "2026 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Front Physiol",
+      "title": "Frontiers in physiology",
+      "essn": "1664-042X",
+      "issn": "1664-042X",
+      "nlmid": "101549006",
+      "isoabbreviation": "Front Physiol"
+     },
+     "printPublicationDate": "2026-01-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "1823323",
+    "abstractText": "<h4>Background</h4>Traditional percentage-based training (PBT) prescribes loads according to a fixed percentage of one-repetition maximum (1RM) but does not account for daily fluctuations in performance readiness. In contrast, auto-regulated resistance training (ART)-including velocity-based training (VBT), autoregulatory progressive resistance exercise (APRE), and Rating of Perceived Exertion (RPE)/Repetitions in Reserve (RIR)-based autoregulatory training (RPE-AT)-and variable resistance training (VRT) provide more adaptive load adjustments. However, their relative effectiveness for improving lower-body maximal strength and explosive power remains unclear.<h4>Objective</h4>To systematically evaluate and compare different resistance-training modalities, including APRE, VBT, RPE-AT, VRT, and PBT, on maximal lower-body strength and explosive power in healthy and active individuals using a network meta-analysis (NMA) method, and to provide a ranking of therapeutic effects.<h4>Method</h4>Following the PRISMA-NMA guidelines, a systematic search was conducted across the Web of Science, PubMed, Embase, Scopus, SportDiscus, and ProQuest databases, ensuring a comprehensive and transparent approach to study retrieval. Randomized controlled trials (RCTs) comparing the effects of APRE, VBT, RPE-AT, VRT and PBT on lower extremity performance were included. The quality was evaluated using the Cochrane Risk of Bias assessment tool. Pairwise meta-analysis and NMA under the frequentist framework were conducted using R software. The standardized mean difference (SMD) and its 95% confidence interval (CI) were calculated, and the intervention measures were ranked by the cumulative area under the ranking probability curve (SUCRA).<h4>Results</h4>A total of 27 RCTs involving 694 participants were included, consistent with the sample size and study quantity reported in relevant systematic reviews and meta-analyses of RCTs. For back squat 1-repetition maximum (1RM, a measure of maximal lower-body strength), NMA showed that VRT (SMD = 0.62, 95% CI [0.29, 0.95]), APRE (SMD = 0.59, 95% CI [0.16, 1.02]), and VBT (SMD = 0.41, 95% CI [0.10, 0.73]) significantly improved performance compared to PBT, while RPE-AT (SMD = 0.12, 95% CI [-0.31, 0.56]) showed no significant difference from PBT. The SUCRA ranking for back squat 1RM was: VRT (83.1%) > APRE (79.1%) > VBT (57.1%) > RPE-AT (23.4%) > PBT (7.4%). For countermovement jump (CMJ, a measure of lower-body explosive power), APRE (SMD = 1.08, 95% CI [0.30, 1.87]) and VBT (SMD = 0.62, 95% CI [0.23, 1.02]) were significantly superior to PBT, while VRT (SMD = 0.27, 95% CI [-0.14, 0.69]) showed a non-significant trend toward improvement. The SUCRA ranking for CMJ was: APRE (96.6%) > VBT (74.4%) > VRT (49.7%) > PBT (23.6%) > RPE-AT (5.7%).<h4>Conclusion</h4>APRE, VBT, and VRT were generally associated with more favorable adaptations than PBT in lower-body strength and power outcomes. VRT showed the highest probability of being most effective for back squat 1RM, whereas APRE ranked highest for CMJ performance. These findings provide a comparative synthesis of current evidence and may assist practitioners in selecting resistance training strategies according to specific performance goals, while acknowledging the need for cautious interpretation given variability across studies.<h4>Systematic review registration</h4>https://www.crd.york.ac.uk/PROSPERO/view/CRD420251172410, identifier CRD420251172410.",
+    "affiliation": "School of Strength and Conditioning Training, Beijing Sport University, Beijing, China.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "systematic-review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Network Meta-analysis",
+      "Variable Resistance Training",
+      "Velocity-based Training",
+      "Autoregulatory Progressive Resistance Exercise",
+      "Percentage-based Training",
+      "Auto-regulated Resistance Training"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3389/fphys.2026.1823323"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC13364572"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC13364572?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2026-07-15",
+    "dateOfCreation": "2026-07-15",
+    "dateOfRevision": "2026-08-13",
+    "electronicPublicationDate": "2026-06-30",
+    "firstPublicationDate": "2026-06-30",
+    "firstIndexDate": "2026-07-16",
+    "fullTextReceivedDate": "2026-09-03",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "41505853",
+    "source": "MED",
+    "pmid": "41505853",
+    "doi": "10.1016/j.nutres.2025.12.004",
+    "title": "Potential ergogenic aid of capsaicinoid or capsinoids in healthy adults: a systematic review with meta-analysis.",
+    "authorString": "Quizzini GH, Campos JMS, Nunes FAS, Rossi PAQ, Zawieja E, Zanchi NE, Neves LM, Rossi FE.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Quizzini GH",
+       "lastName": "Quizzini",
+       "firstName": "Giovanni Henrique",
+       "initials": "GH",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Graduate Program in Movement Science, São Paulo State University (UNESP), Presidente Prudente, SP, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Campos JMS",
+       "lastName": "Campos",
+       "firstName": "Jessenia Marise Sales",
+       "initials": "JMS",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Graduate Program in Movement Science, São Paulo State University (UNESP), Presidente Prudente, SP, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Nunes FAS",
+       "lastName": "Nunes",
+       "firstName": "Flavio Antonio de Sousa",
+       "initials": "FAS",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Graduate Program in Movement Science, Federal University of Piauí (UFPI), Campus Ministro Petrônio Portella, Ininga, Teresina, PI, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rossi PAQ",
+       "lastName": "Rossi",
+       "firstName": "Priscila Almeida Queiroz",
+       "initials": "PAQ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Graduate Program in Movement Science, São Paulo State University (UNESP), Presidente Prudente, SP, Brazil; Exercise and Immunometabolism Research Group, Department of Physical Education, Faculty of Sciences and Technology, São Paulo State University (UNESP), Presidente Prudente, SP, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zawieja E",
+       "lastName": "Zawieja",
+       "firstName": "Emilia",
+       "initials": "E",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Human Nutrition and Dietetics, Poznań University of Life Sciences, Poznań, Poland."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zanchi NE",
+       "lastName": "Zanchi",
+       "firstName": "Nelo Eidy",
+       "initials": "NE",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Laboratory of Skeletal Muscle Biology and Human Strength Performance (LABFORCEH), and Department of Physical Education, Federal University of Maranhão (UFMA), São Luís, MA, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Neves LM",
+       "lastName": "Neves",
+       "firstName": "Lucas Melo",
+       "initials": "LM",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Laboratory of Physical Activity, Sport, and Mental Health (LAFESAM), Institute of Biosciences, São Paulo State University (UNESP), Rio Claro, SP, Brazil; Bipolar Disorder Program (PROMAN), Department of Psychiatry, University of São Paulo Medical School (FMUSP), São Paulo, SP, Brazil; Graduate Program in Human Development and Technologies, São Paulo State University (UNESP), Rio Claro, SP, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rossi FE",
+       "lastName": "Rossi",
+       "firstName": "Fabricio Eduardo",
+       "initials": "FE",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sports and Strength Exercise Research Group, Department of Physical Education, and Graduate Program in Movement Science, Faculty of Science and Technology, São Paulo State University (UNESP), SP, Brazil; Graduate Program in Movement Science, Federal University of Piauí (UFPI), Campus Ministro Petrônio Portella, Ininga, Teresina, PI, Brazil. Electronic address: f.rossi@unesp.br."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-6154-7032"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0594-2529"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-2426-9736"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "volume": "146",
+     "journalIssueId": 4122821,
+     "dateOfPublication": "2026 Feb",
+     "monthOfPublication": 2,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Nutr Res",
+      "title": "Nutrition research (New York, N.Y.)",
+      "essn": "1879-0739",
+      "issn": "0271-5317",
+      "nlmid": "8303331",
+      "isoabbreviation": "Nutr Res"
+     },
+     "printPublicationDate": "2026-02-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "13-25",
+    "abstractText": "Capsaicinoids and capsinoids (CAP) have been proposed as ergogenic aids, with mechanisms suggesting benefits for resistance or aerobic exercise performance. The objective of this systematic review with meta-analysis was to verify the effects of CAP on resistance or aerobic exercise performance in healthy adults, and to explore potential variables influencing these outcomes. We hypothesize that CAP supplementation may acutely and chronically improve aerobic and resistance performance in adults. This review followed PRISMA guidelines and was registered in PROSPERO (CRD42023460579). Searches were conducted in PubMed, Web of Science, Embase, and SPORTDiscus. Eligible studies included healthy adults (18-59 years) receiving acute or chronic CAP supplementation with resistance or aerobic exercise, reporting outcomes on aerobic exercise performance (time trial or time to exhaustion), resistance exercise performance (total volume load or repetitions to failure), and rating of perceived exertion (RPE). Meta-analysis showed improvements in acute resistance exercise performance (standardized mean difference [SMD] = 0.198; 95% confidence interval (CI) = 0.083-0.313; P = .001), and acute aerobic exercise performance, where CAP improved time-to-exhaustion (SMD = 0.487; 95% CI = 0.089-0.885; P = .016) but without overall effect (SMD = 0.055; 95% CI = -0.128 to 0.238; P = .554). For RPE, there was a significant reduction for overall effect (SMD = -0.183; 95% CI = -0.318 to -0.047; P = .008). Three chronic resistance training studies were identified, with one showing increased strength. Two chronic aerobic studies were included, but neither improved. In conclusion, acute CAP supplementation may enhance resistance exercise performance and time-to-exhaustion during acute aerobic exercise, while lowering RPE, but chronic effects are limited.",
+    "affiliation": "Graduate Program in Movement Science, São Paulo State University (UNESP), Presidente Prudente, SP, Brazil.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Capsaicin",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AD",
+          "qualifierName": "administration & dosage"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PD",
+          "qualifierName": "pharmacology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Exercise"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Dietary Supplements"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adult"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Middle Aged"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Young Adult"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Performance-Enhancing Substances",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PD",
+          "qualifierName": "pharmacology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Capsaicin",
+      "Exercise",
+      "Performance",
+      "Sport Nutrition",
+      "Ergogenic Aid"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Performance-Enhancing Substances",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Capsaicin",
+       "registryNumber": "S07O44R1ZM"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.nutres.2025.12.004"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 1,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2026-02-13",
+    "dateOfCreation": "2026-01-08",
+    "dateOfRevision": "2026-06-30",
+    "electronicPublicationDate": "2025-12-14",
+    "firstPublicationDate": "2025-12-14",
+    "firstIndexDate": "2026-01-09",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "41239708",
+    "source": "MED",
+    "pmid": "41239708",
+    "pmcid": "PMC12622685",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC12622685"
+     ]
+    },
+    "doi": "10.1097/md.0000000000045286",
+    "title": "Effects of cardiorespiratory physiotherapy on cardiovascular fitness in patients with stroke: A systematic review and network meta-analysis.",
+    "authorString": "Kim SH, Cho SH.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Kim SH",
+       "lastName": "Kim",
+       "firstName": "So Hyun",
+       "initials": "SH",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-2329-8666"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Therapy, College of Health and Medical Science, Cheongju University, Cheongju, Republic of Korea."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cho SH",
+       "lastName": "Cho",
+       "firstName": "Sung Hyoun",
+       "initials": "SH",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5108-4342"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Therapy, Nambu University, Gwangju, Republic of Korea."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5108-4342"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-2329-8666"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "46",
+     "volume": "104",
+     "journalIssueId": 4049200,
+     "dateOfPublication": "2025 Nov",
+     "monthOfPublication": 11,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Medicine (Baltimore)",
+      "title": "Medicine",
+      "essn": "1536-5964",
+      "issn": "0304-5412",
+      "nlmid": "2985248R",
+      "isoabbreviation": "Medicine (Baltimore)"
+     },
+     "printPublicationDate": "2025-11-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "e45286",
+    "abstractText": "<h4>Background</h4>This study aimed to investigate the effectiveness and ranking of different cardiorespiratory-physiotherapy interventions on cardiovascular fitness in patients with stroke.<h4>Methods</h4>In total, 21 randomized controlled trials published between 2000 and 2024 were retrieved from PubMed, EMBASE, Cochrane Library, Web of Science, and CINAHL and analyzed. Outcome measures were resting heart rate (RHR), rating of perceived exertion (RPE), and peak oxygen uptake (VO2peak). A network meta-analysis was conducted using the R netmeta package (version 4.3.2), with rankings based on probability scores (p-scores) representing the likelihood of each intervention being the most effective.<h4>Results</h4>RHR rankings were as follows: combined inspiratory and expiratory training (CIET) (p-score: 94.02%), conventional training (CT) (68.16%), robot-assisted training (RAT) (61.27%), aquatic training (AT) (48.90%), ground-based aerobic training (GBAT) (31.61%), combined aerobic and resistance training (CART) (28.01%), and resistance training (RT) (18.03%). However, CIET did not show statistically significant differences in effect compared to other interventions. RPE rankings were as follows: CIET (89.12%), GBAT (72.23%), CT (66.19%), AT (66.01%), CART (30.20%), RAT (19.70%), and inspiratory training (IT) (6.55%). VO2peak rankings were as follows: RT (88.26%), GBAT (73.22%), AT (64.73%), RAT (45.10%), CART (43.34%), sham training (42.88%), IT (39.61%), CIET (28.29%), and CT (24.56%). The evidence quality ranked from very low to moderate.<h4>Conclusion</h4>CIET ranked highest in reducing RHR and RPE; RT ranked highest in improving VO2peak. Although CIET did not show significant superiority in RHR reduction, its consistent high ranking in RHR and RPE outcomes indicates its potential clinical utility. These findings suggest incorporating targeted respiratory and strength training into stroke-rehabilitation programs to optimize cardiovascular-fitness outcomes.",
+    "affiliation": "Department of Physical Therapy, College of Health and Medical Science, Cheongju University, Cheongju, Republic of Korea.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "research-article",
+      "Systematic Review",
+      "Network Meta-Analysis",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Exercise Therapy",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Oxygen Consumption"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Heart Rate",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Physical Therapy Modalities"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Randomized Controlled Trials as Topic"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Stroke",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PP",
+          "qualifierName": "physiopathology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "TH",
+          "qualifierName": "therapy"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Stroke Rehabilitation",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Cardiorespiratory Fitness",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Cardiovascular function",
+      "Stroke",
+      "Cardiovascular Fitness",
+      "Cardiorespiratory Physiotherapy",
+      "Network Meta-analysis"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1097/MD.0000000000045286"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12622685"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12622685?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by-nc",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2025-11-15",
+    "dateOfCreation": "2025-11-15",
+    "dateOfRevision": "2025-11-24",
+    "firstPublicationDate": "2025-11-01",
+    "firstIndexDate": "2025-11-15",
+    "fullTextReceivedDate": "2025-11-19",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "41945297",
+    "source": "MED",
+    "pmid": "41945297",
+    "pmcid": "PMC13388742",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC13388742"
+     ]
+    },
+    "doi": "10.1007/s40279-026-02422-7",
+    "title": "Acute and Chronic Effects of Accentuated Eccentric Loading vs. Constant-Load Resistance Training: A Systematic Review and Meta-analysis.",
+    "authorString": "Zhang X, Weakley J, Li H, Marcos-Frutos D, García-Ramos A.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Zhang X",
+       "lastName": "Zhang",
+       "firstName": "Xing",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sports, Faculty of Sport Sciences, University of Granada, Granada, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Weakley J",
+       "lastName": "Weakley",
+       "firstName": "Jonathon",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Behavioural and Health Sciences, Australian Catholic University, Brisbane, QLD, Australia."
+         },
+         {
+          "affiliation": "Sports Performance, Recovery, Injury and New Technologies (SPRINT) Research Centre, Australian Catholic University, Brisbane, QLD, Australia."
+         },
+         {
+          "affiliation": "Carnegie Applied Rugby Research (CARR) Centre, Carnegie School of Sport, Leeds Beckett University, Leeds, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Li H",
+       "lastName": "Li",
+       "firstName": "Hansen",
+       "initials": "H",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6147-1362"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Physical Education, Sichuan Agricultural University, Ya'an, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Marcos-Frutos D",
+       "lastName": "Marcos-Frutos",
+       "firstName": "Daniel",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sports, Faculty of Sport Sciences, University of Granada, Granada, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "García-Ramos A",
+       "lastName": "García-Ramos",
+       "firstName": "Amador",
+       "initials": "A",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-0608-8755"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sports, Faculty of Sport Sciences, University of Granada, Granada, Spain. amagr@ugr.es."
+         },
+         {
+          "affiliation": "Department of Sports Sciences and Physical Conditioning, Faculty of Education, Universidad Católica de La Santísima Concepción, Concepción, Chile. amagr@ugr.es."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6147-1362"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-0608-8755"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "7",
+     "volume": "56",
+     "journalIssueId": 4231611,
+     "dateOfPublication": "2026 Jul",
+     "monthOfPublication": 7,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "nlmid": "8412297",
+      "isoabbreviation": "Sports Med"
+     },
+     "printPublicationDate": "2026-07-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "1749-1770",
+    "abstractText": "<h4>Background</h4>Accentuated eccentric loading (AEL) is a resistance training (RT) method applying greater eccentric- than concentric-phase load to intensify the training stimulus; however, despite its common use, a comprehensive and quantitative review remains lacking.<h4>Objective</h4>The aim was to compare acute responses and chronic adaptations between AEL and constant-load RT, and examine whether effects vary by AEL protocol (submaximal, maximal, supramaximal).<h4>Methods</h4>PubMed, Web of Science, Embase, and EBSCO were searched from inception through July 3, 2024; eligible English-language studies were included. Pooled and subgroup meta-analyses were performed using random-effects models.<h4>Results</h4>Forty-nine studies involving 773 participants were included. Although considerable variance exists in certain outcomes, our estimated effects suggest that, compared to constant-load RT, AEL results in (1) similar acute responses in loads lifted during the concentric phase (standardized mean difference [SMD] =  - 0.16; p = 0.48), mechanical performance at submaximal loads during the concentric phase (SMD =  - 0.07; p = 0.37), countermovement jump height both immediately (SMD =  - 0.06; p = 0.86) and delayed (SMD =  - 0.23; p = 0.44) post-intervention, maximal voluntary isometric force immediately post-intervention (SMD = 0.03; p = 0.89), blood lactate concentration during the intervention (SMD =  - 0.06; p = 0.78), testosterone concentration immediately post-intervention (SMD = 0.68; p = 0.15), creatine kinase concentration both immediately (SMD = 0.09; p = 0.72) and delayed (SMD = 0.14; p = 0.48) post-intervention, cortisol concentration immediately post-intervention (SMD = 0.39; p = 0.05), heart rate during the intervention (SMD = 1.18; p = 0.07), acute muscle swelling immediately post-intervention (SMD = 0.26; p = 0.42), muscle electrical activity during the concentric phase (SMD =  - 0.01; p = 0.90), and muscle soreness both immediately (SMD = 0.28; p = 0.30) and delayed (SMD = 0.18; p = 0.28) post-intervention; (2) greater acute responses in blood lactate concentration immediately post-intervention (SMD = 0.44; p = 0.03), growth hormone concentration immediately post-intervention (SMD = 0.50; p = 0.01), muscle electrical activity during the eccentric phase (SMD = 0.37; p = 0.01), and rating of perceived exertion immediately post-intervention (SMD = 1.72; p = 0.01); (3) similar chronic adaptations in maximal concentric strength (SMD = 0.12; p = 0.41), maximal eccentric strength (SMD = 0.19; p = 0.58), maximal isometric strength (SMD = 0.03; p = 0.93), countermovement jump height (SMD = 0.04; p = 0.87), muscle fascicle angle (SMD =  - 0.10; p = 0.77), muscle fascicle length (SMD = 0.90; p = 0.17), and muscle cross-sectional area (SMD =  - 0.06; p = 0.84).<h4>Conclusion</h4>While AEL augments the eccentric-phase stimulus (higher eccentric load and muscle electrical activity), it also increases metabolic stress and perceived effort, implying a need for longer, more frequent inter-set rests and longer between-session recovery. Given the lack of evidence for superior chronic benefits in strength or muscle architecture over constant-load RT, practitioners should consider these factors carefully.<h4>Protocol registration</h4>The original protocol for this review was prospectively registered with the International Prospective Register of Systematic Reviews (PROSPERO) in July 2024 (CRD42024561673).",
+    "affiliation": "Department of Physical Education and Sports, Faculty of Sport Sciences, University of Granada, Granada, Spain.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Universidad de Granada",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Lactic Acid",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "BL",
+          "qualifierName": "blood"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Testosterone",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "BL",
+          "qualifierName": "blood"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hydrocortisone",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "BL",
+          "qualifierName": "blood"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Hydrocortisone",
+       "registryNumber": "WI4X0X7BPJ"
+      },
+      {
+       "name": "Lactic Acid",
+       "registryNumber": "33X04XA5AT"
+      },
+      {
+       "name": "Testosterone",
+       "registryNumber": "3XMK78S47O"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-026-02422-7"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC13388742"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC13388742?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2026-07-21",
+    "dateOfCreation": "2026-04-07",
+    "dateOfRevision": "2026-08-14",
+    "electronicPublicationDate": "2026-04-07",
+    "firstPublicationDate": "2026-04-07",
+    "firstIndexDate": "2026-04-07",
+    "fullTextReceivedDate": "2026-09-03",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "40791980",
+    "source": "MED",
+    "pmid": "40791980",
+    "pmcid": "PMC12336695",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC12336695"
+     ]
+    },
+    "doi": "10.1016/j.jesf.2025.07.006",
+    "title": "Autoregulated resistance training for maximal strength enhancement: A systematic review and network meta-analysis.",
+    "authorString": "Zijing Huang, Sun J, Li D, Chen C, Wang D.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Zijing Huang",
+       "lastName": "Zijing Huang",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Athletic Performance, Shanghai University of Sport, Shang Hai, 200438, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Sun J",
+       "lastName": "Sun",
+       "firstName": "Jian",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Athletic Training, Guangzhou Sport University, Guangzhou, 510500, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Li D",
+       "lastName": "Li",
+       "firstName": "Duanying",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Athletic Training, Guangzhou Sport University, Guangzhou, 510500, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Chen C",
+       "lastName": "Chen",
+       "firstName": "Chao",
+       "initials": "C",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Physical Education, Dalian University, Dalian, 116622, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wang D",
+       "lastName": "Wang",
+       "firstName": "Dexin",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Athletic Performance, Shanghai University of Sport, Shang Hai, 200438, China."
+         },
+         {
+          "affiliation": "Shanghai Key Lab of Human Performance (Shanghai University of Sport), Shanghai University of Sport, Shang Hai, 200438, China."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "4",
+     "volume": "23",
+     "journalIssueId": 3981079,
+     "dateOfPublication": "2025 Oct",
+     "monthOfPublication": 10,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "J Exerc Sci Fit",
+      "title": "Journal of exercise science and fitness",
+      "essn": "2226-5104",
+      "issn": "1728-869X",
+      "nlmid": "101198241",
+      "isoabbreviation": "J Exerc Sci Fit"
+     },
+     "printPublicationDate": "2025-10-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "360-369",
+    "abstractText": "<h4>Objectives</h4>This study aims to systematically review the effects of Autoregulating Progressive Resistance Exercise (APRE), Rating of Perceived Exertion (RPE), and Velocity-based Resistance Training (VBRT) on maximal strength through a network meta-analysis.<h4>Methods</h4>Forest plots and network diagrams visualized training modality differences and intervention relationships. Pooled standard mean difference (SMD) of different studies and the corresponding 95 % confidence intervals (CIs) quantified effect sizes, with inconsistency models assessing heterogeneity and surface under the cumulative ranking curve (SUCRA) values ranking protocols by optimal probability.<h4>Results</h4>For back squat 1RM, no moderate/large effect sizes were observed between interventions. SUCRA rankings showed APRE (93.0 %) as the most optimal intervention, followed by RPE (66.8 %), VBRT (27.0 %), and PBRT (13.2 %). In bench press 1RM, PBRT demonstrated a large effect vs APRE (SMD = -0.83, -1.22 to -0.44), while RPE showed a moderate effect vs APRE (SMD = -0.76, -1.70 to 0.19). SUCRA rankings prioritized APRE (97.1 %), followed by VBRT (57.1 %), RPE (29.9 %), and PBRT (15.9 %).<h4>Conclusion</h4>In this study, the network meta-analysis confirmed that APRE, VBRT, and RPE were significantly more effective than PBRT in enhancing maximum strength. Among these, APRE demonstrated the greatest effect, ranking first in the improvement of both the back squat and bench press 1RM, followed by VBRT, RPE, and PBRT.",
+    "affiliation": "School of Athletic Performance, Shanghai University of Sport, Shang Hai, 200438, China.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Shanghai University of Sport",
+       "orderIn": 0
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Network Meta-analysis",
+      "Rating Of Perceived Exertion",
+      "Velocity-based Resistance Training",
+      "Autoregulating Progressive Resistance Exercise"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.jesf.2025.07.006"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12336695"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12336695?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by-nc-nd",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2025-08-12",
+    "dateOfRevision": "2025-08-14",
+    "electronicPublicationDate": "2025-07-26",
+    "firstPublicationDate": "2025-07-26",
+    "firstIndexDate": "2025-08-21",
+    "fullTextReceivedDate": "2025-12-02",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "40666112",
+    "source": "MED",
+    "pmid": "40666112",
+    "pmcid": "PMC12259574",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC12259574"
+     ]
+    },
+    "doi": "10.3389/fphys.2025.1521145",
+    "title": "The immediate effects of blood flow restriction training on upper limb muscle strength and fatigue level: a meta-analysis.",
+    "authorString": "Wang J, Xu J, Liu H, Jiang L.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Wang J",
+       "lastName": "Wang",
+       "firstName": "Jian",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education, Ningbo University of Technology, Ningbo, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Xu J",
+       "lastName": "Xu",
+       "firstName": "Jie",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education, Ningbo University of Technology, Ningbo, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Liu H",
+       "lastName": "Liu",
+       "firstName": "Haiyang",
+       "initials": "H",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education, Ningbo University of Technology, Ningbo, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Jiang L",
+       "lastName": "Jiang",
+       "firstName": "Lizhu",
+       "initials": "L",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Education, Ningde Vocational and Technical College, Ningde, China."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "16",
+     "journalIssueId": 3892895,
+     "dateOfPublication": "2025 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Front Physiol",
+      "title": "Frontiers in physiology",
+      "essn": "1664-042X",
+      "issn": "1664-042X",
+      "nlmid": "101549006",
+      "isoabbreviation": "Front Physiol"
+     },
+     "printPublicationDate": "2025-01-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "1521145",
+    "abstractText": "<h4>Objective</h4>Blood flow restriction training (BFR training) has gained recognition as a potentially effective intervention; however, its specific effects on upper limb strength and fatigue levels remain inadequately explored. This study aims to systematically assess the impact of BFR training on immediate upper limb strength and fatigue through a meta-analytic approach, with the goal of providing empirical evidence to inform its practical implementation in clinical and athletic settings.<h4>Methods</h4>Search PubMed, CNKI, Web of Science and EBSCO databases, collect randomized controlled trials (RCTs) on the effects of BFR training on immediate upper limb strength and fatigue degree. Include and exclude literature through the Cochrane risk of bias tool. Employ Revman5.4 and Stata16.0 software for literature quality assessment and statistical analysis. Utilize sensitivity analysis and funnel plots to evaluate the stability of results and publication bias.<h4>Results</h4>A total of 32 articles and 524 subjects were incorporated. Meta-analysis revealed that upper limb BFR training significantly increased immediate muscle strength [<i>SMD</i> = 0.36, 95%<i>CI</i> (0.02, 0.70), <i>P</i> = 0.04]. Moreover, BFR training had a significant impact on fatigue degree [<i>SMD</i> = 1.38, 95%<i>CI</i> (0.81, 1.94), <i>P</i> < 0.00001]. Given the high heterogeneity of the two groups of studies (<i>I</i> <sup>2</sup> = 77%, 88%), subgroup analysis demonstrated that BFR training could significantly enhance bench press strength [<i>SMD</i> = 0.40, 95%<i>CI</i> (0.07, 0.74), <i>P</i> = 0.02]. When the exercise intensity was 40%-70% of one repetition maximum (1RM) [<i>SMD</i> = 1.16, 95%<i>CI</i> (0.83, 1.50), <i>P</i> < 0.0001] and the compression intensity was ≥60% AOP [<i>SMD</i> = 0.64, 95%<i>CI</i> (0.24, 1.03), <i>P</i> = 0.0002], the effects on immediate upper limb strength reached the maximum and were statistically significant respectively. Subgroup analysis of fatigue degree indicated that BFR training could increase the blood lactate value [<i>SMD</i> = 2.15, 95%<i>CI</i> (1.06, 3.23), <i>P</i> < 0.0001] and subjective fatigue degree (rating of perceived exertion, RPE) [<i>SMD</i> = 1.11, 95%<i>CI</i> (0.36, 1.87), <i>P</i> = 0.004] of the subjects. Maximal effort [<i>SMD</i> = 2.61, 95%<i>CI</i> (2.14, 3.07), <i>P</i> < 0.0001] and compressive strength of ≥60% AOP [<i>SMD</i> = 2.64, 95%<i>CI</i> (1.35, 4.22), <i>P</i> = 0.001] had the greatest and significant effects on fatigue degree.<h4>Conclusion</h4>Upper limb BFR training can significantly enhance bench press strength. BFR training with 40%-70% 1RM and ≥60% AOP is more likely to promote immediate upper limb strength. Compared with resistance training without compression, exhaustive training may have a negative effect on upper limb muscle strength. BFR training combined with maximal effort and ≥60% AOP can increase the blood lactate value and subjective fatigue degree of the subjects.<h4>Systematic review registration</h4>http://inplasy.com, identifier: INPLASY202430008.",
+    "affiliation": "Department of Physical Education, Ningbo University of Technology, Ningbo, China.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "systematic-review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Muscle Strength",
+      "Blood Lactate",
+      "Rate Of Perceived Exertion",
+      "Blood Flow Restriction Training",
+      "Fatigue Level"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3389/fphys.2025.1521145"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12259574"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12259574?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 2,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2025-07-16",
+    "dateOfRevision": "2025-07-18",
+    "electronicPublicationDate": "2025-07-01",
+    "firstPublicationDate": "2025-07-01",
+    "firstIndexDate": "2025-07-16",
+    "fullTextReceivedDate": "2025-11-29",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "39903375",
+    "source": "MED",
+    "pmid": "39903375",
+    "pmcid": "PMC12011898",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC12011898"
+     ]
+    },
+    "doi": "10.1007/s40279-025-02176-8",
+    "title": "Superset Versus Traditional Resistance Training Prescriptions: A Systematic Review and Meta-analysis Exploring Acute and Chronic Effects on Mechanical, Metabolic, and Perceptual Variables.",
+    "authorString": "Zhang X, Weakley J, Li H, Li Z, García-Ramos A.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Zhang X",
+       "lastName": "Zhang",
+       "firstName": "Xing",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sport, Faculty of Sport Sciences, University of Granada, Granada, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Weakley J",
+       "lastName": "Weakley",
+       "firstName": "Jonathon",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Behavioural and Health Sciences, Australian Catholic University, Brisbane, QLD, Australia."
+         },
+         {
+          "affiliation": "Sports Performance, Recovery, Injury and New Technologies (SPRINT) Research Centre, Australian Catholic University, Brisbane, QLD, Australia."
+         },
+         {
+          "affiliation": "Carnegie Applied Rugby Research (CARR) Centre, Carnegie School of Sport, Leeds Beckett University, Leeds, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Li H",
+       "lastName": "Li",
+       "firstName": "Hansen",
+       "initials": "H",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Physical Education, Sichuan Agricultural University, Ya'an, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Li Z",
+       "lastName": "Li",
+       "firstName": "Zhaoqian",
+       "initials": "Z",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sport, Faculty of Sport Sciences, University of Granada, Granada, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "García-Ramos A",
+       "lastName": "García-Ramos",
+       "firstName": "Amador",
+       "initials": "A",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-0608-8755"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sport, Faculty of Sport Sciences, University of Granada, Granada, Spain. amagr@ugr.es."
+         },
+         {
+          "affiliation": "Department of Sports Sciences and Physical Conditioning, Faculty of Education, Universidad Católica de La Santísima Concepción, Concepción, Chile. amagr@ugr.es."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-5599-0257"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6147-1362"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-0608-8755"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "4",
+     "volume": "55",
+     "journalIssueId": 3931446,
+     "dateOfPublication": "2025 Apr",
+     "monthOfPublication": 4,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "nlmid": "8412297",
+      "isoabbreviation": "Sports Med"
+     },
+     "printPublicationDate": "2025-04-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "953-975",
+    "abstractText": "<h4>Background</h4>Supersets are a time-efficient resistance training (RT) method that involve the sequencing of two exercises with little or no rest between them. However, despite their common implementation during RT, a comprehensive and quantitative review is still lacking.<h4>Objectives</h4>The primary aim of this systematic review and meta-analysis was to compare the acute and chronic effects of superset and traditional set prescriptions on mechanical, metabolic, and perceptual variables. We also aimed to conduct subgroup analyses to determine the effect of different types of supersets (agonist-antagonist, similar biomechanical, and alternate peripheral supersets).<h4>Methods</h4>A systematic literature search was conducted in PubMed, Web of Science, Embase, and EBSCO databases from inception to 10 February 2024. Studies written in English and meeting our inclusion criteria were included. Pooled meta-analysis and subgroup meta-analysis were performed using a random-effects model.<h4>Results</h4>Nineteen studies involving 313 participants were included. Although there was considerable variance in certain outcomes, our estimated effects suggested that, compared with traditional set prescription, supersets allow for (1) a similar total number of repetitions [standardized mean differences (SMD) =  - 0.03; p = 0.92] and volume load (SMD = 0.05; p = 0.86) with a shorter session duration and increased training efficiency (SMD = 1.74; p = 0.01); (2) higher blood lactate concentration during (SMD = 0.94; p = 0.03) and after (SMD = 1.13; p < 0.01) RT; (3) higher energy cost during RT (SMD = 1.93; p = 0.04); (4) similar creatine kinase concentration after RT (SMD = 0.22; p = 0.36), surface electromyography (SMD = 0.01; p = 0.98), acute muscle swelling (SMD = - 0.28; p = 0.36) and blood pressure (systolic blood pressure [SMD = 0.08; p = 0.71], diastolic blood pressure [SMD = - 0.05; p = 0.85], and mean arterial pressure [SMD = - 0.03; p = 0.88]); (5) higher rating of perceived exertion (SMD = 0.77; p = 0.02) and similar perceived recovery (SMD = 0.32; p = 0.33); and (6) similar chronic adaptations in maximal strength (SMD = 0.10; p = 0.36), strength endurance (SMD = 0.07; p = 0.81), and muscle hypertrophy (SMD =  - 0.05; p = 0.87). The subgroup analysis revealed that utilizing agonist-antagonist supersets leads to a significant increase in the number of repetitions that are able to be completed compared with traditional sets (SMD = 0.68; p = 0.01). Similar biomechanical supersets led to less volume load (SMD =  - 1.08; p < 0.01) compared with traditional sets.<h4>Conclusions</h4>Supersets provide a time-efficient alternative to traditional RT, reducing session duration without compromising training volume, muscle activation, perceived recovery, or chronic adaptations in maximal strength, strength endurance, and muscle hypertrophy. Thus, supersets can be effectively implemented by athletes with busy schedules and RT enthusiasts whose main barrier to exercise is time. However, it should be noted that supersets generally induce higher internal loads, more severe muscle damage, and increased perceived exertion, potentially necessitating extended recovery times between sessions. Additionally, superset RT may have a similar potential to traditional RT in eliciting post-exercise hypotension. Regarding different types of supersets, agonist-antagonist supersets are more suitable for maintaining training volume, while similar biomechanical supersets concentrate stimulation on the same muscle group, compromising volume load.<h4>Protocol registration</h4>The original protocol for this review was prospectively registered with the International Prospective Register of Systematic Reviews (PROSPERO) in December 2023 (CRD42023491533).",
+    "affiliation": "Department of Physical Education and Sport, Faculty of Sport Sciences, University of Granada, Granada, Spain.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Comparative Study",
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Universidad de Granada",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Biomechanical Phenomena"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-025-02176-8"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12011898"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12011898?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 15,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2025-04-21",
+    "dateOfCreation": "2025-02-04",
+    "dateOfRevision": "2025-08-15",
+    "electronicPublicationDate": "2025-02-04",
+    "firstPublicationDate": "2025-02-04",
+    "firstIndexDate": "2025-02-05",
+    "fullTextReceivedDate": "2025-12-02",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "38910451",
+    "source": "MED",
+    "pmid": "38910451",
+    "pmcid": "PMC11569527",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC11569527"
+     ]
+    },
+    "doi": "10.1177/19417381241260412",
+    "title": "Validity of Rating of Perceived Exertion Scales in Relation to Movement Velocity and Exercise Intensity During Resistance-Exercise: A Systematic Review.",
+    "authorString": "Petro JL, Ferrari G, Cardozo LA, Vargas-Molina S, Carbone L, Kreider RB, Bonilla DA.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Petro JL",
+       "lastName": "Petro",
+       "firstName": "Jorge L",
+       "initials": "JL",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Research Group in Physical Activity, Sports and Health Sciences (GICAFS), Universidad de Córdoba, Montería, Colombia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ferrari G",
+       "lastName": "Ferrari",
+       "firstName": "Guido",
+       "initials": "G",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Grupo LIFT, Buenos Aires, Argentina."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cardozo LA",
+       "lastName": "Cardozo",
+       "firstName": "Luis A",
+       "initials": "LA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8076-3304"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research and Measurement Group in Sports Training (IMED), Faculty of Health Sciences and Sports, Fundación Universitaria del Área Andina, Bogotá, Colombia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Vargas-Molina S",
+       "lastName": "Vargas-Molina",
+       "firstName": "Salvador",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Physical Education and Sports Area, Faculty of Medicine, University of Málaga, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Carbone L",
+       "lastName": "Carbone",
+       "firstName": "Leandro",
+       "initials": "L",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Grupo LIFT, Buenos Aires, Argentina."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kreider RB",
+       "lastName": "Kreider",
+       "firstName": "Richard B",
+       "initials": "RB",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Exercise and Sport Nutrition Laboratory, Human Clinical Research Facility, Texas A&M University, College Station, Texas."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bonilla DA",
+       "lastName": "Bonilla",
+       "firstName": "Diego A",
+       "initials": "DA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2634-1220"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Research Group in Physical Activity, Sports and Health Sciences (GICAFS), Universidad de Córdoba, Montería, Colombia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8076-3304"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2634-1220"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "17",
+     "journalIssueId": 3931128,
+     "dateOfPublication": "2025 May-Jun",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Sports Health",
+      "title": "Sports health",
+      "essn": "1941-0921",
+      "issn": "1941-7381",
+      "nlmid": "101518422",
+      "isoabbreviation": "Sports Health"
+     },
+     "printPublicationDate": "2025-05-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "621-628",
+    "abstractText": "<h4>Context</h4>Movement velocity (MV) may be a valid tool to evaluate and control the load in resistance training (RT). The rating of perceived exertion (RPE) also enables practical load management. The relationship between RPE and MV may be used to monitor RT intensity.<h4>Objective</h4>To evaluate the validity and practicality of RPE scales related to MV and training intensity in resistance exercise. We hypothesize a positive correlation among RPE, MV, and load intensity in RT. Therefore, RPE may serve as a supplementary indicator in monitoring RT load.<h4>Data sources</h4>Boolean algorithms were used to search several databases (SPORTDiscus, EBSCO, PubMed, Scopus, and Google Scholar).<h4>Study selection</h4>Studies published from 2009 to 2023 included clinical trials (randomized or not) in healthy female and male subjects that analyzed the relationship between different RPE scales and MV in basic RT exercises.<h4>Study design</h4>Systematic review.<h4>Level of evidence</h4>Level 3.<h4>Results</h4>A total of 18 studies were selected using different RPE scales with reported MV training loads. Participants included RT and untrained male and female subjects (15-31 years old). Two RPE scales (OMNI-RES and repetitions in reserve) were used. The selected studies showed moderate positive correlations among these RPE scales, MV, and training load (eg, percentage of 1-repetition maximum [%1-RM]). In addition, equations have been developed to estimate %1-RM and MV loss based on the OMNI-RES scale.<h4>Conclusion</h4>Studies show that RPE scales and MV constitute a valid, economic, and practical tool for assessing RT load progression and complementing other training monitoring variables. Exercise professionals should consider familiarizing participants with RPE scales and factors that might influence the perception of exertion (eg, level of training, motivation, and environmental conditions).",
+    "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Reproducibility of Results"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Perception",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Movement",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adolescent"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adult"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Physical Exertion",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Young Adult"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Motion perception",
+      "Fatigue",
+      "Strength Training",
+      "Muscle Strength",
+      "Linear Transducer"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1177/19417381241260412"
+      },
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11569527"
+      },
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11569527?pdf=render"
+      },
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1177/19417381241260412"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 8,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2025-04-18",
+    "dateOfCreation": "2024-06-24",
+    "dateOfRevision": "2025-04-21",
+    "electronicPublicationDate": "2024-06-24",
+    "firstPublicationDate": "2024-06-24",
+    "firstIndexDate": "2024-06-25",
+    "fullTextReceivedDate": "2025-12-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "36178597",
+    "source": "MED",
+    "pmid": "36178597",
+    "pmcid": "PMC9807551",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC9807551"
+     ]
+    },
+    "doi": "10.1007/s40279-022-01754-4",
+    "title": "The Acute and Chronic Effects of Implementing Velocity Loss Thresholds During Resistance Training: A Systematic Review, Meta-Analysis, and Critical Evaluation of the Literature.",
+    "authorString": "Jukic I, Castilla AP, Ramos AG, Van Hooren B, McGuigan MR, Helms ER.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Jukic I",
+       "lastName": "Jukic",
+       "firstName": "Ivan",
+       "initials": "I",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0900-9410"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport Performance Research Institute New Zealand (SPRINZ), Auckland University of Technology, Auckland, New Zealand. ivan.jukic@aut.ac.nz."
+         },
+         {
+          "affiliation": "School of Engineering, Computer and Mathematical Sciences, Auckland University of Technology, Auckland, New Zealand. ivan.jukic@aut.ac.nz."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Castilla AP",
+       "lastName": "Castilla",
+       "firstName": "Alejandro Pérez",
+       "initials": "AP",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-5535-2087"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sport, Faculty of Sport Sciences, University of Granada, Granada, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ramos AG",
+       "lastName": "Ramos",
+       "firstName": "Amador García",
+       "initials": "AG",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-0608-8755"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Education and Sport, Faculty of Sport Sciences, University of Granada, Granada, Spain."
+         },
+         {
+          "affiliation": "Department of Sports Sciences and Physical Conditioning, Faculty of Education, Universidad Católica de la Santísima Concepción, Concepción, Chile."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Van Hooren B",
+       "lastName": "Van Hooren",
+       "firstName": "Bas",
+       "initials": "B",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8163-693X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Nutrition and Movement Sciences, NUTRIM School of Nutrition and Translational Research in Metabolism, Maastricht University Medical Centre+, Maastricht, The Netherlands."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "McGuigan MR",
+       "lastName": "McGuigan",
+       "firstName": "Michael R",
+       "initials": "MR",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1251-7838"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport Performance Research Institute New Zealand (SPRINZ), Auckland University of Technology, Auckland, New Zealand."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Helms ER",
+       "lastName": "Helms",
+       "firstName": "Eric R",
+       "initials": "ER",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4849-9336"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport Performance Research Institute New Zealand (SPRINZ), Auckland University of Technology, Auckland, New Zealand."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-5535-2087"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8163-693X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0900-9410"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1251-7838"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4849-9336"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-0608-8755"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "53",
+     "journalIssueId": 3481245,
+     "dateOfPublication": "2023 Jan",
+     "monthOfPublication": 1,
+     "yearOfPublication": 2023,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "nlmid": "8412297",
+      "isoabbreviation": "Sports Med"
+     },
+     "printPublicationDate": "2023-01-01"
+    },
+    "pubYear": "2023",
+    "pageInfo": "177-214",
+    "abstractText": "<h4>Background</h4>Velocity loss (VL) experienced in a set during resistance training is often monitored to control training volume and quantify acute fatigue responses. Accordingly, various VL thresholds are used to prescribe resistance training and target different training adaptations. However, there are inconsistencies in the current body of evidence regarding the magnitude of the acute and chronic responses to the amount of VL experienced during resistance training.<h4>Objective</h4>The aim of this systematic review was to (1) evaluate the acute training volume, neuromuscular, metabolic, and perceptual responses to the amount of VL experienced during resistance training; (2) synthesize the available evidence on the chronic effects of different VL thresholds on training adaptations; and (3) provide an overview of the factors that might differentially influence the magnitude of specific acute and chronic responses to VL during resistance training.<h4>Methods</h4>This review was performed using the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines. Five databases were searched, and studies were included if they were written in English, prescribed resistance training using VL, and evaluated at least one (1) acute training volume, neuromuscular, metabolic, or perceptual response or (2) training adaptation. Risk of bias was assessed using a modified Cochrane Collaboration's tool for assessing the risk of bias in randomized trials. Multilevel and multivariate meta-regressions were performed where possible.<h4>Results</h4>Eighteen acute and 19 longitudinal studies met the inclusion criteria, of which only one had more than one risk of bias item assessed as high risk. Based on the included acute studies, it seems that the number of repetitions per set, blood lactate concentration, and rating of perceived exertion generally increase, while countermovement jump height, running sprint times, and velocity against fixed loads generally decrease as VL increases. However, the magnitude of these effects seems to be influenced, among other factors, by the exercise and load used. Regarding training adaptations, VL experienced during resistance training did not influence muscle strength and endurance gains. Increases in VL were associated with increases in hypertrophy (b = 0.006; 95% confidence interval [CI] 0.001, 0.012), but negatively affected countermovement jump (b = - 0.040; 95% CI - 0.079, - 0.001), sprint (b = 0.001; 95% CI 0.001, 0.002), and velocity against submaximal load performance (b = - 0.018; 95% CI - 0.029, - 0.006).<h4>Conclusions</h4>A graded relationship exists between VL experienced during a set and acute training volume, neuromuscular, metabolic, and perceptual responses to resistance training. However, choice of exercise, load, and individual trainee characteristics (e.g., training history) seem to modulate these relationships. The choice of VL threshold does not seem to affect strength and muscle endurance gains whereas higher VL thresholds are superior for enhancing hypertrophy, and lower VL thresholds are superior for jumping, sprinting, and velocity against submaximal loads performance.<h4>Clinical trial registration</h4>The original protocol was prospectively registered ( https://osf.io/q4acs/ ) with the Open Science Framework.",
+    "affiliation": "Sport Performance Research Institute New Zealand (SPRINZ), Auckland University of Technology, Auckland, New Zealand. ivan.jukic@aut.ac.nz.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Auckland University of Technology",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Exercise"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Running",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Athletic Performance",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-022-01754-4"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9807551"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9807551?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 104,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2023-01-04",
+    "dateOfCreation": "2022-09-30",
+    "dateOfRevision": "2024-09-10",
+    "electronicPublicationDate": "2022-09-30",
+    "firstPublicationDate": "2022-09-30",
+    "firstIndexDate": "2022-09-30",
+    "fullTextReceivedDate": "2023-01-05",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "38030985",
+    "source": "MED",
+    "pmid": "38030985",
+    "pmcid": "PMC10687931",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC10687931"
+     ]
+    },
+    "doi": "10.1186/s11556-023-00333-4",
+    "title": "Is moderate resistance training adequate for older adults with sarcopenia? A systematic review and network meta-analysis of RCTs.",
+    "authorString": "Chen YC, Chen WC, Liu CW, Huang WY, Lu I, Lin CW, Huang RY, Chen JS, Huang CH.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Chen YC",
+       "lastName": "Chen",
+       "firstName": "Yu Chang",
+       "initials": "YC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Family Medicine and Community Medicine, E-Da Hospital, I-Shou University, No. 1, Yida Road, Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Chen WC",
+       "lastName": "Chen",
+       "firstName": "Wang-Chun",
+       "initials": "WC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Pharmacy, E-Da Hospital, I-Shou University, No. 1, Yida Rd., Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan."
+         },
+         {
+          "affiliation": "Department of Chemical Engineering and Institute of Biotechnology and Chemical Engineering, I-Shou University, No.8, Yida Rd., Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Liu CW",
+       "lastName": "Liu",
+       "firstName": "Chia-Wei",
+       "initials": "CW",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Family Medicine and Community Medicine, E-Da Hospital, I-Shou University, No. 1, Yida Road, Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Huang WY",
+       "lastName": "Huang",
+       "firstName": "Wei-Yu",
+       "initials": "WY",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Family Medicine and Community Medicine, E-Da Hospital, I-Shou University, No. 1, Yida Road, Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lu I",
+       "lastName": "Lu",
+       "firstName": "ICheng",
+       "initials": "I",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Family Medicine and Community Medicine, E-Da Hospital, I-Shou University, No. 1, Yida Road, Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan."
+         },
+         {
+          "affiliation": "School of Medicine for International Students, College of Medicine, I-Shou University, No. 8, Yida Rd., Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lin CW",
+       "lastName": "Lin",
+       "firstName": "Chi Wei",
+       "initials": "CW",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Family Medicine and Community Medicine, E-Da Hospital, I-Shou University, No. 1, Yida Road, Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan."
+         },
+         {
+          "affiliation": "School of Medicine for International Students, College of Medicine, I-Shou University, No. 8, Yida Rd., Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Huang RY",
+       "lastName": "Huang",
+       "firstName": "Ru Yi",
+       "initials": "RY",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Family Medicine and Community Medicine, E-Da Hospital, I-Shou University, No. 1, Yida Road, Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan."
+         },
+         {
+          "affiliation": "School of Medicine for International Students, College of Medicine, I-Shou University, No. 8, Yida Rd., Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan."
+         },
+         {
+          "affiliation": "Data Science Degree Program, National Taiwan University and Academia sinica, No.1, Section 4, Roosevelt Rd, Da'an District, Taipei City, 10617, Taiwan (R.O.C.)."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Chen JS",
+       "lastName": "Chen",
+       "firstName": "Jung Sheng",
+       "initials": "JS",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Medical Research, E-Da Hospital, I-Shou University, No. 1, Yida Rd., Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Huang CH",
+       "lastName": "Huang",
+       "firstName": "Chi Hsien",
+       "initials": "CH",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4619-5144"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Family Medicine and Community Medicine, E-Da Hospital, I-Shou University, No. 1, Yida Road, Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan. ed103520@edah.org.tw."
+         },
+         {
+          "affiliation": "School of Medicine for International Students, College of Medicine, I-Shou University, No. 8, Yida Rd., Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan. ed103520@edah.org.tw."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4619-5144"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3187-9479"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "20",
+     "journalIssueId": 3663116,
+     "dateOfPublication": "2023 Nov",
+     "monthOfPublication": 11,
+     "yearOfPublication": 2023,
+     "journal": {
+      "medlineAbbreviation": "Eur Rev Aging Phys Act",
+      "title": "European review of aging and physical activity : official journal of the European Group for Research into Elderly and Physical Activity",
+      "essn": "1861-6909",
+      "issn": "1813-7253",
+      "nlmid": "101284836",
+      "isoabbreviation": "Eur Rev Aging Phys Act"
+     },
+     "printPublicationDate": "2023-11-01"
+    },
+    "pubYear": "2023",
+    "pageInfo": "22",
+    "abstractText": "<h4>Background</h4>Resistance training (RT) and nutritional supplementation are recommended for the management of sarcopenia in older adults. However, optimal RT intensity for the treatment of sarcopenia has not been well investigated.<h4>Methods</h4>This network meta-analysis aims to determine the comparative effectiveness of interventions for sarcopenia, taking RT intensity into consideration. RT intensity was classified into light-to-moderate intensity RT(LMRT), moderate intensity RT(MRT), and moderate-to-vigorous intensity RT(MVRT) based on percentage of one repetition maximum (%1RM) and/or rating of perceived exertion.<h4>Results</h4>A total of 50 RCTs (N = 4,085) were included after screening 3,485 articles. The results confirmed that RT with or without nutrition was positively associated with improved measures of muscle strength and physical performance. Regarding RT intensity, LMRT only demonstrated positive effects on hand grip (aerobic training + LMRT + nutrition: mean difference [MD] = 2.88; 95% credential intervals [CrI] = 0.43,5.32). MRT provided benefits on improvement in the 30-s chair stand test (repetitions) (MRT: MD = 2.98, 95% CrI = 0.35,5.59), timed up and go test (MRT: MD = -1.74, 95% CrI: = -3.34,-0.56), hand grip (MRT: MD = 2.44; 95% CrI = 0.03,5.70), and leg press (MRT: MD = 8.36; 95% CrI = 1.87,13.4). MVRT also improved chair stand test repetitions (MVRT: MD = 5.64, 95% CrI = 0.14,11.4), gait speed (MVRT + nutrition: MD = 0.21, 95% CrI = 0.003,0.48), appendicular skeletal muscle index (MVRT + nutrition: MD = 0.25, 95% CrI = 0.01,0.5), and leg press (MVRT: MD = 14.7, 95% CrI: 5.96,22.4; MVRT + nutrition: MD = 17.8, 95% CrI: 7.55,28.6).<h4>Conclusion</h4>MVRT had greater benefits on muscle mass, lower extremity strength, and physical performance compared to MRT. Increasing RT intensity may be recommended for sarcopenic older adults.",
+    "affiliation": "Department of Family Medicine and Community Medicine, E-Da Hospital, I-Shou University, No. 1, Yida Road, Jiaosu Village, Yanchao District, Kaohsiung City, 82445, Taiwan.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Sarcopenia",
+      "Network Meta-analysis",
+      "Resistance Training Intensity"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "doi",
+       "site": "Unpaywall",
+       "url": "https://doi.org/10.1186/s11556-023-00333-4"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1186/s11556-023-00333-4"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC10687931"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC10687931?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 29,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2023-11-29",
+    "dateOfRevision": "2023-12-01",
+    "electronicPublicationDate": "2023-11-29",
+    "firstPublicationDate": "2023-11-29",
+    "firstIndexDate": "2023-11-30",
+    "fullTextReceivedDate": "2023-12-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "34881412",
+    "source": "MED",
+    "pmid": "34881412",
+    "doi": "10.1007/s40279-021-01602-x",
+    "title": "Effects of Resistance Training to Muscle Failure on Acute Fatigue: A Systematic Review and Meta-Analysis.",
+    "authorString": "Vieira JG, Sardeli AV, Dias MR, Filho JE, Campos Y, Sant'Ana L, Leitão L, Reis V, Wilk M, Novaes J, Vianna J.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Vieira JG",
+       "lastName": "Vieira",
+       "firstName": "João Guilherme",
+       "initials": "JG",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-3860-4630"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Postgraduate Program in Physical Education, Federal University of Juiz de Fora (UFJF), Juiz de Fora, Brazil. joaoguilhermevds@gmail.com."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Sardeli AV",
+       "lastName": "Sardeli",
+       "firstName": "Amanda Veiga",
+       "initials": "AV",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-0575-7996"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Laboratory of Exercise Physiology, FISEX, State University of Campinas (UNICAMP), Campinas, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Dias MR",
+       "lastName": "Dias",
+       "firstName": "Marcelo Ricardo",
+       "initials": "MR",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8912-340X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Postgraduate Program in Physical Education, Federal University of Juiz de Fora (UFJF), Juiz de Fora, Brazil."
+         },
+         {
+          "affiliation": "Laboratory of Exercise Physiology and Morphofunctional Evaluation, LABFEX, Granbery Methodist College, Juiz de Fora, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Filho JE",
+       "lastName": "Filho",
+       "firstName": "José Elias",
+       "initials": "JE",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4251-0290"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Postgraduate Program in Physical Education, Federal University of Juiz de Fora (UFJF), Juiz de Fora, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Campos Y",
+       "lastName": "Campos",
+       "firstName": "Yuri",
+       "initials": "Y",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8344-1087"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Postgraduate Program in Physical Education, Federal University of Juiz de Fora (UFJF), Juiz de Fora, Brazil."
+         },
+         {
+          "affiliation": "Study Group and Research in Neuromuscular Responses, Federal University of Lavras (UFLA), Lavras, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Sant'Ana L",
+       "lastName": "Sant'Ana",
+       "firstName": "Leandro",
+       "initials": "L",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0156-4030"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Postgraduate Program in Physical Education, Federal University of Juiz de Fora (UFJF), Juiz de Fora, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Leitão L",
+       "lastName": "Leitão",
+       "firstName": "Luis",
+       "initials": "L",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1981-6638"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Superior School of Education of Polytechnic Institute of Setubal, Setubal, Portugal."
+         },
+         {
+          "affiliation": "Life Quality Research Centre, Rio Maior, Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Reis V",
+       "lastName": "Reis",
+       "firstName": "Victor",
+       "initials": "V",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4996-1414"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Center in Sports Sciences, Health Sciences and Human Development, CIDESD, University of Trás-os-Montes e Alto Douro, Vila Real, Portugal."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wilk M",
+       "lastName": "Wilk",
+       "firstName": "Michal",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-5799-6337"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Sport Sciences, The Jerzy Kukuczka Academy of Physical Education, Katowice, Poland."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Novaes J",
+       "lastName": "Novaes",
+       "firstName": "Jefferson",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9304-6574"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Postgraduate Program in Physical Education, Federal University of Rio de Janeiro (UFRJ), Rio de Janeiro, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Vianna J",
+       "lastName": "Vianna",
+       "firstName": "Jeferson",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1594-4429"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Postgraduate Program in Physical Education, Federal University of Juiz de Fora (UFJF), Juiz de Fora, Brazil."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-5799-6337"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8344-1087"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8912-340X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9304-6574"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0156-4030"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1981-6638"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-3860-4630"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4251-0290"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4996-1414"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-0575-7996"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1594-4429"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0005-7323-5956"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "5",
+     "volume": "52",
+     "journalIssueId": 3345827,
+     "dateOfPublication": "2022 May",
+     "monthOfPublication": 5,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "nlmid": "8412297",
+      "isoabbreviation": "Sports Med"
+     },
+     "printPublicationDate": "2022-05-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "1103-1125",
+    "abstractText": "<h4>Background</h4>Proper design of resistance training (RT) variables is a key factor to reach the maximum potential of neuromuscular adaptations. Among those variables, the use of RT performed to failure (RTF) may lead to a different magnitude of acute fatigue compared with RT not performed to failure (RTNF). The fatigue response could interfere with acute adaptive changes, in turn regulating long-term adaptations. Considering that the level of fatigue affects long-term adaptations, it is important to determine how fatigue is affected by RTF versus RTNF.<h4>Objective</h4>The aim of this systematic review and meta-analysis was to compare the effects of RTF versus RTNF on acute fatigue.<h4>Methods</h4>The search was conducted in January 2021 in seven databases. Only studies with a crossover design that investigated the acute biomechanical properties (vertical jump height, velocity of movement, power output, or isometric strength), metabolic response (lactate or ammonia concentration), muscle damage (creatine kinase activity), and rating of perceived exertion (RPE) were selected. The data (mean ± standard deviation and sample size) were extracted from the included studies and were either converted into the standardized mean difference (SMD) or maintained in the raw mean difference (RMD) when the studies reported the results in the same scale. Random-effects meta-analyses were performed.<h4>Results</h4>Twenty studies were included in the systematic review and 12 were included in the meta-analysis. The main meta-analyses indicated greater decrease of biomechanical properties for RTF compared with RTNF (SMD - 0.96, 95% confidence interval [CI] - 1.43 to - 0.49, p < 0.001). Furthermore, there was a larger increase in metabolic response (RMD 4.48 mmol·L<sup>-1</sup>, 95% CI 3.19-5.78, p < 0.001), muscle damage (SMD 0.76, 95% CI 0.31-1.21, p = 0.001), and RPE (SMD 1.93, 95% CI 0.87-3.00, p < 0.001) for RTF compared with RTNF. Further exploratory subgroup analyses showed that training status (p = 0.92), timepoint (p = 0.89), load (p = 0.10), and volume (p = 0.12) did not affect biomechanical properties; however, greater loss in the movement velocity test occurred on upper limbs compared with lower limbs (p < 0.001). Blood ammonia concentration was greater after RTF than RTNF (RMD 44.66 μmol·L<sup>-1</sup>, 95% CI 32.27-57.05, p < 0.001), as was 48 h post-exercise blood creatine kinase activity (SMD 0.86, 95% CI 0.33-1.42, p = 0.002). Furthermore, although there was considerable heterogeneity in the overall analysis (I<sup>2</sup> = 83.72%; p < 0.01), a significant difference in RPE after RTF compared with RTNF was only found for studies that did not equalize training volumes.<h4>Conclusions</h4>In summary, RTF compared with RTNF led to a greater decrease in biomechanical properties and a simultaneous increase in metabolic response, higher muscle damage, and RPE. The exploratory analyses suggested a greater impairment in the velocity of movement test for the upper limbs, more pronounced muscle damage 48 h post-exercise, and a greater RPE in studies with non-equalized volume after the RTF session compared with RTNF. Therefore, it can be concluded that RTF leads to greater acute fatigue compared with RTNF. The higher acute fatigue after RTF can also have an important impact on chronic adaptive processes following RT; however, the greater acute fatigue following RTF can extend the time needed for recovery, which should be considered when RTF is used.<h4>Protocol registration</h4>The original protocol was prospectively registered (CRD42020192336) in the International Prospective Register of Systematic Reviews (PROSPERO).",
+    "affiliation": "Postgraduate Program in Physical Education, Federal University of Juiz de Fora (UFJF), Juiz de Fora, Brazil. joaoguilhermevds@gmail.com.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Fundação para a Ciência e a Tecnologia",
+       "grantId": "UID04045/2020",
+       "orderIn": 0
+      },
+      {
+       "agency": "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior",
+       "grantId": "001",
+       "orderIn": 0
+      },
+      {
+       "agency": "Fundação para a Ciência e a Tecnologia",
+       "grantId": "UIDP/04748/2020",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscles"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Ammonia"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Creatine Kinase"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Ammonia",
+       "registryNumber": "7664-41-7"
+      },
+      {
+       "name": "Creatine Kinase",
+       "registryNumber": "EC 2.7.3.2"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-021-01602-x"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 45,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2022-04-25",
+    "dateOfCreation": "2021-12-09",
+    "dateOfRevision": "2026-10-10",
+    "electronicPublicationDate": "2021-12-09",
+    "firstPublicationDate": "2021-12-09",
+    "firstIndexDate": "2021-12-15",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "35038063",
+    "source": "MED",
+    "pmid": "35038063",
+    "pmcid": "PMC8762534",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC8762534"
+     ]
+    },
+    "doi": "10.1186/s40798-021-00404-9",
+    "title": "The Effect of Load and Volume Autoregulation on Muscular Strength and Hypertrophy: A Systematic Review and Meta-Analysis.",
+    "authorString": "Hickmott LM, Chilibeck PD, Shaw KA, Butcher SJ.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Hickmott LM",
+       "lastName": "Hickmott",
+       "firstName": "Landyn M",
+       "initials": "LM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1545-8909"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Medicine, Health Sciences Program, University of Saskatchewan, Saskatoon, Canada. lmh896@usask.ca."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Chilibeck PD",
+       "lastName": "Chilibeck",
+       "firstName": "Philip D",
+       "initials": "PD",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Kinesiology, University of Saskatchewan, Saskatoon, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Shaw KA",
+       "lastName": "Shaw",
+       "firstName": "Keely A",
+       "initials": "KA",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Kinesiology, University of Saskatchewan, Saskatoon, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Butcher SJ",
+       "lastName": "Butcher",
+       "firstName": "Scotty J",
+       "initials": "SJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5408-9042"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Rehabilitation Science, University of Saskatchewan, Saskatoon, Canada."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1545-8909"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5408-9042"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "8",
+     "journalIssueId": 3289386,
+     "dateOfPublication": "2022 Jan",
+     "monthOfPublication": 1,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Sports Med Open",
+      "title": "Sports medicine - open",
+      "essn": "2198-9761",
+      "issn": "2199-1170",
+      "nlmid": "101662568",
+      "isoabbreviation": "Sports Med Open"
+     },
+     "printPublicationDate": "2022-01-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "9",
+    "abstractText": "<h4>Background</h4>Autoregulation has emerged as a potentially beneficial resistance training paradigm to individualize and optimize programming; however, compared to standardized prescription, the effects of autoregulated load and volume prescription on muscular strength and hypertrophy adaptations are unclear. Our objective was to compare the effect of autoregulated load prescription (repetitions in reserve-based rating of perceived exertion and velocity-based training) to standardized load prescription (percentage-based training) on chronic one-repetition maximum (1RM) strength and cross-sectional area (CSA) hypertrophy adaptations in resistance-trained individuals. We also aimed to investigate the effect of volume autoregulation with velocity loss thresholds ≤ 25% compared to > 25% on 1RM strength and CSA hypertrophy.<h4>Methods</h4>This review was performed in accordance with the PRISMA guidelines. A systematic search of MEDLINE, Embase, Scopus, and SPORTDiscus was conducted. Mean differences (MD), 95% confidence intervals (CI), and standardized mean differences (SMD) were calculated. Sub-analyses were performed as applicable.<h4>Results</h4>Fifteen studies were included in the meta-analysis: six studies on load autoregulation and nine studies on volume autoregulation. No significant differences between autoregulated and standardized load prescription were demonstrated for 1RM strength (MD = 2.07, 95% CI - 0.32 to 4.46 kg, p = 0.09, SMD = 0.21). Velocity loss thresholds ≤ 25% demonstrated significantly greater 1RM strength (MD = 2.32, 95% CI 0.33 to 4.31 kg, p = 0.02, SMD = 0.23) and significantly lower CSA hypertrophy (MD = 0.61, 95% CI 0.05 to 1.16 cm<sup>2</sup>, p = 0.03, SMD = 0.28) than velocity loss thresholds > 25%. No significant differences between velocity loss thresholds > 25% and 20-25% were demonstrated for hypertrophy (MD = 0.36, 95% CI - 0.29 to 1.00 cm<sup>2</sup>, p = 0.28, SMD = 0.13); however, velocity loss thresholds > 25% demonstrated significantly greater hypertrophy compared to thresholds ≤ 20% (MD = 0.64, 95% CI 0.07 to 1.20 cm<sup>2</sup>, p = 0.03, SMD = 0.34).<h4>Conclusions</h4>Collectively, autoregulated and standardized load prescription produced similar improvements in strength. When sets and relative intensity were equated, velocity loss thresholds ≤ 25% were superior for promoting strength possibly by minimizing acute neuromuscular fatigue while maximizing chronic neuromuscular adaptations, whereas velocity loss thresholds > 20-25% were superior for promoting hypertrophy by accumulating greater relative volume. Protocol Registration The original protocol was prospectively registered (CRD42021240506) with the PROSPERO (International Prospective Register of Systematic Reviews).",
+    "affiliation": "College of Medicine, Health Sciences Program, University of Saskatchewan, Saskatoon, Canada. lmh896@usask.ca.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://sportsmedicine-open.springeropen.com/track/pdf/10.1186/s40798-021-00404-9"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1186/s40798-021-00404-9"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8762534"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8762534?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 27,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2022-01-17",
+    "dateOfRevision": "2022-02-01",
+    "electronicPublicationDate": "2022-01-15",
+    "firstPublicationDate": "2022-01-15",
+    "firstIndexDate": "2022-01-18",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "30979698",
+    "source": "MED",
+    "pmid": "30979698",
+    "doi": "10.1136/bjsports-2018-100205",
+    "title": "Resistance training as a treatment for older persons with peripheral artery disease: a systematic review and meta-analysis.",
+    "authorString": "Parmenter BJ, Mavros Y, Ritti Dias R, King S, Fiatarone Singh M.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Parmenter BJ",
+       "lastName": "Parmenter",
+       "firstName": "Belinda J",
+       "initials": "BJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8013-5658"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Physiology, School of Medical Sciences, Faculty of Medicine, University of New South Wales, Sydney, New South Wales, Australia b.parmenter@unsw.edu.au."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Mavros Y",
+       "lastName": "Mavros",
+       "firstName": "Yorgi",
+       "initials": "Y",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2588-0425"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Physical Activity, Lifestyle, Ageing and Wellbeing Faculty Research Group, Faculty of Health Sciences, Sydney Medical School, University of Sydney, Lidcombe, New South Wales, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ritti Dias R",
+       "lastName": "Ritti Dias",
+       "firstName": "Raphael",
+       "initials": "R",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-7883-6746"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Programa de Pós-Graduação em Ciências da Reabilitação, Universidade Nove de Julho, Sao Paulo, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "King S",
+       "lastName": "King",
+       "firstName": "Stephanie",
+       "initials": "S",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0344-8404"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport, Health and Exercise Sciences, University of Hull, Hull, United Kingdom."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Fiatarone Singh M",
+       "lastName": "Fiatarone Singh",
+       "firstName": "Maria",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Physical Activity, Lifestyle, Ageing and Wellbeing Faculty Research Group, Faculty of Health Sciences, Sydney Medical School, University of Sydney, Lidcombe, New South Wales, Australia."
+         },
+         {
+          "affiliation": "Institute for Aging Research, Hebrew SeniorLife, Harvard Medical School and Jean Mayer USDA Human Nutrition Research Center on Aging, Tufts University, Boston, MA, United States."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-7883-6746"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8013-5658"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0344-8404"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2588-0425"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "8",
+     "volume": "54",
+     "journalIssueId": 2930679,
+     "dateOfPublication": "2020 Apr",
+     "monthOfPublication": 4,
+     "yearOfPublication": 2020,
+     "journal": {
+      "medlineAbbreviation": "Br J Sports Med",
+      "title": "British journal of sports medicine",
+      "essn": "1473-0480",
+      "issn": "0306-3674",
+      "nlmid": "0432520",
+      "isoabbreviation": "Br J Sports Med"
+     },
+     "printPublicationDate": "2020-04-01"
+    },
+    "pubYear": "2020",
+    "pageInfo": "452-461",
+    "abstractText": "<h4>Objective</h4>Resistance training (RT) improves walking ability in persons with peripheral artery disease. We conducted a meta-analysis of randomised controlled trials (RCTs) investigating the effect of RT on peripheral artery disease (as measured by walking ability).<h4>Design</h4>We included RCTs that investigated the effect of RT on treadmill and/or 6 min walk (6-MWT) distances. RT intensity was assessed according to the American College of Sports Medicine guidelines by 1 repetition maximum or rating of perceived exertion. Standardised mean (SMD) and mean differences (MD) were calculated using a random-effects inverse variance model. Heterogeneity and bias were assessed using RevMan V.5.3. Meta-regression and meta-analysis of variance were performed as moderator analyses.<h4>Data sources</h4>Databases (Medline, Embase, Web of Science, Cinahl and Google Scholar) were searched until July 2018.<h4>Results</h4>Fifteen trials isolated RT; 7 trials compared RT with aerobic exercise. We analysed 826 patients (n=363 completing RT), with a mean age of 67.1±3.8 years. Training ranged from low-high intensity, 2-7 times per week for 17±7 weeks, with a mix of upper, lower or whole body training. Overall RT significantly improved constant load treadmill claudication onset (COD) (SMD 0.66 [0.40, 0.93], p<0.00001) and total walking distance (WD) (SMD 0.51 [0.23, 0.79], p=0.0003), progressive treadmill COD (SMD 0.56 [0.00, 1.13], p=0.05) and total WD (SMD 0.45 [0.08, 0.83], p=0.02), and 6-MWT COD (MD 82.23 m [40.91, 123.54], p<0.0001). Intensity played a role in improvement, with high-intensity training yielding the greatest improvement (p=0.02).<h4>Conclusions</h4>RT clinically improved treadmill and flat ground walking ability in persons with peripheral artery disease. Higher intensity training was associated with better outcomes. Our study makes a case for clinicians to include high-intensity lower body RT in the treatment of peripheral artery disease.<h4>Trial registration number</h4>CRD42017081184.",
+    "affiliation": "Department of Exercise Physiology, School of Medical Sciences, Faculty of Medicine, University of New South Wales, Sydney, New South Wales, Australia b.parmenter@unsw.edu.au.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Intermittent Claudication",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PP",
+          "qualifierName": "physiopathology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "RH",
+          "qualifierName": "rehabilitation"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Exercise Test"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Walking"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Aged"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Middle Aged"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Peripheral Arterial Disease",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PP",
+          "qualifierName": "physiopathology"
+         },
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "RH",
+          "qualifierName": "rehabilitation"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Artery",
+      "Meta-analysis",
+      "Strength",
+      "cardiovascular"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1136/bjsports-2018-100205"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 49,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2020-05-12",
+    "dateOfCreation": "2019-04-14",
+    "dateOfRevision": "2020-05-12",
+    "electronicPublicationDate": "2019-04-12",
+    "firstPublicationDate": "2019-04-12",
+    "firstIndexDate": "2019-04-14",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "30569775",
+    "source": "MED",
+    "pmid": "30569775",
+    "doi": "10.1080/14779072.2019.1561278",
+    "title": "Rating of perceived exertion on resistance training in elderly subjects.",
+    "authorString": "Morishita S, Tsubaki A, Nakamura M, Nashimoto S, Fu JB, Onishi H.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Morishita S",
+       "lastName": "Morishita",
+       "firstName": "Shinichiro",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "a Institute for Human Movement and Medical Sciences , Niigata University of Health and Welfare , Niigata , Japan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Tsubaki A",
+       "lastName": "Tsubaki",
+       "firstName": "Atsuhiro",
+       "initials": "A",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-4573-2267"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "a Institute for Human Movement and Medical Sciences , Niigata University of Health and Welfare , Niigata , Japan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Nakamura M",
+       "lastName": "Nakamura",
+       "firstName": "Masatoshi",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "a Institute for Human Movement and Medical Sciences , Niigata University of Health and Welfare , Niigata , Japan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Nashimoto S",
+       "lastName": "Nashimoto",
+       "firstName": "Satoshi",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "b Department of Rehabilitation , Niigata Medical Centre , Niigata , Japan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Fu JB",
+       "lastName": "Fu",
+       "firstName": "Jack B",
+       "initials": "JB",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "c Department of Palliative, Rehabilitation & Integrative Medicine , University of Texas MD Anderson Cancer Center , Houston , TX , USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Onishi H",
+       "lastName": "Onishi",
+       "firstName": "Hideaki",
+       "initials": "H",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "a Institute for Human Movement and Medical Sciences , Niigata University of Health and Welfare , Niigata , Japan."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0003-4573-2267"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "2",
+     "volume": "17",
+     "journalIssueId": 2769598,
+     "dateOfPublication": "2019 Feb",
+     "monthOfPublication": 2,
+     "yearOfPublication": 2019,
+     "journal": {
+      "medlineAbbreviation": "Expert Rev Cardiovasc Ther",
+      "title": "Expert review of cardiovascular therapy",
+      "essn": "1744-8344",
+      "issn": "1477-9072",
+      "nlmid": "101182328",
+      "isoabbreviation": "Expert Rev Cardiovasc Ther"
+     },
+     "printPublicationDate": "2019-02-01"
+    },
+    "pubYear": "2019",
+    "pageInfo": "135-142",
+    "abstractText": "<h4>Introduction</h4>The American College of Sports Medicine and American Heart Association recommends resistance training involving 60-70% of 1-repetition maximum (1RM) for 8-12 repetitions on 2 or 3 nonconsecutive days per week for the elderly. The Borg 6-20 scale, Borg category ratio (CR-10) scale, and OMNI scale are used to determine the rating of perceived exertion (RPE) for resistance training. Areas covered: RPE scales for resistance training performed by elderly individuals are described. The RPE has been related to resistance training intensity, and the RPE scale was used to determine the resistance training intensity of elderly or ill individuals. Expert commentary: RPE scales can determine the resistance training intensity of elderly individuals and may be used at home or in nursing homes, if they do not have specific resistance training machines. RPE is simple and useful, and may improve skeletal muscle strength or other health-related issues.",
+    "affiliation": "a Institute for Human Movement and Medical Sciences , Niigata University of Health and Welfare , Niigata , Japan.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "M.D. Anderson Cancer Center support grant",
+       "grantId": "CA 016672",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Perception"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Aged"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "American Heart Association"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "United States"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Physical Exertion",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Rehabilitation",
+      "Elderly",
+      "Resistance Training",
+      "Borg Scale",
+      "Omni Scale"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1080/14779072.2019.1561278"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 79,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2019-02-12",
+    "dateOfCreation": "2018-12-21",
+    "dateOfRevision": "2019-02-15",
+    "electronicPublicationDate": "2019-01-07",
+    "firstPublicationDate": "2019-01-07",
+    "firstIndexDate": "2018-12-31",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

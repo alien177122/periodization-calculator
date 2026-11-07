@@ -34,9 +34,9 @@ function volumeLabel(week: PreviewChartWeek): string {
 function phaseHint(week: PreviewChartWeek): string {
   if (week.isTestWeek) {
     if (week.pct != null) {
-      return `по программе ${week.pct}% · повторы на отказе`;
+      return `по программе ${week.pct}% · повторения на отказе`;
     }
-    return 'введите вес×повторы после отказа';
+    return 'введи вес × повторения после отказа';
   }
   const label = week.phaseLabel;
   if (label === 'Разгрузка') return 'восстановление';

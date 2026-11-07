@@ -11,16 +11,12 @@
  * Dark: whisper of split purple into the glass fill; Ghost bisect unchanged.
  */
 html[data-theme='light'] .app-shell .ta-shell.ta-shell--split {
-  background: color-mix(in srgb, var(--accent, #ffb020) 5%, var(--surface, #ffffff));
-  border-color: color-mix(
-    in srgb,
-    var(--accent, #ffb020) 14%,
-    var(--border-subtle, rgba(0, 0, 0, 0.08))
-  );
+  background: #f5f5f7;
+  border-color: rgba(0, 0, 0, 0.07);
 }
 
 html[data-theme='light'] .app-shell .ta-shell.ta-shell--split::before {
-  opacity: 0.55;
+  opacity: 0;
   background: radial-gradient(
     ellipse 72% 88% at 6% 18%,
     color-mix(in srgb, var(--accent, #ffb020) 10%, transparent) 0%,
@@ -29,7 +25,7 @@ html[data-theme='light'] .app-shell .ta-shell.ta-shell--split::before {
 }
 
 html[data-theme='light'] .app-shell .ta-shell.ta-shell--split::after {
-  opacity: 0.4;
+  opacity: 0;
   background: radial-gradient(
     ellipse 58% 72% at 94% 82%,
     color-mix(in srgb, var(--accent-soft, var(--accent, #ffb020)) 10%, transparent) 0%,
@@ -43,6 +39,32 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
     var(--ta-sec-04, #d946ef) 7%,
     color-mix(in srgb, var(--surface, #141415) 76%, transparent)
   );
+}
+
+/* Бар «АТЛЕТ» и шапка сплита не должны стоять далеко друг от друга:
+   дефолт .ta-stack даёт margin-top 28px + padding-top 20px воздуха. */
+.app-shell .ta-shell.ta-shell--split > .ta-stack {
+  margin-top: var(--space-1);
+  padding-top: var(--space-3);
+}
+
+/* Первая секция сплита начинаем компактнее — воздух внутри её рамки
+   был 40px, что после сокращения внешних отступов смотрится дырой. */
+.app-shell .ta-shell.ta-shell--split > .ta-stack > .ta-calc-section:first-child .ta-section-inner {
+  padding-top: var(--space-5);
+}
+
+/* Головную секцию «01 Профиль и сплиты» выравниваем по центру — в тон
+   центрированным блокам тулбара/хаба (.split-toolbar__splits-title,
+   .split-hub__block--profiles). Только первая секция: у «03»/«04» тот же
+   класс, но их заголовки остаются слева. */
+.app-shell .ta-shell.ta-shell--split > .ta-stack > .ta-calc-section:first-child .ta-section-head {
+  align-items: center;
+  text-align: center;
+}
+
+.app-shell .ta-shell.ta-shell--split > .ta-stack > .ta-calc-section:first-child .ta-section-pill {
+  align-self: center;
 }
 
 .split-validation {
@@ -64,68 +86,98 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
   gap: var(--space-4);
 }
 
-.split-toolbar__primary {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: var(--space-3);
-  align-items: end;
+/* «Дней в неделю» — отдельный центрированный блок под названием сплита. */
+.split-toolbar__days {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
 }
 
-.split-toolbar__secondary {
+.split-toolbar .split-toolbar__days .split-segment {
+  align-self: center;
+  width: min(360px, 100%);
+}
+
+/* Выбор сплита — в одной плоскости с блоком «ПРОФИЛИ»: центрированный узел,
+   выбранный сплит «карточкой» с ✎/«Удалить» на правом краю,
+   справа в той же линии — жёлтый «+ Новый сплит». */
+.split-toolbar__splits {
   --split-toolbar-control-min: 2.75rem;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  grid-template-rows: auto minmax(var(--split-toolbar-control-min), auto);
-  column-gap: var(--space-3);
-  row-gap: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: min(520px, 100%);
+  margin-inline: auto;
 }
 
-.split-toolbar__saved {
-  display: grid;
-  grid-column: 1;
-  grid-row: 1 / -1;
-  grid-template-rows: subgrid;
+.split-toolbar__splits .split-toolbar__splits-title {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.split-toolbar__split-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--space-2);
   min-width: 0;
 }
 
-.split-toolbar__saved .split-toolbar__field {
-  display: grid;
-  grid-row: 1 / -1;
-  grid-template-rows: subgrid;
+.split-toolbar__split-inline {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
 }
 
-.split-toolbar__saved .split-picker,
-.split-toolbar__saved .ew-select {
-  align-self: stretch;
-  min-height: 0;
+/* Триггер меню растворяется в плоскости ряда — выглядит единым полем, */
+.split-toolbar__split-inline .split-picker {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-.split-toolbar__saved .ew-select {
+.split-toolbar__split-inline .ew-trigger {
+  min-height: 2.75rem;
   height: 100%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  padding-inline: var(--space-3);
 }
 
-.split-toolbar__saved:empty {
-  display: none;
+.split-toolbar__splits .split-hub__icon-btn {
+  align-self: stretch;
+  min-height: 2.75rem;
 }
 
-.split-toolbar__saved:empty + .split-toolbar__actions {
-  grid-column: 1 / -1;
+.split-toolbar__splits .split-toolbar__action--primary {
+  flex: 0 0 auto;
+  align-self: stretch;
 }
 
-@container split-toolbar (max-width: 600px) {
-  .split-toolbar__primary,
-  .split-toolbar__secondary {
-    grid-template-columns: minmax(0, 1fr);
+.split-toolbar__splits .split-hub__icon-btn[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .split-toolbar__row .split-hub__icon-btn:hover:not(:disabled) {
+    color: var(--text-primary, var(--text));
+    border-color: var(--border-subtle, var(--border));
+    background: var(--overlay-subtle, transparent);
   }
 
-  .split-toolbar__saved {
-    grid-column: 1;
-    grid-row: auto;
-  }
-
-  .split-toolbar__actions {
-    grid-column: 1;
-    grid-row: auto;
+  .split-toolbar__action--primary:hover:not(:disabled) {
+    opacity: 0.92;
   }
 }
 
@@ -134,6 +186,28 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
   flex-direction: column;
   gap: var(--space-2);
   min-width: 0;
+}
+
+/* «Название сплита» — центрированный модуль, как «СПЛИТЫ ПРОФИЛЯ»:
+   подпись и подсказка — отдельные блоки по центру. */
+.split-toolbar__field--grow {
+  width: min(520px, 100%);
+  margin-inline: auto;
+  align-items: center;
+}
+
+/* Подпись поля — свой блок, текст по центру. */
+.split-toolbar__field--grow .split-toolbar__label {
+  width: 100%;
+  text-align: center;
+}
+
+/* Подсказка — отдельный центрированный контейнер (больше не липнет к подписи). */
+.split-toolbar__field--grow .split-toolbar__help {
+  width: 100%;
+  max-width: 26rem;
+  margin: 0;
+  text-align: center;
 }
 
 .split-toolbar__label,
@@ -231,17 +305,6 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
   color: #0a0a0b;
 }
 
-.split-toolbar__actions {
-  grid-column: 2;
-  grid-row: 2;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-  align-self: stretch;
-  gap: var(--space-2);
-}
-
 .split-toolbar__action {
   display: inline-flex;
   align-items: center;
@@ -268,6 +331,11 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
     opacity var(--duration-micro) var(--ease-out);
 }
 
+.split-toolbar__row .split-toolbar__action {
+  align-self: flex-end;
+  flex: 0 0 auto;
+}
+
 .split-toolbar__action:active:not(:disabled) {
   transform: scale(0.98);
   opacity: 0.92;
@@ -289,13 +357,8 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
   color: var(--text);
 }
 
-.split-toolbar__action--muted {
-  border-color: var(--border);
-  background: var(--surface-raised);
-  color: var(--text-secondary);
-}
-
-.split-toolbar__action--save {
+/* Жёлтая CTA — «+ Новый сплит», в тон «База силовых профиля». */
+.split-toolbar__action--primary {
   border-color: var(--accent, #ffb020);
   background: var(--accent, #ffb020);
   color: var(--accent-fg, #0a0a0b);
@@ -315,6 +378,33 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
   .split-toolbar__action--save:hover {
     opacity: 0.92;
   }
+}
+
+/* Повторить/Сохранить — отдельный ряд действий под строкой сплита. */
+.split-toolbar__actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.split-toolbar__actions .split-toolbar__action {
+  flex: 0 0 auto;
+}
+
+.split-toolbar__action--muted {
+  border-color: var(--border);
+  background: var(--surface-raised);
+  color: var(--text-secondary);
+}
+
+.split-toolbar__action--save {
+  border-color: var(--accent, #ffb020);
+  background: var(--accent, #ffb020);
+  color: var(--accent-fg, #0a0a0b);
+  font-weight: 600;
 }
 
 .split-toolbar__action-icon {
@@ -354,6 +444,29 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
   padding: var(--space-1);
   border-radius: var(--radius-sm);
   background: var(--surface);
+}
+
+.split-toolbar .split-segment {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: 2.75rem;
+  padding: 2px;
+  align-self: stretch;
+}
+
+.split-toolbar .split-segment__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  padding: 0 var(--space-2);
+  white-space: nowrap;
 }
 
 .split-segment--compact {
@@ -460,13 +573,8 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
 }
 
 @container split-toolbar (min-width: 26rem) {
-  .split-toolbar__actions {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .split-toolbar__action {
-    width: auto;
+  .split-toolbar__days .split-segment {
+    width: min(360px, 100%);
   }
 }
 
@@ -497,12 +605,6 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
 
   .split-toolbar__top--solo {
     grid-template-columns: minmax(0, 1fr) auto;
-  }
-
-  .split-toolbar__actions {
-    grid-template-columns: auto auto auto;
-    width: max-content;
-    margin-left: auto;
   }
 
   .split-toolbar__settings {
@@ -539,14 +641,22 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
 }
 
 @container split-toolbar (max-width: 430px) {
-  .split-toolbar__actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-2);
+  .split-toolbar .split-segment__btn {
+    font-size: var(--type-12);
+    padding: 0 var(--space-1);
   }
 
-  .split-toolbar__action--save {
-    grid-column: 1 / -1; /* Кнопка "Сохранить" на всю ширину */
+  /* Узкий экран: узел на всю ширину, «+ Новый сплит» — полноразмерной жёлтой. */
+  .split-toolbar__splits {
+    width: 100%;
+  }
+
+  .split-toolbar__split-inline {
+    flex: 1 1 100%;
+  }
+
+  .split-toolbar__splits .split-toolbar__action--primary {
+    flex: 1 1 100%;
   }
 }
 
@@ -1145,155 +1255,224 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 16%, transparent);
 }
 
-/* Preview */
+/* История расчётов — тихие карточки в едином стиле хаба. */
 .split-calculation-history {
   display: grid;
   gap: var(--space-3);
-  margin-bottom: var(--space-4);
+  margin: 0;
+  min-width: 0;
 }
 
 .split-calculation-history__head {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
 }
 
+/* Подпись блока — в одном ритме с «ПРОФИЛИ» из хаба. */
 .split-calculation-history__head h3 {
   margin: 0;
-  color: var(--text);
-  font-size: var(--type-18);
+  color: var(--text-secondary);
+  font-size: var(--type-12);
   font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
+/* Счётчик расчётов — спокойный пиллюльный бейдж. */
 .split-calculation-history__head span {
+  min-width: 24px;
+  padding: 2px 9px;
+  border: var(--border-width-hairline) solid var(--border);
+  border-radius: 999px;
   color: var(--text-secondary);
   font-size: var(--type-12);
   font-variant-numeric: tabular-nums;
+  line-height: 1.4;
+  text-align: center;
 }
 
 .split-calculation-history__list {
   display: grid;
   gap: var(--space-2);
+  min-width: 0;
 }
 
 .split-calculation-card-wrap {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: stretch;
-  gap: var(--space-2);
+  position: relative;
+  display: block;
+  min-width: 0;
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
 }
 
-.split-calculation-card-wrap.is-active .split-calculation-card {
-  border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 10%, var(--surface-raised));
+.split-calculation-card-wrap.is-active {
+  border-color: color-mix(in srgb, var(--accent) 42%, transparent);
+  background: color-mix(in srgb, var(--accent) 6%, var(--surface-raised));
 }
 
 .split-calculation-card {
   appearance: none;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-2);
   width: 100%;
-  min-height: 4.5rem;
-  padding: 14px var(--space-4);
-  border: var(--border-width) solid var(--border);
-  border-radius: var(--radius-md);
-  background: var(--surface-raised);
+  min-width: 0;
+  padding: var(--space-4) 52px var(--space-4) var(--space-4);
+  border: none;
+  border-radius: inherit;
+  background: transparent;
   color: var(--text);
   font: inherit;
   text-align: left;
   cursor: pointer;
-  transition:
-    transform var(--duration-micro) var(--ease-out),
-    border-color var(--duration-micro) var(--ease-out),
-    background var(--duration-micro) var(--ease-out);
 }
 
-.split-calculation-card-wrap .split-calculation-card.is-active,
-.split-calculation-card.is-active {
-  border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 10%, var(--surface-raised));
+.split-calculation-card:active:not(:disabled) {
+  transform: scale(0.995);
 }
 
-.split-calculation-card__copy {
-  display: grid;
-  gap: var(--space-1);
+.split-calculation-card__top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
   min-width: 0;
 }
 
-.split-calculation-card__copy strong {
+.split-calculation-card__title {
+  flex: 1 1 auto;
+  min-width: 0;
   overflow: hidden;
   color: var(--text);
-  font-size: var(--type-16);
+  font-size: 17px;
   font-weight: 600;
+  letter-spacing: -0.01em;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.split-calculation-card__copy span {
+/* Прогресс расчёта: доля отмеченных недель правым титлом + мини-полоска. */
+.split-calculation-card__metric {
+  flex: 0 0 auto;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.split-calculation-card__metric-label {
+  margin-left: 1px;
   color: var(--text-secondary);
   font-size: var(--type-12);
-  line-height: 1.4;
+  font-weight: 500;
 }
 
-.split-calculation-card__program {
-  display: grid;
+/* /8 отмеченных недель читается одной полоской вместо строки текста. */
+.split-calculation-card__progress {
+  height: 3px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--text) 8%, transparent);
+  overflow: hidden;
+}
+
+.split-calculation-card__progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: color-mix(in srgb, var(--accent) 80%, transparent);
+  transition: width var(--duration-short) var(--ease-out);
+}
+
+/* Мета-информация — короткие чипы вместо «стены текста». */
+.split-calculation-card__chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: var(--space-1);
-  margin-top: var(--space-1);
-  color: var(--text);
-  font-size: var(--type-14);
-  line-height: 1.45;
-  overflow-wrap: anywhere;
 }
 
-.split-calculation-card__program span {
-  color: inherit;
-  font-size: inherit;
-}
-
-.split-calculation-card__action {
-  display: grid;
-  justify-items: end;
-  gap: var(--space-1);
+.split-calculation-card__chip {
+  padding: 3px 10px;
+  border: var(--border-width-hairline) solid var(--border);
+  border-radius: 999px;
   color: var(--text-secondary);
   font-size: var(--type-12);
   line-height: 1.3;
   white-space: nowrap;
 }
 
-.split-calculation-card__metric {
-  color: var(--accent);
-  font-size: var(--type-16);
+.split-calculation-card__chip--state {
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
+/* Дни программы: бейдж дня + плотная строка упражнений. */
+.split-calculation-card__program {
+  display: grid;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: var(--border-width-hairline) solid var(--border);
+}
+
+.split-calculation-card__program-row {
+  display: flex;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.split-calculation-card__program-day {
+  flex: 0 0 auto;
+  min-width: 26px;
+  padding: 2px 6px;
+  border: var(--border-width-hairline) solid var(--border);
+  border-radius: calc(var(--radius-sm) - 4px);
+  color: var(--text-secondary);
+  font-size: 11px;
   font-weight: 600;
-  font-variant-numeric: tabular-nums;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.split-calculation-card__program-copy {
+  color: var(--text-secondary);
+  font-size: var(--type-12);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+/* Широкий экран: дни программы — в два столбца. */
+@media (min-width: 720px) {
+  .split-calculation-card__program {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2) var(--space-4);
+  }
 }
 
 .split-calculation-card:focus-visible {
-  border-color: var(--accent);
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--accent, #ffb020);
   outline-offset: 2px;
 }
 
 .split-calculation-card__delete {
   appearance: none;
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  width: 2.75rem;
-  min-height: 2.75rem;
+  width: 40px;
+  height: 40px;
+  margin: 0;
   padding: 0;
-  border: var(--border-width) solid var(--border);
-  border-radius: var(--radius-md);
-  background: var(--surface-raised);
+  border: var(--border-width-hairline) solid transparent;
+  border-radius: calc(var(--radius-sm) - 2px);
+  background: transparent;
   color: var(--text-secondary);
   cursor: pointer;
-  transition:
-    border-color var(--duration-micro) var(--ease-out),
-    color var(--duration-micro) var(--ease-out),
-    background var(--duration-micro) var(--ease-out);
 }
 
 .split-calculation-card__delete:focus-visible {
@@ -1371,29 +1550,16 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .split-calculation-card:hover {
-    border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
-    transform: translateY(-2px);
+  .split-calculation-card-wrap:hover:not(.is-active) {
+    border-color: var(--border-strong, color-mix(in srgb, var(--text) 22%, var(--border)));
+  }
+
+  .split-calculation-card-wrap.is-active:hover {
+    border-color: color-mix(in srgb, var(--accent) 50%, transparent);
   }
 }
 
 @media (max-width: 430px) {
-  .split-calculation-card-wrap {
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--space-1);
-  }
-
-  .split-calculation-card {
-    align-items: start;
-    padding-inline: var(--space-3);
-  }
-
-  .split-calculation-card__delete {
-    align-self: stretch;
-    width: 2.75rem;
-    min-height: 4.5rem;
-  }
-
   .split-preview__frame {
     padding: var(--space-4);
     border-radius: var(--radius-md);
@@ -1807,9 +1973,12 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .split-calculation-card {
+  .split-calculation-card,
+  .split-calculation-card__progress-fill,
+  .split-calculation-delete-dialog {
     transition: none !important;
     transform: none !important;
+    animation: none !important;
   }
 
   .split-preview .split-week-btn {
@@ -2121,9 +2290,9 @@ html[data-theme='light'] .one-rm-display__value--empty {
   font-weight: 400;
 }
 
-/* ===== Split primary CTAs (calculate + mark week) =====
-   Match calc-test__submit: solid --accent + --accent-fg, full-width.
-   Override .btn nowrap/letter-spacing so long RU labels fit on ≤430px. */
+/* ===== Split primary CTAs =====
+   Fill/type come from Calculator `.btn.calc-test__submit`.
+   These rules only keep long RU labels wrapping on ≤430px. */
 .split-calculate-container {
   display: flex;
   justify-content: center;
@@ -2134,81 +2303,277 @@ html[data-theme='light'] .one-rm-display__value--empty {
 
 .split-calculate-btn,
 .split-week-done-btn {
-  appearance: none;
-  -webkit-appearance: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
   width: 100%;
   max-width: 100%;
-  min-height: 3rem;
-  margin: 0;
-  padding: var(--space-3) var(--space-4);
-  border: none;
-  border-radius: 12px;
-  background: var(--accent);
-  color: var(--accent-fg, #0a0a0b);
-  font-family: inherit;
-  font-size: var(--type-14);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  line-height: 1.3;
-  text-align: center;
-  text-transform: uppercase;
   white-space: normal;
   overflow-wrap: break-word;
-  cursor: pointer;
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.04),
-    0 4px 12px rgba(0, 0, 0, 0.08);
-  transition:
-    background var(--duration-micro) var(--ease-micro),
-    transform var(--duration-micro) var(--ease-micro),
-    opacity var(--duration-micro) var(--ease-micro);
 }
 
-.split-calculate-btn:hover,
-.split-week-done-btn:hover:not(.btn-ghost) {
-  background: var(--accent-hover);
-}
-
-.split-calculate-btn:active,
-.split-week-done-btn:active {
-  transform: scale(0.98);
-}
-
-/* Done-state: keep full-width layout, use ghost token instead of accent fill */
 .split-week-done-btn.btn-ghost {
-  background: transparent;
-  color: var(--muted);
-  border: var(--border-width) solid var(--border);
+  background: var(--overlay-subtle, transparent);
+  color: var(--text-soft, var(--muted));
+  border: var(--border-width) solid var(--border-subtle, var(--border));
   box-shadow: none;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
-@media (max-width: 768px) {
-  .split-calculate-btn,
-  .split-week-done-btn {
-    font-size: var(--type-12);
-    letter-spacing: 0.02em;
-    padding: var(--space-3) var(--space-4);
-  }
-}
-
-@media (max-width: 430px) {
-  .split-calculate-btn,
-  .split-week-done-btn {
-    font-size: 11px;
-    letter-spacing: 0.01em;
-    line-height: 1.35;
-    min-height: 3rem;
-    padding-block: 10px;
+@media (hover: hover) and (pointer: fine) {
+  .split-week-done-btn.btn-ghost:hover {
+    background: var(--overlay-soft, var(--overlay-hover));
+    border-color: var(--border);
+    color: var(--text-strong, var(--text));
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .split-calculate-btn:active,
   .split-week-done-btn:active {
+    transform: none;
+  }
+}
+
+/* Profile panel — same surface and tokens as the rest of the split section. */
+.split-profile {
+  background: transparent;
+  color: var(--text);
+  box-shadow: none;
+}
+
+.split-profile__form,
+.split-profile__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.split-profile__group {
+  padding: var(--space-4);
+}
+
+.split-profile__group + .split-profile__group,
+.split-profile .split-validation,
+.split-profile .split-calculation-history {
+  border-top: var(--border-width-hairline) solid var(--border);
+}
+
+.split-profile .split-validation,
+.split-profile .split-calculation-history {
+  margin: 0;
+  padding: var(--space-4);
+}
+
+.split-profile__label {
+  color: var(--text-secondary);
+  font-size: var(--type-12);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.split-profile__help,
+.split-profile__empty {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--text-secondary);
+  font-size: var(--type-14);
+  line-height: 1.5;
+}
+
+.split-profile__input {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+}
+
+.split-profile__input::placeholder {
+  color: var(--text-placeholder);
+}
+
+.split-profile__input:focus-visible,
+.split-profile__choice:focus-visible,
+.split-profile__segment-btn:focus-visible,
+.split-profile__secondary:focus-visible,
+.split-profile__save:focus-visible,
+.split-profile .split-calculation-card__delete:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.split-profile__choices {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.split-profile__choices li + li {
+  border-top: var(--border-width-hairline) solid var(--border);
+}
+
+.split-profile__choice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  width: 100%;
+  min-height: 44px;
+  padding: var(--space-2) var(--space-1);
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.split-profile__choice[aria-pressed='true'] {
+  font-weight: 600;
+}
+
+.split-profile__choice-meta {
+  flex: 0 0 auto;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .split-profile__choice:hover {
+    background: var(--overlay-hover);
+  }
+}
+
+.split-profile__split-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(168px, 220px);
+  gap: var(--space-4);
+  align-items: end;
+}
+
+.split-profile__days {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.split-profile__segment {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+}
+
+.split-profile__segment-btn {
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: var(--type-14);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.split-profile__segment-btn[aria-checked='true'] {
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: var(--shadow-1);
+}
+
+.split-profile__group > .split-profile__secondary {
+  align-self: flex-start;
+}
+
+.split-profile__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.split-profile__secondary,
+.split-profile__save {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.15;
+  text-align: center;
+  cursor: pointer;
+}
+
+.split-profile__actions > .split-profile__secondary,
+.split-profile__actions > .split-profile__save {
+  flex: 0 0 88px;
+  width: 88px;
+  height: 88px;
+  min-width: 88px;
+  min-height: 88px;
+  padding: var(--space-1);
+  font-size: 13px;
+  white-space: normal;
+}
+
+.split-profile__secondary {
+  border: var(--border-width) solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.split-profile__secondary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.split-profile__save {
+  border: none;
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+.split-profile__save:active,
+.split-profile__secondary:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+@media (max-width: 680px) {
+  .split-profile__split-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .split-profile__actions > .split-profile__secondary,
+  .split-profile__actions > .split-profile__save {
+    flex-basis: 72px;
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    min-height: 72px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .split-profile__save:active,
+  .split-profile__secondary:active:not(:disabled) {
     transform: none;
   }
 }

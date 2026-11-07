@@ -176,7 +176,7 @@ export function StrengthFormulaSection() {
 
         <div
           className="ta-strength-formula"
-          aria-label="Формула силы: специфичность умножить на тяжёлые экспозиции, умножить на восстановление, умножить на качество повторов, минус лишняя усталость">
+          aria-label="Формула силы: специфичность умножить на тяжёлые экспозиции, умножить на восстановление, умножить на качество повторений, минус лишняя усталость">
           {FORMULA_PARTS.map((part, index) => (
             <span key={part.id} className="ta-strength-formula__pair">
               <span
@@ -274,10 +274,11 @@ export function StrengthFormulaSection() {
           ))}
         </ul>
         <p className="ta-strength-note ta-strength-note--compact">
-          Вес округляется вверх к ближайшим 2.5 кг: {STRENGTH_FORMULA_OVERVIEW.rounding}.
+          Вес округляется вверх к ближайшим 2,5 кг: {STRENGTH_FORMULA_OVERVIEW.rounding}.
         </p>
         <p className="ta-strength-note ta-strength-note--compact" style={{ marginTop: '8px' }}>
-          💡 За сессию обычно достаточно ~1–2 качественных тяжёлых прямых сетов в движении; объём — back-off.
+          💡 За сессию обычно достаточно 1–2 качественных тяжёлых прямых подходов в упражнении;
+          объём добирается back-off подходами.
         </p>
       </StrengthBlock>
 

@@ -11,6 +11,7 @@ import type {
   CustomSplit,
   SavedExercise,
   SplitDayConfig,
+  SplitDayNumber,
   SplitMuscleId,
   WeekScheme,
 } from '../types/index.ts';
@@ -91,18 +92,20 @@ function daysForMuscle(split: CustomSplit, muscle: SplitMuscleId): SplitDayConfi
 
 export interface BuildPreviewParams {
   split: CustomSplit;
-  dayNumber: 1 | 2 | 3;
+  dayNumber: SplitDayNumber;
   weekIndex: number;
   savedExercises: SavedExercise[];
 }
 
-function excludedKeysForDay(split: CustomSplit, dayNumber: 1 | 2 | 3): Set<string> {
+function excludedKeysForDay(split: CustomSplit, dayNumber: SplitDayNumber): Set<string> {
   return new Set(split.excludedExercisesByDay?.[dayNumber] ?? []);
 }
 
-export function exerciseKeysForDay(split: CustomSplit, dayNumber: 1 | 2 | 3): string[] {
+export function exerciseKeysForDay(split: CustomSplit, dayNumber: SplitDayNumber): string[] {
   if (split.customExercisesByDay) {
-    return (split.customExercisesByDay[dayNumber] ?? []).filter(key => Boolean(CATALOG_EXERCISES[key]));
+    return (split.customExercisesByDay[dayNumber] ?? []).filter(key =>
+      Boolean(CATALOG_EXERCISES[key]),
+    );
   }
 
   const day = split.days.find(entry => entry.dayNumber === dayNumber);
@@ -142,7 +145,10 @@ export function exerciseKeysForDay(split: CustomSplit, dayNumber: 1 | 2 | 3): st
 }
 
 /** Exercise keys removed from a day but available for restore in the constructor UI. (Deprecated) */
-export function excludedExerciseKeysForDay(split: CustomSplit, dayNumber: 1 | 2 | 3): string[] {
+export function excludedExerciseKeysForDay(
+  split: CustomSplit,
+  dayNumber: SplitDayNumber,
+): string[] {
   return (split.excludedExercisesByDay?.[dayNumber] ?? []).filter(key => CATALOG_EXERCISES[key]);
 }
 
@@ -150,7 +156,7 @@ export function excludedExerciseKeysForDay(split: CustomSplit, dayNumber: 1 | 2 
 export function migrateToCustomExercises(split: CustomSplit): CustomSplit {
   if (split.customExercisesByDay) return split;
 
-  const migrated: Partial<Record<1 | 2 | 3, string[]>> = {};
+  const migrated: Partial<Record<SplitDayNumber, string[]>> = {};
   for (const day of split.days) {
     migrated[day.dayNumber] = exerciseKeysForDay(split, day.dayNumber);
   }

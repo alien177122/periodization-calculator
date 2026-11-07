@@ -12,16 +12,12 @@ interface TabPanelFallbackProps {
   tab: AppTab;
 }
 
-/** Lightweight shell placeholder while a lazy tab chunk loads. */
+/** Small spinning mark while a lazy tab chunk loads. */
 export function TabPanelFallback({tab}: TabPanelFallbackProps) {
   return (
-    <div className="ta-shell tab-panel-fallback" role="status" aria-live="polite" aria-busy="true">
-      <p className="tab-panel-fallback__label">Загрузка: {TAB_LABELS[tab]}</p>
-      <div className="tab-panel-fallback__skeleton" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-      </div>
+    <div className="tab-panel-fallback" role="status" aria-live="polite" aria-busy="true">
+      <p className="tab-panel-fallback__status">Загрузка: {TAB_LABELS[tab]}</p>
+      <span className="tab-panel-fallback__spinner" aria-hidden="true" />
     </div>
   );
 }

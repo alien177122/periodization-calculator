@@ -14,6 +14,7 @@ export default defineConfig([
     'desktop-dist',
     '_archive-non-web',
     'canon/_archive-non-web',
+    '**/DerivedData',
     'public',
     'scripts',
     'workspace-files',

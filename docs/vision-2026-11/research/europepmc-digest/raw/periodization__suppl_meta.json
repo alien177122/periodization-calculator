@@ -1,0 +1,844 @@
+{
+ "version": "6.9",
+ "hitCount": 4,
+ "request": {
+  "queryString": "(ABSTRACT:\"block periodization\" AND ABSTRACT:strength)AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "40236825",
+    "source": "MED",
+    "pmid": "40236825",
+    "pmcid": "PMC11996837",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC11996837"
+     ]
+    },
+    "doi": "10.3389/fphys.2025.1568247",
+    "title": "Effectiveness of long-term cluster training and traditional resistance training in enhancing maximum strength in young adults: a systematic review and meta-analysis.",
+    "authorString": "Cui J, Yu Y, Xu Y, Wu H.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Cui J",
+       "lastName": "Cui",
+       "firstName": "Jiayue",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Sports Training, Wuhan Sports University, Wuhan, China."
+         },
+         {
+          "affiliation": "Research Center for High-Quality Development of Characteristic Competitive Sports, Wuhan Sports University, Wuhan, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Yu Y",
+       "lastName": "Yu",
+       "firstName": "Yin",
+       "initials": "Y",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Sports Training, Wuhan Sports University, Wuhan, China."
+         },
+         {
+          "affiliation": "Research Center for High-Quality Development of Characteristic Competitive Sports, Wuhan Sports University, Wuhan, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Xu Y",
+       "lastName": "Xu",
+       "firstName": "Yijun",
+       "initials": "Y",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Sports Training, Wuhan Sports University, Wuhan, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wu H",
+       "lastName": "Wu",
+       "firstName": "Hongyu",
+       "initials": "H",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Economics and Management School, Wuhan Sports University, Wuhan, China."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "16",
+     "journalIssueId": 3892895,
+     "dateOfPublication": "2025 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Front Physiol",
+      "title": "Frontiers in physiology",
+      "essn": "1664-042X",
+      "issn": "1664-042X",
+      "nlmid": "101549006",
+      "isoabbreviation": "Front Physiol"
+     },
+     "printPublicationDate": "2025-01-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "1568247",
+    "abstractText": "<h4>Background</h4>It is still unclear whether traditional resistance training (TRT) provides the best or optimal stimulation for increasing maximum strength compared to cluster training (CT).<h4>Objective</h4>This study assessed the long-term impact of cluster training on the augmentation of maximum strength in young adults through the implementation of meta-analysis and further investigation of the factors associated with training duration.<h4>Method</h4>Literature was searched in Web of Science, Pub Med, EBSCOhost, SPORTDiscus, and Google Scholar. After screening, 21 articles and 49 reports were included. Revman 5.4 was used for literature quality evaluation, heterogeneity testing, and data consolidation. Stata 15.1 was used for drawing forest plots, subgroup analysis, taking sensitivity analysis and meta-regression to explore the sources of heterogeneity, creating a funnel plot to evaluate publication bias, quantifying publication bias, and trimming and filling. The original protocol was prospectively registered at the PROSPERO (CRD42024547097).<h4>Result</h4>The random effects meta-analysis results showed significant heterogeneity (I<sup>2</sup> = 70.7%), SMD = 0.10, 95% confidence interval (CI) [-0.14, 0.33], indicating no difference between CT and TRT in general. However, considering training duration, CT was more effective in 4-8 weeks (SMD = 0.24, 95%CI [0.06, 0.42]), while TRT was better in 9-12 weeks (SMD = -1.54, 95%CI [-3.03, -0.05]). Sub-group analysis found that CT had a better effect on people aged 23 and above (SMD = 0.38, 95% CI [0.11, 0.65]), and there was no significant difference in sex and participant type.<h4>Conclusion</h4>Cluster training (CT) mitigates exercise-induced fatigue more effectively than traditional resistance training (TRT) and enables more efficient maximum strength growth within the initial 8 weeks, however, the converse holds after 9 weeks. For preparation periods of 8 weeks or less, such as a microcycle or a specific stage in block periodization, trainers are advised to adopt CT for enhancing or maintaining maximum strength. This suggests that trainers, when undertaking maximum strength training, whether short-term or long-term, can not only consider CT but also precisely schedule the time-course of resistance training modalities within continuous periodization. Specifically, they can switch to TRT after 8-weeks of CT to achieve more favorable training outcomes.<h4>Systematic review registration</h4>PROSPERO.",
+    "affiliation": "School of Sports Training, Wuhan Sports University, Wuhan, China.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "systematic-review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Meta-analysis",
+      "Young Adults",
+      "Maximum Strength",
+      "Cluster Training",
+      "Training Duration"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3389/fphys.2025.1568247"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11996837"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11996837?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 5,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2025-04-16",
+    "dateOfRevision": "2025-04-17",
+    "electronicPublicationDate": "2025-04-01",
+    "firstPublicationDate": "2025-04-01",
+    "firstIndexDate": "2025-04-17",
+    "fullTextReceivedDate": "2025-12-03",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "35445953",
+    "source": "MED",
+    "pmid": "35445953",
+    "pmcid": "PMC9023617",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC9023617"
+     ]
+    },
+    "doi": "10.1186/s40798-022-00445-8",
+    "title": "Reverse Periodization for Improving Sports Performance: A Systematic Review.",
+    "authorString": "González-Ravé JM, González-Mohino F, Rodrigo-Carranza V, Pyne DB.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "González-Ravé JM",
+       "lastName": "González-Ravé",
+       "firstName": "José M",
+       "initials": "JM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-5953-4742"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sports Training Laboratory, Faculty of Sports Sciences, University of Castilla-La Mancha, Carlos III Avenue, 45008, Toledo, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "González-Mohino F",
+       "lastName": "González-Mohino",
+       "firstName": "Fernando",
+       "initials": "F",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6327-6958"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sports Training Laboratory, Faculty of Sports Sciences, University of Castilla-La Mancha, Carlos III Avenue, 45008, Toledo, Spain. fernando.GMayoralas@uclm.es."
+         },
+         {
+          "affiliation": "Facultad de Ciencias de la Vida y de la Naturaleza, Universidad Nebrija, Madrid, Spain. fernando.GMayoralas@uclm.es."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rodrigo-Carranza V",
+       "lastName": "Rodrigo-Carranza",
+       "firstName": "Víctor",
+       "initials": "V",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1637-7550"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sports Training Laboratory, Faculty of Sports Sciences, University of Castilla-La Mancha, Carlos III Avenue, 45008, Toledo, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Pyne DB",
+       "lastName": "Pyne",
+       "firstName": "David B",
+       "initials": "DB",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1555-5079"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Health, Research Institute for Sport and Exercise, University of Canberra, Canberra, ACT, Australia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-5953-4742"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6327-6958"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1555-5079"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1637-7550"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "8",
+     "journalIssueId": 3335262,
+     "dateOfPublication": "2022 Apr",
+     "monthOfPublication": 4,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Sports Med Open",
+      "title": "Sports medicine - open",
+      "essn": "2198-9761",
+      "issn": "2199-1170",
+      "nlmid": "101662568",
+      "isoabbreviation": "Sports Med Open"
+     },
+     "printPublicationDate": "2022-04-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "56",
+    "abstractText": "<h4>Background</h4>Reverse periodization is commonly touted as a salient planning strategy to improve sport performance in athletes, but benefits have not been clearly described.<h4>Objectives</h4>We sought to identify the main characteristics of reverse periodization, and the influence of training volume and periodization models on enhancing physiological measures and sports performance.<h4>Design</h4>Systematic review.<h4>Methods</h4>The electronic databases Scopus, PubMed and Web of Science were searched using a comprehensive list of relevant terms.<h4>Results</h4>A total of 925 studies were identified, and after removal of duplicates and studies based on title and abstract screening, 17 studies remained, and 11 finally included in the systematic review. There was a total of 200 athletes in the included studies. Reverse periodization does not provide superior performance improvements in swimming, running, muscular endurance, maximum strength, or maximal oxygen uptake, compared to traditional or block periodization. The quality of evidence levels for the reverse periodization studies was 1b (individual randomized controlled trial) for two investigations, 2b (individual cohort study) for the remaining studies and a mean of 4.9 points in the PEDro scale (range 0-7).<h4>Conclusions</h4>It appears that reverse periodization is no more effective than other forms of periodization in improving sports performance. More comparative studies on this alternative version of periodization are required to verify its effectiveness and utility across a range of endurance sports.",
+    "affiliation": "Sports Training Laboratory, Faculty of Sports Sciences, University of Castilla-La Mancha, Carlos III Avenue, 45008, Toledo, Spain.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Model",
+      "Adaptation",
+      "Training",
+      "Athlete Development"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://sportsmedicine-open.springeropen.com/track/pdf/10.1186/s40798-022-00445-8"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1186/s40798-022-00445-8"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9023617"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9023617?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 11,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2022-04-21",
+    "dateOfRevision": "2022-07-16",
+    "electronicPublicationDate": "2022-04-21",
+    "firstPublicationDate": "2022-04-21",
+    "firstIndexDate": "2022-04-22",
+    "fullTextReceivedDate": "2022-05-10",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "35130511",
+    "source": "MED",
+    "pmid": "35130511",
+    "doi": "10.1123/ijspp.2021-0458",
+    "title": "The Science of Handcycling: A Narrative Review.",
+    "authorString": "Nevin J, Kouwijzer I, Stone B, Quittmann OJ, Hettinga F, Abel T, Smith PM.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Nevin J",
+       "lastName": "Nevin",
+       "firstName": "Jonpaul",
+       "initials": "J"
+      },
+      {
+       "fullName": "Kouwijzer I",
+       "lastName": "Kouwijzer",
+       "firstName": "Ingrid",
+       "initials": "I",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1012-3509"
+       }
+      },
+      {
+       "fullName": "Stone B",
+       "lastName": "Stone",
+       "firstName": "Ben",
+       "initials": "B"
+      },
+      {
+       "fullName": "Quittmann OJ",
+       "lastName": "Quittmann",
+       "firstName": "Oliver J",
+       "initials": "OJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6116-6747"
+       }
+      },
+      {
+       "fullName": "Hettinga F",
+       "lastName": "Hettinga",
+       "firstName": "Florence",
+       "initials": "F",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-7027-8126"
+       }
+      },
+      {
+       "fullName": "Abel T",
+       "lastName": "Abel",
+       "firstName": "Thomas",
+       "initials": "T"
+      },
+      {
+       "fullName": "Smith PM",
+       "lastName": "Smith",
+       "firstName": "Paul M",
+       "initials": "PM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6244-2029"
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8285-7507"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6116-6747"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6244-2029"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-7027-8126"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1012-3509"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "17",
+     "journalIssueId": 3343440,
+     "dateOfPublication": "2022 Mar",
+     "monthOfPublication": 3,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Int J Sports Physiol Perform",
+      "title": "International journal of sports physiology and performance",
+      "essn": "1555-0273",
+      "issn": "1555-0265",
+      "nlmid": "101276430",
+      "isoabbreviation": "Int J Sports Physiol Perform"
+     },
+     "printPublicationDate": "2022-03-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "335-342",
+    "abstractText": "The aim of this narrative review is to provide insight as to the history, biomechanics, and physiological characteristics of competitive handcycling. Furthermore, based upon the limited evidence available, this paper aims to provide practical training suggestions by which to develop competitive handcycling performance. Handbike configuration, individual physiological characteristics, and training history all play a significant role in determining competitive handcycling performance. Optimal handcycling technique is highly dependent upon handbike configuration. As such, seat positioning, crank height, crank fore-aft position, crank length, and handgrip position must all be individually configured. In regard to physiological determinants, power output at a fixed blood lactate concentration of 4 mmol·L-1, relative oxygen consumption, peak aerobic power output, relative upper body strength, and maximal anaerobic power output have all been demonstrated to impact upon handcycling performance capabilities. Therefore, it is suggested that that an emphasis be placed upon the development and frequent monitoring of these parameters. Finally, linked to handcycling training, it is suggested that handcyclists should consider adopting a concurrent strength and endurance training approach, based upon a block periodization model that employs a mixture of endurance, threshold, interval, and strength training sessions. Despite our findings, it is clear that several gaps in our scientific knowledge of handcycling remain and that further research is necessary in order to improve our understanding of factors that determine optimal performance of competitive handcyclists. Finally, further longitudinal research is required across all classifications to study the effects of different training programs upon handcycling performance.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hand Strength"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Oxygen Consumption",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Bicycling",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Endurance Training"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Biomechanics",
+      "Paralympic Sport",
+      "Handbiking",
+      "Applied Strength And Conditioning"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1123/ijspp.2021-0458"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 7,
+    "hasReferences": "N",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2022-04-15",
+    "dateOfCreation": "2022-02-07",
+    "dateOfRevision": "2022-08-29",
+    "electronicPublicationDate": "2022-02-07",
+    "firstPublicationDate": "2022-02-07",
+    "firstIndexDate": "2022-02-11",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "29372481",
+    "source": "MED",
+    "pmid": "29372481",
+    "doi": "10.1007/s40279-018-0862-z",
+    "title": "The Importance of Muscular Strength: Training Considerations.",
+    "authorString": "Suchomel TJ, Nimphius S, Bellon CR, Stone MH.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Suchomel TJ",
+       "lastName": "Suchomel",
+       "firstName": "Timothy J",
+       "initials": "TJ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Human Movement Sciences, Carroll University, Waukesha, WI, 53186, USA. timothy.suchomel@gmail.com."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Nimphius S",
+       "lastName": "Nimphius",
+       "firstName": "Sophia",
+       "initials": "S",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-3524-0245"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Exercise and Sports Science Research, Edith Cowan University, Joondalup, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bellon CR",
+       "lastName": "Bellon",
+       "firstName": "Christopher R",
+       "initials": "CR",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science, LaGrange College, LaGrange, GA, 30240, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Stone MH",
+       "lastName": "Stone",
+       "firstName": "Michael H",
+       "initials": "MH",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise and Sport Sciences, Center of Excellence for Sport Science and Coach Education, East Tennessee State University, Johnson City, TN, 37614, USA."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-3524-0245"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "4",
+     "volume": "48",
+     "journalIssueId": 2662529,
+     "dateOfPublication": "2018 Apr",
+     "monthOfPublication": 4,
+     "yearOfPublication": 2018,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "nlmid": "8412297",
+      "isoabbreviation": "Sports Med"
+     },
+     "printPublicationDate": "2018-04-01"
+    },
+    "pubYear": "2018",
+    "pageInfo": "765-785",
+    "abstractText": "This review covers underlying physiological characteristics and training considerations that may affect muscular strength including improving maximal force expression and time-limited force expression. Strength is underpinned by a combination of morphological and neural factors including muscle cross-sectional area and architecture, musculotendinous stiffness, motor unit recruitment, rate coding, motor unit synchronization, and neuromuscular inhibition. Although single- and multi-targeted block periodization models may produce the greatest strength-power benefits, concepts within each model must be considered within the limitations of the sport, athletes, and schedules. Bilateral training, eccentric training and accentuated eccentric loading, and variable resistance training may produce the greatest comprehensive strength adaptations. Bodyweight exercise, isolation exercises, plyometric exercise, unilateral exercise, and kettlebell training may be limited in their potential to improve maximal strength but are still relevant to strength development by challenging time-limited force expression and differentially challenging motor demands. Training to failure may not be necessary to improve maximum muscular strength and is likely not necessary for maximum gains in strength. Indeed, programming that combines heavy and light loads may improve strength and underpin other strength-power characteristics. Multiple sets appear to produce superior training benefits compared to single sets; however, an athlete's training status and the dose-response relationship must be considered. While 2- to 5-min interset rest intervals may produce the greatest strength-power benefits, rest interval length may vary based an athlete's training age, fiber type, and genetics. Weaker athletes should focus on developing strength before emphasizing power-type training. Stronger athletes may begin to emphasize power-type training while maintaining/improving their strength. Future research should investigate how best to implement accentuated eccentric loading and variable resistance training and examine how initial strength affects an athlete's ability to improve their performance following various training methods.",
+    "affiliation": "Department of Human Movement Sciences, Carroll University, Waukesha, WI, 53186, USA. timothy.suchomel@gmail.com.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Exercise"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Rest"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Athletic Performance",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Athletes"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-018-0862-z"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 514,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2018-11-19",
+    "dateOfCreation": "2018-01-27",
+    "dateOfRevision": "2026-10-12",
+    "firstPublicationDate": "2018-04-01",
+    "firstIndexDate": "2018-01-27",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

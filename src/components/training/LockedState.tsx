@@ -15,7 +15,7 @@ export default function LockedState({ missingExercises, onGoCalculator }: Locked
         <div className="locked-icon" aria-hidden="true">&#128274;</div>
         <div className="locked-title">Введи 1ПМ для всех упражнений</div>
         <div className="locked-desc">
-          Вкладка «Тренировка» станет доступна когда рассчитаны 1ПМ для всех {EX_COUNT} упражнений.
+          Вкладка «Тренировка» станет доступна, когда рассчитаны 1ПМ для всех {EX_COUNT} упражнений.
         </div>
         <div className="locked-missing">
           {missingExercises.map((name) => (
