@@ -143,7 +143,11 @@ _tmp_etalon_screenshots.mjs
 # — Релизные tarball (исходники остаются в истории, бинарники — вне git) —
 releases/**/*.tar.gz
 
-# — Кэши инструментов —
+# — CI-workflow: создан локально, но требует OAuth-скоуп `workflow` для пуша
+# (gh auth refresh -s workflow). Файл остаётся на диске и в истории git. —
+.github/workflows/ci.yml
+
+# — Кэхи инструментов —
 __pycache__/
 *.pyc
 *.pyo
