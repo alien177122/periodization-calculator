@@ -67,7 +67,7 @@ function buildSuggestedUse(kind) {
     case 'csv':
       return [
         'Показать на сайте как таблицу или прайс-лист',
-        'Импортировать в внутреннюю базу или витрину данных',
+        'Импортировать во внутреннюю базу или витрину данных',
       ];
     case 'text':
       return [
@@ -96,7 +96,7 @@ function buildOllamaHint(config) {
   return [
     `Запусти Ollama daemon: ollama serve`,
     `Подтяни модель: ollama pull ${config.model}`,
-    `Проверь endpoint: ${config.baseUrl}`,
+    // No endpoint URL here — the hint is returned to the API client (audit 2026-11-07).
   ];
 }
 
@@ -214,7 +214,6 @@ async function analyzeImageFile(filePath, env, ocrRunner) {
       metadata: {
         ocrProvider: 'ollama',
         model: result.model,
-        endpoint: result.baseUrl,
         linesExtracted: lines,
         ocrStatus: 'completed',
       },
@@ -224,14 +223,16 @@ async function analyzeImageFile(filePath, env, ocrRunner) {
       ],
     };
   } catch (error) {
+    // Audit 2026-11-07: raw Ollama error text (may include internal URL) stays
+    // in the server log only; the client gets a generic message + status.
+    console.warn('[file-workspace] OCR unavailable:', error);
     return {
       kind: 'image',
       summary: 'Изображение найдено, но OCR через Ollama недоступен',
-      preview: error instanceof Error ? error.message : 'Неизвестная ошибка OCR',
+      preview: 'OCR временно недоступен. Проверь, что Ollama запущена, и повтори анализ.',
       metadata: {
         ocrProvider: 'ollama',
         model: config.model,
-        endpoint: config.baseUrl,
         ocrStatus: 'unavailable',
       },
       suggestedUse: buildOllamaHint(config),
@@ -245,11 +246,10 @@ function analyzePdfFile(env) {
     kind: 'pdf',
     summary: 'PDF найден. Для GLM-OCR через Ollama сначала нужен рендер PDF в изображения страниц.',
     preview:
-      'Текущий pipeline OCR подключён для image-файлов. Следующий шаг: добавить PDF -> PNG conversion, затем отправлять страницы в glm-ocr.',
+      'Текущий pipeline OCR подключён для image-файлов. Следующий шаг: добавить конверсию PDF → PNG, затем отправлять страницы в glm-ocr.',
     metadata: {
       ocrProvider: 'ollama',
       model: config.model,
-      endpoint: config.baseUrl,
       ocrStatus: 'pdf-conversion-required',
     },
     suggestedUse: [
@@ -371,7 +371,9 @@ export function createFileWorkspace({
 
     return {
       paths: publicPaths(),
-      ocr: getOllamaOcrConfig(env),
+      // Audit 2026-11-07: only model + status go to the client; the internal
+      // Ollama base URL must not be disclosed (server-side concern).
+      ocr: {model: getOllamaOcrConfig(env).model, ocrStatus: 'configured'},
       files,
     };
   }

@@ -311,7 +311,7 @@ test('register endpoint validates required fields and duplicate users', async t 
     body: JSON.stringify({name: 'Steve', password: 'another-pass'}),
   });
   assert.equal(duplicate.response.status, 409);
-  assert.equal(duplicate.body.error, 'Пользователь уже существует');
+  assert.equal(duplicate.body.error, 'Такое имя уже занято. Придумай другое.');
 });
 
 test('PUT /api/users/:name rejects malformed or mismatched user payloads', async t => {
@@ -447,7 +447,7 @@ test('development localhost requests bypass auth rate limiting', async t => {
 
   assert.equal(wrong1.response.status, 401);
   assert.equal(wrong2.response.status, 401);
-  assert.equal(wrong2.body.error, 'Неверный логин или пароль');
+  assert.equal(wrong2.body.error, 'Неверное имя пользователя или пароль. Проверь написание и попробуй снова.');
 });
 
 test('non-development auth rate limiting still blocks repeated failures', async t => {
@@ -751,4 +751,79 @@ test('PUT /api/users/:name persists per-user split calculation history', async t
   assert.equal(get.body.splitCalculations[0].split.name, 'Силовой сплит');
   assert.deepEqual(get.body.splitCalculations[0].split.completedWeeks, [0, 1]);
   assert.equal(get.body.splitCalculations[0].exercises[0].oneRM, 116.7);
+});
+
+test('PUT /api/users/:name keeps profiles and does not drop another profile split', async t => {
+  const ctx = await createTestContext();
+  t.after(async () => ctx.close());
+
+  const register = await requestJson(ctx.baseUrl, '/api/auth/register', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({name: 'ProfileUser', password: 'squat123'}),
+  });
+  const token = register.body.token as string;
+
+  const days = [
+    {dayNumber: 1, muscles: ['chest', 'biceps']},
+    {dayNumber: 2, muscles: ['legs', 'back']},
+  ];
+  const stamp = '2026-10-10T10:00:00.000Z';
+
+  const put = await requestJson(ctx.baseUrl, '/api/users/ProfileUser', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({
+      name: 'ProfileUser',
+      exercises: [],
+      profiles: [
+        {id: 'profile-ivanov', name: 'Иванов', createdAt: stamp, updatedAt: stamp},
+        {id: 'profile-petrov', name: 'Петров', createdAt: stamp, updatedAt: stamp},
+      ],
+      activeProfileId: 'profile-ivanov',
+      splits: [
+        {
+          id: 'split-old',
+          name: 'Старый',
+          daysPerWeek: 2,
+          varyIntensity: true,
+          weightMode: 'progression',
+          days,
+          createdAt: stamp,
+          updatedAt: stamp,
+        },
+        {
+          id: 'split-petrov',
+          profileId: 'profile-petrov',
+          name: 'Тяга',
+          daysPerWeek: 2,
+          varyIntensity: true,
+          weightMode: 'progression',
+          days,
+          createdAt: stamp,
+          updatedAt: stamp,
+        },
+      ],
+    }),
+  });
+
+  assert.equal(put.response.status, 200);
+
+  const get = await requestJson(ctx.baseUrl, '/api/users/ProfileUser', {
+    headers: {Authorization: `Bearer ${token}`},
+  });
+
+  assert.equal(get.response.status, 200);
+  const profiles = get.body.profiles as Array<{id: string; name: string}>;
+  const splits = get.body.splits as Array<{id: string; profileId?: string; name: string}>;
+  const main = profiles.find(profile => profile.name === 'Основной');
+  assert.ok(main);
+  assert.equal(splits.find(split => split.id === 'split-old')?.profileId, main?.id);
+  assert.equal(splits.find(split => split.id === 'split-petrov')?.profileId, 'profile-petrov');
+  assert.equal(profiles.some(profile => profile.id === 'profile-petrov'), true);
+  assert.equal(get.body.activeProfileId, 'profile-ivanov');
+  assert.equal(splits.length, 2);
 });

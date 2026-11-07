@@ -34,12 +34,34 @@ function normalizedName(req) {
   return typeof req.body?.name === 'string' ? req.body.name.trim().toLowerCase() : '';
 }
 
+function isLocalProxyAddr(ip) {
+  // Loopback + RFC1918/ULA: the cloudflared tunnel or a local reverse proxy
+  // terminates here, so only then cf-connecting-ip may be considered.
+  const normalized = String(ip || '')
+    .trim()
+    .toLowerCase()
+    .replace(/^::ffff:/, '');
+  return (
+    normalized === '::1' ||
+    normalized === '127.0.0.1' ||
+    normalized.startsWith('fc') ||
+    normalized.startsWith('fd') ||
+    /^10\./.test(normalized) ||
+    /^192\.168\./.test(normalized) ||
+    /^172\.(1[6-9]|2\d|3[01])\./.test(normalized)
+  );
+}
+
 function requestIp(req) {
-  if (req.app && req.app.get('trust proxy')) {
-    const cfIp = req.headers['cf-connecting-ip'];
-    if (typeof cfIp === 'string' && cfIp.trim()) return cfIp.trim();
-  }
-  return req.ip || req.socket.remoteAddress || '127.0.0.1';
+  // Audit WC-13 (CWE-290): cf-connecting-ip is attacker-controlled unless the
+  // direct peer is our own local/tunnel proxy. Use the raw socket address as
+  // the gate; for direct clients ignore req.ip too (X-Forwarded-For could be
+  // spoofed under trust proxy) and rate-limit on the real socket address.
+  const socketIp = req.socket.remoteAddress || req.ip || '127.0.0.1';
+  if (!req.app?.get('trust proxy') || !isLocalProxyAddr(socketIp)) return socketIp;
+  const cfIp = req.headers['cf-connecting-ip'];
+  if (typeof cfIp === 'string' && cfIp.trim()) return cfIp.trim();
+  return req.ip || socketIp;
 }
 
 function isLoopbackIp(ip) {
@@ -126,7 +148,9 @@ export function createApp({
   app.disable('x-powered-by');
 
   if (env.TRUST_PROXY === '1' || env.TRUST_PROXY === 'true') {
-    app.set('trust proxy', true);
+    // Audit WC-13: trust exactly one proxy hop (the local tunnel/reverse
+    // proxy), not the whole X-Forwarded-For chain.
+    app.set('trust proxy', 1);
   }
 
   const fileWorkspace = createFileWorkspace({env});
@@ -157,27 +181,27 @@ export function createApp({
   function authAny(req, res, next) {
     const token = req.headers.authorization?.split(' ')[1];
     if (!token) {
-      return res.status(401).json({error: 'Нет токена'});
+      return res.status(401).json({error: 'Нет токена. Войди заново.'});
     }
 
     try {
       const payload = jwt.verify(token, config.jwtSecret, JWT_VERIFY_OPTIONS);
       const name = typeof payload?.name === 'string' ? payload.name : '';
-      if (!name) return res.status(401).json({error: 'Токен недействителен'});
+      if (!name) return res.status(401).json({error: 'Сессия недействительна. Войди заново.'});
 
       const tokenVersion = Number(payload.tv);
       const currentVersion = db.getTokenVersion(name);
       if (currentVersion === null) {
-        return res.status(401).json({error: 'Токен недействителен'});
+        return res.status(401).json({error: 'Сессия недействительна. Войди заново.'});
       }
       if (!Number.isFinite(tokenVersion) || tokenVersion !== currentVersion) {
-        return res.status(401).json({error: 'Токен недействителен'});
+        return res.status(401).json({error: 'Сессия недействительна. Войди заново.'});
       }
 
       req.user = {name, tv: currentVersion};
       next();
     } catch {
-      res.status(401).json({error: 'Токен недействителен'});
+      res.status(401).json({error: 'Сессия недействительна. Войди заново.'});
     }
   }
 
@@ -226,7 +250,7 @@ export function createApp({
     const policyError = passwordPolicyError(password);
     if (policyError) return res.status(400).json({error: policyError});
     if (db.userExists(trimmedName))
-      return res.status(409).json({error: 'Пользователь уже существует'});
+      return res.status(409).json({error: 'Такое имя уже занято. Придумай другое.'});
 
     const hash = await bcrypt.hash(password, 10);
     db.createUser(trimmedName, hash);
@@ -237,11 +261,15 @@ export function createApp({
 
   // Fixed bcrypt hash for timing parity when user is missing (not a real password).
   const LOGIN_DUMMY_HASH = '$2b$10$w1wsmd0bMGWpp2QdTT3Td.lADekYlXEFrxYKU39XTEk9xqWQrcrY2';
-  const LOGIN_ERROR = 'Неверный логин или пароль';
+  const LOGIN_ERROR = 'Неверное имя пользователя или пароль. Проверь написание и попробуй снова.';
 
   app.post('/api/auth/login', loginIpLimiter, loginNameLimiter, async (req, res) => {
     const {name, password} = req.body;
     if (!name?.trim() || !password) return res.status(400).json({error: 'Заполни все поля'});
+    // Same cap as register — reject before touching bcrypt (DoS via long input).
+    if (name.trim().length > USERNAME_MAX_LENGTH) {
+      return res.status(400).json({error: `Имя не длиннее ${USERNAME_MAX_LENGTH} символов`});
+    }
 
     const row = db.getUserAuth(name.trim());
     const hash = row?.password_hash || LOGIN_DUMMY_HASH;
@@ -412,7 +440,9 @@ export function createApp({
         if (err instanceof Error && err.message.includes('Access denied')) {
           res.status(400).json({error: err.message});
         } else {
-          res.status(500).json({error: 'Ошибка при анализе файла'});
+          res
+            .status(500)
+            .json({error: 'Не удалось разобрать файл. Проверь формат и попробуй ещё раз.'});
         }
       }
     },
