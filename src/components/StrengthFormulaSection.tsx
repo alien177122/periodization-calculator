@@ -11,8 +11,7 @@ import {
   type PriorityLevel,
   type StrengthScienceCard,
 } from '@training/shared/data/strength-formula';
-import type {MouseEvent, ReactNode} from 'react';
-import {useDetailsState} from '../hooks/useDetailsState';
+import type {ReactNode} from 'react';
 import {TierPyramid, type TierEntry} from './TierPyramid';
 
 const INTERNAL_NAV = [
@@ -111,28 +110,17 @@ function InfoRow({label, value}: {label: string; value: string}) {
 function ScienceDetailsGroup({
   group,
   cards,
-  defaultOpen,
 }: {
   group: string;
   cards: StrengthScienceCard[];
-  defaultOpen: boolean;
 }) {
-  const [open, setOpen] = useDetailsState(groupStorageId(group), defaultOpen);
-
-  const handleSummaryClick = (event: MouseEvent<HTMLElement>) => {
-    event.preventDefault();
-    setOpen(current => !current);
-  };
-
   const contentId = `strength-science-${groupStorageId(group)}`;
 
   return (
-    <details className={`ta-strength-science-group${open ? ' is-open' : ''}`} open={open}>
+    <details className="ta-strength-science-group">
       <summary
         className="ta-strength-science-group__summary"
-        aria-expanded={open}
-        aria-controls={contentId}
-        onClick={handleSummaryClick}>
+        aria-controls={contentId}>
         <span className="ta-strength-science-group__title">{group}</span>
         <span className="ta-strength-science-group__count">
           {cards.length} {cards.length === 1 ? 'карточка' : 'карточек'}
@@ -322,12 +310,11 @@ export function StrengthFormulaSection() {
 
       <StrengthBlock id="science" eyebrow="Доказательная база" title="Научные карточки">
         <div className="ta-strength-science">
-          {SCIENCE_CARD_GROUPS.map(([group, cards], index) => (
+          {SCIENCE_CARD_GROUPS.map(([group, cards]) => (
             <ScienceDetailsGroup
               key={group}
               group={group}
               cards={cards}
-              defaultOpen={index === 0}
             />
           ))}
         </div>
