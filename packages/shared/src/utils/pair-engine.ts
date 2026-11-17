@@ -1,4 +1,3 @@
-import {CATALOG_EXERCISES} from '../data/exercises.ts';
 import {MUSCLE_CONTRIB} from '../data/muscles.ts';
 
 /** Мышцы, конкуренция по которым считается конфликтом (основные). */

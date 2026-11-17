@@ -3,6 +3,7 @@ import type {TrainingDayDef, TrainingPreferences} from '../../types';
 import type {TrainingExerciseRow} from '../../utils/training';
 import TrainingDayCard from '../TrainingDayCard';
 import {ExerciseTimers} from './ExerciseTimers';
+import {BlockTimer} from './BlockTimer';
 import {SectionBlock} from '../SectionBlock';
 import {Button} from '../ui/Button';
 import ProgressionControls from './ProgressionControls';
@@ -46,6 +47,7 @@ export default function ActiveDayView({
         <ProgressionControls preferences={trainingPreferences} onChange={onPreferencesChange} />
         {currentDay ? (
           <>
+            <BlockTimer />
             <ExerciseTimers exercises={currentExercises} />
             <TrainingDayCard
               dayDef={currentDay}
