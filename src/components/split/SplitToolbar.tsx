@@ -14,6 +14,7 @@ interface SplitToolbarProps {
   onDuplicateLast: () => void;
   onSave: () => void;
   onCreateNew: () => void;
+  onMakeOwn?: () => void;
 }
 
 export function SplitToolbar({
@@ -28,6 +29,7 @@ export function SplitToolbar({
   onDuplicateLast,
   onSave,
   onCreateNew,
+  onMakeOwn,
 }: SplitToolbarProps) {
   return (
     <header className="app-tab-section split-toolbar">
@@ -138,6 +140,14 @@ export function SplitToolbar({
               onClick={onSave}>
               Сохранить
             </button>
+            {onMakeOwn ? (
+              <button
+                type="button"
+                className="split-toolbar__action split-toolbar__action--muted"
+                onClick={onMakeOwn}>
+                Сделать своим
+              </button>
+            ) : null}
           </div>
         </div>
       </div>

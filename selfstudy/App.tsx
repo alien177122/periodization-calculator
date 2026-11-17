@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import {getArticle} from './lib/content';
+import {getArticle, articleTitle} from './lib/content';
 import {ThemeToggle} from './components/ThemeToggle';
 import {TrackView} from './components/TrackView';
 import {ArticleView} from './components/ArticleView';
@@ -44,7 +44,7 @@ function SelfstudyApp() {
             <nav className="ss-aside" aria-label="Оглавление">
               <TrackView />
             </nav>
-            <ArticleView article={article} />
+            <ArticleView article={article} resolveTitle={articleTitle} />
           </>
         ) : (
           <div className="ss-main ss-main--full">

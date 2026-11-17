@@ -1,13 +1,17 @@
 {
-  "version": "0.1.0",
-  "updated": "2026-11-07",
+  "version": "0.3.0",
+  "updated": "2026-11-10",
   "description": "Мышечные карты нагрузки: степень стимула мышц в базовых упражнениях. Шкала 0–100 — степень стимула мышцы в упражнении (100 = целевая мышца получает полный стимул; доли не эксклюзивны и не обязаны суммироваться в 100).",
   "scale": "stimulus-intensity-0-100",
   "sourceCodes": {
     "repo:muscle-contrib": "packages/shared/src/data/muscles.ts → MUSCLE_CONTRIB — доли, уже используемые в расчёте объёма сплита (computeMuscleVolumeBreakdown); здесь нормализованы на целевую мышцу = 100",
     "estimate": "экспертная оценка по механике движения — в конспектах чисел нет, помечено «оценка»",
     "conspect:yeti:hExoSvXWi1M": "evolutionyeti-kb-2026-10-29/conspects/hExoSvXWi1M.md — качественный принцип: «какой разгибатель вносит главный вклад — тот и развивается; синергисты растут тоже» (направление, не число)",
-    "conspect:yeti:sq5BHxsS4nc": "evolutionyeti-kb-2026-10-29/conspects/sq5BHxsS4nc.md — качественный ориентир по задней цепи (румынская тяга/становая)"
+    "conspect:yeti:sq5BHxsS4nc": "evolutionyeti-kb-2026-10-29/conspects/sq5BHxsS4nc.md — качественный ориентир по задней цепи (румынская тяга/становая)",
+    "research:doi:10.1249/mss.0000000000003957": "Kinoshita, Maeo и др. (Med Sci Sports Exerc, 2026): внутри-индивидуальное РКИ, 12 нед, жим ногами vs разгибания (5×10 70%1ПМ, MRI 17 мышц): от жима GMax +15,4% и приводящая большая +6,2% (только от жима), вастусы +4,4–6,2% — на уровне разгибаний, вся QF +4,9 vs +7,1, прямая бедра +1,1% (против +13,2%); sEMG воспроизводит картину гипертрофии",
+    "research:doi:10.3389/fphys.2025.1542334": "Krause Neto, Gama (Front Physiol, 2025): систематический обзор и мета-анализ RT на гипертрофию GMax: умеренный эффект SMD 0.71 [0.50–0.91]; для целевой ягодичной приоритет — barbell hip thrust; приседы в параллель/полная глубина значимо растят GMax; жим ногами и разгибания стоя на коленях тоже дают прирост GMax",
+    "research:doi:10.7717/peerj.20785": "Lin и др. (PeerJ, 2026): систематический обзор hip thrust: качает специфическую силу (ES 0.53), переноса в присед/прыжок почти нет; комплимент программе, не замена (доказательство низкой уверенности)",
+    "anthropometry:long-femur": "антропометрия пользователя — параметр карты (длинное бедро сдвигает доли к ягодичным в жиме с высокой постановкой)"
   },
   "anthropometry": {
     "id": "long-femur",
@@ -28,10 +32,10 @@
       "id": "leg-press-high-foot",
       "name": "Жим ногами, высокая постановка",
       "group": "legs",
-      "sources": ["estimate", "repo:muscle-contrib(legPress)", "anthropometry:long-femur"],
+      "sources": ["research:doi:10.1249/mss.0000000000003957", "repo:muscle-contrib(legPress)", "anthropometry:long-femur", "estimate"],
       "anthropometrySensitive": true,
-      "comment": "Высокая постановка + длинное бедро: квадрицепс остаётся главным, но ягодичные получают заметную долю именно в растянутой (нижней) позиции. Доля ягодичных выше реповских 30% и зависит от глубины.",
-      "stimulus": {"quads": 85, "glutes": 65, "hamstrings": 30, "calves": 10}
+      "comment": "Пересмотрено по внутри-индивидуальному РКИ MSSE 2026: от жима ногами больше всего растёт ягодичная (+15,4% за 12 нед — больше вастусов) и приводящая большая (+6,2%); вастусы — на уровне разгибаний (+4,4–6,2%), прямая бедра почти не растёт (+1,1%). Целевая на карте = ягодичные; высокая постановка + длинное бедро усиливают растяжение ягодичных в нижней точке. Расхождение с репо-объёмом (quads 0.7 / glutes 0.3) честное: объёмная модель сплита пока не пересчитана — кандидат P1 в docs/vision-2026-11/plans/improvements-master.md.",
+      "stimulus": {"glutes": 100, "quads": 60, "adductors": 40, "hamstrings": 15, "calves": 10}
     },
     {
       "id": "glute-bridge",
@@ -68,6 +72,114 @@
       "anthropometrySensitive": false,
       "comment": "Числа из репо (deadlift: glutes 0.5, hamstrings 0.4, traps 0.2) нормализованы на ягодичные = 100; квадрицепс/широчайшие — оценка (фиксация грифа, старт).",
       "stimulus": {"glutes": 100, "hamstrings": 80, "traps": 40, "lats": 25, "quads": 20}
+    },
+    {
+      "id": "dips",
+      "name": "Брусья с весом",
+      "group": "push",
+      "sources": ["repo:muscle-contrib(dips)"],
+      "anthropometrySensitive": false,
+      "comment": "Числа из репо (dips: chest 0.7, triceps 0.5, front_delt 0.2) нормализованы на грудь = 100. Наклон корпуса вперёд повышает грудную долю (оценки в конспектах нет — не добавлено).",
+      "stimulus": {"chest": 100, "triceps": 50, "front_delt": 20}
+    },
+    {
+      "id": "squat",
+      "name": "Приседания со штангой",
+      "group": "legs",
+      "sources": ["repo:muscle-contrib(squat)", "research:doi:10.3389/fphys.2025.1542334"],
+      "anthropometrySensitive": false,
+      "comment": "Числа из репо (squat: quads 0.6, glutes 0.4) нормализованы на квадрицепс = 100. Мета-анализ GMax 2025: приседы в параллель/полная глубина значимо растят ягодичные — глубина и антропометрия двигают долю ягодичных; параметризация глубины — следующий шаг карты.",
+      "stimulus": {"quads": 100, "glutes": 65}
+    },
+    {
+      "id": "barbell-row",
+      "name": "Тяга штанги к поясу",
+      "group": "pull",
+      "sources": ["repo:muscle-contrib(row)"],
+      "anthropometrySensitive": false,
+      "comment": "Числа из репо (row: lats 0.5, traps 0.3, biceps 0.2, rear_delt 0.2) нормализованы на широчайшие = 100.",
+      "stimulus": {"lats": 100, "traps": 60, "biceps": 40, "rear_delt": 40}
+    },
+    {
+      "id": "ohp",
+      "name": "Жим штанги стоя",
+      "group": "push",
+      "sources": ["repo:muscle-contrib(ohp)"],
+      "anthropometrySensitive": false,
+      "comment": "Числа из репо (ohp: front_delt 0.7, mid_delt 0.3, triceps 0.3) нормализованы на переднюю дельту = 100.",
+      "stimulus": {"front_delt": 100, "mid_delt": 45, "triceps": 45}
+    },
+    {
+      "id": "standing-curl",
+      "name": "Подъём штанги на бицепс",
+      "group": "pull",
+      "sources": ["repo:muscle-contrib(curl)"],
+      "anthropometrySensitive": false,
+      "comment": "Изолирующее: репо (curl: biceps 1.0 → 100).",
+      "stimulus": {"biceps": 100}
+    },
+    {
+      "id": "lying-triceps-ext",
+      "name": "Разгибание на трицепс лёжа",
+      "group": "push",
+      "sources": ["repo:muscle-contrib(lyingTricepExt)"],
+      "anthropometrySensitive": false,
+      "comment": "Изолирующее: репо (lyingTricepExt: triceps 1.0 → 100).",
+      "stimulus": {"triceps": 100}
+    },
+    {
+      "id": "db-press",
+      "name": "Жим гантелей лёжа",
+      "group": "push",
+      "sources": ["repo:muscle-contrib(dbPress)"],
+      "anthropometrySensitive": false,
+      "comment": "Числа из репо (dbPress: chest 0.7, triceps 0.3, front_delt 0.2) нормализованы на грудь = 100.",
+      "stimulus": {"chest": 100, "triceps": 45, "front_delt": 30}
+    },
+    {
+      "id": "lateral-raise",
+      "name": "Махи с гантелями в стороны",
+      "group": "push",
+      "sources": ["repo:muscle-contrib(lateralRaise)"],
+      "anthropometrySensitive": false,
+      "comment": "Изолирующее: репо (lateralRaise: mid_delt 1.0 → 100).",
+      "stimulus": {"mid_delt": 100}
+    },
+    {
+      "id": "leg-curl",
+      "name": "Сгибания ног",
+      "group": "legs",
+      "sources": ["repo:muscle-contrib(legCurl)"],
+      "anthropometrySensitive": false,
+      "comment": "Изолирующее: репо (legCurl: hamstrings 1.0 → 100).",
+      "stimulus": {"hamstrings": 100}
+    },
+    {
+      "id": "leg-extension",
+      "name": "Разгибания ног",
+      "group": "legs",
+      "sources": ["repo:muscle-contrib(legExt)"],
+      "anthropometrySensitive": false,
+      "comment": "Изолирующее: репо (legExt: quads 1.0 → 100).",
+      "stimulus": {"quads": 100}
+    },
+    {
+      "id": "seated-calf-raise",
+      "name": "Подъёмы на икры сидя в тренажёре",
+      "group": "legs",
+      "sources": ["repo:muscle-contrib(seatedCalfRaise)"],
+      "anthropometrySensitive": false,
+      "comment": "Изолирующее: репо (seatedCalfRaise: calves 1.0 → 100).",
+      "stimulus": {"calves": 100}
+    },
+    {
+      "id": "hip-thrust",
+      "name": "Hip thrust со штангой",
+      "group": "legs",
+      "sources": ["research:doi:10.3389/fphys.2025.1542334", "research:doi:10.7717/peerj.20785"],
+      "anthropometrySensitive": false,
+      "comment": "Приоритет для целевой ягодичной по мета-анализу 2025 (единственное «single-joint» упражнение с макс. специфичностью); хамстринги подключаются умеренно, квадрицепс почти не участвует (оценка). Переноса в присед/прыжок почти нет (обзор 2026) — в программе это изоляция ягодичных, дополнение, а не база.",
+      "stimulus": {"glutes": 100, "hamstrings": 25, "quads": 5}
     }
   ]
 }

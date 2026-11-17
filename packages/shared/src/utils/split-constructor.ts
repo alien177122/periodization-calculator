@@ -1,4 +1,5 @@
 import {CATALOG_EXERCISES, TRAINING_DAYS} from '../data/exercises.ts';
+import {resolveDayScheme} from '../data/split-schemes.ts';
 import {
   DEFAULT_LEG_EXERCISES,
   EXERCISES_BY_MUSCLE,
@@ -199,7 +200,7 @@ export function buildDayPreview(params: BuildPreviewParams): TrainingExerciseRow
       if (!day.muscles.includes(muscle) && !overrideDay) continue;
     }
 
-    const schemeBase = config.weekSchemes[weekIndex];
+    const schemeBase = resolveDayScheme({split, dayNumber, exerciseKey, weekIndex});
     if (!schemeBase) continue;
 
     const weeklySets = schemeBase.sets;

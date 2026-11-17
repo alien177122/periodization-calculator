@@ -62,7 +62,7 @@ const PAD = 10;
 const TEXT_PAD = 9;
 const LABEL_SIZE = 12;
 const SUB_SIZE = 10.5;
-const EDGE_LABEL_SIZE = 9.5;
+const EDGE_LABEL_SIZE = 11;
 const EDGE_LABEL_PAD = 4;
 const ZONE_PAD = 6;
 const ZONE_TITLE_H = 16;
@@ -543,7 +543,7 @@ export function DiagramFlow({levels, accent, edges, zones, legend}: DiagramFlowP
               x={e.label.x}
               y={e.label.y - 2}
               textAnchor="middle"
-              style={{fill: 'var(--ta-text-muted)', fontSize: EDGE_LABEL_SIZE}}>
+              style={{fill: 'var(--ta-text)', fontSize: EDGE_LABEL_SIZE, fontWeight: 600}}>
               {e.label.text}
             </text>
           </g>

@@ -1,5 +1,8 @@
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {CATALOG_EXERCISES} from '../data/exercises.ts';
+import {getSplitPreset, createSplitFromPreset} from '../data/split-presets.ts';
+import {withDayScheme, withoutDayScheme} from '../data/split-schemes.ts';
+import {withExercisePair, withoutExercisePair} from '../data/split-pairs.ts';
 import type {
   CustomSplit,
   SavedExercise,
@@ -7,6 +10,7 @@ import type {
   SplitDayNumber,
   TrainingProfile,
   UserData,
+  WeekScheme,
 } from '../types/index.ts';
 import type {TrainingDayDef} from '../types/index.ts';
 import {
@@ -299,6 +303,7 @@ export function useSplitConstructor({
     setDraft(current => ({...current, ...patch, updatedAt: new Date().toISOString()}));
   }, []);
 
+
   const setDaysPerWeek = useCallback((daysPerWeek: 2 | 3 | 4) => {
     setDraft(current => {
       const customExercises = {...(current.customExercisesByDay ?? {})};
@@ -350,6 +355,28 @@ export function useSplitConstructor({
       profile.id === activeProfileId ? {...profile, name, updatedAt: now} : profile,
     );
   }, [activeProfileId, profileName, profiles]);
+
+  const makeSplitOwn = useCallback(async () => {
+    const stamped = {...draft, sourcePresetId: undefined, updatedAt: new Date().toISOString()};
+    setDraft(stamped);
+    const updated: UserData = {
+      ...withEnsuredProfiles(userData),
+      profiles: namedProfiles(),
+      activeProfileId,
+      splits: allSplits.map(split => (split.id === stamped.id ? stamped : split)),
+      activeSplitId: stamped.id,
+      splitCalculations: allCalculations,
+      activeSplitCalculationId: userData.activeSplitCalculationId,
+    };
+    setUserData(updated);
+    try {
+      await saveUser(updated, token);
+    } catch (e) {
+      console.error('makeSplitOwn error:', e);
+      onSaveError?.('Не удалось сохранить изменения');
+    }
+  }, [activeProfileId, allCalculations, allSplits, draft, namedProfiles, onSaveError, saveUser, setUserData, token, userData]);
+
 
   const saveSplit = useCallback(async () => {
     const error = validateSplit(draft);
@@ -668,7 +695,7 @@ export function useSplitConstructor({
   // «+ Новый сплит» из тулбара: создаёт сплит и сразу сохраняет его,
   // затем сразу открываем его для редактирования как обычный сохранённый сплит.
   const createSavedSplit = useCallback(
-    (options?: {name?: string; daysPerWeek?: 2 | 3 | 4}) => {
+    (options?: {name?: string; daysPerWeek?: 2 | 3 | 4; presetId?: string}) => {
       const explicitName = options?.name?.trim();
       const selectedSaved = isDraftingNewSplit
         ? undefined
@@ -686,9 +713,12 @@ export function useSplitConstructor({
           : keptName.length > 0
             ? keptName
             : `Сплит ${savedSplits.length + 1}`;
-      const split = migrateToCustomExercises(createDefaultSplit(splitName));
+      const preset = options?.presetId ? getSplitPreset(options.presetId) : undefined;
+      const split = preset
+        ? createSplitFromPreset(preset, {name: splitName})
+        : migrateToCustomExercises(createDefaultSplit(splitName));
       split.profileId = activeProfileId;
-      if (options?.daysPerWeek && options.daysPerWeek !== split.daysPerWeek) {
+      if (!preset && options?.daysPerWeek && options.daysPerWeek !== split.daysPerWeek) {
         split.daysPerWeek = options.daysPerWeek;
         const customExercises = {...(split.customExercisesByDay ?? {})};
         if (options.daysPerWeek === 2) {
@@ -756,6 +786,7 @@ export function useSplitConstructor({
       id: crypto.randomUUID(),
       profileId: activeProfileId,
       name: `${last.name} (копия)`,
+      sourcePresetId: undefined,
       days: last.days.map(day => ({...day, muscles: []})),
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
@@ -868,6 +899,37 @@ export function useSplitConstructor({
       };
     });
   }, []);
+
+  /**
+   * Схема подходов упражнения в дне (S1): null = вернуть схему программы.
+   */
+  const setDayScheme = useCallback(
+    (exerciseKey: string, dayNumber: SplitDayNumber, scheme: WeekScheme | null) => {
+      setDraft(current =>
+        scheme
+          ? withDayScheme({split: current, dayNumber, exerciseKey, scheme})
+          : withoutDayScheme({split: current, dayNumber, exerciseKey}),
+      );
+    },
+    [],
+  );
+
+  /** Связка упражнений дня (S3): null = разорвать связь. */
+  const setExercisePair = useCallback(
+    (exerciseKey: string, dayNumber: SplitDayNumber, partnerKey: string | null) => {
+      setDraft(current =>
+        partnerKey
+          ? withExercisePair({
+              split: current,
+              dayNumber,
+              a: exerciseKey,
+              b: partnerKey,
+            })
+          : withoutExercisePair({split: current, dayNumber, exerciseKey}),
+      );
+    },
+    [],
+  );
   const setExerciseOneRM = useCallback(
     (
       exerciseKey: string,
@@ -1435,6 +1497,7 @@ export function useSplitConstructor({
     createNewSplit,
     createSavedSplit,
     duplicateLast,
+    makeSplitOwn,
     selectSplit,
     createCalculationFromBase,
     openSplitEditor,
@@ -1443,6 +1506,8 @@ export function useSplitConstructor({
     setFixedWeight,
     moveExercise,
     removeExercise,
+    setDayScheme,
+    setExercisePair,
     addExerciseToDay,
     duplicateExerciseToDay,
     setExerciseOneRM,

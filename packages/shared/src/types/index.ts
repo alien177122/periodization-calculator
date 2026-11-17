@@ -37,6 +37,25 @@ export interface ExerciseConfig {
 
 export type SplitDayNumber = 1 | 2 | 3 | 4;
 
+/** Связка двух упражнений дня: рекомендованная группировка, не жёсткая механика. */
+export interface ExercisePair {
+  id: string;
+  /** Первое упражнение связки (exerciseKey из дня). */
+  a: string;
+  /** Второе упражнение связки. */
+  b: string;
+  /** Подсказка по отдыху после A, секунды. Не движок, а дефолт для таймера. */
+  restAfterA?: number;
+  /** Подсказка по отдыху после B, секунды. */
+  restAfterB?: number;
+}
+
+/**
+ * Схема подходов упражнения в конкретном дне (перекрывает weekSchemes программы).
+ * Пустое поле = поведение как сейчас (схемы из ExerciseConfig.weekSchemes).
+ */
+export type DaySchemeOverrides = Partial<Record<SplitDayNumber, Record<string, WeekScheme>>>;
+
 export interface SplitDayConfig {
   dayNumber: SplitDayNumber;
   muscles: SplitMuscleId[];
@@ -69,6 +88,21 @@ export interface CustomSplit {
   excludedExercisesByDay?: Partial<Record<SplitDayNumber, string[]>>;
   /** Explicit list of exercise keys for each day. If present, it overrides legacy muscle-based population. */
   customExercisesByDay?: Partial<Record<SplitDayNumber, string[]>>;
+  /**
+   * Схема подходов конкретного упражнения в конкретном дне.
+   * Перекрывает weekSchemes программы: например, в программе 4×4, а в дне стоит 5×4.
+   */
+  schemeOverridesByDay?: DaySchemeOverrides;
+  /**
+   * Связки упражнений дня (S3). Журнал не меняется: подходы пишутся по exerciseKey.
+   * Связка — подсказка для выполнения, а не планировщик отдыха.
+   */
+  pairsByDay?: Partial<Record<SplitDayNumber, ExercisePair[]>>;
+  /**
+   * Идентификатор пресета, из которого создан сплит (S1-остаток).
+   * Пометка «из пресета» в списке; копия правится свободно.
+   */
+  sourcePresetId?: string;
   /**
    * 0-based week indices (0–7) the athlete marked as completed in the
    * 8-week progression preview.
@@ -189,7 +223,19 @@ export interface UserData {
   activeProgram?: ActiveProgram;
   testResults?: TestResult[];
   programSettings?: ProgramSettings;
+  /** Прогресс обучения (лекции/самоучитель), ключ = id шага LEARNING_TRACK. */
+  learningProgress?: LearningProgress;
 }
+
+/** Отметка одного шага маршрута обучения. */
+export interface LearningItemProgress {
+  read: boolean;
+  checked?: 'ok' | 'retry';
+  updatedAt: string;
+}
+
+/** Прогресс обучения: ключ — id шага трека (learning-track.ts). */
+export type LearningProgress = Record<string, LearningItemProgress>;
 
 export interface TrainingDayDef {
   dayNumber: 1 | 2 | 3 | 4;

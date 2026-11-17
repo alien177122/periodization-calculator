@@ -1,7 +1,6 @@
 import type {Block, InlineSpan} from '../lib/md';
 import {parseInline} from '../lib/md';
 import type {Article} from '../lib/content';
-import {articleTitle} from '../lib/content';
 import {parseMermaidDiagram} from '../lib/mermaid';
 import type {ChartBar, ChartSeries} from '../../src/components/theory/DiagramChart';
 import {DiagramChart} from '../../src/components/theory/DiagramChart';
@@ -278,7 +277,14 @@ function SectionView({section, articleTitle}: {section: Section; articleTitle: s
   );
 }
 
-export function ArticleView({article}: {article: Article}) {
+export function ArticleView({
+  article,
+  resolveTitle,
+}: {
+  article: Article;
+  /** Подписи зависимостей; в основном приложении шапка скрыта и резолвер не нужен. */
+  resolveTitle?: (id: string) => string;
+}) {
   const {meta} = article;
   return (
     <article className="ss-main">
@@ -288,7 +294,7 @@ export function ArticleView({article}: {article: Article}) {
           {meta.minutes ? <span className="ss-chip">~{meta.minutes} мин</span> : null}
           {meta.prerequisites.map(id => (
             <a key={id} className="ss-chip" href={`#/a/${id}`}>
-              после: {articleTitle(id)}
+              после: {resolveTitle?.(id) ?? id}
             </a>
           ))}
         </div>

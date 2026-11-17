@@ -1,12 +1,16 @@
 import {CATALOG_EXERCISES} from '../data/exercises.ts';
 import {isV3ExerciseKey} from '../program/v3/exercises.ts';
 import {normalizeLegExercises} from '../data/split-exercises.ts';
+import {normalizeDaySchemeOverrides} from '../data/split-schemes.ts';
+import {normalizePairsByDay} from '../data/split-pairs.ts';
 import type {
   ActiveProgram,
   CustomSplit,
   FileWorkspaceResponse,
   JournalSession,
   JournalSet,
+  LearningItemProgress,
+  LearningProgress,
   SavedExercise,
   SplitCalculation,
   SplitMuscleId,
@@ -229,6 +233,23 @@ export function normalizeLoadedUser(input: unknown, fallbackName: string): UserD
     if (Object.keys(normalized).length > 0) trainingProgressByProgram = normalized;
   }
 
+  let learningProgress: LearningProgress | undefined;
+  if (isRecord(input.learningProgress)) {
+    const source = input.learningProgress as Record<string, unknown>;
+    const normalized: LearningProgress = {};
+    for (const [itemId, value] of Object.entries(source)) {
+      if (!itemId.trim() || !isRecord(value)) continue;
+      if (typeof value.read !== 'boolean') continue;
+      const read = value.read;
+      const updatedAt = typeof value.updatedAt === 'string' ? value.updatedAt.trim() : '';
+      if (!updatedAt) continue;
+      const item: LearningItemProgress = {read, updatedAt};
+      if (value.checked === 'ok' || value.checked === 'retry') item.checked = value.checked;
+      normalized[itemId] = item;
+    }
+    if (Object.keys(normalized).length > 0) learningProgress = normalized;
+  }
+
   const testResults = Array.isArray(input.testResults)
     ? input.testResults.flatMap((entry): TestResult[] => {
         if (!isRecord(entry)) return [];
@@ -275,6 +296,7 @@ export function normalizeLoadedUser(input: unknown, fallbackName: string): UserD
   if (activeSplitId) base.activeSplitId = activeSplitId;
   if (ensured.splitCalculations.length > 0) base.splitCalculations = ensured.splitCalculations;
   if (activeSplitCalculationId) base.activeSplitCalculationId = activeSplitCalculationId;
+  if (learningProgress) base.learningProgress = learningProgress;
 
   return base;
 }
@@ -346,8 +368,8 @@ function normalizeLoadedSplit(input: unknown): CustomSplit | null {
   }
 
   if (isRecord(input.customExercisesByDay)) {
-    const customExercisesByDay: Partial<Record<1 | 2 | 3, string[]>> = {};
-    for (const dayNum of [1, 2, 3] as const) {
+    const customExercisesByDay: Partial<Record<1 | 2 | 3 | 4, string[]>> = {};
+    for (const dayNum of [1, 2, 3, 4] as const) {
       const keys = input.customExercisesByDay[dayNum];
       if (!Array.isArray(keys)) continue;
       const trimmed = keys
@@ -358,6 +380,21 @@ function normalizeLoadedSplit(input: unknown): CustomSplit | null {
     if (Object.keys(customExercisesByDay).length > 0) {
       split.customExercisesByDay = customExercisesByDay;
     }
+  }
+
+  // Схемы подходов конкретного дня (S1): битые записи отбрасываются.
+  const schemeOverridesByDay = normalizeDaySchemeOverrides(input.schemeOverridesByDay);
+  if (schemeOverridesByDay) {
+    split.schemeOverridesByDay = schemeOverridesByDay;
+  }
+
+  // Связки упражнений дня (S3).
+  const pairsByDay = normalizePairsByDay(input.pairsByDay);
+  if (pairsByDay) {
+    split.pairsByDay = pairsByDay;
+  }
+  if (typeof input.sourcePresetId === 'string' && input.sourcePresetId.trim()) {
+    split.sourcePresetId = input.sourcePresetId.trim();
   }
 
   // Server already persists these on PUT /api/users/:name — must survive loadUser

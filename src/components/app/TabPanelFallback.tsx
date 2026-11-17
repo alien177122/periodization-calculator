@@ -1,11 +1,8 @@
 import type {AppTab} from './tabs';
 
 const TAB_LABELS: Record<AppTab, string> = {
-  calculator: 'Калькулятор',
   theory: 'Теория',
-  training: 'Тренировка',
-  split: 'Сплит',
-  journal: 'Журнал',
+  split: 'Тренировка',
 };
 
 interface TabPanelFallbackProps {

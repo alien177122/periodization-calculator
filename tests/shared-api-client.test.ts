@@ -230,6 +230,25 @@ test('normalizeLoadedUser keeps only valid exercises and progress payloads', () 
   });
 });
 
+test('normalizeLoadedUser keeps valid learningProgress and drops broken items', () => {
+  const user = normalizeLoadedUser(
+    {
+      name: 'alien17',
+      exercises: [],
+      learningProgress: {
+        'lp-01-volume': {read: true, checked: 'ok', updatedAt: '2026-11-12T10:00:00.000Z'},
+        'lp-04-sleep': {read: 'maybe', updatedAt: '2026-11-12'},
+        'lp-06-periodization': {read: true, updatedAt: '   '},
+      },
+    },
+    'fallback',
+  );
+
+  assert.deepEqual(user.learningProgress, {
+    'lp-01-volume': {read: true, checked: 'ok', updatedAt: '2026-11-12T10:00:00.000Z'},
+  });
+});
+
 test('normalizeLoadedUser preserves split completedWeeks and completedDays', () => {
   const user = normalizeLoadedUser(
     {

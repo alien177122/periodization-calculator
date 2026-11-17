@@ -373,6 +373,13 @@
   --pi-pr: 2.75rem;
 }
 
+@media (max-width: 600px) {
+  .calc-test .pi-wrapper--stepper .pi-input {
+    --pi-pl: 0.5rem;
+    --pi-pr: 1.75rem;
+  }
+}
+
 .calc-test .pi-input:focus,
 .calc-test .pi-input:focus-visible {
   outline: none;

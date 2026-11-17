@@ -1,6 +1,7 @@
 import {useEffect, useId, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 import {useBodyScrollLock} from '../../hooks/useBodyScrollLock';
+import {ContextTheoryLink} from '../theory/ContextTheoryLink';
 
 const PYRAMID_STEPS = [
   {
@@ -84,6 +85,9 @@ export default function PyramidHelpDialog() {
               <p className="progression-dialog__note">
                 Расчёты — ориентиры. Корректируйте по технике и RPE в зале.
               </p>
+              <ContextTheoryLink chapterId="specs" className="progression-dialog__theory-link">
+                Что такое RPE 7–9 →
+              </ContextTheoryLink>
             </div>
           </div>,
           document.body,

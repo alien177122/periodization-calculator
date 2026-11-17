@@ -12,6 +12,7 @@ import {
 } from '@training/shared/program/progressionPresets';
 import PeriodizationChart from '../components/PeriodizationChart';
 import VolumeDonut from '../components/VolumeDonutLazy';
+import {MuscleMap} from '../components/MuscleMap';
 import {TestApproachSection} from '../components/calculator/TestApproachSection';
 import {LockedCalculationResult} from '../components/calculator/LockedCalculationResult';
 import {BillingPanel} from '../components/billing/BillingPanel';
@@ -211,6 +212,10 @@ export default function CalculatorTab({
 
         <SectionBlock num="04" title="Распределение объёма" variant="apple">
           <VolumeDonut />
+        </SectionBlock>
+
+        <SectionBlock num="05" title="Карта стимула по мышцам" variant="apple">
+          <MuscleMap selectedExercise={selectedExercise} />
         </SectionBlock>
       </div>
     </div>

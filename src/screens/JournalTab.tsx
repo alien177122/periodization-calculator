@@ -10,6 +10,7 @@ import {saveUser} from '../utils/api.ts';
 import type {UserData} from '../types';
 import {isCatalogExerciseKey, getCatalogExercise} from '../data/exercises.ts';
 import {SectionBlock, NoteBox} from '../components/SectionBlock.tsx';
+import {ContextTheoryLink} from '../components/theory/ContextTheoryLink.tsx';
 
 interface JournalTabProps {
   userData: UserData;
@@ -178,6 +179,9 @@ export function JournalTab({userData, setUserData, token, onSaveError}: JournalT
               весом и повторениями — тренд строится по твоей реальной истории тренировок, а не по
               расчётному плану калькулятора.
             </p>
+            <ContextTheoryLink chapterId="progression" className="journal-chart-theory-link">
+              Как читать тренд 1ПМ →
+            </ContextTheoryLink>
           </NoteBox>
         </SectionBlock>
       </main>

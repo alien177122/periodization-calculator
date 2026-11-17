@@ -9,6 +9,7 @@ import {
   type KeyboardEvent,
 } from 'react';
 import type {CustomSplit} from '../../types';
+import {getSplitPreset} from '@training/shared/data/split-presets';
 import {EwTriggerChevron} from '../ui/EwTriggerChevron';
 
 export interface SplitPickerProps {
@@ -255,6 +256,11 @@ export function SplitPicker({
                       <span className="ew-option-copy">
                         <strong>{split.name}</strong>
                         <span>{daysMeta(split.daysPerWeek)}</span>
+                        {split.sourcePresetId ? (
+                          <span className="ew-option-badge">
+                            из пресета{getSplitPreset(split.sourcePresetId)?.name ? `: ${getSplitPreset(split.sourcePresetId)?.name}` : ''}
+                          </span>
+                        ) : null}
                       </span>
                       {selected ? (
                         <span className="ew-option-check" aria-hidden="true">

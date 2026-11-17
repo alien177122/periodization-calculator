@@ -2,6 +2,7 @@ import {TRAINING_DAYS} from '../../data/exercises';
 import type {TrainingDayDef, TrainingPreferences} from '../../types';
 import type {TrainingExerciseRow} from '../../utils/training';
 import TrainingDayCard from '../TrainingDayCard';
+import {ExerciseTimers} from './ExerciseTimers';
 import {SectionBlock} from '../SectionBlock';
 import {Button} from '../ui/Button';
 import ProgressionControls from './ProgressionControls';
@@ -44,11 +45,14 @@ export default function ActiveDayView({
       <SectionBlock num="01" title="Текущая тренировка">
         <ProgressionControls preferences={trainingPreferences} onChange={onPreferencesChange} />
         {currentDay ? (
-          <TrainingDayCard
-            dayDef={currentDay}
-            weekIndex={currentWeekIdx}
-            exercises={currentExercises}
-          />
+          <>
+            <ExerciseTimers exercises={currentExercises} />
+            <TrainingDayCard
+              dayDef={currentDay}
+              weekIndex={currentWeekIdx}
+              exercises={currentExercises}
+            />
+          </>
         ) : null}
         <Button className="calc-test__submit" onClick={onComplete}>
           Завершить тренировку

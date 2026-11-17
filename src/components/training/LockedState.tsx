@@ -1,5 +1,6 @@
 import { EX_COUNT } from '../../data/exercises'
 import { Button } from '../ui/Button'
+import { ContextTheoryLink } from '../theory/ContextTheoryLink'
 
 interface LockedStateProps {
   missingExercises: string[]
@@ -25,6 +26,9 @@ export default function LockedState({ missingExercises, onGoCalculator }: Locked
         <Button style={{ marginTop: 24 }} onClick={onGoCalculator}>
           Перейти в калькулятор
         </Button>
+        <ContextTheoryLink chapterId="basics" className="locked-theory-link">
+          Как считается 1ПМ →
+        </ContextTheoryLink>
       </div>
     </SectionBlock>
   )

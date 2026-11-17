@@ -277,7 +277,7 @@
   color: var(--ta-text-dim, var(--muted));
   cursor: pointer;
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 1 0;
   font-family: var(
     --ta-display-font,
     -apple-system,
@@ -391,9 +391,9 @@
   .tab-bar.ta-mode-nav {
     display: grid;
     gap: 4px;
-    grid-template-columns: repeat(5, minmax(5.5rem, 1fr));
+    grid-template-columns: repeat(2, minmax(5.5rem, 1fr));
     margin: 0 auto 40px;
-    max-width: 840px;
+    max-width: 720px;
     overflow-x: visible;
     scroll-snap-type: none;
   }

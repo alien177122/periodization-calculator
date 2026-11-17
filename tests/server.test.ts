@@ -340,6 +340,76 @@ test('PUT /api/users/:name rejects malformed or mismatched user payloads', async
   assert.match(invalid.body.error, /не совпадает с токеном/i);
 });
 
+test('PUT user data persists learningProgress through the full round-trip', async t => {
+  const ctx = await createTestContext();
+  t.after(async () => ctx.close());
+
+  const register = await requestJson(ctx.baseUrl, '/api/auth/register', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({name: 'Steve', password: 'squat123'}),
+  });
+  assert.equal(register.response.status, 200);
+
+  const learningProgress = {
+    'lp-01-volume': {read: true, checked: 'ok', updatedAt: '2026-11-12T10:00:00.000Z'},
+    'lp-04-sleep': {read: true, updatedAt: '2026-11-12T11:30:00.000Z'},
+  };
+  const payload = {
+    name: 'Steve',
+    exercises: [],
+    learningProgress,
+  };
+
+  const put = await requestJson(ctx.baseUrl, '/api/users/Steve', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${register.body.token}`,
+    },
+    body: JSON.stringify(payload),
+  });
+  assert.equal(put.response.status, 200);
+
+  const get = await requestJson(ctx.baseUrl, '/api/users/Steve', {
+    headers: {Authorization: `Bearer ${register.body.token}`},
+  });
+  assert.equal(get.response.status, 200);
+  assert.deepEqual(get.body.learningProgress, learningProgress);
+});
+
+test('PUT rejects malformed learningProgress entries', async t => {
+  const ctx = await createTestContext();
+  t.after(async () => ctx.close());
+
+  const register = await requestJson(ctx.baseUrl, '/api/auth/register', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({name: 'Steve', password: 'squat123'}),
+  });
+  const headers = {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${register.body.token}`,
+  };
+
+  const cases = [
+    {name: 'Steve', exercises: [], learningProgress: {'lp-01': {read: 'yes', updatedAt: '2026-11-12'}}},
+    {name: 'Steve', exercises: [], learningProgress: {'lp-01': {read: true, checked: 'wrong', updatedAt: '2026-11-12'}}},
+    {name: 'Steve', exercises: [], learningProgress: {'lp-01': {read: true}}},
+    {name: 'Steve', exercises: [], learningProgress: 'done'},
+  ];
+
+  for (const body of cases) {
+    const put = await requestJson(ctx.baseUrl, '/api/users/Steve', {
+      method: 'PUT',
+      headers,
+      body: JSON.stringify(body),
+    });
+    assert.equal(put.response.status, 400, `PUT должен отклонить ${JSON.stringify(body.learningProgress)}`);
+    assert.ok(typeof put.body.error === 'string');
+  }
+});
+
 test('corrupted stored JSON falls back to an empty user shape instead of crashing', async t => {
   const ctx = await createTestContext();
   t.after(async () => ctx.close());
@@ -416,6 +486,145 @@ test('legacy stored user payload is normalized before it reaches the client', as
       },
     ],
     trainingProgress: {completedSessions: 2},
+  });
+});
+
+test('split scheme overrides survive a server round-trip', async t => {
+  const ctx = await createTestContext();
+  t.after(async () => ctx.close());
+
+  const register = await requestJson(ctx.baseUrl, '/api/auth/register', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({name: 'Steve', password: 'squat123'}),
+  });
+  const headers = {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${register.body.token}`,
+  };
+
+  const split = {
+    id: 'split-1',
+    name: 'Мой сплит',
+    daysPerWeek: 2,
+    days: [
+      {dayNumber: 1, muscles: ['legs', 'chest']},
+      {dayNumber: 2, muscles: ['back', 'biceps']},
+    ],
+    varyIntensity: true,
+    weightMode: 'progression',
+    createdAt: '2026-11-13T10:00:00.000Z',
+    updatedAt: '2026-11-13T10:00:00.000Z',
+    customExercisesByDay: {1: ['deadlift', 'dips'], 2: ['squat', 'row']},
+    schemeOverridesByDay: {1: {deadlift: {sets: 5, reps: 4}, broken: {sets: 0, reps: 4}}},
+  };
+
+  const put = await requestJson(ctx.baseUrl, '/api/users/Steve', {
+    method: 'PUT',
+    headers,
+    body: JSON.stringify({name: 'Steve', exercises: [], splits: [split]}),
+  });
+  assert.equal(put.response.status, 200);
+
+  const get = await requestJson(ctx.baseUrl, '/api/users/Steve', {
+    headers: {Authorization: `Bearer ${register.body.token}`},
+  });
+  assert.equal(get.response.status, 200);
+  assert.deepEqual(get.body.splits[0].schemeOverridesByDay, {
+    1: {deadlift: {sets: 5, reps: 4}},
+  });
+});
+
+test('split exercise pairs survive a server round-trip', async t => {
+  const ctx = await createTestContext();
+  t.after(async () => ctx.close());
+
+  const register = await requestJson(ctx.baseUrl, '/api/auth/register', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({name: 'Steve', password: 'squat123'}),
+  });
+  const headers = {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${register.body.token}`,
+  };
+
+  const split = {
+    id: 'split-1',
+    name: 'Мой сплит',
+    daysPerWeek: 2,
+    days: [
+      {dayNumber: 1, muscles: ['legs', 'chest']},
+      {dayNumber: 2, muscles: ['back', 'biceps']},
+    ],
+    varyIntensity: true,
+    weightMode: 'progression',
+    createdAt: '2026-11-14T10:00:00.000Z',
+    updatedAt: '2026-11-14T10:00:00.000Z',
+    customExercisesByDay: {1: ['deadlift', 'dips']},
+    pairsByDay: {
+      1: [
+        {a: 'deadlift', b: 'dips', restAfterA: 240},
+        {a: 'deadlift', b: 'row'},
+        {a: '', b: 'row'},
+      ],
+    },
+  };
+
+  const put = await requestJson(ctx.baseUrl, '/api/users/Steve', {
+    method: 'PUT',
+    headers,
+    body: JSON.stringify({name: 'Steve', exercises: [], splits: [split]}),
+  });
+  assert.equal(put.response.status, 200);
+
+  const get = await requestJson(ctx.baseUrl, '/api/users/Steve', {
+    headers: {Authorization: `Bearer ${register.body.token}`},
+  });
+  assert.equal(get.response.status, 200);
+  assert.deepEqual(get.body.splits[0].pairsByDay, {
+    1: [
+      {
+        id: 'deadlift__dips',
+        a: 'deadlift',
+        b: 'dips',
+        restAfterA: 240,
+        restAfterB: 150,
+      },
+    ],
+  });
+});
+
+test('stored learningProgress drops broken items and keeps valid ones', async t => {
+  const ctx = await createTestContext();
+  t.after(async () => ctx.close());
+  const register = await requestJson(ctx.baseUrl, '/api/auth/register', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({name: 'Steve', password: 'squat123'}),
+  });
+
+  const rawDb = new Database(ctx.dbPath);
+  rawDb.prepare('UPDATE users SET data = ? WHERE name = ?').run(
+    JSON.stringify({
+      name: 'Steve',
+      exercises: [],
+      learningProgress: {
+        'lp-01-volume': {read: true, checked: 'ok', updatedAt: '2026-11-12T10:00:00.000Z'},
+        'lp-04-sleep': {read: 'maybe', updatedAt: '2026-11-12'},
+        'lp-06-periodization': {read: true, updatedAt: ''},
+      },
+    }),
+    'Steve',
+  );
+  rawDb.close();
+
+  const get = await requestJson(ctx.baseUrl, '/api/users/Steve', {
+    headers: {Authorization: `Bearer ${register.body.token}`},
+  });
+  assert.equal(get.response.status, 200);
+  assert.deepEqual(get.body.learningProgress, {
+    'lp-01-volume': {read: true, checked: 'ok', updatedAt: '2026-11-12T10:00:00.000Z'},
   });
 });
 

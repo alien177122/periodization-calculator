@@ -4,6 +4,8 @@ import {
   isSplitMuscle,
   isWeightMode,
   normalizeLegExercisesArray,
+  normalizePairsByDay,
+  normalizeSchemeOverridesByDay,
   pruneSplits,
 } from './splitLimits.js';
 
@@ -309,6 +311,15 @@ function normalizeSplit(split) {
   const legExercises = normalizeLegExercisesArray(split.legExercises);
   if (legExercises) normalized.legExercises = legExercises;
 
+  const schemeOverridesByDay = normalizeSchemeOverridesByDay(split.schemeOverridesByDay);
+  if (schemeOverridesByDay) normalized.schemeOverridesByDay = schemeOverridesByDay;
+
+  const pairsByDay = normalizePairsByDay(split.pairsByDay);
+  if (pairsByDay) normalized.pairsByDay = pairsByDay;
+  if (typeof split.sourcePresetId === 'string' && split.sourcePresetId.trim()) {
+    normalized.sourcePresetId = split.sourcePresetId.trim();
+  }
+
   if (isRecord(split.customExercisesByDay)) {
     const customExercisesByDay = {};
     for (const dayNum of [1, 2, 3]) {
@@ -491,6 +502,7 @@ function buildStoredUser(
   profiles,
   activeProfileId,
   exercisesByProfileId,
+  learningProgress,
 ) {
   const data = {name, exercises};
   if (exercisesByProfileId) data.exercisesByProfileId = exercisesByProfileId;
@@ -506,7 +518,49 @@ function buildStoredUser(
   if (testResults.length > 0) data.testResults = testResults;
   if (splitCalculations.length > 0) data.splitCalculations = splitCalculations;
   if (activeSplitCalculationId) data.activeSplitCalculationId = activeSplitCalculationId;
+  if (learningProgress) data.learningProgress = learningProgress;
   return data;
+}
+
+/** Валидная отметка шага обучения: {read: boolean, checked?: 'ok'|'retry', updatedAt: string}. */
+function normalizeLearningProgressItem(value) {
+  if (!isRecord(value)) return null;
+  const read = value.read === true;
+  const updatedAt = typeof value.updatedAt === 'string' ? value.updatedAt.trim() : '';
+  if (!read && value.read !== false) return null;
+  if (!updatedAt) return null;
+  const item = {read, updatedAt};
+  if (value.checked === 'ok' || value.checked === 'retry') item.checked = value.checked;
+  else if (value.checked !== undefined) return null;
+  return item;
+}
+
+/**
+ * Прогресс обучения (learning-track). Чтение из БД — прощающее: битые записи
+ * отбрасываются, валидные сохраняются. PUT-путь — строгий: normalizeUserData.
+ * Лимит 500 шагов — защита от раздувания записи пользователя.
+ */
+export function normalizeLearningProgressStored(input, {strict = false, message = 'Некорректный learningProgress'} = {}) {
+  if (input === undefined) return undefined;
+  if (!isRecord(input)) {
+    if (strict) return invalid(message);
+    return undefined;
+  }
+  const keys = Object.keys(input);
+  if (keys.length > 500) {
+    if (strict) return invalid('Слишком много шагов в learningProgress');
+    return undefined;
+  }
+  const out = {};
+  for (const key of keys) {
+    const item = normalizeLearningProgressItem(input[key]);
+    if (!item) {
+      if (strict) return invalid(`${message}: шаг «${key.slice(0, 40)}»`);
+      continue;
+    }
+    out[key] = item;
+  }
+  return keys.length > 0 ? out : undefined;
 }
 
 export function normalizeStoredUserData(input, fallbackName) {
@@ -561,6 +615,7 @@ export function normalizeStoredUserData(input, fallbackName) {
   );
   const testResults = normalizeTestResultsArray(input.testResults);
   const exercisesByProfileId = normalizeExercisesByProfileId(input.exercisesByProfileId);
+  const learningProgress = normalizeLearningProgressStored(input.learningProgress);
 
   return buildStoredUser(
     name,
@@ -578,6 +633,7 @@ export function normalizeStoredUserData(input, fallbackName) {
     profiles,
     activeProfileId,
     exercisesByProfileId,
+    learningProgress,
   );
 }
 
@@ -839,6 +895,17 @@ export function normalizeUserData(input, expectedName) {
     }
   }
 
+  let learningProgress;
+  if (input.learningProgress !== undefined) {
+    const normalizedProgress = normalizeLearningProgressStored(input.learningProgress, {
+      strict: true,
+    });
+    if (normalizedProgress && normalizedProgress.error) {
+      return invalid(normalizedProgress.error);
+    }
+    learningProgress = normalizedProgress;
+  }
+
   return {
     data: buildStoredUser(
       name,
@@ -856,6 +923,7 @@ export function normalizeUserData(input, expectedName) {
       profiles,
       activeProfileId,
       exercisesByProfileId,
+      learningProgress,
     ),
   };
 }

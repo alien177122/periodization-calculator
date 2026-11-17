@@ -50,6 +50,8 @@
     "test:mutate": "node --experimental-strip-types scripts/quality/mutate-shared.mjs",
     "quality": "node scripts/quality/quality-gate.mjs --tier=a",
     "quality:quick": "node scripts/quality/quality-gate.mjs",
+    "quality:copy": "node scripts/quality/copy-lint.mjs --check",
+    "quality:copy:baseline": "node scripts/quality/copy-lint.mjs --baseline",
     "audit:prod": "node scripts/quality/audit-prod.mjs",
     "audit:prod:critical": "node scripts/quality/audit-prod.mjs --allow-high",
     "secrets:scan": "gitleaks detect --source . --verbose",

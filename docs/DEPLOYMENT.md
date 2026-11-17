@@ -112,7 +112,39 @@ cp .env.public.example .env.public
 bun run public:stable
 ```
 
-See root [README.md](../README.md) for Cloudflare tunnel setup.
+Настройка туннеля — в секции «Named tunnel» ниже; прежние детали — [docs/README-old-2026-11-08.md](./README-old-2026-11-08.md).
+
+### Named tunnel (стабильный URL, облако Mac ↔ Venus)
+
+Решение от 2026-11-08: named tunnel вместо `trycloudflare` (адрес которого меняется при каждом рестарте).
+Precondition: **домен, добавленный в зону Cloudflare**, и установленный `cloudflared` (тот же бинарник, что раздаёт trycloudflare).
+
+```bat
+:: 1) одноразовая привязка к аккаунту (браузер открывается сам)
+cloudflared tunnel login
+
+:: 2) создать туннель и DNS-маршрут (домен — свой, в зоне Cloudflare)
+cloudflared tunnel create journalsplit
+cloudflared tunnel route dns journalsplit app.ВАШ_ДОМЕН
+
+:: 3) config.yml в %USERPROFILE%\.cloudflared\config.yml
+:: tunnel: journalsplit
+:: credentials-file: %USERPROFILE%\.cloudflared\tunnels\<UUID-туннеля>.json
+:: ingress:
+::   - hostname: app.ВАШ_ДОМЕН
+::     service: http://localhost:5173   (приложение; для API — второй hostname → localhost:3002)
+::   - service: http_status:404
+
+:: 4) запуск (вручную) / установка сервиса Windows
+cloudflared tunnel run journalsplit
+:: или: cloudflared service install <TOKEN из Zero Trust dashboard>
+
+:: 5) проверка
+cloudflared tunnel info journalsplit
+```
+
+Если домена в Cloudflare нет — остаёмся на trycloudflare (URL меняется при перезапуске туннеля).
+Статус на 2026-11-08: Venus (Tailscale `pc`, 100.102.108.96) оффлайн уже ~12 ч — runbook готов, выполнение после возврата машины в сеть.
 
 **Удалённый терминал / управление Mac** (Tailscale, SSH, RustDesk) — не путать с public tunnel приложения: см. [REMOTE-ACCESS.md](./REMOTE-ACCESS.md).
 

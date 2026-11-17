@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {AppSheet} from '../ui/AppSheet.tsx';
+import {SPLIT_PRESETS, type SplitPreset} from '@training/shared/data/split-presets';
 
 export interface SplitCalculationRow {
   id: string;
@@ -15,7 +16,7 @@ interface SplitCreateDialogProps {
   rows: SplitCalculationRow[];
   onClose: () => void;
   onSelectSplit: (id: string) => void;
-  onCreate: (name: string, daysPerWeek: 2 | 3 | 4) => void;
+  onCreate: (name: string, daysPerWeek: 2 | 3 | 4, presetId?: string) => void;
 }
 
 function calculationsLabel(count: number): string {
@@ -45,8 +46,18 @@ export function SplitCreateDialog({
      состояние формы (имя «Сплит N», 3 дня) задаётся один раз при инициализации. */
   const [name, setName] = useState<string>(() => `Сплит ${rows.length + 1}`);
   const [daysPerWeek, setDaysPerWeek] = useState<2 | 3 | 4>(3);
+  const [presetId, setPresetId] = useState<string | null>(null);
 
   const submitName = name.trim().length > 0 ? name.trim() : 'Мой сплит';
+
+  const pickPreset = (preset: SplitPreset | null) => {
+    if (!preset) {
+      setPresetId(null);
+      return;
+    }
+    setPresetId(preset.id);
+    setName(preset.name);
+  };
 
   return (
     <AppSheet
@@ -65,7 +76,7 @@ export function SplitCreateDialog({
           className="split-create-dialog__form"
           onSubmit={event => {
             event.preventDefault();
-            onCreate(submitName, daysPerWeek);
+            onCreate(submitName, daysPerWeek, presetId ?? undefined);
           }}>
           <div className="split-create-dialog__field">
             <label className="split-create-dialog__label" htmlFor="split-create-dialog-name">
@@ -100,6 +111,44 @@ export function SplitCreateDialog({
                   {days} дня
                 </button>
               ))}
+            </div>
+          </div>
+          <div className="split-create-dialog__field">
+            <span className="split-create-dialog__label" id="split-create-dialog-preset-label">
+              Пресет
+            </span>
+            <div
+              className="split-preset-list"
+              role="radiogroup"
+              aria-labelledby="split-create-dialog-preset-label">
+              {SPLIT_PRESETS.map(preset => (
+                <button
+                  key={preset.id}
+                  type="button"
+                  role="radio"
+                  className={`split-preset-option${presetId === preset.id ? ' is-active' : ''}`}
+                  aria-checked={presetId === preset.id}
+                  onClick={() => pickPreset(preset)}>
+                  <span className="split-preset-option__title">
+                    {preset.name}
+                    {preset.readOnly ? (
+                      <span className="split-preset-option__badge">стандарт</span>
+                    ) : null}
+                  </span>
+                  <span className="split-preset-option__summary">{preset.summary}</span>
+                </button>
+              ))}
+              <button
+                type="button"
+                role="radio"
+                className={`split-preset-option${presetId === null ? ' is-active' : ''}`}
+                aria-checked={presetId === null}
+                onClick={() => pickPreset(null)}>
+                <span className="split-preset-option__title">Пустой</span>
+                <span className="split-preset-option__summary">
+                  Соберём дни с нуля: группы мышц и упражнения выбираешь сам.
+                </span>
+              </button>
             </div>
           </div>
           <button type="submit" className="btn calc-test__submit split-create-dialog__submit">
