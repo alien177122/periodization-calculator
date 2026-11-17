@@ -2,6 +2,7 @@ import {CATALOG_EXERCISES} from '../data/exercises.ts';
 import {isV3ExerciseKey} from '../program/v3/exercises.ts';
 import {normalizeLegExercises} from '../data/split-exercises.ts';
 import {normalizeDaySchemeOverrides} from '../data/split-schemes.ts';
+import {migrateSplitToBlocks} from '../data/split-blocks.ts';
 import {normalizePairsByDay} from '../data/split-pairs.ts';
 import type {
   ActiveProgram,
@@ -396,6 +397,10 @@ function normalizeLoadedSplit(input: unknown): CustomSplit | null {
   if (typeof input.sourcePresetId === 'string' && input.sourcePresetId.trim()) {
     split.sourcePresetId = input.sourcePresetId.trim();
   }
+  // Фаза 2: миграция сплита к схеме v2 (блоки).
+  const migrated = migrateSplitToBlocks(split);
+  if (migrated.blocksByDay) split.blocksByDay = migrated.blocksByDay;
+  if (migrated.schemaVersion) split.schemaVersion = migrated.schemaVersion;
 
   // Server already persists these on PUT /api/users/:name — must survive loadUser
   // or week/day progress looks empty after every login.

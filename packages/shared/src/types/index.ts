@@ -50,6 +50,20 @@ export interface ExercisePair {
   restAfterB?: number;
 }
 
+/** Тип блока выполнения (Фаза 2 плана). */
+export type BlockType = 'single' | 'pair' | 'cluster';
+
+/** Блок выполнения дня: 1 упражнение (single), 2 (pair) или 3+ (cluster). */
+export interface Block {
+  id: string;
+  type: BlockType;
+  /** exerciseKey из каталога. */
+  exerciseKeys: string[];
+  /** Подсказка по отдыху между подходами (сек), опционально. */
+  restHintSec?: number;
+}
+
+
 /**
  * Схема подходов упражнения в конкретном дне (перекрывает weekSchemes программы).
  * Пустое поле = поведение как сейчас (схемы из ExerciseConfig.weekSchemes).
@@ -98,6 +112,10 @@ export interface CustomSplit {
    * Связка — подсказка для выполнения, а не планировщик отдыха.
    */
   pairsByDay?: Partial<Record<SplitDayNumber, ExercisePair[]>>;
+  /** Блоки выполнения дня (Фаза 2). Производная от customExercisesByDay + pairsByDay; хранится для миграции. */
+  blocksByDay?: Partial<Record<SplitDayNumber, Block[]>>;
+  /** Версия схемы сплита (1 — legacy, 2 — блоки). */
+  schemaVersion?: number;
   /**
    * Идентификатор пресета, из которого создан сплит (S1-остаток).
    * Пометка «из пресета» в списке; копия правится свободно.

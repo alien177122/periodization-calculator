@@ -316,6 +316,14 @@ function normalizeSplit(split) {
 
   const pairsByDay = normalizePairsByDay(split.pairsByDay);
   if (pairsByDay) normalized.pairsByDay = pairsByDay;
+  if (Array.isArray(split.blocksByDay)) {
+    normalized.blocksByDay = split.blocksByDay;
+  } else if (split.blocksByDay && typeof split.blocksByDay === 'object') {
+    normalized.blocksByDay = split.blocksByDay;
+  }
+  if (typeof split.schemaVersion === 'number') {
+    normalized.schemaVersion = split.schemaVersion;
+  }
   if (typeof split.sourcePresetId === 'string' && split.sourcePresetId.trim()) {
     normalized.sourcePresetId = split.sourcePresetId.trim();
   }
