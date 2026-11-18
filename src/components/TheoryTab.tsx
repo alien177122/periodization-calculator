@@ -9,6 +9,7 @@ import {TheoryHero} from './TheoryHero';
 import {TheoryOutro} from './TheoryOutro';
 import {TheoryChapterHub} from './theory/TheoryChapterHub';
 import {TheoryChapterPanel} from './theory/TheoryChapterPanel';
+import {NewsFeed} from './theory/NewsFeed';
 import {LearningArticlePanel} from './theory/learning/LearningArticlePanel';
 import {LearningTrackView} from './theory/learning/LearningTrackView';
 import {renderChapterContent} from './theory/chapterContent';
@@ -111,6 +112,8 @@ export default function TheoryTab({userData, setUserData, token, onSaveError}: T
           openChapter(target);
         }}
       />
+
+      <NewsFeed />
 
       <div className="ta-view-switch-wrap">
         <div className="ta-view-switch" role="group" aria-label="Разделы теории">
