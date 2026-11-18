@@ -53,6 +53,17 @@ export interface ExercisePair {
 /** Тип блока выполнения (Фаза 2 плана). */
 export type BlockType = 'single' | 'pair' | 'cluster';
 
+/** Режим подходов блока. */
+export type SetMode = 'linear' | 'pyramid' | 'cluster';
+
+/** Конфигурация блокового (cluster) подхода. */
+export interface ClusterConfig {
+  /** повторений в мини-подходе, напр. 2 */
+  miniReps: number;
+  /** отдых внутри подхода между мини-подходами, сек (20–30) */
+  intraRestSec: number;
+}
+
 /** Блок выполнения дня: 1 упражнение (single), 2 (pair) или 3+ (cluster). */
 export interface Block {
   id: string;
@@ -61,6 +72,10 @@ export interface Block {
   exerciseKeys: string[];
   /** Подсказка по отдыху между подходами (сек), опционально. */
   restHintSec?: number;
+  /** Режим подходов: linear / pyramid / cluster. По умолчанию linear. */
+  setMode?: SetMode;
+  /** Конфиг cluster-подходов; только при setMode === 'cluster'. */
+  cluster?: ClusterConfig;
 }
 
 

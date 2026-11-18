@@ -51,6 +51,7 @@ export function buildBlocksForDay(split: CustomSplit, dayNumber: SplitDayNumber)
       id: `single:${key}`,
       type: 'single',
       exerciseKeys: [key],
+      setMode: 'linear',
     });
   }
 
@@ -66,6 +67,7 @@ export function buildBlocksForDay(split: CustomSplit, dayNumber: SplitDayNumber)
           id: `cluster:${run.map(b => b.exerciseKeys[0]).join('+')}`,
           type: 'cluster',
           exerciseKeys: run.flatMap(b => b.exerciseKeys),
+          setMode: 'linear',
         });
       } else {
         clustered.push(...run);
@@ -78,6 +80,7 @@ export function buildBlocksForDay(split: CustomSplit, dayNumber: SplitDayNumber)
       id: `cluster:${run.map(b => b.exerciseKeys[0]).join('+')}`,
       type: 'cluster',
       exerciseKeys: run.flatMap(b => b.exerciseKeys),
+      setMode: 'linear',
     });
   } else {
     clustered.push(...run);
