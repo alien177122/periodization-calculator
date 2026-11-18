@@ -1,104 +1,142 @@
-import {MUSCLE_CONTRIB} from '../data/muscles.ts';
+/**
+ * Движок автопар (Фаза 2 плана training-minimal-plan).
+ *
+ * Чистые функции: verdictPair, suggestPartners, autoPairDay.
+ * Использует CATALOG_EXERCISES (primaryMuscle) + простые эвристики.
+ */
 
-/** Мышцы, конкуренция по которым считается конфликтом (основные). */
-const PRIMARY_MUSCLES = new Set([
-  'chest',
-  'quads',
-  'glutes',
-  'hamstrings',
-  'lats',
-  'front_delt',
-  'mid_delt',
-  'rear_delt',
-  'lower_back',
-]);
+import {CATALOG_EXERCISES} from '../data/exercises.ts';
+import type {Block} from '../types/index.ts';
 
-/** Дополнительный вклад (ниже в каталоге) для парного движка. */
-const EXTRA_CONTRIB: Record<string, Record<string, number>> = {
-  deadlift: {lower_back: 0.8, grip: 0.6},
-  row: {lower_back: 0.5},
-  pullUp: {grip: 0.7},
-  bench: {},
-  dips: {},
-};
-
-export type PairVerdict = 'ok' | 'warning' | 'conflict';
-
-export interface PairAnalysis {
-  a: string;
-  b: string;
-  sharedMuscles: string[];
-  primaryConflicts: string[];
-  secondaryOverlaps: string[];
-  verdict: PairVerdict;
-  reason: string;
-  timingSec: number;
+export interface PairVerdict {
+  ok: boolean;
+  reason?: string;
+  warn?: string;
 }
 
-function contrib(key: string): Record<string, number> {
-  return {...(MUSCLE_CONTRIB[key] ?? {}), ...(EXTRA_CONTRIB[key] ?? {})};
+/** Тяжёлая осевая нагрузка на поясницу (становая, тяга в наклоне). */
+export function isSpinalLoad(key: string): boolean {
+  return key === 'deadlift' || key === 'row';
 }
 
-export function muscleOverlap(a: string, b: string): string[] {
-  const ca = contrib(a);
-  const cb = contrib(b);
-  return Object.keys(ca).filter(m => (cb[m] ?? 0) > 0);
+/** Тяжёлый хват (становая, подтягивания, тяга). */
+export function gripHeavy(key: string): boolean {
+  return key === 'deadlift' || key === 'pullUp' || key === 'row';
 }
 
-export function pairVerdict(a: string, b: string): PairVerdict {
-  const ca = contrib(a);
-  const cb = contrib(b);
-  const shared = Object.keys(ca).filter(m => (cb[m] ?? 0) > 0);
-  const primary = shared.filter(m => PRIMARY_MUSCLES.has(m));
-  if (primary.length > 0) return 'conflict';
-  if (shared.length > 0) return 'warning';
-  return 'ok';
+/** Вердикт пары: можно ли связать два упражнения. */
+export function verdictPair(a: string, b: string): PairVerdict {
+  const A = CATALOG_EXERCISES[a];
+  const B = CATALOG_EXERCISES[b];
+  if (!A || !B) return {ok: false, reason: 'нет в каталоге'};
+  if (a === b) return {ok: false, reason: 'одно и то же упражнение'};
+  if (A.primaryMuscle === B.primaryMuscle)
+    return {ok: false, reason: `Обе на ${A.primaryMuscle} — не отдыхают друг друга`};
+  if (isSpinalLoad(a) && isSpinalLoad(b))
+    return {ok: false, reason: 'Обе грузят поясницу — замени тягу на вариант с упором'};
+  if (gripHeavy(a) && gripHeavy(b))
+    return {ok: true, warn: 'Хват устанет в обоих — следи за кистями'};
+  return {ok: true};
 }
 
-export function pairReason(a: string, b: string): string {
-  const v = pairVerdict(a, b);
-  if (v === 'ok') return 'Конкуренции по мышцам нет — пара работает.';
-  const shared = muscleOverlap(a, b);
-  const primary = shared.filter(m => PRIMARY_MUSCLES.has(m));
-  if (v === 'conflict') {
-    if (primary.includes('lower_back')) return 'Конфликт по пояснице: оба упражнения нагружают нижнюю часть спины.';
-    if (primary.includes('chest')) return 'Конфликт: оба упражнения — жимовые на грудь.';
-    return `Конфликт по мышцам: ${primary.join(', ')}.`;
-  }
-  if (shared.includes('grip')) return 'Предупреждение по хвату: оба нагружают предплечья/хват.';
-  return `Пересечение по мышцам: ${shared.join(', ')}.`;
+/** Приоритет верх/низ: разная группа + верх/низ. */
+function isLower(key: string): boolean {
+  const cfg = CATALOG_EXERCISES[key];
+  return cfg?.primaryMuscle === 'legs';
 }
 
-export function analyzePair(a: string, b: string): PairAnalysis {
-  const shared = muscleOverlap(a, b);
-  const primaryConflicts = shared.filter(m => PRIMARY_MUSCLES.has(m));
-  const secondaryOverlaps = shared.filter(m => !PRIMARY_MUSCLES.has(m));
-  const verdict = pairVerdict(a, b);
-  // timing: restAfterA 180 + work 40 + restAfterB 150 ≈ 370s → 6-7 мин
-  const timingSec = 180 + 40 + 150;
-  return {
-    a,
-    b,
-    sharedMuscles: shared,
-    primaryConflicts,
-    secondaryOverlaps,
-    verdict,
-    reason: pairReason(a, b),
-    timingSec,
-  };
+/** Автоподбор партнёров для упражнения a из списка dayKeys (до 3). */
+export function suggestPartners(a: string, dayKeys: string[]): string[] {
+  const aCfg = CATALOG_EXERCISES[a];
+  if (!aCfg) return [];
+  const candidates = dayKeys.filter(k => k !== a && CATALOG_EXERCISES[k]);
+  const scored = candidates.map(b => {
+    const v = verdictPair(a, b);
+    if (!v.ok) return null;
+    const bCfg = CATALOG_EXERCISES[b]!;
+    let score = 0;
+    // разная группа мышц
+    if (bCfg.primaryMuscle !== aCfg.primaryMuscle) score += 2;
+    // верх/низ предпочтительнее
+    if (isLower(a) !== isLower(b)) score += 3;
+    // предупреждение снижает приоритет
+    if (v.warn) score -= 1;
+    return {key: b, score};
+  }).filter(Boolean) as {key: string; score: number}[];
+  scored.sort((x, y) => y.score - x.score);
+  return scored.slice(0, 3).map(s => s.key);
 }
 
-export function suggestPairPartner(exerciseKey: string, dayKeys: string[]): string | undefined {
-  // pick the exercise with least muscle overlap
-  let best: string | undefined;
-  let bestOverlap = Infinity;
-  for (const candidate of dayKeys) {
-    if (candidate === exerciseKey) continue;
-    const ov = muscleOverlap(exerciseKey, candidate).length;
-    if (ov < bestOverlap) {
-      bestOverlap = ov;
-      best = candidate;
+/** Автосборка дня: тяжёлый низ первым, затем верх, затем добивка → пары. */
+export function autoPairDay(keys: string[]): Block[] {
+  const valid = keys.filter(k => CATALOG_EXERCISES[k]);
+  if (valid.length === 0) return [];
+
+  // разделяем на нижнюю и верхнюю группу
+  const lowers = valid.filter(isLower);
+  const uppers = valid.filter(k => !isLower(k));
+
+  const pairs: [string, string][] = [];
+  const used = new Set<string>();
+
+  // жадно: низ + верх
+  const lowersLeft = [...lowers];
+  const uppersLeft = [...uppers];
+  while (lowersLeft.length > 0 && uppersLeft.length > 0) {
+    const a = lowersLeft.shift()!;
+    const b = uppersLeft.shift()!;
+    const v = verdictPair(a, b);
+    if (v.ok) {
+      pairs.push([a, b]);
+      used.add(a);
+      used.add(b);
+    } else {
+      // вернуть обратно, попробуем другой партнёр
+      lowersLeft.unshift(a);
+      uppersLeft.unshift(b);
+      // попробуем следующий верхний
+      let found = false;
+      for (let i = 1; i < uppersLeft.length; i++) {
+        const cand = uppersLeft[i];
+        if (verdictPair(a, cand).ok) {
+          uppersLeft.splice(i, 1);
+          pairs.push([a, cand]);
+          used.add(a);
+          used.add(cand);
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        // нет партнёра — single
+        lowersLeft.shift();
+        used.add(a);
+        // вернуть uppersLeft
+        break;
+      }
     }
   }
-  return best;
+
+  // оставшиеся → single
+  const singles = valid.filter(k => !used.has(k));
+
+  const blocks: Block[] = [];
+  for (const [a, b] of pairs) {
+    blocks.push({
+      id: `pair:${a}+${b}`,
+      type: 'pair',
+      exerciseKeys: [a, b],
+      setMode: 'linear',
+    });
+  }
+  for (const key of singles) {
+    blocks.push({
+      id: `single:${key}`,
+      type: 'single',
+      exerciseKeys: [key],
+      setMode: 'linear',
+    });
+  }
+
+  return blocks;
 }

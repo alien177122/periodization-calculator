@@ -1,0 +1,76 @@
+/* Стеки выполнения (Фаза 3 плана training-minimal). */
+.stack {
+  border: 1px solid var(--color-border, var(--border));
+  border-radius: 12px;
+  padding: 8px;
+  position: relative;
+  background: var(--surface, var(--ta-surface));
+}
+
+.stack[data-tone='light'] {
+  background: color-mix(in srgb, var(--color-success, #22c55e) 8%, var(--surface, var(--ta-surface)));
+}
+
+.stack[data-tone='medium'] {
+  background: color-mix(in srgb, var(--color-warning, #f59e0b) 8%, var(--surface, var(--ta-surface)));
+}
+
+.stack[data-tone='peak'] {
+  background: color-mix(in srgb, var(--color-danger, #ef4444) 8%, var(--surface, var(--ta-surface)));
+}
+
+.stack__rail {
+  position: absolute;
+  left: 14px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: var(--color-border, var(--border));
+  border-radius: 1px;
+}
+
+.stack__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stack__ex {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  padding: 8px 8px 8px 28px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  color: var(--text, var(--ta-text));
+  text-align: left;
+}
+
+.stack__ex:hover {
+  background: color-mix(in srgb, var(--text, var(--ta-text)) 4%, transparent);
+}
+
+.stack__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent, var(--accent));
+  flex: 0 0 auto;
+}
+
+.stack__kg {
+  margin-left: auto;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.stack__meta {
+  margin-top: 4px;
+  padding-left: 28px;
+  font-size: 12px;
+  color: var(--text-secondary, var(--ta-text-muted));
+}

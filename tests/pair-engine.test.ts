@@ -1,35 +1,49 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {analyzePair, pairVerdict, suggestPairPartner} from '../packages/shared/src/utils/pair-engine.ts';
+import {verdictPair, suggestPartners, autoPairDay} from '../packages/shared/src/utils/pair-engine.ts';
 
-test('становая + брусья → ok', () => {
-  assert.equal(pairVerdict('deadlift', 'dips'), 'ok');
+test('verdictPair: same muscle group -> not ok', () => {
+  const v = verdictPair('bench', 'dbPress');
+  assert.equal(v.ok, false);
+  assert.match(v.reason ?? '', /Обе на chest/);
 });
 
-test('жим + брусья → конфликт', () => {
-  assert.equal(pairVerdict('bench', 'dips'), 'conflict');
+test('verdictPair: deadlift + dips -> ok', () => {
+  const v = verdictPair('deadlift', 'dips');
+  assert.equal(v.ok, true);
 });
 
-test('становая + тяга → конфликт по пояснице', () => {
-  const a = analyzePair('deadlift', 'row');
-  assert.equal(a.verdict, 'conflict');
-  assert.ok(a.reason.includes('пояснице'));
+test('verdictPair: deadlift + row -> not ok (spinal)', () => {
+  const v = verdictPair('deadlift', 'row');
+  assert.equal(v.ok, false);
+  assert.match(v.reason ?? '', /поясницу/);
 });
 
-test('становая + подтягивания → предупреждение по хвату', () => {
-  const a = analyzePair('deadlift', 'pullUp');
-  assert.equal(a.verdict, 'warning');
-  assert.ok(a.reason.includes('хвату') || a.reason.includes('хват'));
+test('verdictPair: deadlift + pullUp -> ok with grip warning', () => {
+  const v = verdictPair('deadlift', 'pullUp');
+  assert.equal(v.ok, true);
+  assert.ok(v.warn);
 });
 
-test('analyzePair возвращает sharedMuscles и timing', () => {
-  const a = analyzePair('deadlift', 'dips');
-  assert.deepEqual(a.sharedMuscles, []);
-  assert.equal(a.timingSec, 370);
+test('autoPairDay: [deadlift,dips,legPress,row] -> two pairs', () => {
+  const blocks = autoPairDay(['deadlift', 'dips', 'legPress', 'row']);
+  assert.equal(blocks.length, 2);
+  assert.equal(blocks[0].type, 'pair');
+  assert.deepEqual(blocks[0].exerciseKeys, ['deadlift', 'dips']);
+  assert.equal(blocks[1].type, 'pair');
+  assert.deepEqual(blocks[1].exerciseKeys, ['legPress', 'row']);
 });
 
-test('suggestPairPartner picks least overlapping', () => {
-  const partner = suggestPairPartner('deadlift', ['dips', 'row', 'pullUp']);
-  // dips has no overlap with deadlift
-  assert.equal(partner, 'dips');
+test('autoPairDay: single exercise -> single block', () => {
+  const blocks = autoPairDay(['bench']);
+  assert.equal(blocks.length, 1);
+  assert.equal(blocks[0].type, 'single');
+  assert.deepEqual(blocks[0].exerciseKeys, ['bench']);
+});
+
+test('suggestPartners returns up to 3', () => {
+  const partners = suggestPartners('deadlift', ['dips', 'bench', 'row', 'ohp', 'legPress']);
+  assert.ok(partners.length <= 3);
+  assert.ok(!partners.includes('deadlift'));
+  assert.ok(!partners.includes('row')); // spinal conflict
 });
