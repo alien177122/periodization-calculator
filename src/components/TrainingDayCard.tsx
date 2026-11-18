@@ -8,6 +8,7 @@ import type {ExerciseConfig, TrainingDayDef} from '../types';
 import type {TrainingExerciseRow} from '../utils/training';
 import {calcWarmupSets} from '../utils/calc';
 import {buildLinearWorkingSets, buildPyramid} from '@training/shared/utils/pyramid';
+import {buildClusterSets} from '@training/shared/utils/cluster';
 import {autoPairDay} from '@training/shared/utils/pair-engine';
 
 /** Which working-set row currently drives the plate diagram (pyramid ≠ one static kg). */
@@ -74,19 +75,6 @@ function schemeLabel(ex: TrainingExerciseRow): string {
     return `${ex.scheme.sets} × ${ex.scheme.reps}`;
   }
   return `${ex.scheme.sets} × ${ex.scheme.reps}`;
-}
-
-function looksLikePyramidTaper(sets: {weight: number; reps: number}[]): boolean {
-  if (sets.length < 2) return false;
-  const allSame = sets.every(s => s.weight === sets[0]!.weight && s.reps === sets[0]!.reps);
-  if (allSame) return false;
-
-  const weightDown = sets.every((s, i) => i === 0 || s.weight <= sets[i - 1]!.weight);
-  const repsUp = sets.every((s, i) => i === 0 || s.reps >= sets[i - 1]!.reps);
-  const weightUp = sets.every((s, i) => i === 0 || s.weight >= sets[i - 1]!.weight);
-  const repsDown = sets.every((s, i) => i === 0 || s.reps <= sets[i - 1]!.reps);
-
-  return (weightDown && repsUp) || (weightUp && repsDown);
 }
 
 function workingSetWeightLabel(
@@ -189,6 +177,7 @@ export default function TrainingDayCard({
   variant?: 'default' | 'split-preview';
 }) {
   const [openExerciseKey, setOpenExerciseKey] = useState<string | null>(null);
+  const [setMode, setSetMode] = useState<'linear' | 'pyramid' | 'cluster'>('linear');
   const [plateHovered, setPlateHovered] = useState<PlateFocus | null>(null);
   const [plateLocked, setPlateLocked] = useState<PlateFocus | null>(null);
 
@@ -239,8 +228,6 @@ export default function TrainingDayCard({
                     }))
                   : [];
                 const isPyramid = ex.progressionMode === 'pyramid';
-                const showPyramidLayout = isPyramid || looksLikePyramidTaper(ex.workingSets);
-                const pyramidSets = ex.workingSets;
                 const computedPyramidSets = config
                   ? buildPyramid(
                       {
@@ -263,6 +250,7 @@ export default function TrainingDayCard({
                 };
                 const toggleExercise = () => {
                   setOpenExerciseKey(isOpen ? null : ex.key);
+                  setSetMode('linear');
                   setPlateHovered(null);
                   setPlateLocked(null);
                 };
@@ -329,6 +317,24 @@ export default function TrainingDayCard({
 
                         <div className="training-load-menu__section">
                           <div className="training-load-menu__eyebrow">Рабочие подходы</div>
+                          <div className="training-setmode" role="group" aria-label="Режим подходов">
+                            {(['linear', 'pyramid', 'cluster'] as const).map(mode => {
+                              const clusterOk = weekIndex % 4 >= 2;
+                              const disabled = mode === 'cluster' && !clusterOk;
+                              const labels = {linear: 'Константа', pyramid: 'Пирамида', cluster: 'Блоковая'};
+                              return (
+                                <button
+                                  key={mode}
+                                  type="button"
+                                  className={`training-setmode__btn${setMode === mode ? ' is-active' : ''}`}
+                                  disabled={disabled}
+                                  title={disabled ? 'Блоковая доступна при >80% (тяжёлые недели)' : undefined}
+                                  onClick={() => setSetMode(mode)}>
+                                  {labels[mode]}
+                                </button>
+                              );
+                            })}
+                          </div>
                           {variant === 'split-preview' ? (
                             <div className="training-load-menu__split-schemes">
                               <div className="training-load-menu__scheme-col">
@@ -362,18 +368,46 @@ export default function TrainingDayCard({
                                 </ul>
                               </div>
                             </div>
+                          ) : setMode === 'cluster' ? (
+                            <ul
+                              className="training-working-sets"
+                              aria-label={`Блоковые подходы: ${ex.name}`}
+                              onMouseLeave={clearPlatePreview}>
+                              {buildClusterSets({
+                                weight: ex.weight,
+                                sets: ex.scheme.sets,
+                                reps: ex.scheme.reps,
+                                cluster: {miniReps: 2, intraRestSec: 30},
+                              }).map(cs => (
+                                <li
+                                  key={`${ex.key}-cluster-set-${cs.set}`}
+                                  className="training-working-sets__item">
+                                  <span className="training-working-sets__set">#{cs.set}</span>
+                                  <span className="training-working-sets__weight u-num">
+                                    {cs.mini.join(' + ')} повт
+                                  </span>
+                                  <span className="training-working-sets__reps u-num">
+                                    {cs.intraRestSec}с отдых
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : setMode === 'pyramid' ? (
+                            <ul
+                              className="training-working-sets training-working-sets--pyramid"
+                              aria-label={`Пирамидальные подходы: ${ex.name}`}
+                              onMouseLeave={clearPlatePreview}>
+                              {computedPyramidSets.map(set =>
+                                renderWorkingSet(set, `${ex.key}-pyramid-set-${set.set}`),
+                              )}
+                            </ul>
                           ) : (
                             <ul
-                              className={[
-                                'training-working-sets',
-                                showPyramidLayout ? 'training-working-sets--pyramid' : '',
-                              ]
-                                .filter(Boolean)
-                                .join(' ')}
+                              className="training-working-sets"
                               aria-label={`Рабочие подходы: ${ex.name}`}
                               onMouseLeave={clearPlatePreview}>
-                              {pyramidSets.map(set =>
-                                renderWorkingSet(set, `${ex.key}-set-${set.set}`),
+                              {buildLinearWorkingSets(ex.weight, ex.scheme.sets, ex.scheme.reps).map(
+                                set => renderWorkingSet(set, `${ex.key}-set-${set.set}`),
                               )}
                             </ul>
                           )}

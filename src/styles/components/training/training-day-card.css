@@ -175,6 +175,37 @@
   text-transform: uppercase;
 }
 
+.training-setmode {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.training-setmode__btn {
+  flex: 1 1 0;
+  min-height: 32px;
+  padding: 4px 8px;
+  border: var(--border-width) solid var(--ta-border, var(--border));
+  border-radius: 8px;
+  background: var(--ta-surface-2, var(--surface-raised));
+  color: var(--ta-text-muted, var(--muted));
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 150ms, color 150ms, border-color 150ms;
+}
+
+.training-setmode__btn.is-active {
+  background: var(--ta-calc-accent, var(--accent));
+  color: var(--ta-on-accent, #0a0a0b);
+  border-color: var(--ta-calc-accent, var(--accent));
+}
+
+.training-setmode__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 .training-load-menu__title {
   color: var(--ta-text, var(--text));
   font-family: var(
