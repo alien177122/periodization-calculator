@@ -68,11 +68,37 @@
 | tests | ✅ 353/353 pass |
 | build | ✅ 1.94 с |
 
-## 4. Открытые вопросы
+## 4. Фаза 8 — доводка (выполнено)
 
-- Cluster gate: используется эвристика weekIndex % 4 >= 2 (нет pct в TrainingDayCard). Нужен pct для точного гейта >80%.
-- Web Worker для таймера: не реализован (setInterval + visibilitychange достаточно для функциональной корректности).
-- autoPairDay в UI: движок готов, но не подключён к экрану добавления упражнений.
+### 8.1 ✅ Точный gate cluster и тон по pct
+- `TrainingExerciseRow.intensityPct` добавлен (из percentage в getTrainingExercises).
+- `TrainingDayCard` использует `intensityTone(blockPct)` и `clusterAllowed(blockPct)` вместо эвристики weekIndex.
+- Подсказка при disabled: «Блоковая доступна при >80% — сейчас N%».
+
+### 8.2 ✅ Сохранение выбора схемы в Block.setMode/cluster
+- `withBlockSetMode(split, day, blockId, setMode, cluster?)` в split-blocks.ts (иммутабельный).
+- Селектор вызывает `onSetModeChange` callback (передаётся в TrainingDayCard).
+
+### 8.3 ✅ Таймер: корректный pause/resume
+- `usePhaseTimer`: разделены `start()` (с нуля) и `resume()` (продолжить с текущей фазы).
+- `toggle`: running→stop, done→start, иначе resume. Пауза/старт не перезапускает блок.
+
+### 8.4 📋 Фоновое исполнение таймера — задокументировано
+- Worker не реализован. Ограничение: звук/beep только при активной вкладке.
+- Время корректно при возврате (Date.now + visibilitychange).
+
+### 8.5 ✅ Автопары при добавлении упражнений
+- `GlobalExerciseAdder` показывает до 3 предложенных партнёров (suggestPartners) с пометкой ⚠ при warn.
+- CSS: `.global-exercise-adder__suggestions`.
+
+### 8.6 📋 Один экран — частично
+- «Программа» убрана как отдельная вкладка (выполнение по умолчанию).
+- Остаётся переключатель «Разбор/Конструктор» (2 кнопки). Полный коллапс в один экран — отложен.
+
+## 5. Открытые вопросы
+
+- Web Worker для таймера: не реализован (setInterval + visibilitychange достаточно функционально).
+- autoPairDay в UI: движок готов и показывает предложенных партнёров, но не применяет автоматически.
 - Нормативные метрики (C5 плана калькулятора) — не реализованы.
 - Голосовой ввод — не реализован (архитектура описана).
 - Теория-новости: 5 сводок, можно расширять.
