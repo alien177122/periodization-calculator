@@ -233,6 +233,9 @@ export function SplitConstructorTab({
                   onToggleWeekDone={constructor.toggleCompletedWeek}
                   onToggleDayDone={constructor.toggleCompletedDay}
                   onFixedWeightChange={constructor.setFixedWeight}
+                  onSetModeChange={(day, blockId, mode, cluster) =>
+                    constructor.setBlockSetMode(day, blockId, mode, cluster)
+                  }
                 />
               ) : null}
             </SectionBlock>

@@ -2,6 +2,7 @@ import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {CATALOG_EXERCISES} from '../data/exercises.ts';
 import {getSplitPreset, createSplitFromPreset} from '../data/split-presets.ts';
 import {withDayScheme, withoutDayScheme} from '../data/split-schemes.ts';
+import {withBlockSetMode} from '../data/split-blocks.ts';
 import {withExercisePair, withoutExercisePair} from '../data/split-pairs.ts';
 import type {
   CustomSplit,
@@ -930,6 +931,19 @@ export function useSplitConstructor({
     },
     [],
   );
+
+  /** Запись setMode/cluster в блок дня (Фаза 8.2/9.1). */
+  const setBlockSetMode = useCallback(
+    (
+      dayNumber: SplitDayNumber,
+      blockId: string,
+      setMode: 'linear' | 'pyramid' | 'cluster',
+      cluster?: {miniReps: number; intraRestSec: number},
+    ) => {
+      setDraft(current => withBlockSetMode(current, dayNumber, blockId, setMode, cluster));
+    },
+    [],
+  );
   const setExerciseOneRM = useCallback(
     (
       exerciseKey: string,
@@ -1508,6 +1522,7 @@ export function useSplitConstructor({
     removeExercise,
     setDayScheme,
     setExercisePair,
+    setBlockSetMode,
     addExerciseToDay,
     duplicateExerciseToDay,
     setExerciseOneRM,

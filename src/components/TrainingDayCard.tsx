@@ -257,7 +257,9 @@ export default function TrainingDayCard({
                 };
                 const toggleExercise = () => {
                   setOpenExerciseKey(isOpen ? null : ex.key);
-                  setSetMode('linear');
+                  // инициализация setMode из Block.setMode (если есть)
+                  const containingBlock = blocks.find(b => b.exerciseKeys.includes(ex.key));
+                  setSetMode((containingBlock?.setMode as 'linear' | 'pyramid' | 'cluster') ?? 'linear');
                   setPlateHovered(null);
                   setPlateLocked(null);
                 };

@@ -24,6 +24,7 @@ interface SplitPreviewProps {
   onToggleWeekDone: (week: number) => void;
   onToggleDayDone: (week: number, day: 1 | 2 | 3 | 4) => void;
   onFixedWeightChange?: (exerciseKey: string, weekIndex: number, weight: number) => void;
+  onSetModeChange?: (dayNumber: 1 | 2 | 3 | 4, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }
 
 const WEEK_COUNT = 8;
@@ -62,6 +63,7 @@ export function SplitPreview({
   onToggleWeekDone,
   onToggleDayDone,
   onFixedWeightChange,
+  onSetModeChange,
 }: SplitPreviewProps) {
   const hideWeights = split.weightMode === 'scheme_only';
   const weekDone = isWeekEffectivelyDone(split, previewWeek);
@@ -157,6 +159,7 @@ export function SplitPreview({
             exercises={exercises}
             hideWeights={hideWeights}
             variant="split-preview"
+            onSetModeChange={onSetModeChange ? (blockId, mode, cluster) => onSetModeChange(dayDef.dayNumber, blockId, mode, cluster) : undefined}
           />
         ))}
 
