@@ -110,3 +110,25 @@ export function blocksForDay(split: CustomSplit, dayNumber: SplitDayNumber): Blo
   if (split.blocksByDay?.[dayNumber]) return split.blocksByDay[dayNumber]!;
   return buildBlocksForDay(split, dayNumber);
 }
+
+/** Иммутабельный хелпер: записать setMode/cluster в блок дня. */
+export function withBlockSetMode(
+  split: CustomSplit,
+  dayNumber: SplitDayNumber,
+  blockId: string,
+  setMode: 'linear' | 'pyramid' | 'cluster',
+  cluster?: {miniReps: number; intraRestSec: number},
+): CustomSplit {
+  const dayBlocks = blocksForDay(split, dayNumber);
+  const updated = dayBlocks.map(b =>
+    b.id === blockId
+      ? {...b, setMode, cluster: setMode === 'cluster' ? cluster : undefined}
+      : b,
+  );
+  return {
+    ...split,
+    blocksByDay: {...(split.blocksByDay ?? {}), [dayNumber]: updated},
+    schemaVersion: 2,
+    updatedAt: new Date().toISOString(),
+  };
+}

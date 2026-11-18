@@ -112,6 +112,20 @@ export function usePhaseTimer(phases: Phase[], muted = false): UsePhaseTimerResu
     void acquireWakeLock();
   }, [phases.length, acquireWakeLock]);
 
+  const resume = useCallback(() => {
+    if (phases.length === 0 || done) {
+      start();
+      return;
+    }
+    if (phaseStartRef.current === null && phaseElapsedMs > 0) {
+      phaseStartRef.current = Date.now() - phaseElapsedMs;
+    } else if (phaseStartRef.current === null) {
+      phaseStartRef.current = Date.now();
+    }
+    setRunning(true);
+    void acquireWakeLock();
+  }, [phases.length, done, phaseElapsedMs, start, acquireWakeLock]);
+
   const stop = useCallback(() => {
     if (phaseStartRef.current) {
       totalRef.current += Date.now() - phaseStartRef.current;
@@ -124,8 +138,9 @@ export function usePhaseTimer(phases: Phase[], muted = false): UsePhaseTimerResu
 
   const toggle = useCallback(() => {
     if (running) stop();
-    else start();
-  }, [running, start, stop]);
+    else if (done) start();
+    else resume();
+  }, [running, done, start, stop, resume]);
 
   const reset = useCallback(() => {
     phaseIndexRef.current = 0;

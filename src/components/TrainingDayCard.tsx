@@ -10,6 +10,7 @@ import {calcWarmupSets} from '../utils/calc';
 import {buildLinearWorkingSets, buildPyramid} from '@training/shared/utils/pyramid';
 import {buildClusterSets} from '@training/shared/utils/cluster';
 import {autoPairDay} from '@training/shared/utils/pair-engine';
+import {intensityTone, clusterAllowed} from '@training/shared/utils/intensity';
 
 /** Which working-set row currently drives the plate diagram (pyramid ≠ one static kg). */
 type PlateFocus = {key: string; weight: number};
@@ -168,6 +169,7 @@ export default function TrainingDayCard({
   isPreview,
   hideWeights,
   variant = 'default',
+  onSetModeChange,
 }: {
   dayDef: TrainingDayDef;
   weekIndex: number;
@@ -175,6 +177,7 @@ export default function TrainingDayCard({
   isPreview?: boolean;
   hideWeights?: boolean;
   variant?: 'default' | 'split-preview';
+  onSetModeChange?: (blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }) {
   const [openExerciseKey, setOpenExerciseKey] = useState<string | null>(null);
   const [setMode, setSetMode] = useState<'linear' | 'pyramid' | 'cluster'>('linear');
@@ -188,8 +191,6 @@ export default function TrainingDayCard({
   ]
     .filter(Boolean)
     .join(' ');
-
-  const tone = weekIndex % 4 === 3 ? 'peak' : weekIndex % 4 === 0 ? 'light' : 'medium';
 
   // Группируем упражнения в стеки (автопары).
   const blocks = autoPairDay(exercises.map(e => e.key));
@@ -211,6 +212,12 @@ export default function TrainingDayCard({
           const blockExercises = block.exerciseKeys
             .map(k => exercises.find(e => e.key === k))
             .filter(Boolean) as TrainingExerciseRow[];
+
+          const blockPct = blockExercises.length > 0
+            ? Math.max(...blockExercises.map(e => e.intensityPct ?? 75))
+            : 75;
+          const tone = intensityTone(blockPct);
+          const clusterOk = clusterAllowed(blockPct);
 
           return (
             <PairStack key={block.id} block={block} tone={tone} meta={block.type === 'pair' ? 'пара' : undefined}>
@@ -319,7 +326,6 @@ export default function TrainingDayCard({
                           <div className="training-load-menu__eyebrow">Рабочие подходы</div>
                           <div className="training-setmode" role="group" aria-label="Режим подходов">
                             {(['linear', 'pyramid', 'cluster'] as const).map(mode => {
-                              const clusterOk = weekIndex % 4 >= 2;
                               const disabled = mode === 'cluster' && !clusterOk;
                               const labels = {linear: 'Константа', pyramid: 'Пирамида', cluster: 'Блоковая'};
                               return (
@@ -328,8 +334,13 @@ export default function TrainingDayCard({
                                   type="button"
                                   className={`training-setmode__btn${setMode === mode ? ' is-active' : ''}`}
                                   disabled={disabled}
-                                  title={disabled ? 'Блоковая доступна при >80% (тяжёлые недели)' : undefined}
-                                  onClick={() => setSetMode(mode)}>
+                                  title={disabled ? `Блоковая доступна при >80% — сейчас ${Math.round(blockPct)}%` : undefined}
+                                  onClick={() => {
+                                    setSetMode(mode);
+                                    const blockId = block.id;
+                                    const clusterCfg = mode === 'cluster' ? {miniReps: 2, intraRestSec: 30} : undefined;
+                                    onSetModeChange?.(blockId, mode, clusterCfg);
+                                  }}>
                                   {labels[mode]}
                                 </button>
                               );

@@ -1,5 +1,6 @@
 import {useState, useMemo} from 'react';
 import {CATALOG_EXERCISES} from '@training/shared/data/exercises';
+import {suggestPartners, verdictPair} from '@training/shared/utils/pair-engine';
 import {calc1RM} from '@training/shared/utils/calc';
 import {PremiumInput} from '../ui/PremiumInput.tsx';
 import {SplitExercisePicker} from './SplitExercisePicker.tsx';
@@ -214,6 +215,24 @@ export function GlobalExerciseAdder({
             </div>
           </div>
         </div>
+
+        {selectedKey && suggestPartners(selectedKey, Object.keys(CATALOG_EXERCISES)).length > 0 ? (
+          <div className="global-exercise-adder__suggestions">
+            <span className="global-exercise-adder__suggestions-label">Парные (автоподбор):</span>
+            {suggestPartners(selectedKey, Object.keys(CATALOG_EXERCISES)).map(partner => {
+              const v = verdictPair(selectedKey, partner);
+              const name = CATALOG_EXERCISES[partner]?.name ?? partner;
+              return (
+                <span
+                  key={partner}
+                  className={`global-exercise-adder__suggestion${v.warn ? ' is-warn' : ''}`}
+                  title={v.warn ?? 'Хорошая пара'}>
+                  {name}{v.warn ? ' ⚠' : ''}
+                </span>
+              );
+            })}
+          </div>
+        ) : null}
 
         {selectedKey && (
           <div className="global-exercise-adder__weight-and-actions">
