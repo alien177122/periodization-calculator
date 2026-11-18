@@ -10,6 +10,8 @@ interface GlobalExerciseAdderProps {
   savedExercises: SavedExercise[];
   daysPerWeek: 2 | 3 | 4;
   onAddExercise: (exerciseKey: string, dayNumber: 1 | 2 | 3 | 4) => void;
+  /** Создать связку a↔b в день dayNumber (S3). */
+  onPairExercise?: (a: string, b: string, dayNumber: 1 | 2 | 3 | 4) => void;
   /** Profile strength base: hide day targets, only persist 1RM. */
   profileBaseOnly?: boolean;
   onOneRMChange: (
@@ -25,6 +27,7 @@ export function GlobalExerciseAdder({
   savedExercises,
   daysPerWeek,
   onAddExercise,
+  onPairExercise,
   onOneRMChange,
   profileBaseOnly = false,
 }: GlobalExerciseAdderProps) {
@@ -223,12 +226,17 @@ export function GlobalExerciseAdder({
               const v = verdictPair(selectedKey, partner);
               const name = CATALOG_EXERCISES[partner]?.name ?? partner;
               return (
-                <span
+                <button
                   key={partner}
+                  type="button"
                   className={`global-exercise-adder__suggestion${v.warn ? ' is-warn' : ''}`}
-                  title={v.warn ?? 'Хорошая пара'}>
+                  title={v.warn ?? 'Хорошая пара'}
+                  onClick={() => {
+                    onAddExercise(partner, 1);
+                    onPairExercise?.(selectedKey, partner, 1);
+                  }}>
                   {name}{v.warn ? ' ⚠' : ''}
-                </span>
+                </button>
               );
             })}
           </div>

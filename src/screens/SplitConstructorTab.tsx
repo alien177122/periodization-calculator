@@ -202,6 +202,7 @@ export function SplitConstructorTab({
                 savedExercises={editorExercises}
                 daysPerWeek={constructor.draft.daysPerWeek}
                 onAddExercise={constructor.addExerciseToDay}
+                onPairExercise={(a, b, day) => constructor.setExercisePair(a, day, b)}
                 onOneRMChange={handleOneRMChange}
               />
             </SectionBlock>
