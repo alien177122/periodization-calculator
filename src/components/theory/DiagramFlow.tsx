@@ -537,7 +537,7 @@ export function DiagramFlow({levels, accent, edges, zones, legend}: DiagramFlowP
               width={e.label.w + EDGE_LABEL_PAD * 2}
               height={EDGE_LABEL_SIZE + 5}
               rx={3}
-              style={{fill: 'var(--ta-surface)'}}
+              style={{fill: 'var(--ta-surface-2)', stroke: 'var(--ta-border)', strokeWidth: 1}}
             />
             <text
               x={e.label.x}
