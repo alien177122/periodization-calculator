@@ -46,44 +46,42 @@ export function SplitTab({
 
   const calcProps = {...calculator, userData, programSettings};
 
-  // «Программа» упразднена как отдельная вкладка (2026-11-16): по умолчанию
-  // показывается выполнение программы; «Разбор» и «Конструктор» — кнопки сверху.
-  const isProgram = view === 'program';
-
   return (
     <div className="split-tab">
-      {!isProgram ? (
-        <div className="split-mode-switch split-mode-switch--compact">
-          <button
-            type="button"
-            className="split-mode-switch__btn is-active"
-            onClick={() => viewState.setValue('program')}>
-            ← К программе
-          </button>
-        </div>
-      ) : (
-        <div className="split-mode-switch split-mode-switch--compact">
-          <button
-            type="button"
-            className="split-mode-switch__btn"
-            onClick={() => viewState.setValue('breakdown')}>
-            Разбор
-          </button>
-          <button
-            type="button"
-            className="split-mode-switch__btn"
-            onClick={() => viewState.setValue('constructor')}>
-            Конструктор
-          </button>
-        </div>
-      )}
+      <div className="split-mode-switch" role="tablist" aria-label="Режим вкладки «Тренировка»">
+        <button
+          type="button"
+          role="tab"
+          id="split-mode-breakdown"
+          aria-selected={view === 'breakdown'}
+          aria-controls="split-mode-panel"
+          className={`split-mode-switch__btn${view === 'breakdown' ? ' is-active' : ''}`}
+          onClick={() => viewState.setValue('breakdown')}>
+          Разбор
+        </button>
+        <button
+          type="button"
+          role="tab"
+          id="split-mode-constructor"
+          aria-selected={view === 'constructor'}
+          aria-controls="split-mode-panel"
+          className={`split-mode-switch__btn${view === 'constructor' ? ' is-active' : ''}`}
+          onClick={() => viewState.setValue('constructor')}>
+          Конструктор
+        </button>
+      </div>
 
       <div
         id="split-mode-panel"
         className="split-tab__body"
-        role="tabpanel">
+        role="tabpanel"
+        aria-labelledby={
+          view === 'breakdown'
+            ? 'split-mode-breakdown'
+            : 'split-mode-constructor'
+        }>
         <Suspense fallback={<TabPanelFallback tab="split" />}>
-          {isProgram ? (
+          {view === 'program' ? (
             <TrainingTabContainer
               userData={userData}
               token={token}
