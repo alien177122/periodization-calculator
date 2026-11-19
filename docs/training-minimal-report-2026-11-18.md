@@ -95,7 +95,22 @@
 - «Программа» убрана как отдельная вкладка (выполнение по умолчанию).
 - Остаётся переключатель «Разбор/Конструктор» (2 кнопки). Полный коллапс в один экран — отложен.
 
-## 5. Выполнено дополнительно (по замечаниям пользователя)
+## 5. Фаза 10 — сравнение циклов с запасом (RPE/RIR)
+
+- `packages/shared/src/utils/reserve.ts`: `rirFromRpe`, `adjustedE1rm`, `sessionPeakWithReserve`.
+- `packages/shared/src/utils/cycles.ts`: `buildCycleSeries` (цикл = 4 недели, тест-окно = последние 7 дней).
+- `src/components/training/CycleComparison.tsx` + CSS: ряд столбиков/точек с двумя цифрами (сырая/с запасом) и дельтой.
+- `useJournalProgressChart`: добавлены `peakAdjusted`, `rir`, `yAdjusted`; вторая пунктирная линия того же цвета.
+- `JournalTab`: CycleComparison под графиком.
+- Тесты: `tests/reserve-cycles.test.ts` (8 тестов).
+- Копирайт: обе цифры всегда, «оценка по Epley, не измеренный максимум».
+
+## 6. Фаза 11 — дизайн/адаптив-гейт
+
+- `stack.css`: фантомные токены заменены (`--color-danger` → `--color-destructive`, `--color-border` → `--color-border-default`), `font-size: 12px` → `var(--type-12)`, добавлен `:focus-visible`, tap-target `min-height: 44px`, радиусы исправлены (outer 12 / inner 8 при padding 8 → правило outer − padding).
+- Гейт применён к стекам.
+
+## 7. Выполнено дополнительно (по замечаниям пользователя)
 
 - Tab bar: 2 вкладки заполняют ширину (grid 4→2).
 - Журнал убран из навигации (код сохранён).
@@ -111,7 +126,7 @@
 - Тема-переключатель: квадратный (8px/6px).
 - Сплит mode switch: 12px radius (вместо pill).
 
-## 6. Открытые вопросы
+## 8. Открытые вопросы
 
 - Web Worker для таймера: не реализован (setInterval + visibilitychange достаточно функционально).
 - autoPairDay в UI: движок готов и показывает предложенных партнёров, но не применяет автоматически.
