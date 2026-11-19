@@ -30,7 +30,7 @@ export interface TrainingTabProps {
   programSubtitle?: string;
   currentBlocks?: Block[];
   nextBlocks?: Block[];
-  onSetModeChange?: (blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
+  onSetModeChange?: (dayNumber: number, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }
 
 export default function TrainingTab(props: TrainingTabProps) {

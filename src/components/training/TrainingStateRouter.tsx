@@ -11,7 +11,7 @@ interface Handlers {
   onDismissBreak: () => void;
   onReset: () => void;
   onPreferencesChange: (patch: Partial<TrainingPreferences>) => void;
-  onSetModeChange?: (blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
+  onSetModeChange?: (dayNumber: number, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }
 
 interface TrainingStateRouterProps {

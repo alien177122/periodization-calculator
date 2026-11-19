@@ -180,7 +180,7 @@ export default function TrainingDayCard({
   hideWeights?: boolean;
   variant?: 'default' | 'split-preview';
   persistedBlocks?: Block[];
-  onSetModeChange?: (blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
+  onSetModeChange?: (dayNumber: number, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }) {
   const [openExerciseKey, setOpenExerciseKey] = useState<string | null>(null);
   const [setMode, setSetMode] = useState<'linear' | 'pyramid' | 'cluster'>('linear');
@@ -348,7 +348,7 @@ export default function TrainingDayCard({
                                     setSetMode(mode);
                                     const blockId = block.id;
                                     const clusterCfg = mode === 'cluster' ? {miniReps: 2, intraRestSec: 30} : undefined;
-                                    onSetModeChange?.(blockId, mode, clusterCfg);
+                                    onSetModeChange?.(dayDef.dayNumber, blockId, mode, clusterCfg);
                                   }}>
                                   {labels[mode]}
                                 </button>

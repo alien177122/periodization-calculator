@@ -41,10 +41,10 @@ export default function TrainingTabContainer({
     ? blocksForDay(activeSplit, (training.nextDayIdx + 1) as SplitDayNumber)
     : undefined;
 
-  const handleSetMode = (blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => {
+  const handleSetMode = (dayNumber: number, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => {
     if (!activeSplit) return;
-    const dayNumber = (training.currentDayIdx + 1) as SplitDayNumber;
-    const next = withBlockSetMode(activeSplit, dayNumber, blockId, setMode, cluster);
+    const dn = dayNumber as SplitDayNumber;
+    const next = withBlockSetMode(activeSplit, dn, blockId, setMode, cluster);
     if (setUserData) {
       setUserData({...userData, splits: (userData.splits ?? []).map(s => (s.id === next.id ? next : s))});
     }

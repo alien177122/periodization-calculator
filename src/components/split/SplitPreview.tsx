@@ -161,7 +161,7 @@ export function SplitPreview({
             hideWeights={hideWeights}
             variant="split-preview"
             persistedBlocks={blocksForDay(split, dayDef.dayNumber)}
-            onSetModeChange={onSetModeChange ? (blockId, mode, cluster) => onSetModeChange(dayDef.dayNumber, blockId, mode, cluster) : undefined}
+            onSetModeChange={onSetModeChange ? (dayNumber, blockId, mode, cluster) => onSetModeChange(dayNumber as 1 | 2 | 3 | 4, blockId, mode, cluster) : undefined}
           />
         ))}
 
