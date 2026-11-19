@@ -15,15 +15,15 @@
 }
 
 .stack[data-tone='light'] {
-  background: color-mix(in srgb, var(--color-success, var(--green, #22c55e)) var(--stack-tint), var(--color-bg-secondary, var(--surface)));
+  background: color-mix(in srgb, var(--color-success) var(--stack-tint), var(--color-bg-secondary, var(--surface)));
 }
 
 .stack[data-tone='medium'] {
-  background: color-mix(in srgb, var(--color-warning, var(--orange, #f59e0b)) var(--stack-tint), var(--color-bg-secondary, var(--surface)));
+  background: color-mix(in srgb, var(--color-warning) var(--stack-tint), var(--color-bg-secondary, var(--surface)));
 }
 
 .stack[data-tone='peak'] {
-  background: color-mix(in srgb, var(--color-destructive, var(--red, #ef4444)) var(--stack-tint), var(--color-bg-secondary, var(--surface)));
+  background: color-mix(in srgb, var(--color-destructive) var(--stack-tint), var(--color-bg-secondary, var(--surface)));
 }
 
 .stack__rail {
