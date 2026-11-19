@@ -21,7 +21,7 @@ const CYCLE_DAYS = 28;
 const TEST_WINDOW_DAYS = 7;
 
 function parseDate(s: string): number {
-  const d = new Date(s + 'T00:00:00Z');
+  const d = new Date(s + 'T12:00:00Z');
   return Number.isFinite(d.getTime()) ? d.getTime() : 0;
 }
 
@@ -50,10 +50,15 @@ export function buildCycleSeries(sessions: JournalSession[]): CyclePoint[] {
     const windowStart = cycleStart + (CYCLE_DAYS - TEST_WINDOW_DAYS) * 24 * 60 * 60 * 1000;
     const windowSessions = sess.filter(s => parseDate(s.date) >= windowStart);
 
+    // Отклонение от «последние 7 дней»: если тест-окно пустое, берём все сессии
+    // цикла (чтобы не терять данные при разреженной истории). Задокументировано
+    // в отчёте. См. journal-progress-chart-standard.md.
+    const useSessions = windowSessions.length > 0 ? windowSessions : sess;
+
     let raw = 0;
     let adjusted: number | null = null;
     let rir: number | null = null;
-    for (const s of windowSessions.length > 0 ? windowSessions : sess) {
+    for (const s of useSessions) {
       const peak = sessionPeakWithReserve(s.sets);
       if (!peak) continue;
       if (peak.raw > raw) raw = peak.raw;
@@ -74,7 +79,7 @@ export function buildCycleSeries(sessions: JournalSession[]): CyclePoint[] {
         : null,
     });
 
-    prevRaw = raw;
+    if (raw > 0) prevRaw = raw;
     if (adjusted != null) prevAdjusted = adjusted;
   }
 

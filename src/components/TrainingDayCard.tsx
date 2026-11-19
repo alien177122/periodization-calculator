@@ -183,7 +183,7 @@ export default function TrainingDayCard({
   onSetModeChange?: (dayNumber: number, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }) {
   const [openExerciseKey, setOpenExerciseKey] = useState<string | null>(null);
-  const [setMode, setSetMode] = useState<'linear' | 'pyramid' | 'cluster'>('linear');
+  const [localModes, setLocalModes] = useState<Record<string, 'linear' | 'pyramid' | 'cluster'>>({});
   const [plateHovered, setPlateHovered] = useState<PlateFocus | null>(null);
   const [plateLocked, setPlateLocked] = useState<PlateFocus | null>(null);
 
@@ -225,6 +225,7 @@ export default function TrainingDayCard({
             : 75;
           const tone = intensityTone(blockPct);
           const clusterOk = clusterAllowed(blockPct);
+          const mode = localModes[block.id] ?? block.setMode ?? 'linear';
 
           return (
             <PairStack key={block.id} block={block} tone={tone} meta={block.type === 'pair' ? 'пара' : undefined}>
@@ -264,9 +265,11 @@ export default function TrainingDayCard({
                 };
                 const toggleExercise = () => {
                   setOpenExerciseKey(isOpen ? null : ex.key);
-                  // инициализация setMode из Block.setMode (если есть)
+                  // инициализация localModes из Block.setMode (если есть)
                   const containingBlock = blocks.find(b => b.exerciseKeys.includes(ex.key));
-                  setSetMode((containingBlock?.setMode as 'linear' | 'pyramid' | 'cluster') ?? 'linear');
+                  if (containingBlock?.setMode && !localModes[containingBlock.id]) {
+                    setLocalModes(prev => ({...prev, [containingBlock.id]: containingBlock.setMode as 'linear' | 'pyramid' | 'cluster'}));
+                  }
                   setPlateHovered(null);
                   setPlateLocked(null);
                 };
@@ -296,7 +299,7 @@ export default function TrainingDayCard({
                       aria-expanded={isOpen}
                       onClick={toggleExercise}>
                       <span className="stack__dot" />
-                      <span>{ex.name}</span>
+                      <span className="stack__name">{ex.name}</span>
                       <span className="stack__kg u-num">{formatDisplayWeight(ex, !!hideWeights)} кг</span>
                       <span className="stack__scheme">
                         {isPyramid ? schemeLabel(ex) : `${ex.scheme.sets} × ${ex.scheme.reps}`}
@@ -334,23 +337,23 @@ export default function TrainingDayCard({
                         <div className="training-load-menu__section">
                           <div className="training-load-menu__eyebrow">Рабочие подходы</div>
                           <div className="training-setmode" role="group" aria-label="Режим подходов">
-                            {(['linear', 'pyramid', 'cluster'] as const).map(mode => {
-                              const disabled = mode === 'cluster' && !clusterOk;
+                            {(['linear', 'pyramid', 'cluster'] as const).map(m => {
+                              const disabled = m === 'cluster' && !clusterOk;
                               const labels = {linear: 'Константа', pyramid: 'Пирамида', cluster: 'Блоковая'};
                               return (
                                 <button
-                                  key={mode}
+                                  key={m}
                                   type="button"
-                                  className={`training-setmode__btn${setMode === mode ? ' is-active' : ''}`}
+                                  className={`training-setmode__btn${mode === m ? ' is-active' : ''}`}
                                   disabled={disabled}
                                   title={disabled ? `Блоковая доступна при >80% — сейчас ${Math.round(blockPct)}%` : undefined}
                                   onClick={() => {
-                                    setSetMode(mode);
+                                    setLocalModes(prev => ({...prev, [block.id]: m}));
                                     const blockId = block.id;
-                                    const clusterCfg = mode === 'cluster' ? {miniReps: 2, intraRestSec: 30} : undefined;
-                                    onSetModeChange?.(dayDef.dayNumber, blockId, mode, clusterCfg);
+                                    const clusterCfg = m === 'cluster' ? {miniReps: 2, intraRestSec: 30} : undefined;
+                                    onSetModeChange?.(dayDef.dayNumber, blockId, m, clusterCfg);
                                   }}>
-                                  {labels[mode]}
+                                  {labels[m]}
                                 </button>
                               );
                             })}
@@ -388,7 +391,7 @@ export default function TrainingDayCard({
                                 </ul>
                               </div>
                             </div>
-                          ) : setMode === 'cluster' ? (
+                          ) : mode === 'cluster' ? (
                             <ul
                               className="training-working-sets"
                               aria-label={`Блоковые подходы: ${ex.name}`}
@@ -412,7 +415,7 @@ export default function TrainingDayCard({
                                 </li>
                               ))}
                             </ul>
-                          ) : setMode === 'pyramid' ? (
+                          ) : mode === 'pyramid' ? (
                             <ul
                               className="training-working-sets training-working-sets--pyramid"
                               aria-label={`Пирамидальные подходы: ${ex.name}`}

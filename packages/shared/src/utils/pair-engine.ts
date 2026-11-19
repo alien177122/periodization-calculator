@@ -82,19 +82,21 @@ export function autoPairDay(keys: string[]): Block[] {
   // жадно: низ + верх
   const lowersLeft = [...lowers];
   const uppersLeft = [...uppers];
-  while (lowersLeft.length > 0 && uppersLeft.length > 0) {
-    const a = lowersLeft.shift()!;
-    const b = uppersLeft.shift()!;
+  let attempts = 0;
+  const maxAttempts = lowersLeft.length * uppersLeft.length + 1;
+  while (lowersLeft.length > 0 && uppersLeft.length > 0 && attempts < maxAttempts) {
+    attempts += 1;
+    const a = lowersLeft[0];
+    const b = uppersLeft[0];
     const v = verdictPair(a, b);
     if (v.ok) {
       pairs.push([a, b]);
       used.add(a);
       used.add(b);
+      lowersLeft.shift();
+      uppersLeft.shift();
     } else {
-      // вернуть обратно, попробуем другой партнёр
-      lowersLeft.unshift(a);
-      uppersLeft.unshift(b);
-      // попробуем следующий верхний
+      // попробуем другой верхний
       let found = false;
       for (let i = 1; i < uppersLeft.length; i++) {
         const cand = uppersLeft[i];
@@ -103,16 +105,15 @@ export function autoPairDay(keys: string[]): Block[] {
           pairs.push([a, cand]);
           used.add(a);
           used.add(cand);
+          lowersLeft.shift();
           found = true;
           break;
         }
       }
       if (!found) {
-        // нет партнёра — single
+        // нет партнёра для a — пропускаем (не break, чтобы не потерять остальные)
         lowersLeft.shift();
         used.add(a);
-        // вернуть uppersLeft
-        break;
       }
     }
   }
