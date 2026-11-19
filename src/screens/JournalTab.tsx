@@ -2,6 +2,8 @@ import {useState, useEffect, startTransition, useId, useRef} from 'react';
 import '../styles/tabs/journal-tab.css';
 import {SplitExercisePicker} from '../components/split/SplitExercisePicker.tsx';
 import {JournalProgressChart} from '../components/journal/JournalProgressChart.tsx';
+import {CycleComparison} from '../components/training/CycleComparison.tsx';
+import '../styles/components/training/cycle-comparison.css';
 import {JournalSessionEditor} from '../components/journal/JournalSessionEditor.tsx';
 import {JournalSessionList} from '../components/journal/JournalSessionList.tsx';
 import {useJournal} from '../hooks/useJournal.ts';
@@ -172,6 +174,11 @@ export function JournalTab({userData, setUserData, token, onSaveError}: JournalT
           </div>
 
           <JournalProgressChart sessions={journal.history} />
+
+          <CycleComparison
+            sessions={journal.history}
+            exerciseKey={exerciseKey}
+          />
 
           <NoteBox variant="apple">
             <p className="journal-chart-note">
