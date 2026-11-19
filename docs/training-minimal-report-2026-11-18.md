@@ -147,7 +147,39 @@
 ### 9.4 📋 Worker таймера — не реализован
 - setInterval + visibilitychange достаточно функционально. Документировано.
 
-## 9. Открытые вопросы
+## 9. Фаза 12 — закрытие гейта (выполнено)
+
+### 12.1 ✅ Чтение блоков (write-only → read)
+- TrainingDayCard принимает `persistedBlocks?: Block[]`, мержит по id поверх autoPairDay.
+- SplitPreview передаёт `blocksForDay(split, dayDef.dayNumber)`.
+- ActiveDayView + TrainingTabContainer прокидывают blocks.
+
+### 12.2 ✅ Запись на экране выполнения (баг dayNumber исправлен)
+- TrainingTabContainer.handleSetMode использует dayNumber из dayDef (не хардкод currentDayIdx+1).
+- Запись идёт в правильный день.
+
+### 12.3 ✅ setMode — состояние блока, не карточки
+- Локальный useState заменён на `localModes: Record<blockId, SetMode>`.
+- mode инициализируется из block.setMode ?? 'linear'.
+
+### 12.4 ✅ Персист: авто-запись в userData.splits
+- handleSetMode пишет withBlockSetMode прямо в userData.splits (без кнопки «Сохранить»).
+
+### 12.5 ✅ Дизайн-гейт (stack.css)
+- Фантомные токены убраны (--color-danger → --color-destructive, --color-border → --color-border-default).
+- Hex-fallback'и удалены (--green/--orange/--red добавлены в variables.css).
+- :focus-visible добавлен, min-height: 44px, радиусы исправлены (outer 12 / inner 8 при padding 8 → 4).
+- Классы .training-stacks, .stack__exercise, .stack__name, .stack__scheme, .stack__reps, .stack__kg добавлены.
+
+### 12.6 ✅ autoPairDay: break → continue
+- Ветка «нет партнёра» теперь continue (не break), оставшиеся нижние упражнения получают партнёров.
+
+### 12.7 ✅ cycles.ts: T12 + prevRaw zero-skip + empty-window fallback
+- parseDate использует T12:00:00Z ( унификация с useJournalProgressChart).
+- prevRaw обновляется только при raw > 0.
+- Пустое тест-окно → берутся все сессии цикла (задокументировано).
+
+## 10. Открытые вопросы
 
 - Web Worker для таймера: не реализован (setInterval + visibilitychange достаточно функционально).
 - autoPairDay в UI: движок готов и показывает предложенных партнёров, но не применяет автоматически.
