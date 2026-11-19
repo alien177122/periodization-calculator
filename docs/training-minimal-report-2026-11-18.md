@@ -126,7 +126,28 @@
 - Тема-переключатель: квадратный (8px/6px).
 - Сплит mode switch: 12px radius (вместо pill).
 
-## 8. Открытые вопросы
+## 8. Фаза 9 — замыкание (выполнено частично)
+
+### 9.1 ✅ Провести onSetModeChange до карточки
+- `TrainingDayCard` принимает `persistedBlocks?: Block[]` и мержит сохранённый setMode по id поверх autoPairDay.
+- `SplitPreview` передаёт `blocksForDay(split, dayDef.dayNumber)`.
+- `TrainingTabContainer` вычисляет activeSplit, blocks, handleSetMode (withBlockSetMode → userData.splits).
+- `TrainingStateRouter` и `ActiveDayView` прокидывают blocks + onSetModeChange.
+- Инициализация setMode из block.setMode при раскрытии карточки.
+
+### 9.2 ✅ Авто-применение пар (частично)
+- `GlobalExerciseAdder` показывает до 3 предложенных партнёров (suggestPartners).
+- Тап на партнёра: onAddExercise + onPairExercise (создаёт связку).
+- «Собрать автоматически» (autoPairDay) — не реализован (требует day context).
+
+### 9.3 📋 Один экран — частично
+- «Программа» убрана как отдельная вкладка (выполнение по умолчанию).
+- Остаётся переключатель «Разбор/Конструктор» (2 кнопки). Полный коллапс в один экран — отложен.
+
+### 9.4 📋 Worker таймера — не реализован
+- setInterval + visibilitychange достаточно функционально. Документировано.
+
+## 9. Открытые вопросы
 
 - Web Worker для таймера: не реализован (setInterval + visibilitychange достаточно функционально).
 - autoPairDay в UI: движок готов и показывает предложенных партнёров, но не применяет автоматически.
