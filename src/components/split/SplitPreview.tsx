@@ -9,6 +9,7 @@ import {
   isWeekEffectivelyDone,
   type WeekProgressVisual,
 } from '@training/shared/utils/split-progress';
+import {blocksForDay} from '@training/shared/data/split-blocks';
 
 interface DayPreview {
   day: SplitDayConfig;
@@ -159,6 +160,7 @@ export function SplitPreview({
             exercises={exercises}
             hideWeights={hideWeights}
             variant="split-preview"
+            persistedBlocks={blocksForDay(split, dayDef.dayNumber)}
             onSetModeChange={onSetModeChange ? (blockId, mode, cluster) => onSetModeChange(dayDef.dayNumber, blockId, mode, cluster) : undefined}
           />
         ))}

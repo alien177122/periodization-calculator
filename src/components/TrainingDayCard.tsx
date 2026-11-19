@@ -5,6 +5,7 @@ import {PlateDiagram} from './PlateDiagram';
 import {PairStack} from './training/PairStack';
 import '../styles/components/training/stack.css';
 import type {ExerciseConfig, TrainingDayDef} from '../types';
+import type {Block} from '@training/shared/types';
 import type {TrainingExerciseRow} from '../utils/training';
 import {calcWarmupSets} from '../utils/calc';
 import {buildLinearWorkingSets, buildPyramid} from '@training/shared/utils/pyramid';
@@ -169,6 +170,7 @@ export default function TrainingDayCard({
   isPreview,
   hideWeights,
   variant = 'default',
+  persistedBlocks,
   onSetModeChange,
 }: {
   dayDef: TrainingDayDef;
@@ -177,6 +179,7 @@ export default function TrainingDayCard({
   isPreview?: boolean;
   hideWeights?: boolean;
   variant?: 'default' | 'split-preview';
+  persistedBlocks?: Block[];
   onSetModeChange?: (blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }) {
   const [openExerciseKey, setOpenExerciseKey] = useState<string | null>(null);
@@ -192,8 +195,12 @@ export default function TrainingDayCard({
     .filter(Boolean)
     .join(' ');
 
-  // Группируем упражнения в стеки (автопары).
-  const blocks = autoPairDay(exercises.map(e => e.key));
+  // Группируем упражнения в стеки (автопары), мержим сохранённый setMode по id.
+  const autoBlocks = autoPairDay(exercises.map(e => e.key));
+  const blocks = autoBlocks.map(b => {
+    const saved = persistedBlocks?.find(p => p.id === b.id);
+    return saved ? {...b, setMode: saved.setMode ?? b.setMode, cluster: saved.cluster ?? b.cluster} : b;
+  });
 
   return (
     <div className={cardClass}>

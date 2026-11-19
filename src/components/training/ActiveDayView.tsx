@@ -1,5 +1,5 @@
 import {TRAINING_DAYS} from '../../data/exercises';
-import type {TrainingDayDef, TrainingPreferences} from '../../types';
+import type {Block, TrainingDayDef, TrainingPreferences} from '../../types';
 import type {TrainingExerciseRow} from '../../utils/training';
 import TrainingDayCard from '../TrainingDayCard';
 import {ExerciseTimers} from './ExerciseTimers';
@@ -21,6 +21,9 @@ interface ActiveDayViewProps {
   onComplete: () => void;
   totalSessions?: number;
   trainingDays?: TrainingDayDef[];
+  currentBlocks?: Block[];
+  nextBlocks?: Block[];
+  onSetModeChange?: (blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }
 
 export default function ActiveDayView({
@@ -36,6 +39,9 @@ export default function ActiveDayView({
   onComplete,
   totalSessions = 24,
   trainingDays = TRAINING_DAYS,
+  currentBlocks,
+  nextBlocks,
+  onSetModeChange,
 }: ActiveDayViewProps) {
   const showPreview = nextSessions < totalSessions;
   const currentDay = trainingDays[currentDayIdx];
@@ -53,6 +59,8 @@ export default function ActiveDayView({
               dayDef={currentDay}
               weekIndex={currentWeekIdx}
               exercises={currentExercises}
+              persistedBlocks={currentBlocks}
+              onSetModeChange={onSetModeChange}
             />
           </>
         ) : null}
@@ -69,6 +77,8 @@ export default function ActiveDayView({
             weekIndex={nextWeekIdx}
             exercises={nextExercises}
             isPreview
+            persistedBlocks={nextBlocks}
+            onSetModeChange={onSetModeChange}
           />
         </SectionBlock>
       ) : null}

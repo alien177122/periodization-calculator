@@ -1,4 +1,4 @@
-import type {TrainingDayDef, TrainingPreferences} from '../../types';
+import type {Block, TrainingDayDef, TrainingPreferences} from '../../types';
 import type {TrainingState} from './trainingState';
 import LockedState from './LockedState';
 import ActiveDayView from './ActiveDayView';
@@ -11,6 +11,7 @@ interface Handlers {
   onDismissBreak: () => void;
   onReset: () => void;
   onPreferencesChange: (patch: Partial<TrainingPreferences>) => void;
+  onSetModeChange?: (blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }
 
 interface TrainingStateRouterProps {
@@ -19,6 +20,8 @@ interface TrainingStateRouterProps {
   trainingPreferences: TrainingPreferences;
   totalSessions?: number;
   trainingDays?: TrainingDayDef[];
+  currentBlocks?: Block[];
+  nextBlocks?: Block[];
 }
 
 function ProgressHeader({
@@ -56,6 +59,8 @@ export default function TrainingStateRouter({
   trainingPreferences,
   totalSessions = 24,
   trainingDays,
+  currentBlocks,
+  nextBlocks,
 }: TrainingStateRouterProps) {
   switch (state.kind) {
     case 'locked':
@@ -85,6 +90,9 @@ export default function TrainingStateRouter({
             onComplete={handlers.onComplete}
             totalSessions={totalSessions}
             trainingDays={trainingDays}
+            currentBlocks={currentBlocks}
+            nextBlocks={nextBlocks}
+            onSetModeChange={handlers.onSetModeChange}
           />
         </>
       );

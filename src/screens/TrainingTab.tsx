@@ -1,4 +1,4 @@
-import type {TrainingDayDef, TrainingPreferences, UserData} from '../types';
+import type {Block, TrainingDayDef, TrainingPreferences, UserData} from '../types';
 
 import type {TrainingExerciseRow} from '../utils/training';
 import TrainingStateRouter from '../components/training/TrainingStateRouter';
@@ -28,6 +28,9 @@ export interface TrainingTabProps {
   totalSessions?: number;
   trainingDays?: TrainingDayDef[];
   programSubtitle?: string;
+  currentBlocks?: Block[];
+  nextBlocks?: Block[];
+  onSetModeChange?: (blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }
 
 export default function TrainingTab(props: TrainingTabProps) {
@@ -56,12 +59,15 @@ export default function TrainingTab(props: TrainingTabProps) {
           totalSessions={props.totalSessions}
           trainingDays={props.trainingDays}
           trainingPreferences={props.trainingPreferences}
+          currentBlocks={props.currentBlocks}
+          nextBlocks={props.nextBlocks}
           handlers={{
             onGoCalculator: props.onGoCalculator,
             onComplete: props.handleComplete,
             onDismissBreak: () => props.setRestDismissed(true),
             onReset: props.handleReset,
             onPreferencesChange: props.updateTrainingPreferences,
+            onSetModeChange: props.onSetModeChange,
           }}
         />
       </div>
