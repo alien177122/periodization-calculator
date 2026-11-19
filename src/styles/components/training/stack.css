@@ -1,8 +1,8 @@
-/* Стеки выполнения (Фаза 3 плана training-minimal). */
+/* Стеки выполнения (Фаза 3 плана training-minimal). Токены по memory-bank/style-guide. */
 .stack {
-  border: 1px solid var(--color-border, var(--border));
-  border-radius: 12px;
-  padding: 8px;
+  border: 1px solid var(--color-border-default, var(--border));
+  border-radius: var(--radius-md, 12px);
+  padding: var(--space-2, 8px);
   position: relative;
   background: var(--surface, var(--ta-surface));
 }
@@ -16,7 +16,7 @@
 }
 
 .stack[data-tone='peak'] {
-  background: color-mix(in srgb, var(--color-danger, #ef4444) 8%, var(--surface, var(--ta-surface)));
+  background: color-mix(in srgb, var(--color-destructive, #ef4444) 8%, var(--surface, var(--ta-surface)));
 }
 
 .stack__rail {
@@ -25,8 +25,8 @@
   top: 20px;
   bottom: 20px;
   width: 2px;
-  background: var(--color-border, var(--border));
-  border-radius: 1px;
+  background: var(--color-border-default, var(--border));
+  border-radius: var(--radius-sm, 4px);
 }
 
 .stack__body {
@@ -40,18 +40,26 @@
   gap: 8px;
   align-items: center;
   width: 100%;
+  min-height: 44px;
   padding: 8px 8px 8px 28px;
   background: transparent;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-sm, 8px);
   cursor: pointer;
   font: inherit;
   color: var(--text, var(--ta-text));
   text-align: left;
+  transition: background 150ms;
 }
 
 .stack__ex:hover {
   background: color-mix(in srgb, var(--text, var(--ta-text)) 4%, transparent);
+}
+
+.stack__ex:focus-visible {
+  outline: 2px solid var(--color-accent, var(--accent));
+  outline-offset: 2px;
+  border-radius: var(--radius-sm, 8px);
 }
 
 .stack__dot {
@@ -71,6 +79,6 @@
 .stack__meta {
   margin-top: 4px;
   padding-left: 28px;
-  font-size: 12px;
+  font-size: var(--type-12, 12px);
   color: var(--text-secondary, var(--ta-text-muted));
 }
