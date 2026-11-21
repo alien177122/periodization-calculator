@@ -4,6 +4,8 @@ import {
   isSplitMuscle,
   isWeightMode,
   normalizeLegExercisesArray,
+  normalizePairsByDay,
+  normalizeSchemeOverridesByDay,
   pruneSplits,
 } from './splitLimits.js';
 
@@ -133,7 +135,7 @@ function normalizeExerciseEntry(exercise) {
 function normalizeSplitDay(day) {
   if (!isRecord(day)) return null;
   const dayNumber = day.dayNumber;
-  if (dayNumber !== 1 && dayNumber !== 2 && dayNumber !== 3) return null;
+  if (dayNumber !== 1 && dayNumber !== 2 && dayNumber !== 3 && dayNumber !== 4) return null;
   if (!Array.isArray(day.muscles) || day.muscles.length === 0) return null;
 
   const muscles = [];
@@ -151,6 +153,91 @@ function normalizeSplitDay(day) {
   return normalized;
 }
 
+const DEFAULT_PROFILE_ID = 'profile-osnovnoy';
+const DEFAULT_PROFILE_NAME = 'Основной';
+const MAX_PROFILES = 50;
+
+function cleanProfileId(value) {
+  return typeof value === 'string' ? value.trim().slice(0, 80) : '';
+}
+
+function normalizeProfile(profile) {
+  if (!isRecord(profile)) return null;
+  const id = cleanProfileId(profile.id);
+  const name = typeof profile.name === 'string' ? profile.name.trim().slice(0, 40) : '';
+  const createdAt = typeof profile.createdAt === 'string' ? profile.createdAt.trim() : '';
+  const updatedAt = typeof profile.updatedAt === 'string' ? profile.updatedAt.trim() : '';
+  if (!id || !name || !createdAt || !updatedAt) return null;
+  return {id, name, createdAt, updatedAt};
+}
+
+function normalizeProfilesArray(input) {
+  if (!Array.isArray(input)) return [];
+  const profiles = [];
+  const seen = new Set();
+  for (const entry of input) {
+    const profile = normalizeProfile(entry);
+    if (!profile || seen.has(profile.id)) continue;
+    seen.add(profile.id);
+    profiles.push(profile);
+    if (profiles.length >= MAX_PROFILES) break;
+  }
+  return profiles;
+}
+
+function assignOrphanProfiles(profiles, splits, calculations) {
+  const nextProfiles = profiles.map(profile => ({...profile}));
+  const seen = new Set(nextProfiles.map(profile => profile.id));
+  const nextSplits = splits.map(split => ({...split}));
+  const nextCalculations = calculations.map(entry => ({...entry, split: {...entry.split}}));
+  const orphans = [
+    ...nextSplits.filter(split => !cleanProfileId(split.profileId)),
+    ...nextCalculations.map(entry => entry.split).filter(split => !cleanProfileId(split.profileId)),
+  ];
+
+  if (orphans.length > 0) {
+    let defaultProfile = nextProfiles.find(profile => profile.name === DEFAULT_PROFILE_NAME);
+    if (!defaultProfile) {
+      const stamp = orphans[0]?.createdAt || '1970-01-01T00:00:00.000Z';
+      let id = DEFAULT_PROFILE_ID;
+      if (seen.has(id)) id = `${DEFAULT_PROFILE_ID}-${orphans[0]?.id || 'split'}`;
+      defaultProfile = {id, name: DEFAULT_PROFILE_NAME, createdAt: stamp, updatedAt: stamp};
+      nextProfiles.unshift(defaultProfile);
+      seen.add(id);
+    }
+    for (const split of nextSplits) {
+      if (!cleanProfileId(split.profileId)) split.profileId = defaultProfile.id;
+    }
+    for (const entry of nextCalculations) {
+      if (!cleanProfileId(entry.split.profileId)) entry.split.profileId = defaultProfile.id;
+    }
+  }
+
+  for (const split of [...nextSplits, ...nextCalculations.map(entry => entry.split)]) {
+    const profileId = cleanProfileId(split.profileId);
+    if (profileId) split.profileId = profileId;
+    if (!profileId || seen.has(profileId)) continue;
+    nextProfiles.push({
+      id: profileId,
+      name: 'Профиль',
+      createdAt: split.createdAt,
+      updatedAt: split.updatedAt || split.createdAt,
+    });
+    seen.add(profileId);
+  }
+
+  return {profiles: nextProfiles, splits: nextSplits, calculations: nextCalculations};
+}
+
+function resolveActiveProfileId(input, profiles, activeSplitId, splits) {
+  const requested = cleanProfileId(input);
+  if (requested && profiles.some(profile => profile.id === requested)) return requested;
+  const activeSplit = splits.find(split => split.id === activeSplitId);
+  const fromSplit = cleanProfileId(activeSplit?.profileId);
+  if (fromSplit && profiles.some(profile => profile.id === fromSplit)) return fromSplit;
+  return profiles[0]?.id || null;
+}
+
 function normalizeSplit(split) {
   if (!isRecord(split)) return null;
 
@@ -162,7 +249,7 @@ function normalizeSplit(split) {
   const daysPerWeek = split.daysPerWeek;
 
   if (!id || !name || !createdAt || !updatedAt) return null;
-  if (daysPerWeek !== 2 && daysPerWeek !== 3) return null;
+  if (daysPerWeek !== 2 && daysPerWeek !== 3 && daysPerWeek !== 4) return null;
   if (typeof split.varyIntensity !== 'boolean') return null;
   if (!isWeightMode(split.weightMode)) return null;
   if (!Array.isArray(split.days) || split.days.length !== daysPerWeek) return null;
@@ -180,6 +267,9 @@ function normalizeSplit(split) {
     createdAt,
     updatedAt,
   };
+
+  const profileId = cleanProfileId(split.profileId);
+  if (profileId) normalized.profileId = profileId;
 
   if (isRecord(split.fixedWeights)) {
     const fixedWeights = {};
@@ -220,6 +310,23 @@ function normalizeSplit(split) {
 
   const legExercises = normalizeLegExercisesArray(split.legExercises);
   if (legExercises) normalized.legExercises = legExercises;
+
+  const schemeOverridesByDay = normalizeSchemeOverridesByDay(split.schemeOverridesByDay);
+  if (schemeOverridesByDay) normalized.schemeOverridesByDay = schemeOverridesByDay;
+
+  const pairsByDay = normalizePairsByDay(split.pairsByDay);
+  if (pairsByDay) normalized.pairsByDay = pairsByDay;
+  if (Array.isArray(split.blocksByDay)) {
+    normalized.blocksByDay = split.blocksByDay;
+  } else if (split.blocksByDay && typeof split.blocksByDay === 'object') {
+    normalized.blocksByDay = split.blocksByDay;
+  }
+  if (typeof split.schemaVersion === 'number') {
+    normalized.schemaVersion = split.schemaVersion;
+  }
+  if (typeof split.sourcePresetId === 'string' && split.sourcePresetId.trim()) {
+    normalized.sourcePresetId = split.sourcePresetId.trim();
+  }
 
   if (isRecord(split.customExercisesByDay)) {
     const customExercisesByDay = {};
@@ -301,7 +408,9 @@ function normalizeSplitCalculationsArray(input) {
       ? entry.exercises.map(normalizeExerciseEntry).filter(Boolean)
       : [];
     seenIds.add(id);
-    calculations.push({id, calculatedAt, split, exercises});
+    const splitId =
+      typeof entry.splitId === 'string' && entry.splitId.trim() ? entry.splitId.trim() : split.id;
+    calculations.push({id, splitId, calculatedAt, split, exercises});
   }
 
   return calculations
@@ -373,6 +482,18 @@ function normalizeTrainingProgressByProgram(input) {
   return Object.keys(normalized).length > 0 ? normalized : undefined;
 }
 
+function normalizeExercisesByProfileId(input) {
+  if (!isRecord(input)) return undefined;
+  const out = {};
+  for (const [key, value] of Object.entries(input)) {
+    const profileId = cleanProfileId(key);
+    if (!profileId || !Array.isArray(value)) continue;
+    const list = value.map(normalizeExerciseEntry).filter(Boolean);
+    if (list.length > 0) out[profileId] = list;
+  }
+  return Object.keys(out).length > 0 ? out : undefined;
+}
+
 function buildStoredUser(
   name,
   exercises,
@@ -386,19 +507,68 @@ function buildStoredUser(
   testResults,
   splitCalculations,
   activeSplitCalculationId,
+  profiles,
+  activeProfileId,
+  exercisesByProfileId,
+  learningProgress,
 ) {
   const data = {name, exercises};
+  if (exercisesByProfileId) data.exercisesByProfileId = exercisesByProfileId;
   if (trainingProgress) data.trainingProgress = trainingProgress;
   if (trainingPreferences) data.trainingPreferences = trainingPreferences;
   if (journal.length > 0) data.journal = journal;
   if (splits.length > 0) data.splits = splits;
+  if (profiles && profiles.length > 0) data.profiles = profiles;
+  if (activeProfileId) data.activeProfileId = activeProfileId;
   if (activeSplitId) data.activeSplitId = activeSplitId;
   if (activeProgram) data.activeProgram = activeProgram;
   if (trainingProgressByProgram) data.trainingProgressByProgram = trainingProgressByProgram;
   if (testResults.length > 0) data.testResults = testResults;
   if (splitCalculations.length > 0) data.splitCalculations = splitCalculations;
   if (activeSplitCalculationId) data.activeSplitCalculationId = activeSplitCalculationId;
+  if (learningProgress) data.learningProgress = learningProgress;
   return data;
+}
+
+/** Валидная отметка шага обучения: {read: boolean, checked?: 'ok'|'retry', updatedAt: string}. */
+function normalizeLearningProgressItem(value) {
+  if (!isRecord(value)) return null;
+  const read = value.read === true;
+  const updatedAt = typeof value.updatedAt === 'string' ? value.updatedAt.trim() : '';
+  if (!read && value.read !== false) return null;
+  if (!updatedAt) return null;
+  const item = {read, updatedAt};
+  if (value.checked === 'ok' || value.checked === 'retry') item.checked = value.checked;
+  else if (value.checked !== undefined) return null;
+  return item;
+}
+
+/**
+ * Прогресс обучения (learning-track). Чтение из БД — прощающее: битые записи
+ * отбрасываются, валидные сохраняются. PUT-путь — строгий: normalizeUserData.
+ * Лимит 500 шагов — защита от раздувания записи пользователя.
+ */
+export function normalizeLearningProgressStored(input, {strict = false, message = 'Некорректный learningProgress'} = {}) {
+  if (input === undefined) return undefined;
+  if (!isRecord(input)) {
+    if (strict) return invalid(message);
+    return undefined;
+  }
+  const keys = Object.keys(input);
+  if (keys.length > 500) {
+    if (strict) return invalid('Слишком много шагов в learningProgress');
+    return undefined;
+  }
+  const out = {};
+  for (const key of keys) {
+    const item = normalizeLearningProgressItem(input[key]);
+    if (!item) {
+      if (strict) return invalid(`${message}: шаг «${key.slice(0, 40)}»`);
+      continue;
+    }
+    out[key] = item;
+  }
+  return keys.length > 0 ? out : undefined;
 }
 
 export function normalizeStoredUserData(input, fallbackName) {
@@ -414,12 +584,26 @@ export function normalizeStoredUserData(input, fallbackName) {
     : [];
 
   const journal = normalizeJournalArray(input.journal);
-  const splits = normalizeSplitsArray(input.splits);
-  const splitCalculations = normalizeSplitCalculationsArray(input.splitCalculations);
+  const normalizedSplits = normalizeSplitsArray(input.splits);
+  const normalizedCalculations = normalizeSplitCalculationsArray(input.splitCalculations);
+  const assigned = assignOrphanProfiles(
+    normalizeProfilesArray(input.profiles),
+    normalizedSplits,
+    normalizedCalculations,
+  );
+  const splits = assigned.splits;
+  const splitCalculations = assigned.calculations;
+  const profiles = assigned.profiles;
   const activeSplitId =
     typeof input.activeSplitId === 'string' && input.activeSplitId.trim()
       ? input.activeSplitId.trim()
       : null;
+  const activeProfileId = resolveActiveProfileId(
+    input.activeProfileId,
+    profiles,
+    activeSplitId,
+    splits,
+  );
   const activeSplitCalculationId =
     typeof input.activeSplitCalculationId === 'string' && input.activeSplitCalculationId.trim()
       ? input.activeSplitCalculationId.trim()
@@ -438,6 +622,8 @@ export function normalizeStoredUserData(input, fallbackName) {
     input.trainingProgressByProgram,
   );
   const testResults = normalizeTestResultsArray(input.testResults);
+  const exercisesByProfileId = normalizeExercisesByProfileId(input.exercisesByProfileId);
+  const learningProgress = normalizeLearningProgressStored(input.learningProgress);
 
   return buildStoredUser(
     name,
@@ -452,6 +638,10 @@ export function normalizeStoredUserData(input, fallbackName) {
     testResults,
     splitCalculations,
     activeSplitCalculationId,
+    profiles,
+    activeProfileId,
+    exercisesByProfileId,
+    learningProgress,
   );
 }
 
@@ -636,6 +826,38 @@ export function normalizeUserData(input, expectedName) {
     }
   }
 
+  let profiles = [];
+  if (input.profiles !== undefined) {
+    if (!Array.isArray(input.profiles)) return invalid('Поле profiles должно быть массивом');
+    const seenProfileIds = new Set();
+    for (const entry of input.profiles) {
+      const profile = normalizeProfile(entry);
+      if (!profile) return invalid('Некорректный профиль');
+      if (seenProfileIds.has(profile.id)) return invalid('Профили не должны дублировать id');
+      seenProfileIds.add(profile.id);
+      profiles.push(profile);
+    }
+    if (profiles.length > MAX_PROFILES) return invalid('Слишком много профилей');
+  }
+
+  const assignedProfiles = assignOrphanProfiles(profiles, splits, splitCalculations);
+  profiles = assignedProfiles.profiles;
+  splits = assignedProfiles.splits;
+  splitCalculations = assignedProfiles.calculations;
+
+  let activeProfileId = null;
+  if (input.activeProfileId !== undefined && input.activeProfileId !== null) {
+    if (typeof input.activeProfileId !== 'string' || !cleanProfileId(input.activeProfileId)) {
+      return invalid('Некорректный activeProfileId');
+    }
+    activeProfileId = cleanProfileId(input.activeProfileId);
+    if (profiles.length > 0 && !profiles.some(profile => profile.id === activeProfileId)) {
+      return invalid('activeProfileId не найден среди профилей');
+    }
+  } else {
+    activeProfileId = resolveActiveProfileId(null, profiles, activeSplitId, splits);
+  }
+
   let activeSplitCalculationId = null;
   if (input.activeSplitCalculationId !== undefined && input.activeSplitCalculationId !== null) {
     if (
@@ -673,6 +895,25 @@ export function normalizeUserData(input, expectedName) {
     if (testResults.length > 80) return invalid('Слишком много testResults');
   }
 
+  let exercisesByProfileId;
+  if (input.exercisesByProfileId !== undefined) {
+    exercisesByProfileId = normalizeExercisesByProfileId(input.exercisesByProfileId);
+    if (!isRecord(input.exercisesByProfileId)) {
+      return invalid('Поле exercisesByProfileId должно быть объектом');
+    }
+  }
+
+  let learningProgress;
+  if (input.learningProgress !== undefined) {
+    const normalizedProgress = normalizeLearningProgressStored(input.learningProgress, {
+      strict: true,
+    });
+    if (normalizedProgress && normalizedProgress.error) {
+      return invalid(normalizedProgress.error);
+    }
+    learningProgress = normalizedProgress;
+  }
+
   return {
     data: buildStoredUser(
       name,
@@ -687,6 +928,10 @@ export function normalizeUserData(input, expectedName) {
       testResults,
       splitCalculations,
       activeSplitCalculationId,
+      profiles,
+      activeProfileId,
+      exercisesByProfileId,
+      learningProgress,
     ),
   };
 }

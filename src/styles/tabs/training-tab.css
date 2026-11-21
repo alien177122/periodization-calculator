@@ -3,3 +3,118 @@
 @import '../components/training/progression-controls.css';
 @import '../components/training/rest-card.css';
 @import '../components/program-v3/program-v3.css';
+
+/* ============================================================
+   S3: индивидуальные таймеры упражнений в выполнении
+   ============================================================ */
+.exercise-timers {
+  margin-bottom: var(--space-3);
+}
+
+.exercise-timers__hint {
+  margin: 0 0 var(--space-2);
+  color: var(--text-secondary);
+  font-size: var(--type-12);
+  line-height: 1.45;
+}
+
+.exercise-timers__list {
+  display: flex;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  overflow-x: auto;
+  padding: 0 0 var(--space-1);
+  scrollbar-width: none;
+}
+
+.exercise-timers__list::-webkit-scrollbar {
+  display: none;
+}
+
+.exercise-timers__chip {
+  align-items: center;
+  background: var(--surface);
+  border: var(--border-width) solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  white-space: nowrap;
+}
+
+.exercise-timers__chip.is-running {
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+  border-color: var(--accent);
+}
+
+.exercise-timers__name {
+  font-size: var(--type-12);
+  max-width: 9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.exercise-timers__time {
+  font-size: var(--type-14);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Фаза 4: блочный таймер сессии */
+.block-timer {
+  margin-bottom: var(--space-3);
+  padding: var(--space-3);
+  border: var(--border-width) solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  text-align: center;
+}
+.block-timer__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.block-timer__label {
+  color: var(--text-secondary);
+  font-size: var(--type-12);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.block-timer__value {
+  font-size: var(--type-16, 16px);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.block-timer__sep {
+  color: var(--text-secondary);
+}
+.block-timer__actions {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.block-timer__btn {
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  border: var(--border-width) solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  color: var(--text);
+  cursor: pointer;
+  font-size: var(--type-14);
+}
+.block-timer__btn--ghost {
+  background: transparent;
+}
+.block-timer__btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

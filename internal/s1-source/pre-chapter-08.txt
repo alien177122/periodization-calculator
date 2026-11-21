@@ -1,0 +1,12 @@
+=== ASD S1 content validator ===
+sources: 4 · strings: 2299 · prose-sentences: 69 · hero: 49 · zone: 08
+packages/shared/src/data/theory.ts:1591  canon-повтор  Лекция не повторяет каждую точку амплитуды.
+packages/shared/src/data/theory.ts:1616  canon-движение  Движение идёт, пока ответ уравновешивает давление.
+packages/shared/src/data/theory.ts:1623  canon-движение  Движение возможно, пока внутренний момент уравновешивает внешний.
+packages/shared/src/data/theory.ts:1628  canon-движение  Движение, пока внутренний уравновешивает внешний.
+packages/shared/src/data/theory.ts:1639  canon-движение  Движение идёт, пока внутренний момент уравновешивает внешний.
+packages/shared/src/data/theory.ts:1671  canon-повтор  Нужно ли повторять технику чемпиона, чтобы механика «заработала»?
+
+полоса (prose): n=69 · медиана 7 · ≤20=100% · 8–20=48% · <8=52% · <4=13% · >20=0
+
+summary: violations=6 · правила: {"canon-повтор":2,"canon-движение":4}

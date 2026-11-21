@@ -3,7 +3,7 @@ import { useReducedMotion } from '../hooks/useReducedMotion'
 import { addPassiveScroll } from '../lib/scroll'
 
 interface TheoryHeroProps {
-  onCTAClick?: (target: 'basics' | 'tiers') => void
+  onCTAClick?: (target: 'track' | 'basics' | 'tiers') => void
 }
 
 export function TheoryHero({ onCTAClick }: TheoryHeroProps) {
@@ -38,24 +38,24 @@ export function TheoryHero({ onCTAClick }: TheoryHeroProps) {
       <div className="ta-hero-glow" aria-hidden="true" />
 
       <div className="ta-hero-content">
-        <span className="ta-hero-eyebrow">Theory · 10 глав</span>
+        <span className="ta-hero-eyebrow">Theory · 10 глав · маршрут</span>
         <h1 id="ta-hero-title" className="ta-hero-title">
           Теория
           <br />
           <span className="ta-hero-title-accent">тренинга</span>
         </h1>
         <p className="ta-hero-sub">
-          Прогрессия, mTOR, tier-лист добавок и ключевые ориентиры — в одном
-          справочном разделе. Десять коротких глав, каждая со своим акцентом.
+          Десять глав справочника и маршрут самоучителя: 15 статей от объёма и RIR до
+          периодизации, питания и здоровья. Читай по порядку или заходи в нужную тему.
         </p>
 
         <div className="ta-hero-cta">
           <button
             type="button"
             className="ta-btn ta-btn-glass"
-            onClick={() => onCTAClick?.('basics')}
+            onClick={() => onCTAClick?.('track')}
           >
-            Начать с основ
+            Маршрут обучения
           </button>
           <button
             type="button"

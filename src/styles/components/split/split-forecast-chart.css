@@ -1,0 +1,22 @@
+.split-forecast-chart__hint {
+  margin: 0 0 var(--space-3);
+  font-size: var(--type-14, 14px);
+  line-height: 1.5;
+  color: var(--ta-text-muted, var(--text-secondary));
+}
+
+.split-forecast-chart .ta-period-week {
+  grid-template-columns: 3.5rem minmax(4.5rem, 1fr) auto;
+}
+
+.split-forecast-chart__empty {
+  margin: 0;
+  font-size: var(--type-14, 14px);
+  color: var(--ta-text-muted, var(--text-secondary));
+}
+
+@media (max-width: 720px) {
+  .split-forecast-chart .ta-period-week {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}

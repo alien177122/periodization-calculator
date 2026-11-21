@@ -156,6 +156,7 @@
   margin: 12px 0 4px;
   overflow: hidden;
   padding: 16px;
+  text-align: left;
 }
 
 .training-load-menu__head {
@@ -172,6 +173,37 @@
   letter-spacing: 0.18em;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.training-setmode {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.training-setmode__btn {
+  flex: 1 1 0;
+  min-height: 32px;
+  padding: 4px 8px;
+  border: var(--border-width) solid var(--ta-border, var(--border));
+  border-radius: 8px;
+  background: var(--ta-surface-2, var(--surface-raised));
+  color: var(--ta-text-muted, var(--muted));
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 150ms, color 150ms, border-color 150ms;
+}
+
+.training-setmode__btn.is-active {
+  background: var(--ta-calc-accent, var(--accent));
+  color: var(--ta-on-accent, #0a0a0b);
+  border-color: var(--ta-calc-accent, var(--accent));
+}
+
+.training-setmode__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 .training-load-menu__title {
@@ -232,6 +264,72 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+/* Row layout lives with the card: split preview does not load progression-controls.css. */
+.training-working-sets {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+.training-working-sets__item {
+  align-items: center;
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  border: var(--border-width) solid color-mix(in srgb, var(--accent) 22%, var(--border));
+  border-radius: var(--radius-md);
+  box-sizing: border-box;
+  display: grid;
+  font-family: var(--font-system);
+  font-size: var(--training-weight-size);
+  gap: var(--space-2);
+  grid-template-columns: 48px minmax(0, 1fr) 72px;
+  list-style: none;
+  max-width: 100%;
+  min-height: 40px;
+  min-width: 0;
+  padding: var(--space-2) var(--space-3);
+  width: 100%;
+}
+
+.training-working-sets__set {
+  color: var(--muted);
+  font-size: var(--type-12);
+  font-variant-numeric: var(--training-weight-numeric);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.training-working-sets__weight {
+  color: var(--text);
+  font-family: var(--training-weight-font);
+  font-size: var(--training-weight-size);
+  font-variant-numeric: var(--training-weight-numeric);
+  font-weight: var(--training-weight-weight);
+  letter-spacing: var(--training-weight-spacing);
+}
+
+.training-working-sets__reps {
+  color: var(--muted);
+  font-family: var(--training-weight-font);
+  font-variant-numeric: var(--training-weight-numeric);
+  font-weight: var(--training-weight-weight);
+  letter-spacing: var(--training-weight-spacing);
+  text-align: right;
+}
+
+.training-scheme-pyramid {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 /* Pyramid — full-width rows; descending load shown in weight/reps, not row width */

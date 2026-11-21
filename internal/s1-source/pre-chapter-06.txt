@@ -1,0 +1,7 @@
+=== ASD S1 content validator ===
+sources: 4 · strings: 2298 · prose-sentences: 74 · hero: 49 · zone: 06
+нарушений в зоне: 0
+
+полоса (prose): n=74 · медиана 9 · ≤20=100% · 8–20=55% · <8=45% · <4=12% · >20=0
+
+summary: violations=0 · правила: {}

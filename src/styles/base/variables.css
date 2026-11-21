@@ -61,6 +61,11 @@
   --text: #e8e8e9;
   --text-secondary: #9a9a9c;
   --text-strong: #ffffff;
+
+  /* Status colors (used by --color-success/warning/destructive) */
+  --green: #22c55e;
+  --orange: #f59e0b;
+  --red: #ef4444;
   --text-soft: #cccccc;
   --text-placeholder: #555555;
   --muted: #666;

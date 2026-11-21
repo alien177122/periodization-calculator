@@ -1,0 +1,1989 @@
+{
+ "version": "6.9",
+ "hitCount": 8,
+ "request": {
+  "queryString": "(TITLE:\"training frequency\")AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "32948100",
+    "source": "MED",
+    "pmid": "32948100",
+    "doi": "10.1080/02640414.2020.1822595",
+    "title": "A meta-regression of the effects of resistance training frequency on muscular strength and hypertrophy in adults over 60 years of age.",
+    "authorString": "Kneffel Z, Murlasits Z, Reed J, Krieger J.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Kneffel Z",
+       "lastName": "Kneffel",
+       "firstName": "Zsuzsanna",
+       "initials": "Z",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Health Sciences and Sport Medicine, University of Physical Education , Budapest, Hungary."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Murlasits Z",
+       "lastName": "Murlasits",
+       "firstName": "Zsolt",
+       "initials": "Z",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-4101-3417"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Laboratory Animal Research Center, Qatar University , Doha, Qatar."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Reed J",
+       "lastName": "Reed",
+       "firstName": "Jacob",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, University of Notherm Iowa , Cedar Falls, IA, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Krieger J",
+       "lastName": "Krieger",
+       "firstName": "James",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Weightology, LLC , Redmond, WA, USA."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0003-4101-3417"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "39",
+     "journalIssueId": 3099451,
+     "dateOfPublication": "2021 Feb",
+     "monthOfPublication": 2,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "J Sports Sci",
+      "title": "Journal of sports sciences",
+      "essn": "1466-447X",
+      "issn": "0264-0414",
+      "nlmid": "8405364",
+      "isoabbreviation": "J Sports Sci"
+     },
+     "printPublicationDate": "2021-02-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "351-358",
+    "abstractText": "Resistance training is a commonly used strategy for improving both athletic performance and general health. While the contribution of resistance training intensity and volume to muscle strength and hypertrophy have been extensively investigated, training frequency only recently received sufficient attention, especially in older adults. A meta-regression was conducted to compare muscle strength and hypertrophic adaptations to resistance training programmes performed with different training frequencies in adults over 60 years of age. The systematic literature search identified 14 articles for meta-regression. For each outcome, an effect size (ES) was calculated as the pre-test-post-test change, divided by the pooled pre-test standard deviation (SD). Random-effects meta-regressions for multilevel data structures, using study as the clustering variable, were performed using package metafor in R. Maximal strength shows a significant effect of frequency (p = 0.001), with an increase in effect size of 0.14 for every day increase in frequency (CI: 0.08, 0.21). For muscle hypertrophy, no significant effect of frequency was found (p = 0.67). Considering that muscle hypertrophy was not affected, while maximum strength was only slightly improved with additional training days, it seems unlikely that more than two weekly resistance training sessions would provide any further benefits for older adults.",
+    "affiliation": "Department of Health Sciences and Sport Medicine, University of Physical Education , Budapest, Hungary.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Regression Analysis"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Aging",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Time Factors"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Middle Aged"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Skeletal Muscle Enlargement"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Elderly",
+      "Muscle Strength",
+      "Sarcopenia",
+      "Muscle Mass",
+      "Training Variables"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1080/02640414.2020.1822595"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 24,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2021-05-25",
+    "dateOfCreation": "2020-09-19",
+    "dateOfRevision": "2021-05-25",
+    "electronicPublicationDate": "2020-09-18",
+    "firstPublicationDate": "2020-09-18",
+    "firstIndexDate": "2020-09-23",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "33886099",
+    "source": "MED",
+    "pmid": "33886099",
+    "pmcid": "PMC8363540",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC8363540"
+     ]
+    },
+    "doi": "10.1007/s40279-021-01460-7",
+    "title": "Effects of Variations in Resistance Training Frequency on Strength Development in Well-Trained Populations and Implications for In-Season Athlete Training: A Systematic Review and Meta-analysis.",
+    "authorString": "Cuthbert M, Haff GG, Arent SM, Ripley N, McMahon JJ, Evans M, Comfort P.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Cuthbert M",
+       "lastName": "Cuthbert",
+       "firstName": "Matthew",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-0960-9085"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Human Performance Laboratory, Directorate of Sport, Exercise, and Physiotherapy, University of Salford, Greater Manchester, UK. m.cuthbert@edu.salford.ac.uk."
+         },
+         {
+          "affiliation": "Technical Directorate Division, The FA Group, St George's Park, Burton-Upon-Trent, Staffordshire, UK. m.cuthbert@edu.salford.ac.uk."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Haff GG",
+       "lastName": "Haff",
+       "firstName": "G Gregory",
+       "initials": "GG",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Human Performance Laboratory, Directorate of Sport, Exercise, and Physiotherapy, University of Salford, Greater Manchester, UK."
+         },
+         {
+          "affiliation": "School of Medical and Health Sciences, School of Exercise and Health Sciences, Edith Cowan University, Joondalup, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Arent SM",
+       "lastName": "Arent",
+       "firstName": "Shawn M",
+       "initials": "SM",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science, Arnold School of Public Health, University of South Carolina, Columbia, South Carolina, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ripley N",
+       "lastName": "Ripley",
+       "firstName": "Nicholas",
+       "initials": "N",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-4066-0591"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Human Performance Laboratory, Directorate of Sport, Exercise, and Physiotherapy, University of Salford, Greater Manchester, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "McMahon JJ",
+       "lastName": "McMahon",
+       "firstName": "John J",
+       "initials": "JJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9952-7846"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Human Performance Laboratory, Directorate of Sport, Exercise, and Physiotherapy, University of Salford, Greater Manchester, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Evans M",
+       "lastName": "Evans",
+       "firstName": "Martin",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Technical Directorate Division, The FA Group, St George's Park, Burton-Upon-Trent, Staffordshire, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Comfort P",
+       "lastName": "Comfort",
+       "firstName": "Paul",
+       "initials": "P",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Human Performance Laboratory, Directorate of Sport, Exercise, and Physiotherapy, University of Salford, Greater Manchester, UK."
+         },
+         {
+          "affiliation": "School of Medical and Health Sciences, School of Exercise and Health Sciences, Edith Cowan University, Joondalup, Australia."
+         },
+         {
+          "affiliation": "Institute for Sport, Physical Activity and Leisure, Carnegie School of Sport, Leeds Beckett University, Leeds, UK."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9952-7846"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-0960-9085"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-4066-0591"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "9",
+     "volume": "51",
+     "journalIssueId": 3218212,
+     "dateOfPublication": "2021 Sep",
+     "monthOfPublication": 9,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "nlmid": "8412297",
+      "isoabbreviation": "Sports Med"
+     },
+     "printPublicationDate": "2021-09-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "1967-1982",
+    "abstractText": "<h4>Background</h4>In-season competition and tournaments for team sports can be both long and congested, with some sports competing up to three times per week. During these periods of time, athletes need to prepare technically, tactically and physically for the next fixture and the short duration between fixtures means that, in some cases, physical preparation ceases, or training focus moves to recovery as opposed to progressing adaptations.<h4>Objective</h4>The aim of this review was to investigate the effect of training frequency on muscular strength to determine if a potential method to accommodate in-season resistance training, during busy training schedules, could be achieved by utilizing shorter more frequent training sessions across a training week.<h4>Methods</h4>A literature search was conducted using the SPORTDiscus, Ovid, PubMed and Scopus databases. 2134 studies were identified prior to application of the following inclusion criteria: (1) maximal strength was assessed, (2) a minimum of two different training frequency groups were included, (3) participants were well trained, and finally (4) compound exercises were included within the training programmes. A Cochrane risk of bias assessment was applied to studies that performed randomized controlled trials and consistency of studies was analysed using I<sup>2</sup> as a test of heterogeneity. Secondary analysis of studies included Hedges' g effect sizes (g) and between-study differences were estimated using a random-effects model.<h4>Results</h4>Inconsistency of effects between pre- and post-intervention was low within-group (I<sup>2</sup> = 0%), and moderate between-group (I<sup>2</sup> ≤ 73.95%). Risk of bias was also low based upon the Cochrane risk of bias assessment. Significant increases were observed overall for both upper (p ≤ 0.022) and lower (p ≤ 0.008) body strength, pre- to post-intervention, when all frequencies were assessed. A small effect was observed between training frequencies for upper (g ≤ 0.58) and lower body (g ≤ 0.45).<h4>Conclusion</h4>Over a 6-12-week period, there are no clear differences in maximal strength development between training frequencies, in well-trained populations. Such observations may permit the potential for training to be manipulated around competition schedules and volume to be distributed across shorter, but more frequent training sessions within a micro-cycle rather than being condensed into 1-2 sessions per week, in effect, allowing for a micro-dosing of the strength stimuli.",
+    "affiliation": "Human Performance Laboratory, Directorate of Sport, Exercise, and Physiotherapy, University of Salford, Greater Manchester, UK. m.cuthbert@edu.salford.ac.uk.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Seasons"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Athletes"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://link.springer.com/content/pdf/10.1007/s40279-021-01460-7.pdf"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-021-01460-7"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8363540"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8363540?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 26,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2021-10-25",
+    "dateOfCreation": "2021-04-22",
+    "dateOfRevision": "2022-02-18",
+    "electronicPublicationDate": "2021-04-22",
+    "firstPublicationDate": "2021-04-22",
+    "firstIndexDate": "2021-04-23",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "34624560",
+    "source": "MED",
+    "pmid": "34624560",
+    "doi": "10.1016/j.bone.2021.116230",
+    "title": "The effect of different training frequency on bone mineral density in older adults. A comparative systematic review and meta-analysis.",
+    "authorString": "Zitzmann AL, Shojaa M, Kast S, Kohl M, von Stengel S, Borucki D, Gosch M, Jakob F, Kerschan-Schindl K, Kladny B, Lange U, Middeldorf S, Peters S, Schoene D, Sieber C, Thomasius F, Uder M, Kemmler W.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Zitzmann AL",
+       "lastName": "Zitzmann",
+       "firstName": "Anna-Lena",
+       "initials": "AL",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Medical Physics, Friedrich-Alexander University (FAU) Erlangen-Nürnberg, Erlangen, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Shojaa M",
+       "lastName": "Shojaa",
+       "firstName": "Mahdieh",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Medical Physics, Friedrich-Alexander University (FAU) Erlangen-Nürnberg, Erlangen, Germany; University Hospital Tübingen, Institute of Health Science, Department Population-Based Medicine, Tübingen, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kast S",
+       "lastName": "Kast",
+       "firstName": "Stephanie",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Medical Physics, Friedrich-Alexander University (FAU) Erlangen-Nürnberg, Erlangen, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kohl M",
+       "lastName": "Kohl",
+       "firstName": "Matthias",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-9514-8910"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Medical and Life Sciences, University of Furtwangen, Schwenningen, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "von Stengel S",
+       "lastName": "von Stengel",
+       "firstName": "Simon",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Medical Physics, Friedrich-Alexander University (FAU) Erlangen-Nürnberg, Erlangen, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Borucki D",
+       "lastName": "Borucki",
+       "firstName": "Diana",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Deutsche Rheuma-Liga Bundesverband e.V., Bonn, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Gosch M",
+       "lastName": "Gosch",
+       "firstName": "Markus",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Paracelsus Medical University Nürnberg and General Hospital Nürnberg, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Jakob F",
+       "lastName": "Jakob",
+       "firstName": "Franz",
+       "initials": "F",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Bernhard-Heine-Centrum für Bewegungsforschung, University of Würzburg, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kerschan-Schindl K",
+       "lastName": "Kerschan-Schindl",
+       "firstName": "Katharina",
+       "initials": "K",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Austrian Society for Bone and Mineral Research, Austria."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kladny B",
+       "lastName": "Kladny",
+       "firstName": "Bernd",
+       "initials": "B",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "German Society for Orthopaedics and Trauma (DGOU), Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lange U",
+       "lastName": "Lange",
+       "firstName": "Uwe",
+       "initials": "U",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "German Society for Physical and Rehabilitative Medicine, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Middeldorf S",
+       "lastName": "Middeldorf",
+       "firstName": "Stefan",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "International Muskuloskeletal Pain Society, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Peters S",
+       "lastName": "Peters",
+       "firstName": "Stefan",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "German Association for Health-Related Fitness and Exercise Therapy (DVGS), Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Schoene D",
+       "lastName": "Schoene",
+       "firstName": "Daniel",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Medical Physics, Friedrich-Alexander University (FAU) Erlangen-Nürnberg, Erlangen, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Sieber C",
+       "lastName": "Sieber",
+       "firstName": "Cornel",
+       "initials": "C",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "European Geriatric Medicine Society (EuGMS), Institute for Biomedicine of Aging, FAU Erlangen-Nürnberg, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Thomasius F",
+       "lastName": "Thomasius",
+       "firstName": "Friederike",
+       "initials": "F",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Osteology umbrella association Germany, Austria, Switzerland; Frankfurt Center of Bone Health, Frankfurt, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Uder M",
+       "lastName": "Uder",
+       "firstName": "Michael",
+       "initials": "M",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Radiology, FAU-Erlangen-Nürnberg and University Hospital Erlangen, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kemmler W",
+       "lastName": "Kemmler",
+       "firstName": "Wolfgang",
+       "initials": "W",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Medical Physics, Friedrich-Alexander University (FAU) Erlangen-Nürnberg, Erlangen, Germany; Institute of Radiology, FAU-Erlangen-Nürnberg and University Hospital Erlangen, Germany. Electronic address: wolfgang.kemmler@imp.uni-erlangen.de."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-9514-8910"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "volume": "154",
+     "journalIssueId": 3280287,
+     "dateOfPublication": "2022 Jan",
+     "monthOfPublication": 1,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Bone",
+      "title": "Bone",
+      "essn": "1873-2763",
+      "issn": "8756-3282",
+      "nlmid": "8504048",
+      "isoabbreviation": "Bone"
+     },
+     "printPublicationDate": "2022-01-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "116230",
+    "abstractText": "Exercise frequency is a key aspect of exercise protocols. In this systematic review and meta-analysis, we determined the effect of training frequency on (areal) bone mineral density (BMD) at lumbar spine (LS) and hip. Reviewing seven electronic databases up to April 2021, we conducted a systematic review of the literature according to the PRISMA statement. Inclusion criteria were (a) controlled exercise trials (b) with at least two study arms that compared low versus high exercise frequency, (c) an intervention ≥6 months and (d) BMD assessments at lumbar spine (LS) or hip. The analysis was conducted as a mixed-effect meta-analysis and used \"type of exercise\" and \"study duration\" as moderators in subgroup analyses. Standardized mean differences (SMD) for LS- and hip-BMD changes were defined as outcome measures. Seven studies with 17 exercise groups were included in the analysis. We observed significantly higher effects of high (≥2 sessions/week) vs. low net training frequency (1-<2 sessions/week) exercise on LS- (SMD 0.55, 95%-CI: 0.20-0.90) but not hip-BMD (0.19, -0.06 to 0.45). Study duration was found to be a significant moderator for the effect of training frequency at LS- but not hip-BMD. In parallel, the type of exercise moderately influences the effect of training frequency on LS- but not on hip-BMD. We observed a superior effect of higher net training frequency on BMD. Longer exercise exposition increases this effect. Considering e.g. holidays, indisposition or other temporary absence, exercise programs on osteoporosis should provide at least 3 sessions/week/year to allow a net training frequency of more than two sessions/week. STUDY REGISTRATION: PROSPERO (CRD42021246804).",
+    "affiliation": "Institute of Medical Physics, Friedrich-Alexander University (FAU) Erlangen-Nürnberg, Erlangen, Germany.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Research Support, Non-U.S. Gov't",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Femur Neck"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Lumbar Vertebrae"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Osteoporosis, Postmenopausal"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Postmenopause"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Bone Density"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Aged"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Exercise",
+      "Guideline",
+      "bone mineral density",
+      "Training Frequency"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.bone.2021.116230"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 29,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2022-03-11",
+    "dateOfCreation": "2021-10-08",
+    "dateOfRevision": "2025-06-23",
+    "electronicPublicationDate": "2021-10-05",
+    "firstPublicationDate": "2021-10-05",
+    "firstIndexDate": "2021-10-09",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "29470825",
+    "source": "MED",
+    "pmid": "29470825",
+    "doi": "10.1007/s40279-018-0872-x",
+    "title": "Effect of Resistance Training Frequency on Gains in Muscular Strength: A Systematic Review and Meta-Analysis.",
+    "authorString": "Grgic J, Schoenfeld BJ, Davies TB, Lazinica B, Krieger JW, Pedisic Z.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Grgic J",
+       "lastName": "Grgic",
+       "firstName": "Jozo",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6929-2844"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Sport, Exercise and Active Living (ISEAL), Victoria University, Melbourne, VIC, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Schoenfeld BJ",
+       "lastName": "Schoenfeld",
+       "firstName": "Brad J",
+       "initials": "BJ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Health Sciences, Lehman College, Bronx, NY, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Davies TB",
+       "lastName": "Davies",
+       "firstName": "Timothy B",
+       "initials": "TB",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-3798-2445"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Health Sciences, University of Sydney, Sydney, NSW, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lazinica B",
+       "lastName": "Lazinica",
+       "firstName": "Bruno",
+       "initials": "B",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Kinesiology, Faculty of Education, J.J. Strossmayer University, Osijek, Croatia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Krieger JW",
+       "lastName": "Krieger",
+       "firstName": "James W",
+       "initials": "JW",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Weightology, LLC, Redmond, WA, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Pedisic Z",
+       "lastName": "Pedisic",
+       "firstName": "Zeljko",
+       "initials": "Z",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-2886-3556"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Sport, Exercise and Active Living (ISEAL), Victoria University, Melbourne, VIC, Australia. zeljko.pedisic@vu.edu.au."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-3798-2445"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6929-2844"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-2886-3556"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "5",
+     "volume": "48",
+     "journalIssueId": 2670365,
+     "dateOfPublication": "2018 May",
+     "monthOfPublication": 5,
+     "yearOfPublication": 2018,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "nlmid": "8412297",
+      "isoabbreviation": "Sports Med"
+     },
+     "printPublicationDate": "2018-05-01"
+    },
+    "pubYear": "2018",
+    "pageInfo": "1207-1220",
+    "abstractText": "<h4>Background</h4>Current recommendations on resistance training (RT) frequency for gains in muscular strength are based on extrapolations from limited evidence on the topic, and thus their practical applicability remains questionable.<h4>Objective</h4>To elucidate this issue, we conducted a systematic review and meta-analysis of the studies that compared muscular strength outcomes with different RT frequencies.<h4>Methods</h4>To carry out this review, English-language literature searches of the PubMed/MEDLINE, Scopus, and SPORTDiscus databases were conducted. The meta-analysis was performed using a random-effects model. The meta-analysis models were generated with RT frequencies classified as a categorical variable as either 1, 2, 3, or 4+ times/week, or, if there were insufficient data in subgroup analyses, the training frequencies were categorized as 1, 2, or 3 times/week. Subgroup analyses were performed for potential moderators, including (1) training volume; (2) exercise selection for the 1 repetition maximum (RM) test (for both multi-joint and single-joint exercises); (3) upper and lower body strength gains; (4) training to muscular failure (for studies involving and not involving training to muscular failure); (5) age (for both middle-aged/older adults and young adults); and (6) sex (for men and for women). The methodological quality of studies was appraised using the modified Downs and Black checklist.<h4>Results</h4>A total of 22 studies were found to meet the inclusion criteria. The average score on the Downs and Black checklist was 18 (range 13-22 points). Four studies were classified as being of good methodological quality, while the rest were classified as being of moderate methodological quality. Results of the meta-analysis showed a significant effect (p = 0.003) of RT frequency on muscular strength gains. Effect sizes increased in magnitude from 0.74, 0.82, 0.93, and 1.08 for training 1, 2, 3, and 4+ times per week, respectively. A subgroup analysis of volume-equated studies showed no significant effect (p = 0.421) of RT frequency on muscular strength gains. The subgroup analysis for exercise selection for the 1RM test suggested a significant effect of RT frequency on multi-joint (p < 0.001), but not single-joint, 1RM test results (p = 0.324). The subgroup analysis for upper and lower body showed a significant effect of frequency (p = 0.004) for upper body, but not lower body, strength gains (p = 0.070). In the subgroup analysis for studies in which the training was and was not carried out to muscular failure, no significant effect of RT frequency was found. The subgroup analysis for the age groups suggested a significant effect of training frequency among young adults (p = 0.024), but not among middle-aged and older adults (p = 0.093). Finally, the subgroup analysis for sex indicated a significant effect of RT frequency on strength gains in women (p = 0.030), but not men (p = 0.190).<h4>Conclusions</h4>The results of the present systematic review and meta-analysis suggest a significant effect of RT frequency as higher training frequencies are translated into greater muscular strength gains. However, these effects seem to be primarily driven by training volume because when the volume is equated, there was no significant effect of RT frequency on muscular strength gains. Thus, from a practical standpoint, greater training frequencies can be used for additional RT volume, which is then likely to result in greater muscular strength gains. However, it remains unclear whether RT frequency on its own has significant effects on strength gain. It seems that higher RT frequencies result in greater gains in muscular strength on multi-joint exercises in the upper body and in women, and, finally, in contrast to older adults, young individuals seem to respond more positively to greater RT frequencies. More evidence among resistance-trained individuals is needed as most of the current studies were performed in untrained participants.",
+    "affiliation": "Institute of Sport, Exercise and Active Living (ISEAL), Victoria University, Melbourne, VIC, Australia.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Exercise"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Rest"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Aged"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Middle Aged"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Young Adult"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-018-0872-x"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 208,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2018-11-26",
+    "dateOfCreation": "2018-02-23",
+    "dateOfRevision": "2025-06-23",
+    "firstPublicationDate": "2018-05-01",
+    "firstIndexDate": "2018-02-23",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "30558493",
+    "source": "MED",
+    "pmid": "30558493",
+    "doi": "10.1080/02640414.2018.1555906",
+    "title": "How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis of studies examining the effects of resistance training frequency.",
+    "authorString": "Schoenfeld BJ, Grgic J, Krieger J.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Schoenfeld BJ",
+       "lastName": "Schoenfeld",
+       "firstName": "Brad Jon",
+       "initials": "BJ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "a Department of Health Sciences , Lehman College , Bronx , NY , USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Grgic J",
+       "lastName": "Grgic",
+       "firstName": "Jozo",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6929-2844"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "b Institute for Health and Sport (IHES) , Victoria University , Melbourne , Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Krieger J",
+       "lastName": "Krieger",
+       "firstName": "James",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "c Weightology, LLC , Redmond , WA , USA."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6929-2844"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "11",
+     "volume": "37",
+     "journalIssueId": 2805060,
+     "dateOfPublication": "2019 Jun",
+     "monthOfPublication": 6,
+     "yearOfPublication": 2019,
+     "journal": {
+      "medlineAbbreviation": "J Sports Sci",
+      "title": "Journal of sports sciences",
+      "essn": "1466-447X",
+      "issn": "0264-0414",
+      "nlmid": "8405364",
+      "isoabbreviation": "J Sports Sci"
+     },
+     "printPublicationDate": "2019-06-01"
+    },
+    "pubYear": "2019",
+    "pageInfo": "1286-1295",
+    "abstractText": "Training frequency is considered an important variable in the hypertrophic response to regimented resistance exercise. The purpose of this paper was to conduct a systematic review and meta-analysis of experimental studies designed to investigate the effects of weekly training frequency on hypertrophic adaptations. Following a systematic search of PubMed/MEDLINE, Scoups, and SPORTDiscus databases, a total of 25 studies were deemed to meet inclusion criteria. Results showed no significant difference between higher and lower frequency on a volume-equated basis. Moreover, no significant differences were seen between frequencies of training across all categories when taking into account direct measures of growth, in those considered resistance-trained, and when segmenting into training for the upper body and lower body. Meta-regression analysis of non-volume-equated studies showed a significant effect favoring higher frequencies, although the overall difference in magnitude of effect between frequencies of 1 and 3+ days per week was modest. In conclusion, there is strong evidence that resistance training frequency does not significantly or meaningfully impact muscle hypertrophy when volume is equated. Thus, for a given training volume, individuals can choose a weekly frequency per muscle groups based on personal preference.",
+    "affiliation": "a Department of Health Sciences , Lehman College , Bronx , NY , USA.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Lower Extremity",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Upper Extremity",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "AH",
+          "qualifierName": "anatomy & histology"
+         },
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Time Factors"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "hypertrophy",
+      "Resistance Training",
+      "Dose-response",
+      "Exercise Frequency"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1080/02640414.2018.1555906"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 95,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2019-04-19",
+    "dateOfCreation": "2018-12-19",
+    "dateOfRevision": "2019-04-19",
+    "electronicPublicationDate": "2018-12-17",
+    "firstPublicationDate": "2018-12-17",
+    "firstIndexDate": "2018-12-31",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "27102172",
+    "source": "MED",
+    "pmid": "27102172",
+    "doi": "10.1007/s40279-016-0543-8",
+    "title": "Effects of Resistance Training Frequency on Measures of Muscle Hypertrophy: A Systematic Review and Meta-Analysis.",
+    "authorString": "Schoenfeld BJ, Ogborn D, Krieger JW.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Schoenfeld BJ",
+       "lastName": "Schoenfeld",
+       "firstName": "Brad J",
+       "initials": "BJ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Health Science, Lehman College, Bronx, NY, USA. brad@workout911.com."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ogborn D",
+       "lastName": "Ogborn",
+       "firstName": "Dan",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "McMaster University, Hamilton, ON, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Krieger JW",
+       "lastName": "Krieger",
+       "firstName": "James W",
+       "initials": "JW",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Weightology, LLC, Issaquah, WA, USA."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "wikipedia"
+     ]
+    },
+    "journalInfo": {
+     "issue": "11",
+     "volume": "46",
+     "journalIssueId": 2460779,
+     "dateOfPublication": "2016 Nov",
+     "monthOfPublication": 11,
+     "yearOfPublication": 2016,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "nlmid": "8412297",
+      "isoabbreviation": "Sports Med"
+     },
+     "printPublicationDate": "2016-11-01"
+    },
+    "pubYear": "2016",
+    "pageInfo": "1689-1697",
+    "abstractText": "<h4>Background</h4>A number of resistance training (RT) program variables can be manipulated to maximize muscular hypertrophy. One variable of primary interest in this regard is RT frequency. Frequency can refer to the number of resistance training sessions performed in a given period of time, as well as to the number of times a specific muscle group is trained over a given period of time.<h4>Objective</h4>We conducted a systematic review and meta-analysis to determine the effects of resistance training frequency on hypertrophic outcomes.<h4>Methods</h4>Studies were deemed eligible for inclusion if they met the following criteria: (1) were an experimental trial published in an English-language refereed journal; (2) directly compared different weekly resistance training frequencies in traditional dynamic exercise using coupled concentric and eccentric actions; (3) measured morphologic changes via biopsy, imaging, circumference, and/or densitometry; (4) had a minimum duration of 4 weeks; and (5) used human participants without chronic disease or injury. A total of ten studies were identified that investigated RT frequency in accordance with the criteria outlined.<h4>Results</h4>Analysis using binary frequency as a predictor variable revealed a significant impact of training frequency on hypertrophy effect size (P = 0.002), with higher frequency being associated with a greater effect size than lower frequency (0.49 ± 0.08 vs. 0.30 ± 0.07, respectively). Statistical analyses of studies investigating training session frequency when groups are matched for frequency of training per muscle group could not be carried out and reliable estimates could not be generated due to inadequate sample size.<h4>Conclusions</h4>When comparing studies that investigated training muscle groups between 1 to 3 days per week on a volume-equated basis, the current body of evidence indicates that frequencies of training twice a week promote superior hypertrophic outcomes to once a week. It can therefore be inferred that the major muscle groups should be trained at least twice a week to maximize muscle growth; whether training a muscle group three times per week is superior to a twice-per-week protocol remains to be determined.",
+    "affiliation": "Department of Health Science, Lehman College, Bronx, NY, USA. brad@workout911.com.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "AH",
+          "qualifierName": "anatomy & histology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Exercise"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Fatigue",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         },
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "SN",
+          "qualifierName": "statistics & numerical data"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-016-0543-8"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 189,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2018-05-03",
+    "dateOfCreation": "2016-04-23",
+    "dateOfRevision": "2025-06-26",
+    "firstPublicationDate": "2016-11-01",
+    "firstIndexDate": "2016-04-22",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "30076500",
+    "source": "MED",
+    "pmid": "30076500",
+    "pmcid": "PMC6081873",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC6081873"
+     ]
+    },
+    "doi": "10.1186/s40798-018-0149-9",
+    "title": "Weekly Training Frequency Effects on Strength Gain: A Meta-Analysis.",
+    "authorString": "Ralston GW, Kilgore L, Wyatt FB, Buchan D, Baker JS.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Ralston GW",
+       "lastName": "Ralston",
+       "firstName": "Grant W",
+       "initials": "GW",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8789-6345"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute for Clinical Exercise and Health Science, Applied Physiology Research Laboratory, School of Science and Sport, University of the West of Scotland, Hamilton, Lanarkshire, ML3 0JB, Scotland, UK. grant.ralston@forthvalley.ac.uk."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kilgore L",
+       "lastName": "Kilgore",
+       "firstName": "Lon",
+       "initials": "L",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Kilgore Academy, Azle, TX, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wyatt FB",
+       "lastName": "Wyatt",
+       "firstName": "Frank B",
+       "initials": "FB",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Athletic Training and Exercise Physiology, Midwestern State University, Wichita Falls, TX, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Buchan D",
+       "lastName": "Buchan",
+       "firstName": "Duncan",
+       "initials": "D",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4320-4615"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute for Clinical Exercise and Health Science, Applied Physiology Research Laboratory, School of Science and Sport, University of the West of Scotland, Hamilton, Lanarkshire, ML3 0JB, Scotland, UK."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Baker JS",
+       "lastName": "Baker",
+       "firstName": "Julien S",
+       "initials": "JS",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute for Clinical Exercise and Health Science, Applied Physiology Research Laboratory, School of Science and Sport, University of the West of Scotland, Hamilton, Lanarkshire, ML3 0JB, Scotland, UK."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8789-6345"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4320-4615"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "4",
+     "journalIssueId": 2712061,
+     "dateOfPublication": "2018 Aug",
+     "monthOfPublication": 8,
+     "yearOfPublication": 2018,
+     "journal": {
+      "medlineAbbreviation": "Sports Med Open",
+      "title": "Sports medicine - open",
+      "essn": "2198-9761",
+      "issn": "2199-1170",
+      "nlmid": "101662568",
+      "isoabbreviation": "Sports Med Open"
+     },
+     "printPublicationDate": "2018-08-01"
+    },
+    "pubYear": "2018",
+    "pageInfo": "36",
+    "abstractText": "<h4>Background</h4>The current recommendations for resistance training (RT) frequency range from 2 to 5 days per week (days week<sup>- 1</sup>) depending on the subjects' training status. However, the relationship between RT frequency and muscular strength remains controversial with reported variances existing across different population groups. We conducted a meta-analysis that (1) quantified the effects of low (LF; 1 day week<sup>- 1</sup>), medium (MF; 2 days week<sup>- 1</sup>), or high (HF; ≥ 3 days week<sup>- 1</sup>) RT frequency on muscular strength per exercise; (2) examined the effects of different RT frequency on one repetition maximum (1RM) strength gain profiles (multi-joint exercises and single joint exercises); (3) examined the effects of different RT frequency on 1RM strength gain when RT volume is equated; and (4) examined the effects of different RT frequency on 1RM strength gains on upper and lower body.<h4>Methods</h4>Computerised searches were performed using the terms 'strength training frequency', 'resistance training frequency', 'training frequency', and 'weekly training frequency'. After review, 12 studies were deemed suitable according to pre-set eligibility criteria. Primary data were pooled using a random-effects model. Outcomes analysed for main effects were pre- to post strength change with volume-equated studies that combined multi-joint and isolation exercise; isolation-only exercise and untrained subjects only. Heterogeneity between studies was assessed using I<sup>2</sup> and Cochran's Q statistics with funnel plots used to assess publication bias and sensitivity analyses calculated for subgroups.<h4>Results</h4>Pre- versus post-training strength analysis comprised of 74 treatment groups from 12 studies. For combined multi-joint and isolation exercises, there was a trend towards higher RT frequency compared with lower frequency [mean effect size (ES) 0.09 (95% CI - 0.06-0.24)] however not significant (p = 0.25). Volume-equated pre- to post-intervention strength gain was similar when LF was compared to HF [mean ES 0.03 (95% CI - 0.20-0.27); p = 0.78]. Upper body pre- to post-intervention strength gain was greater when HF was compared with LF [mean ES 0.48 (95% CI 0.20-0.76)] with significant differences between frequencies (p < 0.01). Upper body pre- to post-intervention strength gain was similar when MF was compared with LF (ES 0.12; 95% CI - 0.22-0.47); p = 0.48]. There was no significant difference in lower body mean ES between HF and LF [mean ES 0.21(95% CI - 0.55-0.13); p = 0.22]. There was a trend towards a difference in mean ES between MF and HF [mean ES 0.41(95% CI - 0.26-1.09); however, the effect was not significant (p = 0.23).<h4>Conclusions</h4>The existing data does not provide a strong correlation between increased weekly training frequency (HF) and maximal strength gain in upper and lower body resistance exercises for a mixed population group. When RT is volume-equated for combined multi-joint and isolation exercises, there is no significant effect of RT frequency on muscular strength gain. More investigations are required to explore the effects of varying weekly training frequencies adequately.",
+    "affiliation": "Institute for Clinical Exercise and Health Science, Applied Physiology Research Laboratory, School of Science and Sport, University of the West of Scotland, Hamilton, Lanarkshire, ML3 0JB, Scotland, UK. grant.ralston@forthvalley.ac.uk.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Strength Training Frequency",
+      "Resistance Training Frequency For Strength Development"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://sportsmedicine-open.springeropen.com/track/pdf/10.1186/s40798-018-0149-9"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1186/s40798-018-0149-9"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC6081873"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC6081873?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 62,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2018-08-05",
+    "dateOfRevision": "2020-10-01",
+    "electronicPublicationDate": "2018-08-03",
+    "firstPublicationDate": "2018-08-03",
+    "firstIndexDate": "2018-08-04",
+    "fullTextReceivedDate": "2025-02-03",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "30236847",
+    "source": "MED",
+    "pmid": "30236847",
+    "doi": "10.1016/j.jsams.2018.09.223",
+    "title": "Resistance training frequency and skeletal muscle hypertrophy: A review of available evidence.",
+    "authorString": "Grgic J, Schoenfeld BJ, Latella C.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Grgic J",
+       "lastName": "Grgic",
+       "firstName": "Jozo",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6929-2844"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute for Health and Sport (IHES), Victoria University, Australia. Electronic address: jozo.grgic@live.vu.edu.au."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Schoenfeld BJ",
+       "lastName": "Schoenfeld",
+       "firstName": "Brad J",
+       "initials": "BJ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Health Sciences, Lehman College, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Latella C",
+       "lastName": "Latella",
+       "firstName": "Christopher",
+       "initials": "C",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5857-9671"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Medical and Health Sciences, Edith Cowan University, Australia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5857-9671"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6929-2844"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "22",
+     "journalIssueId": 2773992,
+     "dateOfPublication": "2019 Mar",
+     "monthOfPublication": 3,
+     "yearOfPublication": 2019,
+     "journal": {
+      "medlineAbbreviation": "J Sci Med Sport",
+      "title": "Journal of science and medicine in sport",
+      "essn": "1878-1861",
+      "issn": "1440-2440",
+      "nlmid": "9812598",
+      "isoabbreviation": "J Sci Med Sport"
+     },
+     "printPublicationDate": "2019-03-01"
+    },
+    "pubYear": "2019",
+    "pageInfo": "361-370",
+    "abstractText": "<h4>Objectives</h4>Current reviews and position stands on resistance training (RT) frequency and associated muscular hypertrophy are based on limited evidence holding implications for practical application and program design. Considering that several recent studies have shed new light on this topic, the present paper aimed to collate the available evidence on RT frequency and the associated effect on muscular hypertrophy.<h4>Design</h4>Review article.<h4>Methods</h4>Articles for this review were obtained through searches of PubMed/MEDLINE, Scopus, and SPORTDiscus. Both volume-equated (studies in which RT frequency is the only manipulated variable) and non-volume-equated (studies in which both RT frequency and volume are the manipulated variables) study designs were considered.<h4>Results</h4>Ten studies were found that used direct site-specific measures of hypertrophy, and, in general, reported that RT once per week elicits similar hypertrophy compared to training two or three times per week. In addition, 21 studies compared different RT frequencies and used lean body mass devices to estimate muscular growth; most of which reported no significant differences between training frequencies. Five studies were identified that used circumference for estimating muscular growth. These studies provided findings that are difficult to interpret, considering that circumference is a crude measure of hypertrophy (i.e., it does not allow for the differentiation between adipose tissue, intracellular fluids, and muscle mass).<h4>Conclusions</h4>Based on the results of this review, it appears that under volume-equated conditions, RT frequency does not seem to have a pronounced effect of gains in muscle mass.",
+    "affiliation": "Institute for Health and Sport (IHES), Victoria University, Australia. Electronic address: jozo.grgic@live.vu.edu.au.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "GD",
+          "qualifierName": "growth & development"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Body Composition"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Growth",
+      "Muscles",
+      "Exercise",
+      "Training",
+      "Cross-sectional Area",
+      "Muscle Protein Synthesis"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.jsams.2018.09.223"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 27,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2019-05-15",
+    "dateOfCreation": "2018-09-22",
+    "dateOfRevision": "2022-04-09",
+    "electronicPublicationDate": "2018-09-13",
+    "firstPublicationDate": "2018-09-13",
+    "firstIndexDate": "2018-09-21",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

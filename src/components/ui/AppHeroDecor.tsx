@@ -51,7 +51,7 @@ export function AppHeroBody({label, title, subtitle, tab, onTitleClick}: AppHero
   const parsed = parseAppHeroTitle(title);
   const isInteractive = Boolean(onTitleClick);
   // Calculator first viewport: title + one subtitle line, no tip cards / aside chrome.
-  const compact = tab === 'calculator';
+  const compact = false;
   const showAside = Boolean(parsed.ringLabel) && !compact;
   const showBento = Boolean(tab) && !compact;
 

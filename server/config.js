@@ -44,8 +44,9 @@ function assertBillingConfig(config) {
 }
 
 /**
- * File workspace is opt-in outside development (shared inbox + path disclosure risk).
+ * File workspace is opt-in outside development.
  * Development defaults to on for local DX; set ENABLE_FILE_WORKSPACE=0 to disable.
+ * API inbox is per authenticated user when enabled. Never enable on public-run.
  */
 function resolveEnableFileWorkspace(env, isDevelopment) {
   const flag = envFlag(env.ENABLE_FILE_WORKSPACE);
@@ -62,6 +63,12 @@ export function getServerConfig(env = process.env) {
     throw new Error('JWT_SECRET is required when NODE_ENV is not development');
   }
 
+  // Audit 2026-11-07: development binds to loopback by default; explicit
+  // ALLOW_DEV_BIND=1 opts in to 0.0.0.0 (LAN exposure). Docker/public-run set
+  // NODE_ENV=production and are unaffected.
+  const devBindAllowed = envFlag(env.ALLOW_DEV_BIND) === true;
+  const host = isDevelopment && !devBindAllowed ? '127.0.0.1' : '0.0.0.0';
+
   const plategaEnabled = resolvePlategaEnabled(env);
 
   const config = {
@@ -71,6 +78,7 @@ export function getServerConfig(env = process.env) {
     /** Interim access TTL (was 30d). Override with JWT_EXPIRES_IN e.g. 1h / 24h. */
     jwtExpiresIn: env.JWT_EXPIRES_IN?.trim() || '24h',
     port: envNumber(env.PORT, 3001, 1),
+    host,
     authWindowMs: envNumber(env.AUTH_RATE_LIMIT_WINDOW_MS, 10 * 60 * 1000, 1000),
     loginMaxAttempts: envNumber(env.LOGIN_MAX_ATTEMPTS, 7, 1),
     registerMaxAttempts: envNumber(env.REGISTER_MAX_ATTEMPTS, 5, 1),

@@ -1,4 +1,5 @@
 /* THEORY WEB — macOS port */
+@import './diagrams.css';
 .theory-shell {
   --theory-bg: #0a0c10;
   --theory-surface: #151a22;
@@ -35,7 +36,11 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(130deg, color-mix(in srgb, var(--theory-text) 4%, transparent), transparent 24%),
+    linear-gradient(
+      130deg,
+      color-mix(in srgb, var(--theory-text) 4%, transparent),
+      transparent 24%
+    ),
     linear-gradient(180deg, transparent, color-mix(in srgb, var(--theory-text) 2%, transparent));
   pointer-events: none;
 }

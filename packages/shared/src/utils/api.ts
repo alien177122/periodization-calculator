@@ -1,12 +1,17 @@
 import {CATALOG_EXERCISES} from '../data/exercises.ts';
 import {isV3ExerciseKey} from '../program/v3/exercises.ts';
 import {normalizeLegExercises} from '../data/split-exercises.ts';
+import {normalizeDaySchemeOverrides} from '../data/split-schemes.ts';
+import {migrateSplitToBlocks} from '../data/split-blocks.ts';
+import {normalizePairsByDay} from '../data/split-pairs.ts';
 import type {
   ActiveProgram,
   CustomSplit,
   FileWorkspaceResponse,
   JournalSession,
   JournalSet,
+  LearningItemProgress,
+  LearningProgress,
   SavedExercise,
   SplitCalculation,
   SplitMuscleId,
@@ -24,6 +29,8 @@ import type {
 } from '../types/billing.ts';
 import {CalculatorApiError} from '../types/billing.ts';
 import {JOURNAL_LIMITS} from './journalLimits.ts';
+import {clearOutboxIfNotNewer, isRetryableNetworkError, writeOutbox} from './offlineOutbox.ts';
+import {ensureTrainingProfiles} from './training-profiles.ts';
 
 const AUTH_EXPIRED = 'AUTH_EXPIRED';
 const API_UNAVAILABLE = 'API_UNAVAILABLE';
@@ -227,6 +234,23 @@ export function normalizeLoadedUser(input: unknown, fallbackName: string): UserD
     if (Object.keys(normalized).length > 0) trainingProgressByProgram = normalized;
   }
 
+  let learningProgress: LearningProgress | undefined;
+  if (isRecord(input.learningProgress)) {
+    const source = input.learningProgress as Record<string, unknown>;
+    const normalized: LearningProgress = {};
+    for (const [itemId, value] of Object.entries(source)) {
+      if (!itemId.trim() || !isRecord(value)) continue;
+      if (typeof value.read !== 'boolean') continue;
+      const read = value.read;
+      const updatedAt = typeof value.updatedAt === 'string' ? value.updatedAt.trim() : '';
+      if (!updatedAt) continue;
+      const item: LearningItemProgress = {read, updatedAt};
+      if (value.checked === 'ok' || value.checked === 'retry') item.checked = value.checked;
+      normalized[itemId] = item;
+    }
+    if (Object.keys(normalized).length > 0) learningProgress = normalized;
+  }
+
   const testResults = Array.isArray(input.testResults)
     ? input.testResults.flatMap((entry): TestResult[] => {
         if (!isRecord(entry)) return [];
@@ -250,6 +274,15 @@ export function normalizeLoadedUser(input: unknown, fallbackName: string): UserD
       })
     : [];
 
+  const ensured = ensureTrainingProfiles({
+    profiles: input.profiles,
+    splits,
+    splitCalculations,
+    activeProfileId:
+      typeof input.activeProfileId === 'string' ? input.activeProfileId.trim() : null,
+    activeSplitId,
+  });
+
   const base: UserData = {name, exercises};
   if (completedSessions !== null) base.trainingProgress = {completedSessions};
   if (trainingProgressByProgram && Object.keys(trainingProgressByProgram).length > 0) {
@@ -258,10 +291,13 @@ export function normalizeLoadedUser(input: unknown, fallbackName: string): UserD
   if (activeProgram) base.activeProgram = activeProgram;
   if (testResults.length > 0) base.testResults = testResults;
   if (journal.length > 0) base.journal = journal;
-  if (splits.length > 0) base.splits = splits;
+  if (ensured.splits.length > 0) base.splits = ensured.splits;
+  if (ensured.profiles.length > 0) base.profiles = ensured.profiles;
+  if (ensured.activeProfileId) base.activeProfileId = ensured.activeProfileId;
   if (activeSplitId) base.activeSplitId = activeSplitId;
-  if (splitCalculations.length > 0) base.splitCalculations = splitCalculations;
+  if (ensured.splitCalculations.length > 0) base.splitCalculations = ensured.splitCalculations;
   if (activeSplitCalculationId) base.activeSplitCalculationId = activeSplitCalculationId;
+  if (learningProgress) base.learningProgress = learningProgress;
 
   return base;
 }
@@ -324,13 +360,17 @@ function normalizeLoadedSplit(input: unknown): CustomSplit | null {
     updatedAt,
   };
 
+  if (typeof input.profileId === 'string' && input.profileId.trim()) {
+    split.profileId = input.profileId.trim();
+  }
+
   if (Array.isArray(input.legExercises) && input.legExercises.length === 2) {
     split.legExercises = normalizeLegExercises(input.legExercises);
   }
 
   if (isRecord(input.customExercisesByDay)) {
-    const customExercisesByDay: Partial<Record<1 | 2 | 3, string[]>> = {};
-    for (const dayNum of [1, 2, 3] as const) {
+    const customExercisesByDay: Partial<Record<1 | 2 | 3 | 4, string[]>> = {};
+    for (const dayNum of [1, 2, 3, 4] as const) {
       const keys = input.customExercisesByDay[dayNum];
       if (!Array.isArray(keys)) continue;
       const trimmed = keys
@@ -342,6 +382,25 @@ function normalizeLoadedSplit(input: unknown): CustomSplit | null {
       split.customExercisesByDay = customExercisesByDay;
     }
   }
+
+  // Схемы подходов конкретного дня (S1): битые записи отбрасываются.
+  const schemeOverridesByDay = normalizeDaySchemeOverrides(input.schemeOverridesByDay);
+  if (schemeOverridesByDay) {
+    split.schemeOverridesByDay = schemeOverridesByDay;
+  }
+
+  // Связки упражнений дня (S3).
+  const pairsByDay = normalizePairsByDay(input.pairsByDay);
+  if (pairsByDay) {
+    split.pairsByDay = pairsByDay;
+  }
+  if (typeof input.sourcePresetId === 'string' && input.sourcePresetId.trim()) {
+    split.sourcePresetId = input.sourcePresetId.trim();
+  }
+  // Фаза 2: миграция сплита к схеме v2 (блоки).
+  const migrated = migrateSplitToBlocks(split);
+  if (migrated.blocksByDay) split.blocksByDay = migrated.blocksByDay;
+  if (migrated.schemaVersion) split.schemaVersion = migrated.schemaVersion;
 
   // Server already persists these on PUT /api/users/:name — must survive loadUser
   // or week/day progress looks empty after every login.
@@ -491,7 +550,11 @@ export function createApiClient(baseUrl: string) {
     }
   }
 
-  async function saveUser(data: UserData, token: string): Promise<{ok: boolean; error?: string}> {
+  async function saveUser(
+    data: UserData,
+    token: string,
+  ): Promise<{ok: boolean; error?: string; pending?: boolean}> {
+    const startedAt = new Date().toISOString();
     try {
       const response = await fetch(`${baseUrl}/users/${encodeURIComponent(data.name)}`, {
         method: 'PUT',
@@ -514,10 +577,32 @@ export function createApiClient(baseUrl: string) {
         console.error('saveUser failed on API side:', error);
         return {ok: false, error};
       }
+      if (typeof localStorage !== 'undefined') {
+        try {
+          clearOutboxIfNotNewer(localStorage, data.name, startedAt);
+        } catch (storageError) {
+          console.error('Failed to clear offline outbox:', storageError);
+        }
+      }
       return {ok: true};
     } catch (err) {
+      const message = err instanceof Error ? err.message : 'Network error';
+      if (isRetryableNetworkError(message)) {
+        if (typeof localStorage !== 'undefined') {
+          try {
+            writeOutbox(localStorage, {
+              data,
+              token,
+              updatedAt: new Date().toISOString(),
+            });
+          } catch (storageError) {
+            console.error('Failed to queue offline save:', storageError);
+          }
+        }
+        return {ok: true, pending: true};
+      }
       console.error('saveUser network/unknown error:', err);
-      return {ok: false, error: err instanceof Error ? err.message : 'Network error'};
+      return {ok: false, error: message};
     }
   }
 

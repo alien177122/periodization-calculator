@@ -1,12 +1,12 @@
-import type {CustomSplit} from '../types/index.ts';
+import type {CustomSplit, SplitDayNumber} from '../types/index.ts';
+import {splitDayNumbers} from './split-weight-readiness.ts';
 
-export type SplitDayNumber = 1 | 2 | 3;
+export type {SplitDayNumber};
 
 export type WeekProgressVisual = 'empty' | 'partial' | 'done';
 
 function dayNumbersForSplit(split: CustomSplit): SplitDayNumber[] {
-  const count = split.daysPerWeek === 3 ? 3 : 2;
-  return Array.from({length: count}, (_, index) => (index + 1) as SplitDayNumber);
+  return splitDayNumbers(split);
 }
 
 function uniqueSortedWeeks(weeks: number[]): number[] {
@@ -22,7 +22,7 @@ function uniqueSortedDays(
   const next: Array<{week: number; day: SplitDayNumber}> = [];
   for (const entry of days) {
     if (!Number.isInteger(entry.week) || entry.week < 0 || entry.week > 7) continue;
-    if (entry.day !== 1 && entry.day !== 2 && entry.day !== 3) continue;
+    if (entry.day !== 1 && entry.day !== 2 && entry.day !== 3 && entry.day !== 4) continue;
     const key = `${entry.week}:${entry.day}`;
     if (seen.has(key)) continue;
     seen.add(key);

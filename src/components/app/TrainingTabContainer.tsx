@@ -1,8 +1,12 @@
 import TrainingTab from '../../screens/TrainingTab';
 import '../../styles/tabs/training-tab.css';
 import {useTrainingProgram} from '../../hooks/useTrainingProgram';
+import {TRAINING_DAYS} from '@training/shared/data/exercises';
 import {PROGRAM_DAYS_PER_WEEK} from '../../types';
 import type {UserData} from '../../types';
+import {blocksForDay} from '@training/shared/data/split-blocks';
+import {withBlockSetMode} from '@training/shared/data/split-blocks';
+import type {SplitDayNumber} from '@training/shared/types';
 
 interface TrainingTabContainerProps {
   userData: UserData;
@@ -26,6 +30,29 @@ export default function TrainingTabContainer({
     setUserData,
   });
 
+  const activeSplit =
+    (userData.splits ?? []).find(s => s.id === userData.activeSplitId) ??
+    (userData.splits ?? [])[0] ??
+    null;
+
+  const currentTrainingDay = TRAINING_DAYS[training.currentDayIdx];
+  const nextTrainingDay = TRAINING_DAYS[training.nextDayIdx];
+  const currentBlocks = activeSplit && currentTrainingDay
+    ? blocksForDay(activeSplit, currentTrainingDay.dayNumber as SplitDayNumber)
+    : undefined;
+  const nextBlocks = activeSplit && nextTrainingDay
+    ? blocksForDay(activeSplit, nextTrainingDay.dayNumber as SplitDayNumber)
+    : undefined;
+
+  const handleSetMode = (dayNumber: number, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => {
+    if (!activeSplit) return;
+    const dn = dayNumber as SplitDayNumber;
+    const next = withBlockSetMode(activeSplit, dn, blockId, setMode, cluster);
+    if (setUserData) {
+      setUserData({...userData, splits: (userData.splits ?? []).map(s => (s.id === next.id ? next : s))});
+    }
+  };
+
   return (
     <TrainingTab
       userData={userData}
@@ -33,6 +60,9 @@ export default function TrainingTabContainer({
       onGoCalculator={onGoCalculator}
       totalSessions={training.totalSessions ?? 16}
       programSubtitle={programSubtitle}
+      currentBlocks={currentBlocks}
+      nextBlocks={nextBlocks}
+      onSetModeChange={handleSetMode}
     />
   );
 }

@@ -9,6 +9,7 @@ import {
   isWeekEffectivelyDone,
   type WeekProgressVisual,
 } from '@training/shared/utils/split-progress';
+import {blocksForDay} from '@training/shared/data/split-blocks';
 
 interface DayPreview {
   day: SplitDayConfig;
@@ -22,13 +23,14 @@ interface SplitPreviewProps {
   dayPreviews: DayPreview[];
   onWeekChange: (week: number) => void;
   onToggleWeekDone: (week: number) => void;
-  onToggleDayDone: (week: number, day: 1 | 2 | 3) => void;
+  onToggleDayDone: (week: number, day: 1 | 2 | 3 | 4) => void;
   onFixedWeightChange?: (exerciseKey: string, weekIndex: number, weight: number) => void;
+  onSetModeChange?: (dayNumber: 1 | 2 | 3 | 4, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }
 
 const WEEK_COUNT = 8;
 
-function isDayDone(split: CustomSplit, weekIndex: number, day: 1 | 2 | 3): boolean {
+function isDayDone(split: CustomSplit, weekIndex: number, day: 1 | 2 | 3 | 4): boolean {
   return (split.completedDays ?? []).some(entry => entry.week === weekIndex && entry.day === day);
 }
 
@@ -62,13 +64,14 @@ export function SplitPreview({
   onToggleWeekDone,
   onToggleDayDone,
   onFixedWeightChange,
+  onSetModeChange,
 }: SplitPreviewProps) {
   const hideWeights = split.weightMode === 'scheme_only';
   const weekDone = isWeekEffectivelyDone(split, previewWeek);
   const doneWeekCount = Array.from({length: WEEK_COUNT}, (_, index) => index).filter(week =>
     isWeekEffectivelyDone(split, week),
   ).length;
-  const daysPerWeek = split.daysPerWeek === 3 ? 3 : 2;
+  const daysPerWeek = split.daysPerWeek === 4 ? 4 : split.daysPerWeek === 3 ? 3 : 2;
 
   return (
     <section className="app-tab-section split-preview" aria-labelledby="split-preview-title">
@@ -120,7 +123,7 @@ export function SplitPreview({
           <div className="split-week-progress__actions">
             <button
               type="button"
-              className={`btn${weekDone ? ' btn-ghost' : ' btn-primary'} split-week-done-btn`}
+              className={`btn${weekDone ? ' btn-ghost' : ' calc-test__submit'} split-week-done-btn`}
               onClick={() => onToggleWeekDone(previewWeek)}
               aria-pressed={weekDone}>
               {weekDone
@@ -157,6 +160,8 @@ export function SplitPreview({
             exercises={exercises}
             hideWeights={hideWeights}
             variant="split-preview"
+            persistedBlocks={blocksForDay(split, dayDef.dayNumber)}
+            onSetModeChange={onSetModeChange ? (dayNumber, blockId, mode, cluster) => onSetModeChange(dayNumber as 1 | 2 | 3 | 4, blockId, mode, cluster) : undefined}
           />
         ))}
 

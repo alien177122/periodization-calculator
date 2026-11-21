@@ -1,7 +1,10 @@
 import {TRAINING_DAYS} from '../../data/exercises';
-import type {TrainingDayDef, TrainingPreferences} from '../../types';
+import type {Block, TrainingDayDef, TrainingPreferences} from '../../types';
 import type {TrainingExerciseRow} from '../../utils/training';
 import TrainingDayCard from '../TrainingDayCard';
+import {WeekProgressGrid} from './WeekProgressGrid';
+import {ExerciseTimers} from './ExerciseTimers';
+import {BlockTimer} from './BlockTimer';
 import {SectionBlock} from '../SectionBlock';
 import {Button} from '../ui/Button';
 import ProgressionControls from './ProgressionControls';
@@ -19,6 +22,9 @@ interface ActiveDayViewProps {
   onComplete: () => void;
   totalSessions?: number;
   trainingDays?: TrainingDayDef[];
+  currentBlocks?: Block[];
+  nextBlocks?: Block[];
+  onSetModeChange?: (dayNumber: number, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }
 
 export default function ActiveDayView({
@@ -34,6 +40,9 @@ export default function ActiveDayView({
   onComplete,
   totalSessions = 24,
   trainingDays = TRAINING_DAYS,
+  currentBlocks,
+  nextBlocks,
+  onSetModeChange,
 }: ActiveDayViewProps) {
   const showPreview = nextSessions < totalSessions;
   const currentDay = trainingDays[currentDayIdx];
@@ -41,16 +50,25 @@ export default function ActiveDayView({
 
   return (
     <>
+      <WeekProgressGrid
+        currentWeekIdx={currentWeekIdx}
+      />
       <SectionBlock num="01" title="Текущая тренировка">
         <ProgressionControls preferences={trainingPreferences} onChange={onPreferencesChange} />
         {currentDay ? (
-          <TrainingDayCard
-            dayDef={currentDay}
-            weekIndex={currentWeekIdx}
-            exercises={currentExercises}
-          />
+          <>
+            <BlockTimer />
+            <ExerciseTimers exercises={currentExercises} />
+            <TrainingDayCard
+              dayDef={currentDay}
+              weekIndex={currentWeekIdx}
+              exercises={currentExercises}
+              persistedBlocks={currentBlocks}
+              onSetModeChange={onSetModeChange}
+            />
+          </>
         ) : null}
-        <Button variant="complete" onClick={onComplete}>
+        <Button className="calc-test__submit" onClick={onComplete}>
           Завершить тренировку
         </Button>
       </SectionBlock>
@@ -63,6 +81,8 @@ export default function ActiveDayView({
             weekIndex={nextWeekIdx}
             exercises={nextExercises}
             isPreview
+            persistedBlocks={nextBlocks}
+            onSetModeChange={onSetModeChange}
           />
         </SectionBlock>
       ) : null}

@@ -1,3 +1,5 @@
 @import '../components/split/split-constructor.css';
+@import '../components/split/split-hub.css';
+@import '../components/split/split-forecast-chart.css';
 /* TrainingDayCard is shared with Split preview — keep card layout with this tab chunk. */
 @import '../components/training/training-day-card.css';

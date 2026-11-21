@@ -40,3 +40,21 @@ test('optimisticSaveUser keeps update on success', async () => {
   assert.equal(saved, true);
   assert.equal(current.name, 'Changed');
 });
+
+test('optimisticSaveUser keeps update when the save is pending offline', async () => {
+  let current = baseUser;
+  const setUserData = (value: UserData) => {
+    current = value;
+  };
+
+  const saved = await optimisticSaveUser(
+    baseUser,
+    {...baseUser, name: 'Changed'},
+    setUserData,
+    async () => ({ok: true, pending: true}),
+    'token',
+  );
+
+  assert.equal(saved, true);
+  assert.equal(current.name, 'Changed');
+});

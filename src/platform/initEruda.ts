@@ -1,7 +1,6 @@
 /**
- * Mobile web console (Eruda).
- * Off by default in all environments — enable with ?eruda=1 or VITE_ERUDA=1.
- * ?eruda=0 clears sticky localStorage flag.
+ * Mobile web console (Eruda). Dev-only — production bundle must not load it.
+ * In development: enable with ?eruda=1 or VITE_ERUDA=1. ?eruda=0 clears sticky flag.
  */
 function shouldEnableEruda(): boolean {
   try {
@@ -28,6 +27,7 @@ function shouldEnableEruda(): boolean {
 }
 
 export async function initEruda(): Promise<void> {
+  if (!import.meta.env.DEV) return;
   if (!shouldEnableEruda()) return;
 
   const {default: eruda} = await import('eruda');

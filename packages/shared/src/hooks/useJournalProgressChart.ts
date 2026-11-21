@@ -7,6 +7,7 @@ import {
   sessionTotalReps,
   sessionVolume,
 } from '../utils/journalMetrics.ts';
+import {sessionPeakWithReserve} from '../utils/reserve.ts';
 
 const VIEW = {left: 56, right: 56, top: 28, bottom: 238, width: 800, barWidth: 40};
 const DEFAULT_WEEK_COUNT = 8;
@@ -28,6 +29,8 @@ export interface JournalChartWeek {
   week: number;
   date: string | null;
   peak: number | null;
+  peakAdjusted: number | null;
+  rir: number | null;
   topWeight: number | null;
   totalReps: number | null;
   volume: number | null;
@@ -37,6 +40,7 @@ export interface JournalChartWeek {
   restDaysSincePrev: number | null;
   x: number;
   y: number | null;
+  yAdjusted: number | null;
   barX: number;
   barY: number | null;
   barHeight: number | null;
@@ -46,6 +50,7 @@ export interface JournalProgressChartModel {
   weekCount: number;
   journalWeeks: JournalChartWeek[];
   journalLinePath: string;
+  journalAdjustedLinePath: string;
   viewBox: string;
   grid: number[];
   weightTicks: {y: number; value: number}[];
@@ -84,12 +89,15 @@ export function buildJournalProgressChartModel(
   const sessionByWeek = mapSessionsToWeeks(sessions, slots);
 
   const journalPeaks = [...sessionByWeek.values()].map(session => sessionPeak(session.sets));
+  const journalAdjustedPeaks = [...sessionByWeek.values()].map(session => sessionPeakWithReserve(session.sets)?.adjusted ?? null);
   const journalVolumes = [...sessionByWeek.values()].map(session => sessionVolume(session.sets));
   const maxJournalVolume = Math.max(...journalVolumes, 1);
 
-  const weightValues = journalPeaks.filter(value => Number.isFinite(value) && value > 0);
-  const minWeight = weightValues.length ? Math.min(...weightValues) : 0;
-  const maxWeight = weightValues.length ? Math.max(...weightValues) : 1;
+  const allWeightValues = [...journalPeaks, ...journalAdjustedPeaks].filter(
+    (value): value is number => Number.isFinite(value) && (value ?? 0) > 0,
+  );
+  const minWeight = allWeightValues.length ? Math.min(...allWeightValues) : 0;
+  const maxWeight = allWeightValues.length ? Math.max(...allWeightValues) : 1;
   const weightSpan = Math.max(maxWeight - minWeight, 1);
   const weightTicks = Array.from({length: Y_GRID_COUNT}, (_, index) => {
     const ratio = 1 - index / Y_GRID_DIVISIONS;
@@ -114,6 +122,8 @@ export function buildJournalProgressChartModel(
         week,
         date: null,
         peak: null,
+        peakAdjusted: null,
+        rir: null,
         topWeight: null,
         totalReps: null,
         volume: null,
@@ -122,6 +132,7 @@ export function buildJournalProgressChartModel(
         restDaysSincePrev: null,
         x,
         y: null,
+        yAdjusted: null,
         barX: x - VIEW.barWidth / 2,
         barY: null,
         barHeight: null,
@@ -129,6 +140,9 @@ export function buildJournalProgressChartModel(
     }
 
     const peak = sessionPeak(session.sets);
+    const reserve = sessionPeakWithReserve(session.sets);
+    const peakAdjusted = reserve?.adjusted ?? null;
+    const rir = reserve?.rir ?? null;
     const totalReps = sessionTotalReps(session.sets);
     const volume = sessionVolume(session.sets);
     const barHeight = (volume / maxJournalVolume) * chartHeight;
@@ -137,6 +151,8 @@ export function buildJournalProgressChartModel(
       week,
       date: session.date,
       peak,
+      peakAdjusted,
+      rir,
       topWeight: sessionTopWeight(session.sets),
       totalReps,
       volume,
@@ -145,6 +161,10 @@ export function buildJournalProgressChartModel(
       restDaysSincePrev,
       x,
       y: VIEW.bottom - ((peak - minWeight) / weightSpan) * chartHeight,
+      yAdjusted:
+        peakAdjusted != null
+          ? VIEW.bottom - ((peakAdjusted - minWeight) / weightSpan) * chartHeight
+          : null,
       barX: x - VIEW.barWidth / 2,
       barY: VIEW.bottom - barHeight,
       barHeight,
@@ -155,6 +175,10 @@ export function buildJournalProgressChartModel(
     .filter(week => week.hasData && week.y != null)
     .map(week => ({x: week.x, y: week.y!}));
 
+  const journalAdjustedPoints = journalWeeks
+    .filter(week => week.hasData && week.yAdjusted != null)
+    .map(week => ({x: week.x, y: week.yAdjusted!}));
+
   const latestWithData = [...journalWeeks]
     .reverse()
     .find(week => week.hasData && week.peak != null);
@@ -163,6 +187,7 @@ export function buildJournalProgressChartModel(
     weekCount: slots,
     journalWeeks,
     journalLinePath: linePath(journalPoints),
+    journalAdjustedLinePath: linePath(journalAdjustedPoints),
     viewBox: `0 0 ${VIEW.width} ${VIEW_HEIGHT}`,
     grid: Array.from(
       {length: Y_GRID_COUNT},

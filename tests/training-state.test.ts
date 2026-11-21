@@ -47,16 +47,15 @@ test('deriveTrainingState prefers done over break when program is finished', () 
   assert.equal(state.completedSessions, 24)
 })
 
-test('deriveTrainingState returns break inside a microcycle transition', () => {
+test('deriveTrainingState returns active during a microcycle transition (rest removed)', () => {
   const state = deriveTrainingState(baseInput({
     isMicrocycleBreak: true,
     completedSessions: 3,
     completedMicrocycle: 1,
   }))
 
-  assert.equal(state.kind, 'break')
-  if (state.kind !== 'break') return
-  assert.equal(state.completedMicrocycle, 1)
+  assert.equal(state.kind, 'active')
+  if (state.kind !== 'active') return
   assert.equal(state.completedSessions, 3)
 })
 

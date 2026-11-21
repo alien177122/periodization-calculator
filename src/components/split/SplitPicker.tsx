@@ -9,6 +9,7 @@ import {
   type KeyboardEvent,
 } from 'react';
 import type {CustomSplit} from '../../types';
+import {getSplitPreset} from '@training/shared/data/split-presets';
 import {EwTriggerChevron} from '../ui/EwTriggerChevron';
 
 export interface SplitPickerProps {
@@ -22,8 +23,10 @@ export interface SplitPickerProps {
   ariaLabel?: string;
 }
 
-function daysMeta(daysPerWeek: 2 | 3): string {
-  return daysPerWeek === 2 ? '2 дня в неделю' : '3 дня в неделю';
+function daysMeta(daysPerWeek: 2 | 3 | 4): string {
+  if (daysPerWeek === 2) return '2 дня в неделю';
+  if (daysPerWeek === 4) return '4 дня в неделю';
+  return '3 дня в неделю';
 }
 
 function normalizeQuery(value: string): string {
@@ -34,7 +37,7 @@ export function SplitPicker({
   value,
   splits,
   onChange,
-  placeholder = 'Выбрать...',
+  placeholder = 'Выбрать…',
   menuTitle = 'Сохранённые сплиты',
   searchPlaceholder = 'Поиск по имени или фамилии',
   triggerId,
@@ -195,7 +198,9 @@ export function SplitPicker({
             role="listbox"
             aria-labelledby={titleId}
             aria-activedescendant={
-              filteredSplits[activeIndex] ? `${menuId}-opt-${filteredSplits[activeIndex].id}` : undefined
+              filteredSplits[activeIndex]
+                ? `${menuId}-opt-${filteredSplits[activeIndex].id}`
+                : undefined
             }
             aria-hidden={!open}>
             <div id={titleId} className="ew-menu-title">
@@ -224,7 +229,7 @@ export function SplitPicker({
             <div className="ew-options">
               {filteredSplits.length === 0 ? (
                 <p className="ew-empty" role="status">
-                  Ничего не найдено
+                  Ничего не нашлось. Создай сплит или проверь поиск.
                 </p>
               ) : (
                 filteredSplits.map((split, index) => {
@@ -251,6 +256,11 @@ export function SplitPicker({
                       <span className="ew-option-copy">
                         <strong>{split.name}</strong>
                         <span>{daysMeta(split.daysPerWeek)}</span>
+                        {split.sourcePresetId ? (
+                          <span className="ew-option-badge">
+                            из пресета{getSplitPreset(split.sourcePresetId)?.name ? `: ${getSplitPreset(split.sourcePresetId)?.name}` : ''}
+                          </span>
+                        ) : null}
                       </span>
                       {selected ? (
                         <span className="ew-option-check" aria-hidden="true">

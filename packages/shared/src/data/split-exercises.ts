@@ -1,7 +1,8 @@
 import type {SplitMuscleId} from '../types/index.ts';
 
 export const SPLIT_DAY_LIMITS = {
-  MAX_EXERCISES_PER_DAY: 4,
+  /** 4 основных + до 2 дополнительных (этап S1). */
+  MAX_EXERCISES_PER_DAY: 6,
   MAX_LEG_EXERCISES: 2,
 } as const;
 

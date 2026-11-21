@@ -1,5 +1,6 @@
 import {useState, useMemo} from 'react';
 import {CATALOG_EXERCISES} from '@training/shared/data/exercises';
+import {suggestPartners, verdictPair} from '@training/shared/utils/pair-engine';
 import {calc1RM} from '@training/shared/utils/calc';
 import {PremiumInput} from '../ui/PremiumInput.tsx';
 import {SplitExercisePicker} from './SplitExercisePicker.tsx';
@@ -7,8 +8,13 @@ import type {SavedExercise} from '../../types';
 
 interface GlobalExerciseAdderProps {
   savedExercises: SavedExercise[];
-  daysPerWeek: 2 | 3;
-  onAddExercise: (exerciseKey: string, dayNumber: 1 | 2 | 3) => void;
+  daysPerWeek: 2 | 3 | 4;
+  onAddExercise: (exerciseKey: string, dayNumber: 1 | 2 | 3 | 4) => void;
+  /** Создать связку a↔b в день dayNumber (S3). */
+  onPairExercise?: (a: string, b: string, dayNumber: 1 | 2 | 3 | 4) => void;
+  /** Profile strength base: hide day targets, only persist 1RM. */
+  profileBaseOnly?: boolean;
+  title?: string;
   onOneRMChange: (
     exerciseKey: string,
     oneRM: number,
@@ -22,7 +28,10 @@ export function GlobalExerciseAdder({
   savedExercises,
   daysPerWeek,
   onAddExercise,
+  onPairExercise,
   onOneRMChange,
+  profileBaseOnly = false,
+  title = 'Добавить упражнение',
 }: GlobalExerciseAdderProps) {
   const [selectedKey, setSelectedKey] = useState<string>('');
   // bodyWeight exercises: body weight + extra weight
@@ -82,7 +91,8 @@ export function GlobalExerciseAdder({
       setRepsValue('');
     } else {
       const saved = savedByKey.get(selectedKey);
-      const isBw = CATALOG_EXERCISES[selectedKey]?.usesBodyWeight || CATALOG_EXERCISES[selectedKey]?.isPullup;
+      const isBw =
+        CATALOG_EXERCISES[selectedKey]?.usesBodyWeight || CATALOG_EXERCISES[selectedKey]?.isPullup;
       if (isBw) {
         setBwValue(saved?.bodyWeight ? String(saved.bodyWeight) : '');
         if (saved?.bodyWeight && saved.testWeight && saved.testWeight > saved.bodyWeight) {
@@ -104,7 +114,7 @@ export function GlobalExerciseAdder({
     if (!touchedBw) return undefined;
     const bw = parseFloat(bwValue.replace(',', '.'));
     if (bwValue === '' || !Number.isFinite(bw) || bw <= 0) {
-      return 'Введите ваш вес в кг';
+      return 'Введи свой вес в кг';
     }
     return undefined;
   }, [bwValue, touchedBw]);
@@ -113,7 +123,7 @@ export function GlobalExerciseAdder({
     if (!touchedWeight) return undefined;
     const w = parseFloat(weightValue.replace(',', '.'));
     if (weightValue === '' || !Number.isFinite(w) || w <= 0) {
-      return 'Введите вес в кг';
+      return 'Введи вес в кг';
     }
     return undefined;
   }, [weightValue, touchedWeight]);
@@ -128,7 +138,7 @@ export function GlobalExerciseAdder({
       reps > 30 ||
       !Number.isInteger(reps)
     ) {
-      return 'Введите количество повторений';
+      return 'Введи количество повторений';
     }
     return undefined;
   }, [repsValue, touchedReps]);
@@ -166,35 +176,32 @@ export function GlobalExerciseAdder({
 
   const hasOneRm = hasValidInput && calculatedWeight.oneRM > 0;
 
-  function handleAdd(dayNumber: 1 | 2 | 3) {
+  function persistOneRm() {
     if (!hasValidInput || !selectedKey) return;
-
-    // Only update 1RM if the user actually edited the input fields
-    if (isDirty) {
-      const {oneRM, bodyWeight} = calculatedWeight;
-      const reps = parseInt(repsValue.replace(',', '.'), 10) || 1;
-
-      let testWeight = 0;
-      if (isBodyWeightLift) {
-        const bw = parseFloat(bwValue.replace(',', '.')) || 0;
-        const extra = parseFloat(extraValue.replace(',', '.')) || 0;
-        testWeight = bw + extra;
-      } else {
-        testWeight = parseFloat(weightValue.replace(',', '.')) || 0;
-      }
-
-      onOneRMChange(selectedKey, oneRM, testWeight, reps, bodyWeight);
+    const {oneRM, bodyWeight} = calculatedWeight;
+    const reps = parseInt(repsValue.replace(',', '.'), 10) || 1;
+    let testWeight = 0;
+    if (isBodyWeightLift) {
+      const bw = parseFloat(bwValue.replace(',', '.')) || 0;
+      const extra = parseFloat(extraValue.replace(',', '.')) || 0;
+      testWeight = bw + extra;
+    } else {
+      testWeight = parseFloat(weightValue.replace(',', '.')) || 0;
     }
+    onOneRMChange(selectedKey, oneRM, testWeight, reps, bodyWeight);
+    setIsDirty(false);
+  }
 
-    // Add exercise to the day — do NOT reset selectedKey so the user
-    // can immediately add the same exercise to another day as well.
+  function handleAdd(dayNumber: 1 | 2 | 3 | 4) {
+    if (!hasValidInput || !selectedKey) return;
+    if (isDirty) persistOneRm();
     onAddExercise(selectedKey, dayNumber);
   }
 
   return (
     <section className="app-tab-section global-exercise-adder">
       <div className="app-tab-section__head">
-        <h2 className="app-tab-section__title">Добавить упражнение</h2>
+        <h2 className="app-tab-section__title">{title}</h2>
       </div>
 
       <div className="global-exercise-adder__layout">
@@ -213,6 +220,29 @@ export function GlobalExerciseAdder({
             </div>
           </div>
         </div>
+
+        {selectedKey && suggestPartners(selectedKey, Object.keys(CATALOG_EXERCISES)).length > 0 ? (
+          <div className="global-exercise-adder__suggestions">
+            <span className="global-exercise-adder__suggestions-label">Парные (автоподбор):</span>
+            {suggestPartners(selectedKey, Object.keys(CATALOG_EXERCISES)).map(partner => {
+              const v = verdictPair(selectedKey, partner);
+              const name = CATALOG_EXERCISES[partner]?.name ?? partner;
+              return (
+                <button
+                  key={partner}
+                  type="button"
+                  className={`global-exercise-adder__suggestion${v.warn ? ' is-warn' : ''}`}
+                  title={v.warn ?? 'Хорошая пара'}
+                  onClick={() => {
+                    onAddExercise(partner, 1);
+                    onPairExercise?.(selectedKey, partner, 1);
+                  }}>
+                  {name}{v.warn ? ' ⚠' : ''}
+                </button>
+              );
+            })}
+          </div>
+        ) : null}
 
         {selectedKey && (
           <div className="global-exercise-adder__weight-and-actions">
@@ -306,25 +336,37 @@ export function GlobalExerciseAdder({
                   </span>
                 </div>
                 <p className="pi-message pi-message--helper one-rm-display__formula">
-                  {hasOneRm ? 'По формуле Эпли' : 'Введите вес и повторения'}
+                  {hasOneRm ? 'По формуле Эпли' : 'Введи вес и повторения'}
                 </p>
               </div>
             </div>
 
             <div className="global-exercise-adder__actions">
-              <span className="split-toolbar__label">Добавить в день:</span>
-              <div className="global-exercise-adder__buttons">
-                {([1, 2, 3] as const).slice(0, daysPerWeek).map(dayNumber => (
-                  <button
-                    key={dayNumber}
-                    type="button"
-                    className="split-toolbar__action split-toolbar__action--ghost"
-                    disabled={!hasValidInput}
-                    onClick={() => handleAdd(dayNumber)}>
-                    День {dayNumber}
-                  </button>
-                ))}
-              </div>
+              {profileBaseOnly ? (
+                <button
+                  type="button"
+                  className="btn calc-test__submit split-hub__add"
+                  disabled={!hasValidInput}
+                  onClick={persistOneRm}>
+                  Сохранить в базу профиля
+                </button>
+              ) : (
+                <>
+                  <span className="split-toolbar__label">Добавить в день:</span>
+                  <div className="global-exercise-adder__buttons">
+                    {([1, 2, 3, 4] as const).slice(0, daysPerWeek).map(dayNumber => (
+                      <button
+                        key={dayNumber}
+                        type="button"
+                        className="split-toolbar__action split-toolbar__action--ghost"
+                        disabled={!hasValidInput}
+                        onClick={() => handleAdd(dayNumber)}>
+                        День {dayNumber}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           </div>
         )}

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {EXERCISES} from '@training/shared/data/exercises';
-import {LEG_EXERCISE_KEYS} from '@training/shared/data/split-exercises';
+import {LEG_EXERCISE_KEYS, SPLIT_DAY_LIMITS} from '@training/shared/data/split-exercises';
 import {
   allMusclesAssigned,
   buildDayPreview,
@@ -113,7 +113,7 @@ test('custom legExercises limits leg pool', () => {
   assert.deepEqual(legKeys, ['legExt', 'legCurl']);
 });
 
-test('exerciseKeysForDay caps at four exercises', () => {
+test('exerciseKeysForDay caps at six exercises (4 main + 2 extra, этап S1)', () => {
   const split = createDefaultSplit();
   split.days = [
     {dayNumber: 1, muscles: ['chest', 'biceps', 'legs', 'shoulders']},
@@ -121,10 +121,11 @@ test('exerciseKeysForDay caps at four exercises', () => {
     {dayNumber: 3, muscles: []},
   ];
   const keys = exerciseKeysForDay(split, 1);
-  assert.equal(keys.length, 4);
+  assert.equal(keys.length, SPLIT_DAY_LIMITS.MAX_EXERCISES_PER_DAY);
+  assert.equal(SPLIT_DAY_LIMITS.MAX_EXERCISES_PER_DAY, 6);
 });
 
-test('buildDayPreview never returns more than four rows per day', () => {
+test('buildDayPreview never returns more rows than the day limit', () => {
   const split = createDefaultSplit();
   split.days = [
     {dayNumber: 1, muscles: ['chest', 'biceps', 'legs', 'shoulders']},
@@ -132,7 +133,7 @@ test('buildDayPreview never returns more than four rows per day', () => {
     {dayNumber: 3, muscles: []},
   ];
   const rows = buildDayPreview({split, dayNumber: 1, weekIndex: 0, savedExercises: []});
-  assert.ok(rows.length <= 4);
+  assert.ok(rows.length <= SPLIT_DAY_LIMITS.MAX_EXERCISES_PER_DAY);
 });
 
 test('excludedExercisesByDay removes exercise from day list and preview', () => {

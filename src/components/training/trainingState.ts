@@ -43,13 +43,7 @@ export function deriveTrainingState(input: DeriveInput): TrainingState {
   if (input.programDone) {
     return { kind: 'done', completedSessions: input.completedSessions }
   }
-  if (input.isMicrocycleBreak) {
-    return {
-      kind: 'break',
-      completedSessions: input.completedSessions,
-      completedMicrocycle: input.completedMicrocycle,
-    }
-  }
+  // Микроцикл-отдых убран по просьбе пользователя: сразу показываем следующую тренировку.
   return {
     kind: 'active',
     completedSessions: input.completedSessions,

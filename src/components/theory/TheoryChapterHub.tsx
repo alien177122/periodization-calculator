@@ -21,8 +21,7 @@ export function TheoryChapterHub({activeId, onButtonRef, onSelect}: TheoryChapte
             Выбери главу
           </h2>
           <p className="ta-section-lede">
-            Открой одну тему и читай её в отдельной панели. URL обновится автоматически, чтобы
-            ссылкой можно было поделиться.
+            Тема откроется в отдельной панели, а ссылкой на неё можно поделиться.
           </p>
         </header>
 
@@ -53,7 +52,7 @@ export function TheoryChapterHub({activeId, onButtonRef, onSelect}: TheoryChapte
               Интересные статьи для чтения
             </h2>
             <p className="ta-section-lede">
-              Клинические разборы вне учебной сетки 10 глав. Конспект видео, не протокол лечения.
+              Клинические разборы вне основных глав. Это конспекты видео, а не руководство к лечению.
             </p>
           </header>
           <div className="ta-chapter-grid ta-reading-grid">

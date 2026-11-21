@@ -2,6 +2,8 @@ import {useState, useEffect, startTransition, useId, useRef} from 'react';
 import '../styles/tabs/journal-tab.css';
 import {SplitExercisePicker} from '../components/split/SplitExercisePicker.tsx';
 import {JournalProgressChart} from '../components/journal/JournalProgressChart.tsx';
+import {CycleComparison} from '../components/training/CycleComparison.tsx';
+import '../styles/components/training/cycle-comparison.css';
 import {JournalSessionEditor} from '../components/journal/JournalSessionEditor.tsx';
 import {JournalSessionList} from '../components/journal/JournalSessionList.tsx';
 import {useJournal} from '../hooks/useJournal.ts';
@@ -10,6 +12,7 @@ import {saveUser} from '../utils/api.ts';
 import type {UserData} from '../types';
 import {isCatalogExerciseKey, getCatalogExercise} from '../data/exercises.ts';
 import {SectionBlock, NoteBox} from '../components/SectionBlock.tsx';
+import {ContextTheoryLink} from '../components/theory/ContextTheoryLink.tsx';
 
 interface JournalTabProps {
   userData: UserData;
@@ -145,7 +148,7 @@ export function JournalTab({userData, setUserData, token, onSaveError}: JournalT
             ) : (
               <div className="journal-history-empty">
                 <p className="journal-history-empty__text">Записей пока нет.</p>
-                <p className="journal-history-empty__sub">Сохраните первый подход.</p>
+                <p className="journal-history-empty__sub">Сохрани первый подход.</p>
               </div>
             )}
           </SectionBlock>
@@ -172,12 +175,20 @@ export function JournalTab({userData, setUserData, token, onSaveError}: JournalT
 
           <JournalProgressChart sessions={journal.history} />
 
+          <CycleComparison
+            sessions={journal.history}
+            exerciseKey={exerciseKey}
+          />
+
           <NoteBox variant="apple">
             <p className="journal-chart-note">
-              <span className="calc-test__footnote-lead">Факт в зале.</span> Сохраняйте подходы с
-              весом и повторами — тренд строится по вашей реальной истории тренировок, а не по
-              расчетному плану калькулятора.
+              <span className="calc-test__footnote-lead">Факт в зале.</span> Сохрани подходы с
+              весом и повторениями — тренд строится по твоей реальной истории тренировок, а не по
+              расчётному плану калькулятора.
             </p>
+            <ContextTheoryLink chapterId="progression" className="journal-chart-theory-link">
+              Как читать тренд 1ПМ →
+            </ContextTheoryLink>
           </NoteBox>
         </SectionBlock>
       </main>

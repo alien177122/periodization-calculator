@@ -35,16 +35,76 @@ export interface ExerciseConfig {
   isPullup?: boolean;
 }
 
+export type SplitDayNumber = 1 | 2 | 3 | 4;
+
+/** Связка двух упражнений дня: рекомендованная группировка, не жёсткая механика. */
+export interface ExercisePair {
+  id: string;
+  /** Первое упражнение связки (exerciseKey из дня). */
+  a: string;
+  /** Второе упражнение связки. */
+  b: string;
+  /** Подсказка по отдыху после A, секунды. Не движок, а дефолт для таймера. */
+  restAfterA?: number;
+  /** Подсказка по отдыху после B, секунды. */
+  restAfterB?: number;
+}
+
+/** Тип блока выполнения (Фаза 2 плана). */
+export type BlockType = 'single' | 'pair' | 'cluster';
+
+/** Режим подходов блока. */
+export type SetMode = 'linear' | 'pyramid' | 'cluster';
+
+/** Конфигурация блокового (cluster) подхода. */
+export interface ClusterConfig {
+  /** повторений в мини-подходе, напр. 2 */
+  miniReps: number;
+  /** отдых внутри подхода между мини-подходами, сек (20–30) */
+  intraRestSec: number;
+}
+
+/** Блок выполнения дня: 1 упражнение (single), 2 (pair) или 3+ (cluster). */
+export interface Block {
+  id: string;
+  type: BlockType;
+  /** exerciseKey из каталога. */
+  exerciseKeys: string[];
+  /** Подсказка по отдыху между подходами (сек), опционально. */
+  restHintSec?: number;
+  /** Режим подходов: linear / pyramid / cluster. По умолчанию linear. */
+  setMode?: SetMode;
+  /** Конфиг cluster-подходов; только при setMode === 'cluster'. */
+  cluster?: ClusterConfig;
+}
+
+
+/**
+ * Схема подходов упражнения в конкретном дне (перекрывает weekSchemes программы).
+ * Пустое поле = поведение как сейчас (схемы из ExerciseConfig.weekSchemes).
+ */
+export type DaySchemeOverrides = Partial<Record<SplitDayNumber, Record<string, WeekScheme>>>;
+
 export interface SplitDayConfig {
-  dayNumber: 1 | 2 | 3;
+  dayNumber: SplitDayNumber;
   muscles: SplitMuscleId[];
   label?: string;
+}
+
+/** Person who owns a set of splits. Splits from one profile stay hidden in another. */
+export interface TrainingProfile {
+  id: string;
+  name: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface CustomSplit {
   id: string;
   name: string;
-  daysPerWeek: 2 | 3;
+  /** Owner. Missing ids are grouped into the «Основной» profile on load. */
+  profileId?: string;
+  daysPerWeek: 2 | 3 | 4;
   days: SplitDayConfig[];
   varyIntensity: boolean;
   weightMode: SplitWeightMode;
@@ -52,11 +112,30 @@ export interface CustomSplit {
   legExercises?: [string, string];
   fixedWeights?: Record<string, number[]>;
   /** (Deprecated) */
-  exerciseDayOverrides?: Record<string, 1 | 2 | 3>;
+  exerciseDayOverrides?: Record<string, SplitDayNumber>;
   /** Exercise keys hidden from specific training days. (Deprecated) */
-  excludedExercisesByDay?: Partial<Record<1 | 2 | 3, string[]>>;
+  excludedExercisesByDay?: Partial<Record<SplitDayNumber, string[]>>;
   /** Explicit list of exercise keys for each day. If present, it overrides legacy muscle-based population. */
-  customExercisesByDay?: Partial<Record<1 | 2 | 3, string[]>>;
+  customExercisesByDay?: Partial<Record<SplitDayNumber, string[]>>;
+  /**
+   * Схема подходов конкретного упражнения в конкретном дне.
+   * Перекрывает weekSchemes программы: например, в программе 4×4, а в дне стоит 5×4.
+   */
+  schemeOverridesByDay?: DaySchemeOverrides;
+  /**
+   * Связки упражнений дня (S3). Журнал не меняется: подходы пишутся по exerciseKey.
+   * Связка — подсказка для выполнения, а не планировщик отдыха.
+   */
+  pairsByDay?: Partial<Record<SplitDayNumber, ExercisePair[]>>;
+  /** Блоки выполнения дня (Фаза 2). Производная от customExercisesByDay + pairsByDay; хранится для миграции. */
+  blocksByDay?: Partial<Record<SplitDayNumber, Block[]>>;
+  /** Версия схемы сплита (1 — legacy, 2 — блоки). */
+  schemaVersion?: number;
+  /**
+   * Идентификатор пресета, из которого создан сплит (S1-остаток).
+   * Пометка «из пресета» в списке; копия правится свободно.
+   */
+  sourcePresetId?: string;
   /**
    * 0-based week indices (0–7) the athlete marked as completed in the
    * 8-week progression preview.
@@ -65,7 +144,7 @@ export interface CustomSplit {
   /**
    * Progression days marked done. `week` is 0–7; `day` is the split day number.
    */
-  completedDays?: Array<{week: number; day: 1 | 2 | 3}>;
+  completedDays?: Array<{week: number; day: SplitDayNumber}>;
   createdAt: string;
   updatedAt: string;
 }
@@ -85,6 +164,8 @@ export interface SavedExercise {
  */
 export interface SplitCalculation {
   id: string;
+  /** Denormalized for filtering; defaults to split.id on load. */
+  splitId?: string;
   calculatedAt: string;
   split: CustomSplit;
   exercises: SavedExercise[];
@@ -165,13 +246,29 @@ export interface UserData {
   trainingPreferences?: TrainingPreferences;
   journal?: JournalSession[];
   splits?: CustomSplit[];
+  profiles?: TrainingProfile[];
+  activeProfileId?: string | null;
   activeSplitId?: string | null;
   splitCalculations?: SplitCalculation[];
   activeSplitCalculationId?: string | null;
+  /** Default strength tests per training profile (key = profile id). */
+  exercisesByProfileId?: Record<string, SavedExercise[]>;
   activeProgram?: ActiveProgram;
   testResults?: TestResult[];
   programSettings?: ProgramSettings;
+  /** Прогресс обучения (лекции/самоучитель), ключ = id шага LEARNING_TRACK. */
+  learningProgress?: LearningProgress;
 }
+
+/** Отметка одного шага маршрута обучения. */
+export interface LearningItemProgress {
+  read: boolean;
+  checked?: 'ok' | 'retry';
+  updatedAt: string;
+}
+
+/** Прогресс обучения: ключ — id шага трека (learning-track.ts). */
+export type LearningProgress = Record<string, LearningItemProgress>;
 
 export interface TrainingDayDef {
   dayNumber: 1 | 2 | 3 | 4;

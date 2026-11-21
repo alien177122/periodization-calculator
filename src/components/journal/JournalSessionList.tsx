@@ -20,7 +20,7 @@ export function JournalSessionList({sessions, onEdit, onDelete}: JournalSessionL
     return (
       <div className="journal-history-empty">
         <p className="journal-history-empty__text">История тренировок пуста</p>
-        <span className="journal-history-empty__sub">Здесь будут отображаться ваши прошедшие занятия</span>
+        <span className="journal-history-empty__sub">Здесь появятся прошедшие тренировки</span>
       </div>
     );
   }

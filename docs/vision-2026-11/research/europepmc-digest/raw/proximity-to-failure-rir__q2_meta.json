@@ -1,0 +1,2596 @@
+{
+ "version": "6.9",
+ "hitCount": 11,
+ "request": {
+  "queryString": "(ABSTRACT:\"repetitions in reserve\")AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "42454076",
+    "source": "MED",
+    "pmid": "42454076",
+    "pmcid": "PMC13364572",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC13364572"
+     ]
+    },
+    "doi": "10.3389/fphys.2026.1823323",
+    "title": "Relative effectiveness of different resistance training modalities on lower-body strength and explosive power: a systematic review and network meta-analysis.",
+    "authorString": "Bao J, Liu X, Huang Y, Liu X, Wang Z.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Bao J",
+       "lastName": "Bao",
+       "firstName": "Jinxuan",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Strength and Conditioning Training, Beijing Sport University, Beijing, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Liu X",
+       "lastName": "Liu",
+       "firstName": "Xundian",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sports Coaching College, Beijing Sport University, Beijing, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Huang Y",
+       "lastName": "Huang",
+       "firstName": "Yaxuan",
+       "initials": "Y",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0005-0164-5796"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sports Coaching College, Beijing Sport University, Beijing, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Liu X",
+       "lastName": "Liu",
+       "firstName": "Xiaoyu",
+       "initials": "X",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Arts and Sciences, Fuyao University of Science and Technology, Fuzhou, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wang Z",
+       "lastName": "Wang",
+       "firstName": "Ziyu",
+       "initials": "Z",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8015-2279"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Health, University of Canterbury, Christchurch, New Zealand."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8015-2279"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0005-0164-5796"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0006-9217-6557"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "17",
+     "journalIssueId": 4103352,
+     "dateOfPublication": "2026 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Front Physiol",
+      "title": "Frontiers in physiology",
+      "essn": "1664-042X",
+      "issn": "1664-042X",
+      "isoabbreviation": "Front Physiol",
+      "nlmid": "101549006"
+     },
+     "printPublicationDate": "2026-01-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "1823323",
+    "abstractText": "<h4>Background</h4>Traditional percentage-based training (PBT) prescribes loads according to a fixed percentage of one-repetition maximum (1RM) but does not account for daily fluctuations in performance readiness. In contrast, auto-regulated resistance training (ART)-including velocity-based training (VBT), autoregulatory progressive resistance exercise (APRE), and Rating of Perceived Exertion (RPE)/Repetitions in Reserve (RIR)-based autoregulatory training (RPE-AT)-and variable resistance training (VRT) provide more adaptive load adjustments. However, their relative effectiveness for improving lower-body maximal strength and explosive power remains unclear.<h4>Objective</h4>To systematically evaluate and compare different resistance-training modalities, including APRE, VBT, RPE-AT, VRT, and PBT, on maximal lower-body strength and explosive power in healthy and active individuals using a network meta-analysis (NMA) method, and to provide a ranking of therapeutic effects.<h4>Method</h4>Following the PRISMA-NMA guidelines, a systematic search was conducted across the Web of Science, PubMed, Embase, Scopus, SportDiscus, and ProQuest databases, ensuring a comprehensive and transparent approach to study retrieval. Randomized controlled trials (RCTs) comparing the effects of APRE, VBT, RPE-AT, VRT and PBT on lower extremity performance were included. The quality was evaluated using the Cochrane Risk of Bias assessment tool. Pairwise meta-analysis and NMA under the frequentist framework were conducted using R software. The standardized mean difference (SMD) and its 95% confidence interval (CI) were calculated, and the intervention measures were ranked by the cumulative area under the ranking probability curve (SUCRA).<h4>Results</h4>A total of 27 RCTs involving 694 participants were included, consistent with the sample size and study quantity reported in relevant systematic reviews and meta-analyses of RCTs. For back squat 1-repetition maximum (1RM, a measure of maximal lower-body strength), NMA showed that VRT (SMD = 0.62, 95% CI [0.29, 0.95]), APRE (SMD = 0.59, 95% CI [0.16, 1.02]), and VBT (SMD = 0.41, 95% CI [0.10, 0.73]) significantly improved performance compared to PBT, while RPE-AT (SMD = 0.12, 95% CI [-0.31, 0.56]) showed no significant difference from PBT. The SUCRA ranking for back squat 1RM was: VRT (83.1%) > APRE (79.1%) > VBT (57.1%) > RPE-AT (23.4%) > PBT (7.4%). For countermovement jump (CMJ, a measure of lower-body explosive power), APRE (SMD = 1.08, 95% CI [0.30, 1.87]) and VBT (SMD = 0.62, 95% CI [0.23, 1.02]) were significantly superior to PBT, while VRT (SMD = 0.27, 95% CI [-0.14, 0.69]) showed a non-significant trend toward improvement. The SUCRA ranking for CMJ was: APRE (96.6%) > VBT (74.4%) > VRT (49.7%) > PBT (23.6%) > RPE-AT (5.7%).<h4>Conclusion</h4>APRE, VBT, and VRT were generally associated with more favorable adaptations than PBT in lower-body strength and power outcomes. VRT showed the highest probability of being most effective for back squat 1RM, whereas APRE ranked highest for CMJ performance. These findings provide a comparative synthesis of current evidence and may assist practitioners in selecting resistance training strategies according to specific performance goals, while acknowledging the need for cautious interpretation given variability across studies.<h4>Systematic review registration</h4>https://www.crd.york.ac.uk/PROSPERO/view/CRD420251172410, identifier CRD420251172410.",
+    "affiliation": "School of Strength and Conditioning Training, Beijing Sport University, Beijing, China.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "systematic-review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Network Meta-analysis",
+      "Variable Resistance Training",
+      "Velocity-based Training",
+      "Autoregulatory Progressive Resistance Exercise",
+      "Percentage-based Training",
+      "Auto-regulated Resistance Training"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3389/fphys.2026.1823323"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC13364572"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC13364572?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2026-07-15",
+    "dateOfCreation": "2026-07-15",
+    "dateOfRevision": "2026-08-13",
+    "electronicPublicationDate": "2026-06-30",
+    "firstPublicationDate": "2026-06-30",
+    "firstIndexDate": "2026-07-16",
+    "fullTextReceivedDate": "2026-09-03",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "42099260",
+    "source": "MED",
+    "pmid": "42099260",
+    "doi": "10.1177/19417381261438760",
+    "title": "Molecular Basis and Practical Applications of Training, Nutrition and Recovery for Maximum Gains in Lean Muscle Mass: A Narrative Review for Optimizing Muscular Hypertrophy.",
+    "authorString": "Vergara Nieto ÁA, Halabi Diaz A, Hernández Millán M, Sagredo Oyarzo D.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Vergara Nieto ÁA",
+       "lastName": "Vergara Nieto",
+       "firstName": "Álvaro A",
+       "initials": "ÁA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0003-1540-3451"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Facultad de Ciencias de la Salud, Escuela de Nutrición y Dietética, Universidad del Desarrollo, Concepción, Chile."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Halabi Diaz A",
+       "lastName": "Halabi Diaz",
+       "firstName": "Andrés",
+       "initials": "A",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-6551-3630"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Departamento de Ciencias Químicas, Facultad de Ciencias Exactas, Universidad Andres Bello, Santiago, Chile."
+         },
+         {
+          "affiliation": "Departamento de Investigación y Desarrollo, Good Research and Science (GRS), Valdivia, Chile."
+         },
+         {
+          "affiliation": "Departamento de I+D+i, CatchPredict SpA, Valdivia, Chile."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hernández Millán M",
+       "lastName": "Hernández Millán",
+       "firstName": "Millaray",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0002-2800-7709"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Departamento de Investigación y Desarrollo, Good Research and Science (GRS), Valdivia, Chile."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Sagredo Oyarzo D",
+       "lastName": "Sagredo Oyarzo",
+       "firstName": "Daniel",
+       "initials": "D",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0006-6004-8120"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Departamento de Investigación y Desarrollo, Good Research and Science (GRS), Valdivia, Chile."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-6551-3630"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0002-2800-7709"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0003-1540-3451"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0006-6004-8120"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "6",
+     "volume": "18",
+     "journalIssueId": 4298950,
+     "dateOfPublication": "2026 Nov-Dec",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2026,
+     "journal": {
+      "medlineAbbreviation": "Sports Health",
+      "title": "Sports health",
+      "essn": "1941-0921",
+      "issn": "1941-7381",
+      "isoabbreviation": "Sports Health",
+      "nlmid": "101518422"
+     },
+     "printPublicationDate": "2026-11-01"
+    },
+    "pubYear": "2026",
+    "pageInfo": "1218-1234",
+    "abstractText": "<h4>Context</h4>Skeletal muscle hypertrophy is a key determinant of strength, athletic performance, and functional capacity across the lifespan, and is clinically relevant to sarcopenia and chronic disease. This review integrates molecular mechanisms (e.g., mechanotransduction and mTORC1 signaling) with practical training, nutrition, and recovery variables to support evidence-informed hypertrophy programming.<h4>Evidence acquisition</h4>Literature was searched in PubMed, Scopus, ScienceDirect, and Google Scholar (January 2010 to March 2024) using Boolean combinations of terms related to hypertrophy, resistance training variables and techniques, protein/macronutrients, sleep, and recovery. Included evidence prioritized randomized controlled trials, systematic reviews/meta-analyses, and mechanistic studies relevant to training, nutrition, and recovery; case reports/editorials and endurance-only or unrelated populations/outcomes were excluded.<h4>Study design</h4>Clinical narrative review.<h4>Level of evidence</h4>Level 4.<h4>Results</h4>Hypertrophy is maximized when resistance training provides sufficient mechanical tension and effective fiber recruitment, with weekly volume as a central driver. Practical synthesis supports ~10 to 20 sets per muscle group per week, near-failure efforts (repetitions in reserve ~0-2), and distributing volume across multiple weekly sessions to maintain training quality and recovery. Nutritional support centers on adequate protein intake (≈1.6 g/kg/day; often 1.6-2.2 g/kg/day in trained athletes), with meal distribution (≈3-4 meals/day, ~0.4-0.5 g/kg/meal) as a practical strategy to sustain anabolic signaling. Energy availability and carbohydrate intake support training performance and glycogen-dependent workload (≈3-6 g/kg/day), and a moderate caloric surplus (~200-500 kcal/day) may aid lean mass gain while limiting excess adiposity. Recovery, particularly sleep, modulates hormonal homeostasis and protein metabolism; adequate sleep duration (7-9 h/night) is emphasized as foundational for adaptation.<h4>Conclusion</h4>An integrative approach to training, nutrition and rest offers the most actionable framework to maximize hypertrophy and strength while managing fatigue and individual recovery capacity.Strength-of-Recommendation Taxonomy (SORT):• Training and Nutritional (SOR A/B): most recommendations are based on Level 1 evidence.• Recovery and rest aspects (SOR B/C): Mechanistic evidence is high. More Level 1 evidence needed with hypertrophy-related outcomes.",
+    "affiliation": "Facultad de Ciencias de la Salud, Escuela de Nutrición y Dietética, Universidad del Desarrollo, Concepción, Chile.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "fondo nacional de desarrollo científico y tecnológico",
+       "grantId": "21221699",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AH",
+          "qualifierName": "anatomy & histology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Sleep"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Mechanotransduction, Cellular"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Sports Nutritional Physiological Phenomena"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Mechanistic Target of Rapamycin Complex 1",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ME",
+          "qualifierName": "metabolism"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Post-Exercise Recovery"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Nutrition",
+      "Training",
+      "hypertrophy",
+      "Muscle Protein Synthesis",
+      "Exercise Recovery"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "Mechanistic Target of Rapamycin Complex 1",
+       "registryNumber": "EC 2.7.11.1"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1177/19417381261438760"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2026-10-26",
+    "dateOfCreation": "2026-05-08",
+    "dateOfRevision": "2026-10-26",
+    "electronicPublicationDate": "2026-05-08",
+    "firstPublicationDate": "2026-05-08",
+    "firstIndexDate": "2026-05-13",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "38970765",
+    "source": "MED",
+    "pmid": "38970765",
+    "doi": "10.1007/s40279-024-02069-2",
+    "title": "Exploring the Dose-Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions.",
+    "authorString": "Robinson ZP, Pelland JC, Remmert JF, Refalo MC, Jukic I, Steele J, Zourdos MC.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Robinson ZP",
+       "lastName": "Robinson",
+       "firstName": "Zac P",
+       "initials": "ZP",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Pelland JC",
+       "lastName": "Pelland",
+       "firstName": "Joshua C",
+       "initials": "JC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Remmert JF",
+       "lastName": "Remmert",
+       "firstName": "Jacob F",
+       "initials": "JF",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Refalo MC",
+       "lastName": "Refalo",
+       "firstName": "Martin C",
+       "initials": "MC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute for Physical Activity and Nutrition (IPAN), School of Exercise and Nutrition Sciences, Deakin University, Geelong, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Jukic I",
+       "lastName": "Jukic",
+       "firstName": "Ivan",
+       "initials": "I",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0900-9410"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport Performance Research Institute New Zealand (SPRINZ), Auckland University of Technology, Auckland, New Zealand."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Steele J",
+       "lastName": "Steele",
+       "firstName": "James",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Faculty of Sport, Health, and Social Sciences, Solent University, South Hampton, England."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zourdos MC",
+       "lastName": "Zourdos",
+       "firstName": "Michael C",
+       "initials": "MC",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3265-7683"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA. mzourdos@fau.edu."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0900-9410"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3265-7683"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "9",
+     "volume": "54",
+     "journalIssueId": 3828474,
+     "dateOfPublication": "2024 Sep",
+     "monthOfPublication": 9,
+     "yearOfPublication": 2024,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2024-09-01"
+    },
+    "pubYear": "2024",
+    "pageInfo": "2209-2231",
+    "abstractText": "<h4>Background</h4>The proximity to failure in which sets are terminated has gained attention in the scientific literature as a potentially key resistance training variable. Multiple meta-analyses have directly (i.e., failure versus not to failure) or indirectly (e.g., velocity loss, alternative set structures) evaluated the effect of proximity to failure on strength and muscle hypertrophy outcomes categorically; however, the dose-response effects of proximity to failure have not been analyzed collectively in a continuous manner.<h4>Objective</h4>To meta-analyze the aforementioned areas of relevant research, proximity to failure was quantified as the number of repetitions in reserve (RIR). Importantly, the RIR associated with each effect in the analysis was estimated on the basis of the available descriptions of the training interventions in each study. Data were extracted and a series of exploratory multilevel meta-regressions were performed for outcomes related to both strength and muscle hypertrophy. A range of sensitivity analyses were also performed. All models were adjusted for the effects of load, method of volume equating, duration of intervention, and training status.<h4>Results</h4>The best fit models for both strength and muscle hypertrophy outcomes demonstrated modest quality of overall fit. In all of the best-fit models for strength, the confidence intervals of the marginal slopes for estimated RIR contained a null point estimate, indicating a negligible relationship with strength gains. However, in all of the best-fit models for muscle hypertrophy, the marginal slopes for estimated RIR were negative and their confidence intervals did not contain a null point estimate, indicating that changes in muscle size increased as sets were terminated closer to failure.<h4>Conclusions</h4>The dose-response relationship between proximity to failure and strength gain appears to differ from the relationship with muscle hypertrophy, with only the latter being meaningfully influenced by RIR. Strength gains were similar across a wide range of RIR, while muscle hypertrophy improves as sets are terminated closer to failure. Considering the RIR estimation procedures used, however, the exact relationship between RIR and muscle hypertrophy and strength remains unclear. Researchers and practitioners should be aware that optimal proximity to failure may differ between strength and muscle hypertrophy outcomes, but caution is warranted when interpreting the present analysis due to its exploratory nature. Future studies deliberately designed to explore the continuous nature of the dose-response effects of proximity to failure in large samples should be considered.",
+    "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Laboratory, Florida Atlantic University, Boca Raton, FL, USA.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PP",
+          "qualifierName": "physiopathology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Regression Analysis"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Skeletal Muscle Enlargement",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-024-02069-2"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 46,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2024-09-13",
+    "dateOfCreation": "2024-07-06",
+    "dateOfRevision": "2026-11-01",
+    "electronicPublicationDate": "2024-07-06",
+    "firstPublicationDate": "2024-07-06",
+    "firstIndexDate": "2024-07-07",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "37751765",
+    "source": "MED",
+    "pmid": "37751765",
+    "doi": "10.1055/a-2152-7426",
+    "title": "Para Powerlifting Performance: A Systematic Review.",
+    "authorString": "Oliveira JIV, de Lucena EGP, Ferland PM, Oliveira SFM, Uchida MC.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Oliveira JIV",
+       "lastName": "Oliveira",
+       "firstName": "José Igor V",
+       "initials": "JIV",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0034-9638"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Applied Kinesiology Laboratory, School of Physical Education, University of Campinas, Campinas, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "de Lucena EGP",
+       "lastName": "de Lucena",
+       "firstName": "Erick Guilherme Peixoto",
+       "initials": "EGP",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Applied Kinesiology Laboratory, School of Physical Education, University of Campinas, Campinas, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ferland PM",
+       "lastName": "Ferland",
+       "firstName": "Pierre-Marc",
+       "initials": "PM",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Activity, University of Quebec in Montreal, Montreal, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Oliveira SFM",
+       "lastName": "Oliveira",
+       "firstName": "Saulo Fernandes Melo",
+       "initials": "SFM",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Departament of Physical Education and Sport Science, Academic Center of Vitória, Federal University of Pernambuco, Vitória de Santo Antão, Brazil."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Uchida MC",
+       "lastName": "Uchida",
+       "firstName": "Marco Carlos",
+       "initials": "MC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Applied Kinesiology Laboratory, School of Physical Education, University of Campinas, Campinas, Brazil."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0034-9638"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5921-2492"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "2",
+     "volume": "45",
+     "journalIssueId": 3706147,
+     "dateOfPublication": "2024 Feb",
+     "monthOfPublication": 2,
+     "yearOfPublication": 2024,
+     "journal": {
+      "medlineAbbreviation": "Int J Sports Med",
+      "title": "International journal of sports medicine",
+      "essn": "1439-3964",
+      "issn": "0172-4622",
+      "isoabbreviation": "Int J Sports Med",
+      "nlmid": "8008349"
+     },
+     "printPublicationDate": "2024-02-01"
+    },
+    "pubYear": "2024",
+    "pageInfo": "95-103",
+    "abstractText": "This research aimed to conduct a systematic review of para powerlifting strength performance. The searches were conducted in three electronic databases: PubMed, Scopus, and SPORTDiscus. Intervention studies related to para powerlifting performance were included. The main information was extracted systematically, based on criteria established by the authors. The data on study design, sample size, participant's characteristics (e. g. type of disability, sex, age, body weight, and height), training experience, assessment tools, physical performance criteria, and force-related outcomes were extracted and analyzed. The studies (n=9) describe factors related to biomechanics and performance. Outcomes revealed that the one-repetition maximum test is used as load prescription and that para powerlifting should work at high speeds and higher loads. Regarding technique, grip width with 1.5 biacromial distance provides a good lift and partial amplitude training as an alternative to training. There are no differences in total load and movement quality in the lumbar arched technique compared with the flat technique. As a monitoring method, repetitions in reserve scale was used for submaximal loads. Finally, our outcomes and discussion indicated strategies and techniques that can be used by para powerlifting coaches.",
+    "affiliation": "Applied Kinesiology Laboratory, School of Physical Education, University of Campinas, Campinas, Brazil.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Body Weight"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Movement"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Weight Lifting"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Biomechanical Phenomena"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Sports for Persons with Disabilities"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1055/a-2152-7426"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 6,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "N",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2024-02-05",
+    "dateOfCreation": "2023-09-26",
+    "dateOfRevision": "2024-05-31",
+    "electronicPublicationDate": "2023-09-26",
+    "firstPublicationDate": "2023-09-26",
+    "firstIndexDate": "2023-09-27",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "38910451",
+    "source": "MED",
+    "pmid": "38910451",
+    "pmcid": "PMC11569527",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC11569527"
+     ]
+    },
+    "doi": "10.1177/19417381241260412",
+    "title": "Validity of Rating of Perceived Exertion Scales in Relation to Movement Velocity and Exercise Intensity During Resistance-Exercise: A Systematic Review.",
+    "authorString": "Petro JL, Ferrari G, Cardozo LA, Vargas-Molina S, Carbone L, Kreider RB, Bonilla DA.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Petro JL",
+       "lastName": "Petro",
+       "firstName": "Jorge L",
+       "initials": "JL",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Research Group in Physical Activity, Sports and Health Sciences (GICAFS), Universidad de Córdoba, Montería, Colombia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ferrari G",
+       "lastName": "Ferrari",
+       "firstName": "Guido",
+       "initials": "G",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Grupo LIFT, Buenos Aires, Argentina."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cardozo LA",
+       "lastName": "Cardozo",
+       "firstName": "Luis A",
+       "initials": "LA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8076-3304"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research and Measurement Group in Sports Training (IMED), Faculty of Health Sciences and Sports, Fundación Universitaria del Área Andina, Bogotá, Colombia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Vargas-Molina S",
+       "lastName": "Vargas-Molina",
+       "firstName": "Salvador",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Physical Education and Sports Area, Faculty of Medicine, University of Málaga, Spain."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Carbone L",
+       "lastName": "Carbone",
+       "firstName": "Leandro",
+       "initials": "L",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Grupo LIFT, Buenos Aires, Argentina."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kreider RB",
+       "lastName": "Kreider",
+       "firstName": "Richard B",
+       "initials": "RB",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Exercise and Sport Nutrition Laboratory, Human Clinical Research Facility, Texas A&M University, College Station, Texas."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bonilla DA",
+       "lastName": "Bonilla",
+       "firstName": "Diego A",
+       "initials": "DA",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-2634-1220"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia."
+         },
+         {
+          "affiliation": "Research Group in Physical Activity, Sports and Health Sciences (GICAFS), Universidad de Córdoba, Montería, Colombia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8076-3304"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-2634-1220"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "17",
+     "journalIssueId": 3931128,
+     "dateOfPublication": "2025 May-Jun",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Sports Health",
+      "title": "Sports health",
+      "essn": "1941-0921",
+      "issn": "1941-7381",
+      "isoabbreviation": "Sports Health",
+      "nlmid": "101518422"
+     },
+     "printPublicationDate": "2025-05-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "621-628",
+    "abstractText": "<h4>Context</h4>Movement velocity (MV) may be a valid tool to evaluate and control the load in resistance training (RT). The rating of perceived exertion (RPE) also enables practical load management. The relationship between RPE and MV may be used to monitor RT intensity.<h4>Objective</h4>To evaluate the validity and practicality of RPE scales related to MV and training intensity in resistance exercise. We hypothesize a positive correlation among RPE, MV, and load intensity in RT. Therefore, RPE may serve as a supplementary indicator in monitoring RT load.<h4>Data sources</h4>Boolean algorithms were used to search several databases (SPORTDiscus, EBSCO, PubMed, Scopus, and Google Scholar).<h4>Study selection</h4>Studies published from 2009 to 2023 included clinical trials (randomized or not) in healthy female and male subjects that analyzed the relationship between different RPE scales and MV in basic RT exercises.<h4>Study design</h4>Systematic review.<h4>Level of evidence</h4>Level 3.<h4>Results</h4>A total of 18 studies were selected using different RPE scales with reported MV training loads. Participants included RT and untrained male and female subjects (15-31 years old). Two RPE scales (OMNI-RES and repetitions in reserve) were used. The selected studies showed moderate positive correlations among these RPE scales, MV, and training load (eg, percentage of 1-repetition maximum [%1-RM]). In addition, equations have been developed to estimate %1-RM and MV loss based on the OMNI-RES scale.<h4>Conclusion</h4>Studies show that RPE scales and MV constitute a valid, economic, and practical tool for assessing RT load progression and complementing other training monitoring variables. Exercise professionals should consider familiarizing participants with RPE scales and factors that might influence the perception of exertion (eg, level of training, motivation, and environmental conditions).",
+    "affiliation": "Research Division, Dynamical Business and Science Society - DBSS International SAS, Bogotá, Colombia.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Reproducibility of Results"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Perception",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Movement",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adolescent"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adult"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Physical Exertion",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Young Adult"
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Motion perception",
+      "Fatigue",
+      "Strength Training",
+      "Muscle Strength",
+      "Linear Transducer"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1177/19417381241260412"
+      },
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11569527"
+      },
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC11569527?pdf=render"
+      },
+      {
+       "availability": "Free",
+       "availabilityCode": "F",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1177/19417381241260412"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 8,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2025-04-18",
+    "dateOfCreation": "2024-06-24",
+    "dateOfRevision": "2025-04-21",
+    "electronicPublicationDate": "2024-06-24",
+    "firstPublicationDate": "2024-06-24",
+    "firstIndexDate": "2024-06-25",
+    "fullTextReceivedDate": "2025-12-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "39808810",
+    "source": "MED",
+    "pmid": "39808810",
+    "doi": "10.1519/jsc.0000000000004973",
+    "title": "The Contribution of Muscular Fatigue and Shoulder Biomechanics to Shoulder Injury Incidence During the Bench Press Exercise: A Narrative Review.",
+    "authorString": "Motlagh JG, Lipps DB.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Motlagh JG",
+       "lastName": "Motlagh",
+       "firstName": "Jodi G",
+       "initials": "JG",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Kinesiology, University of Michigan, Ann Arbor, Michigan."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Lipps DB",
+       "lastName": "Lipps",
+       "firstName": "David B",
+       "initials": "DB",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1140-9891"
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1140-9891"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "12",
+     "volume": "38",
+     "journalIssueId": 3886867,
+     "dateOfPublication": "2024 Dec",
+     "monthOfPublication": 12,
+     "yearOfPublication": 2024,
+     "journal": {
+      "medlineAbbreviation": "J Strength Cond Res",
+      "title": "Journal of strength and conditioning research",
+      "essn": "1533-4287",
+      "issn": "1064-8011",
+      "isoabbreviation": "J Strength Cond Res",
+      "nlmid": "9415084"
+     },
+     "printPublicationDate": "2024-12-01"
+    },
+    "pubYear": "2024",
+    "pageInfo": "2147-2163",
+    "abstractText": "<h4>Abstract</h4>Motlagh, JG and Lipps, DB. The contribution of muscular fatigue and shoulder biomechanics to shoulder injury incidence during the bench press exercise: A narrative review. J Strength Cond Res 38(12): 2147-2163, 2024-Participation in competitive powerlifting has rapidly grown over the past two decades. As a result, powerlifting-related injury incidence has likely increased proportionally. Consistent high-load training places excess strain on the multiple joints involved during the squat, bench press, and deadlift. This literature review provides a comprehensive overview of all necessary considerations for evaluating the relationship between training methods, muscular fatigue, shoulder biomechanics, and shoulder injury risk in experienced powerlifters performing the bench press. Training methods such as velocity-based training, rate of perceived exertion/repetitions in reserve, and autoregulatory progressive resistance training should be prioritized over the repetitions until failure method to minimize the risk of overexertion. Despite the high risk of shoulder injury, these findings often lack robust insights into shoulder joint biomechanics during the bench press. Assessing shoulder joint angles and moments can provide valuable insight into an athlete's bench press form and technique to minimize injury risk. With a more robust methodology (e.g., motion capture, ultrasound imaging), alterations in shoulder biomechanics can be assessed during fatiguing training sessions, leading to more generalizable findings on the impact of sex, age, training experience, and bench press form on the shoulder injury risk. This research will improve individualized programming for peak powerlifting performance and optimal shoulder injury prevention.",
+    "affiliation": "School of Kinesiology, University of Michigan, Ann Arbor, Michigan.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Shoulder",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Shoulder Joint",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Athletic Injuries",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "EP",
+          "qualifierName": "epidemiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Incidence"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle Fatigue",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Weight Lifting",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "IN",
+          "qualifierName": "injuries"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Biomechanical Phenomena"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Shoulder Injuries",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "ET",
+          "qualifierName": "etiology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "EP",
+          "qualifierName": "epidemiology"
+         },
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PP",
+          "qualifierName": "physiopathology"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1519/JSC.0000000000004973"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 2,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2025-01-14",
+    "dateOfCreation": "2025-01-14",
+    "dateOfRevision": "2025-05-22",
+    "firstPublicationDate": "2024-12-01",
+    "firstIndexDate": "2025-01-15",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "36035476",
+    "source": "MED",
+    "pmid": "36035476",
+    "pmcid": "PMC9399433",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC9399433"
+     ]
+    },
+    "doi": "10.3389/fphys.2022.926972",
+    "title": "The effectiveness of traditional vs. velocity-based strength training on explosive and maximal strength performance: A network meta-analysis.",
+    "authorString": "Held S, Speer K, Rappelt L, Wicker P, Donath L.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Held S",
+       "lastName": "Held",
+       "firstName": "Steffen",
+       "initials": "S",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-1004-101X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Intervention Research in Exercise Training, German Sport University Cologne, Cologne, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Speer K",
+       "lastName": "Speer",
+       "firstName": "Kevin",
+       "initials": "K",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Intervention Research in Exercise Training, German Sport University Cologne, Cologne, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Rappelt L",
+       "lastName": "Rappelt",
+       "firstName": "Ludwig",
+       "initials": "L",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Intervention Research in Exercise Training, German Sport University Cologne, Cologne, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Wicker P",
+       "lastName": "Wicker",
+       "firstName": "Pamela",
+       "initials": "P",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Sports Science, Bielefeld University, Bielefeld, Germany."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Donath L",
+       "lastName": "Donath",
+       "firstName": "Lars",
+       "initials": "L",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-6039-0141"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Intervention Research in Exercise Training, German Sport University Cologne, Cologne, Germany."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-6039-0141"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-1004-101X"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "volume": "13",
+     "journalIssueId": 3311502,
+     "dateOfPublication": "2022 ",
+     "monthOfPublication": 0,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Front Physiol",
+      "title": "Frontiers in physiology",
+      "essn": "1664-042X",
+      "issn": "1664-042X",
+      "isoabbreviation": "Front Physiol",
+      "nlmid": "101549006"
+     },
+     "printPublicationDate": "2022-01-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "926972",
+    "abstractText": "This network meta-analysis aimed at evaluating the effectiveness of different velocity-based (VBT) and traditional 1RM-based resistance training (TRT) interventions on strength and power indices in healthy participants. The research was conducted until December 2021 using the online electronic databases PubMed, Web of Science, PsycNet, and SPORTDiscus for studies with the following inclusion criteria: 1) controlled VBT trials, 2) strength and/or jump and/or sprint parameters as outcomes (c), participants aged between 18 and 40 years, and 4) peer-reviewed and published in English. Standardized mean differences (SMD) using a random effects models were calculated. Fourteen studies with 311 healthy participants were selected and 3 networks (strength, jump, and sprint) were achieved. VBT, TRT, repetitions in reserve (RIR), low velocity loss (lowVL), and high velocity loss (highVL) were ranked for each network. Based on P-score rankings, lowVL (P-score ≥ 0.59; SMD ≥ 0.33) and highVL (P-score ≥ 0.50; SMD ≥ 0.12) revealed favorable effects on strength, jump, and sprint performance compared to VBT (P-score ≤ 0.47; SMD ≤0.01), TRT (P-score ≤0.46; SMD ≤ 0.00), and RIR (P-score ≤ 0.46; SMD ≤ 0.12). In conclusion, lowVL and highVL showed notable effects on strength, jump, and sprint performance. In particular for jump performance, lowVL induced favorable improvements compared to all other resistance training approaches.",
+    "affiliation": "Department of Intervention Research in Exercise Training, German Sport University Cologne, Cologne, Germany.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic-eCollection",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "systematic-review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Bundesinstitut für Sportwissenschaft",
+       "orderIn": 0
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Squat Jump",
+      "Counter Movement Jump",
+      "Maximum Strength",
+      "Mean Concentric Velocity",
+      "Power-Based Training"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3389/fphys.2022.926972"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9399433"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9399433?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 21,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2022-08-29",
+    "dateOfRevision": "2024-09-03",
+    "electronicPublicationDate": "2022-08-10",
+    "firstPublicationDate": "2022-08-10",
+    "firstIndexDate": "2022-08-30",
+    "fullTextReceivedDate": "2022-08-27",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "35038063",
+    "source": "MED",
+    "pmid": "35038063",
+    "pmcid": "PMC8762534",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC8762534"
+     ]
+    },
+    "doi": "10.1186/s40798-021-00404-9",
+    "title": "The Effect of Load and Volume Autoregulation on Muscular Strength and Hypertrophy: A Systematic Review and Meta-Analysis.",
+    "authorString": "Hickmott LM, Chilibeck PD, Shaw KA, Butcher SJ.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Hickmott LM",
+       "lastName": "Hickmott",
+       "firstName": "Landyn M",
+       "initials": "LM",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1545-8909"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Medicine, Health Sciences Program, University of Saskatchewan, Saskatoon, Canada. lmh896@usask.ca."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Chilibeck PD",
+       "lastName": "Chilibeck",
+       "firstName": "Philip D",
+       "initials": "PD",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Kinesiology, University of Saskatchewan, Saskatoon, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Shaw KA",
+       "lastName": "Shaw",
+       "firstName": "Keely A",
+       "initials": "KA",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Kinesiology, University of Saskatchewan, Saskatoon, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Butcher SJ",
+       "lastName": "Butcher",
+       "firstName": "Scotty J",
+       "initials": "SJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5408-9042"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Rehabilitation Science, University of Saskatchewan, Saskatoon, Canada."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1545-8909"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5408-9042"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "1",
+     "volume": "8",
+     "journalIssueId": 3289386,
+     "dateOfPublication": "2022 Jan",
+     "monthOfPublication": 1,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Sports Med Open",
+      "title": "Sports medicine - open",
+      "essn": "2198-9761",
+      "issn": "2199-1170",
+      "isoabbreviation": "Sports Med Open",
+      "nlmid": "101662568"
+     },
+     "printPublicationDate": "2022-01-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "9",
+    "abstractText": "<h4>Background</h4>Autoregulation has emerged as a potentially beneficial resistance training paradigm to individualize and optimize programming; however, compared to standardized prescription, the effects of autoregulated load and volume prescription on muscular strength and hypertrophy adaptations are unclear. Our objective was to compare the effect of autoregulated load prescription (repetitions in reserve-based rating of perceived exertion and velocity-based training) to standardized load prescription (percentage-based training) on chronic one-repetition maximum (1RM) strength and cross-sectional area (CSA) hypertrophy adaptations in resistance-trained individuals. We also aimed to investigate the effect of volume autoregulation with velocity loss thresholds ≤ 25% compared to > 25% on 1RM strength and CSA hypertrophy.<h4>Methods</h4>This review was performed in accordance with the PRISMA guidelines. A systematic search of MEDLINE, Embase, Scopus, and SPORTDiscus was conducted. Mean differences (MD), 95% confidence intervals (CI), and standardized mean differences (SMD) were calculated. Sub-analyses were performed as applicable.<h4>Results</h4>Fifteen studies were included in the meta-analysis: six studies on load autoregulation and nine studies on volume autoregulation. No significant differences between autoregulated and standardized load prescription were demonstrated for 1RM strength (MD = 2.07, 95% CI - 0.32 to 4.46 kg, p = 0.09, SMD = 0.21). Velocity loss thresholds ≤ 25% demonstrated significantly greater 1RM strength (MD = 2.32, 95% CI 0.33 to 4.31 kg, p = 0.02, SMD = 0.23) and significantly lower CSA hypertrophy (MD = 0.61, 95% CI 0.05 to 1.16 cm<sup>2</sup>, p = 0.03, SMD = 0.28) than velocity loss thresholds > 25%. No significant differences between velocity loss thresholds > 25% and 20-25% were demonstrated for hypertrophy (MD = 0.36, 95% CI - 0.29 to 1.00 cm<sup>2</sup>, p = 0.28, SMD = 0.13); however, velocity loss thresholds > 25% demonstrated significantly greater hypertrophy compared to thresholds ≤ 20% (MD = 0.64, 95% CI 0.07 to 1.20 cm<sup>2</sup>, p = 0.03, SMD = 0.34).<h4>Conclusions</h4>Collectively, autoregulated and standardized load prescription produced similar improvements in strength. When sets and relative intensity were equated, velocity loss thresholds ≤ 25% were superior for promoting strength possibly by minimizing acute neuromuscular fatigue while maximizing chronic neuromuscular adaptations, whereas velocity loss thresholds > 20-25% were superior for promoting hypertrophy by accumulating greater relative volume. Protocol Registration The original protocol was prospectively registered (CRD42021240506) with the PROSPERO (International Prospective Register of Systematic Reviews).",
+    "affiliation": "College of Medicine, Health Sciences Program, University of Saskatchewan, Saskatoon, Canada. lmh896@usask.ca.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Unpaywall",
+       "url": "https://sportsmedicine-open.springeropen.com/track/pdf/10.1186/s40798-021-00404-9"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1186/s40798-021-00404-9"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8762534"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC8762534?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 27,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCreation": "2022-01-17",
+    "dateOfRevision": "2022-02-01",
+    "electronicPublicationDate": "2022-01-15",
+    "firstPublicationDate": "2022-01-15",
+    "firstIndexDate": "2022-01-18",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "34101157",
+    "source": "MED",
+    "pmid": "34101157",
+    "doi": "10.1007/s40279-021-01488-9",
+    "title": "Training for Muscular Strength: Methods for Monitoring and Adjusting Training Intensity.",
+    "authorString": "Suchomel TJ, Nimphius S, Bellon CR, Hornsby WG, Stone MH.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Suchomel TJ",
+       "lastName": "Suchomel",
+       "firstName": "Timothy J",
+       "initials": "TJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-1763-5518"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Human Movement Sciences, Carroll University, Waukesha, WI, 53186, USA. tsuchome@carrollu.edu."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Nimphius S",
+       "lastName": "Nimphius",
+       "firstName": "Sophia",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Medical and Health Sciences, Edith Cowan University, Joondalup, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bellon CR",
+       "lastName": "Bellon",
+       "firstName": "Christopher R",
+       "initials": "CR",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Health and Human Performance, The Citadel-The Military College of South Carolina, Charleston, SC, 29409, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hornsby WG",
+       "lastName": "Hornsby",
+       "firstName": "W Guy",
+       "initials": "WG",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Coaching and Teaching Studies, West Virginia University, Morgantown, WV, 26505, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Stone MH",
+       "lastName": "Stone",
+       "firstName": "Michael H",
+       "initials": "MH",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Center of Excellence for Sport Science and Coach Education, Department of Exercise and Sport Sciences, East Tennessee State University, Johnson City, TN, 37614, USA."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-1763-5518"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "10",
+     "volume": "51",
+     "journalIssueId": 3235653,
+     "dateOfPublication": "2021 Oct",
+     "monthOfPublication": 10,
+     "yearOfPublication": 2021,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2021-10-01"
+    },
+    "pubYear": "2021",
+    "pageInfo": "2051-2066",
+    "abstractText": "Linear loading, the two-for-two rule, percent of one repetition maximum (1RM), RM zones, rate of perceived exertion (RPE), repetitions in reserve, set-repetition best, autoregulatory progressive resistance exercise (APRE), and velocity-based training (VBT) are all methods of adjusting resistance training intensity. Each method has advantages and disadvantages that strength and conditioning practitioners should be aware of when measuring and monitoring strength characteristics. The linear loading and 2-for-2 methods may be beneficial for novice athletes; however, they may be limited in their capacity to provide athletes with variation and detrimental if used exclusively for long periods of time. The percent of 1RM and RM zone methods may provide athletes with more variation and greater potential for strength-power adaptations; however, they fail to account for daily changes in athlete's performance capabilities. An athlete's daily readiness can be addressed to various extents by both subjective (e.g., RPE, repetitions in reserve, set-repetition best, and APRE) and objective (e.g., VBT) load adjustment methods. Future resistance training monitoring may aim to include a combination of measures that quantify outcome (e.g., velocity, load, time, etc.) with process (e.g., variability, coordination, efficiency, etc.) relevant to the stage of learning or the task being performed. Load adjustment and monitoring methods should be used to supplement and guide the practitioner, quantify what the practitioner 'sees', and provide longitudinal data to assist in reviewing athlete development and providing baselines for the rate of expected development in resistance training when an athlete returns to sport from injury or large training load reductions.",
+    "affiliation": "Department of Human Movement Sciences, Carroll University, Waukesha, WI, 53186, USA. tsuchome@carrollu.edu.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Sports"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Athletes"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-021-01488-9"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 79,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2021-10-25",
+    "dateOfCreation": "2021-06-08",
+    "dateOfRevision": "2026-10-12",
+    "electronicPublicationDate": "2021-06-08",
+    "firstPublicationDate": "2021-06-08",
+    "firstIndexDate": "2021-06-09",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "35247203",
+    "source": "MED",
+    "pmid": "35247203",
+    "doi": "10.1007/s40279-022-01667-2",
+    "title": "Methods for Controlling and Reporting Resistance Training Proximity to Failure: Current Issues and Future Directions.",
+    "authorString": "Pelland JC, Robinson ZP, Remmert JF, Cerminaro RM, Benitez B, John TA, Helms ER, Zourdos MC.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Pelland JC",
+       "lastName": "Pelland",
+       "firstName": "Joshua C",
+       "initials": "JC",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Robinson ZP",
+       "lastName": "Robinson",
+       "firstName": "Zac P",
+       "initials": "ZP",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Remmert JF",
+       "lastName": "Remmert",
+       "firstName": "Jacob F",
+       "initials": "JF",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Cerminaro RM",
+       "lastName": "Cerminaro",
+       "firstName": "Rebecca M",
+       "initials": "RM",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Benitez B",
+       "lastName": "Benitez",
+       "firstName": "Brian",
+       "initials": "B",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "John TA",
+       "lastName": "John",
+       "firstName": "Thomas A",
+       "initials": "TA",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Helms ER",
+       "lastName": "Helms",
+       "firstName": "Eric R",
+       "initials": "ER",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4849-9336"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA."
+         },
+         {
+          "affiliation": "Sports Performance Research Institute New Zealand (SPRINZ), Auckland University of Technology, Auckland, New Zealand."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zourdos MC",
+       "lastName": "Zourdos",
+       "firstName": "Michael C",
+       "initials": "MC",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3265-7683"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA. mzourdos@fau.edu."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4849-9336"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3265-7683"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "7",
+     "volume": "52",
+     "journalIssueId": 3378091,
+     "dateOfPublication": "2022 Jul",
+     "monthOfPublication": 7,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2022-07-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "1461-1472",
+    "abstractText": "Resistance training variables such as volume, load, and frequency are well defined. However, the variable proximity to failure does not have a consistent quantification method, despite being defined as the number of repetitions in reserve (RIR) upon completion of a resistance training set. Further, there is between-study variability in the definition of failure itself. Studies have defined failure as momentary (inability to complete the concentric phase despite maximal effort), volitional (self-termination), or have provided no working definition. Methods to quantify proximity to failure include percentage-based prescription, repetition maximum zone training, velocity loss, and self-reported RIR; each with positives and negatives. Specifically, applying percentage-based prescriptions across a group may lead to a wide range of per-set RIR owing to interindividual differences in repetitions performed at specific percentages of 1 repetition maximum. Velocity loss is an objective method; however, the relationship between velocity loss and RIR varies set-to-set, across loading ranges, and between exercises. Self-reported RIR is inherently individualized; however, its subjectivity can lead to inaccuracy. Further, many studies, regardless of quantification method, do not report RIR. Consequently, it is difficult to make specific recommendations for per-set proximity to failure to maximize hypertrophy and strength. Therefore, this review aims to discuss the strengths and weaknesses of the current proximity to failure quantification methods. Further, we propose future directions for researchers and practitioners to quantify proximity to failure, including implementation of absolute velocity stops using individual average concentric velocity/RIR relationships. Finally, we provide guidance for reporting self-reported RIR regardless of the quantification method.",
+    "affiliation": "Department of Exercise Science and Health Promotion, Muscle Physiology Research Laboratory, Florida Atlantic University, Boca Raton, FL, 33431, USA.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Exercise"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-022-01667-2"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 26,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "N",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2022-06-23",
+    "dateOfCreation": "2022-03-05",
+    "dateOfRevision": "2026-10-28",
+    "electronicPublicationDate": "2022-03-05",
+    "firstPublicationDate": "2022-03-05",
+    "firstIndexDate": "2022-03-05",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "30844981",
+    "source": "MED",
+    "pmid": "30844981",
+    "doi": "10.1519/jsc.0000000000003099",
+    "title": "Classic Powerlifting Performance: A Systematic Review.",
+    "authorString": "Ferland PM, Comtois AS.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Ferland PM",
+       "lastName": "Ferland",
+       "firstName": "Pierre-Marc",
+       "initials": "PM",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Physical Activity Sciences, University of Quebec in Montreal, Montreal, Quebec, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Comtois AS",
+       "lastName": "Comtois",
+       "firstName": "Alain S",
+       "initials": "AS"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "volume": "33 Suppl 1",
+     "journalIssueId": 2832155,
+     "dateOfPublication": "2019 Jul",
+     "monthOfPublication": 7,
+     "yearOfPublication": 2019,
+     "journal": {
+      "medlineAbbreviation": "J Strength Cond Res",
+      "title": "Journal of strength and conditioning research",
+      "essn": "1533-4287",
+      "issn": "1064-8011",
+      "isoabbreviation": "J Strength Cond Res",
+      "nlmid": "9415084"
+     },
+     "printPublicationDate": "2019-07-01"
+    },
+    "pubYear": "2019",
+    "pageInfo": "S194-S201",
+    "abstractText": "Ferland, PM and Comtois, AS. Classic powerlifting performance: A systematic review. J Strength Cond Res XX(X): 000-000, 2019-The purpose of this study was to review all scientific publications related to able-body drug-tested classic powerlifting performance since January 1, 2012, and to regroup them into a brief narrative review. Three electronic databases were systematically searched in August 2018 using the wildcard: powerlift*. A manual search was performed from the reference list of all retained articles. The search and selection strategy permitted to gather a total of 16 scientific articles published in peer-reviewed journals. Results show that practitioners should prioritize a low-bar squat and a wide grip bench press because they generally contribute to moving greater loads, bring more attention to preventing injuries, since a fair amount of powerlifters seem to train injured and prioritize a hypertrophy-power-strength model when prescribing 3 times a week daily undulating periodization on nonconsecutive days for squat and bench. Practitioners could also introduce respiratory muscle training, use daily 1 repetition maximum training combined with down sets on experienced athletes and use a rate of perceived exertion scale based on repetitions in reserve combined with an individual velocity profile when prescribing intensity. Before competition, powerlifters seem to taper in this order: the deadlift, the squat, and lastly the bench press. The Slingshot does help to move more weight because it helps to generate more inertia, but it also deactivates the triceps. Finally, the present work was limited by the present literature but could serve as a reference in the field of powerlifting. Further research should include more details about the circumstances under which they were conducted.",
+    "affiliation": "Department of Physical Activity Sciences, University of Quebec in Montreal, Montreal, Quebec, Canada.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Breathing Exercises"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Weight Lifting",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Athletic Performance"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Physical Exertion"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1519/JSC.0000000000003099"
+      }
+     ]
+    },
+    "commentCorrectionList": {
+     "commentCorrection": [
+      {
+       "source": "MED",
+       "id": "33332805",
+       "reference": "J Strength Cond Res. 2021 Jan 1;35(1):e1. doi: 10.1519/JSC.0000000000003350",
+       "type": "Erratum in",
+       "orderIn": 1
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 33,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2019-11-08",
+    "dateOfCreation": "2019-03-08",
+    "dateOfRevision": "2021-04-16",
+    "firstPublicationDate": "2019-07-01",
+    "firstIndexDate": "2019-03-08",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

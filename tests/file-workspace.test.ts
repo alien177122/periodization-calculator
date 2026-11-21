@@ -72,6 +72,35 @@ test('file workspace uses Ollama OCR runner for images and stores extracted text
   assert.match(image?.analysis?.preview ?? '', /Invoice #42/);
 });
 
+test('file workspace isolates inbox files per user name', async t => {
+  const rootDir = await mkdtemp(path.join(os.tmpdir(), 'workspace-files-users-'));
+  t.after(async () => {
+    await rm(rootDir, {recursive: true, force: true});
+  });
+
+  const workspace = createFileWorkspace({rootDir});
+  await workspace.ensureWorkspace('Alice');
+  await workspace.ensureWorkspace('Bob');
+  await writeFile(
+    path.join(workspace.getPaths('Alice').inboxDir, 'alice.txt'),
+    'alice-only',
+    'utf8',
+  );
+  await writeFile(path.join(workspace.getPaths('Bob').inboxDir, 'bob.txt'), 'bob-only', 'utf8');
+
+  const alice = await workspace.listFiles('Alice');
+  const bob = await workspace.listFiles('Bob');
+
+  assert.deepEqual(
+    alice.files.map(file => file.name),
+    ['alice.txt'],
+  );
+  assert.deepEqual(
+    bob.files.map(file => file.name),
+    ['bob.txt'],
+  );
+});
+
 test('image OCR shows fallback instructions when Ollama is unavailable', async t => {
   const rootDir = await mkdtemp(path.join(os.tmpdir(), 'workspace-files-image-fallback-'));
   t.after(async () => {

@@ -2,9 +2,9 @@ import {useEffect, useState} from 'react';
 import {PremiumInput} from '../components/ui/PremiumInput';
 import {Button} from '../components/ui/Button';
 import {PasswordInput} from '../components/auth/PasswordInput';
+import {AuthHeroDecor} from '../components/auth/AuthHeroDecor';
 import {useKeyboardAvoid} from '../hooks/useKeyboardAvoid';
 import {useReducedMotion} from '../hooks/useReducedMotion';
-import {AuthHeroDecor} from '../components/auth/AuthHeroDecor';
 import {AUTH_CANVAS_COLOR, getStoredTheme, THEME_META_COLORS} from '../theme/theme';
 
 const AUTH_PLAN_WEEKS = Array.from({length: 8}, (_, index) => index + 1);
@@ -100,6 +100,7 @@ export default function AuthScreen({
               id="auth-name"
               label="Имя пользователя"
               placeholder="Имя пользователя"
+              lang="en"
               autoComplete="username"
               autoCapitalize="none"
               autoCorrect="off"
@@ -118,6 +119,7 @@ export default function AuthScreen({
                 showStrength
                 error={passHint ?? undefined}
                 onBlurValidate={setPassHint}
+                lang="en"
                 autoComplete="new-password"
                 onKeyDown={e => e.key === 'Enter' && handleAuth()}
               />
@@ -127,6 +129,7 @@ export default function AuthScreen({
                 label="Пароль"
                 type="password"
                 placeholder="••••••"
+                lang="en"
                 autoComplete="current-password"
                 autoCapitalize="none"
                 autoCorrect="off"
@@ -140,9 +143,10 @@ export default function AuthScreen({
             {authMode === 'register' && (
               <PasswordInput
                 id="auth-pass2"
-                label="Повторить пароль"
+                label="Повтори пароль"
                 value={pass2Input}
                 onChange={setPass2Input}
+                lang="en"
                 autoComplete="new-password"
                 onKeyDown={e => e.key === 'Enter' && handleAuth()}
               />
@@ -158,7 +162,13 @@ export default function AuthScreen({
               className="calc-test__submit auth-submit"
               onClick={handleAuth}
               disabled={authLoading}>
-              {authLoading ? '...' : authMode === 'login' ? 'Войти' : 'Создать аккаунт'}
+              {authLoading
+                ? authMode === 'login'
+                  ? 'Входим…'
+                  : 'Создаём аккаунт…'
+                : authMode === 'login'
+                  ? 'Войти'
+                  : 'Создать аккаунт'}
             </Button>
           </div>
         </div>
