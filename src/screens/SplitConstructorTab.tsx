@@ -60,6 +60,7 @@ export function SplitConstructorTab({
 
   const [createDialogOpen, setCreateDialogOpen] = useState(false);
   const [createDialogKey, setCreateDialogKey] = useState(0);
+  const [showDayGrid, setShowDayGrid] = useState(false);
 
   function handleCreateNew() {
     setCreateDialogKey(key => key + 1);
@@ -194,12 +195,21 @@ export function SplitConstructorTab({
             </SectionBlock>
 
             <SectionBlock num="04" title="Распределение по дням" variant="apple">
-              <MuscleDayGrid
-                split={constructor.draft}
-                savedExercises={editorExercises}
-                onDuplicateExercise={constructor.duplicateExerciseToDay}
-                onRemoveExercise={constructor.removeExercise}
-              />
+              <button
+                type="button"
+                className="split-days-toggle"
+                onClick={() => setShowDayGrid(v => !v)}
+                aria-expanded={showDayGrid}>
+                {showDayGrid ? 'Скрыть схему по дням' : 'Показать схему по дням'}
+              </button>
+              {showDayGrid ? (
+                <MuscleDayGrid
+                  split={constructor.draft}
+                  savedExercises={editorExercises}
+                  onDuplicateExercise={constructor.duplicateExerciseToDay}
+                  onRemoveExercise={constructor.removeExercise}
+                />
+              ) : null}
               <div className="split-calculate-container">
                 <button
                   type="button"

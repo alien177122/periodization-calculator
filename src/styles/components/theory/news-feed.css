@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: var(--space-4, 16px);
   margin: var(--space-5, 20px) 0 var(--space-6, 24px);
+  padding-inline: var(--space-4, 16px);
 }
 
 .ta-news-feed__head {
@@ -115,6 +116,7 @@
   .ta-news-card {
     padding: var(--space-3, 12px);
     gap: var(--space-1, 4px);
+    margin-inline: var(--space-1, 4px);
   }
   .ta-news-card__title {
     font-size: var(--type-14, 14px);

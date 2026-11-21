@@ -1,11 +1,8 @@
 import {useId, useRef, useState, type KeyboardEvent} from 'react';
-import {TRAINING_DAYS} from '../../data/exercises';
 import {SectionBlock} from '../SectionBlock';
 import {Button} from '../ui/Button';
 
 interface RestStateProps {
-  completedSessions: number;
-  completedMicrocycle: number;
   onDismiss: () => void;
 }
 
@@ -18,8 +15,6 @@ const REST_FEELINGS = [
 type RestFeelingId = (typeof REST_FEELINGS)[number]['id'];
 
 export default function RestState({
-  completedSessions,
-  completedMicrocycle,
   onDismiss,
 }: RestStateProps) {
   const feelingLabelId = useId();
@@ -43,7 +38,7 @@ export default function RestState({
   }
 
   return (
-    <SectionBlock num="01" title={`Завершён ${completedMicrocycle}-й микроцикл`}>
+    <SectionBlock num="01" title="Отдых">
       <div className="rest-card">
         <header className="rest-card-head">
           <span className="rest-card-icon" aria-hidden="true">
@@ -52,7 +47,7 @@ export default function RestState({
           <div className="rest-card-head-copy">
             <h3 className="rest-card-title">Праздник! Время отдохнуть</h3>
             <p className="rest-card-subtitle">
-              {completedMicrocycle}-й микроцикл из 8 пройден — {completedSessions} тренировок позади
+              Отдохни 4–8 дней, затем продолжай программу
             </p>
           </div>
         </header>
@@ -95,12 +90,7 @@ export default function RestState({
             4 дня достаточно. Пауза сейчас = прогресс потом.
           </p>
         </div>
-        <p className="rest-card-next">
-          Следующий микроцикл: <strong>{completedMicrocycle + 1}-й</strong>
-          {' · День 1 · '}
-          {TRAINING_DAYS[0].name}
-        </p>
-      </div>
+        </div>
       <div className="rest-card-actions">
         <Button className="calc-test__submit" onClick={onDismiss}>
           Начать следующий микроцикл

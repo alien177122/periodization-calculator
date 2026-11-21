@@ -24,35 +24,6 @@ interface TrainingStateRouterProps {
   nextBlocks?: Block[];
 }
 
-function ProgressHeader({
-  completedSessions,
-  totalSessions,
-}: {
-  completedSessions: number;
-  totalSessions: number;
-}) {
-  const pct = totalSessions > 0 ? (completedSessions / totalSessions) * 100 : 0;
-  return (
-    <div className="training-progress">
-      <div className="training-progress-label">
-        <span>Прогресс программы</span>
-        <span>
-          {completedSessions} / {totalSessions} тренировок
-        </span>
-      </div>
-      <div
-        className="training-progress-bar"
-        role="progressbar"
-        aria-valuenow={completedSessions}
-        aria-valuemin={0}
-        aria-valuemax={totalSessions}
-        aria-label={`Прогресс программы: ${completedSessions} из ${totalSessions} тренировок`}>
-        <div className="training-progress-fill" style={{width: `${pct}%`}} />
-      </div>
-    </div>
-  );
-}
-
 export default function TrainingStateRouter({
   state,
   handlers,
@@ -73,10 +44,6 @@ export default function TrainingStateRouter({
     case 'active':
       return (
         <>
-          <ProgressHeader
-            completedSessions={state.completedSessions}
-            totalSessions={totalSessions}
-          />
           <ActiveDayView
             currentDayIdx={state.currentDayIdx}
             currentWeekIdx={state.currentWeekIdx}
@@ -99,13 +66,7 @@ export default function TrainingStateRouter({
     case 'break':
       return (
         <>
-          <ProgressHeader
-            completedSessions={state.completedSessions}
-            totalSessions={totalSessions}
-          />
           <RestState
-            completedSessions={state.completedSessions}
-            completedMicrocycle={state.completedMicrocycle}
             onDismiss={handlers.onDismissBreak}
           />
         </>

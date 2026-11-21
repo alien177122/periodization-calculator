@@ -20,6 +20,9 @@
   margin-inline: auto;
   padding: var(--space-2) var(--space-4);
   padding-top: max(var(--space-2), var(--sat, 0px));
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  background: var(--color-bg-secondary);
 }
 
 .training-page-header__back {
@@ -171,9 +174,16 @@
   gap: var(--space-3);
 }
 
+.training-menu__grid--three {
+  grid-template-columns: 1fr;
+}
+
 @media (min-width: 600px) {
   .training-menu__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .training-menu__grid--three {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -448,4 +458,22 @@
   font-size: var(--type-14);
   color: var(--color-text-secondary);
   font-weight: 500;
+}
+.split-days-toggle {
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  font: inherit;
+  font-size: var(--type-14);
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: var(--space-3);
+}
+
+.split-days-toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }

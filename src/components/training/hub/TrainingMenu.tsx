@@ -25,14 +25,11 @@ export function TrainingMenu({
 }: TrainingMenuProps) {
   return (
     <div className="training-menu">
-      <button type="button" className="training-menu__primary" onClick={onOpenWorkout}>
-        <span className="training-menu__primary-eyebrow">Продолжить</span>
-        <span className="training-menu__primary-title">Последний расчёт</span>
-        <span className="training-menu__primary-meta">{workoutName}</span>
-        <span className="training-menu__chevron" aria-hidden="true">›</span>
-      </button>
-
-      <div className="training-menu__grid">
+      <div className="training-menu__grid training-menu__grid--three">
+        <button type="button" className="training-menu__tile" onClick={onOpenWorkout}>
+          <span className="training-menu__tile-title">Последний расчёт</span>
+          <span className="training-menu__tile-meta">{workoutName}</span>
+        </button>
         <button type="button" className="training-menu__tile" onClick={onOpenCalculations}>
           <span className="training-menu__tile-title">Расчёты</span>
           <span className="training-menu__tile-meta">{pluralCalculations(calculationsCount)}</span>
