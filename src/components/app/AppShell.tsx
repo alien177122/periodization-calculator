@@ -13,7 +13,7 @@ import {PROGRAM_DAYS_PER_WEEK} from '../../types';
 import {LoadingView} from './LoadingView';
 import {TabNav} from './TabNav';
 import {TabPanel} from './TabPanel';
-import {UserBar} from './UserBar';
+import {AccountMenu} from './AccountMenu';
 import {normalizeTab, LEGACY_TRAINING_TAB, LEGACY_CALCULATOR_TAB, type AppTab} from './tabs';
 import {usePageMeta} from '../../hooks/usePageMeta';
 import {ThemeToggle} from '../shared/ThemeToggle';
@@ -201,7 +201,6 @@ export function AppShell() {
     <div className="app-shell" style={shellStyle}>
       {connectionStatus}
       <AppAmbientBackground activeTab={activeTab} />
-      <ThemeToggle />
       <OpenGraph {...pageMeta} />
       <div className="app-hero-container" style={{width: '100%', overflow: 'hidden'}}>
         <div key={activeTab} className="app-hero-swap app-hero-swap--enter">
@@ -214,12 +213,12 @@ export function AppShell() {
           />
         </div>
       </div>
-      <UserBar
-        userName={auth.userName}
-        onLogout={handleLogout}
+      <AccountMenu
+        userName={auth.userName ?? ''}
         billingState={billing.state}
         isPolling={billing.isPolling}
         checkoutDisabled={billing.state.status !== 'ready' || Boolean(billingReady?.premium)}
+        onLogout={handleLogout}
         onOpenCheckout={handleCheckout}
         onRefreshBilling={handleRefreshBilling}
       />

@@ -1,6 +1,7 @@
 import TrainingTab from '../../screens/TrainingTab';
 import '../../styles/tabs/training-tab.css';
 import {useTrainingProgram} from '../../hooks/useTrainingProgram';
+import {TRAINING_DAYS} from '@training/shared/data/exercises';
 import {PROGRAM_DAYS_PER_WEEK} from '../../types';
 import type {UserData} from '../../types';
 import {blocksForDay} from '@training/shared/data/split-blocks';
@@ -34,11 +35,13 @@ export default function TrainingTabContainer({
     (userData.splits ?? [])[0] ??
     null;
 
-  const currentBlocks = activeSplit
-    ? blocksForDay(activeSplit, (training.currentDayIdx + 1) as SplitDayNumber)
+  const currentTrainingDay = TRAINING_DAYS[training.currentDayIdx];
+  const nextTrainingDay = TRAINING_DAYS[training.nextDayIdx];
+  const currentBlocks = activeSplit && currentTrainingDay
+    ? blocksForDay(activeSplit, currentTrainingDay.dayNumber as SplitDayNumber)
     : undefined;
-  const nextBlocks = activeSplit
-    ? blocksForDay(activeSplit, (training.nextDayIdx + 1) as SplitDayNumber)
+  const nextBlocks = activeSplit && nextTrainingDay
+    ? blocksForDay(activeSplit, nextTrainingDay.dayNumber as SplitDayNumber)
     : undefined;
 
   const handleSetMode = (dayNumber: number, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => {
