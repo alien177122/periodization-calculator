@@ -530,3 +530,17 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+
+@media (max-width: 430px) {
+  .training-page-header__inner {
+    padding: var(--space-1) var(--space-3);
+    padding-top: max(var(--space-1), var(--sat, 0px));
+  }
+  .training-page-header__title {
+    font-size: var(--type-16);
+  }
+  .training-page-header__back span {
+    display: none;
+  }
+}

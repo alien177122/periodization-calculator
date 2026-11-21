@@ -158,6 +158,17 @@
   .user-bar-actions {
     display: contents;
   }
+  .user-bar .user-bar-actions > .user-bar__billing-badge,
+  .user-bar .user-bar-actions > .btn-sm:last-child,
+  .user-bar .user-bar-actions > .btn-sm:not(:last-child) {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+    padding: 4px;
+    font-size: var(--type-11, 11px);
+  }
+
   /* Кнопка без фиксированной ширины забирает остаток строки и переносит текст.
      Иначе длинное «Открыть безлимитные расчёты» вылезает на соседнюю кнопку. */
   .user-bar-actions > .btn-sm:not(:last-child) {
