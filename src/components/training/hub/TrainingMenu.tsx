@@ -25,7 +25,7 @@ export function TrainingMenu({
 }: TrainingMenuProps) {
   return (
     <div className="training-menu">
-      <div className="training-menu__grid training-menu__grid--three">
+      <div className="training-menu__grid training-menu__grid--four">
         <button type="button" className="training-menu__tile" onClick={onOpenWorkout}>
           <span className="training-menu__tile-title">Последний расчёт</span>
           <span className="training-menu__tile-meta">{workoutName}</span>
@@ -38,11 +38,11 @@ export function TrainingMenu({
           <span className="training-menu__tile-title">База силовых</span>
           <span className="training-menu__tile-meta">1ПМ · веса</span>
         </button>
+        <button type="button" className="training-menu__tile" onClick={onOpenBreakdown}>
+          <span className="training-menu__tile-title">Разбор</span>
+          <span className="training-menu__tile-meta">Калькулятор</span>
+        </button>
       </div>
-
-      <button type="button" className="training-menu__link" onClick={onOpenBreakdown}>
-        Открыть разбор
-      </button>
     </div>
   );
 }

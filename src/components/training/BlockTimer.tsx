@@ -30,8 +30,7 @@ export function BlockTimer({phases, muted: mutedProp = false}: BlockTimerProps) 
           <span className="block-timer__sep">·</span>
           <span className="block-timer__label">Всего</span>
           <span className="block-timer__value u-num">{formatMs(phase.totalElapsedMs)}</span>
-        </div>
-        <div className="block-timer__actions">
+        <span className="block-timer__actions">
           <button type="button" className="block-timer__btn" onClick={phase.toggle}>
             {phase.running ? 'Стоп' : 'Старт'}
           </button>
@@ -39,6 +38,7 @@ export function BlockTimer({phases, muted: mutedProp = false}: BlockTimerProps) 
             Сброс
           </button>
           {phase.done ? <span className="block-timer__done">Готово ✓</span> : null}
+        </span>
         </div>
       </div>
     );
@@ -52,8 +52,7 @@ export function BlockTimer({phases, muted: mutedProp = false}: BlockTimerProps) 
         <span className="block-timer__sep">·</span>
         <span className="block-timer__label">Сессия</span>
         <span className="block-timer__value u-num">{formatMs(simple.totalMs)}</span>
-      </div>
-      <div className="block-timer__actions">
+      <span className="block-timer__actions">
         <button type="button" className="block-timer__btn" onClick={simple.toggle}>
           {simple.running ? 'Стоп' : 'Старт'}
         </button>
@@ -67,6 +66,7 @@ export function BlockTimer({phases, muted: mutedProp = false}: BlockTimerProps) 
           aria-pressed={simple.muted}>
           {simple.muted ? '🔇' : '🔊'}
         </button>
+      </span>
       </div>
     </div>
   );

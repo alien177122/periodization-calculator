@@ -2,6 +2,7 @@ import {TRAINING_DAYS} from '../../data/exercises';
 import type {Block, TrainingDayDef, TrainingPreferences} from '../../types';
 import type {TrainingExerciseRow} from '../../utils/training';
 import TrainingDayCard from '../TrainingDayCard';
+import {WeekProgressGrid} from './WeekProgressGrid';
 import {ExerciseTimers} from './ExerciseTimers';
 import {BlockTimer} from './BlockTimer';
 import {SectionBlock} from '../SectionBlock';
@@ -49,6 +50,9 @@ export default function ActiveDayView({
 
   return (
     <>
+      <WeekProgressGrid
+        currentWeekIdx={currentWeekIdx}
+      />
       <SectionBlock num="01" title="Текущая тренировка">
         <ProgressionControls preferences={trainingPreferences} onChange={onPreferencesChange} />
         {currentDay ? (
