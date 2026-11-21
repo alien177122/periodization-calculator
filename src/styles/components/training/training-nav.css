@@ -20,9 +20,6 @@
   margin-inline: auto;
   padding: var(--space-2) var(--space-4);
   padding-top: max(var(--space-2), var(--sat, 0px));
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-xl);
-  background: var(--color-bg-secondary);
 }
 
 .training-page-header__back {
