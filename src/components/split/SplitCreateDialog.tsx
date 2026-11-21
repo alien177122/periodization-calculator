@@ -44,7 +44,7 @@ export function SplitCreateDialog({
 }: SplitCreateDialogProps) {
   /* Диалог ремоунтится по ключу при каждом открытии (см. SplitConstructorTab):
      состояние формы (имя «Сплит N», 3 дня) задаётся один раз при инициализации. */
-  const [name, setName] = useState<string>(() => `Сплит ${rows.length + 1}`);
+  const [name, setName] = useState<string>(() => `Расчёт ${rows.length + 1}`);
   const [daysPerWeek, setDaysPerWeek] = useState<2 | 3 | 4>(3);
   const [presetId, setPresetId] = useState<string | null>(null);
 
@@ -63,12 +63,12 @@ export function SplitCreateDialog({
     <AppSheet
       open={open}
       onClose={onClose}
-      title="Создание сплита"
+      title="Создание расчёта"
       detents={CREATE_DETENTS}
       initialDetent="large">
       <div className="split-create-dialog">
         <p className="split-create-dialog__hint">
-          Расчётов у профиля: {profileCalculationCount}. Создайте новый сплит или откройте уже
+          Расчётов: {profileCalculationCount}. Создайте новый сплит или откройте уже
           посчитанный.
         </p>
 
@@ -80,7 +80,7 @@ export function SplitCreateDialog({
           }}>
           <div className="split-create-dialog__field">
             <label className="split-create-dialog__label" htmlFor="split-create-dialog-name">
-              Название сплита
+              Название расчёта
             </label>
             <input
               id="split-create-dialog-name"
@@ -152,7 +152,7 @@ export function SplitCreateDialog({
             </div>
           </div>
           <button type="submit" className="btn calc-test__submit split-create-dialog__submit">
-            Создать сплит
+            Создать расчёт
           </button>
         </form>
 

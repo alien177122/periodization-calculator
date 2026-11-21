@@ -117,8 +117,8 @@ export function AppShell() {
       case 'split':
         return {
           label: 'Тренировка',
-          title: 'СПЛИТ И ТРЕНИРОВКА',
-          subtitle: 'Программа · выполнение · конструктор',
+          title: 'ТРЕНИРОВКА',
+          subtitle: 'Расчёты · база силовых · разбор',
         };
       default:
         return {

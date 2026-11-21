@@ -14,6 +14,7 @@ interface GlobalExerciseAdderProps {
   onPairExercise?: (a: string, b: string, dayNumber: 1 | 2 | 3 | 4) => void;
   /** Profile strength base: hide day targets, only persist 1RM. */
   profileBaseOnly?: boolean;
+  title?: string;
   onOneRMChange: (
     exerciseKey: string,
     oneRM: number,
@@ -30,6 +31,7 @@ export function GlobalExerciseAdder({
   onPairExercise,
   onOneRMChange,
   profileBaseOnly = false,
+  title = 'Добавить упражнение',
 }: GlobalExerciseAdderProps) {
   const [selectedKey, setSelectedKey] = useState<string>('');
   // bodyWeight exercises: body weight + extra weight
@@ -199,7 +201,7 @@ export function GlobalExerciseAdder({
   return (
     <section className="app-tab-section global-exercise-adder">
       <div className="app-tab-section__head">
-        <h2 className="app-tab-section__title">Добавить упражнение</h2>
+        <h2 className="app-tab-section__title">{title}</h2>
       </div>
 
       <div className="global-exercise-adder__layout">
