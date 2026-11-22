@@ -350,7 +350,8 @@ export default function TrainingDayCard({
                                   onClick={() => {
                                     setLocalModes(prev => ({...prev, [block.id]: m}));
                                     const blockId = block.id;
-                                    const clusterCfg = m === 'cluster' ? {miniReps: 2, intraRestSec: 30} : undefined;
+                                    const clusterMiniReps = Math.max(1, Math.ceil((blockExercises[0]?.scheme.reps ?? 4) / 2));
+                                    const clusterCfg = m === 'cluster' ? {miniReps: clusterMiniReps, intraRestSec: 30} : undefined;
                                     onSetModeChange?.(dayDef.dayNumber, blockId, m, clusterCfg);
                                   }}>
                                   {labels[m]}
@@ -400,7 +401,7 @@ export default function TrainingDayCard({
                                 weight: ex.weight,
                                 sets: ex.scheme.sets,
                                 reps: ex.scheme.reps,
-                                cluster: {miniReps: 2, intraRestSec: 30},
+                                cluster: {miniReps: Math.max(1, Math.ceil(ex.scheme.reps / 2)), intraRestSec: 30},
                               }).map(cs => (
                                 <li
                                   key={`${ex.key}-cluster-set-${cs.set}`}
