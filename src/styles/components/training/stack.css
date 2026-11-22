@@ -28,7 +28,7 @@
 
 .stack__rail {
   position: absolute;
-  left: 14px;
+  left: 16px;
   top: 20px;
   bottom: 20px;
   width: 2px;
@@ -63,11 +63,19 @@
   font: inherit;
   color: var(--text, var(--ta-text));
   text-align: left;
-  transition: background 150ms;
+  transition: background var(--duration-micro) var(--ease-micro);
 }
 
-.stack__ex:hover {
-  background: color-mix(in srgb, var(--text, var(--ta-text)) 4%, transparent);
+@media (hover: hover) {
+  .stack__ex:hover {
+    background: color-mix(in srgb, var(--text, var(--ta-text)) 4%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stack__ex {
+    transition: none;
+  }
 }
 
 .stack__ex:focus-visible {

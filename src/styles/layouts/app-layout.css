@@ -46,13 +46,13 @@
   border-bottom: var(--border-width-hairline) solid var(--border);
 }
 .section-num {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--font-system);
   font-size: 12px;
   color: var(--accent);
   letter-spacing: 0.2em;
 }
 .section-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--font-system);
   font-size: 32px;
   letter-spacing: 0.05em;
   color: var(--text-strong);
@@ -109,37 +109,24 @@
 .user-bar .btn-sm {
   letter-spacing: 0;
   min-height: 44px;
-  min-width: 76px;
-  padding: 0 16px;
+  min-width: 44px;
+  height: auto;
+  aspect-ratio: auto;
+  padding: 0 12px;
+  font-size: var(--type-12);
+  border-radius: var(--radius-sm);
   text-transform: none;
+  white-space: nowrap;
 }
 .user-bar__billing-badge {
-  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  font-size: var(--type-12);
   font-weight: 500;
   color: var(--color-text-secondary);
   border: 1px solid var(--color-border-subtle);
-}
-/* «Безлимит» (статус) и «Выйти» — один квадрат, не капсула.
-   44px мало для строки «Безлимит» (~57px): сторона 84px, радиус 8px. */
-.user-bar .user-bar-actions > .user-bar__billing-badge,
-.user-bar .user-bar-actions > .btn-sm:last-child {
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  width: 84px;
-  height: 84px;
-  min-width: 84px;
-  min-height: 84px;
-  aspect-ratio: 1;
-  padding: 8px;
-  border-radius: var(--radius-sm, 8px);
-  text-align: center;
-  line-height: 1.15;
-  letter-spacing: 0;
-  text-transform: none;
-  white-space: nowrap;
+  border-radius: var(--glass-radius-badge);
 }
 .user-bar .btn-ghost {
   background: var(--overlay-subtle);
@@ -148,38 +135,12 @@
 }
 @media (max-width: 480px) {
   /* Держим шапку в одну строку и разводим элементы по всей ширине:
-     имя слева, действия — по центру и справа. Раньше margin-left: 0
-     сбивал кнопки к имени. */
+     имя слева, действия — по центру и справа. */
   .user-bar {
     flex-wrap: nowrap;
   }
-  /* Обёртка не должна собирать кнопки в один блок: её дети становятся
-     прямыми flex-элементами шапки и попадают в общий space-between. */
   .user-bar-actions {
     display: contents;
-  }
-  .user-bar .user-bar-actions > .user-bar__billing-badge,
-  .user-bar .user-bar-actions > .btn-sm:last-child,
-  .user-bar .user-bar-actions > .btn-sm:not(:last-child) {
-    width: 56px;
-    height: 56px;
-    min-width: 56px;
-    min-height: 56px;
-    padding: 4px;
-    font-size: var(--type-11, 11px);
-  }
-
-  /* Кнопка без фиксированной ширины забирает остаток строки и переносит текст.
-     Иначе длинное «Открыть безлимитные расчёты» вылезает на соседнюю кнопку. */
-  .user-bar-actions > .btn-sm:not(:last-child) {
-    box-sizing: border-box;
-    flex: 0 1 auto;
-    min-width: 0;
-    height: 84px;
-    min-height: 84px;
-    padding: 8px;
-    line-height: 1.15;
-    white-space: normal;
   }
 }
 @media (hover: hover) and (pointer: fine) {
@@ -303,7 +264,7 @@
   font-weight: 600;
   justify-content: center;
   letter-spacing: 0;
-  line-height: var(--type-line-12, 1.2);
+  line-height: 1.2;
   min-height: 44px;
   min-width: max(4.75rem, min-content);
   overflow: visible;
@@ -320,7 +281,7 @@
 }
 .tab-btn::before {
   background: var(--ta-surface-2, var(--surface-raised));
-  border: var(--border-width) solid var(--border-subtle, rgba(255, 255, 255, 0.1));
+  border: var(--border-width-hairline) solid var(--border-subtle, rgba(255, 255, 255, 0.1));
   border-radius: inherit;
   box-shadow: inset 0 1px 0 color-mix(in srgb, var(--ta-text, var(--text)) 5%, transparent);
   content: '';
@@ -394,7 +355,7 @@
   font-size: var(--type-12, 12px);
   font-variant-numeric: tabular-nums;
   font-weight: 600;
-  line-height: var(--type-line-12, 1.2);
+  line-height: 1.2;
   padding: var(--space-1, 4px) var(--space-2, 8px);
 }
 
@@ -442,7 +403,7 @@
 .tab-active::before {
   border-color: color-mix(
     in srgb,
-    var(--ta-calc-accent, var(--accent)) 32%,
+    var(--ta-calc-accent, var(--accent)) 28%,
     var(--border-subtle, rgba(255, 255, 255, 0.1))
   );
   box-shadow: inset 0 1px 0 color-mix(in srgb, var(--ta-text, var(--text)) 6%, transparent);
@@ -539,9 +500,12 @@
 }
 .training-progress-fill {
   height: 100%;
+  width: 100%;
   background: var(--accent);
   border-radius: 8px;
-  transition: width var(--duration-medium) var(--ease-out);
+  transform-origin: left center;
+  transform: scaleX(var(--progress, 0));
+  transition: transform var(--duration-medium) var(--ease-out);
   min-width: 0;
 }
 
@@ -565,7 +529,7 @@
   opacity: 0.5;
 }
 .locked-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--font-system);
   font-size: 24px;
   letter-spacing: 0.05em;
   color: var(--text-strong);
@@ -604,14 +568,14 @@
   margin-bottom: 16px;
 }
 .program-complete-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--font-system);
   font-size: 32px;
   letter-spacing: 0.05em;
   color: var(--accent);
   margin-bottom: 10px;
 }
 .program-complete-stat {
-  font-family: var(--font-display);
+  font-family: var(--font-system);
   font-size: 12px;
   font-variant-numeric: tabular-nums;
   font-weight: 500;
@@ -661,7 +625,7 @@
   }
 
   .tab-btn-label {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.01em;
     line-height: 1.2;
@@ -672,8 +636,8 @@
   }
 
   .tab-btn-meta {
-    font-size: 9px;
-    padding: 1px 4px;
+    font-size: 12px;
+    padding: 4px 8px;
   }
 }
 
@@ -775,20 +739,12 @@
     font-size: 13px;
   }
   .user-bar .btn-sm {
-    min-height: 36px;
-    min-width: 60px;
-    padding: 0 10px;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0 12px;
     font-size: 12px;
   }
-  .user-bar .user-bar-actions > .user-bar__billing-badge,
-  .user-bar .user-bar-actions > .btn-sm:last-child {
-    width: 84px;
-    height: 84px;
-    min-width: 84px;
-    min-height: 84px;
-    padding: 8px;
-    border-radius: var(--radius-sm, 8px);
-  }
+
 
   /* Sections */
   .section {
@@ -896,7 +852,7 @@
 }
 
 .account-menu__badge {
-  font-size: var(--type-11, 11px);
+  font-size: var(--type-12, 12px);
   font-weight: 600;
   color: var(--color-success, #22c55e);
   padding: 2px 6px;
@@ -905,8 +861,8 @@
 }
 
 .account-menu__exit {
-  min-height: 32px;
-  padding: 0 var(--space-2);
+  min-height: 44px;
+  padding: 0 12px;
   background: transparent;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm, 8px);
@@ -927,9 +883,9 @@
 }
 
 .account-menu .btn-sm {
-  min-height: 32px;
+  min-height: 44px;
   min-width: 0;
-  padding: 0 var(--space-2);
+  padding: 0 12px;
   font-size: var(--type-12, 12px);
 }
 

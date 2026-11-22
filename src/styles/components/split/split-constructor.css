@@ -1802,7 +1802,7 @@ html[data-theme='dark'] .app-shell .ta-shell.ta-shell--split {
   background: var(--surface-raised);
   color: var(--text-secondary);
   font: inherit;
-  font-size: var(--type-13);
+  font-size: var(--type-12);
   font-weight: 500;
   cursor: pointer;
 }
@@ -2966,7 +2966,7 @@ html[data-theme='light'] .one-rm-display__value--empty {
 /* S1-остаток: пометка «из пресета» в списке сплитов */
 .ew-option-badge {
   color: var(--text-secondary);
-  font-size: var(--type-11, 11px);
+  font-size: var(--type-12, 12px);
   margin-left: var(--space-2);
   opacity: 0.8;
 }

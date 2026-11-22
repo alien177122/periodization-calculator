@@ -7,9 +7,9 @@
   z-index: 20;
   width: 100%;
   background: color-mix(in srgb, var(--color-bg-primary) 88%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--color-border-subtle);
+  backdrop-filter: blur(var(--glass-blur-chrome));
+  -webkit-backdrop-filter: blur(var(--glass-blur-chrome));
+  border-bottom: var(--border-width-hairline) solid var(--color-border-subtle);
 }
 
 .training-page-header__inner {
@@ -131,8 +131,10 @@
   transition: transform var(--duration-micro) var(--ease-micro), background var(--duration-micro) var(--ease-micro);
 }
 
-.training-menu__primary:hover {
-  transform: translateY(-1px);
+@media (hover: hover) {
+  .training-menu__primary:hover {
+    transform: translateY(-1px);
+  }
 }
 
 .training-menu__primary:focus-visible {
@@ -208,9 +210,11 @@
   transition: transform var(--duration-micro) var(--ease-micro), border-color var(--duration-micro) var(--ease-micro);
 }
 
-.training-menu__tile:hover {
-  transform: translateY(-1px);
-  border-color: var(--color-border-default);
+@media (hover: hover) {
+  .training-menu__tile:hover {
+    transform: translateY(-1px);
+    border-color: var(--color-border-default);
+  }
 }
 
 .training-menu__tile:focus-visible {
@@ -241,8 +245,10 @@
   border-radius: var(--radius-sm);
 }
 
-.training-menu__link:hover {
-  color: var(--color-text-primary);
+@media (hover: hover) {
+  .training-menu__link:hover {
+    color: var(--color-text-primary);
+  }
 }
 
 .training-menu__link:focus-visible {
@@ -323,7 +329,7 @@
   font-size: var(--type-14);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
-  color: var(--color-text-primary);
+  color: var(--color-accent);
 }
 
 .training-base__empty {
@@ -332,7 +338,7 @@
   font-size: var(--type-14);
   color: var(--color-text-secondary);
   text-align: center;
-  border: 1px dashed var(--color-border-subtle);
+  border: var(--border-width-hairline) solid var(--color-border-subtle);
   border-radius: var(--radius-xl);
 }
 
@@ -371,9 +377,11 @@
   transition: transform var(--duration-micro) var(--ease-micro), border-color var(--duration-micro) var(--ease-micro);
 }
 
-.training-calculation-card:hover {
-  transform: translateY(-1px);
-  border-color: var(--color-border-default);
+@media (hover: hover) {
+  .training-calculation-card:hover {
+    transform: translateY(-1px);
+    border-color: var(--color-border-default);
+  }
 }
 
 .training-calculation-card:focus-visible {
@@ -416,7 +424,7 @@
   font-size: var(--type-14);
   color: var(--color-text-secondary);
   text-align: center;
-  border: 1px dashed var(--color-border-subtle);
+  border: var(--border-width-hairline) solid var(--color-border-subtle);
   border-radius: var(--radius-xl);
 }
 
@@ -505,13 +513,13 @@
 }
 
 .week-progress-grid__cell--done {
-  background: var(--color-success);
-  color: var(--color-bg-primary);
+  background: color-mix(in srgb, var(--color-success) 12%, var(--color-bg-secondary));
+  color: var(--color-text-primary);
   border-color: var(--color-success);
 }
 
 .week-progress-grid__cell--current {
-  background: color-mix(in srgb, var(--color-accent) 18%, var(--color-bg-secondary));
+  background: color-mix(in srgb, var(--color-accent) 8%, var(--color-bg-secondary));
   border-color: var(--color-accent);
   color: var(--color-text-primary);
 }
@@ -539,5 +547,23 @@
   }
   .training-page-header__back span {
     display: none;
+  }
+  .training-page-header__back {
+    min-width: 44px;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .training-menu__primary,
+  .training-menu__tile,
+  .training-calculation-card {
+    transition: none;
+    transform: none;
+  }
+  .training-menu__primary:hover,
+  .training-menu__tile:hover,
+  .training-calculation-card:hover {
+    transform: none;
   }
 }

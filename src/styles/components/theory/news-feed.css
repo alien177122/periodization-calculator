@@ -63,7 +63,7 @@
   padding: 2px 8px;
   border: 1px solid;
   border-radius: 6px;
-  font-size: var(--type-11, 11px);
+  font-size: var(--type-12, 12px);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -88,6 +88,9 @@
 
 .ta-news-card__toggle {
   align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   background: transparent;
   border: none;
   color: var(--ta-sec-01);
@@ -96,6 +99,11 @@
   cursor: pointer;
   padding: 0;
   text-decoration: underline;
+}
+
+.ta-news-card__toggle:focus-visible {
+  outline: 2px solid var(--ta-sec-01);
+  outline-offset: 2px;
 }
 
 .ta-news-card__source {
@@ -123,6 +131,6 @@
   }
   .ta-news-card__conclusion,
   .ta-news-card__details {
-    font-size: var(--type-13, 13px);
+    font-size: var(--type-12, 12px);
   }
 }
