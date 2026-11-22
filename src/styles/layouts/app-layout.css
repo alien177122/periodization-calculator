@@ -860,12 +860,19 @@
 }
 
 
-/* FLOATING ACCOUNT MENU (top-right) */
+/* ACCOUNT BAR (in-flow, scrolls with content) */
+.account-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  flex-wrap: wrap;
+}
+
 .account-menu {
-  position: fixed;
-  top: max(var(--space-2), var(--sat, 0px));
-  right: max(var(--space-2), var(--sar, 0px));
-  z-index: 60;
+  position: static;
+  z-index: auto;
   display: flex;
   align-items: center;
   gap: var(--space-2);

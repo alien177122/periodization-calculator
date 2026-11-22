@@ -213,15 +213,18 @@ export function AppShell() {
           />
         </div>
       </div>
-      <AccountMenu
-        userName={auth.userName ?? ''}
-        billingState={billing.state}
-        isPolling={billing.isPolling}
-        checkoutDisabled={billing.state.status !== 'ready' || Boolean(billingReady?.premium)}
-        onLogout={handleLogout}
-        onOpenCheckout={handleCheckout}
-        onRefreshBilling={handleRefreshBilling}
-      />
+      <div className="account-bar">
+        <ThemeToggle />
+        <AccountMenu
+          userName={auth.userName ?? ''}
+          billingState={billing.state}
+          isPolling={billing.isPolling}
+          checkoutDisabled={billing.state.status !== 'ready' || Boolean(billingReady?.premium)}
+          onLogout={handleLogout}
+          onOpenCheckout={handleCheckout}
+          onRefreshBilling={handleRefreshBilling}
+        />
+      </div>
       <main className="app-shell__main">
         <TabPanel
           activeTab={activeTab}

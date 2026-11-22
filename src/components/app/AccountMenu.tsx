@@ -1,4 +1,3 @@
-import {ThemeToggle} from '../shared/ThemeToggle';
 import {Button} from '../ui/Button';
 import type {BillingHookState} from '@training/shared/hooks/useBilling';
 
@@ -38,7 +37,6 @@ export function AccountMenu({
 
   return (
     <div className="account-menu" role="group" aria-label="Аккаунт">
-      <ThemeToggle />
       <span className="account-menu__name" title={userName}>
         {userName}
       </span>
