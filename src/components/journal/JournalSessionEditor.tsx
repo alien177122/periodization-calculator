@@ -33,12 +33,10 @@ export function JournalSessionEditor({
 }: JournalSessionEditorProps) {
   return (
     <div className="journal-form-section">
-
-
       {draftSets.length === 0 ? (
         <p className="journal-sets-empty">
-          Сначала внизу в «Тренд 1ПМ» выберите упражнение — например, жим лёжа. Затем нажмите «Добавить
-          подход» и записывайте каждый подход.
+          Сначала внизу в «Тренд 1ПМ» выбери упражнение — например, жим лёжа. Затем нажми
+          «Добавить подход» и записывай каждый подход.
         </p>
       ) : (
         <div className="journal-sets">
@@ -60,6 +58,10 @@ export function JournalSessionEditor({
           id="journal-session-note"
           className="journal-input journal-input--note"
           type="text"
+          lang="en"
+          autoCapitalize="sentences"
+          autoCorrect="on"
+          spellCheck={true}
           placeholder="Самочувствие, техника, сон…"
           value={sessionNote}
           onChange={event => onSessionNoteChange(event.target.value)}
@@ -73,14 +75,17 @@ export function JournalSessionEditor({
         <div className="journal-actions__row">
           <button
             type="button"
-            className="btn journal-actions__save"
+            className="btn calc-test__submit journal-actions__save"
             disabled={saving}
             aria-busy={saving}
             onClick={onSave}>
-            {saving ? 'Сохранение…' : 'Сохранить'}
+            {saving ? 'Сохраняем…' : 'Сохранить запись'}
           </button>
           {isEditing ? (
-            <button type="button" className="btn btn-ghost journal-actions__secondary" onClick={onCancelEdit}>
+            <button
+              type="button"
+              className="btn btn-ghost journal-actions__secondary"
+              onClick={onCancelEdit}>
               Отмена
             </button>
           ) : (
@@ -89,7 +94,7 @@ export function JournalSessionEditor({
               className="btn btn-ghost journal-actions__secondary"
               onClick={onCopyLast}
               disabled={!hasHistory}>
-              Как в прошлый раз
+              Как в прошлую сессию
             </button>
           )}
         </div>

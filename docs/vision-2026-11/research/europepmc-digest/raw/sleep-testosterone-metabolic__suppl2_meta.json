@@ -1,0 +1,613 @@
+{
+ "version": "6.9",
+ "hitCount": 2,
+ "request": {
+  "queryString": "(TITLE:\"sleep restriction\" AND TITLE:(glucose OR insulin OR appetite OR metabolism))AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "40843663",
+    "source": "MED",
+    "pmid": "40843663",
+    "pmcid": "PMC12372055",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC12372055"
+     ]
+    },
+    "doi": "10.3390/clockssleep7030039",
+    "title": "The Role of Sex in the Impact of Sleep Restriction on Appetite- and Weight-Regulating Hormones in Healthy Adults: A Systematic Review of Human Studies.",
+    "authorString": "Alfikany M, Sakhr K, Kremers S, El Khatib S, Adam T, Meertens R.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Alfikany M",
+       "lastName": "Alfikany",
+       "firstName": "Mira",
+       "initials": "M",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0009-0004-1801-9938"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Health Promotion, NUTRIM Institute of Nutrition and Translational Research in Metabolism, Maastricht University Medical Center+, P.O. Box 616, 6200 MD Maastricht, The Netherlands."
+         },
+         {
+          "affiliation": "Department of Nutrition and Food Sciences, School of Arts and Sciences, Lebanese International University, Bekaa, Beirut P.O. Box 146404, Lebanon."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Sakhr K",
+       "lastName": "Sakhr",
+       "firstName": "Khaula",
+       "initials": "K",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Nutrition and Food Sciences, School of Arts and Sciences, Lebanese International University, Bekaa, Beirut P.O. Box 146404, Lebanon."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Kremers S",
+       "lastName": "Kremers",
+       "firstName": "Stef",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Health Promotion, NUTRIM Institute of Nutrition and Translational Research in Metabolism, Maastricht University Medical Center+, P.O. Box 616, 6200 MD Maastricht, The Netherlands."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "El Khatib S",
+       "lastName": "El Khatib",
+       "firstName": "Sami",
+       "initials": "S",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3611-3288"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Biomedical Sciences, School of Arts and Sciences, Lebanese International University, Bekaa, Beirut P.O. Box 146404, Lebanon."
+         },
+         {
+          "affiliation": "Center for Applied Mathematics and Bioinformatics (CAMB), Gulf University for Science and Technology (GUST), Mubarak Al-Abdullah 32093, Kuwait."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Adam T",
+       "lastName": "Adam",
+       "firstName": "Tanja",
+       "initials": "T",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Nutrition and Movement Sciences, NUTRIM Institute of Nutrition and Translational Research in Metabolism, Maastricht University, P.O. Box 616, 6200 MD Maastricht, The Netherlands."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Meertens R",
+       "lastName": "Meertens",
+       "firstName": "Ree",
+       "initials": "R",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0001-8424-9142"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Health Promotion, NUTRIM Institute of Nutrition and Translational Research in Metabolism, and Care and Public Health Research Institute (CAPHRI), Maastricht University, P.O. Box 616, 6200 MD Maastricht, The Netherlands."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0001-8424-9142"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3611-3288"
+      },
+      {
+       "type": "ORCID",
+       "value": "0009-0004-1801-9938"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "7",
+     "journalIssueId": 3982208,
+     "dateOfPublication": "2025 Jul",
+     "monthOfPublication": 7,
+     "yearOfPublication": 2025,
+     "journal": {
+      "medlineAbbreviation": "Clocks Sleep",
+      "title": "Clocks & sleep",
+      "essn": "2624-5175",
+      "issn": "2624-5175",
+      "isoabbreviation": "Clocks Sleep",
+      "nlmid": "101736579"
+     },
+     "printPublicationDate": "2025-07-01"
+    },
+    "pubYear": "2025",
+    "pageInfo": "39",
+    "abstractText": "Short sleep has been linked to overweight, possibly via alterations in appetite-regulating hormones, but findings are inconsistent. Sex differences may contribute to this variability. This systematic review examines whether sex modifies the hormonal response to sleep curtailment. PubMed, Embase, Cochrane, CINAHL, and PsycINFO were searched for English-language experimental studies published before December 2024. Included studies assessed at least one appetite-regulating hormone and presented sex-specific analyses. Studies involving health conditions affecting sleep, circadian misalignment, or additional interventions were excluded. Risk of bias was assessed using the Revised Cochrane Risk-of-Bias tool (RoB 2). Eight studies (<i>n</i> = 302 participants) met inclusion criteria. A narrative synthesis of the findings was conducted for each hormone separately to explore potential differences in their response to sleep restriction. Some sex-related variations in hormonal response to sleep restriction have been observed for leptin (four studies, <i>n</i> = 232), insulin (three studies, <i>n</i> = 56), glucagon-like peptide-1 (one study, <i>n</i> = 27), ghrelin (three studies, <i>n</i> = 87), adiponectin (two studies, <i>n</i> = 71) and thyroxine (two studies, <i>n</i> = 41). However, findings were inconsistent with no clear patterns. No sex-related differences were found for glucagon or PYY, though data were limited. Findings suggest sex may influence hormonal responses to sleep restriction, but inconsistencies highlight the need to consider factors such as BMI and energy balance. Well-controlled, adequately powered studies are needed to clarify these effects.",
+    "affiliation": "Department of Health Promotion, NUTRIM Institute of Nutrition and Translational Research in Metabolism, Maastricht University Medical Center+, P.O. Box 616, 6200 MD Maastricht, The Netherlands.",
+    "publicationStatus": "epublish",
+    "language": "eng",
+    "pubModel": "Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Hormones",
+      "Sleep",
+      "Restriction",
+      "Appetite",
+      "Sex differences",
+      "Deprivation"
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "doi",
+       "site": "Unpaywall",
+       "url": "https://doi.org/10.3390/clockssleep7030039"
+      },
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.3390/clockssleep7030039"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12372055"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC12372055?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 0,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2025-09-14",
+    "dateOfCreation": "2025-08-22",
+    "dateOfRevision": "2025-09-14",
+    "electronicPublicationDate": "2025-07-29",
+    "firstPublicationDate": "2025-07-29",
+    "firstIndexDate": "2025-08-24",
+    "fullTextReceivedDate": "2025-11-28",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "30870662",
+    "source": "MED",
+    "pmid": "30870662",
+    "doi": "10.1016/j.smrv.2019.02.002",
+    "title": "Effects of sleep restriction on metabolism-related parameters in healthy adults: A comprehensive review and meta-analysis of randomized controlled trials.",
+    "authorString": "Zhu B, Shi C, Park CG, Zhao X, Reutrakul S.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Zhu B",
+       "lastName": "Zhu",
+       "firstName": "Bingqian",
+       "initials": "B",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3997-7882"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Nursing, Shanghai Jiao Tong University, Shanghai, China. Electronic address: zhubq@shsmu.edu.cn."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Shi C",
+       "lastName": "Shi",
+       "firstName": "Changgui",
+       "initials": "C",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-3609-928X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Orthopedics, Changzheng Hospital, Second Military Medical University of China, Shanghai, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Park CG",
+       "lastName": "Park",
+       "firstName": "Chang G",
+       "initials": "CG",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3366-4279"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "College of Nursing, University of Illinois at Chicago, Chicago, IL, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Zhao X",
+       "lastName": "Zhao",
+       "firstName": "Xiangxiang",
+       "initials": "X",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-3546-437X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Neurology, Changhai Hospital, Second Military Medical University of China, Shanghai, China."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Reutrakul S",
+       "lastName": "Reutrakul",
+       "firstName": "Sirimon",
+       "initials": "S",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-0686-1069"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Division of Endocrinology, Diabetes, and Metabolism, Department of Medicine, University of Illinois at Chicago, Chicago, IL, USA."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-0686-1069"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-3546-437X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-3609-928X"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3366-4279"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3997-7882"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "wikipedia"
+     ]
+    },
+    "journalInfo": {
+     "volume": "45",
+     "journalIssueId": 2820180,
+     "dateOfPublication": "2019 Jun",
+     "monthOfPublication": 6,
+     "yearOfPublication": 2019,
+     "journal": {
+      "medlineAbbreviation": "Sleep Med Rev",
+      "title": "Sleep medicine reviews",
+      "essn": "1532-2955",
+      "issn": "1087-0792",
+      "isoabbreviation": "Sleep Med Rev",
+      "nlmid": "9804678"
+     },
+     "printPublicationDate": "2019-06-01"
+    },
+    "pubYear": "2019",
+    "pageInfo": "18-30",
+    "abstractText": "This review aimed to provide a comprehensive examination of the effect of sleep restriction on metabolism-related parameters by synthesizing the emerging, best evidence. A systematic search was conducted in six electronic databases from inception to January 2018. We identified 41 randomized controlled trials using sleep restriction intervention. The outcomes included: subjective hunger, appetite-regulating hormones, changes in brain activity, energy intake and expenditure, weight change, insulin sensitivity or resistance. Sleep restriction resulted in a significant increase in subjective hunger on a 100 mm scale (mean difference = 13.4, p < 0.001). Participants consumed 252.8 more kcal/d (p = 0.011) under sleep restriction than under normal sleep. Partial sleep restriction resulted in a 0.34 kg weight gain (p = 0.003). Sleep restriction also decreased insulin sensitivity (standardized mean difference = -0.70, p < 0.01). Significant changes in brain activity in response to food stimuli were observed under sleep restriction, particularly regions related to cognitive control and reward. Overall, we did not find strong evidence supporting the significant impact of sleep restriction on mean leptin or ghrelin levels or energy expenditure. Findings from this review enhanced our knowledge about the detrimental effects of sleep restriction on metabolism and provided novel directions in preventing metabolic diseases including obesity and diabetes.",
+    "affiliation": "School of Nursing, Shanghai Jiao Tong University, Shanghai, China. Electronic address: zhubq@shsmu.edu.cn.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Merck Sharp and Dohme",
+       "orderIn": 0
+      },
+      {
+       "agency": "Novo Nordisk",
+       "orderIn": 0
+      },
+      {
+       "agency": "Medtronic",
+       "orderIn": 0
+      },
+      {
+       "agency": "Sanofi",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Sleep Deprivation",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PP",
+          "qualifierName": "physiopathology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Leptin",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "BL",
+          "qualifierName": "blood"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Appetite",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Sleep",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Energy Metabolism",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Energy Intake",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adult"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Female"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Male"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Randomized Controlled Trials as Topic"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Ghrelin",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "BL",
+          "qualifierName": "blood"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "Obesity",
+      "Diabetes",
+      "Sleep deprivation",
+      "Caloric intake",
+      "Hunger",
+      "Appetite",
+      "Metabolic Disorder",
+      "Energy Expenditure",
+      "Rct"
+     ]
+    },
+    "chemicalList": {
+     "chemical": [
+      {
+       "name": "ghrelin",
+       "registryNumber": "0"
+      },
+      {
+       "name": "Leptin",
+       "registryNumber": "0"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.smrv.2019.02.002"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 132,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2020-05-04",
+    "dateOfCreation": "2019-03-15",
+    "dateOfRevision": "2020-05-05",
+    "electronicPublicationDate": "2019-02-10",
+    "firstPublicationDate": "2019-02-10",
+    "firstIndexDate": "2019-03-15",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

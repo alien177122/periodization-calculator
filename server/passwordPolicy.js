@@ -27,20 +27,24 @@ export function validatePassword(pw) {
   const met = Object.values(criteria).filter(Boolean).length;
   const score = Math.min(met, 4);
   const labels = {0: 'weak', 1: 'weak', 2: 'fair', 3: 'good', 4: 'strong'};
+  const withinBcryptLimit = pw.length <= 72;
 
   return {
     criteria,
     score,
     label: labels[score],
-    isValid: criteria.minLength && score >= 2,
+    isValid: criteria.minLength && withinBcryptLimit && score >= 3,
   };
 }
 
 export function passwordPolicyError(pw) {
   const result = validatePassword(pw);
   if (result.isValid) return null;
+  if (pw && pw.length > 72) {
+    return 'Пароль не длиннее 72 символов';
+  }
   if (!result.criteria.minLength) {
     return 'Пароль минимум 8 символов';
   }
-  return 'Пароль слабый: нужны заглавные и строчные буквы, цифра или спецсимвол';
+  return 'Пароль слабый. Добавь заглавную и строчную буквы, цифру или спецсимвол';
 }

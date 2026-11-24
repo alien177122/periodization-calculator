@@ -19,3 +19,12 @@ export function resolveSavedSplitSelection(
 
   return savedSplits[0];
 }
+
+/** Find a deep-link split by id across every profile, not only the active one. */
+export function resolveDeepLinkSplit(
+  allSplits: CustomSplit[],
+  preferredId: string | null | undefined,
+): CustomSplit | undefined {
+  if (!preferredId) return undefined;
+  return allSplits.find(split => split.id === preferredId);
+}

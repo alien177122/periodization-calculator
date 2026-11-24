@@ -1,5 +1,6 @@
 import { EX_COUNT } from '../../data/exercises'
 import { Button } from '../ui/Button'
+import { ContextTheoryLink } from '../theory/ContextTheoryLink'
 
 interface LockedStateProps {
   missingExercises: string[]
@@ -10,12 +11,12 @@ import { SectionBlock } from '../SectionBlock'
 
 export default function LockedState({ missingExercises, onGoCalculator }: LockedStateProps) {
   return (
-    <SectionBlock num="01" title="Доступ закрыт">
+    <SectionBlock num="01" title="Доступ закрыт" variant="apple" className="training-section">
       <div className="locked-view">
         <div className="locked-icon" aria-hidden="true">&#128274;</div>
         <div className="locked-title">Введи 1ПМ для всех упражнений</div>
         <div className="locked-desc">
-          Вкладка «Тренировка» станет доступна когда рассчитаны 1ПМ для всех {EX_COUNT} упражнений.
+          Вкладка «Тренировка» станет доступна, когда рассчитаны 1ПМ для всех {EX_COUNT} упражнений.
         </div>
         <div className="locked-missing">
           {missingExercises.map((name) => (
@@ -25,6 +26,9 @@ export default function LockedState({ missingExercises, onGoCalculator }: Locked
         <Button style={{ marginTop: 24 }} onClick={onGoCalculator}>
           Перейти в калькулятор
         </Button>
+        <ContextTheoryLink chapterId="basics" className="locked-theory-link">
+          Как считается 1ПМ →
+        </ContextTheoryLink>
       </div>
     </SectionBlock>
   )

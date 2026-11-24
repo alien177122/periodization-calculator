@@ -61,6 +61,20 @@
   --text: #e8e8e9;
   --text-secondary: #9a9a9c;
   --text-strong: #ffffff;
+
+  /* Status colors (used by --color-success/warning/destructive) */
+  --green: #22c55e;
+  --orange: #f59e0b;
+  --red: #ef4444;
+
+  /* Plate colors for barbell diagram (global, so PlateDiagram works in any tab). */
+  --plate-25: #d93025;
+  --plate-20: #2563eb;
+  --plate-15: #facc15;
+  --plate-10: #22c55e;
+  --plate-5: #f8fafc;
+  --plate-2_5: #d93025;
+  --plate-1_25: #94a3b8;
   --text-soft: #cccccc;
   --text-placeholder: #555555;
   --muted: #666;
@@ -175,4 +189,7 @@
   --ta-focus-glow: rgba(59, 130, 246, 0.2);
   --ta-error: #ef4444;
   --ta-text-muted: var(--theory-muted);
+
+  /* Toast */
+  --toast-error-text: #ffdede;
 }

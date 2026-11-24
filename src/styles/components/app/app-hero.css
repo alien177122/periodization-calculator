@@ -54,8 +54,8 @@ html[data-active-tab='journal'] .theory-hero.app-hero {
  * Distinct from dark neon anchors. Primary CTAs stay Peak #ffb020 globally.
  */
 html[data-theme='light'] .theory-hero.app-hero {
-  --app-hero-accent: #d97706;
-  --app-hero-accent-soft: #fbbf24;
+  --app-hero-accent: var(--hero-accent-light);
+  --app-hero-accent-soft: var(--hero-accent-light-soft);
   --app-hero-glass-bg: var(--glass-bg);
   --app-hero-glass-border: color-mix(
     in srgb,
@@ -66,32 +66,32 @@ html[data-theme='light'] .theory-hero.app-hero {
 
 /* Calculator — Peak amber family (readable on white) */
 html[data-theme='light'][data-active-tab='calculator'] .theory-hero.app-hero {
-  --app-hero-accent: #d97706;
-  --app-hero-accent-soft: #fbbf24;
+  --app-hero-accent: var(--hero-accent-light);
+  --app-hero-accent-soft: var(--hero-accent-light-soft);
 }
 
 /* Theory — soft blue (quiet tint, no heavy redesign) */
 html[data-theme='light'][data-active-tab='theory'] .theory-hero.app-hero {
-  --app-hero-accent: #3b82f6;
-  --app-hero-accent-soft: #93c5fd;
+  --app-hero-accent: var(--hero-accent-light-theory);
+  --app-hero-accent-soft: var(--hero-accent-light-theory-soft);
 }
 
 /* Training — muted teal (not dark neon mint) */
 html[data-theme='light'][data-active-tab='training'] .theory-hero.app-hero {
-  --app-hero-accent: #0d9488;
-  --app-hero-accent-soft: #5eead4;
+  --app-hero-accent: var(--hero-accent-light-training);
+  --app-hero-accent-soft: var(--hero-accent-light-training-soft);
 }
 
 /* Split — soft violet (not dark neon magenta) */
 html[data-theme='light'][data-active-tab='split'] .theory-hero.app-hero {
-  --app-hero-accent: #9333ea;
-  --app-hero-accent-soft: #d8b4fe;
+  --app-hero-accent: var(--hero-accent-light-split);
+  --app-hero-accent-soft: var(--hero-accent-light-split-soft);
 }
 
 /* Journal — soft rose/coral (not dark neon coral) */
 html[data-theme='light'][data-active-tab='journal'] .theory-hero.app-hero {
-  --app-hero-accent: #e11d48;
-  --app-hero-accent-soft: #fda4af;
+  --app-hero-accent: var(--hero-accent-light-journal);
+  --app-hero-accent-soft: var(--hero-accent-light-journal-soft);
 }
 
 /* Edge wash muted — statue wallpaper carries depth behind frosted hero */
@@ -167,7 +167,7 @@ html[data-theme='dark'] .theory-hero.app-hero .app-hero__glass {
 .app-hero__label {
   grid-area: label;
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.14em;
   line-height: 1.3;
@@ -207,7 +207,7 @@ html[data-theme='light'] .app-hero__aside {
 }
 
 .app-hero__aside-kicker {
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.12em;
   line-height: 1.2;
@@ -218,7 +218,7 @@ html[data-theme='light'] .app-hero__aside {
 
 .app-hero__aside-value {
   font-size: clamp(0.75rem, 2.2vw, 0.9375rem);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.15;
   font-variant-numeric: tabular-nums;
@@ -262,8 +262,8 @@ html[data-theme='light'] .app-hero__title-lead {
 .app-hero__title-accent,
 .app-hero__title-num {
   display: block;
-  font-size: clamp(1.75rem, 7.5vw, 2.75rem);
-  font-weight: 700;
+  font-size: clamp(1.5rem, 7.5vw, 3rem);
+  font-weight: 600;
   letter-spacing: -0.04em;
   line-height: 0.95;
   color: var(--app-hero-accent);
@@ -291,7 +291,7 @@ html[data-theme='light'] .app-hero__title-tail {
 /* Plain single-line title (no parsed accent) */
 h1.app-hero__title-block:not(.app-hero__title) {
   font-size: clamp(1.35rem, 5.5vw, 2rem);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.08;
   color: var(--text-strong, #fff);
@@ -299,23 +299,6 @@ h1.app-hero__title-block:not(.app-hero__title) {
 
 html[data-theme='light'] h1.app-hero__title-block:not(.app-hero__title) {
   color: var(--text, #1a1a1a);
-}
-
-.app-hero--live .app-hero__title-accent,
-.app-hero--live .app-hero__title-num {
-  animation: appHeroKineticShift 5.5s var(--ease-in-out, ease-in-out) infinite;
-}
-
-@keyframes appHeroKineticShift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-  50% {
-    transform: translate3d(6px, -2px, 0);
-    opacity: 0.94;
-  }
 }
 
 /* Bento micro-grid for subtitle chips */
@@ -481,7 +464,7 @@ html[data-theme='light'] .theory-hero.app-hero .theory-hero-subtitle.app-hero__s
 
   .app-hero__bento-cell {
     padding: 8px 10px;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .app-hero__bento-cell--rotating {

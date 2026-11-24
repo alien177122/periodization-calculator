@@ -1,0 +1,33 @@
+/* Theory lecture diagrams — чистый SVG, токены ta-*, обе темы через переменные. */
+.ta-diagram {
+  min-width: 0;
+  margin: 16px 0 4px;
+  padding: 14px 12px 10px;
+  border: var(--border-width) solid var(--ta-border);
+  border-radius: var(--ta-radius-card);
+  background: var(--ta-surface);
+  overflow-x: clip;
+}
+
+.ta-diagram__title {
+  display: block;
+  color: var(--ta-text);
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.ta-diagram__caption {
+  display: block;
+  color: var(--ta-text-muted);
+  font-size: 13px;
+  line-height: 1.45;
+  margin: 6px 0 0;
+}
+
+.ta-diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: inherit;
+}

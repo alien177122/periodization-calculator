@@ -1,0 +1,500 @@
+/* Дев-превью самоучителя — только токены проекта, 4px сетка. */
+
+.selfstudy {
+  /* ta-фолбэки для DiagramBlock/DiagramFlow (вне .ta-shell) */
+  --ta-sec-01: var(--accent);
+  --ta-surface-2: var(--surface-raised);
+  --ta-border: var(--border-subtle);
+  --ta-border-strong: var(--border);
+  --ta-text: var(--text);
+  --ta-text-muted: var(--text-secondary);
+  --ta-text-dim: var(--text-secondary);
+  --ta-radius-card: var(--radius-sm);
+
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.ss-shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+.ss-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  margin-bottom: 8px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.ss-header__back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.16s ease;
+}
+
+.ss-header__back:active {
+  transform: scale(0.94);
+}
+
+.ss-header__title {
+  flex: 1;
+  min-width: 0;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ss-theme-toggle {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* ── Track (оглавление) ─────────────────────────────── */
+.ss-hero {
+  padding: 8px 0 20px;
+}
+
+.ss-hero__title {
+  font-size: 28px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.ss-hero__lede {
+  margin-top: 8px;
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.ss-stage {
+  margin-top: 24px;
+}
+
+.ss-stage__head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.ss-stage__num {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.ss-stage__title {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+}
+
+.ss-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-top: 8px;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-secondary);
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.16s ease,
+    border-color 0.16s ease;
+}
+
+a.ss-card:hover,
+button.ss-card:hover {
+  border-color: var(--color-border-default);
+  transform: translateY(-1px);
+}
+
+.ss-card.is-missing {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.ss-card__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.ss-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+}
+
+.ss-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-default);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ss-chip--basic {
+  color: var(--color-success);
+  border-color: color-mix(in srgb, var(--color-success) 40%, transparent);
+}
+
+.ss-chip--detailed {
+  color: var(--color-accent);
+  border-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
+}
+
+.ss-chip--deep {
+  color: var(--color-destructive);
+  border-color: color-mix(in srgb, var(--color-destructive) 40%, transparent);
+}
+
+.ss-empty {
+  margin-top: 32px;
+  padding: 16px;
+  border: 1px dashed var(--color-border-default);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ── Article ────────────────────────────────────────── */
+.ss-article-head {
+  padding: 8px 0 4px;
+}
+
+.ss-article-head__title {
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.ss-article-head__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin-top: 8px;
+}
+
+.ss-section {
+  margin-top: 28px;
+}
+
+.ss-section__title {
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.ss-subhead {
+  margin-top: 20px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.ss-hr {
+  margin-top: 24px;
+  border: 0;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.ss-level-chip {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ss-level-chip--basic {
+  background: color-mix(in srgb, var(--color-success) 12%, transparent);
+  color: var(--color-success);
+}
+
+.ss-level-chip--detailed {
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  color: var(--color-accent);
+}
+
+.ss-level-chip--deep {
+  background: color-mix(in srgb, var(--color-destructive) 12%, transparent);
+  color: var(--color-destructive);
+}
+
+.ss-prose {
+  overflow-wrap: anywhere;
+}
+
+.ss-prose p {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.ss-prose strong {
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.ss-prose code {
+  padding: 1px 5px;
+  border-radius: var(--radius-xs);
+  background: var(--overlay-medium);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+.ss-prose a {
+  color: var(--color-accent);
+}
+
+/* Увеличенная тап-зона ссылок в списках исследований (без сдвига вёрстки) */
+.ss-list a {
+  padding: 10px 0;
+  margin: -10px 0;
+}
+
+/* «Что запомнить» — insight-токены приложения */
+.ss-remember {
+  margin-top: 28px;
+  padding: 16px;
+  border: 1px solid var(--color-insight-border);
+  border-radius: var(--radius-md);
+  background: var(--color-insight-bg);
+}
+
+.ss-remember__title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-insight-strong);
+}
+
+.ss-remember .ss-prose p {
+  color: var(--color-insight-text);
+}
+
+.ss-remember .ss-prose strong {
+  color: var(--color-insight-strong);
+}
+
+.ss-remember .ss-prose li {
+  color: var(--color-insight-text);
+}
+
+/* Списки */
+.ss-list {
+  margin-top: 12px;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.ss-list--ordered {
+  list-style: decimal;
+}
+
+.ss-list--bullet {
+  list-style: disc;
+}
+
+.ss-list .ss-list {
+  margin-top: 6px;
+}
+
+/* Цитата */
+.ss-quote {
+  margin-top: 12px;
+  padding: 4px 0 4px 12px;
+  border-left: 2px solid var(--color-accent);
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Таблица */
+.ss-table-wrap {
+  margin-top: 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+.ss-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.ss-table th,
+.ss-table td {
+  padding: 8px 10px;
+  border: 1px solid var(--color-border-subtle);
+  text-align: left;
+  vertical-align: top;
+}
+
+.ss-table th {
+  background: var(--color-bg-secondary);
+  font-weight: 600;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.ss-table td code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* Код */
+.ss-code {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-secondary);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+/* Диаграмма-заглушка */
+.ss-diagram-fallback {
+  margin-top: 12px;
+  padding: 24px 16px;
+  border: 1px dashed var(--color-border-default);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-secondary);
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.ss-footer {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border-subtle);
+  color: var(--color-text-tertiary);
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Десктоп: оглавление слева, статья справа */
+@media (min-width: 900px) {
+  .ss-shell {
+    max-width: 1080px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .ss-header {
+    grid-column: 1 / -1;
+  }
+
+  .ss-aside {
+    display: block;
+    grid-column: 1;
+    position: sticky;
+    top: 64px;
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+  }
+
+  .ss-aside .ss-hero__lede,
+  .ss-aside .ss-footer {
+    display: none;
+  }
+
+  .ss-aside .ss-hero__title {
+    font-size: 20px;
+  }
+
+  .ss-aside .ss-stage {
+    margin-top: 16px;
+  }
+
+  .ss-main {
+    grid-column: 2;
+    min-width: 0;
+  }
+
+  .ss-main--full {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Мобильный: сайдбар скрыт при открытой статье; тап-зоны шапки ≥44px */
+@media (max-width: 599px) {
+  .ss-header__back,
+  .ss-theme-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .ss-chip {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 899px) {
+  .ss-aside {
+    display: none;
+  }
+}

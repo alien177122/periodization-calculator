@@ -1,3 +1,4 @@
+import {createHash} from 'node:crypto';
 import {mkdir, readdir, readFile, stat, writeFile} from 'node:fs/promises';
 import {dirname, extname, isAbsolute, join, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -35,6 +36,17 @@ function analysisCacheName(fileName) {
   return `${encodeURIComponent(fileName)}.json`;
 }
 
+export function workspaceUserSegment(userName) {
+  const hash = createHash('sha256').update(String(userName)).digest('hex').slice(0, 16);
+  const readable = String(userName)
+    .normalize('NFC')
+    .replace(/[^A-Za-z0-9._-]+/g, '_')
+    .replace(/^\.+/g, '')
+    .slice(0, 40);
+  const base = readable && readable !== '.' && readable !== '..' ? readable : 'user';
+  return `${base}-${hash}`;
+}
+
 function detectKind(fileName) {
   const ext = extname(fileName).toLowerCase();
   if (JSON_EXTENSIONS.has(ext)) return 'json';
@@ -55,7 +67,7 @@ function buildSuggestedUse(kind) {
     case 'csv':
       return [
         'Показать на сайте как таблицу или прайс-лист',
-        'Импортировать в внутреннюю базу или витрину данных',
+        'Импортировать во внутреннюю базу или витрину данных',
       ];
     case 'text':
       return [
@@ -84,7 +96,7 @@ function buildOllamaHint(config) {
   return [
     `Запусти Ollama daemon: ollama serve`,
     `Подтяни модель: ollama pull ${config.model}`,
-    `Проверь endpoint: ${config.baseUrl}`,
+    // No endpoint URL here — the hint is returned to the API client (audit 2026-11-07).
   ];
 }
 
@@ -202,7 +214,6 @@ async function analyzeImageFile(filePath, env, ocrRunner) {
       metadata: {
         ocrProvider: 'ollama',
         model: result.model,
-        endpoint: result.baseUrl,
         linesExtracted: lines,
         ocrStatus: 'completed',
       },
@@ -212,14 +223,16 @@ async function analyzeImageFile(filePath, env, ocrRunner) {
       ],
     };
   } catch (error) {
+    // Audit 2026-11-07: raw Ollama error text (may include internal URL) stays
+    // in the server log only; the client gets a generic message + status.
+    console.warn('[file-workspace] OCR unavailable:', error);
     return {
       kind: 'image',
       summary: 'Изображение найдено, но OCR через Ollama недоступен',
-      preview: error instanceof Error ? error.message : 'Неизвестная ошибка OCR',
+      preview: 'OCR временно недоступен. Проверь, что Ollama запущена, и повтори анализ.',
       metadata: {
         ocrProvider: 'ollama',
         model: config.model,
-        endpoint: config.baseUrl,
         ocrStatus: 'unavailable',
       },
       suggestedUse: buildOllamaHint(config),
@@ -233,11 +246,10 @@ function analyzePdfFile(env) {
     kind: 'pdf',
     summary: 'PDF найден. Для GLM-OCR через Ollama сначала нужен рендер PDF в изображения страниц.',
     preview:
-      'Текущий pipeline OCR подключён для image-файлов. Следующий шаг: добавить PDF -> PNG conversion, затем отправлять страницы в glm-ocr.',
+      'Текущий pipeline OCR подключён для image-файлов. Следующий шаг: добавить конверсию PDF → PNG, затем отправлять страницы в glm-ocr.',
     metadata: {
       ocrProvider: 'ollama',
       model: config.model,
-      endpoint: config.baseUrl,
       ocrStatus: 'pdf-conversion-required',
     },
     suggestedUse: [
@@ -258,62 +270,36 @@ export function createFileWorkspace({
       ? configuredRoot
       : resolve(rootDir, configuredRoot)
     : join(rootDir, 'workspace-files');
-  const inboxDir = join(baseDir, 'inbox');
-  const analysisDir = join(baseDir, 'analysis');
+  function dirsFor(userName) {
+    if (!userName) {
+      return {
+        inboxDir: join(baseDir, 'inbox'),
+        analysisDir: join(baseDir, 'analysis'),
+      };
+    }
+    const userRoot = join(baseDir, 'users', workspaceUserSegment(userName));
+    return {
+      inboxDir: join(userRoot, 'inbox'),
+      analysisDir: join(userRoot, 'analysis'),
+    };
+  }
 
-  async function ensureWorkspace() {
+  async function ensureWorkspace(userName) {
+    const {inboxDir, analysisDir} = dirsFor(userName);
     await mkdir(inboxDir, {recursive: true});
     await mkdir(analysisDir, {recursive: true});
   }
 
-  async function analyzeFile(fileName) {
-    await ensureWorkspace();
+  async function analyzeFile(fileName, userName) {
+    await ensureWorkspace(userName);
+    const {inboxDir, analysisDir} = dirsFor(userName);
     const resolvedInboxDir = resolve(inboxDir);
     const filePath = resolve(inboxDir, fileName);
     if (dirname(filePath) !== resolvedInboxDir) {
-      // #region agent log
-      fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-        body: JSON.stringify({
-          sessionId: '8ed724',
-          runId: 'initial',
-          hypothesisId: 'H3',
-          location: 'server/file-workspace.js:275',
-          message: 'workspace path rejected',
-          data: {
-            fileNameLength: fileName.length,
-            pathInsideWorkspace: false,
-            hasPathSeparator: fileName.includes('/') || fileName.includes('\\\\'),
-          },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
       throw new Error('Access denied: directory traversal detected');
     }
     const fileStat = await stat(filePath);
     const kind = detectKind(fileName);
-    // #region agent log
-    fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-      body: JSON.stringify({
-        sessionId: '8ed724',
-        runId: 'initial',
-        hypothesisId: 'H3,H4',
-        location: 'server/file-workspace.js:281',
-        message: 'workspace file accepted for analysis',
-        data: {
-          fileNameLength: fileName.length,
-          pathInsideWorkspace: true,
-          kind,
-          sizeBytes: fileStat.size,
-        },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-    // #endregion
     let analysis;
     if (
       TEXT_EXTENSIONS.has(extname(fileName).toLowerCase()) ||
@@ -359,8 +345,9 @@ export function createFileWorkspace({
     };
   }
 
-  async function listFiles() {
-    await ensureWorkspace();
+  async function listFiles(userName) {
+    await ensureWorkspace(userName);
+    const {inboxDir, analysisDir} = dirsFor(userName);
     const names = (await readdir(inboxDir))
       .filter(name => !name.startsWith('.'))
       .sort((a, b) => a.localeCompare(b));
@@ -384,22 +371,28 @@ export function createFileWorkspace({
 
     return {
       paths: publicPaths(),
-      ocr: getOllamaOcrConfig(env),
+      // Audit 2026-11-07: only model + status go to the client; the internal
+      // Ollama base URL must not be disclosed (server-side concern).
+      ocr: {model: getOllamaOcrConfig(env).model, ocrStatus: 'configured'},
       files,
     };
   }
 
-  async function analyzeAllFiles() {
-    await ensureWorkspace();
+  async function analyzeAllFiles(userName) {
+    await ensureWorkspace(userName);
+    const {inboxDir} = dirsFor(userName);
     const names = (await readdir(inboxDir))
       .filter(name => !name.startsWith('.'))
       .sort((a, b) => a.localeCompare(b));
-    await Promise.all(names.map(fileName => analyzeFile(fileName)));
-    return listFiles();
+    await Promise.all(names.map(fileName => analyzeFile(fileName, userName)));
+    return listFiles(userName);
   }
 
   return {
-    getPaths: () => ({baseDir, inboxDir, analysisDir}),
+    getPaths: userName => {
+      const {inboxDir, analysisDir} = dirsFor(userName);
+      return {baseDir, inboxDir, analysisDir};
+    },
     ensureWorkspace,
     listFiles,
     analyzeFile,

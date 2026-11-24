@@ -67,7 +67,7 @@ const CHART_WIDTH = 800;
 
 export function JournalProgressChart({sessions}: JournalProgressChartProps) {
   const model = useJournalProgressChart(sessions);
-  const {journalWeeks, journalLinePath, viewBox, grid, weightTicks} = model;
+  const {journalWeeks, journalLinePath, journalAdjustedLinePath, viewBox, grid, weightTicks} = model;
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const active = activeIndex == null ? null : journalWeeks[activeIndex];
@@ -79,7 +79,7 @@ export function JournalProgressChart({sessions}: JournalProgressChartProps) {
       <div className="journal-chart-empty">
         <p className="journal-chart-empty__title">Запиши первый подход</p>
         <p className="journal-chart-empty__hint">
-          Сохраните подходы с весом и повторами — тренд построится по факту, не по программе.
+          Сохрани подходы с весом и повторениями — тренд построится по факту, не по программе.
         </p>
       </div>
     );
@@ -155,6 +155,17 @@ export function JournalProgressChart({sessions}: JournalProgressChartProps) {
           {/* Trajectory line */}
           {journalLinePath && (
             <path className="ta-period__line" d={journalLinePath} pathLength={1} />
+          )}
+
+          {/* Adjusted trajectory (with reserve) — dashed, same color */}
+          {journalAdjustedLinePath && journalAdjustedLinePath !== journalLinePath && (
+            <path
+              className="ta-period__line ta-period__line--adjusted"
+              d={journalAdjustedLinePath}
+              pathLength={1}
+              strokeDasharray="6 4"
+              opacity={0.6}
+            />
           )}
 
           {/* Data points */}

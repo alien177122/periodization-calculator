@@ -1,0 +1,269 @@
+/* Мышечная карта нагрузки (порт из previews). Токены — app theory-apple. */
+.pv-mmap {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--ta-border);
+  border-radius: var(--radius-md);
+  background: var(--ta-surface);
+}
+
+.pv-mmap__switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pv-mmap__chip {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 6px 10px;
+  border: 1px solid var(--ta-border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ta-text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.pv-mmap__chip:focus-visible {
+  outline: 2px solid var(--ta-sec-01);
+  outline-offset: 2px;
+}
+
+@media (max-width: 430px) {
+  .pv-mmap__switch {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+  .pv-mmap__switch::-webkit-scrollbar {
+    display: none;
+  }
+  .pv-bodymap {
+    grid-template-columns: 1fr;
+  }
+  .pv-bars__row {
+    grid-template-columns: 72px 1fr 28px;
+  }
+}
+
+.pv-mmap__chip--on {
+  background: var(--ta-sec-01);
+  border-color: var(--ta-sec-01);
+  color: var(--ta-on-accent);
+}
+
+.pv-mmap__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pv-mmap__name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ta-text);
+}
+
+.pv-mmap__badge {
+  flex: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--ta-sec-01) 14%, transparent);
+  color: var(--ta-sec-01);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pv-mmap__badge--repo {
+  background: color-mix(in srgb, #22c55e 14%, transparent);
+  color: #22c55e;
+}
+
+.pv-mmap__comment {
+  margin: -8px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ta-text-muted);
+}
+
+.pv-mmap__anthro {
+  margin: -8px 0 0;
+  padding: 8px 12px;
+  border: 1px solid var(--ta-border);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--ta-sec-01) 6%, var(--ta-surface));
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ta-text-muted);
+}
+
+.pv-bodymap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  justify-items: center;
+}
+
+.pv-bodymap__figure {
+  margin: 0;
+  display: grid;
+  gap: 4px;
+  justify-items: center;
+}
+
+.pv-bodymap__svg {
+  width: min(132px, 40vw);
+  height: auto;
+}
+
+.pv-bodymap__caption {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ta-text-muted);
+}
+
+.pv-bars {
+  display: grid;
+  gap: 8px;
+}
+
+.pv-bars__row {
+  display: grid;
+  grid-template-columns: 92px 1fr 32px;
+  gap: 8px;
+  align-items: center;
+}
+
+.pv-bars__label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ta-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pv-bars__track {
+  display: block;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--ta-surface-2);
+  overflow: hidden;
+}
+
+.pv-bars__fill {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.pv-bars__value {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ta-text);
+  text-align: right;
+}
+
+.pv-mmap__insight {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--ta-border);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--ta-sec-01) 6%, var(--ta-surface));
+}
+
+.pv-mmap__insight-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ta-text);
+}
+
+.pv-mmap__insight-meta {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ta-text-muted);
+}
+
+.pv-mmap__insight-meta b {
+  color: var(--ta-text);
+  font-weight: 600;
+}
+
+.pv-mmap__insight-source {
+  margin: 0;
+  font-size: 11px;
+  color: var(--ta-text-dim, var(--ta-text-muted));
+  font-style: italic;
+}
+
+.pv-mmap__scale {
+  margin: 0;
+  font-size: 11px;
+  color: var(--ta-text-muted);
+}
+
+/* C3: полировка — сравнение и нормативы */
+.pv-mmap__compare {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pv-mmap__compare-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ta-text-muted);
+}
+
+.pv-mmap__compare-select {
+  min-height: 36px;
+  padding: 4px 8px;
+  border: 1px solid var(--ta-border);
+  border-radius: 6px;
+  background: var(--ta-surface);
+  color: var(--ta-text);
+  font-size: 12px;
+}
+
+.pv-mmap__compare-block {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--ta-border);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--ta-surface) 80%, transparent);
+}
+
+.pv-mmap__compare-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ta-text);
+}
+
+.pv-mmap__compare-hint {
+  margin: 0;
+  font-size: 11px;
+  color: var(--ta-text-muted);
+}
+
+.pv-mmap__insight-norm {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ta-text);
+  padding: 6px 8px;
+  border-left: 2px solid var(--ta-sec-01);
+  background: color-mix(in srgb, var(--ta-sec-01) 6%, transparent);
+}

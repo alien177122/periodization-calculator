@@ -1,11 +1,17 @@
-import {Fragment, useState, type FocusEvent} from 'react';
+import {useState, type FocusEvent} from 'react';
 import {CATALOG_EXERCISES, TYPE_LABELS} from '../data/exercises';
 import {EXERCISES_V3} from '@training/shared/program/v3';
 import {PlateDiagram} from './PlateDiagram';
+import {PairStack} from './training/PairStack';
+import '../styles/components/training/stack.css';
 import type {ExerciseConfig, TrainingDayDef} from '../types';
+import type {Block} from '@training/shared/types';
 import type {TrainingExerciseRow} from '../utils/training';
-import {calcWarmupSets, volumeClass} from '../utils/calc';
+import {calcWarmupSets} from '../utils/calc';
 import {buildLinearWorkingSets, buildPyramid} from '@training/shared/utils/pyramid';
+import {buildClusterSets} from '@training/shared/utils/cluster';
+import {autoPairDay} from '@training/shared/utils/pair-engine';
+import {intensityTone, clusterAllowed} from '@training/shared/utils/intensity';
 
 /** Which working-set row currently drives the plate diagram (pyramid ≠ one static kg). */
 type PlateFocus = {key: string; weight: number};
@@ -33,10 +39,6 @@ function loadNoteForExercise(config: ExerciseConfig | undefined): string {
   return `${TYPE_LABELS[config.type]}: схема блинов не применяется.`;
 }
 
-/**
- * Prefer full catalog (Program 2.0 + split extras like dips/deadlift).
- * V3 fallback must include step/warmupStep — otherwise pyramid/warmup become NaN.
- */
 function exerciseConfigForKey(key: string): ExerciseConfig | undefined {
   const catalog = CATALOG_EXERCISES[key];
   if (catalog) return catalog;
@@ -77,19 +79,6 @@ function schemeLabel(ex: TrainingExerciseRow): string {
   return `${ex.scheme.sets} × ${ex.scheme.reps}`;
 }
 
-function looksLikePyramidTaper(sets: {weight: number; reps: number}[]): boolean {
-  if (sets.length < 2) return false;
-  const allSame = sets.every(s => s.weight === sets[0]!.weight && s.reps === sets[0]!.reps);
-  if (allSame) return false;
-
-  const weightDown = sets.every((s, i) => i === 0 || s.weight <= sets[i - 1]!.weight);
-  const repsUp = sets.every((s, i) => i === 0 || s.reps >= sets[i - 1]!.reps);
-  const weightUp = sets.every((s, i) => i === 0 || s.weight >= sets[i - 1]!.weight);
-  const repsDown = sets.every((s, i) => i === 0 || s.reps <= sets[i - 1]!.reps);
-
-  return (weightDown && repsUp) || (weightUp && repsDown);
-}
-
 function workingSetWeightLabel(
   set: {weight: number},
   ex: TrainingExerciseRow,
@@ -97,7 +86,6 @@ function workingSetWeightLabel(
 ): string {
   if (hideWeights) return '—';
   if (ex.usesBodyWeight && ex.extraWeight != null) {
-    // Absolute set.weight may be BW total or synthetic ±step around 0 for +0 extra.
     const extra = ex.extraWeight + (set.weight - ex.weight);
     if (!Number.isFinite(extra)) return '—';
     return extra >= 0 ? `+${extra.toFixed(1)}` : extra.toFixed(1);
@@ -150,7 +138,6 @@ function WorkingSetItem({
 
   const focus: PlateFocus = {key: setKey, weight: set.weight};
 
-  /** Clear hover only when focus leaves the working-sets list (blur can race after next focus). */
   const clearIfLeftWorkingSets = (event: FocusEvent<HTMLButtonElement>) => {
     const related = event.relatedTarget;
     if (related instanceof HTMLElement && related.closest('.training-working-sets')) {
@@ -176,10 +163,6 @@ function WorkingSetItem({
   );
 }
 
-// ============================================================
-// КАРТОЧКА ДНЯ ТРЕНИРОВКИ — используется во вкладке "Тренировка"
-// isPreview=true → затемнённая карточка "следующего дня"
-// ============================================================
 export default function TrainingDayCard({
   dayDef,
   weekIndex,
@@ -187,6 +170,8 @@ export default function TrainingDayCard({
   isPreview,
   hideWeights,
   variant = 'default',
+  persistedBlocks,
+  onSetModeChange,
 }: {
   dayDef: TrainingDayDef;
   weekIndex: number;
@@ -194,11 +179,12 @@ export default function TrainingDayCard({
   isPreview?: boolean;
   hideWeights?: boolean;
   variant?: 'default' | 'split-preview';
+  persistedBlocks?: Block[];
+  onSetModeChange?: (dayNumber: number, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }) {
   const [openExerciseKey, setOpenExerciseKey] = useState<string | null>(null);
-  /** Hover/focus preview for plate assembly — temporary until mouseleave/blur. */
+  const [localModes, setLocalModes] = useState<Record<string, 'linear' | 'pyramid' | 'cluster'>>({});
   const [plateHovered, setPlateHovered] = useState<PlateFocus | null>(null);
-  /** Click locks a set’s weight so plates stay after mouseleave. */
   const [plateLocked, setPlateLocked] = useState<PlateFocus | null>(null);
 
   const cardClass = [
@@ -208,6 +194,13 @@ export default function TrainingDayCard({
   ]
     .filter(Boolean)
     .join(' ');
+
+  // Группируем упражнения в стеки (автопары), мержим сохранённый setMode по id.
+  const autoBlocks = autoPairDay(exercises.map(e => e.key));
+  const blocks = autoBlocks.map(b => {
+    const saved = persistedBlocks?.find(p => p.id === b.id);
+    return saved ? {...b, setMode: saved.setMode ?? b.setMode, cluster: saved.cluster ?? b.cluster} : b;
+  });
 
   return (
     <div className={cardClass}>
@@ -220,121 +213,103 @@ export default function TrainingDayCard({
         )}
         <span className="training-card-week">Нед {weekIndex + 1}</span>
       </div>
-      <table className="pt">
-        <thead>
-          <tr>
-            <th style={{textAlign: 'left'}}>Упражнение</th>
-            <th>Вес, кг</th>
-            <th>Схема</th>
-            <th>Повт</th>
-          </tr>
-        </thead>
-        <tbody>
-          {exercises.map((ex, rowIndex) => {
-            const config = exerciseConfigForKey(ex.key);
-            const isOpen = openExerciseKey === ex.key;
-            const rowClass = [
-              'training-row',
-              isOpen ? 'is-expanded' : '',
-              variant === 'split-preview' && rowIndex % 2 === 1 ? 'training-row--stripe' : '',
-            ]
-              .filter(Boolean)
-              .join(' ');
-            const panelId = `training-load-${dayDef.dayNumber}-${weekIndex + 1}-${ex.key}`;
-            const displayWeight = formatDisplayWeight(ex, !!hideWeights);
-            const barWeight = config ? barWeightForType(config.type) : 20;
-            const canShowPlates =
-              !!config && !config.usesBodyWeight && (config.type === 'A' || config.type === 'B');
-            const warmups = config
-              ? calcWarmupSets(ex.warmupTopWeight, config).map(set => ({
-                  ...set,
-                  weight: canShowPlates ? Math.max(set.weight, barWeight) : set.weight,
-                }))
-              : [];
-            const isPyramid = ex.progressionMode === 'pyramid';
-            const showPyramidLayout = isPyramid || looksLikePyramidTaper(ex.workingSets);
-            const pyramidSets = ex.workingSets;
-            const computedPyramidSets = config
-              ? buildPyramid(
-                  {
-                    targetWeight: ex.weight,
-                    targetSets: ex.scheme.sets,
-                    targetReps: ex.scheme.reps,
-                    type: 'descending',
-                    rpeBase: 8,
-                  },
-                  config,
-                ).workingSets
-              : [];
-            const plateFocus = plateHovered ?? plateLocked;
-            const plateWeight = plateFocus?.weight ?? ex.warmupTopWeight;
-            const clearPlatePreview = () => setPlateHovered(null);
-            const previewPlate = (focus: PlateFocus) => setPlateHovered(focus);
-            const selectPlate = (focus: PlateFocus) => {
-              setPlateLocked(focus);
-              setPlateHovered(null);
-            };
-            const toggleExercise = () => {
-              setOpenExerciseKey(isOpen ? null : ex.key);
-              setPlateHovered(null);
-              setPlateLocked(null);
-            };
-            const renderWorkingSet = (
-              set: {set: number; weight: number; reps: number},
-              setKey: string,
-            ) => (
-              <WorkingSetItem
-                key={setKey}
-                setKey={setKey}
-                set={set}
-                ex={ex}
-                hideWeights={!!hideWeights}
-                interactive={canShowPlates && !hideWeights && set.weight > 0}
-                isActive={plateFocus?.key === setKey}
-                onPreview={previewPlate}
-                onClearPreview={clearPlatePreview}
-                onSelect={selectPlate}
-              />
-            );
 
-            return (
-              <Fragment key={ex.key}>
-                <tr className={rowClass}>
-                  <td className="training-exercise-cell">
+      <div className="training-stacks">
+        {blocks.map(block => {
+          const blockExercises = block.exerciseKeys
+            .map(k => exercises.find(e => e.key === k))
+            .filter(Boolean) as TrainingExerciseRow[];
+
+          const blockPct = blockExercises.length > 0
+            ? Math.max(...blockExercises.map(e => e.intensityPct ?? 75))
+            : 75;
+          const tone = intensityTone(blockPct);
+          const clusterOk = clusterAllowed(blockPct);
+          const mode = localModes[block.id] ?? block.setMode ?? 'linear';
+
+          return (
+            <PairStack key={block.id} block={block} tone={tone} meta={block.type === 'pair' ? 'пара' : undefined}>
+              {blockExercises.map(ex => {
+                const config = exerciseConfigForKey(ex.key);
+                const isOpen = openExerciseKey === ex.key;
+                const displayWeight = formatDisplayWeight(ex, !!hideWeights);
+                const barWeight = config ? barWeightForType(config.type) : 20;
+                const canShowPlates =
+                  !!config && !config.usesBodyWeight && (config.type === 'A' || config.type === 'B');
+                const warmups = config
+                  ? calcWarmupSets(ex.warmupTopWeight, config).map(set => ({
+                      ...set,
+                      weight: canShowPlates ? Math.max(set.weight, barWeight) : set.weight,
+                    }))
+                  : [];
+                const isPyramid = ex.progressionMode === 'pyramid';
+                const computedPyramidSets = config
+                  ? buildPyramid(
+                      {
+                        targetWeight: ex.weight,
+                        targetSets: ex.scheme.sets,
+                        targetReps: ex.scheme.reps,
+                        type: 'descending',
+                        rpeBase: 8,
+                      },
+                      config,
+                    ).workingSets
+                  : [];
+                const plateFocus = plateHovered ?? plateLocked;
+                const plateWeight = plateFocus?.weight ?? ex.warmupTopWeight;
+                const clearPlatePreview = () => setPlateHovered(null);
+                const previewPlate = (focus: PlateFocus) => setPlateHovered(focus);
+                const selectPlate = (focus: PlateFocus) => {
+                  setPlateLocked(focus);
+                  setPlateHovered(null);
+                };
+                const toggleExercise = () => {
+                  setOpenExerciseKey(isOpen ? null : ex.key);
+                  // инициализация localModes из Block.setMode (если есть)
+                  const containingBlock = blocks.find(b => b.exerciseKeys.includes(ex.key));
+                  if (containingBlock?.setMode && !localModes[containingBlock.id]) {
+                    setLocalModes(prev => ({...prev, [containingBlock.id]: containingBlock.setMode as 'linear' | 'pyramid' | 'cluster'}));
+                  }
+                  setPlateHovered(null);
+                  setPlateLocked(null);
+                };
+                const renderWorkingSet = (
+                  set: {set: number; weight: number; reps: number},
+                  setKey: string,
+                ) => (
+                  <WorkingSetItem
+                    key={setKey}
+                    setKey={setKey}
+                    set={set}
+                    ex={ex}
+                    hideWeights={!!hideWeights}
+                    interactive={canShowPlates && !hideWeights && set.weight > 0}
+                    isActive={plateFocus?.key === setKey}
+                    onPreview={previewPlate}
+                    onClearPreview={clearPlatePreview}
+                    onSelect={selectPlate}
+                  />
+                );
+
+                return (
+                  <div key={ex.key} className={`stack__exercise ${isOpen ? 'is-expanded' : ''}`}>
                     <button
                       type="button"
-                      className="training-exercise-trigger"
+                      className="stack__ex"
                       aria-expanded={isOpen}
-                      aria-controls={panelId}
                       onClick={toggleExercise}>
-                      <span>{ex.name}</span>
-                      <span className="training-exercise-trigger__hint">
-                        {isOpen ? 'Скрыть' : 'Разбор'}
+                      <span className="stack__dot" />
+                      <span className="stack__name">{ex.name}</span>
+                      <span className="stack__kg u-num">{formatDisplayWeight(ex, !!hideWeights)} кг</span>
+                      <span className="stack__scheme">
+                        {isPyramid ? schemeLabel(ex) : `${ex.scheme.sets} × ${ex.scheme.reps}`}
                       </span>
+                      <span className="stack__reps u-num">{ex.totalReps} повт</span>
                     </button>
-                  </td>
-                  <td className="w-kg">{displayWeight}</td>
-                  <td className={`w-sr${isPyramid ? ' training-scheme-pyramid' : ''}`}>
-                    {isPyramid ? (
-                      schemeLabel(ex)
-                    ) : ex.scheme.sets !== 4 ? (
-                      <>
-                        <b>{ex.scheme.sets}</b> × {ex.scheme.reps}
-                      </>
-                    ) : (
-                      <>
-                        {ex.scheme.sets} × {ex.scheme.reps}
-                      </>
-                    )}
-                  </td>
-                  <td className={volumeClass(ex.totalReps)}>{ex.totalReps}</td>
-                </tr>
-                {isOpen && (
-                  <tr className="training-load-row">
-                    <td colSpan={4}>
+
+                    {isOpen && (
                       <div
                         className="ta-shell training-load-menu"
-                        id={panelId}
                         role="region"
                         aria-label={`Схема и разминка: ${ex.name}`}>
                         <div className="training-load-menu__head">
@@ -361,6 +336,29 @@ export default function TrainingDayCard({
 
                         <div className="training-load-menu__section">
                           <div className="training-load-menu__eyebrow">Рабочие подходы</div>
+                          <div className="training-setmode" role="group" aria-label="Режим подходов">
+                            {(['linear', 'pyramid', 'cluster'] as const).map(m => {
+                              const disabled = m === 'cluster' && !clusterOk;
+                              const labels = {linear: 'Константа', pyramid: 'Пирамида', cluster: 'Блоковая'};
+                              return (
+                                <button
+                                  key={m}
+                                  type="button"
+                                  className={`training-setmode__btn${mode === m ? ' is-active' : ''}`}
+                                  disabled={disabled}
+                                  title={disabled ? `Блоковая доступна при >80% — сейчас ${Math.round(blockPct)}%` : undefined}
+                                  onClick={() => {
+                                    setLocalModes(prev => ({...prev, [block.id]: m}));
+                                    const blockId = block.id;
+                                    const clusterMiniReps = Math.max(1, Math.ceil((blockExercises[0]?.scheme.reps ?? 4) / 2));
+                                    const clusterCfg = m === 'cluster' ? {miniReps: clusterMiniReps, intraRestSec: 30} : undefined;
+                                    onSetModeChange?.(dayDef.dayNumber, blockId, m, clusterCfg);
+                                  }}>
+                                  {labels[m]}
+                                </button>
+                              );
+                            })}
+                          </div>
                           {variant === 'split-preview' ? (
                             <div className="training-load-menu__split-schemes">
                               <div className="training-load-menu__scheme-col">
@@ -394,18 +392,46 @@ export default function TrainingDayCard({
                                 </ul>
                               </div>
                             </div>
+                          ) : mode === 'cluster' ? (
+                            <ul
+                              className="training-working-sets"
+                              aria-label={`Блоковые подходы: ${ex.name}`}
+                              onMouseLeave={clearPlatePreview}>
+                              {buildClusterSets({
+                                weight: ex.weight,
+                                sets: ex.scheme.sets,
+                                reps: ex.scheme.reps,
+                                cluster: {miniReps: Math.max(1, Math.ceil(ex.scheme.reps / 2)), intraRestSec: 30},
+                              }).map(cs => (
+                                <li
+                                  key={`${ex.key}-cluster-set-${cs.set}`}
+                                  className="training-working-sets__item">
+                                  <span className="training-working-sets__set">#{cs.set}</span>
+                                  <span className="training-working-sets__weight u-num">
+                                    {cs.mini.join(' + ')} повт
+                                  </span>
+                                  <span className="training-working-sets__reps u-num">
+                                    {cs.intraRestSec}с отдых
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : mode === 'pyramid' ? (
+                            <ul
+                              className="training-working-sets training-working-sets--pyramid"
+                              aria-label={`Пирамидальные подходы: ${ex.name}`}
+                              onMouseLeave={clearPlatePreview}>
+                              {computedPyramidSets.map(set =>
+                                renderWorkingSet(set, `${ex.key}-pyramid-set-${set.set}`),
+                              )}
+                            </ul>
                           ) : (
                             <ul
-                              className={[
-                                'training-working-sets',
-                                showPyramidLayout ? 'training-working-sets--pyramid' : '',
-                              ]
-                                .filter(Boolean)
-                                .join(' ')}
+                              className="training-working-sets"
                               aria-label={`Рабочие подходы: ${ex.name}`}
                               onMouseLeave={clearPlatePreview}>
-                              {pyramidSets.map(set =>
-                                renderWorkingSet(set, `${ex.key}-set-${set.set}`),
+                              {buildLinearWorkingSets(ex.weight, ex.scheme.sets, ex.scheme.reps).map(
+                                set => renderWorkingSet(set, `${ex.key}-set-${set.set}`),
                               )}
                             </ul>
                           )}
@@ -452,14 +478,14 @@ export default function TrainingDayCard({
                           )}
                         </div>
                       </div>
-                    </td>
-                  </tr>
-                )}
-              </Fragment>
-            );
-          })}
-        </tbody>
-      </table>
+                    )}
+                  </div>
+                );
+              })}
+            </PairStack>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -1,36 +1,14 @@
 {
-  // Список рекомендованных расширений для проекта.
-  // VS Code предложит их при открытии папки: Extensions → Show Recommended Extensions.
+  // Рекомендации для веб-версии Журнала (Vite + React + Express).
   "recommendations": [
-    // ── React Native ──────────────────────────────────────────
-    // Radon IDE (Software Mansion) — симулятор iOS/Android прямо в панели редактора.
-    // Инспектор компонентов, hot reload, breakpoints без выхода из VS Code.
-    // https://ide.swmansion.com
-    "swmansion.radon-ide",
-
-    // React Native Tools (Microsoft) — отладка JS-слоя:
-    // breakpoints, инспекция переменных, step-through прямо в VS Code.
-    "msjsdiag.vscode-react-native",
-
-    // ── Качество кода ─────────────────────────────────────────
-    // Error Lens — ошибки TS/ESLint прямо в строке, без hover.
-    "usernamehw.errorlens",
-
-    // ESLint — линтинг JS/TS по правилам проекта.
-    "dbaeumer.vscode-eslint",
-
-    // Prettier — форматирование (если добавишь .prettierrc).
     "esbenp.prettier-vscode",
-
-    // ── TypeScript / React ─────────────────────────────────────
-    // TypeScript Importer — автоимпорт при вводе имени компонента.
-    "pmneo.tsimporter",
-
-    // ES7+ React/Redux/RN Snippets — быстрые сниппеты rfc, rnss и т.д.
+    "dbaeumer.vscode-eslint",
+    "usernamehw.errorlens",
+    "bradlc.vscode-tailwindcss",
+    "vscode-icons-team.vscode-icons",
     "dsznajder.es7-react-js-snippets",
-
-    // ── Git ────────────────────────────────────────────────────
-    // GitLens — авторы строк, история, diff прямо в редакторе.
     "eamodio.gitlens"
-  ]
+  ],
+  // RN-инструменты не нужны в веб-корне.
+  "unwantedRecommendations": ["msjsdiag.vscode-react-native", "swmansion.radon-ide"]
 }

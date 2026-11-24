@@ -16,6 +16,15 @@ import {SplitMuscleIcon} from './splitMuscleIcons';
 /** Legend order: upper groups, then legs — matches filter chip order. */
 const MUSCLE_COLOR_LEGEND = [...UPPER_BODY_MUSCLES, ...LOWER_BODY_MUSCLES];
 
+/** 1 → упражнение · 2–4 → упражнения · 5+ → упражнений */
+function plural(n: number): string {
+  const mod10 = n % 10;
+  const mod100 = n % 100;
+  if (mod10 === 1 && mod100 !== 11) return 'упражнение';
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return 'упражнения';
+  return 'упражнений';
+}
+
 interface SplitExercisePickerProps {
   value: string;
   onChange: (key: string) => void;
@@ -163,7 +172,7 @@ export function SplitExercisePicker({
 
       <p id={gridLabelId} className="split-ex-picker__grid-hint">
         {filteredItems.length > 0
-          ? `${filteredItems.length} упражнений — выберите карточку`
+          ? `${filteredItems.length} ${plural(filteredItems.length)} — выбери карточку`
           : 'Нет упражнений для выбранных фильтров'}
       </p>
 
@@ -225,14 +234,8 @@ function SplitExerciseCard({
       }
       onClick={() => onPick(item.key)}>
       <span className="split-ex-picker__card-body">
-        <span className="split-ex-picker__card-top">
+        <span className="split-ex-picker__card-copy">
           <strong className="split-ex-picker__card-name">{item.name}</strong>
-        </span>
-        <span className="split-ex-picker__card-aside" aria-hidden="true">
-          <SplitMuscleIcon muscle={item.muscle} className="split-ex-picker__card-icon" />
-          <span className="split-ex-picker__card-muscle">{item.muscleLabel}</span>
-        </span>
-        <span className="split-ex-picker__card-meta">
           <span className="split-ex-picker__card-type">{item.typeLabel}</span>
         </span>
         {showOneRM ? (
@@ -244,6 +247,10 @@ function SplitExerciseCard({
             </span>
           )
         ) : null}
+        <span className="split-ex-picker__card-aside" aria-hidden="true">
+          <SplitMuscleIcon muscle={item.muscle} className="split-ex-picker__card-icon" />
+          <span className="split-ex-picker__card-muscle">{item.muscleLabel}</span>
+        </span>
       </span>
     </button>
   );

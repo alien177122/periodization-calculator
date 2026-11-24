@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 COPY packages/shared/package.json ./packages/shared/package.json
-RUN npm install
+RUN npm ci
 
 COPY App.tsx index.html index.tsx vite.config.ts eslint.config.js postcss.config.js tsconfig.base.json tsconfig.json tsconfig.app.json tsconfig.node.json ./
 COPY packages/shared ./packages/shared
@@ -29,7 +29,11 @@ COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/server ./server
 COPY --from=build /app/dist ./dist
 
-RUN mkdir -p /app/data /app/workspace-files/inbox /app/workspace-files/analysis
+RUN mkdir -p /app/data /app/workspace-files/inbox /app/workspace-files/analysis \
+  && chown -R node:node /app/data /app/workspace-files
+
+# Audit 2026-11-07: run as the non-root node user.
+USER node
 
 EXPOSE 3001
 

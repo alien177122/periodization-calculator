@@ -1,0 +1,15 @@
+=== ASD S1 content validator ===
+sources: 4 · strings: 2298 · prose-sentences: 80 · hero: 49 · zone: 04
+packages/shared/src/data/theory.ts:2319  длина>20  22 сл: «Топ-3 — короткий набор из фильтра главы 03: два вещества с полки S и одно с полки E, а не витрина всех чипов.»
+packages/shared/src/data/theory.ts:2323  canon-масса  Не собирать три S-спорта вместо магния «для массы»
+packages/shared/src/data/theory.ts:2394  canon-масса  Точная доза — от массы и переносимости, на карточке ниже
+packages/shared/src/data/theory.ts:2398  typo-тильда-или-ат  ~200 мг
+packages/shared/src/data/theory.ts:2424  canon-масса  Считают элементарный магний, не массу соли.
+packages/shared/src/data/theory.ts:2429  typo-тильда-или-ат  Ориентир ~200–400 мг элементарного; приоритет при дефиците или высокой нагрузке, не бустер роста.
+packages/shared/src/data/theory.ts:2432  canon-масса  Не закрывает слот креатина «ещё одним минералом для массы»
+packages/shared/src/data/theory.ts:2485  canon-масса  Ориентир ~200 мг — типичная рабочая доза для многих; точная — от массы и переносимости
+packages/shared/src/data/theory.ts:2498  canon-масса  В дозе считают элементарный Mg, не массу соли.
+
+полоса (prose): n=80 · медиана 8 · ≤20=99% · 8–20=53% · <8=46% · <4=8% · >20=1
+
+summary: violations=9 · правила: {"длина>20":1,"canon-масса":6,"typo-тильда-или-ат":2}

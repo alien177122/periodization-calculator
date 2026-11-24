@@ -1,3 +1,38 @@
+/* CONNECTION */
+.connection-status {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 4px 16px;
+  padding-top: calc(4px + env(safe-area-inset-top, 0px));
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: start;
+}
+
+@supports (padding: env(safe-area-inset-top)) {
+  #root .connection-status {
+    padding-top: 4px;
+  }
+}
+
+.connection-status--online {
+  color: var(--color-success, #3f9d62);
+}
+
+.connection-status--offline {
+  color: var(--text-secondary);
+}
+
+.connection-status--pending,
+.connection-status--syncing {
+  color: var(--color-warning, #d97706);
+}
+
 /* SECTION */
 .section {
   margin-bottom: 56px;
@@ -11,13 +46,13 @@
   border-bottom: var(--border-width-hairline) solid var(--border);
 }
 .section-num {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--font-system);
   font-size: 12px;
   color: var(--accent);
   letter-spacing: 0.2em;
 }
 .section-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--font-system);
   font-size: 32px;
   letter-spacing: 0.05em;
   color: var(--text-strong);
@@ -27,7 +62,10 @@
 .user-bar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: var(--space-2);
+  row-gap: var(--space-2);
   margin-block: 0;
   padding: var(--space-4) var(--space-5);
   background: var(--glass-bg-card);
@@ -71,26 +109,38 @@
 .user-bar .btn-sm {
   letter-spacing: 0;
   min-height: 44px;
-  min-width: 76px;
-  padding: 0 16px;
+  min-width: 44px;
+  height: auto;
+  aspect-ratio: auto;
+  padding: 0 12px;
+  font-size: var(--type-12);
+  border-radius: var(--radius-sm);
   text-transform: none;
+  white-space: nowrap;
 }
 .user-bar__billing-badge {
-  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  font-size: var(--type-12);
   font-weight: 500;
   color: var(--color-text-secondary);
-  padding: 8px 12px;
-  border-radius: 999px;
   border: 1px solid var(--color-border-subtle);
+  border-radius: var(--glass-radius-badge);
 }
 .user-bar .btn-ghost {
   background: var(--overlay-subtle);
   border-color: var(--border-subtle);
   color: var(--text-soft);
 }
-@media (max-width: 672px) {
+@media (max-width: 480px) {
+  /* Держим шапку в одну строку и разводим элементы по всей ширине:
+     имя слева, действия — по центру и справа. */
+  .user-bar {
+    flex-wrap: nowrap;
+  }
   .user-bar-actions {
-    margin-left: 0;
+    display: contents;
   }
 }
 @media (hover: hover) and (pointer: fine) {
@@ -199,7 +249,7 @@
   color: var(--ta-text-dim, var(--muted));
   cursor: pointer;
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 1 0;
   font-family: var(
     --ta-display-font,
     -apple-system,
@@ -214,7 +264,7 @@
   font-weight: 600;
   justify-content: center;
   letter-spacing: 0;
-  line-height: var(--type-line-12, 1.2);
+  line-height: 1.2;
   min-height: 44px;
   min-width: max(4.75rem, min-content);
   overflow: visible;
@@ -231,7 +281,7 @@
 }
 .tab-btn::before {
   background: var(--ta-surface-2, var(--surface-raised));
-  border: var(--border-width) solid var(--border-subtle, rgba(255, 255, 255, 0.1));
+  border: var(--border-width-hairline) solid var(--border-subtle, rgba(255, 255, 255, 0.1));
   border-radius: inherit;
   box-shadow: inset 0 1px 0 color-mix(in srgb, var(--ta-text, var(--text)) 5%, transparent);
   content: '';
@@ -305,7 +355,7 @@
   font-size: var(--type-12, 12px);
   font-variant-numeric: tabular-nums;
   font-weight: 600;
-  line-height: var(--type-line-12, 1.2);
+  line-height: 1.2;
   padding: var(--space-1, 4px) var(--space-2, 8px);
 }
 
@@ -313,9 +363,9 @@
   .tab-bar.ta-mode-nav {
     display: grid;
     gap: 4px;
-    grid-template-columns: repeat(5, minmax(5.5rem, 1fr));
+    grid-template-columns: repeat(2, minmax(5.5rem, 1fr));
     margin: 0 auto 40px;
-    max-width: 840px;
+    max-width: 720px;
     overflow-x: visible;
     scroll-snap-type: none;
   }
@@ -353,7 +403,7 @@
 .tab-active::before {
   border-color: color-mix(
     in srgb,
-    var(--ta-calc-accent, var(--accent)) 32%,
+    var(--ta-calc-accent, var(--accent)) 28%,
     var(--border-subtle, rgba(255, 255, 255, 0.1))
   );
   box-shadow: inset 0 1px 0 color-mix(in srgb, var(--ta-text, var(--text)) 6%, transparent);
@@ -450,9 +500,12 @@
 }
 .training-progress-fill {
   height: 100%;
+  width: 100%;
   background: var(--accent);
   border-radius: 8px;
-  transition: width var(--duration-medium) var(--ease-out);
+  transform-origin: left center;
+  transform: scaleX(var(--progress, 0));
+  transition: transform var(--duration-medium) var(--ease-out);
   min-width: 0;
 }
 
@@ -476,7 +529,7 @@
   opacity: 0.5;
 }
 .locked-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--font-system);
   font-size: 24px;
   letter-spacing: 0.05em;
   color: var(--text-strong);
@@ -515,14 +568,14 @@
   margin-bottom: 16px;
 }
 .program-complete-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: var(--font-system);
   font-size: 32px;
   letter-spacing: 0.05em;
   color: var(--accent);
   margin-bottom: 10px;
 }
 .program-complete-stat {
-  font-family: var(--font-display);
+  font-family: var(--font-system);
   font-size: 12px;
   font-variant-numeric: tabular-nums;
   font-weight: 500;
@@ -572,7 +625,7 @@
   }
 
   .tab-btn-label {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.01em;
     line-height: 1.2;
@@ -583,8 +636,8 @@
   }
 
   .tab-btn-meta {
-    font-size: 9px;
-    padding: 1px 4px;
+    font-size: 12px;
+    padding: 4px 8px;
   }
 }
 
@@ -665,9 +718,10 @@
     font-size: 12px;
   }
   .btn-complete {
-    padding: 16px 24px;
-    font-size: 20px;
-    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 14px;
+    border-radius: 0.75rem;
+    min-height: 44px;
   }
 
   /* User bar */
@@ -685,11 +739,12 @@
     font-size: 13px;
   }
   .user-bar .btn-sm {
-    min-height: 36px;
-    min-width: 60px;
-    padding: 0 10px;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0 12px;
     font-size: 12px;
   }
+
 
   /* Sections */
   .section {
@@ -757,5 +812,85 @@
   .tab-btn {
     font-size: 11px;
     padding: 10px 6px;
+  }
+}
+
+
+/* ACCOUNT BAR (in-flow, scrolls with content) */
+.account-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  flex-wrap: wrap;
+}
+
+.account-menu {
+  position: static;
+  z-index: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--glass-bg-card, color-mix(in srgb, var(--surface, #141415) 70%, transparent));
+  backdrop-filter: blur(var(--glass-blur, 12px));
+  -webkit-backdrop-filter: blur(var(--glass-blur, 12px));
+  border: 1px solid var(--glass-border, var(--border-subtle));
+  border-radius: var(--radius-xl, 16px);
+  box-shadow: var(--glass-shadow, 0 4px 20px rgba(0,0,0,0.2));
+}
+
+.account-menu__name {
+  font-size: var(--type-12, 12px);
+  font-weight: 600;
+  color: var(--text-strong, #fff);
+  max-width: 96px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-menu__badge {
+  font-size: var(--type-12, 12px);
+  font-weight: 600;
+  color: var(--color-success, #22c55e);
+  padding: 2px 6px;
+  border: 1px solid var(--color-success, #22c55e);
+  border-radius: var(--radius-sm, 8px);
+}
+
+.account-menu__exit {
+  min-height: 44px;
+  padding: 0 12px;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm, 8px);
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: var(--type-12, 12px);
+  cursor: pointer;
+}
+
+.account-menu__exit:hover {
+  color: var(--text-strong);
+  border-color: var(--border);
+}
+
+.account-menu__exit:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.account-menu .btn-sm {
+  min-height: 44px;
+  min-width: 0;
+  padding: 0 12px;
+  font-size: var(--type-12, 12px);
+}
+
+@media (max-width: 430px) {
+  .account-menu__name {
+    display: none;
   }
 }

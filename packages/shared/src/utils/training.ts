@@ -35,6 +35,8 @@ export interface TrainingExerciseRow {
   extraWeight?: number;
   progressionMode: ProgressionMode;
   pyramidType?: PyramidType;
+  /** Рабочий % от 1ПМ для этой недели (для тона интенсивности и гейта cluster). */
+  intensityPct?: number;
   workingSets: WorkingSetPrescription[];
   warmupTopWeight: number;
   /** v3: «12ПМ», «Тест» или подсказка при missing_test */
@@ -117,6 +119,7 @@ export function getTrainingExercises(
         extraWeight,
         progressionMode,
         pyramidType: progressionMode === 'pyramid' ? pyramidType : undefined,
+        intensityPct: percentage,
         workingSets,
         warmupTopWeight: pyramidPlan?.topWorkingWeight ?? totalWeight,
       },

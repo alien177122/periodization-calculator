@@ -4864,6 +4864,21 @@ html[data-theme='light'] .app-shell .ta-shell .ta-calc-section__inner .app-tab-s
   outline-offset: 2px;
 }
 
+/* Delete sits on a light card. Global .btn-danger uses a near-black
+   border (#3a1a1a) and a dark red glyph — too heavy here. */
+.ta-shell .ta-calc-saved-card__actions .btn-danger {
+  color: #f07171;
+  background: var(--ta-surface-2);
+  border-color: color-mix(in srgb, #f07171 40%, var(--ta-border));
+}
+@media (hover: hover) and (pointer: fine) {
+  .ta-shell .ta-calc-saved-card__actions .btn-danger:hover {
+    color: #e85d5d;
+    background: color-mix(in srgb, #f07171 10%, var(--ta-surface-2));
+    border-color: #f07171;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ta-shell .ta-calc-saved-card {
     transition: none !important;

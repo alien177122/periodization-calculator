@@ -1,7 +1,9 @@
 import {TRAINING_DAYS} from '../../data/exercises';
-import type {TrainingDayDef, TrainingPreferences} from '../../types';
+import type {Block, TrainingDayDef, TrainingPreferences} from '../../types';
 import type {TrainingExerciseRow} from '../../utils/training';
 import TrainingDayCard from '../TrainingDayCard';
+import {ExerciseTimers} from './ExerciseTimers';
+import {BlockTimer} from './BlockTimer';
 import {SectionBlock} from '../SectionBlock';
 import {Button} from '../ui/Button';
 import ProgressionControls from './ProgressionControls';
@@ -19,6 +21,9 @@ interface ActiveDayViewProps {
   onComplete: () => void;
   totalSessions?: number;
   trainingDays?: TrainingDayDef[];
+  currentBlocks?: Block[];
+  nextBlocks?: Block[];
+  onSetModeChange?: (dayNumber: number, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
 }
 
 export default function ActiveDayView({
@@ -34,35 +39,61 @@ export default function ActiveDayView({
   onComplete,
   totalSessions = 24,
   trainingDays = TRAINING_DAYS,
+  currentBlocks,
+  nextBlocks,
+  onSetModeChange,
 }: ActiveDayViewProps) {
   const showPreview = nextSessions < totalSessions;
   const currentDay = trainingDays[currentDayIdx];
   const nextDay = trainingDays[nextDayIdx];
+  const doneWeek = Math.max(0, currentWeekIdx);
 
   return (
     <>
-      <SectionBlock num="01" title="Текущая тренировка">
+      <div className="split-week-stepper" role="tablist" aria-label="Неделя">
+        {Array.from({length: 8}, (_, index) => {
+          const status = index < doneWeek ? 'passed' : index === doneWeek ? 'current' : 'upcoming';
+          return (
+            <span
+              key={index}
+              className={`split-week-btn split-week-btn--${status}${index < doneWeek ? ' is-done' : ''}${index === doneWeek ? ' is-active' : ''}`}
+              aria-current={index === doneWeek ? 'step' : undefined}
+              aria-label={`Неделя ${index + 1}`}>
+              {index + 1}
+            </span>
+          );
+        })}
+      </div>
+      <SectionBlock num="01" title="Текущая тренировка" variant="apple" className="training-section">
         <ProgressionControls preferences={trainingPreferences} onChange={onPreferencesChange} />
         {currentDay ? (
-          <TrainingDayCard
-            dayDef={currentDay}
-            weekIndex={currentWeekIdx}
-            exercises={currentExercises}
-          />
+          <>
+            <BlockTimer />
+            <ExerciseTimers exercises={currentExercises} />
+            <TrainingDayCard
+              dayDef={currentDay}
+              weekIndex={currentWeekIdx}
+              exercises={currentExercises}
+              persistedBlocks={currentBlocks}
+              onSetModeChange={onSetModeChange}
+            />
+          </>
         ) : null}
-        <Button variant="complete" onClick={onComplete}>
+        <Button className="calc-test__submit" onClick={onComplete}>
           Завершить тренировку
         </Button>
       </SectionBlock>
 
       {showPreview && nextDay ? (
-        <SectionBlock num="02" title="Следующая тренировка">
+        <SectionBlock num="02" title="Следующая тренировка" variant="apple" className="training-section">
           <div className="next-day-label">Предпросмотр</div>
           <TrainingDayCard
             dayDef={nextDay}
             weekIndex={nextWeekIdx}
             exercises={nextExercises}
             isPreview
+            persistedBlocks={nextBlocks}
+            onSetModeChange={onSetModeChange}
           />
         </SectionBlock>
       ) : null}

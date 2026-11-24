@@ -8,8 +8,11 @@ function trimTrailingSlash(value) {
 }
 
 export function getOllamaOcrConfig(env = process.env) {
+  // Canonical name is OLLAMA_URL; OLLAMA_BASE_URL kept as legacy fallback
+  // (docker-compose < 2026-11-07 and old .env files).
+  const raw = env.OLLAMA_URL?.trim() || env.OLLAMA_BASE_URL?.trim() || ''
   return {
-    baseUrl: trimTrailingSlash(env.OLLAMA_URL?.trim() || DEFAULT_OLLAMA_URL),
+    baseUrl: trimTrailingSlash(raw || DEFAULT_OLLAMA_URL),
     model: env.OLLAMA_OCR_MODEL?.trim() || DEFAULT_OLLAMA_MODEL,
   }
 }

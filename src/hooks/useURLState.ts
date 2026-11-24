@@ -84,6 +84,34 @@ export interface URLStateAPI<T extends string> {
   commitHistory: () => void
 }
 
+/**
+ * Атомарно меняет несколько параметров поиска и будит подписчиков.
+ * Нужен там, где два setValue подряд не работают: writeParam откладывает
+ * replaceState, поэтому второй вызов читает ещё старый URL и первый теряется.
+ */
+export function navigateSearch(
+  updates: Readonly<Record<string, string | null>>,
+  push = false,
+): void {
+  if (typeof window === 'undefined') return
+
+  const params = new URLSearchParams(window.location.search)
+  for (const [key, value] of Object.entries(updates)) {
+    if (value === null || value === '') params.delete(key)
+    else params.set(key, value)
+  }
+
+  const query = params.toString()
+  const next = `${window.location.pathname}${query ? `?${query}` : ''}${window.location.hash}`
+
+  if (push) {
+    window.history.pushState(null, '', next)
+  } else {
+    window.history.replaceState(null, '', next)
+  }
+  dispatchURLStateChange()
+}
+
 export function useURLState<T extends string = string>(key: string): URLStateAPI<T> {
   const search = useSyncExternalStore(subscribe, getSearchSnapshot, getServerSnapshot)
   const value = readParam<T>(search, key)

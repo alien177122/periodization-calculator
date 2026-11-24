@@ -7,6 +7,41 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+
+- `zod` 3 → 4 and `body-parser` 2.3 → 2.4; `npm audit --omit=dev` is clean
+- CI now audits production dependencies on every push and pull request
+
+### Changed
+
+- CI runs on every branch, not only `main`/`master`
+- Added Node `engines` (`>=22.6`) and `.nvmrc` (22)
+- Fixed the archived-shells table in `STRUCTURE.md`
+
+## [0.0.3] — 2026-10-22
+
+### Removed
+
+- Debug ingest (`#region agent log` / `127.0.0.1:7373`) from `server/app.js` and `server/file-workspace.js`
+- Unused `CalculatorTabV3` and `initNativeShell` stubs
+
+### Fixed
+
+- Lint: overlay-gate `setState` in effect → `useSyncExternalStore`; `useSplitConstructor` missing `savedSplits` dep
+- Guest wallpaper: WebM + AVIF/WebP posters, no `preload="auto"`, load after gesture or Wi-Fi (not first paint); `dist/` budget ≤ 5 MB
+
+### Security
+
+- `npm audit fix` for `proxy-addr`, `ip-address`, `qs`, `express-rate-limit`, `body-parser` (Express 5 stayed on 5.2.x)
+
+### Added
+
+- GitHub Actions CI: typecheck, test, lint, build (Node 22)
+
+### Changed
+
+- Docs (`README`, `ARCHITECTURE`, `STRUCTURE`, `AGENTS.md`) aligned with Vite 7 + React 19 + Express 5 + `@training/shared` web-only product
+
 ## [0.0.2] — 2026-08-04
 
 ### Fixed

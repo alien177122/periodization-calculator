@@ -1,31 +1,24 @@
 import {lazy, Suspense} from 'react';
 import type {ProgramSettings, SavedExercise, UserData} from '../../types';
 import type {BillingStatus} from '@training/shared/types/billing';
-import CalculatorTab from '../../screens/CalculatorTab';
 import type {AppTab} from './tabs';
 import {TabPanelFallback} from './TabPanelFallback';
 
 const TheoryTab = lazy(() => import('../TheoryTab'));
-const JournalTab = lazy(() =>
-  import('../../screens/JournalTab').then(module => ({default: module.JournalTab})),
+const SplitTab = lazy(() =>
+  import('../../screens/SplitTab').then(module => ({default: module.SplitTab})),
 );
-const SplitConstructorTab = lazy(() =>
-  import('../../screens/SplitConstructorTab').then(module => ({
-    default: module.SplitConstructorTab,
-  })),
-);
-const TrainingTabContainer = lazy(() => import('./TrainingTabContainer'));
 
 interface TabPanelProps {
   activeTab: AppTab;
   userData: UserData;
   programSettings: ProgramSettings;
-  journal: {
+  split: {
     setUserData: (value: UserData) => void;
     token: string;
     onSaveError: (message: string) => void;
   };
-  split: {
+  theory: {
     setUserData: (value: UserData) => void;
     token: string;
     onSaveError: (message: string) => void;
@@ -66,41 +59,30 @@ interface TabPanelProps {
 }
 
 function renderActiveTab(activeTab: AppTab, props: TabPanelProps) {
-  const {userData, programSettings, calculator, training, journal, split} = props;
+  const {userData, training, split, theory} = props;
 
   switch (activeTab) {
-    case 'calculator':
-      return (
-        <CalculatorTab userData={userData} programSettings={programSettings} {...calculator} />
-      );
     case 'theory':
-      return <TheoryTab />;
-    case 'training':
       return (
-        <TrainingTabContainer
+        <TheoryTab
           userData={userData}
-          token={training.token}
-          setUserData={training.setUserData}
-          onGoCalculator={training.onGoCalculator}
-          programSubtitle={training.programSubtitle}
+          setUserData={theory.setUserData}
+          token={theory.token}
+          onSaveError={theory.onSaveError}
         />
       );
     case 'split':
       return (
-        <SplitConstructorTab
+        <SplitTab
           userData={userData}
-          setUserData={split.setUserData}
           token={split.token}
+          setUserData={split.setUserData}
+          setTrainingUserData={training.setUserData}
           onSaveError={split.onSaveError}
-        />
-      );
-    case 'journal':
-      return (
-        <JournalTab
-          userData={userData}
-          setUserData={journal.setUserData}
-          token={journal.token}
-          onSaveError={journal.onSaveError}
+          onGoCalculator={training.onGoCalculator}
+          programSubtitle={training.programSubtitle}
+          programSettings={props.programSettings}
+          calculator={props.calculator}
         />
       );
     default:
@@ -110,7 +92,7 @@ function renderActiveTab(activeTab: AppTab, props: TabPanelProps) {
 
 export function TabPanel(props: TabPanelProps) {
   const {activeTab} = props;
-  const isEagerTab = activeTab === 'calculator';
+  const isEagerTab = false;
 
   return (
     <div key={activeTab} className="tab-panel tab-panel--enter">

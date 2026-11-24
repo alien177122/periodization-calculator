@@ -88,7 +88,7 @@ export default function ProgramV3ProgressChart({exerciseName, rows}: ProgramV3Pr
   if (listWeeks.length === 0) {
     return (
       <p className="program-v3-progress__empty" role="status">
-        Нет данных для графика.
+        Пока нет данных для графика. Проведи тест 1ПМ для этого упражнения — график построится.
       </p>
     );
   }

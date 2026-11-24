@@ -9,6 +9,7 @@ import {
   isWeekEffectivelyDone,
   type WeekProgressVisual,
 } from '@training/shared/utils/split-progress';
+import {blocksForDay} from '@training/shared/data/split-blocks';
 
 interface DayPreview {
   day: SplitDayConfig;
@@ -22,13 +23,16 @@ interface SplitPreviewProps {
   dayPreviews: DayPreview[];
   onWeekChange: (week: number) => void;
   onToggleWeekDone: (week: number) => void;
-  onToggleDayDone: (week: number, day: 1 | 2 | 3) => void;
+  onToggleDayDone: (week: number, day: 1 | 2 | 3 | 4) => void;
   onFixedWeightChange?: (exerciseKey: string, weekIndex: number, weight: number) => void;
+  onSetModeChange?: (dayNumber: 1 | 2 | 3 | 4, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
+  /** Скрыть собственный заголовок, когда блок уже вложен в SectionBlock. */
+  showHead?: boolean;
 }
 
 const WEEK_COUNT = 8;
 
-function isDayDone(split: CustomSplit, weekIndex: number, day: 1 | 2 | 3): boolean {
+function isDayDone(split: CustomSplit, weekIndex: number, day: 1 | 2 | 3 | 4): boolean {
   return (split.completedDays ?? []).some(entry => entry.week === weekIndex && entry.day === day);
 }
 
@@ -62,25 +66,32 @@ export function SplitPreview({
   onToggleWeekDone,
   onToggleDayDone,
   onFixedWeightChange,
+  onSetModeChange,
+  showHead = true,
 }: SplitPreviewProps) {
   const hideWeights = split.weightMode === 'scheme_only';
   const weekDone = isWeekEffectivelyDone(split, previewWeek);
   const doneWeekCount = Array.from({length: WEEK_COUNT}, (_, index) => index).filter(week =>
     isWeekEffectivelyDone(split, week),
   ).length;
-  const daysPerWeek = split.daysPerWeek === 3 ? 3 : 2;
+  const daysPerWeek = split.daysPerWeek === 4 ? 4 : split.daysPerWeek === 3 ? 3 : 2;
 
   return (
-    <section className="app-tab-section split-preview" aria-labelledby="split-preview-title">
-      <div className="app-tab-section__head">
-        <h2 id="split-preview-title" className="app-tab-section__title">
-          Превью недели
-        </h2>
-        <span className="app-tab-section__meta">
-          Неделя {previewWeek + 1} из {WEEK_COUNT}
-          {doneWeekCount > 0 ? ` · ${doneWeekCount} пройдено` : ''}
-        </span>
-      </div>
+    <section
+      className="app-tab-section split-preview"
+      aria-labelledby={showHead ? 'split-preview-title' : undefined}
+      aria-label={showHead ? undefined : 'Сплит недели'}>
+      {showHead ? (
+        <div className="app-tab-section__head">
+          <h2 id="split-preview-title" className="app-tab-section__title">
+            Превью недели
+          </h2>
+          <span className="app-tab-section__meta">
+            Неделя {previewWeek + 1} из {WEEK_COUNT}
+            {doneWeekCount > 0 ? ` · ${doneWeekCount} пройдено` : ''}
+          </span>
+        </div>
+      ) : null}
 
       <div className="split-preview__frame">
         <p className="split-preview__lede">
@@ -120,7 +131,7 @@ export function SplitPreview({
           <div className="split-week-progress__actions">
             <button
               type="button"
-              className={`btn${weekDone ? ' btn-ghost' : ' btn-primary'} split-week-done-btn`}
+              className={`btn${weekDone ? ' btn-ghost' : ' calc-test__submit'} split-week-done-btn`}
               onClick={() => onToggleWeekDone(previewWeek)}
               aria-pressed={weekDone}>
               {weekDone
@@ -157,6 +168,8 @@ export function SplitPreview({
             exercises={exercises}
             hideWeights={hideWeights}
             variant="split-preview"
+            persistedBlocks={blocksForDay(split, dayDef.dayNumber)}
+            onSetModeChange={onSetModeChange ? (dayNumber, blockId, mode, cluster) => onSetModeChange(dayNumber as 1 | 2 | 3 | 4, blockId, mode, cluster) : undefined}
           />
         ))}
 

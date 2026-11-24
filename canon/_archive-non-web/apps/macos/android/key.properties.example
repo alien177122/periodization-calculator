@@ -1,4 +1,0 @@
-storeFile=app/release.keystore
-storePassword=CHANGE_ME
-keyAlias=release
-keyPassword=CHANGE_ME

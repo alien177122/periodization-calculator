@@ -1,0 +1,71 @@
+/* S2: одна вкладка «Тренировка» — переключатель режимов Программа / Конструктор */
+
+.split-tab {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.split-mode-switch {
+  align-self: center;
+  background: var(--surface);
+  border: var(--border-width) solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  display: grid;
+  gap: var(--space-1);
+  grid-template-columns: repeat(2, 1fr);
+  margin-inline: auto;
+  max-width: 480px;
+  padding: var(--space-1);
+  width: 100%;
+}
+
+.split-mode-switch__btn {
+  background: none;
+  border: 0;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: var(--type-14);
+  font-weight: 600;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  transition:
+    background-color var(--duration-micro) var(--ease-out),
+    color var(--duration-micro) var(--ease-out);
+}
+
+.split-mode-switch__btn.is-active {
+  background: var(--surface-raised);
+  color: var(--text);
+}
+
+.split-mode-switch__btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.split-tab__body {
+  min-width: 0;
+}
+
+.split-mode-switch--compact {
+  display: flex;
+  gap: var(--space-2);
+  grid-template-columns: none;
+  max-width: none;
+  justify-content: flex-end;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.split-mode-switch--compact .split-mode-switch__btn {
+  flex: 0 0 auto;
+  min-width: 0;
+  padding: 0 var(--space-4);
+  background: var(--surface-raised);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-md);
+}

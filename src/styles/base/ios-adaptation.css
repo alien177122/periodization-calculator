@@ -2,11 +2,11 @@
 
 :root {
   --font-system:
-    'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', system-ui,
-    sans-serif;
+    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', system-ui, sans-serif;
   --type-12: 12px;
   --type-14: 14px;
   --type-16: 16px;
+  --type-18: 18px;
   --type-20: 20px;
   --type-24: 24px;
   --type-32: 32px;
@@ -212,7 +212,7 @@ body {
   border-radius: var(--radius-sm);
   background: var(--surface-raised);
   border: var(--border-width) solid var(--red);
-  color: #ffdede;
+  color: var(--toast-error-text, #ffdede);
   font-size: var(--type-14);
   font-weight: 500;
   line-height: 20px;

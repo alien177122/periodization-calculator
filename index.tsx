@@ -2,7 +2,6 @@ import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 import './src/styles/main.css';
 import './src/styles/components/auth/auth-canvas-lock.css';
-import {initEruda} from './src/platform/initEruda';
 import {initTheme} from './src/theme/initTheme';
 import App from './App.tsx';
 
@@ -16,7 +15,9 @@ window.addEventListener('vite:preloadError', event => {
 });
 
 initTheme();
-void initEruda();
+if (import.meta.env.DEV) {
+  void import('./src/platform/initEruda').then(mod => mod.initEruda());
+}
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

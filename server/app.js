@@ -16,11 +16,16 @@ import {applyJournalDemoSeed} from './journalDemoSeed.js';
 import {computeOneRm, mapHistoryRow, validateCalculationBody} from './calculations.js';
 import {
   applyWebhookToDb,
+  CHECKOUT_CLIENT_ERROR,
   createInternalPaymentId,
   createPlategaCheckout,
   parsePlategaWebhookBody,
   verifyPlategaWebhookHeaders,
 } from './billing.js';
+
+const USERNAME_MAX_LENGTH = 32;
+const JWT_SIGN_OPTIONS = {algorithm: 'HS256'};
+const JWT_VERIFY_OPTIONS = {algorithms: ['HS256']};
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, '..', 'dist');
@@ -29,12 +34,34 @@ function normalizedName(req) {
   return typeof req.body?.name === 'string' ? req.body.name.trim().toLowerCase() : '';
 }
 
+function isLocalProxyAddr(ip) {
+  // Loopback + RFC1918/ULA: the cloudflared tunnel or a local reverse proxy
+  // terminates here, so only then cf-connecting-ip may be considered.
+  const normalized = String(ip || '')
+    .trim()
+    .toLowerCase()
+    .replace(/^::ffff:/, '');
+  return (
+    normalized === '::1' ||
+    normalized === '127.0.0.1' ||
+    normalized.startsWith('fc') ||
+    normalized.startsWith('fd') ||
+    /^10\./.test(normalized) ||
+    /^192\.168\./.test(normalized) ||
+    /^172\.(1[6-9]|2\d|3[01])\./.test(normalized)
+  );
+}
+
 function requestIp(req) {
-  if (req.app && req.app.get('trust proxy')) {
-    const cfIp = req.headers['cf-connecting-ip'];
-    if (typeof cfIp === 'string' && cfIp.trim()) return cfIp.trim();
-  }
-  return req.ip || req.socket.remoteAddress || '127.0.0.1';
+  // Audit WC-13 (CWE-290): cf-connecting-ip is attacker-controlled unless the
+  // direct peer is our own local/tunnel proxy. Use the raw socket address as
+  // the gate; for direct clients ignore req.ip too (X-Forwarded-For could be
+  // spoofed under trust proxy) and rate-limit on the real socket address.
+  const socketIp = req.socket.remoteAddress || req.ip || '127.0.0.1';
+  if (!req.app?.get('trust proxy') || !isLocalProxyAddr(socketIp)) return socketIp;
+  const cfIp = req.headers['cf-connecting-ip'];
+  if (typeof cfIp === 'string' && cfIp.trim()) return cfIp.trim();
+  return req.ip || socketIp;
 }
 
 function isLoopbackIp(ip) {
@@ -114,33 +141,16 @@ export function createApp({
   env = process.env,
   db = createDb({env}),
   enableStatic = existsSync(distDir),
+  fetchImpl = fetch,
 } = {}) {
   const config = getServerConfig(env);
-  // #region agent log
-  fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-    body: JSON.stringify({
-      sessionId: '8ed724',
-      runId: 'initial',
-      hypothesisId: 'H2,H4',
-      location: 'server/app.js:113',
-      message: 'server security configuration',
-      data: {
-        isDevelopment: config.isDevelopment,
-        hasExplicitJwtSecret: Boolean(env.JWT_SECRET?.trim()),
-        corsOriginsCount: config.corsOrigins.length,
-        fileWorkspaceEnabled: config.enableFileWorkspace,
-        trustProxyConfigured: env.TRUST_PROXY === '1' || env.TRUST_PROXY === 'true',
-      },
-      timestamp: Date.now(),
-    }),
-  }).catch(() => {});
-  // #endregion
   const app = express();
+  app.disable('x-powered-by');
 
   if (env.TRUST_PROXY === '1' || env.TRUST_PROXY === 'true') {
-    app.set('trust proxy', true);
+    // Audit WC-13: trust exactly one proxy hop (the local tunnel/reverse
+    // proxy), not the whole X-Forwarded-For chain.
+    app.set('trust proxy', 1);
   }
 
   const fileWorkspace = createFileWorkspace({env});
@@ -168,105 +178,36 @@ export function createApp({
   app.use(express.json({limit: '256kb'}));
   app.use(securityHeaders(config));
 
-  if (config.enableFileWorkspace) {
-    void fileWorkspace.ensureWorkspace();
-  }
-
   function authAny(req, res, next) {
     const token = req.headers.authorization?.split(' ')[1];
     if (!token) {
-      // #region agent log
-      fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-        body: JSON.stringify({
-          sessionId: '8ed724',
-          runId: 'initial',
-          hypothesisId: 'H1,H2',
-          location: 'server/app.js:151',
-          message: 'protected request missing bearer token',
-          data: {path: req.path, method: req.method},
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
-      return res.status(401).json({error: 'Нет токена'});
+      return res.status(401).json({error: 'Нет токена. Войди заново.'});
     }
 
     try {
-      const payload = jwt.verify(token, config.jwtSecret);
+      const payload = jwt.verify(token, config.jwtSecret, JWT_VERIFY_OPTIONS);
       const name = typeof payload?.name === 'string' ? payload.name : '';
-      if (!name) return res.status(401).json({error: 'Токен недействителен'});
+      if (!name) return res.status(401).json({error: 'Сессия недействительна. Войди заново.'});
 
       const tokenVersion = Number(payload.tv);
       const currentVersion = db.getTokenVersion(name);
       if (currentVersion === null) {
-        return res.status(401).json({error: 'Токен недействителен'});
+        return res.status(401).json({error: 'Сессия недействительна. Войди заново.'});
       }
-      // #region agent log
-      fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-        body: JSON.stringify({
-          sessionId: '8ed724',
-          runId: 'initial',
-          hypothesisId: 'H1,H2',
-          location: 'server/app.js:168',
-          message: 'jwt verified and token version checked',
-          data: {
-            path: req.path,
-            method: req.method,
-            tokenVersionFinite: Number.isFinite(tokenVersion),
-            tokenVersionMatches: tokenVersion === currentVersion,
-          },
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
       if (!Number.isFinite(tokenVersion) || tokenVersion !== currentVersion) {
-        return res.status(401).json({error: 'Токен недействителен'});
+        return res.status(401).json({error: 'Сессия недействительна. Войди заново.'});
       }
 
       req.user = {name, tv: currentVersion};
       next();
     } catch {
-      // #region agent log
-      fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-        body: JSON.stringify({
-          sessionId: '8ed724',
-          runId: 'initial',
-          hypothesisId: 'H2',
-          location: 'server/app.js:177',
-          message: 'jwt verification rejected token',
-          data: {path: req.path, method: req.method},
-          timestamp: Date.now(),
-        }),
-      }).catch(() => {});
-      // #endregion
-      res.status(401).json({error: 'Токен недействителен'});
+      res.status(401).json({error: 'Сессия недействительна. Войди заново.'});
     }
   }
 
   function auth(req, res, next) {
     authAny(req, res, () => {
       if (req.user.name !== req.params.name) {
-        // #region agent log
-        fetch('http://127.0.0.1:7373/ingest/c92f3132-d363-48dd-83d0-fea11bddc1f0', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json', 'X-Debug-Session-Id': '8ed724'},
-          body: JSON.stringify({
-            sessionId: '8ed724',
-            runId: 'initial',
-            hypothesisId: 'H1',
-            location: 'server/app.js:188',
-            message: 'authorization subject does not match route subject',
-            data: {path: req.path, method: req.method},
-            timestamp: Date.now(),
-          }),
-        }).catch(() => {});
-        // #endregion
         res.status(403).json({error: 'Доступ запрещён'});
         return;
       }
@@ -284,6 +225,7 @@ export function createApp({
 
   function signAccessToken(name, tokenVersion) {
     return jwt.sign({name, tv: tokenVersion}, config.jwtSecret, {
+      ...JWT_SIGN_OPTIONS,
       expiresIn: config.jwtExpiresIn,
     });
   }
@@ -300,26 +242,34 @@ export function createApp({
   app.post('/api/auth/register', registerIpLimiter, registerNameLimiter, async (req, res) => {
     const {name, password} = req.body;
     if (!name?.trim() || !password) return res.status(400).json({error: 'Заполни все поля'});
-    if (name.trim().length < 2) return res.status(400).json({error: 'Имя минимум 2 символа'});
+    const trimmedName = name.trim();
+    if (trimmedName.length < 2) return res.status(400).json({error: 'Имя минимум 2 символа'});
+    if (trimmedName.length > USERNAME_MAX_LENGTH) {
+      return res.status(400).json({error: `Имя не длиннее ${USERNAME_MAX_LENGTH} символов`});
+    }
     const policyError = passwordPolicyError(password);
     if (policyError) return res.status(400).json({error: policyError});
-    if (db.userExists(name.trim()))
-      return res.status(409).json({error: 'Пользователь уже существует'});
+    if (db.userExists(trimmedName))
+      return res.status(409).json({error: 'Такое имя уже занято. Придумай другое.'});
 
     const hash = await bcrypt.hash(password, 10);
-    db.createUser(name.trim(), hash);
+    db.createUser(trimmedName, hash);
     resetLimiters(req, 'register', registerIpLimiter, registerNameLimiter);
-    const token = signAccessToken(name.trim(), 0);
-    res.json({token, name: name.trim()});
+    const token = signAccessToken(trimmedName, 0);
+    res.json({token, name: trimmedName});
   });
 
   // Fixed bcrypt hash for timing parity when user is missing (not a real password).
   const LOGIN_DUMMY_HASH = '$2b$10$w1wsmd0bMGWpp2QdTT3Td.lADekYlXEFrxYKU39XTEk9xqWQrcrY2';
-  const LOGIN_ERROR = 'Неверный логин или пароль';
+  const LOGIN_ERROR = 'Неверное имя пользователя или пароль. Проверь написание и попробуй снова.';
 
   app.post('/api/auth/login', loginIpLimiter, loginNameLimiter, async (req, res) => {
     const {name, password} = req.body;
     if (!name?.trim() || !password) return res.status(400).json({error: 'Заполни все поля'});
+    // Same cap as register — reject before touching bcrypt (DoS via long input).
+    if (name.trim().length > USERNAME_MAX_LENGTH) {
+      return res.status(400).json({error: `Имя не длиннее ${USERNAME_MAX_LENGTH} символов`});
+    }
 
     const row = db.getUserAuth(name.trim());
     const hash = row?.password_hash || LOGIN_DUMMY_HASH;
@@ -388,6 +338,7 @@ export function createApp({
         config,
         userName: req.user.name,
         paymentId,
+        fetchImpl,
       });
 
       db.updateBillingPaymentStatus(paymentId, 'PENDING', checkout.transactionId);
@@ -396,10 +347,8 @@ export function createApp({
         transactionId: checkout.transactionId,
         paymentUrl: checkout.paymentUrl,
       });
-    } catch (error) {
-      res.status(502).json({
-        error: error instanceof Error ? error.message : 'Не удалось создать платёж',
-      });
+    } catch {
+      res.status(502).json({error: CHECKOUT_CLIENT_ERROR});
     }
   });
 
@@ -416,7 +365,11 @@ export function createApp({
       return res.status(400).json({error: parsed.error});
     }
 
-    applyWebhookToDb(db, parsed, config);
+    const result = applyWebhookToDb(db, parsed, config);
+    if (!result.ok) {
+      const status = result.reason === 'payment_not_found' ? 404 : 400;
+      return res.status(status).json({error: result.reason});
+    }
     res.json({ok: true});
   });
 
@@ -467,12 +420,12 @@ export function createApp({
     };
   }
 
-  app.get('/api/files/workspace', authAny, requireFileWorkspace, async (_req, res) => {
-    res.json(await fileWorkspace.listFiles());
+  app.get('/api/files/workspace', authAny, requireFileWorkspace, async (req, res) => {
+    res.json(await fileWorkspace.listFiles(req.user.name));
   });
 
-  app.post('/api/files/workspace/analyze', authAny, requireFileWorkspace, async (_req, res) => {
-    res.json(await fileWorkspace.analyzeAllFiles());
+  app.post('/api/files/workspace/analyze', authAny, requireFileWorkspace, async (req, res) => {
+    res.json(await fileWorkspace.analyzeAllFiles(req.user.name));
   });
 
   app.post(
@@ -481,13 +434,15 @@ export function createApp({
     requireFileWorkspace,
     async (req, res) => {
       try {
-        await fileWorkspace.analyzeFile(req.params.name);
-        res.json(await fileWorkspace.listFiles());
+        await fileWorkspace.analyzeFile(req.params.name, req.user.name);
+        res.json(await fileWorkspace.listFiles(req.user.name));
       } catch (err) {
         if (err instanceof Error && err.message.includes('Access denied')) {
           res.status(400).json({error: err.message});
         } else {
-          res.status(500).json({error: 'Ошибка при анализе файла'});
+          res
+            .status(500)
+            .json({error: 'Не удалось разобрать файл. Проверь формат и попробуй ещё раз.'});
         }
       }
     },

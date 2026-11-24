@@ -20,7 +20,7 @@ export const HeroSection = memo(function HeroSection({
   onTitleClick,
   className,
 }: HeroSectionProps) {
-  const compact = tab === 'calculator';
+  const compact = false;
   const headerClass = `theory-hero app-hero app-hero--live app-hero--enter${
     compact ? ' app-hero--compact' : ''
   }${className ? ` ${className}` : ''}`;

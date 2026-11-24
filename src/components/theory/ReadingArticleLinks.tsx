@@ -47,11 +47,11 @@ export function ReadingArticleLinks({
         <a className="ta-lesson-source__link" href={permalink}>
           Ссылка на эту статью
         </a>
-        <AppTabLink tab="training" ariaLabel="Открыть вкладку Тренировка">
+        <AppTabLink tab="split" ariaLabel="Открыть вкладку Тренировка">
           Тренировка
         </AppTabLink>
-        <AppTabLink tab="calculator" ariaLabel="Открыть вкладку Калькулятор">
-          Калькулятор
+        <AppTabLink tab="split" view="breakdown" ariaLabel="Открыть разбор упражнения">
+          Разбор
         </AppTabLink>
       </aside>
 

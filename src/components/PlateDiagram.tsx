@@ -39,7 +39,7 @@ function buildPieces(plates: number[], side: 'left' | 'right'): PlatePiece[] {
     const width = plateWidth(weight)
     const height = plateHeight(weight)
     const x = side === 'left' ? collarX - offset - width : collarX + offset
-    offset += width + 2
+    offset += width
     return { weight, x, y: 60 - height / 2, width, height, side, delay: index * 80 }
   })
 }

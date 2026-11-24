@@ -1,0 +1,1147 @@
+{
+ "version": "6.9",
+ "hitCount": 5,
+ "request": {
+  "queryString": "(ABSTRACT:\"momentary muscular failure\" AND ABSTRACT:(hypertrophy OR strength))AND (PUB_YEAR:[2015 TO 2026])AND (PUB_TYPE:\"Meta-Analysis\" OR PUB_TYPE:\"Systematic Review\" OR PUB_TYPE:\"Review\")",
+  "resultType": "core",
+  "cursorMark": "*",
+  "pageSize": 25,
+  "sort": "",
+  "synonym": false
+ },
+ "resultList": {
+  "result": [
+   {
+    "id": "36334240",
+    "source": "MED",
+    "pmid": "36334240",
+    "pmcid": "PMC9935748",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC9935748"
+     ]
+    },
+    "doi": "10.1007/s40279-022-01784-y",
+    "title": "Influence of Resistance Training Proximity-to-Failure on Skeletal Muscle Hypertrophy: A Systematic Review with Meta-analysis.",
+    "authorString": "Refalo MC, Helms ER, Trexler ET, Hamilton DL, Fyfe JJ.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Refalo MC",
+       "lastName": "Refalo",
+       "firstName": "Martin C",
+       "initials": "MC",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3755-6216"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Sport Research (CSR), School of Exercise and Nutrition Sciences, Deakin University, Geelong, VIC, Australia. mrefalo@deakin.edu.au."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Helms ER",
+       "lastName": "Helms",
+       "firstName": "Eric R",
+       "initials": "ER",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4849-9336"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport Performance Research Institute New Zealand (SPRINZ), Auckland University of Technology, Auckland, New Zealand."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Trexler ET",
+       "lastName": "Trexler",
+       "firstName": "Eric T",
+       "initials": "ET",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Trexler Fitness LLC, Raleigh, NC, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hamilton DL",
+       "lastName": "Hamilton",
+       "firstName": "D Lee",
+       "initials": "DL",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute for Physical Activity and Nutrition (IPAN), School of Exercise and Nutrition Sciences, Deakin University, Geelong, VIC, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Fyfe JJ",
+       "lastName": "Fyfe",
+       "firstName": "Jackson J",
+       "initials": "JJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9541-2336"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute for Physical Activity and Nutrition (IPAN), School of Exercise and Nutrition Sciences, Deakin University, Geelong, VIC, Australia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4849-9336"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9541-2336"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3755-6216"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics",
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "3",
+     "volume": "53",
+     "journalIssueId": 3508237,
+     "dateOfPublication": "2023 Mar",
+     "monthOfPublication": 3,
+     "yearOfPublication": 2023,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2023-03-01"
+    },
+    "pubYear": "2023",
+    "pageInfo": "649-665",
+    "abstractText": "<h4>Background and objective</h4>This systematic review with meta-analysis investigated the influence of resistance training proximity-to-failure on muscle hypertrophy.<h4>Methods</h4>Literature searches in the PubMed, SCOPUS and SPORTDiscus databases identified a total of 15 studies that measured muscle hypertrophy (in healthy adults of any age and resistance training experience) and compared resistance training performed to: (A) momentary muscular failure versus non-failure; (B) set failure (defined as anything other than momentary muscular failure) versus non-failure; or (C) different velocity loss thresholds.<h4>Results</h4>There was a trivial advantage for resistance training performed to set failure versus non-failure for muscle hypertrophy in studies applying any definition of set failure [effect size=0.19 (95% confidence interval 0.00, 0.37), p=0.045], with no moderating effect of volume load (p=0.884) or relative load (p=0.525). Given the variability in set failure definitions applied across studies, sub-group analyses were conducted and found no advantage for either resistance training performed to momentary muscular failure versus non-failure for muscle hypertrophy [effect size=0.12 (95% confidence interval -0.13, 0.37), p=0.343], or for resistance training performed to high (>25%) versus moderate (20-25%) velocity loss thresholds [effect size=0.08 (95% confidence interval -0.16, 0.32), p=0.529].<h4>Conclusion</h4>Overall, our main findings suggest that (i) there is no evidence to support that resistance training performed to momentary muscular failure is superior to non-failure resistance training for muscle hypertrophy and (ii) higher velocity loss thresholds, and theoretically closer proximities-to-failure do not always elicit greater muscle hypertrophy. As such, these results provide evidence for a potential non-linear relationship between proximity-to-failure and muscle hypertrophy.",
+    "affiliation": "Centre for Sport Research (CSR), School of Exercise and Nutrition Sciences, Deakin University, Geelong, VIC, Australia. mrefalo@deakin.edu.au.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "review-article",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "Deakin University",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-022-01784-y"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9935748"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC9935748?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 32,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "Y",
+    "hasLabsLinks": "Y",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2023-02-22",
+    "dateOfCreation": "2022-11-05",
+    "dateOfRevision": "2023-10-22",
+    "electronicPublicationDate": "2022-11-05",
+    "firstPublicationDate": "2022-11-05",
+    "firstIndexDate": "2022-11-06",
+    "fullTextReceivedDate": "2025-02-04",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "35658845",
+    "source": "MED",
+    "pmid": "35658845",
+    "doi": "10.1080/02640414.2022.2080165",
+    "title": "Towards an improved understanding of proximity-to-failure in resistance training and its influence on skeletal muscle hypertrophy, neuromuscular fatigue, muscle damage, and perceived discomfort: A scoping review.",
+    "authorString": "Refalo MC, Helms ER, Hamilton DL, Fyfe JJ.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Refalo MC",
+       "lastName": "Refalo",
+       "firstName": "Martin C",
+       "initials": "MC",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0003-3755-6216"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Sport Research (CSR), School of Exercise and Nutrition Sciences, Deakin University, Geelong, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Helms ER",
+       "lastName": "Helms",
+       "firstName": "Eric R",
+       "initials": "ER",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-4849-9336"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Sport Performance Research Institute New Zealand (SPRINZ), Auckland University of Technology, Auckland, New Zealand."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Hamilton DL",
+       "lastName": "Hamilton",
+       "firstName": "D Lee",
+       "initials": "DL",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-5620-4788"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Exercise and Nutrition Sciences, Institute for Physical Activity and Nutrition (IPAN), Deakin University, Geelong, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Fyfe JJ",
+       "lastName": "Fyfe",
+       "firstName": "Jackson J",
+       "initials": "JJ",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9541-2336"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Exercise and Nutrition Sciences, Institute for Physical Activity and Nutrition (IPAN), Deakin University, Geelong, Australia."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-4849-9336"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-5620-4788"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9541-2336"
+      },
+      {
+       "type": "ORCID",
+       "value": "0000-0003-3755-6216"
+      }
+     ]
+    },
+    "journalInfo": {
+     "issue": "12",
+     "volume": "40",
+     "journalIssueId": 3408631,
+     "dateOfPublication": "2022 Jun",
+     "monthOfPublication": 6,
+     "yearOfPublication": 2022,
+     "journal": {
+      "medlineAbbreviation": "J Sports Sci",
+      "title": "Journal of sports sciences",
+      "essn": "1466-447X",
+      "issn": "0264-0414",
+      "isoabbreviation": "J Sports Sci",
+      "nlmid": "8405364"
+     },
+     "printPublicationDate": "2022-06-01"
+    },
+    "pubYear": "2022",
+    "pageInfo": "1369-1391",
+    "abstractText": "While proximity-to-failure is considered an important resistance training (RT) prescription variable, its influence on physiological adaptations and short-term responses to RT is uncertain. Given the ambiguity in the literature, a scoping review was undertaken to summarise evidence for the influence of proximity-to-failure on muscle hypertrophy, neuromuscular fatigue, muscle damage and perceived discomfort. Literature searching was performed according to PRISMA-ScR guidelines and identified three themes of studies comparing either: i) RT performed to momentary muscular failure versus non-failure, ii) RT performed to set failure (defined as anything other than momentary muscular failure) versus non-failure, and iii) RT performed to different velocity loss thresholds. The findings highlight that no consensus definition for \"failure\" exists in the literature, and the proximity-to-failure achieved in \"non-failure\" conditions is often ambiguous and variable across studies. This poses challenges when deriving practical recommendations for manipulating proximity-to-failure in RT to achieve desired outcomes. Based on the limited available evidence, RT to set failure is likely not superior to non-failure RT for inducing muscle hypertrophy, but may exacerbate neuromuscular fatigue, muscle damage, and post-set perceived discomfort versus non-failure RT. Together, these factors may impair post-exercise recovery and subsequent performance, and may also negatively influence long-term adherence to RT.<b>KEY POINTS</b> This scoping review identified three broad themes of studies investigating proximity-to-failure in RT, based on the specific definition of set failure used (and therefore the research question being examined), to improve the validity of study comparisons and interpretations.There is no consensus definition for set failure in RT, and the proximity-to-failure achieved during non-failure RT is often unclear and varies both within and between studies, which together poses challenges when interpreting study findings and deriving practical recommendations regarding the influence of RT proximity-to-failure on muscle hypertrophy and other short-term responses.Based on the limited available evidence, performing RT to set failure is likely not superior to non-failure RT to maximise muscle hypertrophy, but the optimal proximity to failure in RT for muscle hypertrophy is unclear and may be moderated by other RT variables (e.g., load, volume-load). Also, RT performed to set failure likely induces greater neuromuscular fatigue, muscle damage, and perceived discomfort than non-failure RT, which may negatively influence RT performance, post-RT recovery, and long-term adherence.",
+    "affiliation": "Centre for Sport Research (CSR), School of Exercise and Nutrition Sciences, Deakin University, Geelong, Australia.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Scoping Review",
+      "Journal Article"
+     ]
+    },
+    "grantsList": {
+     "grant": [
+      {
+       "agency": "The author(s) reported there is no funding associated with the work featured in this article",
+       "orderIn": 0
+      }
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Fatigue"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "AE",
+          "qualifierName": "adverse effects"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "keywordList": {
+     "keyword": [
+      "hypertrophy",
+      "Fatigue",
+      "Failure",
+      "Proximity-to-failure",
+      "Non-failure"
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1080/02640414.2022.2080165"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 31,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2022-08-18",
+    "dateOfCreation": "2022-06-06",
+    "dateOfRevision": "2025-07-28",
+    "electronicPublicationDate": "2022-06-05",
+    "firstPublicationDate": "2022-06-05",
+    "firstIndexDate": "2022-06-07",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "28834797",
+    "source": "MED",
+    "pmid": "28834797",
+    "doi": "10.1519/jsc.0000000000002200",
+    "title": "Strength and Hypertrophy Adaptations Between Low- vs. High-Load Resistance Training: A Systematic Review and Meta-analysis.",
+    "authorString": "Schoenfeld BJ, Grgic J, Ogborn D, Krieger JW.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Schoenfeld BJ",
+       "lastName": "Schoenfeld",
+       "firstName": "Brad J",
+       "initials": "BJ",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Department of Health Science, Lehman College, Bronx, New York."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Grgic J",
+       "lastName": "Grgic",
+       "firstName": "Jozo",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-6929-2844"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Institute of Sport, Exercise and Active Living (ISEAL), Victoria University, Melbourne, Australia."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Ogborn D",
+       "lastName": "Ogborn",
+       "firstName": "Dan",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Ogborn Research & Consulting, Winnipeg, Manitoba, Canada."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Krieger JW",
+       "lastName": "Krieger",
+       "firstName": "James W",
+       "initials": "JW",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Weightology, LLC, Issaquah, Washington."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-6929-2844"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "12",
+     "volume": "31",
+     "journalIssueId": 2622469,
+     "dateOfPublication": "2017 Dec",
+     "monthOfPublication": 12,
+     "yearOfPublication": 2017,
+     "journal": {
+      "medlineAbbreviation": "J Strength Cond Res",
+      "title": "Journal of strength and conditioning research",
+      "essn": "1533-4287",
+      "issn": "1064-8011",
+      "isoabbreviation": "J Strength Cond Res",
+      "nlmid": "9415084"
+     },
+     "printPublicationDate": "2017-12-01"
+    },
+    "pubYear": "2017",
+    "pageInfo": "3508-3523",
+    "abstractText": "Schoenfeld, BJ, Grgic, J, Ogborn, D, and Krieger, JW. Strength and hypertrophy adaptations between low- vs. high-load resistance training: a systematic review and meta-analysis. J Strength Cond Res 31(12): 3508-3523, 2017-The purpose of this article was to conduct a systematic review of the current body of literature and a meta-analysis to compare changes in strength and hypertrophy between low- vs. high-load resistance training protocols. Searches of PubMed/MEDLINE, Cochrane Library, and Scopus were conducted for studies that met the following criteria: (a) an experimental trial involving both low-load training [≤60% 1 repetition maximum (1RM)] and high-load training (>60% 1RM); (b) with all sets in the training protocols being performed to momentary muscular failure; (c) at least one method of estimating changes in muscle mass or dynamic, isometric, or isokinetic strength was used; (d) the training protocol lasted for a minimum of 6 weeks; (e) the study involved participants with no known medical conditions or injuries impairing training capacity. A total of 21 studies were ultimately included for analysis. Gains in 1RM strength were significantly greater in favor of high- vs. low-load training, whereas no significant differences were found for isometric strength between conditions. Changes in measures of muscle hypertrophy were similar between conditions. The findings indicate that maximal strength benefits are obtained from the use of heavy loads while muscle hypertrophy can be equally achieved across a spectrum of loading ranges.",
+    "affiliation": "Department of Health Science, Lehman College, Bronx, New York.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "Meta-Analysis",
+      "Systematic Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle, Skeletal",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Hypertrophy"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Adaptation, Physiological",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Muscle Strength",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Resistance Training",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1519/JSC.0000000000002200"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 525,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2018-06-04",
+    "dateOfCreation": "2017-08-24",
+    "dateOfRevision": "2025-06-23",
+    "firstPublicationDate": "2017-12-01",
+    "firstIndexDate": "2017-08-24",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "26758462",
+    "source": "MED",
+    "pmid": "26758462",
+    "pmcid": "PMC4887540",
+    "fullTextIdList": {
+     "fullTextId": [
+      "PMC4887540"
+     ]
+    },
+    "doi": "10.1007/s40279-015-0460-2",
+    "title": "Understanding and Overcoming the Sticking Point in Resistance Exercise.",
+    "authorString": "Kompf J, Arandjelović O.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Kompf J",
+       "lastName": "Kompf",
+       "firstName": "Justin",
+       "initials": "J",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Kinesiology Department, Park Center, State University of New York at Cortland, Cortland, NY, 13045, USA."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Arandjelović O",
+       "lastName": "Arandjelović",
+       "firstName": "Ognjen",
+       "initials": "O",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-9314-194X"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "School of Computer Science, St Andrews University, St Andrews, Fife, KY16 9SX, Scotland, UK. ognjen.arandjelovic@gmail.com."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-9314-194X"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "supporting_data"
+     ]
+    },
+    "journalInfo": {
+     "issue": "6",
+     "volume": "46",
+     "journalIssueId": 2413547,
+     "dateOfPublication": "2016 Jun",
+     "monthOfPublication": 6,
+     "yearOfPublication": 2016,
+     "journal": {
+      "medlineAbbreviation": "Sports Med",
+      "title": "Sports medicine (Auckland, N.Z.)",
+      "essn": "1179-2035",
+      "issn": "0112-1642",
+      "isoabbreviation": "Sports Med",
+      "nlmid": "8412297"
+     },
+     "printPublicationDate": "2016-06-01"
+    },
+    "pubYear": "2016",
+    "pageInfo": "751-762",
+    "abstractText": "In the context of resistance training the so-called \"sticking point\" is commonly understood as the position in a lift in which a disproportionately large increase in the difficulty to continue the lift is experienced. If the lift is taken to the point of momentary muscular failure, the sticking point is usually where the failure occurs. Hence the sticking point is associated with an increased chance of exercise form deterioration or breakdown. Understanding the mechanisms that lead to the occurrence of sticking points as well as different training strategies that can be used to overcome them is important to strength practitioners (trainees and coaches alike) and instrumental for the avoidance of injury and continued progress. In this article we survey and consolidate the body of existing research on the topic: we discuss different definitions of the sticking point adopted in the literature and propose a more precise definition, describe different muscular and biomechanical aspects that give rise to sticking points, and review the effectiveness of different training modalities used to address them.",
+    "affiliation": "Kinesiology Department, Park Center, State University of New York at Cortland, Cortland, NY, 13045, USA.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print",
+    "pubTypeList": {
+     "pubType": [
+      "review-article",
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Weight Lifting",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "N",
+          "abbreviation": "PH",
+          "qualifierName": "physiology"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Biomechanical Phenomena"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Physical Conditioning, Human",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "MT",
+          "qualifierName": "methods"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1007/s40279-015-0460-2"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "html",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC4887540"
+      },
+      {
+       "availability": "Open access",
+       "availabilityCode": "OA",
+       "documentStyle": "pdf",
+       "site": "Europe_PMC",
+       "url": "https://europepmc.org/articles/PMC4887540?pdf=render"
+      }
+     ]
+    },
+    "isOpenAccess": "Y",
+    "inEPMC": "Y",
+    "inPMC": "Y",
+    "citedByCount": 59,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "Y",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "N",
+    "hasData": "Y",
+    "license": "cc by",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "Y",
+    "tmAccessionTypeList": {
+     "accessionType": [
+      "doi"
+     ]
+    },
+    "dateOfCompletion": "2017-04-06",
+    "dateOfCreation": "2016-01-14",
+    "dateOfRevision": "2024-03-25",
+    "firstPublicationDate": "2016-06-01",
+    "firstIndexDate": "2016-01-14",
+    "fullTextReceivedDate": "2020-07-10",
+    "hasEvaluations": "N"
+   },
+   {
+    "id": "25452128",
+    "source": "MED",
+    "pmid": "25452128",
+    "doi": "10.1016/j.pmrj.2014.10.009",
+    "title": "A review of the clinical value of isolated lumbar extension resistance training for chronic low back pain.",
+    "authorString": "Steele J, Bruce-Low S, Smith D.",
+    "authorList": {
+     "author": [
+      {
+       "fullName": "Steele J",
+       "lastName": "Steele",
+       "firstName": "James",
+       "initials": "J",
+       "authorId": {
+        "type": "ORCID",
+        "value": "0000-0002-8003-0757"
+       },
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Health, Exercise and Sport Science, Southampton Solent University, East Park Terrace, Southampton, Hampshire SO14 0YN, UK∗. Electronic address: james.steele@solent.ac.uk."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Bruce-Low S",
+       "lastName": "Bruce-Low",
+       "firstName": "Stewart",
+       "initials": "S",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Health, Exercise and Sport Science, Southampton Solent University, Southampton, Hampshire, UK(†)."
+         }
+        ]
+       }
+      },
+      {
+       "fullName": "Smith D",
+       "lastName": "Smith",
+       "firstName": "Dave",
+       "initials": "D",
+       "authorAffiliationDetailsList": {
+        "authorAffiliation": [
+         {
+          "affiliation": "Centre for Health, Exercise and Sport Science, Southampton Solent University, Southampton, Hampshire, UK; Department of Exercise and Sport Science, Manchester Metropolitan University, Crewe, Cheshire, UK(‡)."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    "authorIdList": {
+     "authorId": [
+      {
+       "type": "ORCID",
+       "value": "0000-0002-8003-0757"
+      }
+     ]
+    },
+    "dataLinksTagsList": {
+     "dataLinkstag": [
+      "altmetrics"
+     ]
+    },
+    "journalInfo": {
+     "issue": "2",
+     "volume": "7",
+     "journalIssueId": 2256894,
+     "dateOfPublication": "2015 Feb",
+     "monthOfPublication": 2,
+     "yearOfPublication": 2015,
+     "journal": {
+      "medlineAbbreviation": "PM R",
+      "title": "PM & R : the journal of injury, function, and rehabilitation",
+      "essn": "1934-1563",
+      "issn": "1934-1482",
+      "isoabbreviation": "PM R",
+      "nlmid": "101491319"
+     },
+     "printPublicationDate": "2015-02-01"
+    },
+    "pubYear": "2015",
+    "pageInfo": "169-187",
+    "abstractText": "<h4>Objective</h4>Chronic low back pain (CLBP) is prevalent, costly, and acknowledged as multifactorial in nature. However, deconditioning of the lumbar extensor musculature may be a common factor. Thus specific resistance exercise is often recommended. Many resistance exercises for the lumbar extensors exist, although recent evidence suggests that isolated lumbar extension (ILEX) resistance training may best for conditioning these muscles. Thus this review aimed to examine the use of ILEX resistance training in participants with CLBP to provide a best-evidence synthesis for practitioners and clinicians.<h4>Literature survey</h4>Reference lists from previous reviews were searched in addition to SPORTDiscus, PubMed, and Google Scholar databases up to May 2014 using search terms including combinations and synonyms of \"isolation,\" \"lumbar extension,\" \"lumbar exercise,\" \"lumbar strength,\" \"lumbar endurance,\" \"lumbar spine,\" \"low back exercise,\" \"CLBP,\" \"pain,\" and \"disability.\"<h4>Methodology</h4>A \"snowballing\"-style literature search was used that involved an emergent approach. Studies examining ILEX resistance training as an intervention in symptomatic CLBP populations reporting pain, disability, or global perceived outcomes (GPO) as outcomes were examined. Pain and disability were outcomes and were compared to consensus guidelines for minimal clinically important changes. Single case reports were excluded.<h4>Synthesis</h4>Results suggest that ILEX resistance training produces significant and meaningful improvements in perceived pain, disability, and GPOs, as part of a multiple intervention or stand-alone approach. A low frequency (once per week) yet high intensity of effort (to momentary muscular failure) approach using either full or limited range-of-motion ILEX resistance training appears to be sufficient and best for significant and meaningful outcomes. Limited comparative studies between ILEX resistance training and other specific exercise approaches exist; however, only limited evidence supports ILEX resistance training as being more effective.<h4>Conclusions</h4>These findings highlight ILEX resistance training as effective for significant and meaningful improvements in perceived pain, disability, and GPOs for CLBP participants. Further research should elucidate comparisons between ILEX resistance training and other specific exercise approaches and should clarify whether lumbar extensor conditioning is the mechanism responsible for the improvements reported.",
+    "affiliation": "Centre for Health, Exercise and Sport Science, Southampton Solent University, East Park Terrace, Southampton, Hampshire SO14 0YN, UK∗. Electronic address: james.steele@solent.ac.uk.",
+    "publicationStatus": "ppublish",
+    "language": "eng",
+    "pubModel": "Print-Electronic",
+    "pubTypeList": {
+     "pubType": [
+      "Review",
+      "Journal Article"
+     ]
+    },
+    "meshHeadingList": {
+     "meshHeading": [
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Lumbar Vertebrae"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Humans"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Low Back Pain",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "RH",
+          "qualifierName": "rehabilitation"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Treatment Outcome"
+      },
+      {
+       "majorTopic_YN": "Y",
+       "descriptorName": "Resistance Training"
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Chronic Pain",
+       "meshQualifierList": {
+        "meshQualifier": [
+         {
+          "majorTopic_YN": "Y",
+          "abbreviation": "RH",
+          "qualifierName": "rehabilitation"
+         }
+        ]
+       }
+      },
+      {
+       "majorTopic_YN": "N",
+       "descriptorName": "Back Muscles"
+      }
+     ]
+    },
+    "subsetList": {
+     "subset": [
+      {
+       "code": "IM",
+       "name": "Index Medicus"
+      }
+     ]
+    },
+    "fullTextUrlList": {
+     "fullTextUrl": [
+      {
+       "availability": "Subscription required",
+       "availabilityCode": "S",
+       "documentStyle": "doi",
+       "site": "DOI",
+       "url": "https://doi.org/10.1016/j.pmrj.2014.10.009"
+      }
+     ]
+    },
+    "isOpenAccess": "N",
+    "inEPMC": "N",
+    "inPMC": "N",
+    "citedByCount": 45,
+    "hasReferences": "Y",
+    "hasTextMinedTerms": "Y",
+    "hasDbCrossReferences": "N",
+    "hasPDF": "N",
+    "hasBook": "N",
+    "hasSuppl": "N",
+    "hasLabsLinks": "Y",
+    "hasData": "N",
+    "authMan": "N",
+    "epmcAuthMan": "N",
+    "nihAuthMan": "N",
+    "hasTMAccessionNumbers": "N",
+    "dateOfCompletion": "2015-12-03",
+    "dateOfCreation": "2014-12-03",
+    "dateOfRevision": "2022-03-30",
+    "electronicPublicationDate": "2014-10-29",
+    "firstPublicationDate": "2014-10-29",
+    "firstIndexDate": "2014-12-03",
+    "hasEvaluations": "N"
+   }
+  ]
+ }
+}

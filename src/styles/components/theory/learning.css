@@ -1,0 +1,695 @@
+/* ============================================================
+   Learning layer (L3): route inside Theory + embedded self-study
+   Namespace: ta-learning / ta-view-switch, selfstudy ss-* inside panel
+   ============================================================ */
+
+.ta-view-switch-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 24px auto 0;
+  max-width: 1140px;
+  padding: 0 32px;
+  width: 100%;
+}
+
+.ta-view-switch {
+  background: color-mix(in srgb, var(--ta-text) 4%, transparent);
+  border: var(--border-width) solid var(--ta-border);
+  border-radius: var(--ta-radius-pill);
+  display: inline-grid;
+  gap: 4px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 4px;
+}
+
+.ta-view-switch__btn {
+  background: transparent;
+  border: 0;
+  border-radius: var(--ta-radius-pill);
+  color: var(--ta-text-muted);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 44px;
+  padding: 0 24px;
+  transition:
+    background-color 180ms var(--ta-ease-micro),
+    color 180ms var(--ta-ease-micro);
+  white-space: nowrap;
+}
+
+.ta-view-switch__btn:hover {
+  color: var(--ta-text);
+}
+
+.ta-view-switch__btn.is-active {
+  background: var(--ta-text);
+  color: var(--ta-surface);
+}
+
+.ta-view-switch__btn:focus-visible {
+  outline: 2px solid var(--ta-sec-01);
+  outline-offset: 2px;
+}
+
+/* ── Track ─────────────────────────────────────────────── */
+.ta-learning__head {
+  align-items: start;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  margin-bottom: 48px;
+}
+
+.ta-learning__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 760px;
+}
+
+.ta-learning__summary {
+  background: color-mix(in srgb, var(--ta-text) 3%, transparent);
+  border: var(--border-width) solid var(--ta-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.ta-learning__counter {
+  color: var(--ta-text-muted);
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.ta-learning__counter strong {
+  color: var(--ta-text);
+  font-family: var(--ta-display-font);
+  font-size: 28px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.ta-learning__meter {
+  background: color-mix(in srgb, var(--ta-text) 8%, transparent);
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.ta-learning__meter-fill {
+  background: var(--ta-sec-01);
+  display: block;
+  height: 100%;
+  transform-origin: left center;
+  transition: transform 400ms var(--ta-ease);
+}
+
+.ta-learning__read-note {
+  color: var(--ta-text-dim);
+  font-size: 14px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.ta-learning__continue {
+  align-items: center;
+  align-self: flex-start;
+  background: var(--ta-sec-01);
+  border: 0;
+  border-radius: var(--radius-md);
+  color: var(--ta-on-accent);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 8px;
+  min-height: 48px;
+  padding: 12px 24px;
+  text-align: center;
+  transition: transform 180ms var(--ta-ease-micro);
+}
+
+@media (max-width: 430px) {
+  .ta-learning__continue {
+    min-height: 44px;
+    padding: 10px 20px;
+  }
+}
+
+.ta-learning__continue:hover {
+  transform: translateY(-1px);
+}
+
+.ta-learning__continue:focus-visible {
+  outline: 2px solid var(--ta-sec-01);
+  outline-offset: 3px;
+}
+
+.ta-learning__phase {
+  --ta-learn-accent: var(--ta-sec-01);
+  margin-top: 32px;
+}
+
+.ta-learning__phase:first-of-type {
+  margin-top: 0;
+}
+
+.ta-learning__phase-head {
+  align-items: start;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.ta-learning__phase-num {
+  color: var(--ta-learn-accent);
+  flex: 0 0 auto;
+  font-family: var(--ta-display-font);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  min-width: 32px;
+}
+
+.ta-learning__phase-title {
+  color: var(--ta-text);
+  font-family: var(--ta-display-font);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.ta-learning__phase-lede {
+  color: var(--ta-text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 4px 0 0;
+}
+
+.ta-learning__list {
+  display: grid;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ta-learning__step {
+  align-items: center;
+  background: var(--ta-surface);
+  border: var(--border-width) solid var(--ta-border);
+  border-radius: var(--radius-md);
+  color: inherit;
+  cursor: pointer;
+  display: grid;
+  font-family: inherit;
+  gap: 4px 14px;
+  grid-template-areas: 'num body state';
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  min-height: 64px;
+  padding: 16px;
+  position: relative;
+  text-align: left;
+  transition:
+    background-color 180ms var(--ta-ease-micro),
+    border-color 180ms var(--ta-ease-micro),
+    transform 180ms var(--ta-ease-micro);
+  width: 100%;
+}
+
+.ta-learning__step:hover {
+  border-color: var(--ta-border-strong);
+  transform: translateY(-1px);
+}
+
+.ta-learning__step:focus-visible {
+  outline: 2px solid var(--ta-learn-accent);
+  outline-offset: 2px;
+}
+
+.ta-learning__step.is-active {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--ta-learn-accent) 8%, var(--ta-surface)),
+    var(--ta-surface)
+  );
+  border-color: var(--ta-learn-accent);
+}
+
+.ta-learning__step.is-locked {
+  opacity: 0.62;
+}
+
+.ta-learning__step-num {
+  align-items: center;
+  background: color-mix(in srgb, var(--ta-text) 5%, transparent);
+  border: var(--border-width) solid var(--ta-border);
+  border-radius: 12px;
+  color: var(--ta-text-muted);
+  display: inline-flex;
+  font-family: var(--ta-display-font);
+  font-size: 16px;
+  font-weight: 600;
+  grid-area: num;
+  height: 44px;
+  justify-content: center;
+  line-height: 1;
+  width: 44px;
+}
+
+.ta-learning__step.is-done .ta-learning__step-num {
+  background: color-mix(in srgb, var(--color-success) 16%, transparent);
+  border-color: color-mix(in srgb, var(--color-success) 40%, transparent);
+  color: var(--color-success);
+}
+
+.ta-learning__step.is-read .ta-learning__step-num,
+.ta-learning__step.is-retry .ta-learning__step-num {
+  border-color: color-mix(in srgb, var(--ta-learn-accent) 45%, transparent);
+  color: var(--ta-learn-accent);
+}
+
+.ta-learning__step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  grid-area: body;
+  min-width: 0;
+}
+
+.ta-learning__step-title {
+  color: var(--ta-text);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.ta-learning__step-meta {
+  align-items: center;
+  color: var(--ta-text-dim);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+  gap: 4px 10px;
+  line-height: 1.35;
+}
+
+.ta-learning__chip {
+  border: var(--border-width) solid currentColor;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  text-transform: uppercase;
+}
+
+.ta-learning__chip.is-base {
+  color: var(--color-success);
+}
+
+.ta-learning__chip.is-mid {
+  color: var(--ta-sec-05);
+}
+
+.ta-learning__chip.is-deep {
+  color: var(--ta-sec-06);
+}
+
+.ta-learning__step-lock {
+  color: var(--ta-text-dim);
+}
+
+.ta-learning__state {
+  color: var(--ta-text-dim);
+  font-size: 13px;
+  font-weight: 600;
+  grid-area: state;
+  line-height: 1.3;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.ta-learning__step.is-done .ta-learning__state {
+  color: var(--color-success);
+}
+
+.ta-learning__step.is-read .ta-learning__state,
+.ta-learning__step.is-retry .ta-learning__state {
+  color: var(--ta-learn-accent);
+}
+
+/* ── Article panel ─────────────────────────────────────── */
+.ta-learning-panel .ta-chapter-panel__body {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.ta-learning-panel__topic {
+  align-self: flex-start;
+  background: none;
+  border: 0;
+  color: var(--ta-sec-01);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 44px;
+  padding: 0;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.ta-learning-panel__topic:hover {
+  color: var(--ta-text);
+}
+
+.ta-learning-panel__topic:focus-visible {
+  outline: 2px solid var(--ta-sec-01);
+  outline-offset: 3px;
+}
+
+.ta-learning-article {
+  --color-text-primary: var(--ta-text);
+  --color-text-secondary: var(--ta-text-muted);
+  --color-text-tertiary: var(--ta-text-dim);
+  --color-border-subtle: var(--ta-border);
+  --color-border-default: var(--ta-border-strong);
+  --color-bg-secondary: var(--ta-surface-2);
+  --color-accent: var(--ta-sec-01);
+  --text-strong: var(--ta-text);
+  --overlay-medium: color-mix(in srgb, var(--ta-text) 8%, transparent);
+  color: var(--ta-text);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.ta-learning-article .ss-main {
+  min-width: 0;
+}
+
+.ta-learning-article__loading {
+  color: var(--ta-text-muted);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  min-height: 120px;
+}
+
+.ta-learning-article .ss-article-head,
+.ta-learning-article .ss-footer {
+  display: none;
+}
+
+.ta-learning-article .ss-section:first-child {
+  margin-top: 0;
+}
+
+.ta-learning-article .ss-section__title {
+  color: var(--ta-text);
+  font-family: var(--ta-display-font);
+}
+
+.ta-learning-article .ss-subhead {
+  color: var(--ta-text);
+}
+
+.ta-learning-article .ss-prose p,
+.ta-learning-article .ss-list,
+.ta-learning-article .ss-quote,
+.ta-learning-article .ss-table,
+.ta-learning-article .ss-code {
+  color: var(--ta-text);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.ta-learning-article .ss-prose p {
+  margin-top: 14px;
+}
+
+.ta-learning-article .ss-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+  padding-left: 22px;
+}
+
+.ta-learning-article .ss-quote {
+  border-left: 2px solid var(--ta-sec-01);
+  margin-top: 14px;
+  padding: 4px 0 4px 14px;
+}
+
+.ta-learning-article .ss-table-wrap {
+  margin-top: 14px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.ta-learning-article .ss-table {
+  font-size: 14px;
+}
+
+.ta-learning-article .ss-table th {
+  background: var(--ta-surface-2);
+  color: var(--ta-text);
+}
+
+.ta-learning-article .ss-table th,
+.ta-learning-article .ss-table td {
+  border-color: var(--ta-border);
+  color: var(--ta-text);
+}
+
+.ta-learning-article .ss-remember {
+  background: color-mix(in srgb, var(--color-insight-bg, var(--ta-sec-01)) 70%, var(--ta-surface));
+  border-color: var(--ta-border-strong);
+  border-radius: var(--ta-radius-card);
+  color: var(--ta-text);
+  margin-top: 28px;
+  padding: 18px;
+}
+
+.ta-learning-article .ss-remember__title {
+  color: var(--ta-sec-01);
+}
+
+.ta-learning-article .ss-remember .ss-prose p,
+.ta-learning-article .ss-remember .ss-prose li,
+.ta-learning-article .ss-remember .ss-prose strong {
+  color: var(--ta-text);
+}
+
+.ta-learning-article .ss-level-chip--basic {
+  color: var(--color-success);
+}
+
+.ta-learning-article .ss-level-chip--detailed {
+  color: var(--ta-sec-01);
+}
+
+.ta-learning-article .ss-level-chip--deep {
+  color: var(--ta-sec-06);
+}
+
+.ta-learning-article__foot {
+  align-items: center;
+  border-top: var(--border-width-hairline) solid var(--ta-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding-top: 24px;
+}
+
+.ta-learning-article__foot-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 520px;
+}
+
+.ta-learning-article__foot-title {
+  color: var(--ta-text);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ta-learning-article__foot-note {
+  color: var(--ta-text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ta-learning-article__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ta-learning-article__mark {
+  background: color-mix(in srgb, var(--ta-text) 6%, transparent);
+  border: var(--border-width) solid var(--ta-border);
+  border-radius: var(--ta-radius-pill);
+  color: var(--ta-text);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 44px;
+  padding: 0 18px;
+  transition:
+    background-color 180ms var(--ta-ease-micro),
+    border-color 180ms var(--ta-ease-micro),
+    transform 180ms var(--ta-ease-micro);
+}
+
+.ta-learning-article__mark:hover {
+  border-color: var(--ta-sec-01);
+  transform: translateY(-1px);
+}
+
+.ta-learning-article__mark.is-primary {
+  background: var(--ta-sec-01);
+  border-color: var(--ta-sec-01);
+  color: var(--ta-on-accent);
+}
+
+.ta-learning-article__mark:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.ta-learning-article__mark:focus-visible {
+  outline: 2px solid var(--ta-sec-01);
+  outline-offset: 2px;
+}
+
+/* Context entry from Training / Journal into a Theory chapter. */
+.theory-context-link {
+  align-items: center;
+  background: none;
+  border: 0;
+  color: var(--accent, var(--ta-sec-01));
+  cursor: pointer;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  gap: 4px;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 44px;
+  padding: 0;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.theory-context-link:hover {
+  color: var(--text, var(--ta-text));
+}
+
+.theory-context-link:focus-visible {
+  outline: 2px solid var(--accent, var(--ta-sec-01));
+  outline-offset: 3px;
+}
+
+.locked-theory-link {
+  margin-top: 12px;
+}
+
+.progression-dialog__theory-link {
+  margin-top: 8px;
+}
+
+.journal-chart-theory-link {
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .ta-learning__head {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ta-learning__summary {
+    max-width: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .ta-view-switch-wrap {
+    margin-top: 18px;
+    padding: 0 18px;
+  }
+
+  .ta-view-switch {
+    width: 100%;
+  }
+
+  .ta-view-switch__btn {
+    padding: 0 12px;
+  }
+
+  .ta-learning__head {
+    margin-bottom: 28px;
+  }
+
+  .ta-learning__phase {
+    margin-top: 32px;
+  }
+
+  .ta-learning__step {
+    grid-template-areas:
+      'num body'
+      'state state';
+    grid-template-columns: 44px minmax(0, 1fr);
+    padding: 14px;
+  }
+
+  .ta-learning__state {
+    grid-column: 1 / -1;
+    padding-left: 58px;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .ta-learning__step.is-locked .ta-learning__state {
+    color: var(--ta-text-dim);
+  }
+
+  .ta-learning-panel .ta-chapter-panel__body {
+    padding: 20px;
+  }
+
+  .ta-learning-article__foot {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ta-learning-article__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .ta-learning-article__mark {
+    width: 100%;
+  }
+}

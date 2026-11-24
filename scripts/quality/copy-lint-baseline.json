@@ -1,0 +1,413 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-14T14:01:31.167Z",
+  "targets": [
+    "packages/shared/src/data/theory.ts",
+    "src/data/theory-cardio.ts",
+    "selfstudy/content/A-otkaz-rir-poterya-skorosti.md",
+    "selfstudy/content/B-gspg-svobodnyy-testosteron.md",
+    "selfstudy/content/C-most-nervnaya-sistema.md",
+    "selfstudy/content/D-pochemu-god-a-ne-trenirovka.md",
+    "selfstudy/content/E-obem-ubuvayushchaya-otdacha.md",
+    "selfstudy/content/F-son-glavnaya-vosstanovleniya.md",
+    "selfstudy/content/G-plato-periodizaciya.md",
+    "selfstudy/content/H-chastota-split-fullbody.md",
+    "selfstudy/content/I-rpe-avtoregulyaciya.md",
+    "selfstudy/content/J-volokna-genetika.md",
+    "selfstudy/content/K-pitanie-massa-sushka.md",
+    "selfstudy/content/L-insulinorezistentnost.md",
+    "selfstudy/content/M-sosudy-gemodinamika.md",
+    "selfstudy/content/N-kogda-est-cirkadnye-ritmy.md",
+    "selfstudy/content/O-farmakologiya-serdce.md",
+    "selfstudy/content/learning-path.md"
+  ],
+  "totals": {
+    "filler": 0,
+    "template": 0,
+    "inflation": 0,
+    "generic-conclusion": 0,
+    "contrast": 0,
+    "rhetorical-opener": 0,
+    "dash-conjunction": 0
+  },
+  "files": {
+    "packages/shared/src/data/theory.ts": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "src/data/theory-cardio.ts": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/A-otkaz-rir-poterya-skorosti.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/B-gspg-svobodnyy-testosteron.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/C-most-nervnaya-sistema.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/D-pochemu-god-a-ne-trenirovka.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/E-obem-ubuvayushchaya-otdacha.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/F-son-glavnaya-vosstanovleniya.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/G-plato-periodizaciya.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/H-chastota-split-fullbody.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/I-rpe-avtoregulyaciya.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/J-volokna-genetika.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/K-pitanie-massa-sushka.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/L-insulinorezistentnost.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/M-sosudy-gemodinamika.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/N-kogda-est-cirkadnye-ritmy.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/O-farmakologiya-serdce.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    },
+    "selfstudy/content/learning-path.md": {
+      "total": 0,
+      "counts": {
+        "filler": 0,
+        "template": 0,
+        "inflation": 0,
+        "generic-conclusion": 0,
+        "contrast": 0,
+        "rhetorical-opener": 0,
+        "dash-conjunction": 0
+      },
+      "fingerprints": {
+        "filler": [],
+        "template": [],
+        "inflation": [],
+        "generic-conclusion": [],
+        "contrast": [],
+        "rhetorical-opener": [],
+        "dash-conjunction": []
+      }
+    }
+  }
+}

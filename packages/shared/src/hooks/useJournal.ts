@@ -155,7 +155,7 @@ export function useJournal({
           e.message.toLowerCase().includes('status')
         );
         if (!isNetworkError) {
-          onSaveError?.('Не удалось сохранить журнал');
+          onSaveError?.('Не удалось сохранить журнал. Попробуй снова.');
         } else {
           console.warn('Network error when saving journal (saved locally):', e);
         }
@@ -187,7 +187,7 @@ export function useJournal({
       .filter((set): set is JournalSet => set !== null);
 
     if (sets.length === 0) {
-      onSaveError?.('Добавьте хотя бы один подход с весом и повторениями');
+      onSaveError?.('Добавь хотя бы один подход с весом и повторениями');
       return;
     }
 
