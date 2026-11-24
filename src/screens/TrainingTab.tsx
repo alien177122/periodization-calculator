@@ -1,3 +1,4 @@
+import type {ReactNode} from 'react';
 import type {Block, TrainingDayDef, TrainingPreferences, UserData} from '../types';
 
 import type {TrainingExerciseRow} from '../utils/training';
@@ -31,6 +32,8 @@ export interface TrainingTabProps {
   currentBlocks?: Block[];
   nextBlocks?: Block[];
   onSetModeChange?: (dayNumber: number, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
+  /** Дополнительные секции под программой: расчёты и сплит недели. */
+  extraSections?: ReactNode;
 }
 
 export default function TrainingTab(props: TrainingTabProps) {
@@ -70,6 +73,7 @@ export default function TrainingTab(props: TrainingTabProps) {
             onSetModeChange: props.onSetModeChange,
           }}
         />
+        {props.extraSections}
       </div>
     </div>
   );

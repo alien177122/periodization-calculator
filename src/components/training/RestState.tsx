@@ -38,7 +38,7 @@ export default function RestState({
   }
 
   return (
-    <SectionBlock num="01" title="Отдых">
+    <SectionBlock num="01" title="Отдых" variant="apple" className="training-section">
       <div className="rest-card">
         <header className="rest-card-head">
           <span className="rest-card-icon" aria-hidden="true">

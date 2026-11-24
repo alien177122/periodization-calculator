@@ -8,7 +8,7 @@ interface DoneStateProps {
 
 export default function DoneState({completedSessions, onReset}: DoneStateProps) {
   return (
-    <SectionBlock num="01" title="Программа завершена">
+    <SectionBlock num="01" title="Программа завершена" variant="apple" className="training-section">
       <div className="program-complete">
         <div className="program-complete-icon" aria-hidden="true">
           &#127942;

@@ -26,6 +26,8 @@ interface SplitPreviewProps {
   onToggleDayDone: (week: number, day: 1 | 2 | 3 | 4) => void;
   onFixedWeightChange?: (exerciseKey: string, weekIndex: number, weight: number) => void;
   onSetModeChange?: (dayNumber: 1 | 2 | 3 | 4, blockId: string, setMode: 'linear' | 'pyramid' | 'cluster', cluster?: {miniReps: number; intraRestSec: number}) => void;
+  /** Скрыть собственный заголовок, когда блок уже вложен в SectionBlock. */
+  showHead?: boolean;
 }
 
 const WEEK_COUNT = 8;
@@ -65,6 +67,7 @@ export function SplitPreview({
   onToggleDayDone,
   onFixedWeightChange,
   onSetModeChange,
+  showHead = true,
 }: SplitPreviewProps) {
   const hideWeights = split.weightMode === 'scheme_only';
   const weekDone = isWeekEffectivelyDone(split, previewWeek);
@@ -74,16 +77,21 @@ export function SplitPreview({
   const daysPerWeek = split.daysPerWeek === 4 ? 4 : split.daysPerWeek === 3 ? 3 : 2;
 
   return (
-    <section className="app-tab-section split-preview" aria-labelledby="split-preview-title">
-      <div className="app-tab-section__head">
-        <h2 id="split-preview-title" className="app-tab-section__title">
-          Превью недели
-        </h2>
-        <span className="app-tab-section__meta">
-          Неделя {previewWeek + 1} из {WEEK_COUNT}
-          {doneWeekCount > 0 ? ` · ${doneWeekCount} пройдено` : ''}
-        </span>
-      </div>
+    <section
+      className="app-tab-section split-preview"
+      aria-labelledby={showHead ? 'split-preview-title' : undefined}
+      aria-label={showHead ? undefined : 'Сплит недели'}>
+      {showHead ? (
+        <div className="app-tab-section__head">
+          <h2 id="split-preview-title" className="app-tab-section__title">
+            Превью недели
+          </h2>
+          <span className="app-tab-section__meta">
+            Неделя {previewWeek + 1} из {WEEK_COUNT}
+            {doneWeekCount > 0 ? ` · ${doneWeekCount} пройдено` : ''}
+          </span>
+        </div>
+      ) : null}
 
       <div className="split-preview__frame">
         <p className="split-preview__lede">

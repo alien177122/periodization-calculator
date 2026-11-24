@@ -46,10 +46,25 @@ export default function ActiveDayView({
   const showPreview = nextSessions < totalSessions;
   const currentDay = trainingDays[currentDayIdx];
   const nextDay = trainingDays[nextDayIdx];
+  const doneWeek = Math.max(0, currentWeekIdx);
 
   return (
     <>
-      <SectionBlock num="01" title="Текущая тренировка">
+      <div className="split-week-stepper" role="tablist" aria-label="Неделя">
+        {Array.from({length: 8}, (_, index) => {
+          const status = index < doneWeek ? 'passed' : index === doneWeek ? 'current' : 'upcoming';
+          return (
+            <span
+              key={index}
+              className={`split-week-btn split-week-btn--${status}${index < doneWeek ? ' is-done' : ''}${index === doneWeek ? ' is-active' : ''}`}
+              aria-current={index === doneWeek ? 'step' : undefined}
+              aria-label={`Неделя ${index + 1}`}>
+              {index + 1}
+            </span>
+          );
+        })}
+      </div>
+      <SectionBlock num="01" title="Текущая тренировка" variant="apple" className="training-section">
         <ProgressionControls preferences={trainingPreferences} onChange={onPreferencesChange} />
         {currentDay ? (
           <>
@@ -70,7 +85,7 @@ export default function ActiveDayView({
       </SectionBlock>
 
       {showPreview && nextDay ? (
-        <SectionBlock num="02" title="Следующая тренировка">
+        <SectionBlock num="02" title="Следующая тренировка" variant="apple" className="training-section">
           <div className="next-day-label">Предпросмотр</div>
           <TrainingDayCard
             dayDef={nextDay}

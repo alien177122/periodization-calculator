@@ -116,9 +116,9 @@ export function AppShell() {
         };
       case 'split':
         return {
-          label: 'Тренировка',
-          title: 'ТРЕНИРОВКА',
-          subtitle: 'Расчёты · база силовых · разбор',
+          label: 'Программа',
+          title: 'ТРЕНИРОВКА ДНЯ',
+          subtitle: 'Текущая · сплит недели · следующая',
         };
       default:
         return {

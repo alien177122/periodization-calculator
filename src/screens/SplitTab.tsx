@@ -6,6 +6,8 @@ import '../styles/components/training/training-nav.css';
 import type {ProgramSettings, UserData} from '../types';
 import type {CalculatorTabProps} from './CalculatorTab';
 import {TrainingPageHeader} from '../components/training/hub/TrainingPageHeader';
+import {TrainingCalculationsSection} from '../components/training/hub/TrainingCalculationsSection';
+import {saveUser} from '../utils/api';
 
 const TrainingTabContainer = lazy(() => import('../components/app/TrainingTabContainer'));
 const SplitConstructorTab = lazy(() =>
@@ -14,9 +16,6 @@ const SplitConstructorTab = lazy(() =>
 const CalculatorTab = lazy(() =>
   import('./CalculatorTab').then(module => ({default: module.default})),
 );
-const TrainingMenu = lazy(() =>
-  import('../components/training/hub/TrainingMenu').then(module => ({default: module.TrainingMenu})),
-);
 const StrengthBasePage = lazy(() =>
   import('../components/training/hub/StrengthBasePage').then(module => ({default: module.StrengthBasePage})),
 );
@@ -24,12 +23,13 @@ const CalculationsPage = lazy(() =>
   import('../components/training/hub/CalculationsPage').then(module => ({default: module.CalculationsPage})),
 );
 
-type SplitView = 'program' | 'menu' | 'base' | 'calculations' | 'constructor' | 'breakdown';
+type SplitView = 'program' | 'base' | 'calculations' | 'constructor' | 'breakdown';
 
 function normalizeView(value: string | null): SplitView {
-  if (value === 'menu' || value === 'base' || value === 'calculations' || value === 'constructor' || value === 'breakdown') {
+  if (value === 'base' || value === 'calculations' || value === 'constructor' || value === 'breakdown') {
     return value;
   }
+  // Legacy ?view=menu больше не нужен: инструменты живут на главном экране.
   return 'program';
 }
 
@@ -67,53 +67,75 @@ export function SplitTab({
     navigateSearch({view: next === 'program' ? null : next});
   };
 
-  const activeCalculation = (userData.splitCalculations ?? []).find(
-    c => c.id === userData.activeSplitCalculationId,
-  );
-  const activeSplit = (userData.splits ?? []).find(s => s.id === userData.activeSplitId);
-  const workoutName = activeCalculation?.split.name ?? activeSplit?.name ?? 'Стандартный расчёт';
-
-  const headerConfig: Record<SplitView, {title: string; backLabel: string; onBack: () => void}> = {
-    program: {title: workoutName, backLabel: 'Меню', onBack: () => go('menu')},
-    menu: {title: 'Тренировка', backLabel: 'Назад', onBack: () => go('program')},
-    base: {title: 'База силовых', backLabel: 'Назад', onBack: () => go('menu')},
-    calculations: {title: 'Расчёты', backLabel: 'Назад', onBack: () => go('menu')},
+  const headerConfig: Record<Exclude<SplitView, 'program'>, {title: string; backLabel: string; onBack: () => void}> = {
+    base: {title: 'База силовых', backLabel: 'Назад', onBack: () => go('program')},
+    calculations: {title: 'Расчёты', backLabel: 'Назад', onBack: () => go('program')},
     constructor: {title: 'Конструктор расчёта', backLabel: 'Назад', onBack: () => go('calculations')},
     breakdown: {title: 'Разбор', backLabel: 'Назад', onBack: () => go('program')},
   };
-  const cfg = headerConfig[view];
+  const cfg = view === 'program' ? null : headerConfig[view];
+
+  function handleSelectCalculation(id: string) {
+    const calculation = (userData.splitCalculations ?? []).find(entry => entry.id === id);
+    if (!calculation) return;
+
+    const nextSplit = calculation.split;
+    const hasSplit = (userData.splits ?? []).some(entry => entry.id === nextSplit.id);
+    const splits = hasSplit
+      ? (userData.splits ?? []).map(entry => (entry.id === nextSplit.id ? nextSplit : entry))
+      : [...(userData.splits ?? []), nextSplit];
+
+    const updated: UserData = {
+      ...userData,
+      splits,
+      activeSplitId: nextSplit.id,
+      activeSplitCalculationId: calculation.id,
+    };
+    setUserData(updated);
+    void saveUser(updated, token);
+  }
+
+  function handleDeleteCalculation(id: string) {
+    const updated: UserData = {
+      ...userData,
+      splitCalculations: (userData.splitCalculations ?? []).filter(entry => entry.id !== id),
+      activeSplitCalculationId:
+        userData.activeSplitCalculationId === id ? null : userData.activeSplitCalculationId,
+    };
+    setUserData(updated);
+    void saveUser(updated, token);
+  }
 
   const calcProps = {...calculator, userData, programSettings};
 
   return (
     <div className="split-tab">
-      <TrainingPageHeader
-        title={cfg.title}
-        backLabel={cfg.backLabel}
-        onBack={cfg.onBack}
-      />
+      {cfg ? (
+        <TrainingPageHeader title={cfg.title} backLabel={cfg.backLabel} onBack={cfg.onBack} />
+      ) : null}
 
-      <div
-        key={view}
-        className="training-page-view training-page-view--forward">
+      <div key={view} className="training-page-view training-page-view--forward">
         <Suspense fallback={<TabPanelFallback tab="split" />}>
           {view === 'program' ? (
-            <TrainingTabContainer
-              userData={userData}
-              token={token}
-              setUserData={setTrainingUserData}
-              onGoCalculator={onGoCalculator}
-              programSubtitle={programSubtitle}
-            />
-          ) : view === 'menu' ? (
-            <TrainingMenu
-              workoutName={workoutName}
-              calculationsCount={userData.splitCalculations?.length ?? 0}
-              onOpenWorkout={() => go('program')}
-              onOpenCalculations={() => go('calculations')}
-              onOpenBase={() => go('base')}
-              onOpenBreakdown={() => go('breakdown')}
-            />
+            <div className="training-page">
+              <TrainingTabContainer
+                userData={userData}
+                token={token}
+                setUserData={setTrainingUserData}
+                onGoCalculator={onGoCalculator}
+                programSubtitle={programSubtitle}
+                extraSections={
+                  <TrainingCalculationsSection
+                    userData={userData}
+                    onSelect={handleSelectCalculation}
+                    onDelete={handleDeleteCalculation}
+                    onCreate={() => go('constructor')}
+                    onOpenBase={() => go('base')}
+                    onOpenBreakdown={() => go('breakdown')}
+                  />
+                }
+              />
+            </div>
           ) : view === 'base' ? (
             <StrengthBasePage
               userData={userData}
